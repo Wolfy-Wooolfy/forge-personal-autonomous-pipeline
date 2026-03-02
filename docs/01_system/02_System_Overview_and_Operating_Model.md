@@ -34,6 +34,14 @@ All “decisions” inside Forge are strictly:
 Any action requiring judgment, preference, or interpretation
 is explicitly outside Forge authority.
 
+Forge does not contain intrinsic reasoning capability.
+
+All generative or analytical reasoning is delegated to external Cognitive Engines
+via the Cognitive Adapter Layer.
+
+External cognitive output is treated as untrusted candidate material
+until validated and stage-bound under Forge authority.
+
 ---
 
 ### 1.1 Execution Authority Clarification
@@ -138,6 +146,46 @@ For the purpose of this system, the following terms are canonical and non-negoti
 Boundary Audit outcomes are absolute.
 Any attempt to proceed without a required PASS
 constitutes a critical execution violation.
+
+- Cognitive Layer  
+  Internal, stage-bound execution components responsible for producing candidate artifacts
+  (docs/specs/code/analysis outputs) under strict contracts.
+
+  The Cognitive Layer:
+  - Has ZERO authority to advance stages
+  - Has ZERO authority to mutate execution state
+  - MUST NOT call external providers directly
+
+- Cognitive Adapter Layer  
+  A REQUIRED core system component that is the ONLY permitted path
+  for invoking any external Cognitive Engine.
+
+  The Cognitive Adapter Layer:
+  - Normalizes requests/responses
+  - Applies deterministic routing per DOC-10-CE-SEL
+  - Enforces bounded retries per Doc-04
+  - Persists prompts/responses/metadata as artifacts
+  - Has ZERO authority to change Forge state or close stages
+
+  Defined by:
+  - docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md
+
+- Provider Drivers  
+  Provider-specific implementations used ONLY by the Cognitive Adapter Layer
+  to interact with external Cognitive Engines.
+
+  Provider Drivers:
+  - Are replaceable without changing Forge Core behavior
+  - MUST return normalized outputs to the adapter
+  - Have ZERO execution authority
+
+- External Cognitive Engine  
+  Any external generative or analytical engine (LLM or equivalent).
+
+  External engines:
+  - Have ZERO authority
+  - Cannot create valid artifacts independently
+  - Cannot alter system state
 
 ---
 
@@ -518,7 +566,8 @@ It is NOT part of:
 - HALO’s memory or vault architecture
 - HALO’s reasoning or intelligence logic
 
-Forge does not think, reason, or decide.
+Forge does not contain intrinsic reasoning capability or reasoning authority.
+It governs intelligence through contracts; it does not own it.
 
 It executes tasks **about HALO**, not **inside HALO**.
 
