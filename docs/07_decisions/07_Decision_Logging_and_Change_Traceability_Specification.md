@@ -177,6 +177,36 @@ Only selectable, execution-unblocking forks qualify.
 
 ---
 
+### 3.0.1 Cognitive Engine Configuration Fork Clarification
+
+Changing Cognitive Engine configuration
+(provider, model_id, enable/disable state)
+does NOT automatically qualify as a Decision.
+
+A Decision is REQUIRED ONLY IF:
+
+- The change introduces a selectable execution fork, AND
+- Multiple valid Cognitive Engine configurations are contract-compliant, AND
+- The pipeline cannot proceed deterministically without selecting exactly one configuration.
+
+If the configuration is:
+
+- Mandated by contract, OR
+- Deterministically derived from environment policy, OR
+- The only valid compliant option
+
+Then:
+
+- NO Decision MUST be logged
+- The change is treated as rule-driven execution
+
+Artificially logging Cognitive Engine changes
+without a real execution fork
+constitutes Decision inflation
+and is a governance violation.
+
+---
+
 ### 3.1 Decision Content Minimality Rule (Hard)
 
 A Decision file MUST contain ONLY the minimum information

@@ -20,6 +20,9 @@ It transforms:
 - Documentation
 into deterministic artifacts.
 
+These artifacts remain non-authoritative
+until validated under the owning stage gate and artifact authority rules.
+
 It does NOT hold governance authority.
 
 ---
@@ -136,6 +139,30 @@ If nondeterminism is detected:
 
 ---
 
+### 6.1 Cognitive Engine Availability Rule (Hard)
+
+If a Task requires Cognitive Engine generation
+and Cognitive Engine is:
+
+- Disabled
+- Misconfigured
+- Unreachable
+- Failing deterministically
+
+Then:
+
+- The Task MUST NOT begin
+- No partial artifacts may be generated
+- Execution MUST enter BLOCKED state
+- No stage transition is permitted
+
+Cognitive Engine unavailability
+is treated as an execution constraint,
+not a Decision,
+unless multiple valid fallback paths exist.
+
+---
+
 ## 7. Escalation Rules
 
 The Cognitive Layer may escalate ONLY if:
@@ -189,6 +216,32 @@ Any Cognitive execution not compliant:
 → Invalidates Stage progress
 → Triggers governance violation
 → Requires remediation
+
+---
+
+## 11. External Cognitive Engine Declaration
+
+Forge does not implement an intrinsic reasoning engine.
+
+All generative capabilities described in this contract
+may be fulfilled by an external Cognitive Engine
+as defined in:
+
+DOC-CE-01 — Cognitive Engine Interface Contract.
+
+This document governs the internal behavioral rules of the Cognitive Layer.
+
+The external engine:
+
+- Has no authority
+- Cannot alter system state
+- Cannot advance stages
+- Cannot create valid artifacts independently
+
+All authority remains governed by Forge contracts.
+
+This section exists to prevent architectural ambiguity
+regarding the origin of generative reasoning.
 
 ---
 

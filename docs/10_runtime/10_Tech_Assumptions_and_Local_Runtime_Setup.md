@@ -303,6 +303,38 @@ If any required variable is missing, empty, or malformed:
 
 ---
 
+### Cognitive Engine Selection Variables (Hard)
+
+The following variables define how Cognitive Engine configuration is selected.
+
+COGNITIVE_ENGINE_MODE=MANUAL|AUTO
+COGNITIVE_ENGINE_SCOPE=SYSTEM|STAGE|TASK   (REQUIRED if MODE=MANUAL)
+
+Rules:
+
+- `COGNITIVE_ENGINE_MODE` MUST be present.
+- MUST equal exactly: MANUAL or AUTO.
+- No default may be inferred.
+
+If `COGNITIVE_ENGINE_MODE=MANUAL`:
+- `COGNITIVE_ENGINE_SCOPE` MUST be present.
+- MUST equal exactly: SYSTEM or STAGE or TASK.
+- Missing scope MUST FAIL runtime readiness.
+
+If `COGNITIVE_ENGINE_MODE=AUTO`:
+- `COGNITIVE_ENGINE_SCOPE` MUST NOT be used.
+- Routing MUST follow DOC-10-CE-SEL.
+- Ambiguous routing MUST enter BLOCKED state.
+
+Any ambiguity in selection configuration:
+- MUST FAIL readiness at PRE-START
+  OR
+- MUST enter BLOCKED during execution
+
+Silent fallback behavior is forbidden.
+
+---
+
 ### 5.1.1 Environment Variable Validation Rules (Hard)
 
 Startup validation MUST perform deterministic checks on required environment variables.
@@ -322,6 +354,63 @@ If any validation rule fails:
 - Runtime readiness MUST FAIL
 - Execution MUST NOT start
 - A readiness failure artifact MUST be written per Section 1.1.0
+
+---
+
+#### Cognitive Engine Selection Validation (Hard)
+
+Startup validation MUST enforce:
+
+- `COGNITIVE_ENGINE_MODE` MUST be present AND MUST equal exactly: `MANUAL` or `AUTO`.
+
+If `COGNITIVE_ENGINE_MODE=MANUAL`:
+- `COGNITIVE_ENGINE_SCOPE` MUST be present AND MUST equal exactly: `SYSTEM` or `STAGE` or `TASK`.
+
+If `COGNITIVE_ENGINE_MODE=AUTO`:
+- `COGNITIVE_ENGINE_SCOPE` MUST be absent OR empty (treated as not provided).
+- AUTO routing rules MUST follow: DOC-10-CE-SEL.
+
+Any violation MUST:
+- FAIL runtime readiness
+- Write a readiness failure artifact per Section 1.1.0
+
+---
+
+## 5.1.2 Cognitive Engine Runtime Configuration (Optional, Contract-Bound)
+
+Forge does not embed a reasoning engine internally.
+
+An external Cognitive Engine MAY be enabled through explicit environment configuration.
+
+If Cognitive Engine usage is NOT enabled:
+- Runtime readiness MUST NOT fail for missing Cognitive Engine configuration.
+
+If Cognitive Engine usage IS enabled:
+- Runtime readiness MUST treat Cognitive Engine configuration as mandatory.
+- Missing, invalid, or ambiguous configuration MUST FAIL readiness.
+
+### Enabling Flag (Hard)
+
+COGNITIVE_ENGINE_ENABLED=true|false
+
+Rules:
+- MUST be present
+- MUST equal exactly: true OR false
+- No defaults may be inferred
+
+### Required Variables When Enabled (Hard)
+
+If `COGNITIVE_ENGINE_ENABLED=true`, the following MUST be present and non-empty:
+
+COGNITIVE_ENGINE_PROVIDER=<string>
+COGNITIVE_ENGINE_MODEL_ID=<string>
+
+The runtime MUST:
+- Persist interaction artifacts under `artifacts/llm/` per Doc-05
+- Fail-Closed if interaction logging cannot be persisted deterministically
+
+The Cognitive Engine has ZERO authority.
+All outputs are candidates until artifact-bound and stage-validated.
 
 ---
 
@@ -511,6 +600,10 @@ Mandatory writable paths:
 - `verify/unit/verification_report.json` (must be creatable/overwritable by the verifier layer)
 - `verify/smoke/` (directory must exist and be writable)
 - `verify/smoke/local_command_log.jsonl` (must be creatable and appendable)
+- `artifacts/llm/` (REQUIRED only if `COGNITIVE_ENGINE_ENABLED=true`)
+- `artifacts/llm/prompts/` (REQUIRED only if enabled)
+- `artifacts/llm/responses/` (REQUIRED only if enabled)
+- `artifacts/llm/metadata/` (REQUIRED only if enabled)
 
 Rules:
 - No implicit directory creation is allowed

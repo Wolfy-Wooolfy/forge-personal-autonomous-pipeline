@@ -185,6 +185,7 @@ Every project or task MUST follow the directory structure below:
 │
 ├── artifacts/
 │ ├── admission/
+│ ├── llm/
 │ ├── stage_A/
 │ ├── stage_B/
 │ ├── stage_C/
@@ -455,6 +456,42 @@ They exist solely for:
 
 Any execution behavior derived from history artifacts
 is a system violation.
+
+---
+
+## 4.6 Cognitive Engine Interaction Artifacts (Mandatory)
+
+All interactions with the external Cognitive Engine
+MUST be persisted as artifacts under the following structure:
+
+artifacts/llm/prompts/<task_id>.prompt.txt  
+artifacts/llm/responses/<task_id>.response.txt  
+artifacts/llm/metadata/<task_id>.json  
+
+### Metadata Requirements
+
+The metadata file MUST include:
+
+- provider (string)
+- model_id (string)
+- timestamp (ISO format)
+- stage
+- task_id
+- token_usage (if available)
+- execution_context (optional summary)
+
+### Governance Rule
+
+No Cognitive Engine output is considered valid
+unless:
+
+1. Prompt is stored
+2. Response is stored
+3. Metadata is stored
+4. Artifact passes integrity validation
+
+Missing interaction logs
+constitute a governance violation.
 
 ---
 
