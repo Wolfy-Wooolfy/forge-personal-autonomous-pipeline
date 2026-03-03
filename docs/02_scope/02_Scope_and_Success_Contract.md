@@ -259,6 +259,48 @@ and MUST halt execution.
 
 ---
 
+### 2.5 Deployment Modes & Productization Readiness (Hard)
+
+Forge is allowed to start as a **personal system** (single-user, local-first).
+
+However, the Forge Core MUST be built as an **engine** that is structurally compatible with future productization.
+
+#### 2.5.1 Supported Deployment Modes (Binding)
+
+Forge MUST support these modes at the architecture level:
+
+- **Mode A — Personal Local (Default):**
+  - Single user
+  - Local execution
+  - No external exposure by default
+
+- **Mode B — Team / On-Prem (Future-Ready):**
+  - Multiple workspaces
+  - Access control
+  - Isolated project state per workspace
+
+- **Mode C — SaaS Multi-Tenant (Future-Ready):**
+  - Tenant isolation
+  - Strong authentication & authorization boundaries
+  - Rate limits, quotas, and audit separation per tenant
+
+#### 2.5.2 Productization Readiness Requirements (Hard)
+
+Even in Mode A, the system MUST be built to avoid redesign later:
+
+- Forge Core MUST be independent from any UI (CLI/UI are shells)
+- Project state MUST be isolated and addressable by a workspace/project identifier
+- No hard-coded personal paths, identities, or assumptions inside the engine
+- Provider logic MUST remain behind the Cognitive Adapter + Driver contract
+- Artifacts MUST remain deterministic and traceable regardless of deployment mode
+
+#### 2.5.3 Scope Clarification (Hard)
+
+- Implementing **Mode A** runtime behavior is IN-SCOPE.
+- Operating **Mode B / Mode C** in production (hosting, billing, external exposure) is OUT-OF-SCOPE unless introduced as a new task with a new scope contract.
+
+---
+
 ## 3. Out of Scope
 
 The pipeline MUST NOT:
