@@ -422,17 +422,18 @@ function runAudit(context) {
     stage_progress_percent: 100,
     artifact: "artifacts/audit/audit_report.md",
     status_patch: blocked
-      ? {
-          issues: violations.filter((v) => v.severity === "CRITICAL"),
-          blocking_questions: ["Audit is BLOCKED — see artifacts/audit/audit_error.md"],
-          current_task: "",
-          next_step: "BLOCKED — resolve CRITICAL audit findings (see artifacts/audit/audit_findings.json)"
-        }
-      : {
-          blocking_questions: [],
-          current_task: "",
-          next_step: "MODULE_FLOW — Audit PASS. Next=Trace (create TASK-049 bridge when ready)."
-        }
+     ? {
+        issues: violations.filter((v) => v.severity === "CRITICAL"),
+        blocking_questions: ["Audit is BLOCKED — see artifacts/audit/audit_error.md"],
+        current_task: "",
+        next_step: ""
+       }
+     : {
+        issues: [],
+        blocking_questions: [],
+        current_task: "",
+        next_step: "MODULE_FLOW — Audit PASS. Next=Trace (create TASK-049 bridge when ready)."
+       }
   };
 }
 

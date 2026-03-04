@@ -5,6 +5,8 @@ const { runIntake } = require("../modules/intakeEngine");
 
 const { runAudit } = require("../modules/auditEngine");
 
+const { runTrace } = require("../modules/traceEngine");
+
 const TASKS_PATH = path.resolve(__dirname, "../../..", "artifacts", "tasks");
 
 const ROOT = path.resolve(__dirname, "../../..");
@@ -94,6 +96,51 @@ const registry = Object.freeze({
       closure_artifact: true,
       clear_current_task: true,
       status_patch: result.status_patch || {}
+    };
+  },
+
+  "TASK-050: MODULE FLOW — Trace": (context) => {
+    const result = runTrace(context);
+
+    const relTaskClosure = "artifacts/tasks/TASK-050.execution.closure.md";
+    const taskClosureAbs = path.resolve(__dirname, "../../..", relTaskClosure);
+
+    if (fs.existsSync(taskClosureAbs)) {
+      throw new Error("Idempotency violation: closure artifact already exists for TASK-050");
+    }
+
+    const reportRef =
+      result && result.outputs && result.outputs.md
+        ? String(result.outputs.md)
+        : (result && result.artifact ? String(result.artifact) : "artifacts/trace/trace_matrix.md");
+
+    fs.mkdirSync(path.dirname(taskClosureAbs), { recursive: true });
+    fs.writeFileSync(
+      taskClosureAbs,
+      `# TASK-050 — Execution Closure
+
+## Task
+- Task ID: TASK-050
+- Stage Binding: D
+- Closure Type: EXECUTION
+
+## Status
+- stage_progress_percent: 100
+- closure_artifact: true
+
+## Generated Artifacts
+- ${reportRef}
+- artifacts/trace/trace_matrix.json
+`,
+      "utf-8"
+    );
+
+    return {
+      stage_progress_percent: 100,
+      closure_artifact: true,
+      artifact: relTaskClosure,
+      clear_current_task: result && result.blocked ? false : true,
+      status_patch: result && result.status_patch ? result.status_patch : {}
     };
   },
 
