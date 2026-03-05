@@ -7,6 +7,8 @@ const { runAudit } = require("../modules/auditEngine");
 
 const { runTrace } = require("../modules/traceEngine");
 
+const { runGap } = require("../modules/gapEngine");
+
 const TASKS_PATH = path.resolve(__dirname, "../../..", "artifacts", "tasks");
 
 const ROOT = path.resolve(__dirname, "../../..");
@@ -135,12 +137,95 @@ const registry = Object.freeze({
       "utf-8"
     );
 
+    const sp = result && result.status_patch ? { ...result.status_patch } : {};
+
+    const hasBQ =
+      sp &&
+      Array.isArray(sp.blocking_questions) &&
+      sp.blocking_questions.length === 1 &&
+      typeof sp.blocking_questions[0] === "string" &&
+      sp.blocking_questions[0].trim() !== "";
+
+    if (hasBQ) {
+      sp.next_step = "";
+    }
+
+    if (result && result.blocked === true && (!sp || typeof sp.next_step !== "string")) {
+      sp.next_step = "";
+    }
+
     return {
       stage_progress_percent: 100,
       closure_artifact: true,
       artifact: relTaskClosure,
       clear_current_task: result && result.blocked ? false : true,
-      status_patch: result && result.status_patch ? result.status_patch : {}
+      status_patch: sp
+    };
+  },
+
+  "TASK-051: MODULE FLOW — Gap": (context) => {
+    const result = runGap(context);
+
+    const relTaskClosure = "artifacts/tasks/TASK-051.execution.closure.md";
+    const taskClosureAbs = path.resolve(__dirname, "../../..", relTaskClosure);
+
+    if (fs.existsSync(taskClosureAbs)) {
+      throw new Error("Idempotency violation: closure artifact already exists for TASK-051");
+    }
+
+    const reportRef =
+      result && result.outputs && result.outputs.md
+        ? String(result.outputs.md)
+        : (result && result.artifact ? String(result.artifact) : "artifacts/gap/gap_report.md");
+
+    fs.mkdirSync(path.dirname(taskClosureAbs), { recursive: true });
+    fs.writeFileSync(
+      taskClosureAbs,
+      `# TASK-051 — Execution Closure
+
+## Task
+- Task ID: TASK-051
+- Stage Binding: D
+- Closure Type: EXECUTION
+
+## Status
+- stage_progress_percent: 100
+- closure_artifact: true
+
+## Generated Artifacts
+- ${reportRef}
+- artifacts/gap/gap_actions.json
+`,
+      "utf-8"
+    );
+
+    const sp = result && result.status_patch ? { ...result.status_patch } : {};
+
+    const hasBQ =
+      sp &&
+      Array.isArray(sp.blocking_questions) &&
+      sp.blocking_questions.length === 1 &&
+      typeof sp.blocking_questions[0] === "string" &&
+      sp.blocking_questions[0].trim() !== "";
+
+    if (hasBQ) {
+      sp.next_step = "";
+    }
+
+    if (result && result.blocked === true && (!sp || typeof sp.next_step !== "string")) {
+      sp.next_step = "";
+    }
+
+    if (!hasBQ && !(result && result.blocked === true)) {
+      sp.next_step = "MODULE_FLOW — Gap COMPLETE. Next=Decision Gate (implement decisionGate + task bridge).";
+    }
+
+    return {
+      stage_progress_percent: 100,
+      closure_artifact: true,
+      artifact: relTaskClosure,
+      clear_current_task: result && result.blocked ? false : true,
+      status_patch: sp
     };
   },
 

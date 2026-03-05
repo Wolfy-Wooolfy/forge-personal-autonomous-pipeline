@@ -273,7 +273,8 @@ function runTrace(contextOrStatus) {
       blocked: true,
       artifact: errRef,
       status_patch: {
-        blocking_questions: ["Trace BLOCKED: missing intake_snapshot.json"]
+        blocking_questions: ["Trace BLOCKED: missing intake_snapshot.json"],
+      next_step: ""
       }
     };
   }
@@ -284,7 +285,8 @@ function runTrace(contextOrStatus) {
       blocked: true,
       artifact: errRef,
       status_patch: {
-        blocking_questions: ["Trace BLOCKED: missing audit_findings.json"]
+        blocking_questions: ["Trace BLOCKED: missing audit_findings.json"],
+      next_step: ""
       }
     };
   }
@@ -301,7 +303,8 @@ function runTrace(contextOrStatus) {
       blocked: true,
       artifact: errRef,
       status_patch: {
-        blocking_questions: ["Trace BLOCKED: intake snapshot not locked"]
+        blocking_questions: ["Trace BLOCKED: intake snapshot not locked"],
+      next_step: ""
       }
     };
   }
@@ -312,7 +315,8 @@ function runTrace(contextOrStatus) {
       blocked: true,
       artifact: errRef,
       status_patch: {
-        blocking_questions: ["Trace BLOCKED: audit blocked == true"]
+        blocking_questions: ["Trace BLOCKED: audit blocked == true"],
+      next_step: ""
       }
     };
   }
