@@ -9,6 +9,8 @@ const { runTrace } = require("../modules/traceEngine");
 
 const { runGap } = require("../modules/gapEngine");
 
+const { runDecisionGate } = require("../modules/decisionGate");
+
 const TASKS_PATH = path.resolve(__dirname, "../../..", "artifacts", "tasks");
 
 const ROOT = path.resolve(__dirname, "../../..");
@@ -225,6 +227,57 @@ const registry = Object.freeze({
       closure_artifact: true,
       artifact: relTaskClosure,
       clear_current_task: result && result.blocked ? false : true,
+      status_patch: sp
+    };
+  },
+
+  "TASK-052: MODULE FLOW — Decision Gate": (context) => {
+    const result = runDecisionGate(context);
+
+    const sp = result && result.status_patch ? { ...result.status_patch } : {};
+
+    if (result && result.blocked === true) {
+      return {
+        stage_progress_percent: 100,
+        clear_current_task: false,
+        status_patch: sp
+      };
+    }
+
+    const relTaskClosure = "artifacts/tasks/TASK-052.execution.closure.md";
+    const taskClosureAbs = path.resolve(__dirname, "../../..", relTaskClosure);
+
+    if (fs.existsSync(taskClosureAbs)) {
+      throw new Error("Idempotency violation: closure artifact already exists for TASK-052");
+    }
+
+    fs.mkdirSync(path.dirname(taskClosureAbs), { recursive: true });
+
+    fs.writeFileSync(
+      taskClosureAbs,
+      `# TASK-052 — Execution Closure
+
+## Task
+- Task ID: TASK-052
+- Stage Binding: D
+- Closure Type: EXECUTION
+
+## Status
+- stage_progress_percent: 100
+- closure_artifact: true
+
+## Generated Artifacts
+- artifacts/decisions/module_flow_decision_gate.md
+- artifacts/decisions/module_flow_decision_gate.json
+`,
+      "utf-8"
+    );
+
+    return {
+      stage_progress_percent: 100,
+      closure_artifact: true,
+      artifact: relTaskClosure,
+      clear_current_task: true,
       status_patch: sp
     };
   },

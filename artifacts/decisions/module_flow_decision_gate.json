@@ -1,0 +1,13 @@
+{
+  "decision_id": "MODULE_FLOW_DECISION_GATE",
+  "timestamp": "2026-03-05T11:06:38.462Z",
+  "task": "TASK-052",
+  "mode": "APPROVE_ALL",
+  "source": {
+    "gap_actions_path": "artifacts/gap/gap_actions.json",
+    "gap_actions_sha256": "a775f30229f1839aa3f2bb6dcb8c41d6e175662053295634c26d1d16924dc79b"
+  },
+  "counts": {
+    "top_level_keys": 5
+  }
+}
