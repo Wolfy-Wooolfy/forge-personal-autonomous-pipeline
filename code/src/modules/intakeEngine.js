@@ -71,30 +71,154 @@ function walk(rootAbs, relBase) {
   return items;
 }
 
-function classifyState(rootAbs) {
+function readJsonIfExists(absPath) {
+  if (!fs.existsSync(absPath)) {
+    return null;
+  }
+
+  const raw = fs.readFileSync(absPath, "utf-8");
+  return JSON.parse(raw);
+}
+
+function detectRepositoryState(rootAbs) {
   const hasDocs = fs.existsSync(path.join(rootAbs, "docs")) && fs.statSync(path.join(rootAbs, "docs")).isDirectory();
   const hasCode = fs.existsSync(path.join(rootAbs, "code")) && fs.statSync(path.join(rootAbs, "code")).isDirectory();
   const hasArtifacts = fs.existsSync(path.join(rootAbs, "artifacts")) && fs.statSync(path.join(rootAbs, "artifacts")).isDirectory();
   const hasStatus = fs.existsSync(path.join(rootAbs, "progress", "status.json"));
 
-  if (!hasDocs && !hasCode && !hasArtifacts && !hasStatus) return { classification: "IDEA_ONLY", rules: ["no docs/", "no code/", "no artifacts/", "no progress/status.json"] };
-  if (hasDocs && !hasCode) return { classification: "DOCS_ONLY", rules: ["docs/ present", "code/ missing"] };
-  if (hasCode && !hasDocs) return { classification: "CODE_ONLY", rules: ["code/ present", "docs/ missing"] };
-  if (hasDocs && hasCode && !hasArtifacts && !hasStatus) return { classification: "DOCS_AND_CODE", rules: ["docs/ present", "code/ present", "no active artifacts state"] };
-  if (hasDocs && hasCode && hasArtifacts && hasStatus) return { classification: "FULL_PIPELINE_STATE", rules: ["docs/ present", "code/ present", "artifacts/ present", "progress/status.json present"] };
+  if (!hasDocs && !hasCode && !hasArtifacts && !hasStatus) {
+    return {
+      repository_state: "IDEA_ONLY",
+      docs_present: false,
+      code_present: false,
+      artifacts_present: false,
+      status_present: false,
+      rules: ["no docs/", "no code/", "no artifacts/", "no progress/status.json"]
+    };
+  }
 
-  return { classification: "DOCS_AND_CODE", rules: ["fallback structural match"] };
+  if (hasDocs && !hasCode) {
+    return {
+      repository_state: "DOCS_ONLY",
+      docs_present: true,
+      code_present: false,
+      artifacts_present: hasArtifacts,
+      status_present: hasStatus,
+      rules: ["docs/ present", "code/ missing"]
+    };
+  }
+
+  if (hasCode && !hasDocs) {
+    return {
+      repository_state: "CODE_ONLY",
+      docs_present: false,
+      code_present: true,
+      artifacts_present: hasArtifacts,
+      status_present: hasStatus,
+      rules: ["code/ present", "docs/ missing"]
+    };
+  }
+
+  return {
+    repository_state: "MIXED",
+    docs_present: hasDocs,
+    code_present: hasCode,
+    artifacts_present: hasArtifacts,
+    status_present: hasStatus,
+    rules: ["docs/code mixed repository state detected"]
+  };
 }
 
-function renderEntrypointClassificationMd(payload) {
+function classifyOperatingMode(rootAbs, projectRequest, repositoryStateInfo) {
+  const reasoning = [];
+  const requestModeRaw =
+    projectRequest &&
+    typeof projectRequest === "object" &&
+    typeof projectRequest.operating_mode === "string"
+      ? projectRequest.operating_mode.trim().toUpperCase()
+      : "";
+
+  const requestPresent = !!projectRequest;
+  const docsPresent = !!repositoryStateInfo.docs_present;
+  const codePresent = !!repositoryStateInfo.code_present;
+
+  let buildPossible = false;
+  let improvePossible = false;
+
+  if (requestModeRaw === "BUILD") {
+    buildPossible = true;
+    reasoning.push("project_request.operating_mode explicitly requests BUILD");
+  }
+
+  if (requestModeRaw === "IMPROVE") {
+    improvePossible = true;
+    reasoning.push("project_request.operating_mode explicitly requests IMPROVE");
+  }
+
+  if (!codePresent) {
+    buildPossible = true;
+    reasoning.push("no working code detected");
+  }
+
+  if (codePresent || docsPresent) {
+    improvePossible = true;
+    reasoning.push("existing code or docs detected");
+  }
+
+  if (buildPossible && !improvePossible) {
+    return {
+      operating_mode: "BUILD",
+      blocked: false,
+      reasoning,
+      request_present: requestPresent
+    };
+  }
+
+  if (improvePossible && !buildPossible) {
+    return {
+      operating_mode: "IMPROVE",
+      blocked: false,
+      reasoning,
+      request_present: requestPresent
+    };
+  }
+
+  if (buildPossible && improvePossible) {
+    return {
+      operating_mode: "BLOCKED",
+      blocked: true,
+      reasoning: reasoning.concat(["BUILD and IMPROVE are both possible"]),
+      request_present: requestPresent
+    };
+  }
+
+  return {
+    operating_mode: "BLOCKED",
+    blocked: true,
+    reasoning: reasoning.concat(["neither BUILD nor IMPROVE conditions were satisfied"]),
+    request_present: requestPresent
+  };
+}
+
+function renderIntakeReportMd(payload) {
   const rules = payload.rules_triggered.map((r) => `- ${r}`).join("\n");
   const comps = payload.observed_components.map((c) => `- ${c}`).join("\n");
   const validations = payload.validation_summary.map((v) => `- ${v}`).join("\n");
+  const reasoning = payload.classification_reasoning.map((r) => `- ${r}`).join("\n");
 
-  return `# entrypoint_classification
+  return `# intake_report
 
-## Classification
-- result: ${payload.classification}
+## Operating Mode
+- result: ${payload.operating_mode}
+
+## Repository State
+- result: ${payload.repository_state}
+
+## Request Presence
+- project_request.json: ${payload.request_present ? "present" : "missing"}
+
+## Classification Reasoning
+${reasoning}
 
 ## Rules Triggered
 ${rules}
@@ -109,6 +233,7 @@ ${validations}
 - SNAPSHOT_LOCKED: true
 - inventory_sorted: true
 - hash_algorithm: sha256
+- fail_closed: ${payload.blocked ? "true" : "false"}
 `;
 }
 
@@ -129,8 +254,10 @@ function runIntake(context) {
   const artifactsAbs = path.join(rootAbs, "artifacts", "intake");
   ensureDir(artifactsAbs);
 
-  const classificationInfo = classifyState(rootAbs);
-
+  const projectRequestAbs = path.join(rootAbs, "artifacts", "intake", "project_request.json");
+  const projectRequest = readJsonIfExists(projectRequestAbs);
+  const repositoryStateInfo = detectRepositoryState(rootAbs);
+  const operatingModeInfo = classifyOperatingMode(rootAbs, projectRequest, repositoryStateInfo);
   const entries = walk(rootAbs, "");
   const normalized = entries
     .map((e) => Object.assign({}, e, { path: String(e.path || "").replace(/\\/g, "/") }))
@@ -145,7 +272,8 @@ function runIntake(context) {
 
   const repoInventoryRel = "artifacts/intake/repository_inventory.json";
   const intakeSnapshotRel = "artifacts/intake/intake_snapshot.json";
-  const entrypointRel = "artifacts/intake/entrypoint_classification.md";
+  const intakeContextRel = "artifacts/intake/intake_context.json";
+  const intakeReportRel = "artifacts/intake/intake_report.md";
 
   const inventoryPayload = normalized.map((e) => ({
     path: e.path,
@@ -163,38 +291,62 @@ function runIntake(context) {
     generated_at: new Date().toISOString(),
     total_files: totalFiles,
     total_directories: totalDirs,
-    classification: classificationInfo.classification,
+    classification: operatingModeInfo.operating_mode,
+    repository_state: repositoryStateInfo.repository_state,
     repository_root_hash: repositoryRootHash,
     locked_snapshot_flag: true
   };
 
   writeJson(path.join(rootAbs, intakeSnapshotRel), snapshotPayload);
 
-  const entryMd = renderEntrypointClassificationMd({
-    classification: classificationInfo.classification,
-    rules_triggered: classificationInfo.rules,
+  const intakeContextPayload = {
+    operating_mode: operatingModeInfo.operating_mode,
+    repository_state: repositoryStateInfo.repository_state,
+    docs_present: repositoryStateInfo.docs_present,
+    code_present: repositoryStateInfo.code_present,
+    artifacts_present: repositoryStateInfo.artifacts_present,
+    request_present: operatingModeInfo.request_present,
+    blocked: operatingModeInfo.blocked,
+    classification_reasoning: operatingModeInfo.reasoning
+  };
+
+  writeJson(path.join(rootAbs, intakeContextRel), intakeContextPayload);
+
+  const intakeReportMd = renderIntakeReportMd({
+    operating_mode: operatingModeInfo.operating_mode,
+    repository_state: repositoryStateInfo.repository_state,
+    request_present: operatingModeInfo.request_present,
+    blocked: operatingModeInfo.blocked,
+    classification_reasoning: operatingModeInfo.reasoning,
+    rules_triggered: repositoryStateInfo.rules,
     observed_components: [
       fs.existsSync(path.join(rootAbs, "docs")) ? "docs/" : "docs/ (missing)",
       fs.existsSync(path.join(rootAbs, "code")) ? "code/" : "code/ (missing)",
       fs.existsSync(path.join(rootAbs, "artifacts")) ? "artifacts/" : "artifacts/ (missing)",
-      fs.existsSync(path.join(rootAbs, "progress", "status.json")) ? "progress/status.json" : "progress/status.json (missing)"
+      fs.existsSync(path.join(rootAbs, "progress", "status.json")) ? "progress/status.json" : "progress/status.json (missing)",
+      fs.existsSync(projectRequestAbs) ? "artifacts/intake/project_request.json" : "artifacts/intake/project_request.json (missing)"
     ],
     validation_summary: [
       "repository readable",
       "inventory generated",
       "inventory sorted lexicographically by path",
       "artifacts written under artifacts/intake/",
-      "locked_snapshot_flag true"
+      "locked_snapshot_flag true",
+      operatingModeInfo.blocked ? "execution blocked by fail-closed intake classification" : "operating mode classification resolved"
     ]
   });
 
-  fs.writeFileSync(path.join(rootAbs, entrypointRel), entryMd, "utf-8");
+  fs.writeFileSync(path.join(rootAbs, intakeReportRel), intakeReportMd, "utf-8");
+
+  if (operatingModeInfo.blocked) {
+    throw new Error(`INTAKE BLOCKED: unable to resolve operating mode deterministically (${operatingModeInfo.reasoning.join("; ")})`);
+  };
 
   return {
     stage_progress_percent: context.status && typeof context.status.stage_progress_percent === "number"
       ? context.status.stage_progress_percent
       : 0,
-    artifact: intakeSnapshotRel,
+    artifact: intakeContextRel,
     status_patch: {
       current_task: "MODULE: Audit",
       next_step: "MODULE_FLOW — next=Audit (set current_task to MODULE: Audit to continue)"

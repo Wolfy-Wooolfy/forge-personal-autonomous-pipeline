@@ -454,6 +454,63 @@ const registry = Object.freeze({
     };
   },
 
+  "TASK-059: Intake Realignment — Build/Improve Mode": (context) => {
+    const result = runIntake(context);
+
+    const sp = result && result.status_patch ? { ...result.status_patch } : {};
+
+    if (result && result.blocked === true) {
+      return {
+        stage_progress_percent: 100,
+        clear_current_task: false,
+        status_patch: sp
+      };
+    }
+
+    const relTaskClosure = "artifacts/tasks/TASK-059.execution.closure.md";
+    const taskClosureAbs = path.resolve(__dirname, "../../..", relTaskClosure);
+
+    if (fs.existsSync(taskClosureAbs)) {
+      throw new Error("Idempotency violation: closure artifact already exists for TASK-059");
+    }
+
+    const reportRef =
+      result && result.artifact
+        ? String(result.artifact)
+        : "artifacts/intake/intake_context.json";
+
+    fs.mkdirSync(path.dirname(taskClosureAbs), { recursive: true });
+    fs.writeFileSync(
+      taskClosureAbs,
+`# TASK-059 — Execution Closure
+
+## Task
+- Task ID: TASK-059
+- Stage Binding: A
+- Closure Type: EXECUTION
+
+## Status
+- stage_progress_percent: 100
+- closure_artifact: true
+
+## Generated Artifacts
+- ${reportRef}
+- artifacts/intake/intake_report.md
+- artifacts/intake/repository_inventory.json
+- artifacts/intake/intake_snapshot.json
+`,
+      "utf-8"
+    );
+
+    return {
+      stage_progress_percent: 100,
+      closure_artifact: true,
+      artifact: relTaskClosure,
+      clear_current_task: true,
+      status_patch: sp
+    };
+  },
+
   "TASK-028: Runtime Hardening": (context) => {
     const relArtifact = "artifacts/tasks/TASK-028.execution.closure.md";
     const closureFile = path.join(TASKS_PATH, "TASK-028.execution.closure.md");
@@ -1908,5 +1965,7 @@ function getHandler(taskName) {
 }
 
 module.exports = {
-  getHandler
+  getHandler,
+  getTaskHandler: getHandler,
+  registry
 };

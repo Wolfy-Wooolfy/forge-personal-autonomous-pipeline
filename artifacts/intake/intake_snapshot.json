@@ -1,9 +1,10 @@
 {
   "module": "INTAKE",
-  "generated_at": "2026-02-26T12:36:32.294Z",
-  "total_files": 219,
-  "total_directories": 40,
-  "classification": "FULL_PIPELINE_STATE",
-  "repository_root_hash": "ab4ccc38243b522d40855acf5d34b72a5d2aa953009ffb08a3520419d19fd86f",
+  "generated_at": "2026-03-08T13:11:44.782Z",
+  "total_files": 261,
+  "total_directories": 46,
+  "classification": "IMPROVE",
+  "repository_state": "MIXED",
+  "repository_root_hash": "fbb7f084cede120dd5d09a743bff609137c8121e60803e03346274e2212f516e",
   "locked_snapshot_flag": true
 }
