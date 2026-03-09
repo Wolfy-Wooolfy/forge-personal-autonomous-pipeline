@@ -32,8 +32,7 @@ function stableHash(s) {
 
 function normalizeList(arr) {
   const a = Array.isArray(arr) ? arr.map((x) => String(x)) : [];
-  a.sort();
-  return a;
+  return Array.from(new Set(a)).sort();
 }
 
 function makeGapId(category, affectedEntities) {
@@ -222,6 +221,7 @@ function runGap(context) {
   const rootAbs = path.resolve(__dirname, "../../..");
 
   const traceJsonAbs = path.resolve(rootAbs, "artifacts", "trace", "trace_matrix.json");
+  const intakeContextAbs = path.resolve(rootAbs, "artifacts", "intake", "intake_context.json");
   const auditFindingsAbs = path.resolve(rootAbs, "artifacts", "audit", "audit_findings.json");
 
   if (!fs.existsSync(traceJsonAbs)) {
@@ -231,6 +231,18 @@ function runGap(context) {
       artifact: errRef,
       status_patch: {
         blocking_questions: ["Gap BLOCKED: missing trace_matrix.json"],
+        next_step: ""
+      }
+    };
+  }
+
+  if (!fs.existsSync(intakeContextAbs)) {
+    const errRef = writeGapError(rootAbs, "BLOCKED: missing required artifact artifacts/intake/intake_context.json");
+    return {
+      blocked: true,
+      artifact: errRef,
+      status_patch: {
+        blocking_questions: ["Gap BLOCKED: missing intake_context.json"],
         next_step: ""
       }
     };
@@ -254,6 +266,7 @@ function runGap(context) {
   rmDirIfExists(path.resolve(rootAbs, "artifacts", "closure"));
 
   const trace = readJson(traceJsonAbs);
+  const intakeContext = readJson(intakeContextAbs);
   const audit = readJson(auditFindingsAbs);
 
   if (audit && audit.blocked === true) {
@@ -263,6 +276,40 @@ function runGap(context) {
       artifact: errRef,
       status_patch: {
         blocking_questions: ["Gap BLOCKED: audit blocked == true"],
+        next_step: ""
+      }
+    };
+  }
+
+  const validOperatingMode =
+    intakeContext &&
+    (intakeContext.operating_mode === "BUILD" || intakeContext.operating_mode === "IMPROVE") &&
+    intakeContext.blocked === false;
+
+  if (!validOperatingMode) {
+    const errRef = writeGapError(rootAbs, "BLOCKED: intake_context operating_mode invalid or intake still blocked");
+    return {
+      blocked: true,
+      artifact: errRef,
+      status_patch: {
+        blocking_questions: ["Gap BLOCKED: intake_context invalid or blocked"],
+        next_step: ""
+      }
+    };
+  }
+
+  const traceModeMatches =
+    trace &&
+    trace.operating_mode === intakeContext.operating_mode &&
+    trace.repository_state === intakeContext.repository_state;
+
+  if (!traceModeMatches) {
+    const errRef = writeGapError(rootAbs, "BLOCKED: trace_matrix mode/repository_state mismatch vs intake_context");
+    return {
+      blocked: true,
+      artifact: errRef,
+      status_patch: {
+        blocking_questions: ["Gap BLOCKED: trace_matrix does not match intake_context"],
         next_step: ""
       }
     };

@@ -21,6 +21,7 @@ function runExecute(context) {
   const status = context && context.status ? context.status : context;
 
   const backfillAbs = path.resolve(ROOT, "artifacts", "backfill", "backfill_tasks.json");
+  const intakeContextAbs = path.resolve(ROOT, "artifacts", "intake", "intake_context.json");
   if (!fs.existsSync(backfillAbs)) {
     return {
       stage_progress_percent: 100,
@@ -34,7 +35,21 @@ function runExecute(context) {
     };
   }
 
+  if (!fs.existsSync(intakeContextAbs)) {
+    return {
+      stage_progress_percent: 100,
+      blocked: true,
+      status_patch: {
+        next_step: "",
+        blocking_questions: [
+          "Execute BLOCKED: missing artifacts/intake/intake_context.json"
+        ]
+      }
+    };
+  }
+
   const backfill = readJsonAbs(backfillAbs);
+  const intakeContext = readJsonAbs(intakeContextAbs);
   const items = Array.isArray(backfill.items) ? backfill.items : [];
 
   const executeDirAbs = path.resolve(ROOT, "artifacts", "execute");

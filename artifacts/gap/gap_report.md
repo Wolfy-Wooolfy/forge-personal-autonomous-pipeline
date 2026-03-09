@@ -1,26 +1,26 @@
 # Gap Report
 
 ## Summary
-- total_gaps: 408
+- total_gaps: 563
 - critical_count: 0
 - requires_decision: true
 
 ## Gaps
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-01ea61f47035
-  - affected_entities: DOC-31::R005
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-003a5700c747
+  - affected_entities: DOC-CE-01::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-ab7932655929: Implement requirement DOC-31::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-026019c05e0c
-  - affected_entities: DOC-34::R007
+    - ACT-9e6a1a61cf61: Implement requirement DOC-CE-01::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-004c29da718f
+  - affected_entities: DOC-33::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3daafb2b6cd7: Complete coverage for DOC-33::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-00ee99c997ee
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-cb775a0e9b37: Implement requirement DOC-34::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0265350e1837
-  - affected_entities: DOC-30::R008
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-2a37eba81f49: Implement requirement DOC-30::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-b8cdb16e09d8: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-02d227388bb7
   - affected_entities: artifacts/intake/entrypoint_classification.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -31,51 +31,76 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-2c1b2036cdb9: Implement requirement DOC-15::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0434880764b1
-  - affected_entities: DOC-30::R010
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-03ef6320e31a
+  - affected_entities: -::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-a7acec1d26c1: Implement requirement DOC-30::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-2c89f742fa8a: Implement requirement -::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-048fa7c15c9b
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R002
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-256a184e4b6e: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-04af48f2511d
   - affected_entities: artifacts/tasks/TASK-022.stageC.verify.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-2a6b54c9d6d7: Either map artifact artifacts/tasks/TASK-022.stageC.verify.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-062d3b4b5e33
-  - affected_entities: DOC-13::R006
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0526910b8f9a
+  - affected_entities: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-38f27eda72ac: Implement requirement DOC-13::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-065491e8b6aa
-  - affected_entities: DOC-36::R014
+    - ACT-d70588732ded: Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **LOW** [ORPHAN_ARTIFACT] GAP-05a0d4fe38ca
+  - affected_entities: artifacts/tasks/TASK-051.stageA.module-flow-gap.md
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
+  - actions:
+    - ACT-fe5e9d09a809: Either map artifact artifacts/tasks/TASK-051.stageA.module-flow-gap.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-065f49c034e7
+  - affected_entities: DOC-16::R020
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-f50629780b65: Implement requirement DOC-36::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-8fa1dca75114: Implement requirement DOC-16::R020 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-079a4b235261
+  - affected_entities: DOC-17::R005
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-07d83696e277: Implement requirement DOC-17::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-07cb4cc8f286
   - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-38ffe467efff: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0822d21584a9
-  - affected_entities: DOC-34::R001
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-07d2fce5970f
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R020
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-69648a2a4400: Implement requirement DOC-34::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-08608d21c799
-  - affected_entities: Doc-03::R007
+    - ACT-c72467e609f3: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R020 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-082b3bb69983
+  - affected_entities: DOC-18::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d9b18f96fdf5: Complete coverage for DOC-18::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-08a14e21abc6
+  - affected_entities: -::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-4d35dabaf84b: Implement requirement Doc-03::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-092283becf3b
-  - affected_entities: DOC-35::R014
+    - ACT-a32e1bdae813: Implement requirement -::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **LOW** [ORPHAN_ARTIFACT] GAP-08a8c6a194d7
+  - affected_entities: artifacts/tasks/TASK-054.stageA.module-flow-execute.md
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
+  - actions:
+    - ACT-48e5d61dba0b: Either map artifact artifacts/tasks/TASK-054.stageA.module-flow-execute.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-08d055b33e8f
+  - affected_entities: DOC-10::R016
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-c5a0fb6d569f: Implement requirement DOC-35::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0990c6f0f7a8
-  - affected_entities: DOC-14::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-bf83e7316071: Implement requirement DOC-10::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-08d0a0b885e1
+  - affected_entities: DOC-35::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-5e1be7c95301: Implement requirement DOC-14::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-96774993fe2f: Complete coverage for DOC-35::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0990c6f0f7a8
   - affected_entities: DOC-14::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -91,86 +116,111 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-de7e83691882: Implement requirement DOC-15::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0a8c06070d85
+  - affected_entities: DOC-RT-10_10::R002
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-c8f21fb094f4: Implement requirement DOC-RT-10_10::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-0adb00dcb3b4
+  - affected_entities: DOC-33::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-1a31aa763226: Complete coverage for DOC-33::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0b033af97dea
   - affected_entities: DOC-01::R008
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-ba4c3ed00216: Implement requirement DOC-01::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0b033af97dea
-  - affected_entities: DOC-01::R008
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0b5a27cc54da
+  - affected_entities: DOC-10::R015
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-ba4c3ed00216: Implement requirement DOC-01::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0b033af97dea
-  - affected_entities: DOC-01::R008
+    - ACT-cef1e032d7ea: Implement requirement DOC-10::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0b5b564cf7fe
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-ba4c3ed00216: Implement requirement DOC-01::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-f22e3a0a8574: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0b5ec645ee35
+  - affected_entities: DOC-16::R014
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-11572458a3d4: Implement requirement DOC-16::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-0b808c9ecfd2
   - affected_entities: artifacts/release/RELEASE_1.2.0.manifest.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-72e142d7fe5e: Either map artifact artifacts/release/RELEASE_1.2.0.manifest.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0bcf2e1b96f9
-  - affected_entities: DOC-34::R003
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0c526ee6beba
+  - affected_entities: Doc-04::R015
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-3d69e4518c8f: Implement requirement DOC-34::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0c0432b3cbdf
-  - affected_entities: DOC-35::R012
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-c32a4880354b: Implement requirement Doc-04::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-0c6ec95b7dbc
+  - affected_entities: DOC-32::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-6777c16b6fff: Implement requirement DOC-35::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-574f60b50424: Complete coverage for DOC-32::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-0c73f815121b
   - affected_entities: artifacts/tasks/TASK-023.stageA.autonomy-contract.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-ddd4022af543: Either map artifact artifacts/tasks/TASK-023.stageA.autonomy-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0d93c22c75a3
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R008
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-a8f8b7b907a9: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0e0709574cf9
   - affected_entities: DOC-14::R010
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-129de151d9ec: Implement requirement DOC-14::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0e0709574cf9
-  - affected_entities: DOC-14::R010
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0e26579092e1
+  - affected_entities: DOC-00::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-129de151d9ec: Implement requirement DOC-14::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0e3a990ad9b6
-  - affected_entities: DOC-37::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-50007db99dee: Implement requirement DOC-00::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-0e69b3995ac0
+  - affected_entities: DOC-19::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-f1147788745a: Implement requirement DOC-37::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0e56058a00bf
-  - affected_entities: DOC-33::R014
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-4a2766c77aec: Complete coverage for DOC-19::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-0f26d0feb071
+  - affected_entities: DOC-19::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-bfbd81845422: Implement requirement DOC-33::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-e74e876ca0b7: Complete coverage for DOC-19::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0f4483c9802e
   - affected_entities: DOC-21::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-1ed51607fb1d: Implement requirement DOC-21::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0f82a4ccb77b
-  - affected_entities: DOC-30::R004
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0f5518237a75
+  - affected_entities: -::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-5d09b857387e: Implement requirement DOC-30::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-110e521bcbf9
-  - affected_entities: DOC-14::R007
+    - ACT-26638dfdc1e7: Implement requirement -::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0f5cadabe049
+  - affected_entities: DOC-10::R017
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-e976e4b86925: Implement requirement DOC-14::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-110e521bcbf9
-  - affected_entities: DOC-14::R007
+    - ACT-1aef17dac23b: Implement requirement DOC-10::R017 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0f92b631f0ff
+  - affected_entities: DOC-10::R024
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-e976e4b86925: Implement requirement DOC-14::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-11296dcc093b
-  - affected_entities: DOC-35::R004
+    - ACT-6b2f2ec2af2d: Implement requirement DOC-10::R024 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1097ac1e572d
+  - affected_entities: DOC-33::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d756c883ce0e: Complete coverage for DOC-33::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1167dc7fc433
+  - affected_entities: Doc-04::R018
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-195780006ebb: Implement requirement DOC-35::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-3ff576e887cc: Implement requirement Doc-04::R018 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-118bc3ac277b
   - affected_entities: artifacts/stage_C/stage_C.closure.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -181,41 +231,26 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-3d06e2d824f5: Implement requirement DOC-14::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1225e88f6102
-  - affected_entities: DOC-14::R002
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-14c739a93b13
+  - affected_entities: DOC-17::R002
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-3d06e2d824f5: Implement requirement DOC-14::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1265b3f899df
-  - affected_entities: DOC-14::R019
+    - ACT-108ec9c51ada: Implement requirement DOC-17::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1713d04e63a3
+  - affected_entities: DOC-00::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-0cf46380484b: Implement requirement DOC-14::R019 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-13926ade0b17
-  - affected_entities: DOC-37::R007
+    - ACT-e1ba931496d1: Implement requirement DOC-00::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-186b5b6bd2e4
+  - affected_entities: DOC-CE-01::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-3ca39d441377: Implement requirement DOC-37::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1409f566573c
-  - affected_entities: DOC-35::R010
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-8268d96e85a6: Implement requirement DOC-CE-01::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-189e6bce414d
+  - affected_entities: DOC-36::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-6d0fae942e49: Implement requirement DOC-35::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-178b642119ce
-  - affected_entities: DOC-30::R014
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-acd80ecee238: Implement requirement DOC-30::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-18979b095eb9
-  - affected_entities: DOC-37::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-29522f81bc5f: Implement requirement DOC-37::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-18c08e7621d7
-  - affected_entities: DOC-31::R016
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-b5ead6c87e72: Implement requirement DOC-31::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-c7e1de8f972b: Complete coverage for DOC-36::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-18ed0cc74e00
   - affected_entities: DOC-21::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -236,46 +271,71 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-3e389458a2df: Either map artifact artifacts/tasks/TASK-026.stageA.autonomy-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1c07dfcd25ed
-  - affected_entities: Doc-03::R008
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1be526738fc8
+  - affected_entities: DOC-33::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c614002d55a1: Complete coverage for DOC-33::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1c4429cd6d01
+  - affected_entities: DOC-36::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-10f9616d8a58: Complete coverage for DOC-36::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1c913beea425
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R018
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-0fee2c232a5e: Implement requirement Doc-03::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1dee66ea25e2
-  - affected_entities: DOC-36::R005
+    - ACT-d10706c20cc4: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R018 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1db7fe5eada5
+  - affected_entities: DOC-32::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-1f30d1299d88: Complete coverage for DOC-32::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1e04e34335f5
+  - affected_entities: DOC-12::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-cdff047aef65: Complete coverage for DOC-12::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1e052ed2089a
+  - affected_entities: DOC-35::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ea3222c394df: Complete coverage for DOC-35::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1e9b24b03fe2
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-df20ff80a831: Implement requirement DOC-36::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1df407aec5ec
-  - affected_entities: DOC-32::R010
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-2866f1ee1fda: Implement requirement DOC-32::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1f3e9f5c8ac8
-  - affected_entities: DOC-32::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-eea49a40e511: Implement requirement DOC-32::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-d9708b05fd04: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1f442ad7fb72
   - affected_entities: DOC-01::R013
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-f65c792da1ed: Implement requirement DOC-01::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1f442ad7fb72
-  - affected_entities: DOC-01::R013
+- **LOW** [ORPHAN_ARTIFACT] GAP-1f5fe212ebd7
+  - affected_entities: artifacts/tasks/TASK-058.stageA.intake-engine-contract.md
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
+  - actions:
+    - ACT-16772d77fd9f: Either map artifact artifacts/tasks/TASK-058.stageA.intake-engine-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1f870adb383e
+  - affected_entities: Doc-04::R012
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-f65c792da1ed: Implement requirement DOC-01::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-bd9081472c6d: Implement requirement Doc-04::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-205f3c32a9f9
+  - affected_entities: DOC-17::R010
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-934662fee3af: Implement requirement DOC-17::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2122fedcde25
+  - affected_entities: DOC-33::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6490512645fa: Complete coverage for DOC-33::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-228d547aad9e
   - affected_entities: DOC-20::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-91bcb05a04da: Implement requirement DOC-20::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-232487f9f2e4
-  - affected_entities: DOC-36::R013
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-6a90bf0e2db2: Implement requirement DOC-36::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-233ad5dcaefb
   - affected_entities: artifacts/tasks/TASK-035.execution.closure.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -286,16 +346,36 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-c6e6b5751a64: Implement requirement DOC-15::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-25ec4239d581
-  - affected_entities: DOC-31::R007
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-242eaf5d03cb
+  - affected_entities: DOC-13::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e0421c8d84f9: Complete coverage for DOC-13::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **LOW** [ORPHAN_ARTIFACT] GAP-24878c292a4e
+  - affected_entities: artifacts/tasks/TASK-053.execution.closure.md
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
+  - actions:
+    - ACT-7b4c2afd8977: Either map artifact artifacts/tasks/TASK-053.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-249787af0990
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R011
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-cad25e1e07a7: Implement requirement DOC-31::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-25ef4fc42b38
-  - affected_entities: DOC-35::R006
+    - ACT-444b76d3b93c: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-249cc23d91d2
+  - affected_entities: DOC-36::R016
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-36a3dc151f37: Complete coverage for DOC-36::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-24f4a36cb1ab
+  - affected_entities: -::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-8f9675323991: Implement requirement DOC-35::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-1ffd3f97bab6: Implement requirement -::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-261668b52f7d
+  - affected_entities: DOC-CE-01::R002
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-1b9693f6d22e: Implement requirement DOC-CE-01::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-26697e4c109a
   - affected_entities: artifacts/tasks/TASK-034.stageA.verification-contract.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -311,21 +391,11 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-adbcb6903d75: Implement requirement DOC-01::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-2724780d206a
-  - affected_entities: DOC-01::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-275e92860c35
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-adbcb6903d75: Implement requirement DOC-01::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-2724780d206a
-  - affected_entities: DOC-01::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-adbcb6903d75: Implement requirement DOC-01::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-27487fa0ad44
-  - affected_entities: DOC-13::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-c1f7d15d4fc5: Implement requirement DOC-13::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-1da2082c90b3: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-289be639a50c
   - affected_entities: artifacts/tasks/TASK-032.execution.closure.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -336,66 +406,106 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-a0351bce833c: Either map artifact artifacts/release/RELEASE_1.2.1.manifest.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-2a97a71056cb
-  - affected_entities: DOC-37::R005
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-29c594a5a5a1
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R017
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-fcfba59e0b41: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R017 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2ab99d960334
+  - affected_entities: DOC-18::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-59ef5f692c83: Complete coverage for DOC-18::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-2c098854d2a4
+  - affected_entities: DOC-17::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-9e091b1fd186: Implement requirement DOC-37::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-47621bb82dc1: Implement requirement DOC-17::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2c2935106b2e
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e1691b288c10: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-2c4822fef96b
   - affected_entities: artifacts/stage_C/core_runtime.closure.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-0762e5f36268: Either map artifact artifacts/stage_C/core_runtime.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-2c879e4623d3
-  - affected_entities: DOC-33::R016
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-2c4ce2b579c3
+  - affected_entities: DOC-00::R008
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-89fc34b1b072: Implement requirement DOC-33::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-3b77c19f9bed: Implement requirement DOC-00::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2d1223b42e26
+  - affected_entities: DOC-19::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-8449a291b05d: Complete coverage for DOC-19::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-2d124d3881f7
+  - affected_entities: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R010
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-0acc75fd5a56: Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-2d25fc74c14e
   - affected_entities: DOC-14::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-2905e2b603a6: Implement requirement DOC-14::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-2d25fc74c14e
-  - affected_entities: DOC-14::R005
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2de7e01ea135
+  - affected_entities: DOC-16::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-2905e2b603a6: Implement requirement DOC-14::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-2db0cdb4e46e
-  - affected_entities: DOC-37::R008
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-3247fa38c9a7: Complete coverage for DOC-16::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2f7a2d89db5d
+  - affected_entities: DOC-34::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-1f74a865e4da: Implement requirement DOC-37::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-2f38db8da5ee
-  - affected_entities: DOC-32::R014
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-075afc85247b: Complete coverage for DOC-34::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2f8fa018bdef
+  - affected_entities: DOC-16::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-371b0a37b16b: Implement requirement DOC-32::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-65f885d0335b: Complete coverage for DOC-16::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-2f945a7bb1d8
   - affected_entities: artifacts/tasks/TASK-040.stageA.encoding-normalization-contract.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-49c80134d1d3: Either map artifact artifacts/tasks/TASK-040.stageA.encoding-normalization-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-2f958ca31468
-  - affected_entities: DOC-12::R006
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2fff9b9a931c
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-063cedcf8073: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-304127090b96
+  - affected_entities: DOC-02::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-2924fd55ee33: Implement requirement DOC-12::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-30bedca2608f
-  - affected_entities: DOC-33::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-ac1bc6400b68: Implement requirement DOC-33::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-7d49a79e243c: Implement requirement DOC-02::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-30d0f1b43461
   - affected_entities: artifacts/tasks/TASK-035.stageA.trace-by-clause-contract.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-8b11fdfc7240: Either map artifact artifacts/tasks/TASK-035.stageA.trace-by-clause-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-31224a03f66c
-  - affected_entities: DOC-33::R001
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-31003868ed56
+  - affected_entities: DOC-10::R013
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-ad724f46cddd: Implement requirement DOC-33::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-8b90d872fd6c: Implement requirement DOC-10::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3152f6ed270f
+  - affected_entities: DOC-35::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-9e991f306bbb: Complete coverage for DOC-35::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-317af84938e4
+  - affected_entities: DOC-34::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-04c0ac55ee99: Complete coverage for DOC-34::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-31e8dd9c81fb
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R022
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3efbf0bcd3ff: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R022 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-329eb6ab2538
   - affected_entities: DOC-21::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -406,112 +516,131 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-4b6c77a28d2a: Either map artifact artifacts/tasks/TASK-043.stageA.verification-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-331648cf7f4d
-  - affected_entities: DOC-36::R004
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-33a3122cf910
+  - affected_entities: DOC-16::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c85e563b0a78: Complete coverage for DOC-16::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-34c934cba6e8
+  - affected_entities: DOC-00::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-3f705911a79e: Implement requirement DOC-36::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-347d535bda66
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R012
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-57893689b728: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-489e46c5fadd: Implement requirement DOC-00::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-34f62212ecdc
   - affected_entities: artifacts/tasks/TASK-039.stageA.stageC-closure-contract.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-bc1920b100be: Either map artifact artifacts/tasks/TASK-039.stageA.stageC-closure-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-35d3c0b65c27
-  - affected_entities: DOC-35::R008
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3505c6298732
+  - affected_entities: DOC-RT-10_10::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-1337c9d28c1f: Implement requirement DOC-35::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-fd485a1abf8f: Implement requirement DOC-RT-10_10::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-35e2d3ea2538
   - affected_entities: artifacts/tasks/TASK-029.stageA.multi-step-contract.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-4e892c476f44: Either map artifact artifacts/tasks/TASK-029.stageA.multi-step-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-35f41a790160
-  - affected_entities: DOC-37::R002
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-364a0bfcdd03
+  - affected_entities: DOC-16::R025
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-0bf70439ec0e: Implement requirement DOC-37::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-37946067a8f2
-  - affected_entities: DOC-01::R018
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-87a9be3e69e9: Implement requirement DOC-01::R018 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-5501bfeb420f: Implement requirement DOC-16::R025 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-37d099302bb4
   - affected_entities: DOC-38::R012
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-c043a63f6323: Implement requirement DOC-38::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-38103d5122d2
-  - affected_entities: DOC-32::R012
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-979ff5636e31: Implement requirement DOC-32::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-386a5efb0498
   - affected_entities: artifacts/stage_B/orchestrator_stage_transitions.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-d2c85b3105f9: Either map artifact artifacts/stage_B/orchestrator_stage_transitions.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3aa7f92b03a4
-  - affected_entities: DOC-12::R013
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-38c0757512ad
+  - affected_entities: DOC-18::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f1415ff5fe09: Complete coverage for DOC-18::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-38eb829505d3
+  - affected_entities: DOC-32::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c27b469e15f3: Complete coverage for DOC-32::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3956e8f2e6a0
+  - affected_entities: DOC-10::R012
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-473200e5917a: Implement requirement DOC-12::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [ORPHAN_CODE] GAP-3b6bc4a00789
-  - affected_entities: CODE::code/src/modules/traceEngine.js::FILE
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
+    - ACT-5bc378fa6bb6: Implement requirement DOC-10::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3a52f23acb1d
+  - affected_entities: DOC-CE-01::R001
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-3b54d2ddc433: Map code unit CODE::code/src/modules/traceEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
-    - ACT-c25e2a96441f: Remove or relocate code unit CODE::code/src/modules/traceEngine.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
+    - ACT-e482f6c6a0a5: Implement requirement DOC-CE-01::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3abd03d8d8d6
+  - affected_entities: DOC-10::R003
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-3531a8dab1c9: Implement requirement DOC-10::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3afd64197646
+  - affected_entities: DOC-10::R021
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-a5c8a7b0b00a: Implement requirement DOC-10::R021 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3b6025e1f0fb
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R012
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-0602e0fcfca7: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-3b7a40b14646
   - affected_entities: artifacts/tasks/TASK-024.stageA.verification-contract.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-5df142c9d642: Either map artifact artifacts/tasks/TASK-024.stageA.verification-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3ccd15299782
-  - affected_entities: DOC-12::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3d06b7a22ad7
+  - affected_entities: DOC-32::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-9d69fe690e6d: Implement requirement DOC-12::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-193c76b65eb9: Complete coverage for DOC-32::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3da63cefe939
   - affected_entities: DOC-20::R009
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-0a104b96b855: Implement requirement DOC-20::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3df2275036dd
-  - affected_entities: Doc-03::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3dcc1466c8f3
+  - affected_entities: DOC-32::R016
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-613159a4d781: Implement requirement Doc-03::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-3f487551ace6: Complete coverage for DOC-32::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3e7d95d4aef9
   - affected_entities: DOC-15::R013
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-478daee354b2: Implement requirement DOC-15::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3f09e3b65495
-  - affected_entities: DOC-30::R005
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3e800bb5e1f8
+  - affected_entities: Doc-04::R019
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-c7a1015606ee: Implement requirement DOC-30::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-1701babc2964: Implement requirement Doc-04::R019 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3f6fe833d69c
+  - affected_entities: DOC-34::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5e0e9dd80841: Complete coverage for DOC-34::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-403d554f9268
   - affected_entities: artifacts/stage_A/contract.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-4f8e55e2a4e3: Either map artifact artifacts/stage_A/contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-40d2680bb39d
-  - affected_entities: DOC-35::R007
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-407a0cac4dd7
+  - affected_entities: DOC-13::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ed0d94dbfbc3: Complete coverage for DOC-13::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-41bb2e235028
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R013
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-079eba94e51c: Implement requirement DOC-35::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-41d285f09e1b
-  - affected_entities: Doc-03::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-c2eb6b4f0b5a: Implement requirement Doc-03::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-3d87a0a3a9c1: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-4306532f308b
   - affected_entities: artifacts/release/RELEASE_1.1.1.manifest.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -522,6 +651,11 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-adc6120e2052: Either map artifact artifacts/tasks/TASK-027.stageB.skeleton.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-437e5f8baaae
+  - affected_entities: DOC-34::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-1d93fc20252f: Complete coverage for DOC-34::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-439eb03b8cd5
   - affected_entities: artifacts/tasks/TASK-026.stageC.verify.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -532,6 +666,21 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-4fbe111b4a06: Either map artifact artifacts/tasks/TASK-033.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-440a15b6d187
+  - affected_entities: DOC-32::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a562e6c2ee1a: Complete coverage for DOC-32::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-443f91dbcf88
+  - affected_entities: DOC-16::R026
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-3cae061a0287: Implement requirement DOC-16::R026 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-44b6371bc6df
+  - affected_entities: Doc-04::R013
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-520a12043e4a: Implement requirement Doc-04::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-44d01a7c4480
   - affected_entities: DOC-15::R012
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -542,6 +691,11 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-9609c6a56e4e: Either map artifact artifacts/tasks/TASK-042.stageA.verification-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-45cec70bcc3e
+  - affected_entities: DOC-02::R006
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-7ba02ccbbff3: Implement requirement DOC-02::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-45d7d93160d5
   - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R014
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -552,6 +706,11 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-d59cd1360566: Implement requirement DOC-14::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-460b8035dd4f
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-7be445ce0437: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-461b3fc1944f
   - affected_entities: artifacts/tasks/TASK-028.stageA.runtime-hardening.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -567,16 +726,6 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-a36a59c0eba4: Implement requirement DOC-01::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4674e006266f
-  - affected_entities: DOC-01::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-a36a59c0eba4: Implement requirement DOC-01::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4674e006266f
-  - affected_entities: DOC-01::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-a36a59c0eba4: Implement requirement DOC-01::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-478a2d11fc8b
   - affected_entities: artifacts/tasks/TASK-044.stageA.verification-contract.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -587,26 +736,36 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-f8ef8659fdd8: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R017 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-491e0ecdb7c7
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R004
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-ff1516d8b7b8: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-495285c84dea
   - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-27c59a7934c5: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-49de57f9681d
-  - affected_entities: DOC-32::R016
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-49870b8bb111
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-ac7b3b6e6928: Implement requirement DOC-32::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4a6097e4c899
-  - affected_entities: DOC-34::R011
+    - ACT-85890d850483: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-49b55c885fa1
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-b82edc7bcdbc: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4b178b308f3a
+  - affected_entities: DOC-17::R009
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-247c4560e0ef: Implement requirement DOC-34::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4ab581b7f090
-  - affected_entities: DOC-36::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-fc3371747e32: Implement requirement DOC-17::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4b465af20aa6
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R024
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-5b6279b26b02: Implement requirement DOC-36::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-6c6d99924777: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R024 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-4b8c2fdbff7c
   - affected_entities: artifacts/stage_D/release_manifest.v2.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -622,61 +781,81 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-f1ee5b134f24: Implement requirement DOC-21::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4bd98791faa0
+  - affected_entities: DOC-16::R022
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-2c9041a1f336: Implement requirement DOC-16::R022 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-4c3c7cc131e9
   - affected_entities: artifacts/stage_C/code_mismatch_report.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-a5ca2defa3ff: Either map artifact artifacts/stage_C/code_mismatch_report.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4c4937256f03
-  - affected_entities: DOC-01::R015
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4c917251cedd
+  - affected_entities: DOC-12::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-d694f084b88e: Implement requirement DOC-01::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-b1637926a839: Complete coverage for DOC-12::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-4c94a3e6aa23
   - affected_entities: artifacts/stage_A/io_map.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-486776f5d99a: Either map artifact artifacts/stage_A/io_map.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4cae71da60be
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R009
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-46166ea78dc7: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4cb9551a2c25
   - affected_entities: DOC-38::R009
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-80f55424d202: Implement requirement DOC-38::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4cc799b90215
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R008
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4d262daface4
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R010
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-279004a6ef6e: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-754ab883d526: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4d425bf91a51
+  - affected_entities: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R005
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-7227188f349c: Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4e217096a129
   - affected_entities: DOC-38::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-735b7badc5e7: Implement requirement DOC-38::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4e3d3a9aa6e4
-  - affected_entities: DOC-31::R008
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4e40ee5b3a48
+  - affected_entities: DOC-16::R019
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-5369f79f6500: Implement requirement DOC-31::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-023c0ff65b47: Implement requirement DOC-16::R019 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4eaf586a7e26
+  - affected_entities: Doc-04::R008
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-b43adb40a1ba: Implement requirement Doc-04::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-4ebbd217561e
   - affected_entities: artifacts/tasks/TASK-046.stageA.verification-contract.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-8a3cc8070485: Either map artifact artifacts/tasks/TASK-046.stageA.verification-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4ed2b65626eb
-  - affected_entities: DOC-31::R015
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4ecbd1656523
+  - affected_entities: DOC-19::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-9dc7cb5df927: Implement requirement DOC-31::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-0bbfbca9ef5f: Complete coverage for DOC-19::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-4f7fa748aee3
   - affected_entities: artifacts/tasks/TASK-029.execution.closure.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-b4d8e541320d: Either map artifact artifacts/tasks/TASK-029.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4fe7527401fc
-  - affected_entities: DOC-32::R013
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4fd61ac460cc
+  - affected_entities: DOC-19::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-71f01c69430f: Implement requirement DOC-32::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-beeb8e70d86e: Complete coverage for DOC-19::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-501da651a035
   - affected_entities: artifacts/tasks/TASK-022.stageA.plan.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -702,21 +881,26 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-09606adc0054: Implement requirement DOC-15::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-517d29c9be17
-  - affected_entities: DOC-36::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-518125153a1d
+  - affected_entities: DOC-34::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-751efa0e5601: Implement requirement DOC-36::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-a8f009f29513: Complete coverage for DOC-34::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-526ec5387c00
   - affected_entities: DOC-14::R012
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-0c183a4dc232: Implement requirement DOC-14::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-526ec5387c00
-  - affected_entities: DOC-14::R012
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-52746a2dc5c2
+  - affected_entities: DOC-02::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-0c183a4dc232: Implement requirement DOC-14::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-701bfcbcdf9c: Implement requirement DOC-02::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-52be286ae041
+  - affected_entities: DOC-18::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-469a51130214: Complete coverage for DOC-18::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-532a19dbc9c3
   - affected_entities: artifacts/tasks/TASK-049.stageA.audit-refresh-contract.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -727,31 +911,61 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-25b9ca4e7141: Implement requirement DOC-01::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-535eed500282
-  - affected_entities: DOC-01::R003
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-536d88b8bb64
+  - affected_entities: DOC-33::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3bed0381f329: Complete coverage for DOC-33::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-53a1f12168ab
+  - affected_entities: DOC-13::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f6d454b338fa: Complete coverage for DOC-13::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-53e5f2fdc8c9
+  - affected_entities: -::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-25b9ca4e7141: Implement requirement DOC-01::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-535eed500282
-  - affected_entities: DOC-01::R003
+    - ACT-694e3d469851: Implement requirement -::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-53e8600b9327
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-25b9ca4e7141: Implement requirement DOC-01::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-53f19c86c400
-  - affected_entities: DOC-31::R014
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-e6e2cb6c7e4f: Implement requirement DOC-31::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-cb9b9dd1efc1: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-54388221af78
   - affected_entities: DOC-38::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-c751bc75936c: Implement requirement DOC-38::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-546b8b934437
+  - affected_entities: DOC-36::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-9e3a8db8d082: Complete coverage for DOC-36::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-54d1c94b86b6
+  - affected_entities: DOC-36::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-1d7bfb06e947: Complete coverage for DOC-36::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-55c3edba6522
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R025
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-fc3505420f20: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R025 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-55e1d2352fab
   - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R018
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-798c11643db7: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R018 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-571642b791fc
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R013
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-2e146b9b19de: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5718eda7daa8
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R015
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-9cc36d835578: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-574f1fab1431
   - affected_entities: DOC-20::R010
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -762,56 +976,66 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-8675a3ca8f29: Implement requirement DOC-38::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-578ec48abc0d
+  - affected_entities: DOC-34::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a397701063d6: Complete coverage for DOC-34::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-57fa6e19d192
   - affected_entities: DOC-15::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-cde4d7030c23: Implement requirement DOC-15::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-58884ed47767
-  - affected_entities: Doc-03::R001
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-5845b2d901c9
+  - affected_entities: DOC-35::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3b916c19428f: Complete coverage for DOC-35::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-593cc6398fa4
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R002
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-e74276ead2c1: Implement requirement Doc-03::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5911438deb5d
-  - affected_entities: DOC-37::R009
+    - ACT-4e174369aa55: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-59bad85cd659
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R018
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-4b5a955157ca: Implement requirement DOC-37::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-ef7ee641d187: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R018 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-59f7a6c9818a
   - affected_entities: DOC-01::R020
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-af7cbf346af9: Implement requirement DOC-01::R020 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5a0b572ba811
-  - affected_entities: DOC-12::R008
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-5a2088c8461c
+  - affected_entities: DOC-33::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6d3f94967dda: Complete coverage for DOC-33::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5b3199bb0aa0
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-d098c6f0bad8: Implement requirement DOC-12::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5a4496966942
-  - affected_entities: DOC-30::R011
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-5ba5001e3c50: Implement requirement DOC-30::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-4b5c48a6088e: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-5b345c0c6094
   - affected_entities: artifacts/stage_D/release_gate_evidence.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-e163f8c57c37: Either map artifact artifacts/stage_D/release_gate_evidence.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-5b52bde9f33c
+  - affected_entities: DOC-13::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-520518f23ae2: Complete coverage for DOC-13::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5b8679aef8c1
   - affected_entities: DOC-38::R014
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-569099d86f44: Implement requirement DOC-38::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5ba3565b791c
-  - affected_entities: DOC-32::R006
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-5ccf719ab3b3
+  - affected_entities: DOC-16::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-4ecd9d0872cd: Implement requirement DOC-32::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5c6a3460b1b9
-  - affected_entities: Doc-03::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-1ff0d131e843: Implement requirement Doc-03::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-90845fed8b3c: Complete coverage for DOC-16::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5d6aebc890dd
   - affected_entities: DOC-15::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -827,21 +1051,36 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-16cc3d682e95: Either map artifact artifacts/tasks/TASK-041.stageA.verification-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5f641d7f6e8b
-  - affected_entities: DOC-34::R006
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-5e6e5d7e25a9
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ffac63c0f8a7: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5f8cdb1d72fe
+  - affected_entities: Doc-04::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-4b0c0555fbfc: Implement requirement DOC-34::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-602b8a30c45f
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-3e474f6fdde1: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-246bf9ba2e2a: Implement requirement Doc-04::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-606a49ee798b
   - affected_entities: DOC-21::R013
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-28baca3556b8: Implement requirement DOC-21::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-60f0ef365747
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R018
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-54e8474377e0: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R018 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6185c0e93ed9
+  - affected_entities: DOC-18::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e87e12d431ee: Complete coverage for DOC-18::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-618e4f8ad1c2
+  - affected_entities: -::R002
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-983858915ee9: Implement requirement -::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-61bddae98402
   - affected_entities: artifacts/stage_C/runtime_runbook.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -857,31 +1096,51 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-f76d80da81d9: Implement requirement DOC-01::R019 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-62944d536303
-  - affected_entities: DOC-34::R012
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-62763f2204ea
+  - affected_entities: DOC-35::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6410b723daf9: Complete coverage for DOC-35::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-630cb4aba730
+  - affected_entities: DOC-10::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-f275f6844f83: Implement requirement DOC-34::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-301c56a27c2a: Implement requirement DOC-10::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **LOW** [ORPHAN_ARTIFACT] GAP-6375565fed70
+  - affected_entities: artifacts/tasks/TASK-053.stageA.module-flow-backfill.md
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
+  - actions:
+    - ACT-9cf7639137ad: Either map artifact artifacts/tasks/TASK-053.stageA.module-flow-backfill.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6400739dd909
   - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R016
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-d46ae268336e: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6486c3490835
-  - affected_entities: DOC-37::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-64b01f1c92c0
+  - affected_entities: DOC-32::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-25de881b4ca4: Implement requirement DOC-37::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-654cb6830722
-  - affected_entities: DOC-36::R010
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-14d23dcb0908: Implement requirement DOC-36::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-31846e4d7393: Complete coverage for DOC-32::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-656cb4e78560
   - affected_entities: DOC-20::R008
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-9572273ff394: Implement requirement DOC-20::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-65775aba9b69
+  - affected_entities: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R002
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-c95536a8926b: Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6608583d6087
+  - affected_entities: -::R009
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-140a127c4fef: Implement requirement -::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6634a18ad698
+  - affected_entities: DOC-12::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-da213d00b4be: Complete coverage for DOC-12::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6635eab1dec0
   - affected_entities: DOC-38::R010
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -892,11 +1151,11 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-090b3297f943: Either map artifact artifacts/tasks/TASK-030.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-66c30a48e647
-  - affected_entities: DOC-36::R011
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-66bdbd97b335
+  - affected_entities: DOC-32::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-4f803a3352ec: Implement requirement DOC-36::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-1d2f24f2f2f7: Complete coverage for DOC-32::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-67f1a8af3ac3
   - affected_entities: artifacts/stage_D/release_gate_evidence.v2.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -912,11 +1171,6 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-627185c36460: Implement requirement DOC-21::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6967f62dea71
-  - affected_entities: DOC-12::R005
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-c7f81fe283de: Implement requirement DOC-12::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-69b182a54822
   - affected_entities: artifacts/tasks/TASK-047.stageA.module-flow-intake.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -927,26 +1181,16 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-7da33d507aa7: Implement requirement DOC-14::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6ac1a9d0af79
+  - affected_entities: DOC-00::R007
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-5af6e3498d9a: Implement requirement DOC-00::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6bba9a519068
   - affected_entities: DOC-01::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-c22660ce4337: Implement requirement DOC-01::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6bba9a519068
-  - affected_entities: DOC-01::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-c22660ce4337: Implement requirement DOC-01::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6bba9a519068
-  - affected_entities: DOC-01::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-c22660ce4337: Implement requirement DOC-01::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6bd198d6c335
-  - affected_entities: DOC-34::R015
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-385cb4a3073a: Implement requirement DOC-34::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **MEDIUM** [ORPHAN_CODE] GAP-6c7a1fe77ff4
   - affected_entities: CODE::code/src/execution/task_executor.js::FILE
   - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
@@ -958,121 +1202,176 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-2b27604265d5: Implement requirement DOC-01::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6c981d7579e1
-  - affected_entities: DOC-01::R006
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6d252c89d091
+  - affected_entities: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-2b27604265d5: Implement requirement DOC-01::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6c981d7579e1
-  - affected_entities: DOC-01::R006
+    - ACT-9f253802cf3e: Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6dc4a836a6d0
+  - affected_entities: DOC-33::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-728c61f7bd1e: Complete coverage for DOC-33::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6e38de7147f3
+  - affected_entities: -::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-2b27604265d5: Implement requirement DOC-01::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6d80b9393e5e
-  - affected_entities: DOC-36::R001
+    - ACT-8178a8da440e: Implement requirement -::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6f02dfefae5f
+  - affected_entities: DOC-11::R008
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-cb067e05daac: Implement requirement DOC-36::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6f479037b562
-  - affected_entities: DOC-32::R007
+    - ACT-e2ca80b2e0f1: Implement requirement DOC-11::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6f3577761858
+  - affected_entities: DOC-10::R023
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-608639bdd7e2: Implement requirement DOC-32::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6f8aea553a8d
-  - affected_entities: DOC-32::R008
+    - ACT-2dd774d61b09: Implement requirement DOC-10::R023 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6f77c7bdd152
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e1790142e27d: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6f89e10b4996
+  - affected_entities: DOC-CE-01::R008
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-462b669dafbe: Implement requirement DOC-32::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6f90c03f3190
-  - affected_entities: DOC-36::R015
+    - ACT-e75ffd0ed9a5: Implement requirement DOC-CE-01::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6fbf93f8235e
+  - affected_entities: DOC-34::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-61e5cede16cd: Complete coverage for DOC-34::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6fdf5709ed72
+  - affected_entities: DOC-34::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f257df48f39f: Complete coverage for DOC-34::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7112558a4b8f
+  - affected_entities: DOC-16::R024
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-8dc525c4b6a9: Implement requirement DOC-36::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7061a6d4b68e
-  - affected_entities: DOC-35::R015
+    - ACT-7c63a594ca54: Implement requirement DOC-16::R024 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-716b1056f621
+  - affected_entities: DOC-18::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5dc4cac02b16: Complete coverage for DOC-18::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-718e342e5aef
+  - affected_entities: DOC-00::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-6d1aa59f9f9f: Implement requirement DOC-35::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-726dba3b38dc
-  - affected_entities: DOC-37::R006
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-d39cfaad7f4c: Implement requirement DOC-00::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-71fe389f8e10
+  - affected_entities: DOC-35::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-afe39b2d8cdf: Implement requirement DOC-37::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-788f806bff2b: Complete coverage for DOC-35::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-72daa3e1b739
   - affected_entities: artifacts/stage_B/stage_B.reclosure.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-30f58ca7e64b: Either map artifact artifacts/stage_B/stage_B.reclosure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-73cb862ea41b
-  - affected_entities: DOC-12::R012
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-1764196a341f: Implement requirement DOC-12::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-748596c3fe74
   - affected_entities: artifacts/stage_D/docs_presence_report.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-047f616b4290: Either map artifact artifacts/stage_D/docs_presence_report.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-74b86498673e
+  - affected_entities: DOC-17::R008
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-91d2c2628e96: Implement requirement DOC-17::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-755f53893e8f
   - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R013
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-09a91df563b0: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7561072bbc82
-  - affected_entities: DOC-13::R003
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7560c4e65883
+  - affected_entities: DOC-10::R025
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-27812133c834: Implement requirement DOC-13::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-d169ead79283: Implement requirement DOC-10::R025 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **LOW** [ORPHAN_ARTIFACT] GAP-758277e3f972
+  - affected_entities: artifacts/tasks/TASK-054.execution.closure.md
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
+  - actions:
+    - ACT-e9305036758d: Either map artifact artifacts/tasks/TASK-054.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-761da9c8670e
+  - affected_entities: DOC-12::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-184a08a60824: Complete coverage for DOC-12::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-764a135ed7da
+  - affected_entities: DOC-02::R008
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-14778c214450: Implement requirement DOC-02::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **LOW** [ORPHAN_ARTIFACT] GAP-76ecad290d90
+  - affected_entities: artifacts/tasks/TASK-055.execution.closure.md
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
+  - actions:
+    - ACT-6cf8bb74b110: Either map artifact artifacts/tasks/TASK-055.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-771e564a465b
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R016
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-01dc1e5cc8f4: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-777a1e218bf9
+  - affected_entities: DOC-36::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-69ea3bbaedfb: Complete coverage for DOC-36::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-779ca4f2b5ab
+  - affected_entities: DOC-02::R012
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-de27ab75ebf8: Implement requirement DOC-02::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-77b0bb0abd13
+  - affected_entities: DOC-16::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-450e2f93d684: Complete coverage for DOC-16::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **LOW** [ORPHAN_ARTIFACT] GAP-77c43eb721f0
+  - affected_entities: artifacts/release/repository_hash_snapshot.json
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
+  - actions:
+    - ACT-94e31bf392f5: Either map artifact artifacts/release/repository_hash_snapshot.json to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7809fc8f5398
   - affected_entities: DOC-20::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-fd2b996c0a1b: Implement requirement DOC-20::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-782d6912e3d4
-  - affected_entities: DOC-36::R006
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-79b2b57c2014
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R010
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-29d38d1cdba7: Implement requirement DOC-36::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7a301b2577fb
-  - affected_entities: DOC-31::R003
+    - ACT-9577ba65eda6: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7a1a3a4c6484
+  - affected_entities: DOC-33::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-94c7e119134a: Complete coverage for DOC-33::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7a8424ae52e5
+  - affected_entities: DOC-02::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-c69b4990cfaf: Implement requirement DOC-31::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7a5c2bbd7c64
-  - affected_entities: DOC-30::R002
+    - ACT-5d6b3d6d0994: Implement requirement DOC-02::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7c2a85b27965
+  - affected_entities: DOC-10::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-201004e1ebac: Implement requirement DOC-30::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7a5f682a8068
-  - affected_entities: DOC-33::R012
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-c2946ca1c5ce: Implement requirement DOC-33::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7c13682cfc3d
-  - affected_entities: DOC-01::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-a14ae958b31a: Implement requirement DOC-01::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7c13682cfc3d
-  - affected_entities: DOC-01::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-a14ae958b31a: Implement requirement DOC-01::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7c13682cfc3d
-  - affected_entities: DOC-01::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-a14ae958b31a: Implement requirement DOC-01::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7c3f4757fd39
-  - affected_entities: DOC-33::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-0fe5bedf456b: Implement requirement DOC-33::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-bf013d6edeab: Implement requirement DOC-10::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-7cac10612ce3
   - affected_entities: artifacts/stage_D/verification_report.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-f8f721ee808f: Either map artifact artifacts/stage_D/verification_report.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7d70261e061e
+  - affected_entities: DOC-12::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c66c8146c9df: Complete coverage for DOC-12::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-7e083652c662
   - affected_entities: artifacts/tasks/TASK-048.execution.closure.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -1083,31 +1382,36 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-e05c9bc4eec5: Implement requirement DOC-14::R017 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7eb427c2f4e4
-  - affected_entities: DOC-34::R014
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7f22aaeb96c8
+  - affected_entities: Doc-04::R010
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-c6d9dcd04d24: Implement requirement DOC-34::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7eb8fd520f8b
-  - affected_entities: DOC-13::R010
+    - ACT-4f6690a87920: Implement requirement Doc-04::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7f4c762f767d
+  - affected_entities: DOC-02::R002
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-e616c1d8e4a3: Implement requirement DOC-13::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7eebecb6d902
-  - affected_entities: Doc-03::R006
+    - ACT-815cd2306358: Implement requirement DOC-02::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7f70f883361c
+  - affected_entities: DOC-11::R009
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-90f8b8863a9f: Implement requirement Doc-03::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8196e5d667e5
-  - affected_entities: DOC-38::R008
+    - ACT-3de25b842bd3: Implement requirement DOC-11::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-801ad6ca240e
+  - affected_entities: DOC-11::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-50f2f4f4dc56: Implement requirement DOC-38::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8244050f5dd6
-  - affected_entities: DOC-33::R004
+    - ACT-5e4e9cfea992: Implement requirement DOC-11::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-80aa6267d61c
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R016
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-832daffee834: Implement requirement DOC-33::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-1f7c6067c711: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-817bdb0c7156
+  - affected_entities: DOC-00::R003
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-218e23e30ade: Implement requirement DOC-00::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-82c7301526d5
   - affected_entities: artifacts/reports/autonomy/execution_report_index.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -1118,16 +1422,6 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-5ba4d938a55e: Either map artifact artifacts/tasks/TASK-040.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-836bfb160947
-  - affected_entities: DOC-34::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-855a93118294: Implement requirement DOC-34::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-83cd66cfde9d
-  - affected_entities: DOC-33::R011
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-6c4b3c90ed2b: Implement requirement DOC-33::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-84b601e8c1fe
   - affected_entities: artifacts/tasks/TASK-038.execution.closure.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -1138,21 +1432,26 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-402e4bccb78a: Either map artifact artifacts/tasks/TASK-033.stageA.trace-engine-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-85b0cadbbb54
-  - affected_entities: DOC-37::R013
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-86d59dfa1237
+  - affected_entities: DOC-12::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-31354cd477e0: Complete coverage for DOC-12::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-86f45f3e0ee8
+  - affected_entities: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-c3d44db2d1c9: Implement requirement DOC-37::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-8c32f62176d3: Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-877ddf9a4e23
   - affected_entities: artifacts/stage_B/orchestrator_runner.spec.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-25fb3be9c183: Either map artifact artifacts/stage_B/orchestrator_runner.spec.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-882e5547276e
-  - affected_entities: DOC-01::R011
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-87e853f357d1
+  - affected_entities: DOC-19::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-88ff06be44ce: Implement requirement DOC-01::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-f80300612686: Complete coverage for DOC-19::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-882e5547276e
   - affected_entities: DOC-01::R011
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1163,16 +1462,21 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-fa08c590b093: Implement requirement DOC-21::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8853a44f38a7
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R019
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-0d51212eaf77: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R019 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-88aa9749cfd8
+  - affected_entities: DOC-32::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-0ff191de1eb3: Complete coverage for DOC-32::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-88d4c2fd9708
   - affected_entities: artifacts/tasks/TASK-027.stageA.report-contract.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-7eec27bd8040: Either map artifact artifacts/tasks/TASK-027.stageA.report-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-88d8d9026949
-  - affected_entities: DOC-33::R010
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-68bac9239021: Implement requirement DOC-33::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-89093f7a1831
   - affected_entities: DOC-38::R002
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1188,16 +1492,26 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-202fa98231d0: Either map artifact artifacts/tasks/TASK-030.stageB.skeleton.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8af9ead97548
-  - affected_entities: DOC-33::R008
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-89d5b474d937
+  - affected_entities: DOC-16::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-093dacead2da: Complete coverage for DOC-16::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-8a4b1c2e7931
+  - affected_entities: DOC-32::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-9aa29a9dda49: Complete coverage for DOC-32::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8a72761419b7
+  - affected_entities: DOC-16::R023
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-08f19c51a48b: Implement requirement DOC-33::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8b1bf9349bc4
-  - affected_entities: DOC-14::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-8fd213cabeec: Implement requirement DOC-16::R023 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-8aa2045a17e1
+  - affected_entities: DOC-19::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-5d8ce8913dff: Implement requirement DOC-14::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-80a4b435cbdf: Complete coverage for DOC-19::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8b1bf9349bc4
   - affected_entities: DOC-14::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1208,124 +1522,178 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-65bc565686c8: Implement requirement DOC-01::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8b2f386e2ce3
-  - affected_entities: DOC-01::R010
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-8bfa490f7c2a
+  - affected_entities: DOC-12::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-65bc565686c8: Implement requirement DOC-01::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-e010e31b93dc: Complete coverage for DOC-12::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-8c2880728d41
   - affected_entities: artifacts/tasks/TASK-045.execution.closure.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-1c15d5310f63: Either map artifact artifacts/tasks/TASK-045.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-8c80306f4451
+  - affected_entities: DOC-32::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-05c8cc65f991: Complete coverage for DOC-32::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8c9098920744
   - affected_entities: DOC-14::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-d10c34c6a31f: Implement requirement DOC-14::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8c9098920744
-  - affected_entities: DOC-14::R001
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8cf01bd924b4
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R014
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-d10c34c6a31f: Implement requirement DOC-14::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8d32f4793be2
-  - affected_entities: DOC-34::R002
+    - ACT-1673b935657f: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-8cff584822be
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-7d68f666c26d: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8d44646f9f84
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-91a74a21e434: Implement requirement DOC-34::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8f92b346a18f
-  - affected_entities: DOC-14::R011
+    - ACT-2a307d55eae5: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-8de9c430005b
+  - affected_entities: DOC-35::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d083920867d1: Complete coverage for DOC-35::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-8e29331abc51
+  - affected_entities: DOC-18::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-143246e8ed72: Complete coverage for DOC-18::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8f24764cfd4b
+  - affected_entities: DOC-02::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-c7897d497561: Implement requirement DOC-14::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8f92b346a18f
-  - affected_entities: DOC-14::R011
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-90e3b7ad9c83: Implement requirement DOC-02::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **LOW** [ORPHAN_ARTIFACT] GAP-8f6cbfefee27
+  - affected_entities: artifacts/tasks/TASK-055.stageA.module-flow-closure.md
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
-    - ACT-c7897d497561: Implement requirement DOC-14::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [ORPHAN_CODE] GAP-909dc8ed5cd3
-  - affected_entities: CODE::code/src/modules/executeEngine.js::FILE
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
+    - ACT-906e9db7dbe4: Either map artifact artifacts/tasks/TASK-055.stageA.module-flow-closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-8fc5a20273b2
+  - affected_entities: DOC-16::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-aecef5d43ad1: Remove or relocate code unit CODE::code/src/modules/executeEngine.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
-    - ACT-b926d28c1150: Map code unit CODE::code/src/modules/executeEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
+    - ACT-85d3ea94b40e: Complete coverage for DOC-16::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [ORPHAN_CODE] GAP-910a1d3386cb
   - affected_entities: CODE::code/src/orchestrator/stage_transitions.js::FILE
   - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
   - actions:
     - ACT-2a084e6c6945: Remove or relocate code unit CODE::code/src/orchestrator/stage_transitions.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
     - ACT-f02a2ecf1dbb: Map code unit CODE::code/src/orchestrator/stage_transitions.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-915fc72b8a49
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R009
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-9228df236089
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R019
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-891836c1acb7: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R019 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-93c3633c3559
+  - affected_entities: DOC-36::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-075c32235ac5: Complete coverage for DOC-36::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-93e47c26a8cc
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R014
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-40cc3ef10cbb: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-926d57981a0f
-  - affected_entities: DOC-12::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-c25ec97eb2a2: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-945a2b173a5e
+  - affected_entities: DOC-16::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-ca29be64700a: Implement requirement DOC-12::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-934d1b1dc0f6
-  - affected_entities: DOC-35::R013
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-b3ee868ef088: Complete coverage for DOC-16::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-946132f3f5dd
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-9a938161911d: Implement requirement DOC-35::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-0e2987cec0a8: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-9484f85cc937
   - affected_entities: artifacts/tasks/TASK-034.execution.closure.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-14381131054f: Either map artifact artifacts/tasks/TASK-034.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-948aaddf46ed
-  - affected_entities: DOC-33::R015
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-d8665a39474f: Implement requirement DOC-33::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-9509169a6770
   - affected_entities: artifacts/tasks/TASK-025.stageA.decision-logging-contract.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-a2f8120f8c7f: Either map artifact artifacts/tasks/TASK-025.stageA.decision-logging-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-96a2f717674f
+  - affected_entities: DOC-12::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-405caf1272cb: Complete coverage for DOC-12::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-985b166e3f7f
+  - affected_entities: DOC-02::R004
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-3d30cfa53772: Implement requirement DOC-02::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-985b16acec8d
+  - affected_entities: DOC-02::R009
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-37f1fcb4f84c: Implement requirement DOC-02::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-98bd5ebaa252
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-07792789c270: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [ORPHAN_CODE] GAP-98d6dca8e473
   - affected_entities: CODE::code/src/orchestrator/status_writer.js::FILE
   - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
   - actions:
     - ACT-05cd74c80d75: Remove or relocate code unit CODE::code/src/orchestrator/status_writer.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
     - ACT-e985ee7db8ca: Map code unit CODE::code/src/orchestrator/status_writer.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-98e02d338b55
-  - affected_entities: DOC-13::R005
+- **LOW** [ORPHAN_ARTIFACT] GAP-98fa19e0d83c
+  - affected_entities: artifacts/tasks/TASK-050.execution.closure.md
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
+  - actions:
+    - ACT-cb70de456e19: Either map artifact artifacts/tasks/TASK-050.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-992ba4d426a4
+  - affected_entities: DOC-16::R017
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-d84f159d83c1: Implement requirement DOC-13::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-203eaa9799cb: Implement requirement DOC-16::R017 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-9a1354705c38
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c0bab034c2b3: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-9a37949b51a7
   - affected_entities: artifacts/stage_B/documentation_audit.closure.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-10fb6b877bc2: Either map artifact artifacts/stage_B/documentation_audit.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9ace09ecbeff
+  - affected_entities: DOC-CE-01::R009
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-fa4b5a75a43e: Implement requirement DOC-CE-01::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9b186629b1e2
   - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-dff99abe4870: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9b1c6a52198e
-  - affected_entities: DOC-34::R008
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-9b2a3645a5cc
+  - affected_entities: DOC-34::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-4989d5626963: Implement requirement DOC-34::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9b3214532628
-  - affected_entities: DOC-13::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-ebc6f3fb3bd8: Complete coverage for DOC-34::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-9bd9500be43a
+  - affected_entities: DOC-32::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-c8bb9cd1b5b4: Implement requirement DOC-13::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9b47118a954c
-  - affected_entities: DOC-12::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-bc52dd08f989: Complete coverage for DOC-32::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-9c2203931a99
+  - affected_entities: DOC-19::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-775f45f787b7: Implement requirement DOC-12::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9c2728f35ee8
-  - affected_entities: DOC-34::R005
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-f8532f3dbc0b: Implement requirement DOC-34::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-907c45606803: Complete coverage for DOC-19::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-9c3d19daa468
   - affected_entities: artifacts/stage_D/release_manifest.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -1336,36 +1704,36 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-a054aa1ef36d: Either map artifact artifacts/reports/autonomy/execution_report_schema.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9d8f99c69d32
-  - affected_entities: DOC-37::R012
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-9d399470676e
+  - affected_entities: DOC-35::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5c861bda0383: Complete coverage for DOC-35::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **LOW** [ORPHAN_ARTIFACT] GAP-9e6fdeb80c5b
+  - affected_entities: artifacts/tasks/TASK-051.execution.closure.md
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
+  - actions:
+    - ACT-1c27cd857bae: Either map artifact artifacts/tasks/TASK-051.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9e7de715d07e
+  - affected_entities: DOC-17::R011
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-b06855723a6e: Implement requirement DOC-37::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9dcbe8c2a081
-  - affected_entities: DOC-12::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-7e3ff79c801c: Implement requirement DOC-12::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9e87a91f9a40
-  - affected_entities: DOC-01::R014
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-d34522760ef9: Implement requirement DOC-01::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-bccf18830183: Implement requirement DOC-17::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-9e8d676ccef1
   - affected_entities: artifacts/stage_B/orchestrator_status_writer.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-e66723322499: Either map artifact artifacts/stage_B/orchestrator_status_writer.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9ebf3d09171d
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R005
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-0cc8dd6e6ca9: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9ebf4b6cb896
   - affected_entities: DOC-21::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-392ca94f3a8c: Implement requirement DOC-21::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9f280bb7b8e6
-  - affected_entities: DOC-34::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-1025345d1fb1: Implement requirement DOC-34::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-9f551a27f150
   - affected_entities: artifacts/release/RELEASE_1.0.0.manifest.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -1376,85 +1744,146 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-5f4778dff955: Either map artifact artifacts/tasks/TASK-028.stageB.skeleton.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-a1222c575a76
+  - affected_entities: DOC-17::R007
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-d8712315a7ed: Implement requirement DOC-17::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-a123bce92684
   - affected_entities: artifacts/stage_D/docs_presence_evidence.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-8ccc03e30943: Either map artifact artifacts/stage_D/docs_presence_evidence.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **MEDIUM** [ORPHAN_CODE] GAP-a2d7dbf7fd10
-  - affected_entities: CODE::code/src/modules/decisionGate.js::FILE
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-a15b8a0767f1
+  - affected_entities: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R004
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-c51c7611e255: Map code unit CODE::code/src/modules/decisionGate.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
-    - ACT-da7be1f73159: Remove or relocate code unit CODE::code/src/modules/decisionGate.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
+    - ACT-1cfb5c1a8a3a: Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a1b810873ca0
+  - affected_entities: DOC-19::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d086a0991595: Complete coverage for DOC-19::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a214f72b2c51
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a05dae793de9: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-a22c4add1aaa
+  - affected_entities: DOC-17::R001
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-8fb31b1557d1: Implement requirement DOC-17::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-a26aee4d5f00
+  - affected_entities: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R009
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-b6b59356d7db: Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a2e786bea5c1
+  - affected_entities: DOC-16::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-97b9a9cf216c: Complete coverage for DOC-16::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a2e786bea5c1
+  - affected_entities: DOC-16::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-97b9a9cf216c: Complete coverage for DOC-16::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a2fadce031da
+  - affected_entities: DOC-12::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d3ab95249962: Complete coverage for DOC-12::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-a38dfb6ac9d0
   - affected_entities: artifacts/tasks/TASK-024.stageC.verify.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-e2c419b7b83b: Either map artifact artifacts/tasks/TASK-024.stageC.verify.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-a3e427d4bc8c
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R017
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-841ccae921bd: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R017 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-a4543268f6dd
+  - affected_entities: DOC-RT-10_10::R001
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-ffff37df17fd: Implement requirement DOC-RT-10_10::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-a4d75ca094d7
   - affected_entities: DOC-38::R015
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-288e17fb7186: Implement requirement DOC-38::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [ORPHAN_CODE] GAP-a561ad99ce80
-  - affected_entities: CODE::code/src/modules/gapEngine.js::FILE
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a5c053a80b49
+  - affected_entities: DOC-18::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-0cfd948f2042: Map code unit CODE::code/src/modules/gapEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
-    - ACT-f26b8e8cbffc: Remove or relocate code unit CODE::code/src/modules/gapEngine.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-a6a7f4907352
-  - affected_entities: DOC-13::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-f015eda54ab0: Complete coverage for DOC-18::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a77463e61e49
+  - affected_entities: DOC-35::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-93c0f4a228f2: Implement requirement DOC-13::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-da443b4e107a: Complete coverage for DOC-35::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-a82fba3561fd
   - affected_entities: artifacts/release/RELEASE_1.1.0.manifest.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-ff3eb44b49db: Either map artifact artifacts/release/RELEASE_1.1.0.manifest.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-a876a6811569
-  - affected_entities: DOC-31::R011
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a9153a2ea61f
+  - affected_entities: DOC-18::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-2dad916d6db3: Complete coverage for DOC-18::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ab38c9bf371c
+  - affected_entities: Doc-04::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-056e14bc9856: Implement requirement DOC-31::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-a8c2f1897cd1
-  - affected_entities: DOC-32::R005
+    - ACT-705a0fbc614b: Implement requirement Doc-04::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ab45ebd5644f
+  - affected_entities: DOC-10::R020
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-007ee0e9054e: Implement requirement DOC-32::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-a8fc860619b7
-  - affected_entities: DOC-33::R006
+    - ACT-6123f4b93522: Implement requirement DOC-10::R020 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-abdd95efcec3
+  - affected_entities: DOC-10::R022
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-0500e9a30f1d: Implement requirement DOC-33::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-a96bf2d8546f
-  - affected_entities: DOC-30::R013
+    - ACT-a9fbaf142a54: Implement requirement DOC-10::R022 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-abe447b46b70
+  - affected_entities: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-7d0758131b80: Implement requirement DOC-30::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [ORPHAN_CODE] GAP-abeabc99301b
-  - affected_entities: CODE::code/src/modules/closureEngine.js::FILE
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
+    - ACT-70682b90bca4: Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ace7425e49f3
+  - affected_entities: DOC-12::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-b8bcefa860e8: Remove or relocate code unit CODE::code/src/modules/closureEngine.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
-    - ACT-c65cfe67c0f1: Map code unit CODE::code/src/modules/closureEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
+    - ACT-99b818c71d0e: Complete coverage for DOC-12::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ad14d4937c45
+  - affected_entities: DOC-13::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f89db148a103: Complete coverage for DOC-13::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-ae25dcc46ed7
   - affected_entities: artifacts/stage_C/code_trace_matrix.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-c90724be71b8: Either map artifact artifacts/stage_C/code_trace_matrix.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ae895ddc26c5
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R028
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a4cfde3f71a0: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R028 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ae94368dd2b4
   - affected_entities: DOC-15::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-30eef5700160: Implement requirement DOC-15::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [ORPHAN_CODE] GAP-aeaf3310cea3
-  - affected_entities: CODE::code/src/execution/task_registry.js::FILE
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-aeaf1782634c
+  - affected_entities: DOC-33::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-c8e5b482fdbd: Remove or relocate code unit CODE::code/src/execution/task_registry.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
-    - ACT-db79231d1d82: Map code unit CODE::code/src/execution/task_registry.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
+    - ACT-08b8d170b734: Complete coverage for DOC-33::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-af94a36b4b09
   - affected_entities: artifacts/tasks/TASK-043.execution.closure.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -1465,21 +1894,21 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-508955303088: Implement requirement DOC-14::R021 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b0e8adac7edf
-  - affected_entities: DOC-35::R002
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b15db4df0c84
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R022
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-3f12b8254ffe: Implement requirement DOC-35::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b11362127870
-  - affected_entities: DOC-32::R015
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-31af047a7cb6: Implement requirement DOC-32::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-6f307fb59964: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R022 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-b169e4524de2
   - affected_entities: artifacts/tasks/TASK-041.execution.closure.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-053b16ae1a37: Either map artifact artifacts/tasks/TASK-041.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b173c7bf8d81
+  - affected_entities: DOC-16::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-0170cea9269a: Complete coverage for DOC-16::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b17558f19a03
   - affected_entities: DOC-38::R011
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1495,11 +1924,21 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-a75c67de08f8: Either map artifact artifacts/tasks/TASK-046.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b210e8f10c5f
-  - affected_entities: DOC-35::R005
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b230bbf6dcd4
+  - affected_entities: DOC-34::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5c3f8a5f7644: Complete coverage for DOC-34::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b2c46e2d8f80
+  - affected_entities: Doc-04::R020
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-268da3faf6fc: Implement requirement DOC-35::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-b70e25012db0: Implement requirement Doc-04::R020 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b300d24e6c6a
+  - affected_entities: DOC-35::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-7bcf9e192e28: Complete coverage for DOC-35::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b41e76705727
   - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R002
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1510,52 +1949,121 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-6eb9dbe83588: Implement requirement DOC-14::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **LOW** [ORPHAN_ARTIFACT] GAP-b51845b1b10b
+  - affected_entities: artifacts/tasks/TASK-052.stageA.module-flow-decision-gate.md
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
+  - actions:
+    - ACT-9f3919d1bc2d: Either map artifact artifacts/tasks/TASK-052.stageA.module-flow-decision-gate.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b5d164d0d4f6
   - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R015
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-45d61f25c28d: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b5d45d0e5415
-  - affected_entities: DOC-32::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b62e769c043b
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-d4b1780e12e7: Implement requirement DOC-32::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b64d283f249a
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R011
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-1a5fd1b7795b: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b6f5b2c046a6
+  - affected_entities: DOC-16::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-5c8065c1baac: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b651f4118eef
-  - affected_entities: DOC-31::R010
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-ced1f0f44cab: Complete coverage for DOC-16::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **LOW** [ORPHAN_ARTIFACT] GAP-b79731a5a144
+  - affected_entities: artifacts/tasks/TASK-059.execution.closure.md
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
-    - ACT-94fb86b5a2f9: Implement requirement DOC-31::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [ORPHAN_CODE] GAP-b8aba2cf82b4
-  - affected_entities: CODE::code/src/modules/backfillEngine.js::FILE
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
-  - actions:
-    - ACT-bd5e7b0643f4: Map code unit CODE::code/src/modules/backfillEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
-    - ACT-c3e3340e14b7: Remove or relocate code unit CODE::code/src/modules/backfillEngine.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
+    - ACT-39c7f3611617: Either map artifact artifacts/tasks/TASK-059.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b8c66d15cc45
   - affected_entities: DOC-14::R022
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-5aa053320908: Implement requirement DOC-14::R022 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-baadf413791a
-  - affected_entities: DOC-35::R001
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b8f70e110046
+  - affected_entities: DOC-18::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3ad7596b1992: Complete coverage for DOC-18::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b906b650f6aa
+  - affected_entities: DOC-10::R019
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-ecf50a7c0f59: Implement requirement DOC-35::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-bbf07c5504f8
-  - affected_entities: DOC-34::R010
+    - ACT-0cb38a0b6fd1: Implement requirement DOC-10::R019 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b9122da1dd18
+  - affected_entities: DOC-02::R011
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-df2613c457a6: Implement requirement DOC-34::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-05c9df6cb364: Implement requirement DOC-02::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b91452164fa2
+  - affected_entities: DOC-36::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c7125cf8affa: Complete coverage for DOC-36::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ba16a07e8b82
+  - affected_entities: DOC-11::R007
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-19aec4168f12: Implement requirement DOC-11::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ba73add3a9fc
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-bc73834440d6: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ba98275bb812
+  - affected_entities: DOC-11::R004
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-a7c9a8182ea1: Implement requirement DOC-11::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-bb69b8e15948
+  - affected_entities: DOC-02::R010
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-1aba96b4c563: Implement requirement DOC-02::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-bbcd9c069842
+  - affected_entities: DOC-10::R002
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-4df371a95d6e: Implement requirement DOC-10::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-bc4b34ca44a2
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R026
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a954fbc856a4: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R026 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-bcc2a4442e90
+  - affected_entities: DOC-35::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f4ae6bd56b5d: Complete coverage for DOC-35::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-bd690b353c9d
+  - affected_entities: DOC-19::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-df92ed76f814: Complete coverage for DOC-19::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-bd7efb114f76
+  - affected_entities: DOC-19::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3c04c5d7905d: Complete coverage for DOC-19::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-bda18145b4d7
+  - affected_entities: DOC-RT-10_10::R003
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-37afc190f548: Implement requirement DOC-RT-10_10::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-be2ca5173597
   - affected_entities: artifacts/stage_D/stage_D.closure.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-5e6e557b987d: Either map artifact artifacts/stage_D/stage_D.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-be76f539124a
+  - affected_entities: Doc-04::R017
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-e2806d02619e: Implement requirement Doc-04::R017 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-bef7a92c26b3
+  - affected_entities: DOC-19::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-172cd3eb4351: Complete coverage for DOC-19::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-bf9baaff290b
   - affected_entities: artifacts/stage_A/pass_fail.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -1566,11 +2074,21 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-9356cf76ecf8: Either map artifact artifacts/tasks/TASK-028.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c096dc42afe0
-  - affected_entities: DOC-35::R003
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c109ec7d905c
+  - affected_entities: DOC-16::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-817651bbc4ec: Complete coverage for DOC-16::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c1a42fb0fe31
+  - affected_entities: DOC-CE-01::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-7a37a86d1caf: Implement requirement DOC-35::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-648ecfb1b322: Implement requirement DOC-CE-01::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c1ae8427fe4c
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R011
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-c05f9de9f095: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **MEDIUM** [ORPHAN_CODE] GAP-c2a9eecf1dfb
   - affected_entities: CODE::code/src/orchestrator/runner.js::FILE
   - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
@@ -1582,61 +2100,127 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-e65f59995260: Implement requirement DOC-14::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c308e4b7a724
-  - affected_entities: DOC-14::R006
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c37ed1ad4c7d
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R009
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-e65f59995260: Implement requirement DOC-14::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-3a7ef2ed2e70: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-c3b362cac856
   - affected_entities: artifacts/stage_B/rollback_C_to_B.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-06dd1bec4b52: Either map artifact artifacts/stage_B/rollback_C_to_B.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c44c118a7c94
-  - affected_entities: DOC-30::R012
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c42645b04f23
+  - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R008
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-7480c83d8951: Implement requirement DOC-30::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-35a98f4e0021: Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c451f1bed00e
+  - affected_entities: DOC-35::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-2cea3a8ee2ec: Complete coverage for DOC-35::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c477d42d0f93
+  - affected_entities: DOC-18::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f51c8c692b54: Complete coverage for DOC-18::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-c483088d0c8f
   - affected_entities: artifacts/tasks/TASK-025.stageB.skeleton.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-ca436828f2f9: Either map artifact artifacts/tasks/TASK-025.stageB.skeleton.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c96be547144f
-  - affected_entities: DOC-33::R013
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c547fd099f3e
+  - affected_entities: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R011
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-85e6132eaae2: Implement requirement DOC-33::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-3f7dcb550482: Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c5d02d199b52
+  - affected_entities: DOC-17::R004
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-ffc92a2420d2: Implement requirement DOC-17::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [ORPHAN_CODE] GAP-c5feec58fff0
+  - affected_entities: CODE::code/src/execution/task_registry.js::getTaskHandler
+  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
+  - actions:
+    - ACT-18d3139a5dd3: Remove or relocate code unit CODE::code/src/execution/task_registry.js::getTaskHandler if it is not part of Forge scope/contracts. (requires_decision=true)
+    - ACT-ba0220a18ada: Map code unit CODE::code/src/execution/task_registry.js::getTaskHandler to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c6c77d300c6a
+  - affected_entities: DOC-35::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ba662a6b01dc: Complete coverage for DOC-35::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c6e06db3a8b8
+  - affected_entities: DOC-01::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ebc9e89958f1: Complete coverage for DOC-01::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c6f07f820a9f
+  - affected_entities: DOC-32::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-21b5f39449d6: Complete coverage for DOC-32::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **LOW** [ORPHAN_ARTIFACT] GAP-c799602426f8
+  - affected_entities: artifacts/tasks/TASK-056.stageA.operating-modes-contract.md
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
+  - actions:
+    - ACT-b328fd97e8e0: Either map artifact artifacts/tasks/TASK-056.stageA.operating-modes-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c8a313ebc15e
+  - affected_entities: -::R008
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-f6a0df91ccce: Implement requirement -::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c91ac8111d4d
+  - affected_entities: DOC-13::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d16424556573: Complete coverage for DOC-13::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c9a4f670ad39
+  - affected_entities: DOC-10::R001
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-8f24f97db0a7: Implement requirement DOC-10::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-c9afaaef1f8c
   - affected_entities: artifacts/tasks/TASK-025.stageC.verify.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-b87bd5fe4b89: Either map artifact artifacts/tasks/TASK-025.stageC.verify.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ca7052edd3fe
-  - affected_entities: DOC-13::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-cab2c32c9eab
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R016
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-5afcef626bd3: Implement requirement DOC-13::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-cb32781048cf
-  - affected_entities: DOC-30::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-0285c7b07ff7: Implement requirement DOC-30::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-be5d46811c3a: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-cb4148a2b665
   - affected_entities: DOC-38::R013
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-b86b60ddbb19: Implement requirement DOC-38::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-cd6039e6eb47
+  - affected_entities: Doc-04::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-432b1a2c96e2: Complete coverage for Doc-04::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-cdcdaaf21eeb
   - affected_entities: artifacts/tasks/TASK-038.stageA.trace-rebuild-contract.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-74ef6ff96e0d: Either map artifact artifacts/tasks/TASK-038.stageA.trace-rebuild-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ce53977a1ae5
-  - affected_entities: DOC-12::R011
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-cdfcf31b7726
+  - affected_entities: DOC-13::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ecb9238334ac: Complete coverage for DOC-13::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ce21fecea4c7
+  - affected_entities: Doc-04::R016
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-123da8bed7e7: Implement requirement DOC-12::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-a5ac7fae0592: Implement requirement Doc-04::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ce94e686b5b0
+  - affected_entities: DOC-34::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e250df4e93b2: Complete coverage for DOC-34::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ced595196c63
   - affected_entities: DOC-20::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1647,31 +2231,66 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-da2db630ed3f: Either map artifact artifacts/tasks/TASK-031.stageB.skeleton.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-cee407191c93
+  - affected_entities: DOC-38::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-26ee6fb0de59: Complete coverage for DOC-38::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-cf120207943e
   - affected_entities: artifacts/tasks/TASK-024.stageB.skeleton.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-7b17e81e5aec: Either map artifact artifacts/tasks/TASK-024.stageB.skeleton.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d05b47714f9f
-  - affected_entities: DOC-30::R009
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-cf8efe180e68
+  - affected_entities: DOC-16::R016
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-cd95d0b83911: Implement requirement DOC-30::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d14850ecc5da
-  - affected_entities: DOC-12::R009
+    - ACT-c86d7cfa42b6: Implement requirement DOC-16::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-cfd1d4bce057
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4defea013f78: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d05cd55cf1ee
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R019
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-73ff059d18ec: Implement requirement DOC-12::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d1b74afa48d6
-  - affected_entities: DOC-31::R017
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-6514eb1eed64: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R019 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d265b7b289d5
+  - affected_entities: DOC-18::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-27b933f1de8f: Implement requirement DOC-31::R017 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-2bb90251d5fb: Complete coverage for DOC-18::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-d29ad34687be
   - affected_entities: artifacts/tasks/TASK-050.stageA.module-flow-trace.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-20fbcf536200: Either map artifact artifacts/tasks/TASK-050.stageA.module-flow-trace.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d2bbd7f4712f
+  - affected_entities: DOC-36::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-bbcab19a689c: Complete coverage for DOC-36::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d32a746bab9d
+  - affected_entities: DOC-36::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f5fb2caef7be: Complete coverage for DOC-36::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d32c5697e324
+  - affected_entities: DOC-35::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3156327ce908: Complete coverage for DOC-35::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d36a42091c8c
+  - affected_entities: DOC-11::R003
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-d4a1605e87f8: Implement requirement DOC-11::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d38652b03610
+  - affected_entities: DOC-32::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-25252af391bc: Complete coverage for DOC-32::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d39780a535e2
   - affected_entities: DOC-01::R017
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1682,16 +2301,26 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-c54757e82a60: Either map artifact artifacts/stage_A/assumptions.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d4fa0d79ab86
-  - affected_entities: DOC-31::R009
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d3c68b1c2f33
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-5fc81977715d: Implement requirement DOC-31::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d55073ff56fd
-  - affected_entities: DOC-36::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-b9dacd1e2e08: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d3e6c3f48b60
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R020
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-5850ede33f2f: Implement requirement DOC-36::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-3d52f530429e: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R020 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d407122c459b
+  - affected_entities: DOC-RT-10_10::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-1c2ea16dfba7: Complete coverage for DOC-RT-10_10::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d58ae63404cb
+  - affected_entities: DOC-33::R016
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a63de07946f3: Complete coverage for DOC-33::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-d5aff1e6069c
   - affected_entities: artifacts/tasks/TASK-031.stageA.first-handler-contract.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -1702,51 +2331,76 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-6859c46f7956: Either map artifact artifacts/tasks/TASK-023.stageB.skeleton.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d8bc7887d9d5
-  - affected_entities: DOC-36::R012
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d6217de3ee03
+  - affected_entities: Doc-04::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-05d8af572959: Implement requirement DOC-36::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d9143f6679b5
-  - affected_entities: DOC-31::R006
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-8b003a618b25: Implement requirement Doc-04::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d7adc56535ae
+  - affected_entities: DOC-36::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-68f3de1d6167: Implement requirement DOC-31::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d932befe85f7
-  - affected_entities: DOC-33::R005
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-09174113e6f6: Complete coverage for DOC-36::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **LOW** [ORPHAN_ARTIFACT] GAP-d7b0a0fab79e
+  - affected_entities: artifacts/tasks/TASK-057.stageA.intake-classification-contract.md
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
-    - ACT-003c629ba3ea: Implement requirement DOC-33::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-f3de5dafa778: Either map artifact artifacts/tasks/TASK-057.stageA.intake-classification-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d84d55d6dcbc
+  - affected_entities: DOC-01::R018
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d9411c157bc7: Complete coverage for DOC-01::R018 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d934458d72f2
   - affected_entities: DOC-14::R009
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-4f92d33c9731: Implement requirement DOC-14::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d934458d72f2
-  - affected_entities: DOC-14::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d93a1e72189d
+  - affected_entities: DOC-35::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-4f92d33c9731: Implement requirement DOC-14::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d9715dd3a180
-  - affected_entities: DOC-34::R013
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-d7b5dd480d50: Implement requirement DOC-34::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-a511cce9450a: Complete coverage for DOC-35::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-d9926a5e7c3f
   - affected_entities: artifacts/tasks/TASK-022.stageB.skeleton.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-7fec843b2c1c: Either map artifact artifacts/tasks/TASK-022.stageB.skeleton.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-dc6ce1ec85c7
-  - affected_entities: DOC-37::R015
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d9d5b0427b45
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-189aa48b1391: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-da3339344946
+  - affected_entities: Doc-04::R011
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-32bffff4817f: Implement requirement DOC-37::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-dccdc1af74cd
-  - affected_entities: DOC-35::R011
+    - ACT-ea3183edb021: Implement requirement Doc-04::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-daa95190d496
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-5902a731297a: Implement requirement DOC-35::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-58462d30d4c7: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-db8e697f9afb
+  - affected_entities: DOC-36::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6cd84ef7e956: Complete coverage for DOC-36::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-dbc00bfe9773
+  - affected_entities: DOC-10::R011
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-682fcf306a8e: Implement requirement DOC-10::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-dbd5db8614e4
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-321a2c754627: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-dbff058a47e8
+  - affected_entities: DOC-19::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5bee324129dd: Complete coverage for DOC-19::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-dd3e83106b21
   - affected_entities: artifacts/stage_C/dry_run_extension.closure.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -1757,41 +2411,46 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-6f7d2754e445: Either map artifact artifacts/tasks/TASK-039.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-dd50807f2a82
+  - affected_entities: DOC-34::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-40660f4e1ffe: Complete coverage for DOC-34::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-dd7f036bbcd8
   - affected_entities: artifacts/release/RELEASE_1.0.0.integrity.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-a74069429066: Either map artifact artifacts/release/RELEASE_1.0.0.integrity.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-dda1a5c80a41
-  - affected_entities: DOC-14::R008
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ddc7b40436d0
+  - affected_entities: DOC-16::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-9b8d1a3ea3c7: Implement requirement DOC-14::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-dda1a5c80a41
-  - affected_entities: DOC-14::R008
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-aa442b153ac0: Complete coverage for DOC-16::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-de3fe0335cc6
+  - affected_entities: DOC-12::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-9b8d1a3ea3c7: Implement requirement DOC-14::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ddb920fdf3eb
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R010
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-74fb82e86fdd: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-97f5847b5b83: Complete coverage for DOC-12::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-deaec1a14932
   - affected_entities: DOC-01::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-68bebf7922dc: Implement requirement DOC-01::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-deaec1a14932
-  - affected_entities: DOC-01::R005
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-dedadbe6829f
+  - affected_entities: DOC-10::R018
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-68bebf7922dc: Implement requirement DOC-01::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-deaec1a14932
-  - affected_entities: DOC-01::R005
+    - ACT-96c63d080f24: Implement requirement DOC-10::R018 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **LOW** [ORPHAN_ARTIFACT] GAP-df4e917dbbae
+  - affected_entities: artifacts/tasks/TASK-052.execution.closure.md
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
+  - actions:
+    - ACT-08365e0435df: Either map artifact artifacts/tasks/TASK-052.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-df68c093cc3f
+  - affected_entities: DOC-16::R027
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-68bebf7922dc: Implement requirement DOC-01::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-8eb87fbaed6a: Implement requirement DOC-16::R027 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-df7023aae81a
   - affected_entities: artifacts/tasks/TASK-030.stageA.execution-engine-contract.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -1807,96 +2466,121 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-93a88daa1e3f: Either map artifact artifacts/stage_C/test_evidence.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e078f7f6ec08
-  - affected_entities: DOC-32::R001
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e1fafec52df2
+  - affected_entities: Doc-04::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-4c0f02c482e5: Implement requirement DOC-32::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e095e953597f
-  - affected_entities: DOC-32::R002
+    - ACT-f7ad0eaf7a28: Implement requirement Doc-04::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-e25ac2056b1b
+  - affected_entities: DOC-12::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-b2e73f0fdb6d: Complete coverage for DOC-12::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e2b9211e956f
+  - affected_entities: DOC-10::R010
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-7da22fc79a67: Implement requirement DOC-32::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e21f966a722a
-  - affected_entities: DOC-37::R011
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-fce1d8a0a836: Implement requirement DOC-10::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-e456bb332eec
+  - affected_entities: DOC-34::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-ab124c815fe9: Implement requirement DOC-37::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-eaebf600affa: Complete coverage for DOC-34::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-e46578cf7598
+  - affected_entities: DOC-36::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-159fb0ec9cbc: Complete coverage for DOC-36::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e538d22e3938
   - affected_entities: DOC-20::R002
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-f0118530e735: Implement requirement DOC-20::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e5b5e4c038cf
+  - affected_entities: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R008
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-d00fa9c26949: Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e5d9426489f3
   - affected_entities: DOC-01::R002
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-8d04cc5ec18c: Implement requirement DOC-01::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e5d9426489f3
-  - affected_entities: DOC-01::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-e5f729493620
+  - affected_entities: DOC-33::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-8d04cc5ec18c: Implement requirement DOC-01::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e5d9426489f3
-  - affected_entities: DOC-01::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-00c076044dd5: Complete coverage for DOC-33::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-e60c3bcc3812
+  - affected_entities: DOC-32::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-8d04cc5ec18c: Implement requirement DOC-01::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-859506edd6e2: Complete coverage for DOC-32::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e65a58d99907
   - affected_entities: DOC-14::R020
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-3318b50ce297: Implement requirement DOC-14::R020 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e6eb910e877e
-  - affected_entities: DOC-13::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-e6c799e0150a
+  - affected_entities: DOC-36::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-ae2dc0732774: Implement requirement DOC-13::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-85b943aa1396: Complete coverage for DOC-36::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e7161522cdff
   - affected_entities: DOC-38::R016
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-96423d4eec57: Implement requirement DOC-38::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e735e6c5673c
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R012
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-702f11a56619: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-e76f0c1087b3
   - affected_entities: artifacts/tasks/TASK-045.stageA.verification-contract.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-c46e1f277c0b: Either map artifact artifacts/tasks/TASK-045.stageA.verification-contract.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e78012ad1280
-  - affected_entities: DOC-36::R008
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-3a704265d5e7: Implement requirement DOC-36::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e7a06afa51d5
   - affected_entities: DOC-38::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-1e7424941a5b: Implement requirement DOC-38::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e830770d7f1e
-  - affected_entities: DOC-36::R003
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e7eb976b124a
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R017
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-d370c5b23a4f: Implement requirement DOC-36::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ea8a74886ad6
-  - affected_entities: DOC-33::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-c4884b078a0e: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R017 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ea2890ae8f87
+  - affected_entities: DOC-13::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-e1f8b2d2af7e: Implement requirement DOC-33::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-e6f47b516ac7: Complete coverage for DOC-13::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ea805219f5f8
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d68fd52379d1: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-eb06898b4789
   - affected_entities: DOC-20::R012
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-ac0a8c8fb611: Implement requirement DOC-20::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ec0eb6f93970
-  - affected_entities: DOC-37::R014
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ebe3a1939468
+  - affected_entities: DOC-36::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-e7567ffbc007: Implement requirement DOC-37::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-f6456a633ec0: Complete coverage for DOC-36::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ec9beb1d7fdf
   - affected_entities: DOC-21::R011
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-be38fa64129f: Implement requirement DOC-21::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ecde0fb86b0a
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R021
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-767eb2ac3244: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R021 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ecf6896f2cca
   - affected_entities: DOC-20::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1907,16 +2591,56 @@
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-d5ae3e0a5bf9: Either map artifact artifacts/tasks/TASK-048.stageA.module-flow-audit.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ee405f42432e
-  - affected_entities: DOC-31::R002
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ed82b49ce40d
+  - affected_entities: DOC-33::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-78d452f47f8a: Complete coverage for DOC-33::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ed937e14bc4a
+  - affected_entities: DOC-11::R002
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-257a517eb37b: Implement requirement DOC-31::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-8b25e64a1c2d: Implement requirement DOC-11::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-eda41ecf4cde
+  - affected_entities: DOC-34::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-b0c37185b0f8: Complete coverage for DOC-34::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ee0c3e3df9ba
+  - affected_entities: DOC-00::R002
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-452a6688cf8d: Implement requirement DOC-00::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ee734fe79105
+  - affected_entities: DOC-33::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ed9489dfadc1: Complete coverage for DOC-33::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ee8cac17fbe9
+  - affected_entities: DOC-13::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4e84baeef53d: Complete coverage for DOC-13::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-ef0be6d3c318
   - affected_entities: artifacts/tasks/TASK-042.execution.closure.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-40815032b6bd: Either map artifact artifacts/tasks/TASK-042.execution.closure.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ef10a345b069
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R027
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-2173b6db48d2: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R027 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ef1ccacebea7
+  - affected_entities: DOC-34::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-2524aebbba3c: Complete coverage for DOC-34::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ef9592f20a7c
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R005
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-fb28a67974a8: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f00277fb42f4
   - affected_entities: DOC-38::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1927,56 +2651,76 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-dec602515862: Implement requirement DOC-15::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-f0c3962390b6
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-02ac60a77624: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-f1000dfa1177
   - affected_entities: artifacts/stage_D/verification_evidence.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-85c71350a128: Either map artifact artifacts/stage_D/verification_evidence.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f137d1233140
-  - affected_entities: DOC-37::R010
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f1a81fc42126
+  - affected_entities: DOC-RT-10_10::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-8ed4a0ccf831: Implement requirement DOC-37::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **LOW** [ORPHAN_ARTIFACT] GAP-f455e617c9f4
-  - affected_entities: artifacts/audit/audit_error.md
-  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
+    - ACT-898f60ed111b: Implement requirement DOC-RT-10_10::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f1dbe2665d96
+  - affected_entities: Doc-04::R006
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-e705d4391721: Either map artifact artifacts/audit/audit_error.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+    - ACT-9df0ff926057: Implement requirement Doc-04::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f1ec0a1b6118
+  - affected_entities: DOC-CE-01::R003
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-b5172b0f798e: Implement requirement DOC-CE-01::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f30550b84948
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R021
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-f4af80c0ea91: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R021 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f4f4d30cf0d0
   - affected_entities: DOC-21::R010
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-85f7ba64e02d: Implement requirement DOC-21::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f56003ba2365
-  - affected_entities: DOC-13::R008
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-f51f641a9825
+  - affected_entities: DOC-19::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-25e9d3621374: Complete coverage for DOC-19::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f60dd82e4552
+  - affected_entities: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R012
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-583d8ba0f2ac: Implement requirement DOC-13::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f638cb2bbdab
-  - affected_entities: DOC-33::R002
+    - ACT-98cf63f6df0f: Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-f62108fa28c5
+  - affected_entities: DOC-33::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-248a4e3bd44e: Complete coverage for DOC-33::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f631d2c2f76e
+  - affected_entities: DOC-10::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-559241d5cb5b: Implement requirement DOC-33::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f690ec702920
-  - affected_entities: DOC-32::R011
+    - ACT-de5df8216c9f: Implement requirement DOC-10::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f63d0a5360a7
+  - affected_entities: DOC-10::R009
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-cbbc8a8d416a: Implement requirement DOC-32::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-834fe121e92c: Implement requirement DOC-10::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f63fe68c1ed8
+  - affected_entities: Doc-04::R014
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-2771eac94471: Implement requirement Doc-04::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f6aaf37cecae
   - affected_entities: DOC-20::R011
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-8104ee34acb2: Implement requirement DOC-20::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f6b6906b49cc
-  - affected_entities: Doc-03::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-6f8f2d3f7646: Implement requirement Doc-03::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f75112c3b1e6
-  - affected_entities: DOC-36::R016
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-f38f448dea9e: Implement requirement DOC-36::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f7a9de8975d2
   - affected_entities: DOC-20::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1987,16 +2731,31 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-5e9a0dfec9fc: Implement requirement DOC-01::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f81f6cd5fc67
-  - affected_entities: DOC-01::R012
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f854c326e50f
+  - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R015
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-5e9a0dfec9fc: Implement requirement DOC-01::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-26b4e0e19817: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-f894fb4c5280
+  - affected_entities: DOC-01::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-966762e065d8: Complete coverage for DOC-01::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-f98cd334dbce
+  - affected_entities: DOC-36::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-abb3ebae1350: Complete coverage for DOC-36::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fa04bfb106de
   - affected_entities: DOC-15::R002
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-3d3410bffefe: Implement requirement DOC-15::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fa1d9d91e8ca
+  - affected_entities: Doc-04::R002
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-13dff37b8fda: Implement requirement Doc-04::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-fa331112c851
   - affected_entities: artifacts/stage_B/orchestrator_runner.dry_run.spec.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -2007,36 +2766,36 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-ea2b69bee870: Implement requirement DOC-21::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fa92d39117d7
-  - affected_entities: DOC-35::R009
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fafdfff9f869
+  - affected_entities: DOC-RT-10_10::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-e83b700471e7: Implement requirement DOC-35::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-431e157f30e4: Implement requirement DOC-RT-10_10::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fb3245be5738
+  - affected_entities: Doc-04::R009
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-8b132eb9bc14: Implement requirement Doc-04::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-fb61d0866bd4
   - affected_entities: artifacts/stage_C/stage_C.closure.v2.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-1157ad5175e9: Either map artifact artifacts/stage_C/stage_C.closure.v2.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fb69a53b4b3e
-  - affected_entities: DOC-14::R015
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-fca83c8017c0
+  - affected_entities: DOC-33::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-54ab0ca75bd1: Complete coverage for DOC-33::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-fcb4e79141a8
+  - affected_entities: DOC-18::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-dfd3bddd4e87: Complete coverage for DOC-18::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fd01aa94aeec
+  - affected_entities: DOC-11::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
-    - ACT-3f8f5d358b25: Implement requirement DOC-14::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fc7e06ad0f2a
-  - affected_entities: DOC-12::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-a220a69231f8: Implement requirement DOC-12::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fcec5278570d
-  - affected_entities: DOC-12::R010
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-f6805622d382: Implement requirement DOC-12::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fd70cedabe36
-  - affected_entities: Doc-03::R005
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-9e2b5e1ed5ef: Implement requirement Doc-03::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-68ea0442978d: Implement requirement DOC-11::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fdfd5a44fc1d
   - affected_entities: DOC-21::R008
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -2047,13 +2806,23 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-bff1bdd06c7c: Implement requirement DOC-01::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-fee8089ef93c
+  - affected_entities: 07_Decision_Logging_and_Change_Traceability_Specification::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-9350f6062e96: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-fefd00fb0a31
+  - affected_entities: DOC-32::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f171832da287: Complete coverage for DOC-32::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ff64a8a5df9c
+  - affected_entities: DOC-10::R007
+  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - actions:
+    - ACT-98f1603ebf45: Implement requirement DOC-10::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ffb5151bdd5e
   - affected_entities: DOC-20::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-4c8520e12d55: Implement requirement DOC-20::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ffd2e4491531
-  - affected_entities: DOC-32::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-a95a41a1ac5d: Implement requirement DOC-32::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)

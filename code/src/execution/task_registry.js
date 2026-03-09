@@ -506,7 +506,7 @@ const registry = Object.freeze({
       stage_progress_percent: 100,
       closure_artifact: true,
       artifact: relTaskClosure,
-      clear_current_task: true,
+      clear_current_task: false,
       status_patch: sp
     };
   },

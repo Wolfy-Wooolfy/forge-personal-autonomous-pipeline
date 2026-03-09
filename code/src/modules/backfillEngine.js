@@ -21,6 +21,7 @@ function runBackfill(context) {
   const status = context && context.status ? context.status : context;
 
   const decisionAbs = path.resolve(ROOT, "artifacts", "decisions", "module_flow_decision_gate.json");
+  const intakeContextAbs = path.resolve(ROOT, "artifacts", "intake", "intake_context.json");
   if (!fs.existsSync(decisionAbs)) {
     return {
       stage_progress_percent: 100,
@@ -34,7 +35,21 @@ function runBackfill(context) {
     };
   }
 
+  if (!fs.existsSync(intakeContextAbs)) {
+    return {
+      stage_progress_percent: 100,
+      blocked: true,
+      status_patch: {
+        next_step: "",
+        blocking_questions: [
+          "Backfill BLOCKED: missing artifacts/intake/intake_context.json"
+        ]
+      }
+    };
+  }
+
   const decision = readJsonAbs(decisionAbs);
+  const intakeContext = readJsonAbs(intakeContextAbs);
   const mode = String(decision && decision.mode ? decision.mode : "").trim().toUpperCase();
   if (mode !== "APPROVE_ALL") {
     return {

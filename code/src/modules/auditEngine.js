@@ -141,7 +141,8 @@ function runAudit(context) {
 
   const intakeSnapshotAbs = path.join(intakeDirAbs, "intake_snapshot.json");
   const inventoryAbs = path.join(intakeDirAbs, "repository_inventory.json");
-  const entrypointAbs = path.join(intakeDirAbs, "entrypoint_classification.md");
+  const intakeContextAbs = path.join(intakeDirAbs, "intake_context.json");
+  const intakeReportAbs = path.join(intakeDirAbs, "intake_report.md");
 
   const preBlocked = isBlockedState(status);
   mark(!preBlocked);
@@ -161,13 +162,20 @@ function runAudit(context) {
     addViolation(violations, "Activation", "CRITICAL", "artifacts/intake/repository_inventory.json", "Missing Intake repository inventory.");
   }
 
-  const entrypointExists = fs.existsSync(entrypointAbs);
-  mark(entrypointExists);
-  if (!entrypointExists) {
-    addViolation(violations, "Activation", "CRITICAL", "artifacts/intake/entrypoint_classification.md", "Missing Intake entrypoint classification.");
+  const intakeContextExists = fs.existsSync(intakeContextAbs);
+  mark(intakeContextExists);
+  if (!intakeContextExists) {
+    addViolation(violations, "Activation", "CRITICAL", "artifacts/intake/intake_context.json", "Missing Intake context.");
+  }
+
+  const intakeReportExists = fs.existsSync(intakeReportAbs);
+  mark(intakeReportExists);
+  if (!intakeReportExists) {
+    addViolation(violations, "Activation", "CRITICAL", "artifacts/intake/intake_report.md", "Missing Intake report.");
   }
 
   let intakeSnapshot = null;
+  let intakeContext = null;
   let inventory = null;
 
   if (intakeSnapshotExists) {
@@ -177,6 +185,20 @@ function runAudit(context) {
     } catch (e) {
       mark(false);
       addViolation(violations, "Activation", "CRITICAL", "artifacts/intake/intake_snapshot.json", `Invalid JSON: ${e && e.message ? e.message : String(e)}`);
+    }
+  }
+
+  if (intakeContextExists) {
+    try {
+      intakeContext = readJson(intakeContextAbs);
+      const ok = intakeContext && typeof intakeContext === "object" && !Array.isArray(intakeContext);
+      mark(ok);
+      if (!ok) {
+        addViolation(violations, "Activation", "CRITICAL", "artifacts/intake/intake_context.json", "Intake context must be JSON object.");
+      }
+    } catch (e) {
+      mark(false);
+      addViolation(violations, "Activation", "CRITICAL", "artifacts/intake/intake_context.json", `Invalid JSON: ${e && e.message ? e.message : String(e)}`);
     }
   }
 
@@ -205,12 +227,65 @@ function runAudit(context) {
     addViolation(violations, "Activation", "CRITICAL", "artifacts/intake/intake_snapshot.json", "Intake snapshot missing required fields.");
   }
 
+  if (intakeContext && typeof intakeContext === "object") {
+    const operatingMode = typeof intakeContext.operating_mode === "string" ? intakeContext.operating_mode.trim() : "";
+    const repositoryState = typeof intakeContext.repository_state === "string" ? intakeContext.repository_state.trim() : "";
+    const blockedFlag = intakeContext.blocked === true || intakeContext.blocked === false;
+
+    const validMode = operatingMode === "BUILD" || operatingMode === "IMPROVE";
+    mark(validMode);
+    if (!validMode) {
+      addViolation(violations, "Activation", "CRITICAL", "artifacts/intake/intake_context.json", "operating_mode must be BUILD or IMPROVE.");
+    }
+
+    const validRepositoryState =
+      repositoryState === "IDEA_ONLY" ||
+      repositoryState === "DOCS_ONLY" ||
+      repositoryState === "CODE_ONLY" ||
+      repositoryState === "MIXED";
+    mark(validRepositoryState);
+    if (!validRepositoryState) {
+      addViolation(violations, "Activation", "CRITICAL", "artifacts/intake/intake_context.json", "repository_state must be IDEA_ONLY, DOCS_ONLY, CODE_ONLY, or MIXED.");
+    }
+
+    mark(blockedFlag);
+    if (!blockedFlag) {
+      addViolation(violations, "Activation", "CRITICAL", "artifacts/intake/intake_context.json", "blocked must be boolean.");
+    }
+
+    if (intakeContext.blocked === true) {
+      addViolation(violations, "Activation", "CRITICAL", "artifacts/intake/intake_context.json", "Intake context is BLOCKED — Audit cannot proceed.");
+    }
+  } else if (intakeContextExists) {
+    mark(false);
+    addViolation(violations, "Activation", "CRITICAL", "artifacts/intake/intake_context.json", "Intake context missing required fields.");
+  }
+
   const idx = Array.isArray(inventory) ? inventoryIndex(inventory) : new Map();
 
-  const classification = intakeSnapshot && intakeSnapshot.classification ? String(intakeSnapshot.classification) : "";
-  const isFull = classification === "FULL_PIPELINE_STATE";
+  const operatingMode =
+    intakeContext && typeof intakeContext.operating_mode === "string"
+      ? String(intakeContext.operating_mode).trim()
+      : "";
 
-  const requiredDirs = isFull ? ["docs", "artifacts", "code", "progress"] : ["artifacts", "progress"];
+  const repositoryState =
+    intakeContext && typeof intakeContext.repository_state === "string"
+      ? String(intakeContext.repository_state).trim()
+      : "";
+
+  let requiredDirs = ["artifacts", "progress"];
+
+  if (operatingMode === "IMPROVE") {
+    requiredDirs = ["docs", "artifacts", "code", "progress"];
+  } else if (operatingMode === "BUILD") {
+    if (repositoryState === "DOCS_ONLY") {
+      requiredDirs = ["docs", "artifacts", "progress"];
+    } else if (repositoryState === "CODE_ONLY") {
+      requiredDirs = ["code", "artifacts", "progress"];
+    } else if (repositoryState === "MIXED") {
+      requiredDirs = ["docs", "artifacts", "code", "progress"];
+    }
+  }
 
   for (const d of requiredDirs) {
     const abs = path.join(rootAbs, d);
@@ -432,7 +507,7 @@ function runAudit(context) {
         issues: [],
         blocking_questions: [],
         current_task: "",
-        next_step: "MODULE_FLOW — Audit PASS. Next=Trace (create TASK-049 bridge when ready)."
+        next_step: "MODULE_FLOW — Audit PASS. Next=Trace (mode-aware downstream alignment pending)."
        }
   };
 }

@@ -10,6 +10,10 @@ function safeMkdir(dirAbs) {
   fs.mkdirSync(dirAbs, { recursive: true });
 }
 
+function readText(absPath) {
+  return fs.readFileSync(absPath, "utf-8");
+}
+
 function listFilesRecursive(rootAbs) {
   const out = [];
   const stack = [rootAbs];
@@ -45,7 +49,9 @@ function normalizeTitle(s) {
 }
 
 function buildRequirementsFromDocs(docsDirAbs) {
-  const mdFiles = listFilesRecursive(docsDirAbs).filter((p) => p.toLowerCase().endsWith(".md"));
+  const mdFiles = listFilesRecursive(docsDirAbs)
+    .filter((p) => p.toLowerCase().endsWith(".md"))
+    .filter((p) => !p.replace(/\\/g, "/").startsWith(path.resolve(docsDirAbs, "..", "..", "artifacts").replace(/\\/g, "/")));
   const requirements = [];
   for (const abs of mdFiles) {
     const rel = abs.replace(/\\/g, "/");
@@ -151,6 +157,14 @@ function buildCodeUnitsFromSrc(codeSrcAbs, rootAbs) {
   return units;
 }
 
+function buildRequirementsFromAllDocs(rootAbs) {
+  const docsRootAbs = path.resolve(rootAbs, "docs");
+  if (!fs.existsSync(docsRootAbs)) {
+    return [];
+  }
+  return buildRequirementsFromDocs(docsRootAbs);
+}
+
 function buildArtifactsIndex(artifactsAbs, rootAbs) {
   const files = listFilesRecursive(artifactsAbs).filter((p) => {
     const low = p.toLowerCase();
@@ -163,7 +177,7 @@ function buildArtifactsIndex(artifactsAbs, rootAbs) {
   return rels;
 }
 
-function mapDeterministically(requirements, codeUnits, artifacts) {
+function mapDeterministically(requirements, codeUnits, artifacts, intakeContext) {
   const codeByKey = new Map();
   for (const u of codeUnits) {
     codeByKey.set(u.unit_id, u);
@@ -171,21 +185,93 @@ function mapDeterministically(requirements, codeUnits, artifacts) {
 
   const artifactsSet = new Set(artifacts);
 
+  const operatingMode =
+    intakeContext && typeof intakeContext.operating_mode === "string"
+      ? String(intakeContext.operating_mode).trim()
+      : "";
+
   const mappings = requirements.map((r) => {
     const title = String(r.normalized_title || "").toLowerCase();
+    const section = String(r.section_path || "").toLowerCase();
+    const document = String(r.source_document || "").toLowerCase();
 
     const mapped_code_units = [];
     const mapped_artifacts = [];
 
-    if (title.includes("intake")) {
-      for (const u of codeUnits) if (u.file_path.includes("modules/intakeEngine.js")) mapped_code_units.push(u.unit_id);
+    if (title.includes("intake") || section.includes("intake") || document.includes("intake")) {
+      for (const u of codeUnits) {
+        if (u.file_path.includes("modules/intakeEngine.js")) mapped_code_units.push(u.unit_id);
+      }
       if (artifactsSet.has("artifacts/intake/intake_snapshot.json")) mapped_artifacts.push("artifacts/intake/intake_snapshot.json");
+      if (artifactsSet.has("artifacts/intake/intake_context.json")) mapped_artifacts.push("artifacts/intake/intake_context.json");
+      if (artifactsSet.has("artifacts/intake/intake_report.md")) mapped_artifacts.push("artifacts/intake/intake_report.md");
     }
 
-    if (title.includes("audit")) {
-      for (const u of codeUnits) if (u.file_path.includes("modules/auditEngine.js")) mapped_code_units.push(u.unit_id);
+    if (title.includes("audit") || section.includes("audit") || document.includes("audit")) {
+      for (const u of codeUnits) {
+        if (u.file_path.includes("modules/auditEngine.js")) mapped_code_units.push(u.unit_id);
+      }
       if (artifactsSet.has("artifacts/audit/audit_report.md")) mapped_artifacts.push("artifacts/audit/audit_report.md");
       if (artifactsSet.has("artifacts/audit/audit_findings.json")) mapped_artifacts.push("artifacts/audit/audit_findings.json");
+      if (artifactsSet.has("artifacts/audit/audit_error.md")) mapped_artifacts.push("artifacts/audit/audit_error.md");
+    }
+
+    if (title.includes("trace") || section.includes("trace") || document.includes("trace")) {
+      for (const u of codeUnits) {
+        if (u.file_path.includes("modules/traceEngine.js")) mapped_code_units.push(u.unit_id);
+      }
+      if (artifactsSet.has("artifacts/trace/trace_matrix.json")) mapped_artifacts.push("artifacts/trace/trace_matrix.json");
+      if (artifactsSet.has("artifacts/trace/trace_matrix.md")) mapped_artifacts.push("artifacts/trace/trace_matrix.md");
+      if (artifactsSet.has("artifacts/trace/trace_error.md")) mapped_artifacts.push("artifacts/trace/trace_error.md");
+    }
+
+    if (title.includes("gap") || section.includes("gap") || document.includes("gap")) {
+      for (const u of codeUnits) {
+        if (u.file_path.includes("modules/gapEngine.js")) mapped_code_units.push(u.unit_id);
+      }
+      if (artifactsSet.has("artifacts/gap/gap_actions.json")) mapped_artifacts.push("artifacts/gap/gap_actions.json");
+      if (artifactsSet.has("artifacts/gap/gap_report.md")) mapped_artifacts.push("artifacts/gap/gap_report.md");
+    }
+
+    if (title.includes("decision") || section.includes("decision") || document.includes("decision")) {
+      for (const u of codeUnits) {
+        if (u.file_path.includes("modules/decisionGate.js")) mapped_code_units.push(u.unit_id);
+      }
+      if (artifactsSet.has("artifacts/decisions/module_flow_decision_gate.json")) mapped_artifacts.push("artifacts/decisions/module_flow_decision_gate.json");
+      if (artifactsSet.has("artifacts/decisions/module_flow_decision_gate.md")) mapped_artifacts.push("artifacts/decisions/module_flow_decision_gate.md");
+    }
+
+    if (title.includes("backfill") || section.includes("backfill") || document.includes("backfill")) {
+      for (const u of codeUnits) {
+        if (u.file_path.includes("modules/backfillEngine.js")) mapped_code_units.push(u.unit_id);
+      }
+      if (artifactsSet.has("artifacts/backfill/backfill_tasks.json")) mapped_artifacts.push("artifacts/backfill/backfill_tasks.json");
+      if (artifactsSet.has("artifacts/backfill/backfill_report.md")) mapped_artifacts.push("artifacts/backfill/backfill_report.md");
+    }
+
+    if (title.includes("execute") || section.includes("execute") || document.includes("execute")) {
+      for (const u of codeUnits) {
+        if (u.file_path.includes("modules/executeEngine.js")) mapped_code_units.push(u.unit_id);
+      }
+      if (artifactsSet.has("artifacts/execute/execute_plan.json")) mapped_artifacts.push("artifacts/execute/execute_plan.json");
+      if (artifactsSet.has("artifacts/execute/execute_report.md")) mapped_artifacts.push("artifacts/execute/execute_report.md");
+    }
+
+    if (title.includes("closure") || section.includes("closure") || document.includes("closure")) {
+      for (const u of codeUnits) {
+        if (u.file_path.includes("modules/closureEngine.js")) mapped_code_units.push(u.unit_id);
+      }
+      if (artifactsSet.has("artifacts/closure/closure_report.md")) mapped_artifacts.push("artifacts/closure/closure_report.md");
+      if (artifactsSet.has("artifacts/release/RELEASE_MANIFEST_v1.json")) mapped_artifacts.push("artifacts/release/RELEASE_MANIFEST_v1.json");
+    }
+
+    if (operatingMode === "BUILD" && (title.includes("build") || section.includes("build") || document.includes("build"))) {
+      if (artifactsSet.has("artifacts/intake/intake_context.json")) mapped_artifacts.push("artifacts/intake/intake_context.json");
+    }
+
+    if (operatingMode === "IMPROVE" && (title.includes("improve") || section.includes("improve") || document.includes("improve"))) {
+      if (artifactsSet.has("artifacts/intake/intake_context.json")) mapped_artifacts.push("artifacts/intake/intake_context.json");
+      if (artifactsSet.has("artifacts/audit/audit_report.md")) mapped_artifacts.push("artifacts/audit/audit_report.md");
     }
 
     const uniqCode = Array.from(new Set(mapped_code_units)).sort();
@@ -265,6 +351,7 @@ function runTrace(contextOrStatus) {
   const rootAbs = path.resolve(__dirname, "../../..");
 
   const artifactsIntakeAbs = path.resolve(rootAbs, "artifacts", "intake", "intake_snapshot.json");
+  const artifactsIntakeContextAbs = path.resolve(rootAbs, "artifacts", "intake", "intake_context.json");
   const artifactsAuditAbs = path.resolve(rootAbs, "artifacts", "audit", "audit_findings.json");
 
   if (!fs.existsSync(artifactsIntakeAbs)) {
@@ -275,6 +362,18 @@ function runTrace(contextOrStatus) {
       status_patch: {
         blocking_questions: ["Trace BLOCKED: missing intake_snapshot.json"],
       next_step: ""
+      }
+    };
+  }
+
+  if (!fs.existsSync(artifactsIntakeContextAbs)) {
+    const errRef = writeTraceError(rootAbs, "BLOCKED: missing required artifact artifacts/intake/intake_context.json");
+    return {
+      blocked: true,
+      artifact: errRef,
+      status_patch: {
+        blocking_questions: ["Trace BLOCKED: missing intake_context.json"],
+        next_step: ""
       }
     };
   }
@@ -292,10 +391,15 @@ function runTrace(contextOrStatus) {
   }
 
   const intake = readJson(artifactsIntakeAbs);
+  const intakeContext = readJson(artifactsIntakeContextAbs);
   const audit = readJson(artifactsAuditAbs);
 
   const locked = !!(intake && intake.locked_snapshot_flag);
   const auditBlocked = !!(audit && audit.blocked);
+  const validOperatingMode =
+    !!(intakeContext &&
+      (intakeContext.operating_mode === "BUILD" || intakeContext.operating_mode === "IMPROVE") &&
+      intakeContext.blocked === false);
 
   if (!locked) {
     const errRef = writeTraceError(rootAbs, "BLOCKED: intake_snapshot.locked_snapshot_flag != true");
@@ -321,14 +425,28 @@ function runTrace(contextOrStatus) {
     };
   }
 
-  const requirements = buildRequirementsFromDocs(path.resolve(rootAbs, "docs", "03_pipeline"));
+  if (!validOperatingMode) {
+    const errRef = writeTraceError(rootAbs, "BLOCKED: intake_context operating_mode invalid or intake still blocked");
+    return {
+      blocked: true,
+      artifact: errRef,
+      status_patch: {
+        blocking_questions: ["Trace BLOCKED: intake_context invalid or blocked"],
+        next_step: ""
+      }
+    };
+  }
+
+  const requirements = buildRequirementsFromAllDocs(rootAbs);
   const codeUnits = buildCodeUnitsFromSrc(path.resolve(rootAbs, "code", "src"), rootAbs);
   const artifacts = buildArtifactsIndex(path.resolve(rootAbs, "artifacts"), rootAbs);
 
-  const mapped = mapDeterministically(requirements, codeUnits, artifacts);
+  const mapped = mapDeterministically(requirements, codeUnits, artifacts, intakeContext);
 
   const traceJson = {
     execution_id: `TRACE-${new Date().toISOString()}`,
+    operating_mode: intakeContext.operating_mode,
+    repository_state: intakeContext.repository_state,
     total_requirements: requirements.length,
     total_code_units: codeUnits.length,
     total_artifacts: artifacts.length,
