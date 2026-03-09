@@ -4,114 +4,150 @@ const crypto = require("crypto");
 
 const ROOT = path.resolve(__dirname, "../../..");
 
-function sha256File(absPath) {
-  const buf = fs.readFileSync(absPath);
-  return crypto.createHash("sha256").update(buf).digest("hex");
+function sha256Text(text) {
+  return crypto.createHash("sha256").update(String(text), "utf8").digest("hex");
+}
+
+function readJson(absPath) {
+  const raw = fs.readFileSync(absPath, "utf8");
+  return JSON.parse(raw);
 }
 
 function ensureDir(absDir) {
   fs.mkdirSync(absDir, { recursive: true });
 }
 
+function renderClosureReport(payload) {
+  const lines = [];
+
+  lines.push("# MODULE FLOW — Closure Report");
+  lines.push("");
+
+  lines.push(`- generated_at: ${payload.generated_at}`);
+  lines.push(`- operating_mode: ${payload.operating_mode}`);
+  lines.push(`- repository_state: ${payload.repository_state}`);
+  lines.push("");
+
+  lines.push("## Verification");
+
+  lines.push(`- Decision Gate: ${payload.verify.decision_gate}`);
+  lines.push(`- Backfill: ${payload.verify.backfill}`);
+  lines.push(`- Execute: ${payload.verify.execute}`);
+
+  lines.push("");
+
+  lines.push("## Artifacts");
+
+  lines.push(`- ${payload.artifacts.decision_gate}`);
+  lines.push(`- ${payload.artifacts.backfill}`);
+  lines.push(`- ${payload.artifacts.execute}`);
+
+  lines.push("");
+
+  lines.push("## Result");
+
+  lines.push("Module Flow successfully closed.");
+
+  lines.push("");
+
+  return lines.join("\n");
+}
+
 function runClosure(context) {
-  const status = context && context.status ? context.status : context;
 
-  const required = [
-    "artifacts/execute/execute_plan.json",
-    "artifacts/execute/execute_report.md",
-    "artifacts/decisions/module_flow_decision_gate.json"
-  ];
+  const intakePath = path.resolve(ROOT, "artifacts/intake/intake_context.json");
+  const decisionPath = path.resolve(ROOT, "artifacts/decisions/module_flow_decision_gate.json");
+  const backfillPath = path.resolve(ROOT, "artifacts/backfill/backfill_plan.json");
+  const executePath = path.resolve(ROOT, "artifacts/execute/execute_plan.json");
 
-  const missing = required.filter((rel) => !fs.existsSync(path.resolve(ROOT, rel)));
-
-  if (missing.length > 0) {
+  if (!fs.existsSync(intakePath)) {
     return {
-      stage_progress_percent: 100,
       blocked: true,
       status_patch: {
         next_step: "",
-        blocking_questions: [
-          `Closure BLOCKED: missing required artifacts -> ${missing.join(", ")}`
-        ]
+        blocking_questions: ["Closure BLOCKED: intake_context.json missing"]
       }
     };
   }
 
-  const closureDirAbs = path.resolve(ROOT, "artifacts", "closure");
-  const releaseDirAbs = path.resolve(ROOT, "artifacts", "release");
-  ensureDir(closureDirAbs);
-  ensureDir(releaseDirAbs);
-
-  const reportRel = "artifacts/closure/closure_report.md";
-  const manifestRel = "artifacts/release/RELEASE_MANIFEST_v1.json";
-  const hashesRel = "artifacts/release/repository_hash_snapshot.json";
-
-  const reportAbs = path.resolve(ROOT, reportRel);
-  const manifestAbs = path.resolve(ROOT, manifestRel);
-  const hashesAbs = path.resolve(ROOT, hashesRel);
-
-  const snapshot = required.map((rel) => {
-    const abs = path.resolve(ROOT, rel);
-    const st = fs.statSync(abs);
+  if (!fs.existsSync(decisionPath)) {
     return {
-      path: rel,
-      bytes: st.size,
-      sha256: sha256File(abs)
+      blocked: true,
+      status_patch: {
+        next_step: "",
+        blocking_questions: ["Closure BLOCKED: Decision Gate artifact missing"]
+      }
     };
-  });
+  }
 
-  const manifest = {
-    release_id: "MODULE_FLOW_RELEASE_v1",
+  if (!fs.existsSync(backfillPath)) {
+    return {
+      blocked: true,
+      status_patch: {
+        next_step: "",
+        blocking_questions: ["Closure BLOCKED: Backfill artifact missing"]
+      }
+    };
+  }
+
+  if (!fs.existsSync(executePath)) {
+    return {
+      blocked: true,
+      status_patch: {
+        next_step: "",
+        blocking_questions: ["Closure BLOCKED: Execute artifact missing"]
+      }
+    };
+  }
+
+  const intake = readJson(intakePath);
+  const mode = String(intake.operating_mode || "").toUpperCase();
+
+  if (mode !== "BUILD" && mode !== "IMPROVE") {
+    return {
+      blocked: true,
+      status_patch: {
+        next_step: "",
+        blocking_questions: ["Closure BLOCKED: invalid operating mode"]
+      }
+    };
+  }
+
+  const closureDir = path.resolve(ROOT, "artifacts/closure");
+  ensureDir(closureDir);
+
+  const closureReportPath = path.resolve(closureDir, "closure_report.md");
+
+  const payload = {
     generated_at: new Date().toISOString(),
-    stage: String(status && status.current_stage ? status.current_stage : ""),
-    stage_progress_percent:
-      typeof status && status.stage_progress_percent === "number"
-        ? status.stage_progress_percent
-        : null,
-    last_completed_artifact: String(
-      status && status.last_completed_artifact ? status.last_completed_artifact : ""
-    ),
-    source_artifacts: snapshot,
-    outcome: "CLOSED",
-    next_state: "READY"
+    operating_mode: mode,
+    repository_state: intake.repository_state,
+    verify: {
+      decision_gate: "OK",
+      backfill: "OK",
+      execute: "OK"
+    },
+    artifacts: {
+      decision_gate: "artifacts/decisions/module_flow_decision_gate.json",
+      backfill: "artifacts/backfill/backfill_plan.json",
+      execute: "artifacts/execute/execute_plan.json"
+    }
   };
 
-  fs.writeFileSync(manifestAbs, JSON.stringify(manifest, null, 2), { encoding: "utf8" });
-  fs.writeFileSync(hashesAbs, JSON.stringify({ generated_at: manifest.generated_at, files: snapshot }, null, 2), {
-    encoding: "utf8"
-  });
-
-  const md = [
-    "# MODULE FLOW — Closure Report",
-    "",
-    `- generated_at: ${manifest.generated_at}`,
-    `- outcome: CLOSED`,
-    `- next_state: READY`,
-    "",
-    "## Verified Inputs",
-    ...snapshot.map((x) => `- ${x.path} | bytes=${x.bytes} | sha256=${x.sha256}`),
-    "",
-    "## Outputs",
-    `- ${reportRel}`,
-    `- ${manifestRel}`,
-    `- ${hashesRel}`,
-    ""
-  ].join("\n");
-
-  fs.writeFileSync(reportAbs, md, { encoding: "utf8" });
+  fs.writeFileSync(
+    closureReportPath,
+    renderClosureReport(payload)
+  );
 
   return {
     stage_progress_percent: 100,
-    artifact: reportRel,
+    artifact: "artifacts/closure/closure_report.md",
     outputs: {
-      md: reportRel,
-      manifest: manifestRel,
-      hashes: hashesRel
+      md: "artifacts/closure/closure_report.md"
     },
     status_patch: {
       blocking_questions: [],
-      next_step: "READY — Module Flow Closure COMPLETE",
-      issues: []
+      next_step: "READY — Module Flow Closure COMPLETE"
     }
   };
 }

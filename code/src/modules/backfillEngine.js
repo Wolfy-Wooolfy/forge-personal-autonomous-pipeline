@@ -17,11 +17,82 @@ function ensureDir(absDir) {
   fs.mkdirSync(absDir, { recursive: true });
 }
 
-function runBackfill(context) {
-  const status = context && context.status ? context.status : context;
+function isDeterministicBackfillCategory(category) {
+  const c = String(category || "").toUpperCase();
+  return (
+    c === "UNIMPLEMENTED_REQUIREMENT" ||
+    c === "STRUCTURAL_DRIFT" ||
+    c === "GOVERNANCE_MISMATCH" ||
+    c === "ORPHAN_ARTIFACT"
+  );
+}
 
+function inferBackfillActionType(row) {
+  const description = String(row && row.description ? row.description : "").toLowerCase();
+  const impactScope = String(row && row.impact_scope ? row.impact_scope : "").toLowerCase();
+  const text = `${description} ${impactScope}`;
+
+  if (/\bdirectory\b|\bdir\b|\bfolder\b/.test(text)) return "CREATE_DIRECTORY";
+  if (/\bschema\b/.test(text)) return "GENERATE_SCHEMA";
+  if (/\bcontract\b|\btemplate\b|\bplaceholder\b|\bstub\b/.test(text)) return "GENERATE_TEMPLATE";
+  if (/\bdocument\b|\bdoc\b|\bmarkdown\b|\bmd\b/.test(text)) return "GENERATE_DOCUMENT";
+  return "BACKFILL_RECONCILIATION";
+}
+
+function deriveTargetPath(row) {
+  const entities = Array.isArray(row && row.affected_entities) ? row.affected_entities : [];
+  const firstEntity = entities.find((x) => typeof x === "string" && x.trim() !== "");
+  if (firstEntity) return firstEntity;
+  return "";
+}
+
+function renderBackfillExecutionLog(payload) {
+  const lines = [];
+
+  lines.push("# MODULE FLOW — Backfill Execution Log");
+  lines.push("");
+  lines.push(`- generated_at: ${payload.generated_at}`);
+  lines.push(`- operating_mode: ${payload.operating_mode}`);
+  lines.push(`- repository_state: ${payload.repository_state}`);
+  lines.push(`- blocked: ${payload.blocked ? "true" : "false"}`);
+  lines.push("");
+  lines.push("## Source");
+  lines.push(`- decision_gate_path: ${payload.source.decision_gate_path}`);
+  lines.push(`- decision_gate_sha256: ${payload.source.decision_gate_sha256}`);
+  lines.push(`- intake_context_path: ${payload.source.intake_context_path}`);
+  lines.push(`- intake_context_sha256: ${payload.source.intake_context_sha256}`);
+  lines.push("");
+  lines.push("## Summary");
+  lines.push(`- approved_actions_seen: ${payload.summary.approved_actions_seen}`);
+  lines.push(`- deterministic_backfill_actions: ${payload.summary.deterministic_backfill_actions}`);
+  lines.push(`- excluded_non_backfill_actions: ${payload.summary.excluded_non_backfill_actions}`);
+  lines.push(`- items_emitted: ${payload.summary.items_emitted}`);
+  lines.push("");
+
+  lines.push("## Approved Backfill Actions");
+  if (payload.items.length === 0) {
+    lines.push("- None");
+  } else {
+    for (const item of payload.items) {
+      lines.push(`- ${item.action_id} [${item.category}/${item.severity}] ${item.reason}`);
+      lines.push(`  - target_path: ${item.target_path || "(not specified)"}`);
+      lines.push(`  - action_type: ${item.action_type}`);
+      lines.push(`  - deterministic_template_used: ${item.deterministic_template_used ? "true" : "false"}`);
+    }
+  }
+  lines.push("");
+
+  lines.push("## Next");
+  lines.push("- next_step: MODULE_FLOW — Backfill COMPLETE. Next=Execute (implement executeEngine + task bridge).");
+  lines.push("");
+
+  return lines.join("\n");
+}
+
+function runBackfill(context) {
   const decisionAbs = path.resolve(ROOT, "artifacts", "decisions", "module_flow_decision_gate.json");
   const intakeContextAbs = path.resolve(ROOT, "artifacts", "intake", "intake_context.json");
+
   if (!fs.existsSync(decisionAbs)) {
     return {
       stage_progress_percent: 100,
@@ -50,103 +121,193 @@ function runBackfill(context) {
 
   const decision = readJsonAbs(decisionAbs);
   const intakeContext = readJsonAbs(intakeContextAbs);
-  const mode = String(decision && decision.mode ? decision.mode : "").trim().toUpperCase();
-  if (mode !== "APPROVE_ALL") {
-    return {
-      stage_progress_percent: 100,
-      blocked: true,
-      status_patch: {
-        next_step: "IDLE — Backfill halted (Decision Gate not APPROVE_ALL)",
-        blocking_questions: [
-          "Backfill halted: Decision Gate mode is not APPROVE_ALL."
-        ]
-      }
-    };
-  }
 
-  const gapAbs = path.resolve(ROOT, "artifacts", "gap", "gap_actions.json");
-  if (!fs.existsSync(gapAbs)) {
+  const operatingMode = String(intakeContext && intakeContext.operating_mode ? intakeContext.operating_mode : "").toUpperCase();
+  const repositoryState = String(intakeContext && intakeContext.repository_state ? intakeContext.repository_state : "").toUpperCase();
+
+  const validOperatingMode =
+    intakeContext &&
+    intakeContext.blocked === false &&
+    (operatingMode === "BUILD" || operatingMode === "IMPROVE");
+
+  if (!validOperatingMode) {
     return {
       stage_progress_percent: 100,
       blocked: true,
       status_patch: {
         next_step: "",
         blocking_questions: [
-          "Backfill BLOCKED: missing artifacts/gap/gap_actions.json"
+          "Backfill BLOCKED: intake_context operating_mode invalid or intake still blocked."
         ]
       }
     };
   }
 
-  const gapActions = readJsonAbs(gapAbs);
-  const gaps = Array.isArray(gapActions.gaps) ? gapActions.gaps : [];
+  const rejected = Array.isArray(decision && decision.rejected_actions) ? decision.rejected_actions : [];
+  const reviewRequired = Array.isArray(decision && decision.review_required_actions) ? decision.review_required_actions : [];
+  const approved = Array.isArray(decision && decision.approved_actions) ? decision.approved_actions : [];
+
+  if (rejected.length > 0) {
+    return {
+      stage_progress_percent: 100,
+      blocked: true,
+      status_patch: {
+        next_step: "IDLE — Backfill halted (Decision Gate rejected actions)",
+        blocking_questions: [
+          "Backfill BLOCKED: Decision Gate contains rejected actions."
+        ]
+      }
+    };
+  }
+
+  if (reviewRequired.length > 0) {
+    return {
+      stage_progress_percent: 100,
+      blocked: true,
+      status_patch: {
+        next_step: "",
+        blocking_questions: [
+          "Backfill BLOCKED: Decision Gate still contains review-required actions."
+        ]
+      }
+    };
+  }
+
+  const items = approved
+    .filter((row) => isDeterministicBackfillCategory(row.category))
+    .map((row, index) => {
+      const targetPath = deriveTargetPath(row);
+      return {
+        seq: index + 1,
+        action_id: String(row.action_id || ""),
+        origin_gap_id: String(row.gap_id || ""),
+        category: String(row.category || ""),
+        severity: String(row.severity || ""),
+        target_path: targetPath,
+        action_type: inferBackfillActionType(row),
+        deterministic_template_used: true,
+        reason: String(row.reason || ""),
+        affected_entities: Array.isArray(row.affected_entities) ? row.affected_entities.map((x) => String(x)) : [],
+        impact_scope: String(row.impact_scope || ""),
+        requires_decision: Boolean(row.requires_decision)
+      };
+    });
 
   const backfillDirAbs = path.resolve(ROOT, "artifacts", "backfill");
   ensureDir(backfillDirAbs);
 
-  const tasksRel = "artifacts/backfill/backfill_tasks.json";
-  const reportRel = "artifacts/backfill/backfill_report.md";
+  const canonicalPlanRel = "artifacts/backfill/backfill_plan.json";
+  const canonicalLogRel = "artifacts/backfill/backfill_execution_log.md";
+  const legacyTasksRel = "artifacts/backfill/backfill_tasks.json";
+  const legacyReportRel = "artifacts/backfill/backfill_report.md";
+  const createdFilesRel = "artifacts/backfill/backfill_created_files.json";
 
-  const tasksAbs = path.resolve(ROOT, tasksRel);
-  const reportAbs = path.resolve(ROOT, reportRel);
+  const canonicalPlanAbs = path.resolve(ROOT, canonicalPlanRel);
+  const canonicalLogAbs = path.resolve(ROOT, canonicalLogRel);
+  const legacyTasksAbs = path.resolve(ROOT, legacyTasksRel);
+  const legacyReportAbs = path.resolve(ROOT, legacyReportRel);
+  const createdFilesAbs = path.resolve(ROOT, createdFilesRel);
 
-  const normalized = gaps.map((g) => {
-    const rec = Array.isArray(g.recommended_actions) ? g.recommended_actions : [];
-    const first = rec[0] || {};
-    return {
-      gap_id: String(g.gap_id || ""),
-      category: String(g.category || ""),
-      severity: String(g.severity || ""),
-      affected_entities: Array.isArray(g.affected_entities) ? g.affected_entities : [],
-      root_cause: String(g.root_cause || ""),
-      action: {
-        action_id: String(first.action_id || ""),
-        description: String(first.description || ""),
-        impact_scope: String(first.impact_scope || ""),
-        requires_decision: Boolean(first.requires_decision)
-      }
-    };
-  });
+  const decisionText = JSON.stringify(decision, null, 2);
+  const intakeText = JSON.stringify(intakeContext, null, 2);
+  const generatedAt = new Date().toISOString();
 
-  const payload = {
-    backfill_id: "MODULE_FLOW_BACKFILL_v1",
-    generated_at: new Date().toISOString(),
+  const canonicalPlan = {
+    execution_id: "MODULE_FLOW_BACKFILL_v2",
+    generated_at: generatedAt,
+    operating_mode: operatingMode,
+    repository_state: repositoryState,
     source: {
-      gap_actions_path: "artifacts/gap/gap_actions.json",
-      gap_actions_sha256: sha256Text(JSON.stringify(gapActions))
+      decision_gate_path: "artifacts/decisions/module_flow_decision_gate.json",
+      decision_gate_sha256: sha256Text(decisionText),
+      intake_context_path: "artifacts/intake/intake_context.json",
+      intake_context_sha256: sha256Text(intakeText)
     },
-    summary: {
-      total_gaps: Number(gapActions.total_gaps || normalized.length || 0),
-      critical_count: Number(gapActions.critical_count || 0),
-      items_emitted: normalized.length
-    },
-    items: normalized
+    approved_actions: items.map((item) => ({
+      action_id: item.action_id,
+      origin_gap_id: item.origin_gap_id,
+      target_path: item.target_path,
+      action_type: item.action_type,
+      deterministic_template_used: item.deterministic_template_used
+    }))
   };
 
-  fs.writeFileSync(tasksAbs, JSON.stringify(payload, null, 2), { encoding: "utf8" });
+  const legacyTasks = {
+    backfill_id: "MODULE_FLOW_BACKFILL_v2",
+    generated_at: generatedAt,
+    operating_mode: operatingMode,
+    repository_state: repositoryState,
+    source: canonicalPlan.source,
+    summary: {
+      approved_actions_seen: approved.length,
+      deterministic_backfill_actions: items.length,
+      excluded_non_backfill_actions: approved.length - items.length,
+      items_emitted: items.length
+    },
+    items: items.map((item) => ({
+      gap_id: item.origin_gap_id,
+      category: item.category,
+      severity: item.severity,
+      affected_entities: item.affected_entities,
+      action: {
+        action_id: item.action_id,
+        description: item.reason,
+        impact_scope: item.impact_scope,
+        requires_decision: item.requires_decision,
+        target_path: item.target_path,
+        action_type: item.action_type,
+        deterministic_template_used: item.deterministic_template_used
+      }
+    }))
+  };
 
-  const md = [
+  const executionLogPayload = {
+    generated_at: generatedAt,
+    operating_mode: operatingMode,
+    repository_state: repositoryState,
+    blocked: false,
+    source: canonicalPlan.source,
+    summary: legacyTasks.summary,
+    items
+  };
+
+  const legacyReport = [
     "# MODULE FLOW — Backfill Report",
     "",
-    `- generated_at: ${payload.generated_at}`,
-    `- source: artifacts/gap/gap_actions.json`,
-    `- gaps_total: ${payload.summary.total_gaps}`,
-    `- critical_count: ${payload.summary.critical_count}`,
-    `- items_emitted: ${payload.summary.items_emitted}`,
+    `- generated_at: ${generatedAt}`,
+    `- operating_mode: ${operatingMode}`,
+    `- repository_state: ${repositoryState}`,
+    `- approved_actions_seen: ${legacyTasks.summary.approved_actions_seen}`,
+    `- deterministic_backfill_actions: ${legacyTasks.summary.deterministic_backfill_actions}`,
+    `- excluded_non_backfill_actions: ${legacyTasks.summary.excluded_non_backfill_actions}`,
+    `- items_emitted: ${legacyTasks.summary.items_emitted}`,
+    "",
+    "## Outputs",
+    `- ${canonicalPlanRel}`,
+    `- ${canonicalLogRel}`,
+    `- ${legacyTasksRel}`,
+    `- ${legacyReportRel}`,
     "",
     "## Next",
     "- next_step: MODULE_FLOW — Backfill COMPLETE. Next=Execute (implement executeEngine + task bridge).",
     ""
   ].join("\n");
 
-  fs.writeFileSync(reportAbs, md, { encoding: "utf8" });
+  fs.writeFileSync(canonicalPlanAbs, JSON.stringify(canonicalPlan, null, 2), { encoding: "utf8" });
+  fs.writeFileSync(canonicalLogAbs, renderBackfillExecutionLog(executionLogPayload), { encoding: "utf8" });
+  fs.writeFileSync(legacyTasksAbs, JSON.stringify(legacyTasks, null, 2), { encoding: "utf8" });
+  fs.writeFileSync(legacyReportAbs, legacyReport, { encoding: "utf8" });
+  fs.writeFileSync(createdFilesAbs, JSON.stringify({ generated_at: generatedAt, created_files: [] }, null, 2), { encoding: "utf8" });
 
   return {
     stage_progress_percent: 100,
-    artifact: reportRel,
+    artifact: legacyReportRel,
     outputs: {
-      md: reportRel,
-      json: tasksRel
+      md: legacyReportRel,
+      json: legacyTasksRel,
+      canonical_plan: canonicalPlanRel,
+      canonical_log: canonicalLogRel,
+      created_files: createdFilesRel
     },
     status_patch: {
       blocking_questions: [],
