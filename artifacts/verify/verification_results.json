@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-03-10T10:20:17.614Z",
+  "checks": [
+    {
+      "name": "execute_plan_valid_json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "backfill_plan_valid_json",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}
