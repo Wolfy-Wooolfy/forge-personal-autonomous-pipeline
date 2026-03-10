@@ -236,6 +236,8 @@ function runClosure(context) {
   const decisionRel = "artifacts/decisions/module_flow_decision_gate.json";
   const backfillRel = "artifacts/backfill/backfill_plan.json";
   const executeRel = "artifacts/execute/execute_plan.json";
+  const verifyResultsRel = "artifacts/verify/verification_results.json";
+  const verifyReportRel = "artifacts/verify/verification_report.md";
   const closureReportRel = "artifacts/closure/closure_report.md";
   const closureErrorRel = "artifacts/closure/closure_error.md";
   const releaseManifestRel = "artifacts/release/RELEASE_MANIFEST_v1.json";
@@ -249,6 +251,8 @@ function runClosure(context) {
   const decisionAbs = path.resolve(ROOT, decisionRel);
   const backfillAbs = path.resolve(ROOT, backfillRel);
   const executeAbs = path.resolve(ROOT, executeRel);
+  const verifyResultsAbs = path.resolve(ROOT, verifyResultsRel);
+  const verifyReportAbs = path.resolve(ROOT, verifyReportRel);
 
   if (!fileExists(intakeContextAbs)) {
     return buildBlockingResult(
@@ -314,6 +318,22 @@ function runClosure(context) {
     );
   }
 
+  if (!fileExists(verifyResultsAbs)) {
+    return buildBlockingResult(
+      "Closure BLOCKED: required artifact missing (artifacts/verify/verification_results.json).",
+      ["Missing verification results artifact."],
+      closureErrorRel
+    );
+  }
+
+  if (!fileExists(verifyReportAbs)) {
+    return buildBlockingResult(
+      "Closure BLOCKED: required artifact missing (artifacts/verify/verification_report.md).",
+      ["Missing verification report artifact."],
+      closureErrorRel
+    );
+  }
+
   const intakeContext = readJson(intakeContextAbs);
   const intakeSnapshot = readJson(intakeSnapshotAbs);
   const auditJson = readJson(auditAbs);
@@ -322,6 +342,7 @@ function runClosure(context) {
   const decisionJson = readJson(decisionAbs);
   const backfillJson = readJson(backfillAbs);
   const executeJson = readJson(executeAbs);
+  const verifyResultsJson = readJson(verifyResultsAbs);
 
   const operatingMode = String(intakeContext && intakeContext.operating_mode ? intakeContext.operating_mode : "").toUpperCase();
   const repositoryState = String(intakeContext && intakeContext.repository_state ? intakeContext.repository_state : "").toUpperCase();
@@ -437,6 +458,33 @@ function runClosure(context) {
     );
   }
 
+  const verifyBlocked = verifyResultsJson && verifyResultsJson.blocked === true;
+
+  const verifyOutcome = String(
+    verifyResultsJson && (
+      verifyResultsJson.final_outcome ||
+      verifyResultsJson.outcome ||
+      verifyResultsJson.status ||
+      verifyResultsJson.verification_status ||
+      ""
+    )
+  ).toUpperCase();
+
+  const verifyPassed =
+    verifyBlocked !== true &&
+    (verifyOutcome === "PASS" || verifyOutcome === "PASSED" || verifyOutcome === "OK");
+
+  if (!verifyPassed) {
+    return buildBlockingResult(
+      "Closure BLOCKED: verification layer did not pass.",
+      [
+        `verify_blocked=${verifyBlocked === true ? "true" : "false"}`,
+        `verify_outcome=${verifyOutcome || "(empty)"}`
+      ],
+      closureErrorRel
+    );
+  }
+
   const releasePaths = [
     closureReportRel,
     releaseManifestRel,
@@ -472,6 +520,7 @@ function runClosure(context) {
       "Decision",
       "Backfill",
       "Execute",
+      "Verify",
       "Closure"
     ],
     gap_count: gapMetrics.total_gaps,
@@ -501,6 +550,7 @@ function runClosure(context) {
       { name: "Decision Gate", status: "OK" },
       { name: "Backfill", status: "OK" },
       { name: "Execute", status: "OK" },
+      { name: "Verify", status: "OK" },
       { name: "Closure", status: "OK" }
     ],
     gap_status: {
@@ -519,6 +569,7 @@ function runClosure(context) {
       snapshot_hash: snapshot.repository_hash
     },
     release_artifacts: {
+      verify_report: verifyReportRel,
       closure_report: closureReportRel,
       release_manifest: releaseManifestRel,
       repository_hash_snapshot: repoSnapshotRel

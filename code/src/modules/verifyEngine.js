@@ -31,6 +31,10 @@ function runVerify(context) {
 
   const results = {
     generated_at: new Date().toISOString(),
+    blocked: false,
+    status: "",
+    outcome: "",
+    final_outcome: "",
     checks: []
   };
 
@@ -79,10 +83,15 @@ function runVerify(context) {
     md.push(`- ${c.name}: ${c.passed ? "PASS" : "FAIL"} ${c.detail}`);
   }
 
-  fs.writeFileSync(reportPath, md.join("\n"));
-  fs.writeFileSync(jsonPath, JSON.stringify(results, null, 2));
-
   if (failed.length > 0) {
+    results.blocked = true;
+    results.status = "FAIL";
+    results.outcome = "FAIL";
+    results.final_outcome = "FAIL";
+
+    fs.writeFileSync(reportPath, md.join("\n"));
+    fs.writeFileSync(jsonPath, JSON.stringify(results, null, 2));
+
     return {
       blocked: true,
       artifact: "artifacts/verify/verification_report.md",
@@ -96,6 +105,14 @@ function runVerify(context) {
       }
     };
   }
+
+  results.blocked = false;
+  results.status = "PASS";
+  results.outcome = "PASS";
+  results.final_outcome = "PASS";
+
+  fs.writeFileSync(reportPath, md.join("\n"));
+  fs.writeFileSync(jsonPath, JSON.stringify(results, null, 2));
 
   return {
     stage_progress_percent: 100,
