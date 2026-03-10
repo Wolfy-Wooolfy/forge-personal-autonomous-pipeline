@@ -1,19 +1,4032 @@
 {
   "backfill_id": "MODULE_FLOW_BACKFILL_v2",
-  "generated_at": "2026-03-10T09:03:54.533Z",
+  "generated_at": "2026-03-10T09:38:52.089Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "source": {
     "decision_gate_path": "artifacts/decisions/module_flow_decision_gate.json",
-    "decision_gate_sha256": "a1159c341a6450ccdb55e36505aa83e4e5128ad697f48c8169c0ce5690ecc560",
+    "decision_gate_sha256": "a857e16409df0c66ec67023a6760e6a766de3e20d52d359b67aa809da7f761b2",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84"
   },
   "summary": {
-    "approved_actions_seen": 0,
-    "deterministic_backfill_actions": 0,
-    "excluded_non_backfill_actions": 0,
-    "items_emitted": 0
+    "approved_actions_seen": 266,
+    "deterministic_backfill_actions": 236,
+    "excluded_non_backfill_actions": 30,
+    "items_emitted": 236
   },
-  "items": []
+  "items": [
+    {
+      "gap_id": "GAP-003a5700c747",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-CE-01::R004"
+      ],
+      "action": {
+        "action_id": "ACT-9e6a1a61cf61",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-CE-01::R004",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-00ee99c997ee",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R003"
+      ],
+      "action": {
+        "action_id": "ACT-b8cdb16e09d8",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R003",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-03ef6320e31a",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "-::R006"
+      ],
+      "action": {
+        "action_id": "ACT-2c89f742fa8a",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "-::R006",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-048fa7c15c9b",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R002"
+      ],
+      "action": {
+        "action_id": "ACT-256a184e4b6e",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R002",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-0526910b8f9a",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R001"
+      ],
+      "action": {
+        "action_id": "ACT-d70588732ded",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R001",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-065f49c034e7",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-16::R020"
+      ],
+      "action": {
+        "action_id": "ACT-8fa1dca75114",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-16::R020",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-079a4b235261",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-17::R005"
+      ],
+      "action": {
+        "action_id": "ACT-07d83696e277",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-17::R005",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-07cb4cc8f286",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R003"
+      ],
+      "action": {
+        "action_id": "ACT-38ffe467efff",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R003",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-07d2fce5970f",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R020"
+      ],
+      "action": {
+        "action_id": "ACT-c72467e609f3",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R020",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-08a14e21abc6",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "-::R003"
+      ],
+      "action": {
+        "action_id": "ACT-a32e1bdae813",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "-::R003",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-08d055b33e8f",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R016"
+      ],
+      "action": {
+        "action_id": "ACT-bf83e7316071",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R016",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-0990c6f0f7a8",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-14::R003"
+      ],
+      "action": {
+        "action_id": "ACT-5e1be7c95301",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-14::R003",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-0a8c06070d85",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-RT-10_10::R002"
+      ],
+      "action": {
+        "action_id": "ACT-c8f21fb094f4",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-RT-10_10::R002",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-0b033af97dea",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-01::R008"
+      ],
+      "action": {
+        "action_id": "ACT-ba4c3ed00216",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-01::R008",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-0b5a27cc54da",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R015"
+      ],
+      "action": {
+        "action_id": "ACT-cef1e032d7ea",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R015",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-0b5b564cf7fe",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R007"
+      ],
+      "action": {
+        "action_id": "ACT-f22e3a0a8574",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R007",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-0b5ec645ee35",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-16::R014"
+      ],
+      "action": {
+        "action_id": "ACT-11572458a3d4",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-16::R014",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-0c526ee6beba",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R015"
+      ],
+      "action": {
+        "action_id": "ACT-c32a4880354b",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R015",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-0d93c22c75a3",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R008"
+      ],
+      "action": {
+        "action_id": "ACT-a8f8b7b907a9",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R008",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-0e0709574cf9",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-14::R010"
+      ],
+      "action": {
+        "action_id": "ACT-129de151d9ec",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-14::R010",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-0e26579092e1",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-00::R004"
+      ],
+      "action": {
+        "action_id": "ACT-50007db99dee",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-00::R004",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-0f4483c9802e",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-21::R006"
+      ],
+      "action": {
+        "action_id": "ACT-1ed51607fb1d",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-21::R006",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-0f5518237a75",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "-::R004"
+      ],
+      "action": {
+        "action_id": "ACT-26638dfdc1e7",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "-::R004",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-0f5cadabe049",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R017"
+      ],
+      "action": {
+        "action_id": "ACT-1aef17dac23b",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R017",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-0f92b631f0ff",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R024"
+      ],
+      "action": {
+        "action_id": "ACT-6b2f2ec2af2d",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R024",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-1167dc7fc433",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R018"
+      ],
+      "action": {
+        "action_id": "ACT-3ff576e887cc",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R018",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-1225e88f6102",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-14::R002"
+      ],
+      "action": {
+        "action_id": "ACT-3d06e2d824f5",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-14::R002",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-14c739a93b13",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-17::R002"
+      ],
+      "action": {
+        "action_id": "ACT-108ec9c51ada",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-17::R002",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-1713d04e63a3",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-00::R006"
+      ],
+      "action": {
+        "action_id": "ACT-e1ba931496d1",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-00::R006",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-186b5b6bd2e4",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-CE-01::R007"
+      ],
+      "action": {
+        "action_id": "ACT-8268d96e85a6",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-CE-01::R007",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-18ed0cc74e00",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-21::R005"
+      ],
+      "action": {
+        "action_id": "ACT-eef5109137f4",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-21::R005",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-19dcc9bbf900",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-21::R007"
+      ],
+      "action": {
+        "action_id": "ACT-6d63eddefce1",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-21::R007",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-1c913beea425",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R018"
+      ],
+      "action": {
+        "action_id": "ACT-d10706c20cc4",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R018",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-1e9b24b03fe2",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R004"
+      ],
+      "action": {
+        "action_id": "ACT-d9708b05fd04",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R004",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-1f442ad7fb72",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-01::R013"
+      ],
+      "action": {
+        "action_id": "ACT-f65c792da1ed",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-01::R013",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-1f870adb383e",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R012"
+      ],
+      "action": {
+        "action_id": "ACT-bd9081472c6d",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R012",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-205f3c32a9f9",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-17::R010"
+      ],
+      "action": {
+        "action_id": "ACT-934662fee3af",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-17::R010",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-228d547aad9e",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-20::R006"
+      ],
+      "action": {
+        "action_id": "ACT-91bcb05a04da",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-20::R006",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-249787af0990",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R011"
+      ],
+      "action": {
+        "action_id": "ACT-444b76d3b93c",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R011",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-24f4a36cb1ab",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "-::R007"
+      ],
+      "action": {
+        "action_id": "ACT-1ffd3f97bab6",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "-::R007",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-261668b52f7d",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-CE-01::R002"
+      ],
+      "action": {
+        "action_id": "ACT-1b9693f6d22e",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-CE-01::R002",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-2724780d206a",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-01::R001"
+      ],
+      "action": {
+        "action_id": "ACT-adbcb6903d75",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-01::R001",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-2c098854d2a4",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-17::R003"
+      ],
+      "action": {
+        "action_id": "ACT-47621bb82dc1",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-17::R003",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-2c4ce2b579c3",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-00::R008"
+      ],
+      "action": {
+        "action_id": "ACT-3b77c19f9bed",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-00::R008",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-2d124d3881f7",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R010"
+      ],
+      "action": {
+        "action_id": "ACT-0acc75fd5a56",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R010",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-2d25fc74c14e",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-14::R005"
+      ],
+      "action": {
+        "action_id": "ACT-2905e2b603a6",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-14::R005",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-304127090b96",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-02::R003"
+      ],
+      "action": {
+        "action_id": "ACT-7d49a79e243c",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-02::R003",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-31003868ed56",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R013"
+      ],
+      "action": {
+        "action_id": "ACT-8b90d872fd6c",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R013",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-329eb6ab2538",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-21::R004"
+      ],
+      "action": {
+        "action_id": "ACT-ba84f0cf66d0",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-21::R004",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-34c934cba6e8",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-00::R005"
+      ],
+      "action": {
+        "action_id": "ACT-489e46c5fadd",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-00::R005",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-3505c6298732",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-RT-10_10::R004"
+      ],
+      "action": {
+        "action_id": "ACT-fd485a1abf8f",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-RT-10_10::R004",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-364a0bfcdd03",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-16::R025"
+      ],
+      "action": {
+        "action_id": "ACT-5501bfeb420f",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-16::R025",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-3956e8f2e6a0",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R012"
+      ],
+      "action": {
+        "action_id": "ACT-5bc378fa6bb6",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R012",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-3a52f23acb1d",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-CE-01::R001"
+      ],
+      "action": {
+        "action_id": "ACT-e482f6c6a0a5",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-CE-01::R001",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-3abd03d8d8d6",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R003"
+      ],
+      "action": {
+        "action_id": "ACT-3531a8dab1c9",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R003",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-3ae78b552282",
+      "category": "ORPHAN_ARTIFACT",
+      "severity": "LOW",
+      "affected_entities": [
+        "artifacts/closure/closure_error.md"
+      ],
+      "action": {
+        "action_id": "ACT-34368aff0a72",
+        "description": "action explicitly marked requires_decision; approved by explicit override",
+        "impact_scope": "artifacts/trace",
+        "requires_decision": true,
+        "target_path": "artifacts/closure/closure_error.md",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-3afd64197646",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R021"
+      ],
+      "action": {
+        "action_id": "ACT-a5c8a7b0b00a",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R021",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-3b6025e1f0fb",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R012"
+      ],
+      "action": {
+        "action_id": "ACT-0602e0fcfca7",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R012",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-3da63cefe939",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-20::R009"
+      ],
+      "action": {
+        "action_id": "ACT-0a104b96b855",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-20::R009",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-3e800bb5e1f8",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R019"
+      ],
+      "action": {
+        "action_id": "ACT-1701babc2964",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R019",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-41bb2e235028",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R013"
+      ],
+      "action": {
+        "action_id": "ACT-3d87a0a3a9c1",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R013",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-443f91dbcf88",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-16::R026"
+      ],
+      "action": {
+        "action_id": "ACT-3cae061a0287",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-16::R026",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-44b6371bc6df",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R013"
+      ],
+      "action": {
+        "action_id": "ACT-520a12043e4a",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R013",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-45cec70bcc3e",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-02::R006"
+      ],
+      "action": {
+        "action_id": "ACT-7ba02ccbbff3",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-02::R006",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-45d7d93160d5",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R014"
+      ],
+      "action": {
+        "action_id": "ACT-d30c0df2760f",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R014",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-45f4a63f85d3",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-14::R016"
+      ],
+      "action": {
+        "action_id": "ACT-d59cd1360566",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-14::R016",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-4674e006266f",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-01::R009"
+      ],
+      "action": {
+        "action_id": "ACT-a36a59c0eba4",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-01::R009",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-48ab9a6da9ea",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R017"
+      ],
+      "action": {
+        "action_id": "ACT-f8ef8659fdd8",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R017",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-491e0ecdb7c7",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R004"
+      ],
+      "action": {
+        "action_id": "ACT-ff1516d8b7b8",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R004",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-495285c84dea",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R004"
+      ],
+      "action": {
+        "action_id": "ACT-27c59a7934c5",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R004",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-49870b8bb111",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R001"
+      ],
+      "action": {
+        "action_id": "ACT-85890d850483",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R001",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-4b178b308f3a",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-17::R009"
+      ],
+      "action": {
+        "action_id": "ACT-fc3371747e32",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-17::R009",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-4babad8e10ac",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-21::R002"
+      ],
+      "action": {
+        "action_id": "ACT-f1ee5b134f24",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-21::R002",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-4bd98791faa0",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-16::R022"
+      ],
+      "action": {
+        "action_id": "ACT-2c9041a1f336",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-16::R022",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-4cae71da60be",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R009"
+      ],
+      "action": {
+        "action_id": "ACT-46166ea78dc7",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R009",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-4d262daface4",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R010"
+      ],
+      "action": {
+        "action_id": "ACT-754ab883d526",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R010",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-4d425bf91a51",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R005"
+      ],
+      "action": {
+        "action_id": "ACT-7227188f349c",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R005",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-4e40ee5b3a48",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-16::R019"
+      ],
+      "action": {
+        "action_id": "ACT-023c0ff65b47",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-16::R019",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-4eaf586a7e26",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R008"
+      ],
+      "action": {
+        "action_id": "ACT-b43adb40a1ba",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R008",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-526ec5387c00",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-14::R012"
+      ],
+      "action": {
+        "action_id": "ACT-0c183a4dc232",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-14::R012",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-52746a2dc5c2",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-02::R007"
+      ],
+      "action": {
+        "action_id": "ACT-701bfcbcdf9c",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-02::R007",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-535eed500282",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-01::R003"
+      ],
+      "action": {
+        "action_id": "ACT-25b9ca4e7141",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-01::R003",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-53e5f2fdc8c9",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "-::R005"
+      ],
+      "action": {
+        "action_id": "ACT-694e3d469851",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "-::R005",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-53e8600b9327",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R006"
+      ],
+      "action": {
+        "action_id": "ACT-cb9b9dd1efc1",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R006",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-55e1d2352fab",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R018"
+      ],
+      "action": {
+        "action_id": "ACT-798c11643db7",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R018",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-571642b791fc",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R013"
+      ],
+      "action": {
+        "action_id": "ACT-2e146b9b19de",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R013",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-5718eda7daa8",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R015"
+      ],
+      "action": {
+        "action_id": "ACT-9cc36d835578",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R015",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-574f1fab1431",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-20::R010"
+      ],
+      "action": {
+        "action_id": "ACT-9413b156266a",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-20::R010",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-593cc6398fa4",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R002"
+      ],
+      "action": {
+        "action_id": "ACT-4e174369aa55",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R002",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-59bad85cd659",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R018"
+      ],
+      "action": {
+        "action_id": "ACT-ef7ee641d187",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R018",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-59f7a6c9818a",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-01::R020"
+      ],
+      "action": {
+        "action_id": "ACT-af7cbf346af9",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-01::R020",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-5b3199bb0aa0",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R006"
+      ],
+      "action": {
+        "action_id": "ACT-4b5c48a6088e",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R006",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-5f8cdb1d72fe",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R001"
+      ],
+      "action": {
+        "action_id": "ACT-246bf9ba2e2a",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R001",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-606a49ee798b",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-21::R013"
+      ],
+      "action": {
+        "action_id": "ACT-28baca3556b8",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-21::R013",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-618e4f8ad1c2",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "-::R002"
+      ],
+      "action": {
+        "action_id": "ACT-983858915ee9",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "-::R002",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-621ca6717c49",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-01::R019"
+      ],
+      "action": {
+        "action_id": "ACT-f76d80da81d9",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-01::R019",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-630cb4aba730",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R004"
+      ],
+      "action": {
+        "action_id": "ACT-301c56a27c2a",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R004",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-6400739dd909",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R016"
+      ],
+      "action": {
+        "action_id": "ACT-d46ae268336e",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R016",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-656cb4e78560",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-20::R008"
+      ],
+      "action": {
+        "action_id": "ACT-9572273ff394",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-20::R008",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-65775aba9b69",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R002"
+      ],
+      "action": {
+        "action_id": "ACT-c95536a8926b",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R002",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-6608583d6087",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "-::R009"
+      ],
+      "action": {
+        "action_id": "ACT-140a127c4fef",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "-::R009",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-6925f0ae6bdb",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-21::R012"
+      ],
+      "action": {
+        "action_id": "ACT-627185c36460",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-21::R012",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-6a63ce2581de",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-14::R013"
+      ],
+      "action": {
+        "action_id": "ACT-7da33d507aa7",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-14::R013",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-6ac1a9d0af79",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-00::R007"
+      ],
+      "action": {
+        "action_id": "ACT-5af6e3498d9a",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-00::R007",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-6bba9a519068",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-01::R007"
+      ],
+      "action": {
+        "action_id": "ACT-c22660ce4337",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-01::R007",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-6c981d7579e1",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-01::R006"
+      ],
+      "action": {
+        "action_id": "ACT-2b27604265d5",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-01::R006",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-6d252c89d091",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R007"
+      ],
+      "action": {
+        "action_id": "ACT-9f253802cf3e",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R007",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-6e38de7147f3",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "-::R001"
+      ],
+      "action": {
+        "action_id": "ACT-8178a8da440e",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "-::R001",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-6f02dfefae5f",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-11::R008"
+      ],
+      "action": {
+        "action_id": "ACT-e2ca80b2e0f1",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-11::R008",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-6f3577761858",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R023"
+      ],
+      "action": {
+        "action_id": "ACT-2dd774d61b09",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R023",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-6f89e10b4996",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-CE-01::R008"
+      ],
+      "action": {
+        "action_id": "ACT-e75ffd0ed9a5",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-CE-01::R008",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-7112558a4b8f",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-16::R024"
+      ],
+      "action": {
+        "action_id": "ACT-7c63a594ca54",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-16::R024",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-718e342e5aef",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-00::R001"
+      ],
+      "action": {
+        "action_id": "ACT-d39cfaad7f4c",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-00::R001",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-74b86498673e",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-17::R008"
+      ],
+      "action": {
+        "action_id": "ACT-91d2c2628e96",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-17::R008",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-755f53893e8f",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R013"
+      ],
+      "action": {
+        "action_id": "ACT-09a91df563b0",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R013",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-7560c4e65883",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R025"
+      ],
+      "action": {
+        "action_id": "ACT-d169ead79283",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R025",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-764a135ed7da",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-02::R008"
+      ],
+      "action": {
+        "action_id": "ACT-14778c214450",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-02::R008",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-771e564a465b",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R016"
+      ],
+      "action": {
+        "action_id": "ACT-01dc1e5cc8f4",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R016",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-779ca4f2b5ab",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-02::R012"
+      ],
+      "action": {
+        "action_id": "ACT-de27ab75ebf8",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-02::R012",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-7809fc8f5398",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-20::R005"
+      ],
+      "action": {
+        "action_id": "ACT-fd2b996c0a1b",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-20::R005",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-79b2b57c2014",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R010"
+      ],
+      "action": {
+        "action_id": "ACT-9577ba65eda6",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R010",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-7a8424ae52e5",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-02::R001"
+      ],
+      "action": {
+        "action_id": "ACT-5d6b3d6d0994",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-02::R001",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-7c2a85b27965",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R005"
+      ],
+      "action": {
+        "action_id": "ACT-bf013d6edeab",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R005",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-7e5e594efadf",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-14::R017"
+      ],
+      "action": {
+        "action_id": "ACT-e05c9bc4eec5",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-14::R017",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-7f22aaeb96c8",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R010"
+      ],
+      "action": {
+        "action_id": "ACT-4f6690a87920",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R010",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-7f4c762f767d",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-02::R002"
+      ],
+      "action": {
+        "action_id": "ACT-815cd2306358",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-02::R002",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-7f70f883361c",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-11::R009"
+      ],
+      "action": {
+        "action_id": "ACT-3de25b842bd3",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-11::R009",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-801ad6ca240e",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-11::R001"
+      ],
+      "action": {
+        "action_id": "ACT-5e4e9cfea992",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-11::R001",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-80aa6267d61c",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R016"
+      ],
+      "action": {
+        "action_id": "ACT-1f7c6067c711",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R016",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-817bdb0c7156",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-00::R003"
+      ],
+      "action": {
+        "action_id": "ACT-218e23e30ade",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-00::R003",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-86f45f3e0ee8",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R003"
+      ],
+      "action": {
+        "action_id": "ACT-8c32f62176d3",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R003",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-882e5547276e",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-01::R011"
+      ],
+      "action": {
+        "action_id": "ACT-88ff06be44ce",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-01::R011",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-8847be619c7d",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-21::R009"
+      ],
+      "action": {
+        "action_id": "ACT-fa08c590b093",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-21::R009",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-8853a44f38a7",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R019"
+      ],
+      "action": {
+        "action_id": "ACT-0d51212eaf77",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R019",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-8a72761419b7",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-16::R023"
+      ],
+      "action": {
+        "action_id": "ACT-8fd213cabeec",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-16::R023",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-8b1bf9349bc4",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-14::R004"
+      ],
+      "action": {
+        "action_id": "ACT-5d8ce8913dff",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-14::R004",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-8b2f386e2ce3",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-01::R010"
+      ],
+      "action": {
+        "action_id": "ACT-65bc565686c8",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-01::R010",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-8c9098920744",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-14::R001"
+      ],
+      "action": {
+        "action_id": "ACT-d10c34c6a31f",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-14::R001",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-8cf01bd924b4",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R014"
+      ],
+      "action": {
+        "action_id": "ACT-1673b935657f",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R014",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-8d44646f9f84",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R003"
+      ],
+      "action": {
+        "action_id": "ACT-2a307d55eae5",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R003",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-8f24764cfd4b",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-02::R005"
+      ],
+      "action": {
+        "action_id": "ACT-90e3b7ad9c83",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-02::R005",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-93e47c26a8cc",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R014"
+      ],
+      "action": {
+        "action_id": "ACT-c25ec97eb2a2",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R014",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-985b166e3f7f",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-02::R004"
+      ],
+      "action": {
+        "action_id": "ACT-3d30cfa53772",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-02::R004",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-985b16acec8d",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-02::R009"
+      ],
+      "action": {
+        "action_id": "ACT-37f1fcb4f84c",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-02::R009",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-992ba4d426a4",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-16::R017"
+      ],
+      "action": {
+        "action_id": "ACT-203eaa9799cb",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-16::R017",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-9ace09ecbeff",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-CE-01::R009"
+      ],
+      "action": {
+        "action_id": "ACT-fa4b5a75a43e",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-CE-01::R009",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-9b186629b1e2",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R001"
+      ],
+      "action": {
+        "action_id": "ACT-dff99abe4870",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R001",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-9e7de715d07e",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-17::R011"
+      ],
+      "action": {
+        "action_id": "ACT-bccf18830183",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-17::R011",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-9ebf3d09171d",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R005"
+      ],
+      "action": {
+        "action_id": "ACT-0cc8dd6e6ca9",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R005",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-9ebf4b6cb896",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-21::R001"
+      ],
+      "action": {
+        "action_id": "ACT-392ca94f3a8c",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-21::R001",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-a1222c575a76",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-17::R007"
+      ],
+      "action": {
+        "action_id": "ACT-d8712315a7ed",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-17::R007",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-a15b8a0767f1",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R004"
+      ],
+      "action": {
+        "action_id": "ACT-1cfb5c1a8a3a",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R004",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-a22c4add1aaa",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-17::R001"
+      ],
+      "action": {
+        "action_id": "ACT-8fb31b1557d1",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-17::R001",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-a26aee4d5f00",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R009"
+      ],
+      "action": {
+        "action_id": "ACT-b6b59356d7db",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R009",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-a3e427d4bc8c",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R017"
+      ],
+      "action": {
+        "action_id": "ACT-841ccae921bd",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R017",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-a4543268f6dd",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-RT-10_10::R001"
+      ],
+      "action": {
+        "action_id": "ACT-ffff37df17fd",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-RT-10_10::R001",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-ab38c9bf371c",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R005"
+      ],
+      "action": {
+        "action_id": "ACT-705a0fbc614b",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R005",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-ab45ebd5644f",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R020"
+      ],
+      "action": {
+        "action_id": "ACT-6123f4b93522",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R020",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-abdd95efcec3",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R022"
+      ],
+      "action": {
+        "action_id": "ACT-a9fbaf142a54",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R022",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-abe447b46b70",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R006"
+      ],
+      "action": {
+        "action_id": "ACT-70682b90bca4",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R006",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-b00db8f365c2",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-14::R021"
+      ],
+      "action": {
+        "action_id": "ACT-508955303088",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-14::R021",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-b15db4df0c84",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R022"
+      ],
+      "action": {
+        "action_id": "ACT-6f307fb59964",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R022",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-b1d1527a5332",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-14::R018"
+      ],
+      "action": {
+        "action_id": "ACT-ffd45ec5df8e",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-14::R018",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-b2c46e2d8f80",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R020"
+      ],
+      "action": {
+        "action_id": "ACT-b70e25012db0",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R020",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-b41e76705727",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R002"
+      ],
+      "action": {
+        "action_id": "ACT-3345753b0f9b",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R002",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-b48b70c40970",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-14::R014"
+      ],
+      "action": {
+        "action_id": "ACT-6eb9dbe83588",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-14::R014",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-b5d164d0d4f6",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R015"
+      ],
+      "action": {
+        "action_id": "ACT-45d61f25c28d",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R015",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-b8c66d15cc45",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-14::R022"
+      ],
+      "action": {
+        "action_id": "ACT-5aa053320908",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-14::R022",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-b906b650f6aa",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R019"
+      ],
+      "action": {
+        "action_id": "ACT-0cb38a0b6fd1",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R019",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-b9122da1dd18",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-02::R011"
+      ],
+      "action": {
+        "action_id": "ACT-05c9df6cb364",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-02::R011",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-ba16a07e8b82",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-11::R007"
+      ],
+      "action": {
+        "action_id": "ACT-19aec4168f12",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-11::R007",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-ba98275bb812",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-11::R004"
+      ],
+      "action": {
+        "action_id": "ACT-a7c9a8182ea1",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-11::R004",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-bb69b8e15948",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-02::R010"
+      ],
+      "action": {
+        "action_id": "ACT-1aba96b4c563",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-02::R010",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-bbcd9c069842",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R002"
+      ],
+      "action": {
+        "action_id": "ACT-4df371a95d6e",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R002",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-bda18145b4d7",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-RT-10_10::R003"
+      ],
+      "action": {
+        "action_id": "ACT-37afc190f548",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-RT-10_10::R003",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-be76f539124a",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R017"
+      ],
+      "action": {
+        "action_id": "ACT-e2806d02619e",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R017",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-c1a42fb0fe31",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-CE-01::R005"
+      ],
+      "action": {
+        "action_id": "ACT-648ecfb1b322",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-CE-01::R005",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-c1ae8427fe4c",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R011"
+      ],
+      "action": {
+        "action_id": "ACT-c05f9de9f095",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R011",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-c308e4b7a724",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-14::R006"
+      ],
+      "action": {
+        "action_id": "ACT-e65f59995260",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-14::R006",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-c37ed1ad4c7d",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R009"
+      ],
+      "action": {
+        "action_id": "ACT-3a7ef2ed2e70",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R009",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-c42645b04f23",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "06_Progress_Tracking_and_Status_Report_Contract_v1::R008"
+      ],
+      "action": {
+        "action_id": "ACT-35a98f4e0021",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R008",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-c547fd099f3e",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R011"
+      ],
+      "action": {
+        "action_id": "ACT-3f7dcb550482",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R011",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-c5d02d199b52",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-17::R004"
+      ],
+      "action": {
+        "action_id": "ACT-ffc92a2420d2",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-17::R004",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-c8a313ebc15e",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "-::R008"
+      ],
+      "action": {
+        "action_id": "ACT-f6a0df91ccce",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "-::R008",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-c9a4f670ad39",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R001"
+      ],
+      "action": {
+        "action_id": "ACT-8f24f97db0a7",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R001",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-ce21fecea4c7",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R016"
+      ],
+      "action": {
+        "action_id": "ACT-a5ac7fae0592",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R016",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-ced595196c63",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-20::R003"
+      ],
+      "action": {
+        "action_id": "ACT-16121e6c1e40",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-20::R003",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-cf8efe180e68",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-16::R016"
+      ],
+      "action": {
+        "action_id": "ACT-c86d7cfa42b6",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-16::R016",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-d05cd55cf1ee",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R019"
+      ],
+      "action": {
+        "action_id": "ACT-6514eb1eed64",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R019",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-d36a42091c8c",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-11::R003"
+      ],
+      "action": {
+        "action_id": "ACT-d4a1605e87f8",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-11::R003",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-d39780a535e2",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-01::R017"
+      ],
+      "action": {
+        "action_id": "ACT-8bc5bf22ce0e",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-01::R017",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-d3c68b1c2f33",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R001"
+      ],
+      "action": {
+        "action_id": "ACT-b9dacd1e2e08",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R001",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-d6217de3ee03",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R003"
+      ],
+      "action": {
+        "action_id": "ACT-8b003a618b25",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R003",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-d934458d72f2",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-14::R009"
+      ],
+      "action": {
+        "action_id": "ACT-4f92d33c9731",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-14::R009",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-da3339344946",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R011"
+      ],
+      "action": {
+        "action_id": "ACT-ea3183edb021",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R011",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-daa95190d496",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R007"
+      ],
+      "action": {
+        "action_id": "ACT-58462d30d4c7",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R007",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-dbc00bfe9773",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R011"
+      ],
+      "action": {
+        "action_id": "ACT-682fcf306a8e",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R011",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-deaec1a14932",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-01::R005"
+      ],
+      "action": {
+        "action_id": "ACT-68bebf7922dc",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-01::R005",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-dedadbe6829f",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R018"
+      ],
+      "action": {
+        "action_id": "ACT-96c63d080f24",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R018",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-df68c093cc3f",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-16::R027"
+      ],
+      "action": {
+        "action_id": "ACT-8eb87fbaed6a",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-16::R027",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-e014730ba9e7",
+      "category": "ORPHAN_ARTIFACT",
+      "severity": "LOW",
+      "affected_entities": [
+        "artifacts/intake/repository_inventory.json"
+      ],
+      "action": {
+        "action_id": "ACT-d044cb96dc45",
+        "description": "action explicitly marked requires_decision; approved by explicit override",
+        "impact_scope": "artifacts/trace",
+        "requires_decision": true,
+        "target_path": "artifacts/intake/repository_inventory.json",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-e1fafec52df2",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R004"
+      ],
+      "action": {
+        "action_id": "ACT-f7ad0eaf7a28",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R004",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-e2b9211e956f",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R010"
+      ],
+      "action": {
+        "action_id": "ACT-fce1d8a0a836",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R010",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-e538d22e3938",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-20::R002"
+      ],
+      "action": {
+        "action_id": "ACT-f0118530e735",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-20::R002",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-e5b5e4c038cf",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R008"
+      ],
+      "action": {
+        "action_id": "ACT-d00fa9c26949",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R008",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-e5d9426489f3",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-01::R002"
+      ],
+      "action": {
+        "action_id": "ACT-8d04cc5ec18c",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-01::R002",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-e735e6c5673c",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R012"
+      ],
+      "action": {
+        "action_id": "ACT-702f11a56619",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R012",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-e7eb976b124a",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R017"
+      ],
+      "action": {
+        "action_id": "ACT-c4884b078a0e",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R017",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-eb06898b4789",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-20::R012"
+      ],
+      "action": {
+        "action_id": "ACT-ac0a8c8fb611",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-20::R012",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-ec9beb1d7fdf",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-21::R011"
+      ],
+      "action": {
+        "action_id": "ACT-be38fa64129f",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-21::R011",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-ecf6896f2cca",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-20::R007"
+      ],
+      "action": {
+        "action_id": "ACT-149ab9bf1bd3",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-20::R007",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-ed937e14bc4a",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-11::R002"
+      ],
+      "action": {
+        "action_id": "ACT-8b25e64a1c2d",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-11::R002",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-ee0c3e3df9ba",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-00::R002"
+      ],
+      "action": {
+        "action_id": "ACT-452a6688cf8d",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-00::R002",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-ef9592f20a7c",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R005"
+      ],
+      "action": {
+        "action_id": "ACT-fb28a67974a8",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R005",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-f1a81fc42126",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-RT-10_10::R007"
+      ],
+      "action": {
+        "action_id": "ACT-898f60ed111b",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-RT-10_10::R007",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-f1dbe2665d96",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R006"
+      ],
+      "action": {
+        "action_id": "ACT-9df0ff926057",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R006",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-f1ec0a1b6118",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-CE-01::R003"
+      ],
+      "action": {
+        "action_id": "ACT-b5172b0f798e",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-CE-01::R003",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-f30550b84948",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R021"
+      ],
+      "action": {
+        "action_id": "ACT-f4af80c0ea91",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R021",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-f4f4d30cf0d0",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-21::R010"
+      ],
+      "action": {
+        "action_id": "ACT-85f7ba64e02d",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-21::R010",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-f60dd82e4552",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R012"
+      ],
+      "action": {
+        "action_id": "ACT-98cf63f6df0f",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R012",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-f631d2c2f76e",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R006"
+      ],
+      "action": {
+        "action_id": "ACT-de5df8216c9f",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R006",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-f63d0a5360a7",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R009"
+      ],
+      "action": {
+        "action_id": "ACT-834fe121e92c",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R009",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-f63fe68c1ed8",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R014"
+      ],
+      "action": {
+        "action_id": "ACT-2771eac94471",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R014",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-f6aaf37cecae",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-20::R011"
+      ],
+      "action": {
+        "action_id": "ACT-8104ee34acb2",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-20::R011",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-f7a9de8975d2",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-20::R004"
+      ],
+      "action": {
+        "action_id": "ACT-5460915c4c4b",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-20::R004",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-f81f6cd5fc67",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-01::R012"
+      ],
+      "action": {
+        "action_id": "ACT-5e9a0dfec9fc",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-01::R012",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-f854c326e50f",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "05_Artifact_Schema_and_Repository_Layout_Standard::R015"
+      ],
+      "action": {
+        "action_id": "ACT-26b4e0e19817",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "05_Artifact_Schema_and_Repository_Layout_Standard::R015",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-fa1d9d91e8ca",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R002"
+      ],
+      "action": {
+        "action_id": "ACT-13dff37b8fda",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R002",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-fa6c9e036339",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-21::R003"
+      ],
+      "action": {
+        "action_id": "ACT-ea2b69bee870",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-21::R003",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-fafdfff9f869",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-RT-10_10::R005"
+      ],
+      "action": {
+        "action_id": "ACT-431e157f30e4",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-RT-10_10::R005",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-fb3245be5738",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "Doc-04::R009"
+      ],
+      "action": {
+        "action_id": "ACT-8b132eb9bc14",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "Doc-04::R009",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-fd01aa94aeec",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-11::R005"
+      ],
+      "action": {
+        "action_id": "ACT-68ea0442978d",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-11::R005",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-fdfd5a44fc1d",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-21::R008"
+      ],
+      "action": {
+        "action_id": "ACT-a609b910fd15",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-21::R008",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-fe7a51c2b363",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-01::R016"
+      ],
+      "action": {
+        "action_id": "ACT-bff1bdd06c7c",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-01::R016",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-ff64a8a5df9c",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-10::R007"
+      ],
+      "action": {
+        "action_id": "ACT-98f1603ebf45",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-10::R007",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-ffb5151bdd5e",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "DOC-20::R001"
+      ],
+      "action": {
+        "action_id": "ACT-4c8520e12d55",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DOC-20::R001",
+        "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    }
+  ]
 }

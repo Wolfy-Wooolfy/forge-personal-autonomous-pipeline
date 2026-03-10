@@ -1,14 +1,562 @@
 # MODULE FLOW — Decision Gate
 
-- timestamp: 2026-03-09T11:17:27.572Z
-- decision: APPROVE_ALL
+- timestamp: 2026-03-10T09:37:40.659Z
+- policy: AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK
+- operating_mode: IMPROVE
+- repository_state: MIXED
+- blocked: false
 
 ## Source
 - gap_actions_path: artifacts/gap/gap_actions.json
-- gap_actions_sha256: b9e13aa758444676d6dae5216cdc3430a6ad5440257062a8e991626fa4111a48
+- gap_actions_sha256: 57bf801433f43431a6f55ee9fb716bf577b3a97ce5de447a94aeeb3b972d97d4
+- intake_context_path: artifacts/intake/intake_context.json
+- intake_context_sha256: eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84
 
-## Outcome
-- APPROVE_ALL: proceed to Backfill module implementation + task bridge.
+## Summary
+- total_actions: 266
+- approved_count: 266
+- review_required_count: 0
+- rejected_count: 0
+
+## Approved Actions
+- ACT-9e6a1a61cf61 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-CE-01::R004 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-b8cdb16e09d8 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R003 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-2c89f742fa8a [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement -::R006 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-256a184e4b6e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R002 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d70588732ded [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R001 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-8fa1dca75114 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-16::R020 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-07d83696e277 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-17::R005 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-38ffe467efff [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R003 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-c72467e609f3 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R020 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-a32e1bdae813 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement -::R003 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-bf83e7316071 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R016 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-5e1be7c95301 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-14::R003 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-c8f21fb094f4 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-RT-10_10::R002 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-ba4c3ed00216 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R008 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-cef1e032d7ea [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R015 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-f22e3a0a8574 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R007 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-11572458a3d4 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-16::R014 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-c32a4880354b [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R015 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-a8f8b7b907a9 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R008 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-129de151d9ec [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-14::R010 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-50007db99dee [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-00::R004 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-1ed51607fb1d [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-21::R006 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-26638dfdc1e7 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement -::R004 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-1aef17dac23b [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R017 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-6b2f2ec2af2d [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R024 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-3ff576e887cc [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R018 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-3d06e2d824f5 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-14::R002 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-108ec9c51ada [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-17::R002 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-cdfaf38e206b [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-38::R016 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-e1ba931496d1 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-00::R006 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-8268d96e85a6 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-CE-01::R007 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-eef5109137f4 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-21::R005 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-6d63eddefce1 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-21::R007 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d10706c20cc4 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R018 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d9708b05fd04 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R004 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-f65c792da1ed [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R013 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-bd9081472c6d [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R012 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-8f4368ae05ee [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R006 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-934662fee3af [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-17::R010 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-91bcb05a04da [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-20::R006 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-444b76d3b93c [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R011 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-1ffd3f97bab6 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement -::R007 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-1b9693f6d22e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-CE-01::R002 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-adbcb6903d75 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R001 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-339fd278e167 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R002 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-47621bb82dc1 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-17::R003 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-3b77c19f9bed [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-00::R008 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-4808f0099d9d [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-38::R013 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-0acc75fd5a56 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R010 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-2905e2b603a6 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-14::R005 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-7d49a79e243c [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-02::R003 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-8b90d872fd6c [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R013 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-ba84f0cf66d0 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-21::R004 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-902018cd08ef [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-38::R007 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-489e46c5fadd [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-00::R005 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-fd485a1abf8f [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-RT-10_10::R004 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-5501bfeb420f [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-16::R025 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-bd0e52c40d9f [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R005 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-5bc378fa6bb6 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R012 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-e482f6c6a0a5 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-CE-01::R001 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-3531a8dab1c9 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R003 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-34368aff0a72 [ORPHAN_ARTIFACT/LOW] Either map artifact artifacts/closure/closure_error.md to a requirement (if valid) or remove it if it violates namespace/scope rules.
+  - reason: action explicitly marked requires_decision; approved by explicit override
+- ACT-a5c8a7b0b00a [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R021 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-0602e0fcfca7 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R012 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-0a104b96b855 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-20::R009 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-1701babc2964 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R019 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-80441dd97d67 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-38::R005 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-3d87a0a3a9c1 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R013 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-3cae061a0287 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-16::R026 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-f0802dd7b122 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-38::R010 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-520a12043e4a [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R013 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-7ba02ccbbff3 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-02::R006 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d30c0df2760f [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R014 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d59cd1360566 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-14::R016 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-a36a59c0eba4 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R009 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-f8ef8659fdd8 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R017 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-ff1516d8b7b8 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R004 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-27c59a7934c5 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R004 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-85890d850483 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R001 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-fc3371747e32 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-17::R009 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-f1ee5b134f24 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-21::R002 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-2c9041a1f336 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-16::R022 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-747ed90f9a45 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-38::R014 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-46166ea78dc7 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R009 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-754ab883d526 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R010 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-7227188f349c [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R005 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-2b234fcfc86f [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R003 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-023c0ff65b47 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-16::R019 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-b43adb40a1ba [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R008 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-0c183a4dc232 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-14::R012 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-701bfcbcdf9c [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-02::R007 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-4032a99f2080 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-38::R012 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-25b9ca4e7141 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R003 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-694e3d469851 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement -::R005 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-cb9b9dd1efc1 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R006 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-798c11643db7 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R018 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-2e146b9b19de [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R013 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-9cc36d835578 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R015 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-9413b156266a [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-20::R010 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-4e174369aa55 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R002 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-ef7ee641d187 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R018 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-af7cbf346af9 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R020 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-4b5c48a6088e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R006 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-6b74d96fd896 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R012 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-246bf9ba2e2a [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R001 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-28baca3556b8 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-21::R013 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-983858915ee9 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement -::R002 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-f76d80da81d9 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R019 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-301c56a27c2a [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R004 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d46ae268336e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R016 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-9572273ff394 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-20::R008 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-c95536a8926b [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R002 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-140a127c4fef [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement -::R009 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-627185c36460 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-21::R012 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-363823248652 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R011 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-7da33d507aa7 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-14::R013 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-5af6e3498d9a [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-00::R007 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-c22660ce4337 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R007 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-2b27604265d5 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R006 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-9f253802cf3e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R007 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-8178a8da440e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement -::R001 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-e2ca80b2e0f1 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-11::R008 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-2dd774d61b09 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R023 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-e75ffd0ed9a5 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-CE-01::R008 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-7c63a594ca54 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-16::R024 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-bbbe72afb924 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R009 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d39cfaad7f4c [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-00::R001 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-91d2c2628e96 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-17::R008 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-09a91df563b0 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R013 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d169ead79283 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R025 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-14778c214450 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-02::R008 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-01dc1e5cc8f4 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R016 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-de27ab75ebf8 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-02::R012 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-fd2b996c0a1b [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-20::R005 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-9577ba65eda6 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R010 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-5d6b3d6d0994 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-02::R001 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-ea4d943f35ca [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-38::R015 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-a8a403f8e522 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-38::R004 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-def84f8dec0b [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-38::R001 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-bf013d6edeab [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R005 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-e05c9bc4eec5 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-14::R017 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-4f6690a87920 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R010 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-815cd2306358 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-02::R002 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-3de25b842bd3 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-11::R009 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-0749d76954f2 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-38::R002 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-5e4e9cfea992 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-11::R001 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-1f7c6067c711 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R016 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-218e23e30ade [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-00::R003 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-8c32f62176d3 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R003 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-88ff06be44ce [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R011 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-fa08c590b093 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-21::R009 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-0d51212eaf77 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R019 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-ec4f1d66ef99 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-38::R009 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-8fd213cabeec [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-16::R023 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-5d8ce8913dff [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-14::R004 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-65bc565686c8 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R010 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d10c34c6a31f [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-14::R001 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-1673b935657f [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R014 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-2a307d55eae5 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R003 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-acc853fa1169 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R013 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-90e3b7ad9c83 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-02::R005 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-c25ec97eb2a2 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R014 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-eb26593eb4ac [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-38::R011 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-3d30cfa53772 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-02::R004 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-37f1fcb4f84c [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-02::R009 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-203eaa9799cb [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-16::R017 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-7cf51ee0cb82 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-38::R006 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-fa4b5a75a43e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-CE-01::R009 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-dff99abe4870 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R001 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-bccf18830183 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-17::R011 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-0cc8dd6e6ca9 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R005 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-392ca94f3a8c [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-21::R001 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d8712315a7ed [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-17::R007 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-1cfb5c1a8a3a [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R004 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-8fb31b1557d1 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-17::R001 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-b6b59356d7db [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R009 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-841ccae921bd [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R017 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-ffff37df17fd [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-RT-10_10::R001 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-705a0fbc614b [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R005 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-6123f4b93522 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R020 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-a9fbaf142a54 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R022 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-70682b90bca4 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R006 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-508955303088 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-14::R021 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-6f307fb59964 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R022 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-ffd45ec5df8e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-14::R018 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-b70e25012db0 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R020 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-3345753b0f9b [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R002 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-6eb9dbe83588 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-14::R014 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-45d61f25c28d [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R015 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-5aa053320908 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-14::R022 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-0cb38a0b6fd1 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R019 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-05c9df6cb364 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-02::R011 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-19aec4168f12 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-11::R007 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-a7c9a8182ea1 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-11::R004 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-1aba96b4c563 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-02::R010 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-4df371a95d6e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R002 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-37afc190f548 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-RT-10_10::R003 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-e2806d02619e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R017 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-648ecfb1b322 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-CE-01::R005 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-c05f9de9f095 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R011 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-e65f59995260 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-14::R006 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-3a7ef2ed2e70 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R009 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-35a98f4e0021 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R008 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-3f7dcb550482 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R011 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-ffc92a2420d2 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-17::R004 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-f6a0df91ccce [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement -::R008 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-8f24f97db0a7 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R001 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-a5ac7fae0592 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R016 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-16121e6c1e40 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-20::R003 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-c86d7cfa42b6 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-16::R016 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-6514eb1eed64 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R019 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d7c6b4044c79 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-14::R020 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-f50c5a2c2486 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R007 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d4a1605e87f8 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-11::R003 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-8bc5bf22ce0e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R017 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-b9dacd1e2e08 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R001 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-8b003a618b25 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R003 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d9411c157bc7 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-01::R018 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-4f92d33c9731 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-14::R009 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-f71858862ae7 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R008 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-ea3183edb021 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R011 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-58462d30d4c7 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R007 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-6b53c49ba7d6 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R004 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-682fcf306a8e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R011 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-68bebf7922dc [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R005 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-96c63d080f24 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R018 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-8eb87fbaed6a [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-16::R027 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d044cb96dc45 [ORPHAN_ARTIFACT/LOW] Either map artifact artifacts/intake/repository_inventory.json to a requirement (if valid) or remove it if it violates namespace/scope rules.
+  - reason: action explicitly marked requires_decision; approved by explicit override
+- ACT-f7ad0eaf7a28 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R004 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-fce1d8a0a836 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R010 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-f0118530e735 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-20::R002 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d00fa9c26949 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R008 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-8d04cc5ec18c [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R002 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-702f11a56619 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R012 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-c4884b078a0e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R017 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-a2d2660630d4 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-38::R003 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-31ec524618b7 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R001 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-ac0a8c8fb611 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-20::R012 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-be38fa64129f [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-21::R011 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-149ab9bf1bd3 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-20::R007 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-8b25e64a1c2d [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-11::R002 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-452a6688cf8d [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-00::R002 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-fb28a67974a8 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R005 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-898f60ed111b [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-RT-10_10::R007 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-9df0ff926057 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R006 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-b5172b0f798e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-CE-01::R003 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-f4af80c0ea91 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R021 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-85f7ba64e02d [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-21::R010 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-98cf63f6df0f [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R012 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-de5df8216c9f [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R006 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-834fe121e92c [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R009 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-2771eac94471 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R014 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-8104ee34acb2 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-20::R011 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-5460915c4c4b [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-20::R004 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-5e9a0dfec9fc [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R012 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-26b4e0e19817 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R015 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-13dff37b8fda [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R002 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-ea2b69bee870 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-21::R003 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-431e157f30e4 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-RT-10_10::R005 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-8b132eb9bc14 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R009 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-68ea0442978d [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-11::R005 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-acb599207faa [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R010 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-a609b910fd15 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-21::R008 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-bff1bdd06c7c [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R016 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-98f1603ebf45 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R007 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-4c8520e12d55 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-20::R001 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+
+## Review Required
+- None
+
+## Rejected Actions
+- None
 
 ## Next
 - next_step: MODULE_FLOW — Decision Gate COMPLETE. Next=Backfill (implement backfillEngine + task bridge).

@@ -2,12 +2,12 @@
 
 ~~~json
 {
-  "execution_id": "TRACE-2026-03-09T10:18:36.104Z",
+  "execution_id": "TRACE-2026-03-10T09:35:15.704Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "total_requirements": 748,
   "total_code_units": 13,
-  "total_artifacts": 124,
+  "total_artifacts": 23,
   "mappings": [
     {
       "requirement_id": "-::R001",
@@ -910,8 +910,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-16::R002",
@@ -919,8 +922,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-16::R003",
@@ -928,8 +934,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-16::R004",
@@ -937,8 +946,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-16::R005",
@@ -946,8 +958,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-16::R006",
@@ -955,8 +970,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-16::R007",
@@ -964,8 +982,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-16::R008",
@@ -973,8 +994,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-16::R009",
@@ -982,8 +1006,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-16::R010",
@@ -991,8 +1018,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-16::R011",
@@ -1000,8 +1030,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-16::R012",
@@ -1009,8 +1042,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-01::R001",
@@ -1109,8 +1145,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-12::R002",
@@ -1118,8 +1157,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-12::R003",
@@ -1127,8 +1169,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-12::R004",
@@ -1136,8 +1181,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-12::R005",
@@ -1145,8 +1193,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-12::R006",
@@ -1154,8 +1205,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-12::R007",
@@ -1163,8 +1217,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-12::R008",
@@ -1172,8 +1229,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-12::R009",
@@ -1181,8 +1241,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-12::R010",
@@ -1192,7 +1255,10 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md",
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1202,8 +1268,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-12::R012",
@@ -1211,8 +1280,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-12::R013",
@@ -1220,8 +1292,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-13::R001",
@@ -1229,8 +1304,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-13::R002",
@@ -1238,8 +1316,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-13::R003",
@@ -1247,8 +1328,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-13::R004",
@@ -1256,8 +1340,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-13::R005",
@@ -1265,8 +1352,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-13::R006",
@@ -1274,8 +1364,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-13::R007",
@@ -1283,8 +1376,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-13::R008",
@@ -1292,8 +1388,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-13::R009",
@@ -1303,7 +1402,10 @@
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -1313,8 +1415,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-14::R001",
@@ -1372,7 +1477,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1407,93 +1513,171 @@
     {
       "requirement_id": "DOC-15::R001",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R002",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R003",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R004",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R005",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R006",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R007",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R008",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R009",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R010",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R011",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R012",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R013",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-01::R001",
@@ -1607,7 +1791,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1639,7 +1824,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1671,7 +1857,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1703,16 +1890,23 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-14::R020",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R021",
@@ -1994,7 +2188,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2067,8 +2262,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-01::R015",
@@ -2076,8 +2274,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-01::R016",
@@ -2344,8 +2545,14 @@
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R002",
@@ -2353,8 +2560,14 @@
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R003",
@@ -2362,8 +2575,14 @@
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R004",
@@ -2371,8 +2590,14 @@
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R005",
@@ -2380,8 +2605,14 @@
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R006",
@@ -2389,8 +2620,14 @@
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R007",
@@ -2398,8 +2635,14 @@
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R008",
@@ -2407,8 +2650,14 @@
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R009",
@@ -2416,8 +2665,14 @@
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R010",
@@ -2425,8 +2680,14 @@
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R011",
@@ -2434,8 +2695,14 @@
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R012",
@@ -2443,8 +2710,14 @@
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R013",
@@ -2452,8 +2725,14 @@
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R014",
@@ -2461,8 +2740,14 @@
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R015",
@@ -2470,8 +2755,14 @@
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-37::R001",
@@ -2480,7 +2771,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2491,7 +2783,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2502,7 +2795,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2513,7 +2807,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2524,7 +2819,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2535,7 +2831,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2546,7 +2843,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2557,7 +2855,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2568,7 +2867,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2579,7 +2879,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2590,7 +2891,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2601,7 +2903,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2612,7 +2915,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2623,7 +2927,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2634,7 +2939,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2644,8 +2950,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R002",
@@ -2653,8 +2962,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R003",
@@ -2662,8 +2974,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R004",
@@ -2671,8 +2986,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R005",
@@ -2680,8 +2998,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R006",
@@ -2689,8 +3010,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R007",
@@ -2698,8 +3022,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R008",
@@ -2707,8 +3034,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R009",
@@ -2716,8 +3046,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R010",
@@ -2725,8 +3058,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R011",
@@ -2734,8 +3070,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R012",
@@ -2743,8 +3082,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R013",
@@ -2752,8 +3094,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R014",
@@ -2761,8 +3106,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R015",
@@ -2770,8 +3118,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R001",
@@ -2779,8 +3130,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R002",
@@ -2788,8 +3142,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R003",
@@ -2797,8 +3154,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R004",
@@ -2806,8 +3166,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R005",
@@ -2815,8 +3178,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R006",
@@ -2824,8 +3190,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R007",
@@ -2833,8 +3202,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R008",
@@ -2842,8 +3214,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R009",
@@ -2851,8 +3226,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R010",
@@ -2860,8 +3238,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R011",
@@ -2869,8 +3250,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R012",
@@ -2878,8 +3262,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R013",
@@ -2887,8 +3274,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R014",
@@ -2896,8 +3286,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R015",
@@ -2905,8 +3298,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R016",
@@ -2914,8 +3310,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-33::R001",
@@ -2923,8 +3322,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-33::R002",
@@ -2932,8 +3334,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-33::R003",
@@ -2941,8 +3346,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-33::R004",
@@ -2950,8 +3358,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-33::R005",
@@ -2959,8 +3370,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-33::R006",
@@ -2968,8 +3382,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-33::R007",
@@ -2977,8 +3394,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-33::R008",
@@ -2986,8 +3406,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-33::R009",
@@ -2995,8 +3418,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-33::R010",
@@ -3004,8 +3430,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-33::R011",
@@ -3013,8 +3442,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-33::R012",
@@ -3022,8 +3454,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-33::R013",
@@ -3031,8 +3466,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-33::R014",
@@ -3040,8 +3478,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-33::R015",
@@ -3049,8 +3490,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-33::R016",
@@ -3058,8 +3502,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-30::R001",
@@ -3246,116 +3693,214 @@
     {
       "requirement_id": "DOC-38::R001",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
-      "mapped_code_units": [],
-      "mapped_artifacts": [],
-      "coverage_status": "NONE"
-    },
-    {
-      "requirement_id": "DOC-38::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
-      "mapped_code_units": [],
-      "mapped_artifacts": [],
-      "coverage_status": "NONE"
-    },
-    {
-      "requirement_id": "DOC-38::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
-      "mapped_code_units": [],
-      "mapped_artifacts": [],
-      "coverage_status": "NONE"
-    },
-    {
-      "requirement_id": "DOC-38::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
-      "mapped_code_units": [],
-      "mapped_artifacts": [],
-      "coverage_status": "NONE"
-    },
-    {
-      "requirement_id": "DOC-38::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
-      "mapped_code_units": [],
-      "mapped_artifacts": [],
-      "coverage_status": "NONE"
-    },
-    {
-      "requirement_id": "DOC-38::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
-      "mapped_code_units": [],
-      "mapped_artifacts": [],
-      "coverage_status": "NONE"
-    },
-    {
-      "requirement_id": "DOC-38::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
-      "mapped_code_units": [],
-      "mapped_artifacts": [],
-      "coverage_status": "NONE"
-    },
-    {
-      "requirement_id": "DOC-38::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [],
       "coverage_status": "PARTIAL"
     },
     {
+      "requirement_id": "DOC-38::R002",
+      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DOC-38::R003",
+      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DOC-38::R004",
+      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DOC-38::R005",
+      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DOC-38::R006",
+      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DOC-38::R007",
+      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DOC-38::R008",
+      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
+    },
+    {
       "requirement_id": "DOC-38::R009",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-38::R010",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-38::R011",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-38::R012",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-38::R013",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-38::R014",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-38::R015",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-38::R016",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R001",
@@ -3417,8 +3962,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R008",
@@ -3426,8 +3974,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R009",
@@ -3435,8 +3986,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R010",
@@ -3444,8 +3998,14 @@
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R011",
@@ -3453,8 +4013,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R012",
@@ -3463,7 +4026,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3515,8 +4079,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-32::R002",
@@ -3524,8 +4091,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-32::R003",
@@ -3533,8 +4103,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-32::R004",
@@ -3542,8 +4115,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-32::R005",
@@ -3551,8 +4127,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-32::R006",
@@ -3560,8 +4139,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-32::R007",
@@ -3569,8 +4151,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-32::R008",
@@ -3578,8 +4163,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-32::R009",
@@ -3587,8 +4175,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-32::R010",
@@ -3596,8 +4187,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-32::R011",
@@ -3605,8 +4199,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-32::R012",
@@ -3614,8 +4211,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-32::R013",
@@ -3623,8 +4223,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-32::R014",
@@ -3632,8 +4235,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-32::R015",
@@ -3641,8 +4247,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-32::R016",
@@ -3650,8 +4259,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R001",
@@ -3779,7 +4391,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3874,7 +4487,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4024,7 +4638,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4048,8 +4663,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-16::R013",
@@ -4058,7 +4676,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4075,8 +4694,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-16::R016",
@@ -4099,7 +4721,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4124,7 +4747,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4212,7 +4836,8 @@
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/release/RELEASE_MANIFEST_v1.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4699,8 +5324,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R002",
@@ -4709,8 +5339,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R003",
@@ -4719,8 +5354,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R004",
@@ -4729,8 +5369,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R005",
@@ -4739,8 +5384,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R006",
@@ -4749,8 +5399,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R007",
@@ -4759,8 +5414,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R008",
@@ -4769,8 +5429,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R009",
@@ -4779,8 +5444,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R010",
@@ -4789,8 +5459,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R011",
@@ -4799,8 +5474,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R012",
@@ -4809,8 +5489,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R013",
@@ -4819,8 +5504,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R014",
@@ -4829,8 +5519,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R015",
@@ -4839,8 +5534,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R016",
@@ -4849,8 +5549,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R017",
@@ -4859,8 +5564,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R018",
@@ -4869,8 +5579,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R019",
@@ -4879,8 +5594,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R020",
@@ -4889,8 +5609,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R021",
@@ -4899,8 +5624,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R022",
@@ -4909,8 +5639,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R023",
@@ -4923,7 +5658,11 @@
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
         "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md"
+        "artifacts/audit/audit_report.md",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -4934,8 +5673,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R025",
@@ -4944,8 +5688,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R026",
@@ -4954,8 +5703,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R027",
@@ -4964,8 +5718,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R028",
@@ -4974,8 +5733,13 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-AUD-08_10::R001",
@@ -5020,7 +5784,12 @@
       "requirement_id": "DOC-AUD-08_10::R004",
       "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::FILE",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -5078,7 +5847,9 @@
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
         "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md"
+        "artifacts/audit/audit_report.md",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5157,7 +5928,9 @@
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
         "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md"
+        "artifacts/audit/audit_report.md",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5275,7 +6048,9 @@
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
         "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md"
+        "artifacts/audit/audit_report.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5380,7 +6155,9 @@
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
         "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md"
+        "artifacts/audit/audit_report.md",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5446,7 +6223,9 @@
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
         "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md"
+        "artifacts/audit/audit_report.md",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5525,8 +6304,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-18::R002",
@@ -5534,8 +6316,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-18::R003",
@@ -5543,8 +6328,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-18::R004",
@@ -5552,8 +6340,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-18::R005",
@@ -5561,8 +6352,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-18::R006",
@@ -5570,8 +6364,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-18::R007",
@@ -5579,8 +6376,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-18::R008",
@@ -5588,8 +6388,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-18::R009",
@@ -5597,8 +6400,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-18::R010",
@@ -5606,8 +6412,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-18::R011",
@@ -5615,8 +6424,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-18::R012",
@@ -5624,8 +6436,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-18::R013",
@@ -5633,8 +6448,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-19::R001",
@@ -5642,8 +6460,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-19::R002",
@@ -5651,8 +6472,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-19::R003",
@@ -5660,8 +6484,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-19::R004",
@@ -5669,8 +6496,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-19::R005",
@@ -5678,8 +6508,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-19::R006",
@@ -5687,8 +6520,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-19::R007",
@@ -5696,8 +6532,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-19::R008",
@@ -5705,8 +6544,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-19::R009",
@@ -5714,8 +6556,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-19::R010",
@@ -5723,8 +6568,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-19::R011",
@@ -5732,8 +6580,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-19::R012",
@@ -5741,8 +6592,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-19::R013",
@@ -5750,8 +6604,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-19::R014",
@@ -5759,8 +6616,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "Doc-04::R001",
@@ -5810,8 +6670,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "Doc-04::R008",
@@ -6021,8 +6884,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-RT-10_10::R007",
@@ -6207,13 +7073,7 @@
       "coverage_status": "NONE"
     }
   ],
-  "orphan_code_units": [
-    "CODE::code/src/execution/task_executor.js::FILE",
-    "CODE::code/src/execution/task_registry.js::getTaskHandler",
-    "CODE::code/src/orchestrator/runner.js::FILE",
-    "CODE::code/src/orchestrator/stage_transitions.js::FILE",
-    "CODE::code/src/orchestrator/status_writer.js::FILE"
-  ],
+  "orphan_code_units": [],
   "orphan_requirements": [
     "-::R001",
     "-::R002",
@@ -6459,33 +7319,8 @@
     "DOC-14::R016",
     "DOC-14::R017",
     "DOC-14::R018",
-    "DOC-14::R020",
     "DOC-14::R021",
     "DOC-14::R022",
-    "DOC-15::R001",
-    "DOC-15::R001",
-    "DOC-15::R002",
-    "DOC-15::R002",
-    "DOC-15::R003",
-    "DOC-15::R003",
-    "DOC-15::R004",
-    "DOC-15::R004",
-    "DOC-15::R005",
-    "DOC-15::R005",
-    "DOC-15::R006",
-    "DOC-15::R006",
-    "DOC-15::R007",
-    "DOC-15::R007",
-    "DOC-15::R008",
-    "DOC-15::R008",
-    "DOC-15::R009",
-    "DOC-15::R009",
-    "DOC-15::R010",
-    "DOC-15::R010",
-    "DOC-15::R011",
-    "DOC-15::R011",
-    "DOC-15::R012",
-    "DOC-15::R013",
     "DOC-16::R014",
     "DOC-16::R016",
     "DOC-16::R017",
@@ -6548,21 +7383,6 @@
     "DOC-21::R011",
     "DOC-21::R012",
     "DOC-21::R013",
-    "DOC-38::R001",
-    "DOC-38::R002",
-    "DOC-38::R003",
-    "DOC-38::R004",
-    "DOC-38::R005",
-    "DOC-38::R006",
-    "DOC-38::R007",
-    "DOC-38::R009",
-    "DOC-38::R010",
-    "DOC-38::R011",
-    "DOC-38::R012",
-    "DOC-38::R013",
-    "DOC-38::R014",
-    "DOC-38::R015",
-    "DOC-38::R016",
     "DOC-CE-01::R001",
     "DOC-CE-01::R002",
     "DOC-CE-01::R003",
@@ -6608,123 +7428,8 @@
     "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R018"
   ],
   "orphan_artifacts": [
-    "artifacts/intake/entrypoint_classification.md",
-    "artifacts/intake/repository_inventory.json",
-    "artifacts/release/RELEASE_1.0.0.integrity.md",
-    "artifacts/release/RELEASE_1.0.0.manifest.md",
-    "artifacts/release/RELEASE_1.1.0.manifest.md",
-    "artifacts/release/RELEASE_1.1.1.manifest.md",
-    "artifacts/release/RELEASE_1.2.0.manifest.md",
-    "artifacts/release/RELEASE_1.2.1.manifest.md",
-    "artifacts/release/repository_hash_snapshot.json",
-    "artifacts/reports/autonomy/execution_report_index.md",
-    "artifacts/reports/autonomy/execution_report_schema.md",
-    "artifacts/stage_A/assumptions.md",
-    "artifacts/stage_A/contract.md",
-    "artifacts/stage_A/io_map.md",
-    "artifacts/stage_A/pass_fail.md",
-    "artifacts/stage_B/documentation_audit.closure.md",
-    "artifacts/stage_B/orchestrator_runner.dry_run.spec.md",
-    "artifacts/stage_B/orchestrator_runner.spec.md",
-    "artifacts/stage_B/orchestrator_stage_transitions.md",
-    "artifacts/stage_B/orchestrator_status_writer.md",
-    "artifacts/stage_B/rollback_C_to_B.md",
-    "artifacts/stage_B/stage_B.reclosure.md",
-    "artifacts/stage_C/code_mismatch_report.md",
-    "artifacts/stage_C/code_trace_matrix.md",
-    "artifacts/stage_C/core_runtime.closure.md",
-    "artifacts/stage_C/dry_run_extension.closure.md",
-    "artifacts/stage_C/runtime_runbook.md",
-    "artifacts/stage_C/stage_C.closure.md",
-    "artifacts/stage_C/stage_C.closure.v2.md",
-    "artifacts/stage_C/test_evidence.md",
-    "artifacts/stage_D/docs_presence_evidence.md",
-    "artifacts/stage_D/docs_presence_report.md",
-    "artifacts/stage_D/release_gate_evidence.md",
-    "artifacts/stage_D/release_gate_evidence.v2.md",
-    "artifacts/stage_D/release_manifest.md",
-    "artifacts/stage_D/release_manifest.v2.md",
-    "artifacts/stage_D/stage_D.closure.md",
-    "artifacts/stage_D/verification_evidence.md",
-    "artifacts/stage_D/verification_report.md",
-    "artifacts/stage_D/verify05_advance.md",
-    "artifacts/tasks/TASK-022.stageA.plan.md",
-    "artifacts/tasks/TASK-022.stageB.skeleton.md",
-    "artifacts/tasks/TASK-022.stageC.verify.md",
-    "artifacts/tasks/TASK-023.stageA.autonomy-contract.md",
-    "artifacts/tasks/TASK-023.stageB.skeleton.md",
-    "artifacts/tasks/TASK-023.stageC.verify.md",
-    "artifacts/tasks/TASK-024.stageA.verification-contract.md",
-    "artifacts/tasks/TASK-024.stageB.skeleton.md",
-    "artifacts/tasks/TASK-024.stageC.verify.md",
-    "artifacts/tasks/TASK-025.stageA.decision-logging-contract.md",
-    "artifacts/tasks/TASK-025.stageB.skeleton.md",
-    "artifacts/tasks/TASK-025.stageC.verify.md",
-    "artifacts/tasks/TASK-026.stageA.autonomy-contract.md",
-    "artifacts/tasks/TASK-026.stageC.verify.md",
-    "artifacts/tasks/TASK-027.stageA.report-contract.md",
-    "artifacts/tasks/TASK-027.stageB.skeleton.md",
-    "artifacts/tasks/TASK-027.stageC.verify.md",
-    "artifacts/tasks/TASK-028.execution.closure.md",
-    "artifacts/tasks/TASK-028.stageA.runtime-hardening.md",
-    "artifacts/tasks/TASK-028.stageB.skeleton.md",
-    "artifacts/tasks/TASK-028.stageC.verify.md",
-    "artifacts/tasks/TASK-029.execution.closure.md",
-    "artifacts/tasks/TASK-029.stageA.multi-step-contract.md",
-    "artifacts/tasks/TASK-029.stageB.skeleton.md",
-    "artifacts/tasks/TASK-030.execution.closure.md",
-    "artifacts/tasks/TASK-030.stageA.execution-engine-contract.md",
-    "artifacts/tasks/TASK-030.stageB.skeleton.md",
-    "artifacts/tasks/TASK-031.execution.closure.md",
-    "artifacts/tasks/TASK-031.stageA.first-handler-contract.md",
-    "artifacts/tasks/TASK-031.stageB.skeleton.md",
-    "artifacts/tasks/TASK-032.execution.closure.md",
-    "artifacts/tasks/TASK-032.stageA.idempotency-contract.md",
-    "artifacts/tasks/TASK-033.execution.closure.md",
-    "artifacts/tasks/TASK-033.stageA.trace-engine-contract.md",
-    "artifacts/tasks/TASK-034.execution.closure.md",
-    "artifacts/tasks/TASK-034.stageA.verification-contract.md",
-    "artifacts/tasks/TASK-035.execution.closure.md",
-    "artifacts/tasks/TASK-035.stageA.trace-by-clause-contract.md",
-    "artifacts/tasks/TASK-038.execution.closure.md",
-    "artifacts/tasks/TASK-038.stageA.trace-rebuild-contract.md",
-    "artifacts/tasks/TASK-039.execution.closure.md",
-    "artifacts/tasks/TASK-039.stageA.stageC-closure-contract.md",
-    "artifacts/tasks/TASK-040.execution.closure.md",
-    "artifacts/tasks/TASK-040.stageA.encoding-normalization-contract.md",
-    "artifacts/tasks/TASK-041.execution.closure.md",
-    "artifacts/tasks/TASK-041.stageA.verification-contract.md",
-    "artifacts/tasks/TASK-042.execution.closure.md",
-    "artifacts/tasks/TASK-042.stageA.verification-contract.md",
-    "artifacts/tasks/TASK-043.execution.closure.md",
-    "artifacts/tasks/TASK-043.stageA.verification-contract.md",
-    "artifacts/tasks/TASK-044.execution.closure.md",
-    "artifacts/tasks/TASK-044.stageA.verification-contract.md",
-    "artifacts/tasks/TASK-045.execution.closure.md",
-    "artifacts/tasks/TASK-045.stageA.verification-contract.md",
-    "artifacts/tasks/TASK-046.execution.closure.md",
-    "artifacts/tasks/TASK-046.stageA.verification-contract.md",
-    "artifacts/tasks/TASK-047.stageA.module-flow-intake.md",
-    "artifacts/tasks/TASK-048.execution.closure.md",
-    "artifacts/tasks/TASK-048.stageA.module-flow-audit.md",
-    "artifacts/tasks/TASK-049.execution.closure.md",
-    "artifacts/tasks/TASK-049.stageA.audit-refresh-contract.md",
-    "artifacts/tasks/TASK-050.execution.closure.md",
-    "artifacts/tasks/TASK-050.stageA.module-flow-trace.md",
-    "artifacts/tasks/TASK-051.execution.closure.md",
-    "artifacts/tasks/TASK-051.stageA.module-flow-gap.md",
-    "artifacts/tasks/TASK-052.execution.closure.md",
-    "artifacts/tasks/TASK-052.stageA.module-flow-decision-gate.md",
-    "artifacts/tasks/TASK-053.execution.closure.md",
-    "artifacts/tasks/TASK-053.stageA.module-flow-backfill.md",
-    "artifacts/tasks/TASK-054.execution.closure.md",
-    "artifacts/tasks/TASK-054.stageA.module-flow-execute.md",
-    "artifacts/tasks/TASK-055.execution.closure.md",
-    "artifacts/tasks/TASK-055.stageA.module-flow-closure.md",
-    "artifacts/tasks/TASK-056.stageA.operating-modes-contract.md",
-    "artifacts/tasks/TASK-057.stageA.intake-classification-contract.md",
-    "artifacts/tasks/TASK-058.stageA.intake-engine-contract.md",
-    "artifacts/tasks/TASK-059.execution.closure.md"
+    "artifacts/closure/closure_error.md",
+    "artifacts/intake/repository_inventory.json"
   ]
 }
 ~~~

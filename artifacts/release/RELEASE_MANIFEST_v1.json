@@ -1,26 +1,18 @@
 {
-  "release_id": "MODULE_FLOW_RELEASE_v1",
-  "generated_at": "2026-03-08T10:29:17.875Z",
-  "stage": "D",
-  "stage_progress_percent": null,
-  "last_completed_artifact": "artifacts/tasks/TASK-054.execution.closure.md",
-  "source_artifacts": [
-    {
-      "path": "artifacts/execute/execute_plan.json",
-      "bytes": 243860,
-      "sha256": "dd5bda49948c3232cc0be34f39b95aa81849c17bbe01ffcc9267cd9e0356baca"
-    },
-    {
-      "path": "artifacts/execute/execute_report.md",
-      "bytes": 398,
-      "sha256": "0a0dc5c2b1b8a0e545bf36fd199307a59f6f5a4713d12a85a24d35a90d39f47f"
-    },
-    {
-      "path": "artifacts/decisions/module_flow_decision_gate.json",
-      "bytes": 351,
-      "sha256": "dc4eed4765c1b5ab3a9e4a8b0159107d633eb789ca4c35db3cc05790203fa940"
-    }
+  "execution_id": "MODULE_FLOW_CLOSURE_319a974fcfde",
+  "release_timestamp": "2026-03-10T09:39:41.788Z",
+  "modules_executed": [
+    "Intake",
+    "Audit",
+    "Trace",
+    "Gap",
+    "Decision",
+    "Backfill",
+    "Execute",
+    "Closure"
   ],
-  "outcome": "CLOSED",
-  "next_state": "READY"
+  "gap_count": 266,
+  "critical_violations": 0,
+  "snapshot_hash": "fba96d529873b65477f615ceb475b269df57568036b008ad8c05a60e19ccdfde",
+  "deterministic_confirmation": true
 }

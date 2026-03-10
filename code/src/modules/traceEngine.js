@@ -165,12 +165,47 @@ function buildRequirementsFromAllDocs(rootAbs) {
   return buildRequirementsFromDocs(docsRootAbs);
 }
 
+function shouldTraceArtifact(relPath) {
+  const p = String(relPath || "").replace(/\\/g, "/");
+
+  if (!p.startsWith("artifacts/")) return false;
+
+  if (p === "artifacts/intake/entrypoint_classification.md") return false;
+
+  if (p.startsWith("artifacts/tasks/")) return false;
+  if (p.startsWith("artifacts/stage_A/")) return false;
+  if (p.startsWith("artifacts/stage_B/")) return false;
+  if (p.startsWith("artifacts/stage_C/")) return false;
+  if (p.startsWith("artifacts/stage_D/")) return false;
+  if (p.startsWith("artifacts/reports/")) return false;
+
+  if (p.startsWith("artifacts/release/") && /^artifacts\/release\/RELEASE_\d+\.\d+\.\d+\..+\.md$/i.test(p)) return false;
+
+  const allowedPrefixes = [
+    "artifacts/intake/",
+    "artifacts/audit/",
+    "artifacts/trace/",
+    "artifacts/gap/",
+    "artifacts/decisions/",
+    "artifacts/backfill/",
+    "artifacts/execute/",
+    "artifacts/closure/",
+    "artifacts/release/"
+  ];
+
+  return allowedPrefixes.some((prefix) => p.startsWith(prefix));
+}
+
 function buildArtifactsIndex(artifactsAbs, rootAbs) {
   const files = listFilesRecursive(artifactsAbs).filter((p) => {
-    const low = p.toLowerCase();
-    if (low.endsWith(".md")) return true;
-    if (low.endsWith(".json")) return true;
-    return false;
+    const rel = path.relative(rootAbs, p).replace(/\\/g, "/");
+    const low = rel.toLowerCase();
+
+    if (!(low.endsWith(".md") || low.endsWith(".json"))) {
+      return false;
+    }
+
+    return shouldTraceArtifact(rel);
   });
 
   const rels = files.map((abs) => path.relative(rootAbs, abs).replace(/\\/g, "/")).sort();
@@ -247,6 +282,9 @@ function mapDeterministically(requirements, codeUnits, artifacts, intakeContext)
       }
       if (artifactsSet.has("artifacts/backfill/backfill_tasks.json")) mapped_artifacts.push("artifacts/backfill/backfill_tasks.json");
       if (artifactsSet.has("artifacts/backfill/backfill_report.md")) mapped_artifacts.push("artifacts/backfill/backfill_report.md");
+      if (artifactsSet.has("artifacts/backfill/backfill_plan.json")) mapped_artifacts.push("artifacts/backfill/backfill_plan.json");
+      if (artifactsSet.has("artifacts/backfill/backfill_execution_log.md")) mapped_artifacts.push("artifacts/backfill/backfill_execution_log.md");
+      if (artifactsSet.has("artifacts/backfill/backfill_created_files.json")) mapped_artifacts.push("artifacts/backfill/backfill_created_files.json");
     }
 
     if (title.includes("execute") || section.includes("execute") || document.includes("execute")) {
@@ -263,6 +301,39 @@ function mapDeterministically(requirements, codeUnits, artifacts, intakeContext)
       }
       if (artifactsSet.has("artifacts/closure/closure_report.md")) mapped_artifacts.push("artifacts/closure/closure_report.md");
       if (artifactsSet.has("artifacts/release/RELEASE_MANIFEST_v1.json")) mapped_artifacts.push("artifacts/release/RELEASE_MANIFEST_v1.json");
+      if (artifactsSet.has("artifacts/release/repository_hash_snapshot.json")) mapped_artifacts.push("artifacts/release/repository_hash_snapshot.json");
+    }
+
+    if (
+      title.includes("orchestration") ||
+      section.includes("orchestration") ||
+      document.includes("orchestration") ||
+      title.includes("orchestrator") ||
+      section.includes("orchestrator") ||
+      document.includes("orchestrator") ||
+      title.includes("runner") ||
+      section.includes("runner") ||
+      document.includes("runner") ||
+      title.includes("stage transition") ||
+      section.includes("stage transition") ||
+      document.includes("stage transition") ||
+      title.includes("status writer") ||
+      section.includes("status writer") ||
+      document.includes("status writer") ||
+      title.includes("task registry") ||
+      section.includes("task registry") ||
+      document.includes("task registry") ||
+      title.includes("task executor") ||
+      section.includes("task executor") ||
+      document.includes("task executor")
+    ) {
+      for (const u of codeUnits) {
+        if (u.file_path.includes("code/src/orchestrator/runner.js")) mapped_code_units.push(u.unit_id);
+        if (u.file_path.includes("code/src/orchestrator/stage_transitions.js")) mapped_code_units.push(u.unit_id);
+        if (u.file_path.includes("code/src/orchestrator/status_writer.js")) mapped_code_units.push(u.unit_id);
+        if (u.file_path.includes("code/src/execution/task_registry.js")) mapped_code_units.push(u.unit_id);
+        if (u.file_path.includes("code/src/execution/task_executor.js")) mapped_code_units.push(u.unit_id);
+      }
     }
 
     if (operatingMode === "BUILD" && (title.includes("build") || section.includes("build") || document.includes("build"))) {
