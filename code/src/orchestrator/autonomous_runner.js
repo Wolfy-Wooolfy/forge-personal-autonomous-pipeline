@@ -18,23 +18,67 @@ function writeOrchestrationState(payload) {
 
 const STATUS_PATH = path.resolve(__dirname, "../../..", "progress", "status.json");
 
+const ORCHESTRATION_STATE_PATH = path.resolve(__dirname, "../../..", "artifacts", "orchestration", "orchestration_state.json");
+
 function loadStatus() {
   const raw = fs.readFileSync(STATUS_PATH, { encoding: "utf8" });
   return JSON.parse(raw);
+}
+
+function ensureOrchestrationDir() {
+  fs.mkdirSync(path.dirname(ORCHESTRATION_STATE_PATH), { recursive: true });
+}
+
+function writeOrchestrationState(payload) {
+  ensureOrchestrationDir();
+  fs.writeFileSync(ORCHESTRATION_STATE_PATH, JSON.stringify(payload, null, 2), { encoding: "utf8" });
+}
+
+const ORCHESTRATION_REPORT_PATH = path.resolve(__dirname, "../../..", "artifacts", "orchestration", "orchestration_run_report.md");
+
+function writeOrchestrationReport(payload) {
+  ensureOrchestrationDir();
+
+  const lines = [];
+  lines.push("# Forge Autonomous Orchestration Run Report");
+  lines.push("");
+  lines.push(`- started_at: ${payload.started_at || ""}`);
+  lines.push(`- entry_type: ${payload.entry_type || ""}`);
+  lines.push(`- next_task: ${payload.next_task || ""}`);
+  lines.push(`- status: ${payload.status || ""}`);
+  lines.push(`- reason: ${payload.reason || ""}`);
+  lines.push("");
+
+  fs.writeFileSync(ORCHESTRATION_REPORT_PATH, lines.join("\n"), { encoding: "utf8" });
 }
 
 async function runAutonomous() {
   const entry = resolveEntry();
 
   writeOrchestrationState({
-  started_at: new Date().toISOString(),
-  entry_type: entry.entry_type,
-  next_task: entry.next_task,
-  status: "RUNNING"
+    started_at: new Date().toISOString(),
+    entry_type: entry.entry_type,
+    next_task: entry.next_task,
+    status: "RUNNING"
+  });
+
+  writeOrchestrationReport({
+    started_at: new Date().toISOString(),
+    entry_type: entry.entry_type,
+    next_task: entry.next_task,
+    status: "RUNNING"
   });
 
   if (entry.blocked) {
     writeOrchestrationState({
+      started_at: new Date().toISOString(),
+      entry_type: entry.entry_type,
+      next_task: entry.next_task,
+      status: "BLOCKED",
+      reason: entry.reason
+    });
+
+    writeOrchestrationReport({
       started_at: new Date().toISOString(),
       entry_type: entry.entry_type,
       next_task: entry.next_task,
@@ -48,6 +92,22 @@ async function runAutonomous() {
   }
 
   if (entry.entry_type === "COMPLETE") {
+    writeOrchestrationState({
+      started_at: new Date().toISOString(),
+      entry_type: entry.entry_type,
+      next_task: entry.next_task,
+      status: "COMPLETE",
+      reason: "Pipeline already complete"
+    });
+
+    writeOrchestrationReport({
+      started_at: new Date().toISOString(),
+      entry_type: entry.entry_type,
+      next_task: entry.next_task,
+      status: "COMPLETE",
+      reason: "Pipeline already complete"
+    });
+
     console.log("FORGE AUTONOMOUS: Pipeline already complete.");
     return;
   }
@@ -77,6 +137,12 @@ async function runAutonomous() {
     if (module.terminal_flag) {
     
       writeOrchestrationState({
+        finished_at: new Date().toISOString(),
+        last_task: currentTask,
+        status: "COMPLETE"
+      });
+
+      writeOrchestrationReport({
         finished_at: new Date().toISOString(),
         last_task: currentTask,
         status: "COMPLETE"

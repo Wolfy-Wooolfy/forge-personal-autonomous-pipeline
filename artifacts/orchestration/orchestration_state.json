@@ -1,6 +1,7 @@
 {
-  "started_at": "2026-03-10T14:25:18.053Z",
+  "started_at": "2026-03-11T10:14:09.810Z",
   "entry_type": "COMPLETE",
   "next_task": null,
-  "status": "RUNNING"
+  "status": "COMPLETE",
+  "reason": "Pipeline already complete"
 }
