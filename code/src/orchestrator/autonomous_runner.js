@@ -133,12 +133,16 @@ function finalizeBlocked(state, reason, executionLog) {
 }
 
 function finalizeComplete(state, executionLog) {
+  const pipeline = getPipeline();
+
   state.status = "COMPLETE";
   state.blocked = false;
   state.blocking_reason = "";
   state.current_module = null;
   state.next_task = null;
   state.next_module = null;
+  state.completed_modules = pipeline.map((item) => item.module_id);
+  state.pending_modules = [];
   state.final_outcome = "COMPLETE";
   writeState(state);
   writeReport(state, executionLog);
