@@ -17,7 +17,8 @@ function writeStatusAndRun(taskName) {
 
   writeStatus({
     ...current,
-    current_task: taskName
+    current_task: taskName,
+    next_step: ""
   });
 
   run();
@@ -126,10 +127,31 @@ function run() {
     };
   }
 
+  const hasBlockingQuestion =
+    Array.isArray(updated.blocking_questions) &&
+    updated.blocking_questions.length > 0;
+
+  if (result.blocked === true || hasBlockingQuestion) {
+    updated = {
+      ...updated,
+      overall_progress_percent: Math.min(
+        Number(updated.overall_progress_percent || 0),
+        99
+      ),
+      stage_progress_percent: Math.min(
+        Number(updated.stage_progress_percent || 0),
+        99
+      )
+    };
+  }
+
   if (result.clear_current_task === true) {
     updated = {
       ...updated,
-      current_task: ""
+      current_task: "",
+      issues: [],
+      blocking_questions: [],
+      next_step: ""
     };
   }
 
