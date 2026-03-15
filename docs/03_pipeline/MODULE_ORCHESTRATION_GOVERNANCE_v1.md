@@ -64,14 +64,33 @@ Modules MUST execute strictly in this order:
 3. Trace
 4. Gap
 5. Design Exploration
-6. Decision Gate
-7. Backfill
-8. Execute
-9. Closure
+6. Option Evaluation
+7. Recommendation
+8. Decision Gate
+9. Backfill
+10. Execute
+11. Closure
 
 No module may skip forward.
 No module may execute out of order.
 No parallel execution is permitted.
+
+Conditional Module Activation Rule:
+
+The following modules are conditional and execute ONLY when an
+Execution Fork is detected:
+
+- Design Exploration
+- Option Evaluation
+- Recommendation
+
+If Gap analysis produces a deterministic execution path,
+these modules MUST be skipped and execution proceeds directly to:
+
+Decision Gate validation.
+
+If exploration results in only one valid path,
+Decision Gate MUST NOT request a decision and execution continues automatically.
 
 ---
 
@@ -99,6 +118,19 @@ Design Exploration is analysis-only.
 
 Its artifacts serve as contextual inputs
 for Decision Gate packet construction.
+
+Governance References:
+
+Fork detection and exploration behavior are governed by:
+
+- docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md
+- docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md
+- docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md
+
+Decision creation and escalation remain governed by:
+
+- docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md
+- docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md
 
 ---
 

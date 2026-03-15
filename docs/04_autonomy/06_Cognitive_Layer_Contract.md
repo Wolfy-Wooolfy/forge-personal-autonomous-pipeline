@@ -37,6 +37,8 @@ The Cognitive Layer consists of:
 - Gap Detectors
 - Trace Generators
 - Verification Runners
+- Design Exploration Engines
+- Option Evaluation Engines
 
 Each component MUST:
 
@@ -165,13 +167,31 @@ unless multiple valid fallback paths exist.
 
 ## 7. Escalation Rules
 
-The Cognitive Layer may escalate ONLY if:
+The Cognitive Layer may escalate ONLY after
+authorized internal analytical resolution
+has been exhausted.
 
-- Multiple valid interpretations exist
-- Required external input is missing
-- Deterministic resolution is impossible
+Internal analytical resolution includes:
+
+- Execution Fork Detection
+- Design Exploration
+- Option Evaluation
+- Recommendation Artifact generation
+
+Escalation is permitted ONLY if:
+
+- Multiple valid execution paths still remain AFTER evaluation
+- Deterministic resolution cannot be achieved using contract rules
+- Human authority is required to select exactly one path
+
+If a fork is detected but internal analytical resolution
+has NOT yet been completed:
+
+- Escalation MUST NOT occur
+- The Cognitive Layer MUST proceed with internal analysis
 
 Escalation must:
+
 - Raise exactly one blocking question
 - Halt execution
 - Not advance progress

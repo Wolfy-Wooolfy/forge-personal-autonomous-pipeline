@@ -199,9 +199,26 @@ The system MUST NOT select an option autonomously.
 
 If all options fail constraint validation:
 
-- exploration MUST terminate
-- execution MUST halt
-- escalation is required.
+- the exploration process MUST terminate
+- the fork is considered non-resolvable
+- execution MUST enter Execution Abort state
+
+No escalation is permitted.
+
+Reason:
+
+If no contract-compliant option exists,
+then no selectable execution fork exists.
+
+Without a valid fork:
+
+- no Decision artifact may be created
+- no human selection can resolve the condition
+
+Execution authority is therefore exhausted.
+
+Execution Abort MUST be recorded
+according to the Progress Tracking & Status Report Contract.
 
 ---
 

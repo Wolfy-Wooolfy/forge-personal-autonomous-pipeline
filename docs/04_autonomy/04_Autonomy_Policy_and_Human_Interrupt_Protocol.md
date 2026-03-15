@@ -242,6 +242,27 @@ Retry is NOT a fallback for:
 The system MUST STOP and notify the human authority if ANY of the following occur:
 
 - More than one correct implementation path exists
+  AND internal analytical resolution has been exhausted.
+
+Internal analytical resolution refers to the completion of all
+authorized internal evaluation steps defined by the system,
+including:
+
+- Execution Fork Detection
+- Design Exploration
+- Option Evaluation
+- Recommendation Artifact generation
+
+If a fork is detected but internal analytical resolution has NOT yet been completed:
+
+- The system MUST NOT trigger Human Interrupt
+- The system MUST proceed with internal analytical steps
+- Execution MUST remain autonomous during analysis
+
+Human Interrupt becomes mandatory ONLY if:
+
+- Multiple valid execution paths still remain AFTER internal evaluation
+- Deterministic selection cannot be made using objective rules
 - Required external data is missing (API keys, credentials, secrets)
 - Scope ambiguity is detected
 - A rule or boundary conflict is detected
@@ -315,6 +336,20 @@ In forbidden cases:
 ---
 
 ## 5. Interrupt Message Contract (Sovereign Question Format)
+
+Human Interrupt MUST NOT be triggered during internal analytical phases.
+
+Internal analytical phases include:
+
+- Design Exploration
+- Option Evaluation
+- Recommendation generation
+
+Interrupt emission is allowed ONLY after these phases complete
+and a valid execution fork still exists.
+
+This rule ensures that the system performs full internal analysis
+before requesting human authority intervention.
 
 When a Human Interrupt occurs, the system MUST:
 

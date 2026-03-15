@@ -163,6 +163,21 @@ The Design Exploration Module MUST NOT:
 This module is analytical only and produces artifacts
 used by the Decision Gate for final decision escalation.
 
+Governance References:
+
+The Design Exploration Module MUST follow the rules defined in:
+
+- docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md
+- docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md
+- docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md
+
+These documents define:
+
+- when exploration is allowed
+- how alternatives are evaluated
+- how forks are detected
+- how recommendations are produced.
+
 ---
 
 ## 3.6 Decision Gate Module
@@ -174,6 +189,16 @@ Conditions:
 - More than one architectural option
 - Risk tradeoff required
 - Irreversible structural change
+
+Execution Context:
+
+Decision Gate operates AFTER Design Exploration
+when multiple valid execution paths still exist.
+
+If exploration resolves the fork deterministically
+and only one valid path remains,
+Decision Gate MUST NOT be triggered
+and execution continues automatically.
 
 Behavior:
 - Halt execution
@@ -254,6 +279,8 @@ IDEA →
     Trace →
     Gap →
     Design Exploration →
+    Option Evaluation →
+    Recommendation →
     Decision →
     Execute →
     Closure
@@ -264,6 +291,8 @@ DOCUMENTS →
     Trace →
     Gap →
     Design Exploration →
+    Option Evaluation →
+    Recommendation →
     Decision →
     Backfill →
     Execute →
@@ -275,6 +304,8 @@ CODE →
     Docs Backfill →
     Gap →
     Design Exploration →
+    Option Evaluation →
+    Recommendation →
     Decision →
     Execute →
     Closure
@@ -285,6 +316,8 @@ DOCUMENTS + CODE →
     Trace →
     Gap →
     Design Exploration →
+    Option Evaluation →
+    Recommendation →
     Decision →
     Backfill →
     Execute →

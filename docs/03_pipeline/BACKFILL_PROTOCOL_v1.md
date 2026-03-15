@@ -76,6 +76,17 @@ Backfill may:
 4) Generate missing schema files  
 5) Generate deterministic stub documentation  
 6) Normalize naming inconsistencies (if explicitly authorized)
+7) Create newly approved governance documents that extend system capability.
+
+Conditions:
+
+- The document MUST be explicitly authorized by a Decision artifact.
+- The document MUST have a predefined path inside the governance tree.
+- The document MUST NOT overwrite an existing document.
+- The document MUST follow deterministic template rules.
+
+This rule allows controlled expansion of the governance system
+without violating the additive-only constraint of Backfill.
 
 Every action MUST originate from approved decision.
 
