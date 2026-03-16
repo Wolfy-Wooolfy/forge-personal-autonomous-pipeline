@@ -148,7 +148,7 @@ Outputs:
 
 - proposal_analysis.json
 - option_matrix.json
-- recommendation_report.json
+- recommendation_artifact.json
 
 Authority Limits:
 
@@ -169,7 +169,7 @@ The Design Exploration Module MUST follow the rules defined in:
 
 - docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md
 - docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md
-- docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md
+- docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md
 
 These documents define:
 
