@@ -78,6 +78,37 @@ function addViolation(violations, category, severity, relPath, description) {
   });
 }
 
+function getRegistryTaskIds() {
+  const taskRegistryModule = require("../execution/task_registry");
+
+  if (
+    !taskRegistryModule ||
+    typeof taskRegistryModule !== "object" ||
+    !taskRegistryModule.registry ||
+    typeof taskRegistryModule.registry !== "object"
+  ) {
+    throw new Error("FORGE GOVERNANCE VIOLATION: invalid task registry module");
+  }
+
+  return Object.keys(taskRegistryModule.registry)
+    .map((key) => {
+      const match = String(key).match(/TASK-\d+/i);
+      return match ? match[0].toUpperCase() : "";
+    })
+    .filter(Boolean);
+}
+
+function getExecutionClosureFiles(rootAbs) {
+  const tasksDirAbs = path.join(rootAbs, "artifacts", "tasks");
+
+  if (!fs.existsSync(tasksDirAbs) || !fs.statSync(tasksDirAbs).isDirectory()) {
+    return [];
+  }
+
+  return fs.readdirSync(tasksDirAbs)
+    .filter((file) => /\.execution\.closure\.md$/i.test(String(file)));
+}
+
 function renderAuditReport(findings) {
   const lines = [];
   lines.push("# Audit Report");
@@ -262,6 +293,72 @@ function runAudit(context) {
   }
 
   const idx = Array.isArray(inventory) ? inventoryIndex(inventory) : new Map();
+
+    let registryTasks = [];
+  let closureFiles = [];
+
+  try {
+    registryTasks = getRegistryTaskIds();
+    mark(registryTasks.length > 0);
+
+    if (registryTasks.length === 0) {
+      addViolation(
+        violations,
+        "RegistryClosureConsistency",
+        "CRITICAL",
+        "code/src/execution/task_registry.js",
+        "No registry tasks found."
+      );
+    }
+  } catch (e) {
+    mark(false);
+    addViolation(
+      violations,
+      "RegistryClosureConsistency",
+      "CRITICAL",
+      "code/src/execution/task_registry.js",
+      e && e.message ? e.message : String(e)
+    );
+  }
+
+  try {
+    closureFiles = getExecutionClosureFiles(rootAbs);
+
+    const orphanClosures = [];
+
+    for (const file of closureFiles) {
+      const match = String(file).match(/TASK-(\d+)\.execution\.closure\.md/i);
+      if (!match) continue;
+
+      const taskId = `TASK-${match[1]}`;
+
+      if (!registryTasks.includes(taskId)) {
+        orphanClosures.push(taskId);
+      }
+    }
+
+    const ok = orphanClosures.length === 0;
+    mark(ok);
+
+    if (!ok) {
+      addViolation(
+        violations,
+        "RegistryClosureConsistency",
+        "CRITICAL",
+        "artifacts/tasks/",
+        `FORGE GOVERNANCE VIOLATION: orphan execution closures detected -> ${orphanClosures.join(", ")}`
+      );
+    }
+  } catch (e) {
+    mark(false);
+    addViolation(
+      violations,
+      "RegistryClosureConsistency",
+      "CRITICAL",
+      "artifacts/tasks/",
+      e && e.message ? e.message : String(e)
+    );
+  }
 
   const operatingMode =
     intakeContext && typeof intakeContext.operating_mode === "string"

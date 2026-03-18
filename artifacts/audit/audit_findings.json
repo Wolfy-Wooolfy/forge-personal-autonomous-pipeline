@@ -1,8 +1,57 @@
 {
-  "execution_id": "AUDIT-2026-03-09T09:59:51.559Z",
-  "total_checks": 167,
-  "passed_checks": 167,
-  "failed_checks": 0,
-  "blocked": false,
-  "violations": []
+  "execution_id": "AUDIT-2026-03-18T11:56:20.362Z",
+  "total_checks": 185,
+  "passed_checks": 177,
+  "failed_checks": 8,
+  "blocked": true,
+  "violations": [
+    {
+      "category": "RegistryClosureConsistency",
+      "severity": "CRITICAL",
+      "path": "artifacts/tasks/",
+      "description": "FORGE GOVERNANCE VIOLATION: orphan execution closures detected -> TASK-030, TASK-060, TASK-064"
+    },
+    {
+      "category": "StatusIntegrity",
+      "severity": "CRITICAL",
+      "path": "progress/status.json",
+      "description": "next_step missing/invalid."
+    },
+    {
+      "category": "ArtifactNamespaceIntegrity",
+      "severity": "CRITICAL",
+      "path": "artifacts/orchestration/orchestration_run_report.md",
+      "description": "Artifact outside allowed namespaces: orchestration"
+    },
+    {
+      "category": "ArtifactNamespaceIntegrity",
+      "severity": "CRITICAL",
+      "path": "artifacts/orchestration/orchestration_state.json",
+      "description": "Artifact outside allowed namespaces: orchestration"
+    },
+    {
+      "category": "ArtifactNamespaceIntegrity",
+      "severity": "CRITICAL",
+      "path": "artifacts/verify/verification_report.md",
+      "description": "Artifact outside allowed namespaces: verify"
+    },
+    {
+      "category": "ArtifactNamespaceIntegrity",
+      "severity": "CRITICAL",
+      "path": "artifacts/verify/verification_results.json",
+      "description": "Artifact outside allowed namespaces: verify"
+    },
+    {
+      "category": "ArtifactNamespaceIntegrity",
+      "severity": "WARNING",
+      "path": "artifacts/stage_D/verification_report.md",
+      "description": "Duplicate artifact filename across namespaces: verification_report.md"
+    },
+    {
+      "category": "DriftDetection",
+      "severity": "CRITICAL",
+      "path": "code/src/orchestrator/runner.js",
+      "description": "Hash snapshot mismatch detected (hash_mismatch) vs release_local_v4.hashes.json"
+    }
+  ]
 }

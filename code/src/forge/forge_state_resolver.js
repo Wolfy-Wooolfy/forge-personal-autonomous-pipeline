@@ -7,13 +7,17 @@ const REGISTRY_PATH = path.join(ROOT, "code", "src", "execution", "task_registry
 
 function loadRegistryModule() {
   delete require.cache[require.resolve(REGISTRY_PATH)];
-  const registry = require(REGISTRY_PATH);
+  const registryModule = require(REGISTRY_PATH);
 
-  if (!registry || typeof registry !== "object" || Array.isArray(registry)) {
-    throw new Error("INVALID TASK REGISTRY EXPORT");
+  if (!registryModule || typeof registryModule !== "object" || Array.isArray(registryModule)) {
+    throw new Error("INVALID TASK REGISTRY MODULE EXPORT");
   }
 
-  return registry;
+  if (!registryModule.registry || typeof registryModule.registry !== "object" || Array.isArray(registryModule.registry)) {
+    throw new Error("INVALID TASK REGISTRY OBJECT");
+  }
+
+  return registryModule.registry;
 }
 
 function extractOrderedTaskNamesFromRegistry() {
@@ -24,9 +28,7 @@ function extractOrderedTaskNamesFromRegistry() {
     throw new Error("NO TASKS FOUND IN TASK REGISTRY");
   }
 
-  return taskNames.sort((a, b) => {
-    return extractTaskNumber(a) - extractTaskNumber(b);
-  });
+  return taskNames.sort((a, b) => extractTaskNumber(a) - extractTaskNumber(b));
 }
 
 function extractTaskNumber(value) {
@@ -45,10 +47,6 @@ function listTaskArtifactFiles() {
   }
 
   return fs.readdirSync(TASKS_DIR);
-}
-
-function listClosureFiles() {
-  return listTaskArtifactFiles().filter((file) => file.endsWith(".execution.closure.md"));
 }
 
 function extractTaskIdFromArtifact(fileName) {
@@ -109,65 +107,59 @@ function deriveStageFromTask(taskId, allFiles) {
   return null;
 }
 
-function buildConsistentState(taskNames, closureMap, allFiles) {
+function buildTaskFacts(taskNames, closureMap, allFiles) {
+  return taskNames.map((taskName) => {
+    const taskId = extractTaskIdFromArtifact(taskName);
+    const stageArtifact = findStageArtifactForTask(taskId, allFiles);
+    const closureArtifact = closureMap.get(taskId) || null;
+
+    return {
+      task_id: taskId,
+      has_stage_artifact: Boolean(stageArtifact),
+      stage_artifact: stageArtifact ? `artifacts/tasks/${stageArtifact}` : "",
+      has_closure_artifact: Boolean(closureArtifact),
+      closure_artifact: closureArtifact ? `artifacts/tasks/${closureArtifact}` : "",
+      stage: deriveStageFromTask(taskId, allFiles)
+    };
+  });
+}
+
+function buildConsistentState(taskFacts, closureMap) {
   const closedTasks = [];
   const openTasks = [];
   const pendingGaps = [];
 
-  let firstOpenEncountered = false;
-
-  for (const taskName of taskNames) {
-    const taskId = extractTaskIdFromArtifact(taskName);
-    const isClosed = closureMap.has(taskId);
-
-    if (isClosed && firstOpenEncountered) {
-      return buildInconsistentState(
-        "CLOSURE_CONTINUITY_BROKEN",
-        `Closed task found after open task: ${taskId}`
-      );
-    }
-
-    if (isClosed) {
-      closedTasks.push(taskId);
+  for (const fact of taskFacts) {
+    if (fact.has_closure_artifact) {
+      closedTasks.push(fact.task_id);
       continue;
     }
 
-    firstOpenEncountered = true;
-    openTasks.push(taskId);
+    openTasks.push(fact.task_id);
 
-    const hasStageArtifact = Boolean(findStageArtifactForTask(taskId, allFiles));
-
-    if (hasStageArtifact) {
-      pendingGaps.push(`${taskId}: OPEN_WITHOUT_EXECUTION_CLOSURE`);
+    if (fact.has_stage_artifact) {
+      pendingGaps.push(`${fact.task_id}: OPEN_WITHOUT_EXECUTION_CLOSURE`);
     } else {
-      pendingGaps.push(`${taskId}: MISSING_STAGE_ARTIFACTS_AND_CLOSURE`);
+      pendingGaps.push(`${fact.task_id}: MISSING_STAGE_ARTIFACTS_AND_CLOSURE`);
     }
   }
 
-  const lastCompletedTaskId =
-    closedTasks.length > 0 ? closedTasks[closedTasks.length - 1] : null;
-
-  const currentTask =
-    openTasks.length > 0 ? openTasks[0] : null;
-
-  const currentStage = deriveStageFromTask(currentTask, allFiles);
-
-  const buildProgressPercent =
-    taskNames.length === 0
-      ? 0
-      : Math.round((closedTasks.length / taskNames.length) * 100);
+  const lastCompletedTaskId = closedTasks.length > 0 ? closedTasks[closedTasks.length - 1] : null;
+  const currentTask = openTasks.length > 0 ? openTasks[0] : null;
+  const currentStage = deriveStageFromTask(currentTask, taskFacts.map((item) => path.basename(item.stage_artifact || "")));
 
   return {
     status_type: "FORGE_BUILD_STATE",
     current_stage: currentStage,
-    current_task: currentTask,
+    current_task: currentTask || "",
     last_completed_artifact: lastCompletedTaskId
       ? `artifacts/tasks/${lastCompletedTaskId}.execution.closure.md`
       : "",
     closed_tasks: closedTasks,
     open_tasks: openTasks,
     pending_gaps: pendingGaps,
-    build_progress_percent: buildProgressPercent,
+    build_progress_percent:
+      taskFacts.length === 0 ? 0 : Math.round((closedTasks.length / taskFacts.length) * 100),
     execution_integrity: "CONSISTENT",
     next_allowed_step: currentTask
       ? `artifacts/tasks/${currentTask}.stageA.*`
@@ -183,41 +175,63 @@ function buildConsistentState(taskNames, closureMap, allFiles) {
   };
 }
 
-function buildInconsistentState(code, reason) {
-  return {
-    status_type: "FORGE_BUILD_STATE",
-    current_stage: null,
-    current_task: "",
-    last_completed_artifact: "",
-    closed_tasks: [],
-    open_tasks: [],
-    pending_gaps: [],
-    build_progress_percent: 0,
-    execution_integrity: "INCONSISTENT",
-    next_allowed_step: "",
-    inconsistency_code: code,
-    reason,
-    derived_from: {
-      registry: "code/src/execution/task_registry.js",
-      task_artifacts_directory: "artifacts/tasks"
-    },
-    derived_at: new Date().toISOString()
-  };
-}
+function buildInconsistentState(taskFacts, firstBrokenClosedTaskId) {
+  const closedTasks = [];
+  const openTasksBeforeBreak = [];
+  const closedTasksAfterBreak = [];
+  const pendingGaps = [];
 
-function buildBlockedState(reason) {
+  let firstOpenEncountered = false;
+
+  for (const fact of taskFacts) {
+    if (fact.has_closure_artifact && !firstOpenEncountered) {
+      closedTasks.push(fact.task_id);
+      continue;
+    }
+
+    if (!fact.has_closure_artifact) {
+      firstOpenEncountered = true;
+      openTasksBeforeBreak.push(fact.task_id);
+
+      if (fact.has_stage_artifact) {
+        pendingGaps.push(`${fact.task_id}: OPEN_WITHOUT_EXECUTION_CLOSURE`);
+      } else {
+        pendingGaps.push(`${fact.task_id}: MISSING_STAGE_ARTIFACTS_AND_CLOSURE`);
+      }
+
+      continue;
+    }
+
+    if (fact.has_closure_artifact && firstOpenEncountered) {
+      closedTasksAfterBreak.push(fact.task_id);
+    }
+  }
+
+  const currentTask = openTasksBeforeBreak.length > 0 ? openTasksBeforeBreak[0] : "";
+  const currentStage = currentTask
+    ? (taskFacts.find((fact) => fact.task_id === currentTask)?.stage || null)
+    : null;
+
   return {
     status_type: "FORGE_BUILD_STATE",
-    current_stage: null,
-    current_task: "",
-    last_completed_artifact: "",
-    closed_tasks: [],
-    open_tasks: [],
-    pending_gaps: [],
-    build_progress_percent: 0,
-    execution_integrity: "BLOCKED",
-    next_allowed_step: "",
-    reason,
+    current_stage: currentStage,
+    current_task: currentTask,
+    last_completed_artifact:
+      closedTasks.length > 0
+        ? `artifacts/tasks/${closedTasks[closedTasks.length - 1]}.execution.closure.md`
+        : "",
+    closed_tasks: closedTasks,
+    open_tasks: openTasksBeforeBreak,
+    pending_gaps: pendingGaps,
+    build_progress_percent:
+      taskFacts.length === 0 ? 0 : Math.round((closedTasks.length / taskFacts.length) * 100),
+    execution_integrity: "INCONSISTENT",
+    next_allowed_step: currentTask
+      ? `artifacts/tasks/${currentTask}.stageA.*`
+      : "",
+    inconsistency_code: "CLOSURE_CONTINUITY_BROKEN",
+    reason: `Closed task found after open task: ${firstBrokenClosedTaskId}`,
+    inconsistent_closed_tasks_after_gap: closedTasksAfterBreak,
     derived_from: {
       registry: "code/src/execution/task_registry.js",
       task_artifacts_directory: "artifacts/tasks"
@@ -232,10 +246,41 @@ function deriveState() {
     const allFiles = listTaskArtifactFiles();
     const closureFiles = allFiles.filter((file) => file.endsWith(".execution.closure.md"));
     const closureMap = buildClosureMap(closureFiles);
+    const taskFacts = buildTaskFacts(taskNames, closureMap, allFiles);
 
-    return buildConsistentState(taskNames, closureMap, allFiles);
+    let firstOpenEncountered = false;
+
+    for (const fact of taskFacts) {
+      if (!fact.has_closure_artifact) {
+        firstOpenEncountered = true;
+        continue;
+      }
+
+      if (fact.has_closure_artifact && firstOpenEncountered) {
+        return buildInconsistentState(taskFacts, fact.task_id);
+      }
+    }
+
+    return buildConsistentState(taskFacts, closureMap);
   } catch (error) {
-    return buildBlockedState(error && error.message ? error.message : String(error));
+    return {
+      status_type: "FORGE_BUILD_STATE",
+      current_stage: null,
+      current_task: "",
+      last_completed_artifact: "",
+      closed_tasks: [],
+      open_tasks: [],
+      pending_gaps: [],
+      build_progress_percent: 0,
+      execution_integrity: "BLOCKED",
+      next_allowed_step: "",
+      reason: error && error.message ? error.message : String(error),
+      derived_from: {
+        registry: "code/src/execution/task_registry.js",
+        task_artifacts_directory: "artifacts/tasks"
+      },
+      derived_at: new Date().toISOString()
+    };
   }
 }
 

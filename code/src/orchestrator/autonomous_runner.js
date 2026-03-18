@@ -9,6 +9,8 @@ const ORCHESTRATION_DIR = path.join(process.cwd(), "artifacts", "orchestration")
 const STATE_PATH = path.join(ORCHESTRATION_DIR, "orchestration_state.json");
 const REPORT_PATH = path.join(ORCHESTRATION_DIR, "orchestration_run_report.md");
 
+const FORGE_STATE_PATH = path.join(process.cwd(), "artifacts", "forge", "forge_state.json");
+
 function ensureDir(dirPath) {
   fs.mkdirSync(dirPath, { recursive: true });
 }
@@ -29,6 +31,58 @@ function normalizeEntryType(entryType) {
   }
 
   return "BLOCKED";
+}
+
+function readForgeBuildState() {
+  if (!fs.existsSync(FORGE_STATE_PATH)) {
+    throw new Error("FORGE GOVERNANCE BLOCK: forge_state.json not found");
+  }
+
+  const raw = fs.readFileSync(FORGE_STATE_PATH, "utf8");
+  const parsed = JSON.parse(raw);
+
+  if (!parsed || typeof parsed !== "object") {
+    throw new Error("FORGE GOVERNANCE BLOCK: invalid forge_state.json content");
+  }
+
+  return parsed;
+}
+
+function extractTaskId(value) {
+  const match = String(value || "").match(/TASK-\d+/i);
+  return match ? match[0].toUpperCase() : "";
+}
+
+function assertForgeGovernanceGate(entry) {
+  const forgeState = readForgeBuildState();
+  const integrity = String(forgeState.execution_integrity || "").toUpperCase();
+  const nextAllowedStep = String(forgeState.next_allowed_step || "");
+  const expectedTaskId = extractTaskId(nextAllowedStep);
+  const entryTaskId = extractTaskId(entry && entry.next_task ? entry.next_task : "");
+
+  if (integrity !== "CONSISTENT") {
+    throw new Error(
+      `FORGE GOVERNANCE BLOCK: forge build state is ${integrity || "INVALID"}`
+    );
+  }
+
+  if (nextAllowedStep === "COMPLETE") {
+    throw new Error("FORGE GOVERNANCE BLOCK: forge build state is COMPLETE");
+  }
+
+  if (!expectedTaskId) {
+    throw new Error("FORGE GOVERNANCE BLOCK: next_allowed_step does not contain a valid task id");
+  }
+
+  if (!entryTaskId) {
+    throw new Error("FORGE GOVERNANCE BLOCK: autonomous entry did not resolve a valid next task");
+  }
+
+  if (expectedTaskId !== entryTaskId) {
+    throw new Error(
+      `FORGE GOVERNANCE BLOCK: expected ${expectedTaskId} but autonomous entry resolved ${entryTaskId}`
+    );
+  }
 }
 
 function buildStateBase(entry, runId) {
@@ -151,6 +205,8 @@ function finalizeComplete(state, executionLog) {
 
 function runAutonomous() {
   const entry = resolveEntry();
+  assertForgeGovernanceGate(entry);
+
   const executionLog = [];
   const state = buildStateBase(entry, makeRunId());
 
