@@ -53,7 +53,14 @@ function finalizeAndExit(error) {
 
 Promise.resolve()
   .then(() => {
-    writeForgeState();
+    const forgeState = writeForgeState();
+
+    if (String(forgeState.execution_integrity || "").toUpperCase() === "BLOCKED") {
+      throw new Error(
+        `FORGE GOVERNANCE BLOCK: ${forgeState.reason || "UNKNOWN REASON"}`
+      );
+    }
+
     return runAutonomous();
   })
   .then(() => {

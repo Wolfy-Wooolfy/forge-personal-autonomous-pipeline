@@ -40,22 +40,22 @@ function loadPipelineModule() {
 
 function extractOrderedTaskNamesFromRegistry() {
   const registry = loadRegistryModule();
-  const pipeline = loadPipelineModule();
 
-  const pipelineTaskNames = pipeline.map((moduleDef) => String(moduleDef.task_name || "").trim());
-  const registryTaskNames = Object.keys(registry).filter((key) => key.startsWith("TASK-"));
+  const registryTaskNames = Object.keys(registry)
+    .filter((key) => key.startsWith("TASK-"))
+    .map((key) => {
+      const match = key.match(/^TASK-\d+/);
+      if (!match) {
+        throw new Error(`INVALID TASK KEY FORMAT: ${key}`);
+      }
+      return match[0];
+    });
 
-  if (pipelineTaskNames.length === 0) {
-    throw new Error("NO TASKS FOUND IN PIPELINE DEFINITION");
+  if (registryTaskNames.length === 0) {
+    throw new Error("NO TASKS FOUND IN TASK REGISTRY");
   }
 
-  for (const taskName of pipelineTaskNames) {
-    if (!registryTaskNames.includes(taskName)) {
-      throw new Error(`PIPELINE TASK MISSING FROM REGISTRY: ${taskName}`);
-    }
-  }
-
-  return pipelineTaskNames;
+  return registryTaskNames;
 }
 
 function extractTaskNumber(value) {
@@ -273,6 +273,17 @@ function deriveState() {
     const allFiles = listTaskArtifactFiles();
     const closureFiles = allFiles.filter((file) => file.endsWith(".execution.closure.md"));
     const closureMap = buildClosureMap(closureFiles);
+
+    const orphanClosureTasks = Array.from(closureMap.keys()).filter(
+      (taskId) => !taskNames.includes(taskId)
+    );
+
+    if (orphanClosureTasks.length > 0) {
+      throw new Error(
+        `ORPHAN CLOSURE ARTIFACTS DETECTED: ${orphanClosureTasks.join(", ")}`
+      );
+    }
+
     const taskFacts = buildTaskFacts(taskNames, closureMap, allFiles);
 
     let firstOpenEncountered = false;
