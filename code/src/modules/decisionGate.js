@@ -94,6 +94,23 @@ function classifyActionRisk({ action, gap, intakeContext }) {
 }
 
 function flattenGapActions(gapPayload) {
+  if (gapPayload && Array.isArray(gapPayload.items)) {
+    return gapPayload.items.map((item) => ({
+      gap_id: String(item && item.gap_id ? item.gap_id : ""),
+      category: String(item && item.category ? item.category : ""),
+      severity: String(item && item.severity ? item.severity : ""),
+      affected_entities: Array.isArray(item && item.affected_entities)
+        ? item.affected_entities.map((x) => String(x))
+        : [],
+      action_id: String(item && item.action_id ? item.action_id : ""),
+      description: String(item && item.description ? item.description : ""),
+      impact_scope: String(item && item.impact_scope ? item.impact_scope : ""),
+      requires_decision: !!(item && item.requires_decision === true),
+      _gap: item,
+      _action: item
+    }));
+  }
+
   const rows = [];
   const gaps = Array.isArray(gapPayload && gapPayload.gaps) ? gapPayload.gaps : [];
 
@@ -130,8 +147,8 @@ function renderDecisionMd(payload) {
   lines.push(`- blocked: ${payload.blocked ? "true" : "false"}`);
   lines.push("");
   lines.push("## Source");
-  lines.push(`- gap_actions_path: ${payload.source.gap_actions_path}`);
-  lines.push(`- gap_actions_sha256: ${payload.source.gap_actions_sha256}`);
+  lines.push(`- exploration_matrix_path: ${payload.source.exploration_matrix_path}`);
+  lines.push(`- exploration_matrix_sha256: ${payload.source.exploration_matrix_sha256}`);
   lines.push(`- intake_context_path: ${payload.source.intake_context_path}`);
   lines.push(`- intake_context_sha256: ${payload.source.intake_context_sha256}`);
   lines.push("");
@@ -191,17 +208,17 @@ function renderDecisionMd(payload) {
 function runDecisionGate(context) {
   const status = context && context.status ? context.status : context;
 
-  const gapActionsAbs = path.resolve(ROOT, "artifacts", "gap", "gap_actions.json");
+  const explorationMatrixAbs = path.resolve(ROOT, "artifacts", "exploration", "option_matrix.json");
   const intakeContextAbs = path.resolve(ROOT, "artifacts", "intake", "intake_context.json");
 
-  if (!fs.existsSync(gapActionsAbs)) {
+  if (!fs.existsSync(explorationMatrixAbs)) {
     return {
       stage_progress_percent: 100,
       blocked: true,
       status_patch: {
         next_step: "",
         blocking_questions: [
-          "Decision Gate BLOCKED: artifacts/gap/gap_actions.json missing. Run Gap first."
+          "Decision Gate BLOCKED: artifacts/exploration/option_matrix.json missing. Run Design Exploration first."
         ]
       }
     };
@@ -221,7 +238,7 @@ function runDecisionGate(context) {
   }
 
   const decision = parseDecisionFromStatus(status);
-  const actionsObj = readJson(gapActionsAbs);
+  const actionsObj = readJson(explorationMatrixAbs);
   const intakeContext = readJson(intakeContextAbs);
 
   const validOperatingMode =
@@ -243,6 +260,19 @@ function runDecisionGate(context) {
   }
 
   const flatActions = flattenGapActions(actionsObj);
+
+  if (flatActions.length === 0) {
+    return {
+      stage_progress_percent: 100,
+      blocked: true,
+      status_patch: {
+        next_step: "",
+        blocking_questions: [
+          "Decision Gate BLOCKED: no exploration items found in artifacts/exploration/option_matrix.json."
+        ]
+      }
+    };
+  }
 
   const approvedActions = [];
   const reviewRequiredActions = [];
@@ -310,8 +340,8 @@ function runDecisionGate(context) {
     repository_state: intakeContext.repository_state,
     override_mode: decision.mode,
     source: {
-      gap_actions_path: "artifacts/gap/gap_actions.json",
-      gap_actions_sha256: sha256Text(actionsText),
+      exploration_matrix_path: "artifacts/exploration/option_matrix.json",
+      exploration_matrix_sha256: sha256Text(actionsText),
       intake_context_path: "artifacts/intake/intake_context.json",
       intake_context_sha256: sha256Text(intakeText)
     },

@@ -28,37 +28,44 @@ const pipeline = [
     terminal_flag: false
   },
   {
-    module_id: "DECISION_GATE",
-    task_name: "TASK-052: MODULE FLOW — Decision Gate",
+    module_id: "DESIGN_EXPLORATION",
+    task_name: "TASK-066: MODULE FLOW — Design Exploration",
     ordinal_position: 5,
     required_previous_module: "GAP",
     terminal_flag: false
   },
   {
+    module_id: "DECISION_GATE",
+    task_name: "TASK-052: MODULE FLOW — Decision Gate",
+    ordinal_position: 6,
+    required_previous_module: "DESIGN_EXPLORATION",
+    terminal_flag: false
+  },
+  {
     module_id: "BACKFILL",
     task_name: "TASK-053: MODULE FLOW — Backfill",
-    ordinal_position: 6,
+    ordinal_position: 7,
     required_previous_module: "DECISION_GATE",
     terminal_flag: false
   },
   {
     module_id: "EXECUTE",
     task_name: "TASK-054: MODULE FLOW — Execute",
-    ordinal_position: 7,
+    ordinal_position: 8,
     required_previous_module: "BACKFILL",
     terminal_flag: false
   },
   {
     module_id: "VERIFY",
     task_name: "TASK-061: MODULE FLOW — Verify",
-    ordinal_position: 8,
+    ordinal_position: 9,
     required_previous_module: "EXECUTE",
     terminal_flag: false
   },
   {
     module_id: "CLOSURE",
     task_name: "TASK-055: MODULE FLOW — Closure",
-    ordinal_position: 9,
+    ordinal_position: 10,
     required_previous_module: "VERIFY",
     terminal_flag: true
   }
