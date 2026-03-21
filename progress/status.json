@@ -1,11 +1,15 @@
 {
   "status_type": "LIVE",
-  "current_stage": "D",
-  "overall_progress_percent": 100,
-  "stage_progress_percent": 100,
-  "last_completed_artifact": "artifacts/tasks/TASK-064.execution.closure.md",
-  "current_task": "",
-  "issues": [],
-  "blocking_questions": [],
+  "current_stage": "A",
+  "overall_progress_percent": 15,
+  "stage_progress_percent": 15,
+  "last_completed_artifact": "artifacts/tasks/TASK-051.execution.closure.md",
+  "current_task": "TASK-066",
+  "issues": [
+    "Closed task found after open task: TASK-052"
+  ],
+  "blocking_questions": [
+    "Closed task found after open task: TASK-052"
+  ],
   "next_step": ""
 }

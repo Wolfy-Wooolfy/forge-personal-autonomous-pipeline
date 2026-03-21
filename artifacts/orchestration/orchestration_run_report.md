@@ -1,17 +1,12 @@
 # Orchestration Run Report
 
-- Run ID: RUN-023877D3FA11
-- Run Mode: COMPLETE
-- Started At: 2026-03-21T14:52:20.270Z
-- Last Updated At: 2026-03-21T14:52:20.271Z
-- Status: COMPLETE
-- Entry Type: COMPLETE
-- Blocked: NO
-- Blocking Reason: N/A
-- Reason: Pipeline already complete
-- Current Module: N/A
-- Next Task: N/A
-- Final Outcome: COMPLETE
+- Run Mode: BLOCKED
+- Status: BLOCKED
+- Entry Type: BLOCKED
+- Blocking Reason: Closed task found after open task: TASK-052
+- Current Module: DESIGN_EXPLORATION
+- Next Task: TASK-066
+- Final Outcome: BLOCKED
 
 ## Completed Modules
 
@@ -19,16 +14,12 @@
 - AUDIT
 - TRACE
 - GAP
+
+## Pending Modules
+
+- DESIGN_EXPLORATION
 - DECISION_GATE
 - BACKFILL
 - EXECUTE
 - VERIFY
 - CLOSURE
-
-## Pending Modules
-
-- None
-
-## Execution Log
-
-- No module execution performed
