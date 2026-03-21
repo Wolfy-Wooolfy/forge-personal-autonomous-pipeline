@@ -385,4 +385,18 @@ After enforcement:
 
 ---
 
+### Runtime Implementation Note
+
+The following runtime files MUST treat `progress/status.json` as reflection/output only and MUST NOT use it as execution authority:
+
+- `code/src/orchestrator/entry_resolver.js`
+- `code/src/orchestrator/autonomous_runner.js`
+
+Execution entry, resume, and deterministic task selection MUST be derived from:
+
+- `artifacts/forge/forge_state.json`
+- pipeline closure continuity under `artifacts/tasks/`
+
+---
+
 **END OF SPECIFICATION**

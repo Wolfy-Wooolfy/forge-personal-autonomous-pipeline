@@ -198,7 +198,7 @@ function syncLiveStatusToTask(taskName) {
     current_task: taskName ? String(taskName) : "",
     issues: [],
     blocking_questions: [],
-    next_step: taskName ? String(taskName) : ""
+    next_step: ""
   });
 }
 

@@ -2,11 +2,12 @@ const fs = require("fs");
 const path = require("path");
 const { getPipeline } = require("./pipeline_definition");
 
-const STATUS_PATH = path.join(process.cwd(), "progress", "status.json");
 const TASKS_DIR = path.join(process.cwd(), "artifacts", "tasks");
 
-function readStatus() {
-  const raw = fs.readFileSync(STATUS_PATH, "utf8");
+const FORGE_STATE_PATH = path.join(process.cwd(), "artifacts", "forge", "forge_state.json");
+
+function readForgeState() {
+  const raw = fs.readFileSync(FORGE_STATE_PATH, "utf8");
   return JSON.parse(raw);
 }
 
@@ -36,26 +37,6 @@ function isTaskClosed(taskName, closureFiles) {
   return closureFiles.includes(`${taskId}.EXECUTION.CLOSURE.MD`);
 }
 
-function isBlockedStatus(status) {
-  const blockingQuestions = Array.isArray(status.blocking_questions) ? status.blocking_questions : [];
-  const issues = Array.isArray(status.issues) ? status.issues : [];
-  const nextStep = String(status.next_step || "");
-
-  if (blockingQuestions.length > 0) {
-    return true;
-  }
-
-  if (issues.length > 0) {
-    return true;
-  }
-
-  if (/^\s*BLOCKED\b/i.test(nextStep)) {
-    return true;
-  }
-
-  return false;
-}
-
 function getContiguousClosedIndex(pipeline, closureFiles) {
   let lastClosedIndex = -1;
 
@@ -80,7 +61,7 @@ function hasLaterClosureAfterGap(pipeline, closureFiles, contiguousClosedIndex) 
 }
 
 function resolveEntry() {
-  const status = readStatus();
+  const forgeState = readForgeState();
   const pipeline = getPipeline();
   const closureFiles = getClosureFiles();
 
@@ -100,36 +81,16 @@ function resolveEntry() {
   }
 
   const allClosed = contiguousClosedIndex === pipeline.length - 1;
-  const statusTask = String(status.current_task || "").trim();
+  const statusTask = String(forgeState.current_task || "").trim();
   const statusNextStep = String(status.next_step || "").trim();
 
   if (allClosed) {
-  if (allClosed) {
     return {
       entry_type: "COMPLETE",
       next_module: null,
       next_task: null,
       blocked: false,
       reason: "Pipeline already complete"
-    };
-  }
-
-    return {
-      entry_type: "COMPLETE",
-      next_module: null,
-      next_task: null,
-      blocked: false,
-      reason: "Pipeline already complete"
-    };
-  }
-
-  if (isBlockedStatus(status)) {
-    return {
-      entry_type: "BLOCKED",
-      next_module: null,
-      next_task: null,
-      blocked: true,
-      reason: "Status is already BLOCKED"
     };
   }
 
