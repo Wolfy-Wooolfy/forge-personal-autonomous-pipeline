@@ -4,12 +4,14 @@ const crypto = require("crypto");
 const { resolveEntry } = require("./entry_resolver");
 const { getPipeline } = require("./pipeline_definition");
 const { runTaskByName } = require("./runner");
+const { writeStatus } = require("./status_writer");
 
 const ORCHESTRATION_DIR = path.join(process.cwd(), "artifacts", "orchestration");
 const STATE_PATH = path.join(ORCHESTRATION_DIR, "orchestration_state.json");
 const REPORT_PATH = path.join(ORCHESTRATION_DIR, "orchestration_run_report.md");
 
 const FORGE_STATE_PATH = path.join(process.cwd(), "artifacts", "forge", "forge_state.json");
+const STATUS_PATH = path.join(process.cwd(), "progress", "status.json");
 
 function ensureDir(dirPath) {
   fs.mkdirSync(dirPath, { recursive: true });
@@ -183,6 +185,21 @@ function writeReport(state, executionLog) {
   fs.writeFileSync(REPORT_PATH, lines.join("\n"), "utf8");
 }
 
+function readLiveStatus() {
+  const raw = fs.readFileSync(STATUS_PATH, "utf8");
+  return JSON.parse(raw);
+}
+
+function syncLiveStatusToTask(taskName) {
+  const current = readLiveStatus();
+
+  writeStatus({
+    ...current,
+    current_task: taskName ? String(taskName) : "",
+    next_step: taskName ? String(taskName) : ""
+  });
+}
+
 function markModuleCompleted(state, moduleId) {
   if (!state.completed_modules.includes(moduleId)) {
     state.completed_modules.push(moduleId);
@@ -243,6 +260,8 @@ function runAutonomous() {
     return finalizeBlocked(state, "Autonomous runner could not resolve start task inside pipeline", executionLog);
   }
 
+  syncLiveStatusToTask(entry.next_task);
+
   for (let i = startIndex; i < pipeline.length; i += 1) {
     const step = pipeline[i];
 
@@ -267,6 +286,11 @@ function runAutonomous() {
     state.current_module = null;
     state.next_task = nextStep ? nextStep.task_name : null;
     state.next_module = nextStep ? nextStep.module_id : null;
+
+    if (nextStep) {
+      syncLiveStatusToTask(nextStep.task_name);
+    }
+
     writeState(state);
     writeReport(state, executionLog);
   }
