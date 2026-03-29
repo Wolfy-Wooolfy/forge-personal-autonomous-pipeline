@@ -30,8 +30,7 @@ function writeStatusAndRun(taskName) {
 
   writeStatus({
     ...current,
-    current_task: taskName,
-    next_step: ""
+    current_task: taskName
   });
 
   return run();
