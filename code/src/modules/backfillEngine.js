@@ -4,6 +4,13 @@ const crypto = require("crypto");
 
 const ROOT = path.resolve(__dirname, "../../..");
 
+function deriveTargetPath(row) {
+  const entities = Array.isArray(row && row.affected_entities) ? row.affected_entities : [];
+  const firstEntity = entities.find((x) => typeof x === "string" && x.trim() !== "");
+  if (firstEntity) return firstEntity;
+  return "";
+}
+
 function sha256Text(text) {
   return crypto.createHash("sha256").update(String(text), "utf8").digest("hex");
 }
@@ -23,7 +30,9 @@ function isDeterministicBackfillCategory(category) {
     c === "UNIMPLEMENTED_REQUIREMENT" ||
     c === "STRUCTURAL_DRIFT" ||
     c === "GOVERNANCE_MISMATCH" ||
-    c === "ORPHAN_ARTIFACT"
+    c === "ORPHAN_ARTIFACT" ||
+    c === "ORPHAN_CODE" ||
+    c === "PARTIAL_COVERAGE"
   );
 }
 
@@ -37,13 +46,6 @@ function inferBackfillActionType(row) {
   if (/\bcontract\b|\btemplate\b|\bplaceholder\b|\bstub\b/.test(text)) return "GENERATE_TEMPLATE";
   if (/\bdocument\b|\bdoc\b|\bmarkdown\b|\bmd\b/.test(text)) return "GENERATE_DOCUMENT";
   return "BACKFILL_RECONCILIATION";
-}
-
-function deriveTargetPath(row) {
-  const entities = Array.isArray(row && row.affected_entities) ? row.affected_entities : [];
-  const firstEntity = entities.find((x) => typeof x === "string" && x.trim() !== "");
-  if (firstEntity) return firstEntity;
-  return "";
 }
 
 function renderBackfillExecutionLog(payload) {
@@ -223,13 +225,22 @@ function runBackfill(context) {
       intake_context_path: "artifacts/intake/intake_context.json",
       intake_context_sha256: sha256Text(intakeText)
     },
-    approved_actions: items.map((item) => ({
-      action_id: item.action_id,
-      origin_gap_id: item.origin_gap_id,
-      target_path: item.target_path,
-      action_type: item.action_type,
-      deterministic_template_used: item.deterministic_template_used
-    }))
+    approved_code_actions: items
+      .map((item) => {
+        const affected = Array.isArray(item.affected_entities) ? item.affected_entities : [];
+        const firstCodeEntity = affected.find((x) => String(x || "").toLowerCase().startsWith("code/"));
+
+        if (!firstCodeEntity) return null;
+
+        return {
+          action_id: item.action_id,
+          origin_gap_id: item.origin_gap_id,
+          target_file: firstCodeEntity,
+          action_type: item.action_type,
+          deterministic_template_used: item.deterministic_template_used
+        };
+      })
+      .filter(Boolean)
   };
 
   const legacyTasks = {

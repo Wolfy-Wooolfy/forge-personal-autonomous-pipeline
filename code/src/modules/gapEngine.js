@@ -123,7 +123,11 @@ function buildGapsFromTrace(trace) {
 
   const orphanCode = normalizeList(trace && trace.orphan_code_units);
   for (const u of orphanCode) {
-    const affected = [u];
+    const raw = String(u || "");
+    const parts = raw.split("::");
+    const codePath = parts.length >= 2 ? parts[1] : raw;
+
+    const affected = [codePath];
     const category = "ORPHAN_CODE";
     const severity = severityForCategory(category);
     const gapId = makeGapId(category, affected);

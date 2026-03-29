@@ -1,30 +1,38 @@
 # MODULE FLOW — Backfill Execution Log
 
-- generated_at: 2026-03-29T11:08:11.652Z
+- generated_at: 2026-03-29T15:28:55.767Z
 - operating_mode: IMPROVE
 - repository_state: MIXED
 - blocked: false
 
 ## Source
 - decision_gate_path: artifacts/decisions/module_flow_decision_gate.json
-- decision_gate_sha256: 306f921032db5c7f90afd24b0fef9cd30b5a5346c0c9ed25639d11a4e7a2cce1
+- decision_gate_sha256: 9f50a101b7c36aeb0705e5e6ee0b103163c52ef298fa0924cab8cbe4ea6ec88a
 - intake_context_path: artifacts/intake/intake_context.json
 - intake_context_sha256: eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84
 
 ## Summary
 - approved_actions_seen: 593
-- deterministic_backfill_actions: 241
-- excluded_non_backfill_actions: 352
-- items_emitted: 241
+- deterministic_backfill_actions: 593
+- excluded_non_backfill_actions: 0
+- items_emitted: 593
 
 ## Approved Backfill Actions
 - ACT-9e6a1a61cf61 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-CE-01::R004
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-3daafb2b6cd7 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-33::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-b8cdb16e09d8 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R003
   - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-8c5985c18c0e [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R017
+  - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-2c89f742fa8a [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: -::R006
@@ -54,6 +62,18 @@
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R020
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-d9b18f96fdf5 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-18::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-2d908d8b001c [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: CODE::code/src/modules/verifyEngine.js::FILE
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-9026261250c9 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: CODE::code/src/modules/verifyEngine.js::FILE
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-a32e1bdae813 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: -::R003
   - action_type: BACKFILL_RECONCILIATION
@@ -62,12 +82,20 @@
   - target_path: DOC-10::R016
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-96774993fe2f [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-35::R009
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-5e1be7c95301 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-14::R003
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-c8f21fb094f4 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-RT-10_10::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-1a31aa763226 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-33::R013
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-ba4c3ed00216 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -84,6 +112,18 @@
   - deterministic_template_used: true
 - ACT-c32a4880354b [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: Doc-04::R015
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-574f60b50424 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-32::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-84f2cfb9de2e [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R013
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-84f2cfb9de2e [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R013
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-dfcc866f31e6 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -106,6 +146,34 @@
   - target_path: DOC-00::R004
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-46dfb2e14667 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: CODE::code/src/forge/forge_state_resolver.js::FILE
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-6b5ec58b6441 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: CODE::code/src/forge/forge_state_resolver.js::FILE
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-4a2766c77aec [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R006
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-4a2766c77aec [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R006
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-e74e876ca0b7 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-e74e876ca0b7 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-eef5366cee9a [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R015
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-26638dfdc1e7 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: -::R004
   - action_type: BACKFILL_RECONCILIATION
@@ -118,12 +186,20 @@
   - target_path: DOC-10::R024
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-d756c883ce0e [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-33::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-a4f12012e84f [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-24::R003
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-3ff576e887cc [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: Doc-04::R018
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-2599d3e1358e [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R001
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-3d06e2d824f5 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -134,12 +210,36 @@
   - target_path: DOC-17::R002
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-cdfaf38e206b [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-38::R016
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-6a25c6aa27a1 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R014
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-6a25c6aa27a1 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R014
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-e1ba931496d1 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-00::R006
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-8268d96e85a6 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-CE-01::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-c7e1de8f972b [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-36::R013
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-c614002d55a1 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-33::R014
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-10f9616d8a58 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-36::R007
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-d10706c20cc4 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -150,9 +250,37 @@
   - target_path: DOC-17::R017
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-1a8e066d0150 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: CODE::code/src/forge/forge_state_writer.js::FILE
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-dabeea77573b [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: CODE::code/src/forge/forge_state_writer.js::FILE
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-1f30d1299d88 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-32::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-b8e56e7234a5 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R012
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-cdff047aef65 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-12::R003
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-ea3222c394df [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-35::R013
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-d9708b05fd04 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R004
   - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-9eeaaf4eed2c [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R022
+  - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-f65c792da1ed [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-01::R013
@@ -162,16 +290,36 @@
   - target_path: Doc-04::R012
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-8f4368ae05ee [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-15::R006
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-934662fee3af [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-17::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-6490512645fa [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-33::R003
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-e0421c8d84f9 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-13::R008
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-444b76d3b93c [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 06_Progress_Tracking_and_Status_Report_Contract_v1::R011
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-36a3dc151f37 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-36::R016
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-4546af605762 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-24::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-44e4ddd601ce [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R006
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-1ffd3f97bab6 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -186,12 +334,56 @@
   - target_path: DOC-01::R001
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-1da2082c90b3 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R014
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-fcfba59e0b41 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R017
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-59ef5f692c83 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-18::R013
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-fb18270cb9e0 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R017
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-339fd278e167 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-15::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-47621bb82dc1 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-17::R003
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-e1691b288c10 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R001
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-3b77c19f9bed [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-00::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-4808f0099d9d [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-38::R013
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-6bb41f7eeb97 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R003
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-6bb41f7eeb97 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R003
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-8449a291b05d [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R012
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-8449a291b05d [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R012
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-0acc75fd5a56 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -202,9 +394,29 @@
   - target_path: DOC-14::R005
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-3cbfbd4fe5f4 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-3247fa38c9a7 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R004
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-075afc85247b [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-34::R004
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-65f885d0335b [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-a484b959468e [ORPHAN_ARTIFACT/LOW] action explicitly marked requires_decision; approved by explicit override
   - target_path: artifacts/gap/gap_error.md
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-063cedcf8073 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R006
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-7d49a79e243c [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-02::R003
@@ -214,8 +426,36 @@
   - target_path: DOC-10::R013
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-9e991f306bbb [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-35::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-04c0ac55ee99 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-34::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-3efbf0bcd3ff [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R022
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-902018cd08ef [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-38::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-c85e563b0a78 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-03e108dc75fc [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-18::R017
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-489e46c5fadd [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-00::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-a2c366812596 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R022
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-fd485a1abf8f [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -230,8 +470,20 @@
   - target_path: DOC-24::R012
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-bd0e52c40d9f [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-15::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-d02c28b1e7a4 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-16::R030
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-f1415ff5fe09 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-18::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-c27b469e15f3 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-32::R006
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-5bc378fa6bb6 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -258,6 +510,34 @@
   - target_path: 06_Progress_Tracking_and_Status_Report_Contract_v1::R012
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-1f466ef626e6 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R017
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-f5fdea6509b8 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-21::R017
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-47ba8df5da61 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R020
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-7ac241ae8199 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: CODE::code/src/modules/designExplorationEngine.js::FILE
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-f50ad75af21c [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: CODE::code/src/modules/designExplorationEngine.js::FILE
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-193c76b65eb9 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-32::R014
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-3f487551ace6 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-32::R016
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-1701babc2964 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: Doc-04::R019
   - action_type: GENERATE_DOCUMENT
@@ -270,9 +550,37 @@
   - target_path: DOC-16::R015
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-5e0e9dd80841 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-34::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-ed0d94dbfbc3 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-13::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-80441dd97d67 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-38::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-3d87a0a3a9c1 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 06_Progress_Tracking_and_Status_Report_Contract_v1::R013
   - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-1d93fc20252f [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-34::R014
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-a562e6c2ee1a [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-32::R004
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-2e05e17cafab [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R019
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-f0802dd7b122 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-38::R010
+  - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-520a12043e4a [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: Doc-04::R013
@@ -289,6 +597,10 @@
 - ACT-d59cd1360566 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-14::R016
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-7be445ce0437 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R004
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-a36a59c0eba4 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-01::R009
@@ -310,17 +622,41 @@
   - target_path: 06_Progress_Tracking_and_Status_Report_Contract_v1::R001
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-b82edc7bcdbc [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R009
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-fc3371747e32 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-17::R009
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-6c6d99924777 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R024
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-2c9041a1f336 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-16::R022
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-fac76fbc21af [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R004
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-747ed90f9a45 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-38::R014
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-b1637926a839 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-12::R013
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-46166ea78dc7 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 06_Progress_Tracking_and_Status_Report_Contract_v1::R009
   - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-453a7da7bb1b [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R022
+  - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-754ab883d526 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 06_Progress_Tracking_and_Status_Report_Contract_v1::R010
@@ -330,16 +666,56 @@
   - target_path: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R005
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-2b234fcfc86f [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-15::R003
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-023c0ff65b47 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-16::R019
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-7f084a0e9f10 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-21::R012
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-b43adb40a1ba [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: Doc-04::R008
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-0bbfbca9ef5f [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R003
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-0bbfbca9ef5f [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R003
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-7acab20560a9 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-24::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-beeb8e70d86e [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-beeb8e70d86e [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-e60b126080de [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-e60b126080de [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-8ddb1cb77432 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R015
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-a8f009f29513 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-34::R003
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-0c183a4dc232 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -350,9 +726,37 @@
   - target_path: DOC-02::R007
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-4032a99f2080 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-38::R012
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-469a51130214 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-18::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-f47ba865eb5e [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R018
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-25b9ca4e7141 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-01::R003
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-3bed0381f329 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-33::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-f6d454b338fa [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-13::R004
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-00985768010e [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: CODE::code/src/orchestrator/entry_resolver.js::FILE
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-ff61f853ddc6 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: CODE::code/src/orchestrator/entry_resolver.js::FILE
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-694e3d469851 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: -::R005
@@ -360,6 +764,18 @@
   - deterministic_template_used: true
 - ACT-cb9b9dd1efc1 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 06_Progress_Tracking_and_Status_Report_Contract_v1::R006
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-9e3a8db8d082 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-36::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-1d7bfb06e947 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-36::R004
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-fc3505420f20 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R025
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-798c11643db7 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -373,6 +789,22 @@
 - ACT-9cc36d835578 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 06_Progress_Tracking_and_Status_Report_Contract_v1::R015
   - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-a397701063d6 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-34::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-ae0799fc5bfa [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R003
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-3b916c19428f [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-35::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-0d7162c09d7b [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-17::R013
+  - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-4e174369aa55 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R002
@@ -390,12 +822,36 @@
   - target_path: DOC-16::R021
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-6d3f94967dda [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-33::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-4b5c48a6088e [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R006
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-520518f23ae2 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-13::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-41157459b9f4 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R019
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-6b74d96fd896 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-15::R012
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-90845fed8b3c [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R003
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-cd60771d02a1 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-ffac63c0f8a7 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R008
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-246bf9ba2e2a [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -406,12 +862,52 @@
   - target_path: DOC-17::R012
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-0ed8c7260c87 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R020
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-f185c6bd33c9 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-54e8474377e0 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R018
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-e87e12d431ee [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-18::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-983858915ee9 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: -::R002
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-e3363225c902 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R004
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-0b3852c0eb98 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: CODE::code/src/orchestrator/pipeline_definition.js::FILE
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-151b86d91cdd [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: CODE::code/src/orchestrator/pipeline_definition.js::FILE
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-f76d80da81d9 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-01::R019
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-6410b723daf9 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-35::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-9dd8ede8d90a [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R004
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-9dd8ede8d90a [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R004
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-301c56a27c2a [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -421,6 +917,18 @@
 - ACT-d46ae268336e [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R016
   - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-7e607deda970 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-7e607deda970 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-31846e4d7393 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-32::R003
+  - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-c95536a8926b [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R002
@@ -434,12 +942,64 @@
   - target_path: -::R009
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-da213d00b4be [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-12::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-1d2f24f2f2f7 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-32::R013
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-ed6feff5f46d [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-d7bdeb3e4704 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-24::R001
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-5a19645963c8 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R018
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-2481b7063d69 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: CODE::code/src/orchestrator/autonomous_runner.js::FILE
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-b7785f4325e9 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: CODE::code/src/orchestrator/autonomous_runner.js::FILE
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-588a2a2ac70a [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-09cd54405ef0 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-09cd54405ef0 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-363823248652 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-15::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-7fb829f5f78d [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R021
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-5b69eb6dd8d8 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R018
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-7da33d507aa7 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-14::R013
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-420f05bc72b9 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-21::R006
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-b81e8bbd194b [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -454,6 +1014,10 @@
   - target_path: DOC-01::R007
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-0890cb9285ab [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R019
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-2b27604265d5 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-01::R006
   - action_type: GENERATE_DOCUMENT
@@ -461,6 +1025,14 @@
 - ACT-9f253802cf3e [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R007
   - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-728c61f7bd1e [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-33::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-c2af61bfc857 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R006
+  - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-8178a8da440e [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: -::R001
@@ -478,16 +1050,52 @@
   - target_path: DOC-24::R013
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-e1790142e27d [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R005
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-e75ffd0ed9a5 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-CE-01::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-61e5cede16cd [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-34::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-f257df48f39f [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-34::R006
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-971544669658 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R016
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-6e3dc8b321ce [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R002
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-7c63a594ca54 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-16::R024
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-bbbe72afb924 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-15::R009
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-5dc4cac02b16 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-18::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-5dc4cac02b16 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-18::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-d39cfaad7f4c [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-00::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-788f806bff2b [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-35::R004
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-91d2c2628e96 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -498,28 +1106,92 @@
   - target_path: DOC-10::R025
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-93c33e390a31 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R019
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-184a08a60824 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-12::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-14778c214450 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-02::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-2b67597374dd [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R012
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-2b67597374dd [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R012
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-fd595d1f1840 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R009
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-01dc1e5cc8f4 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 06_Progress_Tracking_and_Status_Report_Contract_v1::R016
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-69ea3bbaedfb [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-36::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-de27ab75ebf8 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-02::R012
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-450e2f93d684 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R009
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-450e2f93d684 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R009
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-814253a7aa0c [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R015
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-9577ba65eda6 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R010
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-94c7e119134a [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-33::R009
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-5d6b3d6d0994 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-02::R001
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-ea4d943f35ca [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-38::R015
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-a8a403f8e522 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-38::R004
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-def84f8dec0b [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-38::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-bf013d6edeab [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-10::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-3d2f95500c1c [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-21::R014
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-c66c8146c9df [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-12::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-126bb7c9dbda [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R010
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-e05c9bc4eec5 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -538,8 +1210,20 @@
   - target_path: DOC-11::R009
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-0749d76954f2 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-38::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-6f103e2bec03 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-21::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-5e4e9cfea992 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-11::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-0a339badbf2f [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-21::R008
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-1f7c6067c711 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -550,9 +1234,37 @@
   - target_path: DOC-00::R003
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-2892a655156a [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R016
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-fc4e03db5340 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-31354cd477e0 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-12::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-8c32f62176d3 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R003
   - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-2622c5dc267d [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R019
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-f80300612686 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R014
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-f80300612686 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R014
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-bd4a2b288e0c [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R007
+  - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-88ff06be44ce [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-01::R011
@@ -562,12 +1274,56 @@
   - target_path: 06_Progress_Tracking_and_Status_Report_Contract_v1::R019
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-a56b0e90048e [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-0ff191de1eb3 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-32::R015
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-093dacead2da [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-093dacead2da [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-9aa29a9dda49 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-32::R012
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-ec4f1d66ef99 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-38::R009
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-80a4b435cbdf [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-80a4b435cbdf [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-5d8ce8913dff [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-14::R004
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-65bc565686c8 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-01::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-95d8d51adbb5 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R017
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-e010e31b93dc [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-12::R004
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-05c8cc65f991 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-32::R011
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-d10c34c6a31f [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -582,24 +1338,84 @@
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R014
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-0b21fc58b2f6 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R015
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-0b21fc58b2f6 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R015
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-2a307d55eae5 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 06_Progress_Tracking_and_Status_Report_Contract_v1::R003
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-d083920867d1 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-35::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-143246e8ed72 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-18::R012
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-acc853fa1169 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-15::R013
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-90e3b7ad9c83 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-02::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-85d3ea94b40e [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R006
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-85d3ea94b40e [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R006
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-40cc3ef10cbb [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R009
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-891836c1acb7 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R019
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-075c32235ac5 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-36::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-c25ec97eb2a2 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 06_Progress_Tracking_and_Status_Report_Contract_v1::R014
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-b3ee868ef088 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-b3ee868ef088 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-0e2987cec0a8 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R002
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-eb26593eb4ac [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-38::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-eded206788d1 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-16::R029
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-e0d951a49fd5 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-21::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-405caf1272cb [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-12::R012
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-3d30cfa53772 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -610,6 +1426,26 @@
   - target_path: DOC-02::R009
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-07792789c270 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R012
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-7cf51ee0cb82 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-38::R006
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-5806683b90be [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R016
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-5806683b90be [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R016
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-c0bab034c2b3 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R015
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-fa4b5a75a43e [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-CE-01::R009
   - action_type: GENERATE_DOCUMENT
@@ -617,6 +1453,26 @@
 - ACT-dff99abe4870 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R001
   - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-ebc6f3fb3bd8 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-34::R012
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-bc52dd08f989 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-32::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-907c45606803 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-907c45606803 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-5c861bda0383 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-35::R006
+  - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-bccf18830183 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-17::R011
@@ -626,12 +1482,32 @@
   - target_path: 06_Progress_Tracking_and_Status_Report_Contract_v1::R005
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-da9c992d8636 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-da9c992d8636 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-d8712315a7ed [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-17::R007
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-1cfb5c1a8a3a [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R004
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-d086a0991595 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R009
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-d086a0991595 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R009
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-a05dae793de9 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R013
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-8fb31b1557d1 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -642,8 +1518,20 @@
   - target_path: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R009
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-97b9a9cf216c [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R012
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-d3ab95249962 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-12::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-ecc808a1a617 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-17::R014
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-fa89c3027f81 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-21::R005
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-841ccae921bd [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -654,12 +1542,36 @@
   - target_path: DOC-RT-10_10::R001
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-31d4160a094b [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-31d4160a094b [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-f015eda54ab0 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-18::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-916c8dae8ce3 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-24::R006
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-da443b4e107a [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-35::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-55f465f90e99 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-0ece0c2fbf09 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-16::R032
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-2dad916d6db3 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-18::R011
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-9a4a09c87c1c [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -674,6 +1586,10 @@
   - target_path: DOC-10::R020
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-5d2b596de2de [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R020
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-a9fbaf142a54 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-10::R022
   - action_type: GENERATE_DOCUMENT
@@ -682,28 +1598,80 @@
   - target_path: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R006
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-99b818c71d0e [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-12::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-f89db148a103 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-13::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-7dc26ff18fc3 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-18::R015
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-a4cfde3f71a0 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R028
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-08b8d170b734 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-33::R015
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-8a57db1add1c [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-8a57db1add1c [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R008
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-508955303088 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-14::R021
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-3752ffb51372 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-15::R014
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-963a5cc2caaf [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-21::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-6f307fb59964 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R022
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-0170cea9269a [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-ffd45ec5df8e [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-14::R018
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-5c3f8a5f7644 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-34::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-404a0173b903 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R023
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-b70e25012db0 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: Doc-04::R020
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-7bcf9e192e28 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-35::R003
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-0e3f74bb8ee8 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-18::R016
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-61ccd17483a7 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R016
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-3345753b0f9b [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -726,8 +1694,24 @@
   - target_path: DOC-24::R014
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-1a5fd1b7795b [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R007
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-ced1f0f44cab [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-6694a07e3458 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R018
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-5aa053320908 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-14::R022
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-3ad7596b1992 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-18::R009
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-0cb38a0b6fd1 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -738,9 +1722,21 @@
   - target_path: DOC-02::R011
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-c7125cf8affa [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-36::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-19aec4168f12 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-11::R007
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-4d39f4ef5f2a [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R024
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-bc73834440d6 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R003
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-a7c9a8182ea1 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-11::R004
@@ -754,12 +1750,60 @@
   - target_path: DOC-10::R002
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-c48b05af336e [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R021
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-63f380535414 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-21::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-a954fbc856a4 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R026
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-f4ae6bd56b5d [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-35::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-df92ed76f814 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-df92ed76f814 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-3c04c5d7905d [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-3c04c5d7905d [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-37afc190f548 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-RT-10_10::R003
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-e2806d02619e [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: Doc-04::R017
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-55df4139db77 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-18::R014
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-172cd3eb4351 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R013
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-172cd3eb4351 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R013
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-8cc6c0e36139 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R012
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-648ecfb1b322 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -778,9 +1822,21 @@
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R009
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-6b0a58915525 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R003
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-35a98f4e0021 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 06_Progress_Tracking_and_Status_Report_Contract_v1::R008
   - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-2cea3a8ee2ec [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-35::R015
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-f51c8c692b54 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-18::R003
+  - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-3f7dcb550482 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R011
@@ -794,28 +1850,112 @@
   - target_path: DOC-24::R002
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-c11a01692f03 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-21::R016
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-ba662a6b01dc [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-35::R014
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-76df342924a9 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R014
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-ebc9e89958f1 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-01::R015
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-21b5f39449d6 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-32::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-f6a0df91ccce [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: -::R008
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-d16424556573 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-13::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-8f24f97db0a7 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-10::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-be5d46811c3a [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R016
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-432b1a2c96e2 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: Doc-04::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-ecb9238334ac [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-13::R001
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-a5ac7fae0592 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: Doc-04::R016
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-e250df4e93b2 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-34::R009
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-26ee6fb0de59 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-38::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-c86d7cfa42b6 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-16::R016
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-4defea013f78 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R010
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-6514eb1eed64 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R019
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-b39840a693c6 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R014
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-d7c6b4044c79 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-14::R020
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-f50c5a2c2486 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-15::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-2bb90251d5fb [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-18::R006
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-b03a2a6a3aa2 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R012
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-bbcab19a689c [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-36::R009
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-f5fb2caef7be [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-36::R014
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-3156327ce908 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-35::R005
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-d4a1605e87f8 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-11::R003
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-25252af391bc [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-32::R009
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-8bc5bf22ce0e [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -826,28 +1966,120 @@
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R001
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-3d52f530429e [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R020
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-1c2ea16dfba7 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-RT-10_10::R006
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-baa471019e52 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-24::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-6712ffd74456 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R021
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-9970adbebcb4 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R017
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-9970adbebcb4 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R017
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-a63de07946f3 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-33::R016
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-8b003a618b25 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: Doc-04::R003
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-09174113e6f6 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-36::R015
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-d9411c157bc7 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-01::R018
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-4f92d33c9731 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-14::R009
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-a511cce9450a [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-35::R012
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-f71858862ae7 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-15::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-189aa48b1391 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R011
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-ea3183edb021 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: Doc-04::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-eaa4cb80e105 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R009
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-eaa4cb80e105 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R009
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-58462d30d4c7 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R007
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-6b53c49ba7d6 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-15::R004
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-6cd84ef7e956 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-36::R012
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-682fcf306a8e [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-10::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-321a2c754627 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R008
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-5bee324129dd [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R004
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-5bee324129dd [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R004
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-40660f4e1ffe [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-34::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-ff84a0c821d3 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-21::R004
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-aa442b153ac0 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-aa442b153ac0 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-16::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-97f5847b5b83 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-12::R006
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-68bebf7922dc [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -856,6 +2088,10 @@
   - deterministic_template_used: true
 - ACT-96c63d080f24 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-10::R018
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-3c40764e7347 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-21::R009
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-8eb87fbaed6a [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -870,12 +2106,24 @@
   - target_path: Doc-04::R004
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-b2e73f0fdb6d [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-12::R009
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-fce1d8a0a836 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-10::R010
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-da1bdd814510 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-17::R015
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-eaebf600affa [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-34::R013
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-159fb0ec9cbc [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-36::R005
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-d00fa9c26949 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -886,6 +2134,22 @@
   - target_path: DOC-01::R002
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-00c076044dd5 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-33::R011
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-859506edd6e2 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-32::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-871b13eac8f3 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-85b943aa1396 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-36::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-702f11a56619 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R012
   - action_type: BACKFILL_RECONCILIATION
@@ -894,12 +2158,72 @@
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R017
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-a2d2660630d4 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-38::R003
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-31ec524618b7 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-15::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-e6f47b516ac7 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-13::R003
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-d68fd52379d1 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R010
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-354571dc4f34 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R006
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-354571dc4f34 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R006
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-f6456a633ec0 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-36::R006
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-767eb2ac3244 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R021
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-78d452f47f8a [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-33::R012
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-8b25e64a1c2d [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-11::R002
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-b0c37185b0f8 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-34::R001
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-452a6688cf8d [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-00::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-ed9489dfadc1 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-33::R004
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-4e84baeef53d [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-13::R006
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-2173b6db48d2 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R027
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-2524aebbba3c [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-34::R015
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-c8de8d8ec2b4 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-21::R015
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-fb28a67974a8 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -909,6 +2233,14 @@
 - ACT-0388bf69bfef [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-17::R019
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-25ae6527b6a7 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-23::R013
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-02ac60a77624 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R011
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-898f60ed111b [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-RT-10_10::R007
@@ -930,6 +2262,18 @@
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R021
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-b5467f55507b [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R013
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-25e9d3621374 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-25e9d3621374 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-19::R007
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-ee65ecfcc435 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-18::R018
   - action_type: GENERATE_DOCUMENT
@@ -937,6 +2281,10 @@
 - ACT-98cf63f6df0f [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R012
   - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-248a4e3bd44e [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-33::R006
+  - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-de5df8216c9f [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-10::R006
@@ -950,6 +2298,14 @@
   - target_path: Doc-04::R014
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-efbfa349ef95 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-efbfa349ef95 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-20::R002
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-5e9a0dfec9fc [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-01::R012
   - action_type: GENERATE_DOCUMENT
@@ -957,6 +2313,26 @@
 - ACT-26b4e0e19817 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R015
   - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-966762e065d8 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-01::R014
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-c854a27f39b7 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R009
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-c330f599bf62 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-21::R013
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-abb3ebae1350 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-36::R003
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-69b9b72b1960 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-21::R003
+  - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-13dff37b8fda [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: Doc-04::R002
@@ -970,12 +2346,44 @@
   - target_path: Doc-04::R009
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-c331eb890be4 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-21::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-2fbea18ec0aa [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R020
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-54ab0ca75bd1 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-33::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-dfd3bddd4e87 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-18::R004
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-68ea0442978d [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-11::R005
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-a58a919951de [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-22::R008
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-acb599207faa [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-15::R010
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
 - ACT-bff1bdd06c7c [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-01::R016
+  - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-9350f6062e96 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R007
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-f171832da287 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DOC-32::R010
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-98f1603ebf45 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation

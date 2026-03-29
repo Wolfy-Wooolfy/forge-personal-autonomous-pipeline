@@ -125,7 +125,7 @@ function runExecute(context) {
     generated_at: new Date().toISOString(),
     operating_mode: mode,
     repository_state: intake.repository_state,
-    actions
+    approved_code_actions: []
   };
 
   const intakeText = JSON.stringify(intake, null, 2);
@@ -149,15 +149,17 @@ function runExecute(context) {
 
   return {
     stage_progress_percent: 100,
+    blocked: true,
     artifact: "artifacts/execute/execute_report.md",
     outputs: {
       md: "artifacts/execute/execute_report.md",
       json: "artifacts/execute/execute_plan.json"
     },
     status_patch: {
-      blocking_questions: [],
-      next_step:
-        "MODULE_FLOW — Execute COMPLETE. Next=Closure (implement closureEngine + task bridge)."
+      next_step: "",
+      blocking_questions: [
+        "Execute BLOCKED: no authorized approved_code_actions and execution artifacts are incomplete."
+      ]
     }
   };
 }

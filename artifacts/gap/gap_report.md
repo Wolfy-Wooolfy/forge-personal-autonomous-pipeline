@@ -46,6 +46,12 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-0779c72fe021: Implement requirement DOC-16::R028 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [ORPHAN_CODE] GAP-074e311df76c
+  - affected_entities: code/src/orchestrator/entry_resolver.js
+  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
+  - actions:
+    - ACT-035052872a11: Map code unit CODE::code/src/orchestrator/entry_resolver.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
+    - ACT-3b3e007edf88: Remove or relocate code unit CODE::code/src/orchestrator/entry_resolver.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-079a4b235261
   - affected_entities: DOC-17::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -66,12 +72,6 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-d9b18f96fdf5: Complete coverage for DOC-18::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [ORPHAN_CODE] GAP-0871227c9609
-  - affected_entities: CODE::code/src/modules/verifyEngine.js::FILE
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
-  - actions:
-    - ACT-2d908d8b001c: Remove or relocate code unit CODE::code/src/modules/verifyEngine.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
-    - ACT-9026261250c9: Map code unit CODE::code/src/modules/verifyEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-08a14e21abc6
   - affected_entities: -::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -162,12 +162,6 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-50007db99dee: Implement requirement DOC-00::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [ORPHAN_CODE] GAP-0e27bece3335
-  - affected_entities: CODE::code/src/forge/forge_state_resolver.js::FILE
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
-  - actions:
-    - ACT-46dfb2e14667: Remove or relocate code unit CODE::code/src/forge/forge_state_resolver.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
-    - ACT-6b5ec58b6441: Map code unit CODE::code/src/forge/forge_state_resolver.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-0e69b3995ac0
   - affected_entities: DOC-19::R006
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -288,12 +282,6 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-ad2e9caad146: Implement requirement DOC-17::R017 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [ORPHAN_CODE] GAP-1ca602cffbf4
-  - affected_entities: CODE::code/src/forge/forge_state_writer.js::FILE
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
-  - actions:
-    - ACT-1a8e066d0150: Remove or relocate code unit CODE::code/src/forge/forge_state_writer.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
-    - ACT-dabeea77573b: Map code unit CODE::code/src/forge/forge_state_writer.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-1db7fe5eada5
   - affected_entities: DOC-32::R007
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -324,6 +312,12 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-9eeaaf4eed2c: Complete coverage for DOC-20::R022 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [ORPHAN_CODE] GAP-1f164d54596a
+  - affected_entities: code/src/forge/forge_state_resolver.js
+  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
+  - actions:
+    - ACT-ed002ae6bbbf: Remove or relocate code unit CODE::code/src/forge/forge_state_resolver.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
+    - ACT-f325d2e88681: Map code unit CODE::code/src/forge/forge_state_resolver.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1f442ad7fb72
   - affected_entities: DOC-01::R013
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -624,12 +618,6 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-47ba8df5da61: Complete coverage for DOC-20::R020 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [ORPHAN_CODE] GAP-3c318a069efc
-  - affected_entities: CODE::code/src/modules/designExplorationEngine.js::FILE
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
-  - actions:
-    - ACT-7ac241ae8199: Map code unit CODE::code/src/modules/designExplorationEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
-    - ACT-f50ad75af21c: Remove or relocate code unit CODE::code/src/modules/designExplorationEngine.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-3d06b7a22ad7
   - affected_entities: DOC-32::R014
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -905,12 +893,6 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-f6d454b338fa: Complete coverage for DOC-13::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [ORPHAN_CODE] GAP-53c357436498
-  - affected_entities: CODE::code/src/orchestrator/entry_resolver.js::FILE
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
-  - actions:
-    - ACT-00985768010e: Remove or relocate code unit CODE::code/src/orchestrator/entry_resolver.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
-    - ACT-ff61f853ddc6: Map code unit CODE::code/src/orchestrator/entry_resolver.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-53e5f2fdc8c9
   - affected_entities: -::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1071,12 +1053,6 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-e3363225c902: Complete coverage for DOC-22::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [ORPHAN_CODE] GAP-621add5464d5
-  - affected_entities: CODE::code/src/orchestrator/pipeline_definition.js::FILE
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
-  - actions:
-    - ACT-0b3852c0eb98: Map code unit CODE::code/src/orchestrator/pipeline_definition.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
-    - ACT-151b86d91cdd: Remove or relocate code unit CODE::code/src/orchestrator/pipeline_definition.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-621ca6717c49
   - affected_entities: DOC-01::R019
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1162,12 +1138,6 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-5a19645963c8: Complete coverage for DOC-22::R018 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [ORPHAN_CODE] GAP-68a5d4852da1
-  - affected_entities: CODE::code/src/orchestrator/autonomous_runner.js::FILE
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
-  - actions:
-    - ACT-2481b7063d69: Map code unit CODE::code/src/orchestrator/autonomous_runner.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
-    - ACT-b7785f4325e9: Remove or relocate code unit CODE::code/src/orchestrator/autonomous_runner.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-693a71c6d721
   - affected_entities: DOC-23::R010
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -1488,6 +1458,12 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-0a339badbf2f: Complete coverage for DOC-21::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [ORPHAN_CODE] GAP-809aa1e92a60
+  - affected_entities: code/src/forge/forge_state_writer.js
+  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
+  - actions:
+    - ACT-7803f533d7fc: Remove or relocate code unit CODE::code/src/forge/forge_state_writer.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
+    - ACT-856790e4d718: Map code unit CODE::code/src/forge/forge_state_writer.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-80aa6267d61c
   - affected_entities: 05_Artifact_Schema_and_Repository_Layout_Standard::R016
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1793,6 +1769,12 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-907c45606803: Complete coverage for DOC-19::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [ORPHAN_CODE] GAP-9c45e4a74c73
+  - affected_entities: code/src/orchestrator/autonomous_runner.js
+  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
+  - actions:
+    - ACT-6ba47a501c75: Remove or relocate code unit CODE::code/src/orchestrator/autonomous_runner.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
+    - ACT-71e754cc88e0: Map code unit CODE::code/src/orchestrator/autonomous_runner.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-9d399470676e
   - affected_entities: DOC-35::R006
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -2223,6 +2205,12 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-c05f9de9f095: Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [ORPHAN_CODE] GAP-c2a71a938add
+  - affected_entities: code/src/orchestrator/pipeline_definition.js
+  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
+  - actions:
+    - ACT-74b400e601ba: Map code unit CODE::code/src/orchestrator/pipeline_definition.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
+    - ACT-a67e5427d467: Remove or relocate code unit CODE::code/src/orchestrator/pipeline_definition.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c308e4b7a724
   - affected_entities: DOC-14::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -2238,6 +2226,12 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-6b0a58915525: Complete coverage for DOC-22::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [ORPHAN_CODE] GAP-c3dcb5d54230
+  - affected_entities: code/src/modules/verifyEngine.js
+  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
+  - actions:
+    - ACT-c528a94d8152: Map code unit CODE::code/src/modules/verifyEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
+    - ACT-f15e393fc1a5: Remove or relocate code unit CODE::code/src/modules/verifyEngine.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c42645b04f23
   - affected_entities: 06_Progress_Tracking_and_Status_Report_Contract_v1::R008
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -2673,6 +2667,12 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-d68fd52379d1: Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [ORPHAN_CODE] GAP-eb36dafc91a5
+  - affected_entities: code/src/modules/designExplorationEngine.js
+  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
+  - actions:
+    - ACT-782d6f9ff5aa: Remove or relocate code unit CODE::code/src/modules/designExplorationEngine.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
+    - ACT-8a39542c392e: Map code unit CODE::code/src/modules/designExplorationEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-eb3a66957d9e
   - affected_entities: DOC-20::R006
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).

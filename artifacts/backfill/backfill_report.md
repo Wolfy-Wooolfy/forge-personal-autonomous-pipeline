@@ -1,12 +1,12 @@
 # MODULE FLOW — Backfill Report
 
-- generated_at: 2026-03-29T11:08:11.652Z
+- generated_at: 2026-03-29T15:28:55.767Z
 - operating_mode: IMPROVE
 - repository_state: MIXED
 - approved_actions_seen: 593
-- deterministic_backfill_actions: 241
-- excluded_non_backfill_actions: 352
-- items_emitted: 241
+- deterministic_backfill_actions: 593
+- excluded_non_backfill_actions: 0
+- items_emitted: 593
 
 ## Outputs
 - artifacts/backfill/backfill_plan.json

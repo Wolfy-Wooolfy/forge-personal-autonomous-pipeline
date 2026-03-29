@@ -113,6 +113,21 @@ function flattenGapActions(gapPayload) {
     }));
   }
 
+  if (gapPayload && Array.isArray(gapPayload.actions)) {
+    return gapPayload.actions.map((action) => ({
+      gap_id: "",
+      category: "UNIMPLEMENTED_REQUIREMENT",
+      severity: "LOW",
+      affected_entities: [],
+      action_id: String(action && action.id ? action.id : ""),
+      description: String(action && action.description ? action.description : ""),
+      impact_scope: String(action && action.impact ? action.impact : ""),
+      requires_decision: false,
+      _gap: {},
+      _action: action
+    }));
+  }
+
   const rows = [];
   const gaps = Array.isArray(gapPayload && gapPayload.gaps) ? gapPayload.gaps : [];
 
