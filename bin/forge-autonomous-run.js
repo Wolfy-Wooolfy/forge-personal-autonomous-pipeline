@@ -5,7 +5,6 @@ const { writeForgeState } = require("../code/src/forge/forge_state_writer");
 
 const fs = require("fs");
 const path = require("path");
-const { writeStatus } = require("../code/src/orchestrator/status_writer");
 const { getPipeline } = require("../code/src/orchestrator/pipeline_definition");
 
 const FORGE_STATE_PATH = path.resolve(__dirname, "..", "artifacts", "forge", "forge_state.json");
@@ -28,17 +27,7 @@ function syncLiveStatusFromForgeState() {
     return;
   }
 
-  writeStatus({
-    status_type: "LIVE",
-    current_stage: "D",
-    overall_progress_percent: 100,
-    stage_progress_percent: 100,
-    last_completed_artifact: String(forgeState.last_completed_artifact || ""),
-    current_task: "",
-    issues: [],
-    blocking_questions: [],
-    next_step: ""
-  });
+  return;
 }
 
 function syncBlockedRuntimeStateFromForgeState(error) {
@@ -77,17 +66,7 @@ function syncBlockedRuntimeStateFromForgeState(error) {
     typeof forgeState.build_progress_percent === "number" ? forgeState.build_progress_percent : 0;
   const blockedProgress = Math.max(0, Math.min(99, blockedProgressRaw));
 
-  writeStatus({
-    status_type: "LIVE",
-    current_stage: String(forgeState.current_stage || "D"),
-    overall_progress_percent: blockedProgress,
-    stage_progress_percent: blockedProgress,
-    last_completed_artifact: String(forgeState.last_completed_artifact || ""),
-    current_task: currentTask,
-    issues: [reason],
-    blocking_questions: [reason],
-    next_step: ""
-  });
+  // status.json is no longer used as execution authority
 
   fs.mkdirSync(ORCHESTRATION_DIR, { recursive: true });
 
