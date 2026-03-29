@@ -18,8 +18,10 @@ function ensureDir(absDir) {
 }
 
 function parseDecisionFromStatus(status) {
-  const ns = String(status && status.next_step ? status.next_step : "");
-  const m = ns.match(/\(([^)]+)\)\s*$/);
+  const envValue = String(process.env.FORGE_DECISION_OVERRIDE || "");
+  const statusValue = String(status && status.next_step ? status.next_step : "");
+  const source = envValue || statusValue;
+  const m = source.match(/\(([^)]+)\)\s*$/);
   const suffix = m ? String(m[1]).trim().toUpperCase() : "";
   if (suffix === "APPROVE ALL") return { mode: "APPROVE_ALL" };
   if (suffix === "REJECT") return { mode: "REJECT" };

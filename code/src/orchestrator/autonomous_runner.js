@@ -4,6 +4,7 @@ const crypto = require("crypto");
 const { resolveEntry } = require("./entry_resolver");
 const { getPipeline } = require("./pipeline_definition");
 const { runTaskByName } = require("./runner");
+const { writeForgeState } = require("../forge/forge_state_writer");
 
 const ORCHESTRATION_DIR = path.join(process.cwd(), "artifacts", "orchestration");
 const STATE_PATH = path.join(ORCHESTRATION_DIR, "orchestration_state.json");
@@ -296,6 +297,8 @@ function runAutonomous() {
       task_name: step.task_name,
       outcome: "DONE"
     });
+
+    writeForgeState();
 
     markModuleCompleted(state, step.module_id);
 

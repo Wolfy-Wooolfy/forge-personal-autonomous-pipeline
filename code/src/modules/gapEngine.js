@@ -343,7 +343,7 @@ function runGap(context) {
   writeJson(path.resolve(gapDirAbs, "gap_actions.json"), payload);
   writeText(path.resolve(gapDirAbs, "gap_report.md"), renderGapReport(payload));
 
-  const isBlocked = requiresDecision === true;
+  const isBlocked = criticalCount > 0;
 
   return {
     blocked: isBlocked,

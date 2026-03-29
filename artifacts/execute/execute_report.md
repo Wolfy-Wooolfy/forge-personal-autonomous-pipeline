@@ -1,0 +1,739 @@
+# MODULE FLOW — Execute Report
+
+- generated_at: 2026-03-29T11:08:11.708Z
+- operating_mode: IMPROVE
+- repository_state: MIXED
+
+## Source
+- backfill_plan: artifacts/backfill/backfill_plan.json
+- backfill_sha256: aba2c78859611e95c579dc61906d8a89043ef98074bfd3a5b826712d90ff0178
+- intake_context: artifacts/intake/intake_context.json
+- intake_sha256: eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84
+
+## Execution Plan
+- ACT-9e6a1a61cf61
+  - type: GENERATE_DOCUMENT
+  - target: DOC-CE-01::R004
+- ACT-b8cdb16e09d8
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R003
+- ACT-2c89f742fa8a
+  - type: BACKFILL_RECONCILIATION
+  - target: -::R006
+- ACT-256a184e4b6e
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R002
+- ACT-d70588732ded
+  - type: BACKFILL_RECONCILIATION
+  - target: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R001
+- ACT-0779c72fe021
+  - type: GENERATE_DOCUMENT
+  - target: DOC-16::R028
+- ACT-07d83696e277
+  - type: GENERATE_DOCUMENT
+  - target: DOC-17::R005
+- ACT-38ffe467efff
+  - type: BACKFILL_RECONCILIATION
+  - target: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R003
+- ACT-c72467e609f3
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R020
+- ACT-a32e1bdae813
+  - type: BACKFILL_RECONCILIATION
+  - target: -::R003
+- ACT-bf83e7316071
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R016
+- ACT-5e1be7c95301
+  - type: GENERATE_DOCUMENT
+  - target: DOC-14::R003
+- ACT-c8f21fb094f4
+  - type: GENERATE_DOCUMENT
+  - target: DOC-RT-10_10::R002
+- ACT-ba4c3ed00216
+  - type: GENERATE_DOCUMENT
+  - target: DOC-01::R008
+- ACT-cef1e032d7ea
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R015
+- ACT-f22e3a0a8574
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R007
+- ACT-c32a4880354b
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R015
+- ACT-dfcc866f31e6
+  - type: GENERATE_DOCUMENT
+  - target: DOC-17::R018
+- ACT-a8f8b7b907a9
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R008
+- ACT-5cd5b3332831
+  - type: GENERATE_DOCUMENT
+  - target: DOC-24::R004
+- ACT-129de151d9ec
+  - type: GENERATE_DOCUMENT
+  - target: DOC-14::R010
+- ACT-50007db99dee
+  - type: GENERATE_DOCUMENT
+  - target: DOC-00::R004
+- ACT-26638dfdc1e7
+  - type: BACKFILL_RECONCILIATION
+  - target: -::R004
+- ACT-1aef17dac23b
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R017
+- ACT-6b2f2ec2af2d
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R024
+- ACT-a4f12012e84f
+  - type: GENERATE_DOCUMENT
+  - target: DOC-24::R003
+- ACT-3ff576e887cc
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R018
+- ACT-3d06e2d824f5
+  - type: GENERATE_DOCUMENT
+  - target: DOC-14::R002
+- ACT-108ec9c51ada
+  - type: GENERATE_DOCUMENT
+  - target: DOC-17::R002
+- ACT-e1ba931496d1
+  - type: GENERATE_DOCUMENT
+  - target: DOC-00::R006
+- ACT-8268d96e85a6
+  - type: GENERATE_DOCUMENT
+  - target: DOC-CE-01::R007
+- ACT-d10706c20cc4
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R018
+- ACT-ad2e9caad146
+  - type: GENERATE_DOCUMENT
+  - target: DOC-17::R017
+- ACT-d9708b05fd04
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R004
+- ACT-f65c792da1ed
+  - type: GENERATE_DOCUMENT
+  - target: DOC-01::R013
+- ACT-bd9081472c6d
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R012
+- ACT-934662fee3af
+  - type: GENERATE_DOCUMENT
+  - target: DOC-17::R010
+- ACT-444b76d3b93c
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R011
+- ACT-4546af605762
+  - type: GENERATE_DOCUMENT
+  - target: DOC-24::R008
+- ACT-1ffd3f97bab6
+  - type: BACKFILL_RECONCILIATION
+  - target: -::R007
+- ACT-1b9693f6d22e
+  - type: GENERATE_DOCUMENT
+  - target: DOC-CE-01::R002
+- ACT-adbcb6903d75
+  - type: GENERATE_DOCUMENT
+  - target: DOC-01::R001
+- ACT-47621bb82dc1
+  - type: GENERATE_DOCUMENT
+  - target: DOC-17::R003
+- ACT-3b77c19f9bed
+  - type: GENERATE_DOCUMENT
+  - target: DOC-00::R008
+- ACT-0acc75fd5a56
+  - type: BACKFILL_RECONCILIATION
+  - target: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R010
+- ACT-2905e2b603a6
+  - type: GENERATE_DOCUMENT
+  - target: DOC-14::R005
+- ACT-a484b959468e
+  - type: GENERATE_DOCUMENT
+  - target: artifacts/gap/gap_error.md
+- ACT-7d49a79e243c
+  - type: GENERATE_DOCUMENT
+  - target: DOC-02::R003
+- ACT-8b90d872fd6c
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R013
+- ACT-489e46c5fadd
+  - type: GENERATE_DOCUMENT
+  - target: DOC-00::R005
+- ACT-fd485a1abf8f
+  - type: GENERATE_DOCUMENT
+  - target: DOC-RT-10_10::R004
+- ACT-5501bfeb420f
+  - type: GENERATE_DOCUMENT
+  - target: DOC-16::R025
+- ACT-a808d4e54d0a
+  - type: GENERATE_DOCUMENT
+  - target: DOC-24::R012
+- ACT-d02c28b1e7a4
+  - type: GENERATE_DOCUMENT
+  - target: DOC-16::R030
+- ACT-5bc378fa6bb6
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R012
+- ACT-e482f6c6a0a5
+  - type: GENERATE_DOCUMENT
+  - target: DOC-CE-01::R001
+- ACT-3531a8dab1c9
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R003
+- ACT-34368aff0a72
+  - type: GENERATE_DOCUMENT
+  - target: artifacts/closure/closure_error.md
+- ACT-a5c8a7b0b00a
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R021
+- ACT-0602e0fcfca7
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R012
+- ACT-1701babc2964
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R019
+- ACT-646e37e184e8
+  - type: GENERATE_DOCUMENT
+  - target: DOC-16::R031
+- ACT-66f55e980be8
+  - type: GENERATE_DOCUMENT
+  - target: DOC-16::R015
+- ACT-3d87a0a3a9c1
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R013
+- ACT-520a12043e4a
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R013
+- ACT-7ba02ccbbff3
+  - type: GENERATE_DOCUMENT
+  - target: DOC-02::R006
+- ACT-d30c0df2760f
+  - type: BACKFILL_RECONCILIATION
+  - target: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R014
+- ACT-d59cd1360566
+  - type: GENERATE_DOCUMENT
+  - target: DOC-14::R016
+- ACT-a36a59c0eba4
+  - type: GENERATE_DOCUMENT
+  - target: DOC-01::R009
+- ACT-f8ef8659fdd8
+  - type: BACKFILL_RECONCILIATION
+  - target: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R017
+- ACT-ff1516d8b7b8
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R004
+- ACT-27c59a7934c5
+  - type: BACKFILL_RECONCILIATION
+  - target: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R004
+- ACT-85890d850483
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R001
+- ACT-fc3371747e32
+  - type: GENERATE_DOCUMENT
+  - target: DOC-17::R009
+- ACT-2c9041a1f336
+  - type: GENERATE_DOCUMENT
+  - target: DOC-16::R022
+- ACT-46166ea78dc7
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R009
+- ACT-754ab883d526
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R010
+- ACT-7227188f349c
+  - type: BACKFILL_RECONCILIATION
+  - target: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R005
+- ACT-023c0ff65b47
+  - type: GENERATE_DOCUMENT
+  - target: DOC-16::R019
+- ACT-b43adb40a1ba
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R008
+- ACT-7acab20560a9
+  - type: GENERATE_DOCUMENT
+  - target: DOC-24::R011
+- ACT-0c183a4dc232
+  - type: GENERATE_DOCUMENT
+  - target: DOC-14::R012
+- ACT-701bfcbcdf9c
+  - type: GENERATE_DOCUMENT
+  - target: DOC-02::R007
+- ACT-25b9ca4e7141
+  - type: GENERATE_DOCUMENT
+  - target: DOC-01::R003
+- ACT-694e3d469851
+  - type: BACKFILL_RECONCILIATION
+  - target: -::R005
+- ACT-cb9b9dd1efc1
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R006
+- ACT-798c11643db7
+  - type: BACKFILL_RECONCILIATION
+  - target: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R018
+- ACT-2e146b9b19de
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R013
+- ACT-9cc36d835578
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R015
+- ACT-4e174369aa55
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R002
+- ACT-ef7ee641d187
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R018
+- ACT-af7cbf346af9
+  - type: GENERATE_DOCUMENT
+  - target: DOC-01::R020
+- ACT-5550674b2a33
+  - type: GENERATE_DOCUMENT
+  - target: DOC-16::R021
+- ACT-4b5c48a6088e
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R006
+- ACT-41157459b9f4
+  - type: BACKFILL_RECONCILIATION
+  - target: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R019
+- ACT-246bf9ba2e2a
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R001
+- ACT-24fd3d1e31b5
+  - type: GENERATE_DOCUMENT
+  - target: DOC-17::R012
+- ACT-983858915ee9
+  - type: BACKFILL_RECONCILIATION
+  - target: -::R002
+- ACT-f76d80da81d9
+  - type: GENERATE_DOCUMENT
+  - target: DOC-01::R019
+- ACT-301c56a27c2a
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R004
+- ACT-d46ae268336e
+  - type: BACKFILL_RECONCILIATION
+  - target: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R016
+- ACT-c95536a8926b
+  - type: BACKFILL_RECONCILIATION
+  - target: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R002
+- ACT-01f5b7e9abcb
+  - type: GENERATE_DOCUMENT
+  - target: DOC-24::R007
+- ACT-140a127c4fef
+  - type: BACKFILL_RECONCILIATION
+  - target: -::R009
+- ACT-d7bdeb3e4704
+  - type: GENERATE_DOCUMENT
+  - target: DOC-24::R001
+- ACT-7da33d507aa7
+  - type: GENERATE_DOCUMENT
+  - target: DOC-14::R013
+- ACT-b81e8bbd194b
+  - type: GENERATE_DOCUMENT
+  - target: DOC-16::R013
+- ACT-5af6e3498d9a
+  - type: GENERATE_DOCUMENT
+  - target: DOC-00::R007
+- ACT-c22660ce4337
+  - type: GENERATE_DOCUMENT
+  - target: DOC-01::R007
+- ACT-2b27604265d5
+  - type: GENERATE_DOCUMENT
+  - target: DOC-01::R006
+- ACT-9f253802cf3e
+  - type: BACKFILL_RECONCILIATION
+  - target: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R007
+- ACT-8178a8da440e
+  - type: BACKFILL_RECONCILIATION
+  - target: -::R001
+- ACT-e2ca80b2e0f1
+  - type: GENERATE_DOCUMENT
+  - target: DOC-11::R008
+- ACT-2dd774d61b09
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R023
+- ACT-0f70342ff7a7
+  - type: GENERATE_DOCUMENT
+  - target: DOC-24::R013
+- ACT-e75ffd0ed9a5
+  - type: GENERATE_DOCUMENT
+  - target: DOC-CE-01::R008
+- ACT-7c63a594ca54
+  - type: GENERATE_DOCUMENT
+  - target: DOC-16::R024
+- ACT-d39cfaad7f4c
+  - type: GENERATE_DOCUMENT
+  - target: DOC-00::R001
+- ACT-91d2c2628e96
+  - type: GENERATE_DOCUMENT
+  - target: DOC-17::R008
+- ACT-d169ead79283
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R025
+- ACT-14778c214450
+  - type: GENERATE_DOCUMENT
+  - target: DOC-02::R008
+- ACT-01dc1e5cc8f4
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R016
+- ACT-de27ab75ebf8
+  - type: GENERATE_DOCUMENT
+  - target: DOC-02::R012
+- ACT-9577ba65eda6
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R010
+- ACT-5d6b3d6d0994
+  - type: GENERATE_DOCUMENT
+  - target: DOC-02::R001
+- ACT-bf013d6edeab
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R005
+- ACT-e05c9bc4eec5
+  - type: GENERATE_DOCUMENT
+  - target: DOC-14::R017
+- ACT-4f6690a87920
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R010
+- ACT-815cd2306358
+  - type: GENERATE_DOCUMENT
+  - target: DOC-02::R002
+- ACT-3de25b842bd3
+  - type: GENERATE_DOCUMENT
+  - target: DOC-11::R009
+- ACT-5e4e9cfea992
+  - type: GENERATE_DOCUMENT
+  - target: DOC-11::R001
+- ACT-1f7c6067c711
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R016
+- ACT-218e23e30ade
+  - type: GENERATE_DOCUMENT
+  - target: DOC-00::R003
+- ACT-8c32f62176d3
+  - type: BACKFILL_RECONCILIATION
+  - target: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R003
+- ACT-88ff06be44ce
+  - type: GENERATE_DOCUMENT
+  - target: DOC-01::R011
+- ACT-0d51212eaf77
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R019
+- ACT-5d8ce8913dff
+  - type: GENERATE_DOCUMENT
+  - target: DOC-14::R004
+- ACT-65bc565686c8
+  - type: GENERATE_DOCUMENT
+  - target: DOC-01::R010
+- ACT-d10c34c6a31f
+  - type: GENERATE_DOCUMENT
+  - target: DOC-14::R001
+- ACT-c8a2b49b77e1
+  - type: GENERATE_DOCUMENT
+  - target: DOC-18::R019
+- ACT-1673b935657f
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R014
+- ACT-2a307d55eae5
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R003
+- ACT-90e3b7ad9c83
+  - type: GENERATE_DOCUMENT
+  - target: DOC-02::R005
+- ACT-40cc3ef10cbb
+  - type: BACKFILL_RECONCILIATION
+  - target: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R009
+- ACT-c25ec97eb2a2
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R014
+- ACT-eded206788d1
+  - type: GENERATE_DOCUMENT
+  - target: DOC-16::R029
+- ACT-3d30cfa53772
+  - type: GENERATE_DOCUMENT
+  - target: DOC-02::R004
+- ACT-37f1fcb4f84c
+  - type: GENERATE_DOCUMENT
+  - target: DOC-02::R009
+- ACT-fa4b5a75a43e
+  - type: GENERATE_DOCUMENT
+  - target: DOC-CE-01::R009
+- ACT-dff99abe4870
+  - type: BACKFILL_RECONCILIATION
+  - target: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R001
+- ACT-bccf18830183
+  - type: GENERATE_DOCUMENT
+  - target: DOC-17::R011
+- ACT-0cc8dd6e6ca9
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R005
+- ACT-d8712315a7ed
+  - type: GENERATE_DOCUMENT
+  - target: DOC-17::R007
+- ACT-1cfb5c1a8a3a
+  - type: BACKFILL_RECONCILIATION
+  - target: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R004
+- ACT-8fb31b1557d1
+  - type: GENERATE_DOCUMENT
+  - target: DOC-17::R001
+- ACT-b6b59356d7db
+  - type: BACKFILL_RECONCILIATION
+  - target: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R009
+- ACT-ecc808a1a617
+  - type: GENERATE_DOCUMENT
+  - target: DOC-17::R014
+- ACT-841ccae921bd
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R017
+- ACT-ffff37df17fd
+  - type: GENERATE_DOCUMENT
+  - target: DOC-RT-10_10::R001
+- ACT-916c8dae8ce3
+  - type: GENERATE_DOCUMENT
+  - target: DOC-24::R006
+- ACT-0ece0c2fbf09
+  - type: GENERATE_DOCUMENT
+  - target: DOC-16::R032
+- ACT-9a4a09c87c1c
+  - type: GENERATE_DOCUMENT
+  - target: DOC-24::R009
+- ACT-705a0fbc614b
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R005
+- ACT-6123f4b93522
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R020
+- ACT-a9fbaf142a54
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R022
+- ACT-70682b90bca4
+  - type: BACKFILL_RECONCILIATION
+  - target: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R006
+- ACT-7dc26ff18fc3
+  - type: GENERATE_DOCUMENT
+  - target: DOC-18::R015
+- ACT-508955303088
+  - type: GENERATE_DOCUMENT
+  - target: DOC-14::R021
+- ACT-6f307fb59964
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R022
+- ACT-ffd45ec5df8e
+  - type: GENERATE_DOCUMENT
+  - target: DOC-14::R018
+- ACT-b70e25012db0
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R020
+- ACT-0e3f74bb8ee8
+  - type: GENERATE_DOCUMENT
+  - target: DOC-18::R016
+- ACT-3345753b0f9b
+  - type: BACKFILL_RECONCILIATION
+  - target: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R002
+- ACT-6eb9dbe83588
+  - type: GENERATE_DOCUMENT
+  - target: DOC-14::R014
+- ACT-6c3fd18d0475
+  - type: GENERATE_DOCUMENT
+  - target: DOC-17::R016
+- ACT-45d61f25c28d
+  - type: BACKFILL_RECONCILIATION
+  - target: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R015
+- ACT-6a8ddf573f5d
+  - type: GENERATE_DOCUMENT
+  - target: DOC-24::R014
+- ACT-5aa053320908
+  - type: GENERATE_DOCUMENT
+  - target: DOC-14::R022
+- ACT-0cb38a0b6fd1
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R019
+- ACT-05c9df6cb364
+  - type: GENERATE_DOCUMENT
+  - target: DOC-02::R011
+- ACT-19aec4168f12
+  - type: GENERATE_DOCUMENT
+  - target: DOC-11::R007
+- ACT-a7c9a8182ea1
+  - type: GENERATE_DOCUMENT
+  - target: DOC-11::R004
+- ACT-1aba96b4c563
+  - type: GENERATE_DOCUMENT
+  - target: DOC-02::R010
+- ACT-4df371a95d6e
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R002
+- ACT-37afc190f548
+  - type: GENERATE_DOCUMENT
+  - target: DOC-RT-10_10::R003
+- ACT-e2806d02619e
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R017
+- ACT-648ecfb1b322
+  - type: GENERATE_DOCUMENT
+  - target: DOC-CE-01::R005
+- ACT-c05f9de9f095
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R011
+- ACT-e65f59995260
+  - type: GENERATE_DOCUMENT
+  - target: DOC-14::R006
+- ACT-3a7ef2ed2e70
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R009
+- ACT-35a98f4e0021
+  - type: BACKFILL_RECONCILIATION
+  - target: 06_Progress_Tracking_and_Status_Report_Contract_v1::R008
+- ACT-3f7dcb550482
+  - type: BACKFILL_RECONCILIATION
+  - target: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R011
+- ACT-ffc92a2420d2
+  - type: GENERATE_DOCUMENT
+  - target: DOC-17::R004
+- ACT-bf171c91c4f8
+  - type: GENERATE_DOCUMENT
+  - target: DOC-24::R002
+- ACT-f6a0df91ccce
+  - type: BACKFILL_RECONCILIATION
+  - target: -::R008
+- ACT-8f24f97db0a7
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R001
+- ACT-a5ac7fae0592
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R016
+- ACT-c86d7cfa42b6
+  - type: GENERATE_DOCUMENT
+  - target: DOC-16::R016
+- ACT-6514eb1eed64
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R019
+- ACT-d4a1605e87f8
+  - type: GENERATE_DOCUMENT
+  - target: DOC-11::R003
+- ACT-8bc5bf22ce0e
+  - type: GENERATE_DOCUMENT
+  - target: DOC-01::R017
+- ACT-b9dacd1e2e08
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R001
+- ACT-baa471019e52
+  - type: GENERATE_DOCUMENT
+  - target: DOC-24::R010
+- ACT-8b003a618b25
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R003
+- ACT-4f92d33c9731
+  - type: GENERATE_DOCUMENT
+  - target: DOC-14::R009
+- ACT-ea3183edb021
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R011
+- ACT-58462d30d4c7
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R007
+- ACT-682fcf306a8e
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R011
+- ACT-68bebf7922dc
+  - type: GENERATE_DOCUMENT
+  - target: DOC-01::R005
+- ACT-96c63d080f24
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R018
+- ACT-8eb87fbaed6a
+  - type: GENERATE_DOCUMENT
+  - target: DOC-16::R027
+- ACT-d044cb96dc45
+  - type: BACKFILL_RECONCILIATION
+  - target: artifacts/intake/repository_inventory.json
+- ACT-f7ad0eaf7a28
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R004
+- ACT-fce1d8a0a836
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R010
+- ACT-da1bdd814510
+  - type: GENERATE_DOCUMENT
+  - target: DOC-17::R015
+- ACT-d00fa9c26949
+  - type: BACKFILL_RECONCILIATION
+  - target: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R008
+- ACT-8d04cc5ec18c
+  - type: GENERATE_DOCUMENT
+  - target: DOC-01::R002
+- ACT-702f11a56619
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R012
+- ACT-c4884b078a0e
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R017
+- ACT-8b25e64a1c2d
+  - type: GENERATE_DOCUMENT
+  - target: DOC-11::R002
+- ACT-452a6688cf8d
+  - type: GENERATE_DOCUMENT
+  - target: DOC-00::R002
+- ACT-fb28a67974a8
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R005
+- ACT-0388bf69bfef
+  - type: GENERATE_DOCUMENT
+  - target: DOC-17::R019
+- ACT-898f60ed111b
+  - type: GENERATE_DOCUMENT
+  - target: DOC-RT-10_10::R007
+- ACT-9df0ff926057
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R006
+- ACT-b5172b0f798e
+  - type: GENERATE_DOCUMENT
+  - target: DOC-CE-01::R003
+- ACT-61b4ac414687
+  - type: GENERATE_DOCUMENT
+  - target: DOC-24::R005
+- ACT-f4af80c0ea91
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R021
+- ACT-ee65ecfcc435
+  - type: GENERATE_DOCUMENT
+  - target: DOC-18::R018
+- ACT-98cf63f6df0f
+  - type: BACKFILL_RECONCILIATION
+  - target: 04_Autonomy_Policy_and_Human_Interrupt_Protocol::R012
+- ACT-de5df8216c9f
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R006
+- ACT-834fe121e92c
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R009
+- ACT-2771eac94471
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R014
+- ACT-5e9a0dfec9fc
+  - type: GENERATE_DOCUMENT
+  - target: DOC-01::R012
+- ACT-26b4e0e19817
+  - type: BACKFILL_RECONCILIATION
+  - target: 05_Artifact_Schema_and_Repository_Layout_Standard::R015
+- ACT-13dff37b8fda
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R002
+- ACT-431e157f30e4
+  - type: GENERATE_DOCUMENT
+  - target: DOC-RT-10_10::R005
+- ACT-8b132eb9bc14
+  - type: GENERATE_DOCUMENT
+  - target: Doc-04::R009
+- ACT-68ea0442978d
+  - type: GENERATE_DOCUMENT
+  - target: DOC-11::R005
+- ACT-bff1bdd06c7c
+  - type: GENERATE_DOCUMENT
+  - target: DOC-01::R016
+- ACT-98f1603ebf45
+  - type: GENERATE_DOCUMENT
+  - target: DOC-10::R007
+
+## Next
+- next_step: MODULE_FLOW — Execute COMPLETE. Next=Closure (implement closureEngine + task bridge).

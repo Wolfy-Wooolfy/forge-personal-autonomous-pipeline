@@ -1,10 +1,10 @@
 # MODULE FLOW — Decision Gate
 
-- timestamp: 2026-03-29T10:10:30.516Z
+- timestamp: 2026-03-29T10:57:56.207Z
 - policy: AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK
 - operating_mode: IMPROVE
 - repository_state: MIXED
-- blocked: true
+- blocked: false
 
 ## Source
 - exploration_matrix_path: artifacts/exploration/option_matrix.json
@@ -14,8 +14,8 @@
 
 ## Summary
 - total_actions: 593
-- approved_count: 576
-- review_required_count: 17
+- approved_count: 593
+- review_required_count: 0
 - rejected_count: 0
 
 ## Approved Actions
@@ -43,6 +43,10 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-d9b18f96fdf5 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-18::R005 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
+- ACT-2d908d8b001c [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/modules/verifyEngine.js::FILE if it is not part of Forge scope/contracts.
+  - reason: action explicitly marked requires_decision; approved by explicit override
+- ACT-9026261250c9 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/modules/verifyEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
+  - reason: action explicitly marked requires_decision; approved by explicit override
 - ACT-a32e1bdae813 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement -::R003 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-bf83e7316071 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R016 by adding missing code unit(s) and required artifact(s).
@@ -79,6 +83,10 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-50007db99dee [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-00::R004 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
+- ACT-46dfb2e14667 [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/forge/forge_state_resolver.js::FILE if it is not part of Forge scope/contracts.
+  - reason: action explicitly marked requires_decision; approved by explicit override
+- ACT-6b5ec58b6441 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/forge/forge_state_resolver.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
+  - reason: action explicitly marked requires_decision; approved by explicit override
 - ACT-4a2766c77aec [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-19::R006 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-4a2766c77aec [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-19::R006 by ensuring both mapped_code_units and mapped_artifacts are present.
@@ -127,6 +135,10 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-ad2e9caad146 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-17::R017 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
+- ACT-1a8e066d0150 [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/forge/forge_state_writer.js::FILE if it is not part of Forge scope/contracts.
+  - reason: action explicitly marked requires_decision; approved by explicit override
+- ACT-dabeea77573b [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/forge/forge_state_writer.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
+  - reason: action explicitly marked requires_decision; approved by explicit override
 - ACT-1f30d1299d88 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-32::R007 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-b8e56e7234a5 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R012 by ensuring both mapped_code_units and mapped_artifacts are present.
@@ -203,6 +215,8 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-65f885d0335b [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-16::R005 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
+- ACT-a484b959468e [ORPHAN_ARTIFACT/LOW] Either map artifact artifacts/gap/gap_error.md to a requirement (if valid) or remove it if it violates namespace/scope rules.
+  - reason: action explicitly marked requires_decision; approved by explicit override
 - ACT-063cedcf8073 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R006 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-7d49a79e243c [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-02::R003 by adding missing code unit(s) and required artifact(s).
@@ -245,6 +259,8 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-3531a8dab1c9 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R003 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
+- ACT-34368aff0a72 [ORPHAN_ARTIFACT/LOW] Either map artifact artifacts/closure/closure_error.md to a requirement (if valid) or remove it if it violates namespace/scope rules.
+  - reason: action explicitly marked requires_decision; approved by explicit override
 - ACT-a5c8a7b0b00a [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R021 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-0602e0fcfca7 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R012 by adding missing code unit(s) and required artifact(s).
@@ -255,6 +271,10 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-47ba8df5da61 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-20::R020 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
+- ACT-7ac241ae8199 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/modules/designExplorationEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
+  - reason: action explicitly marked requires_decision; approved by explicit override
+- ACT-f50ad75af21c [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/modules/designExplorationEngine.js::FILE if it is not part of Forge scope/contracts.
+  - reason: action explicitly marked requires_decision; approved by explicit override
 - ACT-193c76b65eb9 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-32::R014 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-3f487551ace6 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-32::R016 by ensuring both mapped_code_units and mapped_artifacts are present.
@@ -365,6 +385,10 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-f6d454b338fa [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-13::R004 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
+- ACT-00985768010e [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/orchestrator/entry_resolver.js::FILE if it is not part of Forge scope/contracts.
+  - reason: action explicitly marked requires_decision; approved by explicit override
+- ACT-ff61f853ddc6 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/orchestrator/entry_resolver.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
+  - reason: action explicitly marked requires_decision; approved by explicit override
 - ACT-694e3d469851 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement -::R005 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-cb9b9dd1efc1 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R006 by adding missing code unit(s) and required artifact(s).
@@ -429,6 +453,10 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-e3363225c902 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-22::R004 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
+- ACT-0b3852c0eb98 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/orchestrator/pipeline_definition.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
+  - reason: action explicitly marked requires_decision; approved by explicit override
+- ACT-151b86d91cdd [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/orchestrator/pipeline_definition.js::FILE if it is not part of Forge scope/contracts.
+  - reason: action explicitly marked requires_decision; approved by explicit override
 - ACT-f76d80da81d9 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R019 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-6410b723daf9 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-35::R007 by ensuring both mapped_code_units and mapped_artifacts are present.
@@ -463,6 +491,10 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-5a19645963c8 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-22::R018 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
+- ACT-2481b7063d69 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/orchestrator/autonomous_runner.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
+  - reason: action explicitly marked requires_decision; approved by explicit override
+- ACT-b7785f4325e9 [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/orchestrator/autonomous_runner.js::FILE if it is not part of Forge scope/contracts.
+  - reason: action explicitly marked requires_decision; approved by explicit override
 - ACT-588a2a2ac70a [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-23::R010 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-09cd54405ef0 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-20::R001 by ensuring both mapped_code_units and mapped_artifacts are present.
@@ -1027,6 +1059,8 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-8eb87fbaed6a [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-16::R027 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
+- ACT-d044cb96dc45 [ORPHAN_ARTIFACT/LOW] Either map artifact artifacts/intake/repository_inventory.json to a requirement (if valid) or remove it if it violates namespace/scope rules.
+  - reason: action explicitly marked requires_decision; approved by explicit override
 - ACT-f7ad0eaf7a28 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R004 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-b2e73f0fdb6d [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-12::R009 by ensuring both mapped_code_units and mapped_artifacts are present.
@@ -1173,43 +1207,10 @@
   - reason: improve mode bounded non-destructive remediation
 
 ## Review Required
-- ACT-2d908d8b001c [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/modules/verifyEngine.js::FILE if it is not part of Forge scope/contracts.
-  - reason: action explicitly marked requires_decision
-- ACT-9026261250c9 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/modules/verifyEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
-  - reason: action explicitly marked requires_decision
-- ACT-46dfb2e14667 [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/forge/forge_state_resolver.js::FILE if it is not part of Forge scope/contracts.
-  - reason: action explicitly marked requires_decision
-- ACT-6b5ec58b6441 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/forge/forge_state_resolver.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
-  - reason: action explicitly marked requires_decision
-- ACT-1a8e066d0150 [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/forge/forge_state_writer.js::FILE if it is not part of Forge scope/contracts.
-  - reason: action explicitly marked requires_decision
-- ACT-dabeea77573b [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/forge/forge_state_writer.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
-  - reason: action explicitly marked requires_decision
-- ACT-a484b959468e [ORPHAN_ARTIFACT/LOW] Either map artifact artifacts/gap/gap_error.md to a requirement (if valid) or remove it if it violates namespace/scope rules.
-  - reason: action explicitly marked requires_decision
-- ACT-34368aff0a72 [ORPHAN_ARTIFACT/LOW] Either map artifact artifacts/closure/closure_error.md to a requirement (if valid) or remove it if it violates namespace/scope rules.
-  - reason: action explicitly marked requires_decision
-- ACT-7ac241ae8199 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/modules/designExplorationEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
-  - reason: action explicitly marked requires_decision
-- ACT-f50ad75af21c [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/modules/designExplorationEngine.js::FILE if it is not part of Forge scope/contracts.
-  - reason: action explicitly marked requires_decision
-- ACT-00985768010e [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/orchestrator/entry_resolver.js::FILE if it is not part of Forge scope/contracts.
-  - reason: action explicitly marked requires_decision
-- ACT-ff61f853ddc6 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/orchestrator/entry_resolver.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
-  - reason: action explicitly marked requires_decision
-- ACT-0b3852c0eb98 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/orchestrator/pipeline_definition.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
-  - reason: action explicitly marked requires_decision
-- ACT-151b86d91cdd [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/orchestrator/pipeline_definition.js::FILE if it is not part of Forge scope/contracts.
-  - reason: action explicitly marked requires_decision
-- ACT-2481b7063d69 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/orchestrator/autonomous_runner.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
-  - reason: action explicitly marked requires_decision
-- ACT-b7785f4325e9 [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/orchestrator/autonomous_runner.js::FILE if it is not part of Forge scope/contracts.
-  - reason: action explicitly marked requires_decision
-- ACT-d044cb96dc45 [ORPHAN_ARTIFACT/LOW] Either map artifact artifacts/intake/repository_inventory.json to a requirement (if valid) or remove it if it violates namespace/scope rules.
-  - reason: action explicitly marked requires_decision
+- None
 
 ## Rejected Actions
 - None
 
 ## Next
-- next_step: BLOCKED pending explicit decision override
+- next_step: MODULE_FLOW — Decision Gate COMPLETE. Next=Backfill (implement backfillEngine + task bridge).
