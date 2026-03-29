@@ -68,6 +68,18 @@ function extractTaskNumber(value) {
   return Number(match[1]);
 }
 
+function extractPipelineTaskIds() {
+  const pipeline = loadPipelineModule();
+
+  return pipeline.map((item) => {
+    const match = String(item && item.task_name ? item.task_name : "").match(/TASK-\d+/);
+    if (!match) {
+      throw new Error(`INVALID PIPELINE TASK NAME: ${item && item.task_name ? item.task_name : ""}`);
+    }
+    return match[0];
+  });
+}
+
 function listTaskArtifactFiles() {
   if (!fs.existsSync(TASKS_DIR)) {
     throw new Error("TASKS DIRECTORY NOT FOUND");
@@ -172,7 +184,21 @@ function buildConsistentState(taskFacts, closureMap) {
   }
 
   const lastCompletedTaskId = closedTasks.length > 0 ? closedTasks[closedTasks.length - 1] : null;
-  const currentTask = openTasks.length > 0 ? openTasks[0] : null;
+  const pipeline = loadPipelineModule();
+
+  let currentTask = null;
+
+  for (const module of pipeline) {
+    const taskId = module.task_name.match(/TASK-\d+/)[0];
+
+    const isClosed = closureMap.has(taskId);
+
+    if (!isClosed) {
+      currentTask = taskId;
+      break;
+    }
+  }
+
   const currentStage = deriveStageFromTask(currentTask, taskFacts.map((item) => path.basename(item.stage_artifact || "")));
 
   return {
@@ -285,21 +311,29 @@ function deriveState() {
     }
 
     const taskFacts = buildTaskFacts(taskNames, closureMap, allFiles);
+    const pipelineTaskIds = extractPipelineTaskIds();
+    const pipelineTaskFacts = pipelineTaskIds.map((taskId) => {
+      const fact = taskFacts.find((item) => item.task_id === taskId);
+      if (!fact) {
+        throw new Error(`PIPELINE TASK NOT FOUND IN REGISTRY: ${taskId}`);
+      }
+      return fact;
+    });
 
     let firstOpenEncountered = false;
 
-    for (const fact of taskFacts) {
+    for (const fact of pipelineTaskFacts) {
       if (!fact.has_closure_artifact) {
         firstOpenEncountered = true;
         continue;
       }
 
       if (fact.has_closure_artifact && firstOpenEncountered) {
-        return buildInconsistentState(taskFacts, fact.task_id);
+        return buildInconsistentState(pipelineTaskFacts, fact.task_id);
       }
     }
 
-    return buildConsistentState(taskFacts, closureMap);
+    return buildConsistentState(pipelineTaskFacts, closureMap);
   } catch (error) {
     return {
       status_type: "FORGE_BUILD_STATE",

@@ -27,6 +27,7 @@ function syncLiveStatusFromForgeState() {
     return;
   }
 
+  console.log("[FORGE] PIPELINE COMPLETE — NO ACTION REQUIRED");
   return;
 }
 
