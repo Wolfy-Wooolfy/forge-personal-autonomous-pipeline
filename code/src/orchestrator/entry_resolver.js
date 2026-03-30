@@ -94,7 +94,7 @@ function resolveEntry() {
   }
 
   if (contiguousClosedIndex === -1) {
-    if (forgeTask !== "" && forgeTask !== pipeline[0].task_name) {
+    if (forgeTask !== "" && extractTaskId(forgeTask) !== extractTaskId(pipeline[0].task_name)) {
       return {
         entry_type: "BLOCKED",
         next_module: null,

@@ -1,10 +1,10 @@
 {
   "module": "INTAKE",
-  "generated_at": "2026-03-11T11:43:50.360Z",
-  "total_files": 283,
-  "total_directories": 48,
+  "generated_at": "2026-03-30T11:40:30.415Z",
+  "total_files": 338,
+  "total_directories": 55,
   "classification": "IMPROVE",
   "repository_state": "MIXED",
-  "repository_root_hash": "68b4f8f060e751fe49b216596e03d808128faea2b5bb0df894474e3a57eb0551",
+  "repository_root_hash": "c087ec79029c8708df6b0dd7208e884abbbbba4548e111399624567db68958be",
   "locked_snapshot_flag": true
 }

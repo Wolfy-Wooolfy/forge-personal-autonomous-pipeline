@@ -190,7 +190,6 @@ function buildConsistentState(taskFacts, closureMap) {
 
   for (const module of pipeline) {
     const taskId = module.task_name.match(/TASK-\d+/)[0];
-
     const isClosed = closureMap.has(taskId);
 
     if (!isClosed) {
@@ -199,7 +198,10 @@ function buildConsistentState(taskFacts, closureMap) {
     }
   }
 
-  const currentStage = deriveStageFromTask(currentTask, taskFacts.map((item) => path.basename(item.stage_artifact || "")));
+  const currentStage = deriveStageFromTask(
+    currentTask,
+    taskFacts.map((item) => path.basename(item.stage_artifact || ""))
+  );
 
   return {
     status_type: "FORGE_BUILD_STATE",
@@ -310,8 +312,28 @@ function deriveState() {
       );
     }
 
-    const taskFacts = buildTaskFacts(taskNames, closureMap, allFiles);
+    const artifactTaskIds = Array.from(
+      new Set(
+        allFiles
+          .filter((file) => file.startsWith("TASK-"))
+          .map((file) => extractTaskIdFromArtifact(file))
+      )
+    );
+
     const pipelineTaskIds = extractPipelineTaskIds();
+    const pipelineTaskIdSet = new Set(pipelineTaskIds);
+
+    const invalidArtifactTasks = artifactTaskIds.filter(
+      (taskId) => !pipelineTaskIdSet.has(taskId)
+    );
+
+    if (invalidArtifactTasks.length > 0) {
+      throw new Error(
+        `PIPELINE_CONTRACT_VIOLATION: ${invalidArtifactTasks.join(", ")}`
+      );
+    }
+
+    const taskFacts = buildTaskFacts(taskNames, closureMap, allFiles);
     const pipelineTaskFacts = pipelineTaskIds.map((taskId) => {
       const fact = taskFacts.find((item) => item.task_id === taskId);
       if (!fact) {
@@ -335,6 +357,9 @@ function deriveState() {
 
     return buildConsistentState(pipelineTaskFacts, closureMap);
   } catch (error) {
+    const errorMessage = error && error.message ? error.message : String(error);
+    const isPipelineContractViolation = errorMessage.startsWith("PIPELINE_CONTRACT_VIOLATION:");
+
     return {
       status_type: "FORGE_BUILD_STATE",
       current_stage: null,
@@ -346,7 +371,41 @@ function deriveState() {
       build_progress_percent: 0,
       execution_integrity: "BLOCKED",
       next_allowed_step: "",
-      reason: error && error.message ? error.message : String(error),
+      reason: errorMessage,
+      ...(isPipelineContractViolation
+        ? {
+            pipeline_contract_violation: {
+              violation_type: "PIPELINE_CONTRACT_VIOLATION",
+              detected_at: new Date().toISOString(),
+              context: {
+                pipeline_source: "code/src/orchestrator/pipeline_definition.js",
+                detected_in: [
+                  "artifacts/tasks",
+                  "forge_state",
+                  "execution_registry"
+                ]
+              },
+              invalid_tasks: errorMessage
+                .replace("PIPELINE_CONTRACT_VIOLATION:", "")
+                .split(",")
+                .map((item) => item.trim())
+                .filter(Boolean),
+              impact: {
+                execution_integrity: "INCONSISTENT",
+                system_status: "BLOCKED",
+                completion_allowed: false
+              },
+              enforcement: {
+                mode: "FAIL_CLOSED",
+                action: "HARD_STOP",
+                layers: [
+                  "forge_state_resolver",
+                  "orchestrator"
+                ]
+              }
+            }
+          }
+        : {}),
       derived_from: {
         registry: "code/src/execution/task_registry.js",
         task_artifacts_directory: "artifacts/tasks"

@@ -1,11 +1,11 @@
 {
   "backfill_id": "MODULE_FLOW_BACKFILL_v2",
-  "generated_at": "2026-03-29T15:28:55.767Z",
+  "generated_at": "2026-03-30T12:12:26.316Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "source": {
     "decision_gate_path": "artifacts/decisions/module_flow_decision_gate.json",
-    "decision_gate_sha256": "9f50a101b7c36aeb0705e5e6ee0b103163c52ef298fa0924cab8cbe4ea6ec88a",
+    "decision_gate_sha256": "2dcb0811a591bd75dc11e0a57dee7e5c43f441296bffb0700c7dbbfa74e5c971",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84"
   },
@@ -153,6 +153,40 @@
       }
     },
     {
+      "gap_id": "GAP-074e311df76c",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/orchestrator/entry_resolver.js"
+      ],
+      "action": {
+        "action_id": "ACT-035052872a11",
+        "description": "action explicitly marked requires_decision; approved by explicit override",
+        "impact_scope": "code/trace",
+        "requires_decision": true,
+        "target_path": "code/src/orchestrator/entry_resolver.js",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-074e311df76c",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/orchestrator/entry_resolver.js"
+      ],
+      "action": {
+        "action_id": "ACT-3b3e007edf88",
+        "description": "action explicitly marked requires_decision; approved by explicit override",
+        "impact_scope": "code",
+        "requires_decision": true,
+        "target_path": "code/src/orchestrator/entry_resolver.js",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
       "gap_id": "GAP-079a4b235261",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -217,40 +251,6 @@
         "requires_decision": false,
         "target_path": "DOC-18::R005",
         "action_type": "GENERATE_DOCUMENT",
-        "deterministic_template_used": true
-      }
-    },
-    {
-      "gap_id": "GAP-0871227c9609",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/modules/verifyEngine.js::FILE"
-      ],
-      "action": {
-        "action_id": "ACT-2d908d8b001c",
-        "description": "action explicitly marked requires_decision; approved by explicit override",
-        "impact_scope": "code",
-        "requires_decision": true,
-        "target_path": "CODE::code/src/modules/verifyEngine.js::FILE",
-        "action_type": "BACKFILL_RECONCILIATION",
-        "deterministic_template_used": true
-      }
-    },
-    {
-      "gap_id": "GAP-0871227c9609",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/modules/verifyEngine.js::FILE"
-      ],
-      "action": {
-        "action_id": "ACT-9026261250c9",
-        "description": "action explicitly marked requires_decision; approved by explicit override",
-        "impact_scope": "code/trace",
-        "requires_decision": true,
-        "target_path": "CODE::code/src/modules/verifyEngine.js::FILE",
-        "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
     },
@@ -557,40 +557,6 @@
         "requires_decision": false,
         "target_path": "DOC-00::R004",
         "action_type": "GENERATE_DOCUMENT",
-        "deterministic_template_used": true
-      }
-    },
-    {
-      "gap_id": "GAP-0e27bece3335",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/forge/forge_state_resolver.js::FILE"
-      ],
-      "action": {
-        "action_id": "ACT-46dfb2e14667",
-        "description": "action explicitly marked requires_decision; approved by explicit override",
-        "impact_scope": "code",
-        "requires_decision": true,
-        "target_path": "CODE::code/src/forge/forge_state_resolver.js::FILE",
-        "action_type": "BACKFILL_RECONCILIATION",
-        "deterministic_template_used": true
-      }
-    },
-    {
-      "gap_id": "GAP-0e27bece3335",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/forge/forge_state_resolver.js::FILE"
-      ],
-      "action": {
-        "action_id": "ACT-6b5ec58b6441",
-        "description": "action explicitly marked requires_decision; approved by explicit override",
-        "impact_scope": "code/trace",
-        "requires_decision": true,
-        "target_path": "CODE::code/src/forge/forge_state_resolver.js::FILE",
-        "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
     },
@@ -1003,40 +969,6 @@
       }
     },
     {
-      "gap_id": "GAP-1ca602cffbf4",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/forge/forge_state_writer.js::FILE"
-      ],
-      "action": {
-        "action_id": "ACT-1a8e066d0150",
-        "description": "action explicitly marked requires_decision; approved by explicit override",
-        "impact_scope": "code",
-        "requires_decision": true,
-        "target_path": "CODE::code/src/forge/forge_state_writer.js::FILE",
-        "action_type": "BACKFILL_RECONCILIATION",
-        "deterministic_template_used": true
-      }
-    },
-    {
-      "gap_id": "GAP-1ca602cffbf4",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/forge/forge_state_writer.js::FILE"
-      ],
-      "action": {
-        "action_id": "ACT-dabeea77573b",
-        "description": "action explicitly marked requires_decision; approved by explicit override",
-        "impact_scope": "code/trace",
-        "requires_decision": true,
-        "target_path": "CODE::code/src/forge/forge_state_writer.js::FILE",
-        "action_type": "BACKFILL_RECONCILIATION",
-        "deterministic_template_used": true
-      }
-    },
-    {
       "gap_id": "GAP-1db7fe5eada5",
       "category": "PARTIAL_COVERAGE",
       "severity": "MEDIUM",
@@ -1135,6 +1067,40 @@
         "requires_decision": false,
         "target_path": "DOC-20::R022",
         "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-1f164d54596a",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/forge/forge_state_resolver.js"
+      ],
+      "action": {
+        "action_id": "ACT-ed002ae6bbbf",
+        "description": "action explicitly marked requires_decision; approved by explicit override",
+        "impact_scope": "code",
+        "requires_decision": true,
+        "target_path": "code/src/forge/forge_state_resolver.js",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-1f164d54596a",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/forge/forge_state_resolver.js"
+      ],
+      "action": {
+        "action_id": "ACT-f325d2e88681",
+        "description": "action explicitly marked requires_decision; approved by explicit override",
+        "impact_scope": "code/trace",
+        "requires_decision": true,
+        "target_path": "code/src/forge/forge_state_resolver.js",
+        "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
     },
@@ -2159,40 +2125,6 @@
       }
     },
     {
-      "gap_id": "GAP-3c318a069efc",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/modules/designExplorationEngine.js::FILE"
-      ],
-      "action": {
-        "action_id": "ACT-7ac241ae8199",
-        "description": "action explicitly marked requires_decision; approved by explicit override",
-        "impact_scope": "code/trace",
-        "requires_decision": true,
-        "target_path": "CODE::code/src/modules/designExplorationEngine.js::FILE",
-        "action_type": "BACKFILL_RECONCILIATION",
-        "deterministic_template_used": true
-      }
-    },
-    {
-      "gap_id": "GAP-3c318a069efc",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/modules/designExplorationEngine.js::FILE"
-      ],
-      "action": {
-        "action_id": "ACT-f50ad75af21c",
-        "description": "action explicitly marked requires_decision; approved by explicit override",
-        "impact_scope": "code",
-        "requires_decision": true,
-        "target_path": "CODE::code/src/modules/designExplorationEngine.js::FILE",
-        "action_type": "BACKFILL_RECONCILIATION",
-        "deterministic_template_used": true
-      }
-    },
-    {
       "gap_id": "GAP-3d06b7a22ad7",
       "category": "PARTIAL_COVERAGE",
       "severity": "MEDIUM",
@@ -3128,40 +3060,6 @@
       }
     },
     {
-      "gap_id": "GAP-53c357436498",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/orchestrator/entry_resolver.js::FILE"
-      ],
-      "action": {
-        "action_id": "ACT-00985768010e",
-        "description": "action explicitly marked requires_decision; approved by explicit override",
-        "impact_scope": "code",
-        "requires_decision": true,
-        "target_path": "CODE::code/src/orchestrator/entry_resolver.js::FILE",
-        "action_type": "BACKFILL_RECONCILIATION",
-        "deterministic_template_used": true
-      }
-    },
-    {
-      "gap_id": "GAP-53c357436498",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/orchestrator/entry_resolver.js::FILE"
-      ],
-      "action": {
-        "action_id": "ACT-ff61f853ddc6",
-        "description": "action explicitly marked requires_decision; approved by explicit override",
-        "impact_scope": "code/trace",
-        "requires_decision": true,
-        "target_path": "CODE::code/src/orchestrator/entry_resolver.js::FILE",
-        "action_type": "BACKFILL_RECONCILIATION",
-        "deterministic_template_used": true
-      }
-    },
-    {
       "gap_id": "GAP-53e5f2fdc8c9",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -3706,40 +3604,6 @@
       }
     },
     {
-      "gap_id": "GAP-621add5464d5",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
-      ],
-      "action": {
-        "action_id": "ACT-0b3852c0eb98",
-        "description": "action explicitly marked requires_decision; approved by explicit override",
-        "impact_scope": "code/trace",
-        "requires_decision": true,
-        "target_path": "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
-        "action_type": "BACKFILL_RECONCILIATION",
-        "deterministic_template_used": true
-      }
-    },
-    {
-      "gap_id": "GAP-621add5464d5",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
-      ],
-      "action": {
-        "action_id": "ACT-151b86d91cdd",
-        "description": "action explicitly marked requires_decision; approved by explicit override",
-        "impact_scope": "code",
-        "requires_decision": true,
-        "target_path": "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
-        "action_type": "BACKFILL_RECONCILIATION",
-        "deterministic_template_used": true
-      }
-    },
-    {
       "gap_id": "GAP-621ca6717c49",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -4025,40 +3889,6 @@
         "requires_decision": false,
         "target_path": "DOC-22::R018",
         "action_type": "GENERATE_DOCUMENT",
-        "deterministic_template_used": true
-      }
-    },
-    {
-      "gap_id": "GAP-68a5d4852da1",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/orchestrator/autonomous_runner.js::FILE"
-      ],
-      "action": {
-        "action_id": "ACT-2481b7063d69",
-        "description": "action explicitly marked requires_decision; approved by explicit override",
-        "impact_scope": "code/trace",
-        "requires_decision": true,
-        "target_path": "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
-        "action_type": "BACKFILL_RECONCILIATION",
-        "deterministic_template_used": true
-      }
-    },
-    {
-      "gap_id": "GAP-68a5d4852da1",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/orchestrator/autonomous_runner.js::FILE"
-      ],
-      "action": {
-        "action_id": "ACT-b7785f4325e9",
-        "description": "action explicitly marked requires_decision; approved by explicit override",
-        "impact_scope": "code",
-        "requires_decision": true,
-        "target_path": "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
-        "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
     },
@@ -5151,6 +4981,40 @@
       }
     },
     {
+      "gap_id": "GAP-809aa1e92a60",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/forge/forge_state_writer.js"
+      ],
+      "action": {
+        "action_id": "ACT-7803f533d7fc",
+        "description": "action explicitly marked requires_decision; approved by explicit override",
+        "impact_scope": "code",
+        "requires_decision": true,
+        "target_path": "code/src/forge/forge_state_writer.js",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-809aa1e92a60",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/forge/forge_state_writer.js"
+      ],
+      "action": {
+        "action_id": "ACT-856790e4d718",
+        "description": "action explicitly marked requires_decision; approved by explicit override",
+        "impact_scope": "code/trace",
+        "requires_decision": true,
+        "target_path": "code/src/forge/forge_state_writer.js",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
       "gap_id": "GAP-80aa6267d61c",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -6184,6 +6048,40 @@
         "requires_decision": false,
         "target_path": "DOC-19::R008",
         "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-9c45e4a74c73",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/orchestrator/autonomous_runner.js"
+      ],
+      "action": {
+        "action_id": "ACT-6ba47a501c75",
+        "description": "action explicitly marked requires_decision; approved by explicit override",
+        "impact_scope": "code",
+        "requires_decision": true,
+        "target_path": "code/src/orchestrator/autonomous_runner.js",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-9c45e4a74c73",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/orchestrator/autonomous_runner.js"
+      ],
+      "action": {
+        "action_id": "ACT-71e754cc88e0",
+        "description": "action explicitly marked requires_decision; approved by explicit override",
+        "impact_scope": "code/trace",
+        "requires_decision": true,
+        "target_path": "code/src/orchestrator/autonomous_runner.js",
+        "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
     },
@@ -7650,6 +7548,40 @@
       }
     },
     {
+      "gap_id": "GAP-c2a71a938add",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/orchestrator/pipeline_definition.js"
+      ],
+      "action": {
+        "action_id": "ACT-74b400e601ba",
+        "description": "action explicitly marked requires_decision; approved by explicit override",
+        "impact_scope": "code/trace",
+        "requires_decision": true,
+        "target_path": "code/src/orchestrator/pipeline_definition.js",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-c2a71a938add",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/orchestrator/pipeline_definition.js"
+      ],
+      "action": {
+        "action_id": "ACT-a67e5427d467",
+        "description": "action explicitly marked requires_decision; approved by explicit override",
+        "impact_scope": "code",
+        "requires_decision": true,
+        "target_path": "code/src/orchestrator/pipeline_definition.js",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
       "gap_id": "GAP-c308e4b7a724",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -7697,6 +7629,40 @@
         "requires_decision": false,
         "target_path": "DOC-22::R003",
         "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-c3dcb5d54230",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/modules/verifyEngine.js"
+      ],
+      "action": {
+        "action_id": "ACT-c528a94d8152",
+        "description": "action explicitly marked requires_decision; approved by explicit override",
+        "impact_scope": "code/trace",
+        "requires_decision": true,
+        "target_path": "code/src/modules/verifyEngine.js",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-c3dcb5d54230",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/modules/verifyEngine.js"
+      ],
+      "action": {
+        "action_id": "ACT-f15e393fc1a5",
+        "description": "action explicitly marked requires_decision; approved by explicit override",
+        "impact_scope": "code",
+        "requires_decision": true,
+        "target_path": "code/src/modules/verifyEngine.js",
+        "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
     },
@@ -9175,6 +9141,40 @@
         "impact_scope": "docs/code/artifacts",
         "requires_decision": false,
         "target_path": "07_Decision_Logging_and_Change_Traceability_Specification::R010",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-eb36dafc91a5",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/modules/designExplorationEngine.js"
+      ],
+      "action": {
+        "action_id": "ACT-782d6f9ff5aa",
+        "description": "action explicitly marked requires_decision; approved by explicit override",
+        "impact_scope": "code",
+        "requires_decision": true,
+        "target_path": "code/src/modules/designExplorationEngine.js",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-eb36dafc91a5",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/modules/designExplorationEngine.js"
+      ],
+      "action": {
+        "action_id": "ACT-8a39542c392e",
+        "description": "action explicitly marked requires_decision; approved by explicit override",
+        "impact_scope": "code/trace",
+        "requires_decision": true,
+        "target_path": "code/src/modules/designExplorationEngine.js",
         "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }

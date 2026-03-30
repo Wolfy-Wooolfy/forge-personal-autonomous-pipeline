@@ -1,19 +1,23 @@
 # Orchestration Run Report
 
-- Run ID: RUN-4CF5C2B9B8B8
-- Run Mode: COMPLETE
-- Started At: 2026-03-29T12:15:00.058Z
-- Last Updated At: 2026-03-29T12:15:00.062Z
-- Status: COMPLETE
-- Entry Type: COMPLETE
-- Blocked: NO
-- Blocking Reason: N/A
-- Reason: Pipeline already complete
-- Current Module: N/A
-- Next Task: N/A
-- Final Outcome: COMPLETE
+- Run ID: RUN-5E02E5D08F6C
+- Run Mode: RESUME
+- Started At: 2026-03-30T12:44:15.239Z
+- Last Updated At: 2026-03-30T12:44:15.305Z
+- Status: BLOCKED
+- Entry Type: RESUME
+- Blocked: YES
+- Blocking Reason: Closure BLOCKED: audit verification failed.
+- Reason: Resume from next incomplete module
+- Current Module: CLOSURE
+- Next Task: TASK-055: MODULE FLOW — Closure
+- Final Outcome: BLOCKED
 
 ## Completed Modules
+
+- None
+
+## Pending Modules
 
 - INTAKE
 - AUDIT
@@ -26,10 +30,6 @@
 - VERIFY
 - CLOSURE
 
-## Pending Modules
-
-- None
-
 ## Execution Log
 
-- No module execution performed
+- 2026-03-30T12:44:15.305Z | CLOSURE | TASK-055: MODULE FLOW — Closure | BLOCKED

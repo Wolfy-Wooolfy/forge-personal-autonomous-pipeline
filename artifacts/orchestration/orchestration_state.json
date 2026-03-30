@@ -1,17 +1,18 @@
 {
-  "run_id": "RUN-4CF5C2B9B8B8",
-  "run_mode": "COMPLETE",
-  "started_at": "2026-03-29T12:15:00.058Z",
-  "last_updated_at": "2026-03-29T12:15:00.062Z",
-  "status": "COMPLETE",
-  "blocked": false,
-  "blocking_reason": "",
-  "reason": "Pipeline already complete",
-  "entry_type": "COMPLETE",
-  "next_task": null,
-  "next_module": null,
-  "current_module": null,
-  "completed_modules": [
+  "run_id": "RUN-5E02E5D08F6C",
+  "run_mode": "RESUME",
+  "started_at": "2026-03-30T12:44:15.239Z",
+  "last_updated_at": "2026-03-30T12:44:15.305Z",
+  "status": "BLOCKED",
+  "blocked": true,
+  "blocking_reason": "Closure BLOCKED: audit verification failed.",
+  "reason": "Resume from next incomplete module",
+  "entry_type": "RESUME",
+  "next_task": "TASK-055: MODULE FLOW — Closure",
+  "next_module": "CLOSURE",
+  "current_module": "CLOSURE",
+  "completed_modules": [],
+  "pending_modules": [
     "INTAKE",
     "AUDIT",
     "TRACE",
@@ -23,6 +24,5 @@
     "VERIFY",
     "CLOSURE"
   ],
-  "pending_modules": [],
-  "final_outcome": "COMPLETE"
+  "final_outcome": "BLOCKED"
 }

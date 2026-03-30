@@ -80,6 +80,7 @@ function syncBlockedRuntimeStateFromForgeState(error) {
     blocked: true,
     blocking_reason: reason,
     reason,
+    pipeline_contract_violation: forgeState.pipeline_contract_violation || null,
     entry_type: "BLOCKED",
     next_task: currentTask || null,
     next_module: currentModule ? currentModule.module_id : null,
@@ -145,9 +146,12 @@ Promise.resolve()
   .then(() => {
     const forgeState = writeForgeState();
 
-    if (String(forgeState.execution_integrity || "").toUpperCase() === "BLOCKED") {
+    if (
+      String(forgeState.execution_integrity || "").toUpperCase() === "BLOCKED" ||
+      forgeState.pipeline_contract_violation
+    ) {
       throw new Error(
-        `FORGE GOVERNANCE BLOCK: ${forgeState.reason || "UNKNOWN REASON"}`
+        `FORGE GOVERNANCE BLOCK: ${forgeState.reason || "PIPELINE CONTRACT VIOLATION"}`
       );
     }
 

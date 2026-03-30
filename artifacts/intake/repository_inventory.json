@@ -36,6 +36,708 @@
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
+    "path": "artifacts/archive/",
+    "size_bytes": 0,
+    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/",
+    "size_bytes": 0,
+    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/forge/",
+    "size_bytes": 0,
+    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/forge/forge_state.json",
+    "size_bytes": 2069,
+    "hash": "4c909fac3caa05d58b94f30615bb5bba68a29480c7d56ee6f79d49f2ad116c47",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/orchestration/",
+    "size_bytes": 0,
+    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/orchestration/orchestration_run_report.md",
+    "size_bytes": 678,
+    "hash": "e675d38ef1cedf1e0c4480c088c1fb7093b1e9775c6518ec1acaf9c89562423e",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/orchestration/orchestration_state.json",
+    "size_bytes": 2524,
+    "hash": "f3a9fd4ff92381d2310001dcad003be33faa46bfea657e0e7389795839bd668c",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/reset_manifest.json",
+    "size_bytes": 4307,
+    "hash": "9fef5c170e688a11626ede44a58f19045317e289de340126e11d5859f3c06829",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/",
+    "size_bytes": 0,
+    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/",
+    "size_bytes": 0,
+    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-028.execution.closure.md",
+    "size_bytes": 285,
+    "hash": "15af5ed1523dd758ee6c39f5684f6bf46505e6bae2483b245c0f322cf6fba553",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-029.execution.closure.md",
+    "size_bytes": 1825,
+    "hash": "79315e85314a71f6dbf5dee44afe57e3bab803d062fbb2640f4246830b5c6e05",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-030.execution.closure.md",
+    "size_bytes": 1388,
+    "hash": "c769d377ac32e26d4ad85878fddde2f434faec42eece1c19990c618b0fe8fe49",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-031.execution.closure.md",
+    "size_bytes": 841,
+    "hash": "5cf69d38c91fd0c5cfb02fa27f60f01e060529777de7991dd2f8a8ea27af7273",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-032.execution.closure.md",
+    "size_bytes": 1324,
+    "hash": "47345823948006e78e50f45889b22af32f2f8997677617a51006aa62404ee014",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-033.execution.closure.md",
+    "size_bytes": 442,
+    "hash": "dff7ae5d4afcf717468f6518236caddca40d069474b7c40887c9b9b752abea72",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-034.execution.closure.md",
+    "size_bytes": 103,
+    "hash": "24b937e52abeca89522fac8ac61970e9b7067cd809a4b891626c81f51528342f",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-035.execution.closure.md",
+    "size_bytes": 347,
+    "hash": "6d65d4d02939eb9c44145b7ddd29a05eec84628f6470501933c5ca5dd7afaee0",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-036.execution.closure.md",
+    "size_bytes": 240,
+    "hash": "b07f54696c706f730d82ca1c6b7010f119fb94436d960c9d43b6609b0bbe4348",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-037.execution.closure.md",
+    "size_bytes": 230,
+    "hash": "6e5d7f8ab3abe17d82dea78bf40ee9c0e6260acf9bee469f6dde5bfd44503fda",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-038.execution.closure.md",
+    "size_bytes": 367,
+    "hash": "8fc0b4dd48f96a506e04c00c8f9e924a9e62b8e6f75df2b2b25a427ed9448229",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-039.execution.closure.md",
+    "size_bytes": 258,
+    "hash": "dea8613921539b55d57c48d0083680eef4e4edce0734ef41b2fa28f8ebd43cc2",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-040.execution.closure.md",
+    "size_bytes": 261,
+    "hash": "495ae47e867f628e5311d929fc63ae6e851aa71541bb32d86442666fa71cd4f8",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-041.execution.closure.md",
+    "size_bytes": 340,
+    "hash": "e504d39124547981ee96a77f4cade4e2d96dce1f485d87d719dcfb0829d48cd1",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-042.execution.closure.md",
+    "size_bytes": 170,
+    "hash": "96a9d286ee44077012dfa11135337c130ad0c5d388311194b493799522ebfd61",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-043.execution.closure.md",
+    "size_bytes": 221,
+    "hash": "5e3e71bfd60b3f8e8e5dcd5aef2c32a77acf9c9750ee4ac5502a1302d060ddfe",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-044.execution.closure.md",
+    "size_bytes": 170,
+    "hash": "ff8a201e6978ce525dfc9a351a14027c7d6e5d775b3fb795cb097d5c3ef4daf0",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-045.execution.closure.md",
+    "size_bytes": 217,
+    "hash": "b36dd52c0b75e3f5f098eb01421bf274c1bca5152964b7d1126500ff01d1e6e6",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-046.execution.closure.md",
+    "size_bytes": 223,
+    "hash": "7ab45e9c5e1b6ae12a5923386e8dea68dcc9d558032f750e57929dc4b66d13de",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-050.execution.closure.md",
+    "size_bytes": 281,
+    "hash": "b16371da03ebc0092b9eb0c2aebe011582d82b8a163ce2f7442f99afc2c48527",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-051.execution.closure.md",
+    "size_bytes": 273,
+    "hash": "1e436567f832d8a68a4c4863b447f1c519a878a03cb75969443ebe178574ed70",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-052.execution.closure.md",
+    "size_bytes": 315,
+    "hash": "ba9edc8c60855e497307a774a516d72212a7acac607a8b03eeee70cc5e3b2ad2",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-053.execution.closure.md",
+    "size_bytes": 292,
+    "hash": "9681cca19a690de67c3ab0fc728871b6c04ea09197eea3d7c0accc32f1aded2e",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-054.execution.closure.md",
+    "size_bytes": 287,
+    "hash": "7f138199539a5799657d96f6832dbf82a87bbb5387a26770b864412493e6cf36",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-055.execution.closure.md",
+    "size_bytes": 249,
+    "hash": "9bb3fce86815fa7fa525319e79620a567bda75b12dc00e34fd4c95592f8e47fb",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-059.execution.closure.md",
+    "size_bytes": 373,
+    "hash": "a44d8f6baa0a6b6c9c55204dffcf0675fbec8c726d0bd892453d86900543705f",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-060.execution.closure.md",
+    "size_bytes": 1189,
+    "hash": "eacf877c32b8216c2b134808f2cbfe9aea26e3a393b079fd6eb60879544b84b2",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-061.execution.closure.md",
+    "size_bytes": 298,
+    "hash": "0eace705acd0493c18f6fef50d189f8941230aadf538286f44c8d064db9e3dbd",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/_invalidated_after_task_066/TASK-064.execution.closure.md",
+    "size_bytes": 1569,
+    "hash": "30416ba14a93311ef3f10537686f714d054ff674595fa532ef11e59b6634948b",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-022.stageA.plan.md",
+    "size_bytes": 1143,
+    "hash": "6880196acd3a08020f73350e8b990fe1601e9b21f303ade9f8fd38313ee9c0a4",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-022.stageB.skeleton.md",
+    "size_bytes": 891,
+    "hash": "fe7f8d80182ccb07d38d17189076af9cd43d08506030025354171b6c4b251687",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-022.stageC.verify.md",
+    "size_bytes": 1149,
+    "hash": "e4e874e8d50c32ba3df1e223ca321d6c977e7245bd41bbf755eac73d616d3dca",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-023.stageA.autonomy-contract.md",
+    "size_bytes": 1403,
+    "hash": "05f8d4340324b03344e15d41370ac93b4b05fe61fff10281fea67eb5f5d2767d",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-023.stageB.skeleton.md",
+    "size_bytes": 1450,
+    "hash": "ee6c8fe01bd9150542d03ee27cf878fc6ce5c0416712eab45728a79cd1cadc25",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-023.stageC.verify.md",
+    "size_bytes": 1433,
+    "hash": "4620bb74b14845336ebe37c07182cbb0dd50cb8a6f656915f5ea7f306aa954b6",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-024.stageA.verification-contract.md",
+    "size_bytes": 1715,
+    "hash": "d65525362fdc05b347cecff06ee8894c32e565980aa32f4024b8db173cd52c2f",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-024.stageB.skeleton.md",
+    "size_bytes": 1423,
+    "hash": "90f657d858b40cc75f466c5b3627afe63e240fedb88863cfa9df605e53365bc8",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-024.stageC.verify.md",
+    "size_bytes": 1548,
+    "hash": "ce619d4b46fbc63dd1bd5daa747b288cf006e24845fb92d9c975efe29237dabb",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-025.stageA.decision-logging-contract.md",
+    "size_bytes": 1645,
+    "hash": "11f6f6b9154c07848f85440daa695343994873ccdc5743cfeb3f5cb3f0efd9d8",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-025.stageB.skeleton.md",
+    "size_bytes": 1346,
+    "hash": "b0ace0e1744a8eb08597a2cd15f550bc238663469f5038c979c1248d96090d98",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-025.stageC.verify.md",
+    "size_bytes": 1536,
+    "hash": "794e2c2a7ed978b46864afefbc8aa2c9e34d03d8f551a1c10351f9bccf1161e8",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-026.stageA.autonomy-contract.md",
+    "size_bytes": 1387,
+    "hash": "c3bc4765ff8d18f67caa0b14b6f7ea7b0b2d08f22d14894896e554b82b26c1cf",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-026.stageC.verify.md",
+    "size_bytes": 1460,
+    "hash": "c9aa19d41d54386e9375e455217da29988e6fedb0ca5ef383893e92c418b6aa2",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-027.stageA.report-contract.md",
+    "size_bytes": 1371,
+    "hash": "0c6e780b599652c2f2902f6bb5c5637525b197402bf21638c92655598f6b959f",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-027.stageB.skeleton.md",
+    "size_bytes": 1369,
+    "hash": "b29ceb5a72e974e0caf877b0379a70a26f1264cdb8aaf036a3231d5cecadf9fa",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-027.stageC.verify.md",
+    "size_bytes": 1479,
+    "hash": "d9fbf40c998bc63963e60101ee82693f42cd4e83225763af509cbdbddb06ccfe",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-028.stageA.runtime-hardening.md",
+    "size_bytes": 783,
+    "hash": "e1d3fe9050f3889db9701cb25f2d7ed5d94eb683358050c089948c7bc48feca2",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-028.stageB.skeleton.md",
+    "size_bytes": 698,
+    "hash": "79f11cb4c0797b2e006f0c6d535b461f84850d7a004a1721274f0e46b56e4481",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-028.stageC.verify.md",
+    "size_bytes": 1575,
+    "hash": "639e0361ebd4bb62fdabcf52304be0a185972eb4cb0cc3edd40e3c2cd68c92b8",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-029.stageA.multi-step-contract.md",
+    "size_bytes": 845,
+    "hash": "ad5d2fe0ed988c840412069a782eb634d3b9784ea36882b606ee9ed87b41ea4d",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-029.stageB.skeleton.md",
+    "size_bytes": 669,
+    "hash": "1003cd88423a9be03be6a2e938533c9cbe0cfee53fccecc8b5467f4412a7f3f0",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-030.stageA.execution-engine-contract.md",
+    "size_bytes": 808,
+    "hash": "6f7db74395e9334afc035a8799881bd0e95bd6859e28a46e2196ed1317baf565",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-030.stageB.skeleton.md",
+    "size_bytes": 717,
+    "hash": "25d587ae83f6520cbf1a1894bc391226e908ac2b9318bb60c1fd4d5e51e1d399",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-031.stageA.first-handler-contract.md",
+    "size_bytes": 662,
+    "hash": "1e18a3341cfd5a0110a6778d69b1abda1a89115fab42e9905c60b3aa09b20c30",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-031.stageB.skeleton.md",
+    "size_bytes": 650,
+    "hash": "fcc4804c02d2a8b52cd5f6c1caea42977801759d01ce022ec7270b8e43d9f79a",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-032.stageA.idempotency-contract.md",
+    "size_bytes": 1972,
+    "hash": "262ca64661781f417af2a830c126a126aa42e95bb25b2ed0b4ecafab8b6e5e8d",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-033.stageA.trace-engine-contract.md",
+    "size_bytes": 1116,
+    "hash": "3bee10f93e0a069b63c5ebd787fb4624fa56632b7778a4310aed0bc605318d84",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-034.stageA.verification-contract.md",
+    "size_bytes": 663,
+    "hash": "fb1aaa7d89b2962798cc50d544f1880e533a558a3b5b918e112b668d3afb3a1c",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-035.stageA.trace-by-clause-contract.md",
+    "size_bytes": 606,
+    "hash": "cb0946b09720b9eba6920c1d5559905978812b76ea9d093eb2d4bf74cdb5c247",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-038.stageA.trace-rebuild-contract.md",
+    "size_bytes": 1055,
+    "hash": "c6f6d53a47607219a97cc0b29397ee3431ddeba84e7ecbd64da1282d50fc0ee2",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-039.stageA.stageC-closure-contract.md",
+    "size_bytes": 1048,
+    "hash": "b96a7c50c285d49fd7c2a41cf865e61ae85fe35fd561a99109e9abd03d2f9ed5",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-040.stageA.encoding-normalization-contract.md",
+    "size_bytes": 777,
+    "hash": "c1c4a88663262e84e2f0339874dca3e7825be016a8104f5a2d724317e3312b1b",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-041.stageA.verification-contract.md",
+    "size_bytes": 712,
+    "hash": "9ca510b605168c6204069d45207f7ed7d13f2fdcb7249684ca92c2d17a0893c3",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-042.stageA.verification-contract.md",
+    "size_bytes": 1020,
+    "hash": "778a24aa5647a60f3a680f88e484104b094c3c6810c2b4626e7f56cc96d4ec92",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-043.stageA.verification-contract.md",
+    "size_bytes": 1389,
+    "hash": "06e7fe5aea2451b24638316f64facfda54dde8752af90c71e94c94a4f4269c5a",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-044.stageA.verification-contract.md",
+    "size_bytes": 786,
+    "hash": "c488bc080540e538bdc163284782dc63c1590e01f1b7afbea345bfbd1ae7819f",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-045.stageA.verification-contract.md",
+    "size_bytes": 899,
+    "hash": "90f92091e31f8d65ecad06b6e829c26708444dcc1c3960d1ca9bf60505056f0c",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-046.stageA.verification-contract.md",
+    "size_bytes": 952,
+    "hash": "11804fcace08c8248fab6c9cfe5f8ef9cae88e741492c683245b216458e4b8d0",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-047.execution.closure.md",
+    "size_bytes": 360,
+    "hash": "46639eca4b0229b01f30baeaca21b5c716898bf3ca44cf019e35303eb0bdb5eb",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-047.stageA.module-flow-intake.md",
+    "size_bytes": 506,
+    "hash": "cfe28e6184656c69de1960f9fc0c72af8a4e0ffee2f94752c6130fdd6e959c12",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-048.execution.closure.md",
+    "size_bytes": 320,
+    "hash": "09c23f854153bf0cf59b0f9d829873fcab77468cda997f04d9285dd2dcf41806",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-048.stageA.module-flow-audit.md",
+    "size_bytes": 649,
+    "hash": "d3414ffd022bf50b22160f400c7609b6002196d243f61ea01304a6a0876c97c7",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-049.execution.closure.md",
+    "size_bytes": 215,
+    "hash": "6bb69573ebaee384cb42ec46a198e17cd49a447914e7070f998e0df1a1b16b68",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-049.stageA.audit-refresh-contract.md",
+    "size_bytes": 1249,
+    "hash": "70adb9f04f976e506ef49162d46fce9d5240d3b27caec6a9000d9ac4d69deed1",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-050.execution.closure.md",
+    "size_bytes": 267,
+    "hash": "39677f6ff2dd85a036ada1b0931b802f754765fb05ea4a1251014f215753e96d",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-050.stageA.module-flow-trace.md",
+    "size_bytes": 1544,
+    "hash": "dc4e730983772ee849efd90de4efa733bc715413d3e49a690b72fdfa38f51056",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-051.execution.closure.md",
+    "size_bytes": 260,
+    "hash": "23466744e87b84ce2de250850edf3d49a6eb3a049dccb47a7ab3470738e4b4bf",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-051.stageA.module-flow-gap.md",
+    "size_bytes": 1587,
+    "hash": "a904648001b4d6b32f46ab2fb945b959fd1ff8e80326acf44a34170b0720769b",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-052.execution.closure.md",
+    "size_bytes": 301,
+    "hash": "b3c8d18ea1edd64c0ecc87135bc3bc4b044c255d4fbe023466a3c701e3ba4961",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-052.stageA.module-flow-decision-gate.md",
+    "size_bytes": 1190,
+    "hash": "6b3d67f5d516973a842cf9f11345a4833abb8be802b2fd0a3ccc2227487d2cd2",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-053.execution.closure.md",
+    "size_bytes": 278,
+    "hash": "ce28d4056abe950b6dc68dc8e7cc560e00da2474290d250bc45287321bc23d8c",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-053.stageA.module-flow-backfill.md",
+    "size_bytes": 905,
+    "hash": "3618d2368350465efb54d7748481215c4521f766aa7040492837d9cd5cd7c955",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-054.execution.closure.md",
+    "size_bytes": 273,
+    "hash": "9b3edbfad9f54686954dc35d30778420bcc02f8497b076e43fa6c3d468bc1934",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-054.stageA.module-flow-execute.md",
+    "size_bytes": 811,
+    "hash": "94aa41af1c3c4195b45f93c8586f6c64d8865af61c00b9b9f77c03c2dae24692",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-055.execution.closure.md",
+    "size_bytes": 330,
+    "hash": "8feeeb9dc46e549b219788aad668b902944b2d4518a43195cf664fbb84ab8bdf",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-055.stageA.module-flow-closure.md",
+    "size_bytes": 1201,
+    "hash": "4b7f09bb8a90ea2b61a9a3f0e8bcc5ec4de2652734c10815e79b76bca5b0e245",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-056.stageA.operating-modes-contract.md",
+    "size_bytes": 1039,
+    "hash": "6d7a3fa4bbcfe63889136a63625448d31af0a8670dbe1338f7e0491c56394b26",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-057.stageA.intake-classification-contract.md",
+    "size_bytes": 1158,
+    "hash": "a28abc854ccd278ea6226befbcc8067a5f4b916bda700af8e67a9f2d1be8bdd4",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-058.stageA.intake-engine-contract.md",
+    "size_bytes": 940,
+    "hash": "067dc10f2dad73aa4e8cdc4f702588c3804de60632ff7b6327a4cd7a775c9445",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-060.stageA.closure-realignment-contract.md",
+    "size_bytes": 4659,
+    "hash": "5b1fe2ab148e1b8f0608716cee425ad55991a9ce873e9b16fd8fd5d260ce354d",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-061.execution.closure.md",
+    "size_bytes": 284,
+    "hash": "3578555170e21cc1ad22fa0c3893436e44e5542bb61d000a92ad28d212e02e4a",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-061.stageA.verification-layer-contract.md",
+    "size_bytes": 1261,
+    "hash": "7f9c4e3a0368ea47af0de39557932599c458f5545eeee525084c608c2a4d46f5",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-061.stageB.verification-gap-analysis.md",
+    "size_bytes": 1504,
+    "hash": "8fcd0a7489ece5ce2cd67675f7b4a55e8452adf0a9d7c197f2225f18735ba701",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-061.stageC.verification-design.md",
+    "size_bytes": 1985,
+    "hash": "4e3ce361cdc8a0d6f5b8cb96cb6a9e96c68f27c724ca2cd237ead67f0046d68a",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-062.stageA.autonomous-orchestrator-contract.md",
+    "size_bytes": 14103,
+    "hash": "e04ad4734cb18a6371837fc6232b88e531c3bdd8a56e56b2d129c148b4be1cc6",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-062.stageB.orchestrator-gap-analysis.md",
+    "size_bytes": 4724,
+    "hash": "71a8f5f59dfe45cb0fdb2118b5ebd416949b756938e04a62a37855cfa2ae9406",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-062.stageC.orchestrator-architecture-design.md",
+    "size_bytes": 13281,
+    "hash": "f528a1df7e0555ee6cc97e27e1ace6f2e084d51093f778b5b30a51743018b0a0",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-063.stageA.forge-build-state-derivation-contract.md",
+    "size_bytes": 9140,
+    "hash": "b1bb3de6787105e90ac51e42726843ad842082bcb0be4d6eb6728f6bd3b75487",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-063.stageB.forge-build-state-gap-analysis.md",
+    "size_bytes": 5040,
+    "hash": "101151496b3b4074c946a21decf9d1571a727a4bb9c750771e5251005e03d4c7",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-063.stageC.forge-build-state-derivation-design.md",
+    "size_bytes": 4961,
+    "hash": "e81cc5c4a50ae1ab2fe312590fac1f253005f67b2d195f1f884d831be12f423f",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-064.stageA.forge-build-state-governance-gate-contract.md",
+    "size_bytes": 2484,
+    "hash": "c4263f2b3361d5fcef86ad7e3c5a1e5b67d1cbd24bfe452bc403bc0471583a7d",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-064.stageB.forge-build-state-governance-gate-gap-analysis.md",
+    "size_bytes": 2042,
+    "hash": "d3e03687b2dda676526de22e5f3f595ee8c78f8c9b233a8f8eff848c6fd10667",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-065.stageA.registry-closure-consistency-audit-contract.md",
+    "size_bytes": 2088,
+    "hash": "69954c9f443d2b82d40a17a6056676c9138ca4efad26cdda7f2bd2506502e029",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-065.stageB.registry-closure-consistency-gap-analysis.md",
+    "size_bytes": 3058,
+    "hash": "f934bd525c01351179d21683d69ce87b8c6343b01abb0d88a20ea9515883d13c",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-065.stageC.registry-closure-resolution.md",
+    "size_bytes": 1794,
+    "hash": "ccdfb8882f6633acb526965e5c9bf11569ce6c0b271c2b950d1723723cc24417",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-066.execution.closure.md",
+    "size_bytes": 300,
+    "hash": "617cb0d0c5ad3bdc6452b1977b1ac756eb9fb3da580f92f8ed2f461af1216fc9",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/tasks/TASK-066.stageA.design-exploration-contract.md",
+    "size_bytes": 1320,
+    "hash": "b03f2eeeec49ba66e49d7cf9fdecbc64f69e23f9083c3fcf2d132475acefce42",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
     "path": "artifacts/audit/",
     "size_bytes": 0,
     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -49,14 +751,14 @@
   },
   {
     "path": "artifacts/audit/audit_findings.json",
-    "size_bytes": 163,
-    "hash": "eb13652a1f4fe11d9da99fb899f93eb22dfecc6b9b87443aad1ff3aa03e933d0",
+    "size_bytes": 638,
+    "hash": "70e53ef102aae01bad48c4e5dd73ebb9f9d0a35306f341dbfe83dd2bf13ebd45",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/audit/audit_report.md",
-    "size_bytes": 126,
-    "hash": "70246857aae65d282878044f3eee59891fccad6e69510d9bf65c98a5a9158309",
+    "size_bytes": 426,
+    "hash": "dcc5d319c52b8c14bcdc041257c1b96cc9a1f508bddb548619336f27c5619667",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -68,43 +770,31 @@
   {
     "path": "artifacts/backfill/backfill_created_files.json",
     "size_bytes": 71,
-    "hash": "3d5394dff1b12fcc73403f1b9450a9693b314957af42501f805d619f5b6529d5",
+    "hash": "5c84ee0363177e9a16f565ddfed4166eadf05de528e21313569c098b1c28049a",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/backfill/backfill_execution_log.md",
-    "size_bytes": 51973,
-    "hash": "2ab20fb7df8db0d132c1735edb6c0198662c978998535e3375563b481a6670b5",
+    "size_bytes": 125019,
+    "hash": "67a18b0870fce2f3c682191c4041e397390fee8e7389b6fdd9e75f641e73d798",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/backfill/backfill_plan.json",
-    "size_bytes": 54566,
-    "hash": "c477a69f99a688f326362e94fdb2d758062c01169e09fe98d0a69ef0d885975d",
+    "size_bytes": 544,
+    "hash": "6850e987f71cd803f48b5c1493b056520d6d527069d19e1412d372e959306b5a",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/backfill/backfill_report.md",
-    "size_bytes": 543,
-    "hash": "19c5d24a7b4cdce65aa88e19d460c3f2510a6655e780593478b1f9a025626284",
+    "size_bytes": 542,
+    "hash": "134b8cd0e33e7ca4ecedd00e896ebf67c73d55c8e636ba6c06e59d1b12f8c9b3",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/backfill/backfill_tasks.json",
-    "size_bytes": 132630,
-    "hash": "077ee8f27650b345b2e8c2a0b946452ec922b07bca8c6dc189500f46623828d8",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/closure/",
-    "size_bytes": 0,
-    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/closure/closure_report.md",
-    "size_bytes": 930,
-    "hash": "357f8f536d8f025bf5cefa488b3dd804b1b88f39adb064d04c3a6eeb2359d99a",
+    "size_bytes": 325763,
+    "hash": "db5077d3bf9bb0caaf7d6704cbc491206e11d1bde97d0823ae65427be43feb3b",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -115,32 +805,44 @@
   },
   {
     "path": "artifacts/decisions/module_flow_decision_gate.json",
-    "size_bytes": 135010,
-    "hash": "a857e16409df0c66ec67023a6760e6a766de3e20d52d359b67aa809da7f761b2",
+    "size_bytes": 299190,
+    "hash": "9f50a101b7c36aeb0705e5e6ee0b103163c52ef298fa0924cab8cbe4ea6ec88a",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/decisions/module_flow_decision_gate.md",
-    "size_bytes": 58146,
-    "hash": "4ffc3cf0eeed8713140fd0875923ee92129e8f45723897f50aca32a534b8e274",
+    "size_bytes": 129173,
+    "hash": "de6e92549f3724c6ea45d780044f00f4881d9bf502135b3258223228e8a5fa10",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
-    "path": "artifacts/execute/",
+    "path": "artifacts/exploration/",
     "size_bytes": 0,
     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
-    "path": "artifacts/execute/execute_plan.json",
-    "size_bytes": 54198,
-    "hash": "10b9235f461dd1406ffb447edd2de22a49c3c160fa23786ba6ee219626ca3199",
+    "path": "artifacts/exploration/exploration_report.md",
+    "size_bytes": 133852,
+    "hash": "9746dbc42e20a621014050592c1f1c24219797a2440c5f76ff10139b792b8b82",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
-    "path": "artifacts/execute/execute_report.md",
-    "size_bytes": 20584,
-    "hash": "bfa924f42725a7f03a53631c2e3ba27804c98711f9e29ce00b536013323a0564",
+    "path": "artifacts/exploration/option_matrix.json",
+    "size_bytes": 675197,
+    "hash": "31efe09f053955e50d0e072a137bf776b4344bd9a52ac1ee33f7a347a9310318",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/forge/",
+    "size_bytes": 0,
+    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/forge/forge_state.json",
+    "size_bytes": 1168,
+    "hash": "053fa9380086e8e3c756fcd8133d0dbf9702c8004cde7239a70a6fdac5117743",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -151,14 +853,20 @@
   },
   {
     "path": "artifacts/gap/gap_actions.json",
-    "size_bytes": 166795,
-    "hash": "57bf801433f43431a6f55ee9fb716bf577b3a97ce5de447a94aeeb3b972d97d4",
+    "size_bytes": 368685,
+    "hash": "be7f2404da72bd1ea1bebbf230c6be197082180467bad8013bbb4966bee428c6",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "artifacts/gap/gap_error.md",
+    "size_bytes": 85,
+    "hash": "f4534685a8565ed11c9c9136bb83117c7e186388654ec9faea9fd2c946317382",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/gap/gap_report.md",
-    "size_bytes": 99994,
-    "hash": "5906228f2c572bd9fa9d50cdf87f0ca6f93a80aff6a104ebfea10db5c3b3b1da",
+    "size_bytes": 220840,
+    "hash": "c59c86004c69bf5c9d189e01d20af5e88f54535bfd1c9972d5d99ea2e4a025e6",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -169,14 +877,14 @@
   },
   {
     "path": "artifacts/orchestration/orchestration_run_report.md",
-    "size_bytes": 607,
-    "hash": "4dbd884d509f82870ad716eebf8192e5651023e3d43b2406471b4fd1260af686",
+    "size_bytes": 564,
+    "hash": "a3a5b29709d29b1dc2598f81a1522c74bbb006f7b67cad630b934e9e89de1f69",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/orchestration/orchestration_state.json",
-    "size_bytes": 659,
-    "hash": "6b878835ea704ea2941445dc3725f03e68e118382b13622c3698d854bd8150fe",
+    "size_bytes": 625,
+    "hash": "9be104920abc55d8251811fd6f67f23c8914f63a14b49e12c3d02e551fac9e47",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -224,13 +932,13 @@
   {
     "path": "artifacts/release/RELEASE_MANIFEST_v1.json",
     "size_bytes": 435,
-    "hash": "22e6bfdd890ac2b8d25c5c1ef1e7a8e9fce3c8c638840e4681ea4c31dca9ce2b",
+    "hash": "831686ca4b5871e5028d47e6fc27a1311ea44a9d3bdb24de41e0986524042ae7",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/release/repository_hash_snapshot.json",
     "size_bytes": 242,
-    "hash": "c8db05f7703ebd9797469c92fd73a7e00dde9805bf7815948c4b2f39a7aa98af",
+    "hash": "d271812c09849be9e81c9a11dd021f7b08cccaa45b469458dae168f0649ce87f",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -468,513 +1176,63 @@
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
-    "path": "artifacts/tasks/TASK-022.stageA.plan.md",
-    "size_bytes": 1143,
-    "hash": "6880196acd3a08020f73350e8b990fe1601e9b21f303ade9f8fd38313ee9c0a4",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-022.stageB.skeleton.md",
-    "size_bytes": 891,
-    "hash": "fe7f8d80182ccb07d38d17189076af9cd43d08506030025354171b6c4b251687",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-022.stageC.verify.md",
-    "size_bytes": 1149,
-    "hash": "e4e874e8d50c32ba3df1e223ca321d6c977e7245bd41bbf755eac73d616d3dca",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-023.stageA.autonomy-contract.md",
-    "size_bytes": 1403,
-    "hash": "05f8d4340324b03344e15d41370ac93b4b05fe61fff10281fea67eb5f5d2767d",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-023.stageB.skeleton.md",
-    "size_bytes": 1450,
-    "hash": "ee6c8fe01bd9150542d03ee27cf878fc6ce5c0416712eab45728a79cd1cadc25",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-023.stageC.verify.md",
-    "size_bytes": 1433,
-    "hash": "4620bb74b14845336ebe37c07182cbb0dd50cb8a6f656915f5ea7f306aa954b6",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-024.stageA.verification-contract.md",
-    "size_bytes": 1715,
-    "hash": "d65525362fdc05b347cecff06ee8894c32e565980aa32f4024b8db173cd52c2f",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-024.stageB.skeleton.md",
-    "size_bytes": 1423,
-    "hash": "90f657d858b40cc75f466c5b3627afe63e240fedb88863cfa9df605e53365bc8",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-024.stageC.verify.md",
-    "size_bytes": 1548,
-    "hash": "ce619d4b46fbc63dd1bd5daa747b288cf006e24845fb92d9c975efe29237dabb",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-025.stageA.decision-logging-contract.md",
-    "size_bytes": 1645,
-    "hash": "11f6f6b9154c07848f85440daa695343994873ccdc5743cfeb3f5cb3f0efd9d8",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-025.stageB.skeleton.md",
-    "size_bytes": 1346,
-    "hash": "b0ace0e1744a8eb08597a2cd15f550bc238663469f5038c979c1248d96090d98",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-025.stageC.verify.md",
-    "size_bytes": 1536,
-    "hash": "794e2c2a7ed978b46864afefbc8aa2c9e34d03d8f551a1c10351f9bccf1161e8",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-026.stageA.autonomy-contract.md",
-    "size_bytes": 1387,
-    "hash": "c3bc4765ff8d18f67caa0b14b6f7ea7b0b2d08f22d14894896e554b82b26c1cf",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-026.stageC.verify.md",
-    "size_bytes": 1460,
-    "hash": "c9aa19d41d54386e9375e455217da29988e6fedb0ca5ef383893e92c418b6aa2",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-027.stageA.report-contract.md",
-    "size_bytes": 1371,
-    "hash": "0c6e780b599652c2f2902f6bb5c5637525b197402bf21638c92655598f6b959f",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-027.stageB.skeleton.md",
-    "size_bytes": 1369,
-    "hash": "b29ceb5a72e974e0caf877b0379a70a26f1264cdb8aaf036a3231d5cecadf9fa",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-027.stageC.verify.md",
-    "size_bytes": 1479,
-    "hash": "d9fbf40c998bc63963e60101ee82693f42cd4e83225763af509cbdbddb06ccfe",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-028.execution.closure.md",
-    "size_bytes": 285,
-    "hash": "15af5ed1523dd758ee6c39f5684f6bf46505e6bae2483b245c0f322cf6fba553",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-028.stageA.runtime-hardening.md",
-    "size_bytes": 783,
-    "hash": "e1d3fe9050f3889db9701cb25f2d7ed5d94eb683358050c089948c7bc48feca2",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-028.stageB.skeleton.md",
-    "size_bytes": 698,
-    "hash": "79f11cb4c0797b2e006f0c6d535b461f84850d7a004a1721274f0e46b56e4481",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-028.stageC.verify.md",
-    "size_bytes": 1575,
-    "hash": "639e0361ebd4bb62fdabcf52304be0a185972eb4cb0cc3edd40e3c2cd68c92b8",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-029.execution.closure.md",
-    "size_bytes": 1825,
-    "hash": "79315e85314a71f6dbf5dee44afe57e3bab803d062fbb2640f4246830b5c6e05",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-029.stageA.multi-step-contract.md",
-    "size_bytes": 845,
-    "hash": "ad5d2fe0ed988c840412069a782eb634d3b9784ea36882b606ee9ed87b41ea4d",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-029.stageB.skeleton.md",
-    "size_bytes": 669,
-    "hash": "1003cd88423a9be03be6a2e938533c9cbe0cfee53fccecc8b5467f4412a7f3f0",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-030.execution.closure.md",
-    "size_bytes": 1388,
-    "hash": "c769d377ac32e26d4ad85878fddde2f434faec42eece1c19990c618b0fe8fe49",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-030.stageA.execution-engine-contract.md",
-    "size_bytes": 808,
-    "hash": "6f7db74395e9334afc035a8799881bd0e95bd6859e28a46e2196ed1317baf565",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-030.stageB.skeleton.md",
-    "size_bytes": 717,
-    "hash": "25d587ae83f6520cbf1a1894bc391226e908ac2b9318bb60c1fd4d5e51e1d399",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-031.execution.closure.md",
-    "size_bytes": 841,
-    "hash": "5cf69d38c91fd0c5cfb02fa27f60f01e060529777de7991dd2f8a8ea27af7273",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-031.stageA.first-handler-contract.md",
-    "size_bytes": 662,
-    "hash": "1e18a3341cfd5a0110a6778d69b1abda1a89115fab42e9905c60b3aa09b20c30",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-031.stageB.skeleton.md",
-    "size_bytes": 650,
-    "hash": "fcc4804c02d2a8b52cd5f6c1caea42977801759d01ce022ec7270b8e43d9f79a",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-032.execution.closure.md",
-    "size_bytes": 1324,
-    "hash": "47345823948006e78e50f45889b22af32f2f8997677617a51006aa62404ee014",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-032.stageA.idempotency-contract.md",
-    "size_bytes": 1972,
-    "hash": "262ca64661781f417af2a830c126a126aa42e95bb25b2ed0b4ecafab8b6e5e8d",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-033.execution.closure.md",
-    "size_bytes": 418,
-    "hash": "b079dc90f7642b5f154f4744a80ab4cecc9be6c3e36b349202d3d4d679fed7e1",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-033.stageA.trace-engine-contract.md",
-    "size_bytes": 1116,
-    "hash": "3bee10f93e0a069b63c5ebd787fb4624fa56632b7778a4310aed0bc605318d84",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-034.execution.closure.md",
-    "size_bytes": 97,
-    "hash": "38802313a7d144078bc3e03b285d610801558a17241961663d6967a94f03f771",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-034.stageA.verification-contract.md",
-    "size_bytes": 663,
-    "hash": "fb1aaa7d89b2962798cc50d544f1880e533a558a3b5b918e112b668d3afb3a1c",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-035.execution.closure.md",
-    "size_bytes": 333,
-    "hash": "e49b120c7749dc6d74067b27a42acd0a8068dce5d04235c1466c8497bd1e8129",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-035.stageA.trace-by-clause-contract.md",
-    "size_bytes": 606,
-    "hash": "cb0946b09720b9eba6920c1d5559905978812b76ea9d093eb2d4bf74cdb5c247",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-038.execution.closure.md",
-    "size_bytes": 353,
-    "hash": "e2935e4083fdf309096a9aea25e1cef620c4bbe3868d5d0ae77fdac3f40e8dee",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-038.stageA.trace-rebuild-contract.md",
-    "size_bytes": 1055,
-    "hash": "c6f6d53a47607219a97cc0b29397ee3431ddeba84e7ecbd64da1282d50fc0ee2",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-039.execution.closure.md",
-    "size_bytes": 245,
-    "hash": "c2834b3c83405df9298bd6011bf94508db91bd532fad12e485b5c0cc67ace62c",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-039.stageA.stageC-closure-contract.md",
-    "size_bytes": 1048,
-    "hash": "b96a7c50c285d49fd7c2a41cf865e61ae85fe35fd561a99109e9abd03d2f9ed5",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-040.execution.closure.md",
-    "size_bytes": 248,
-    "hash": "ca353cf1e7d50ef8313884974e9b1411439aeb1139e7855b1711355f4b29be11",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-040.stageA.encoding-normalization-contract.md",
-    "size_bytes": 777,
-    "hash": "c1c4a88663262e84e2f0339874dca3e7825be016a8104f5a2d724317e3312b1b",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-041.execution.closure.md",
-    "size_bytes": 326,
-    "hash": "78d3bbcf2981b3dc1e537fa8e8bd0733985539e53d7a35adc2d65e2a076351a9",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-041.stageA.verification-contract.md",
-    "size_bytes": 712,
-    "hash": "9ca510b605168c6204069d45207f7ed7d13f2fdcb7249684ca92c2d17a0893c3",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-042.execution.closure.md",
-    "size_bytes": 162,
-    "hash": "0aca38dbc983afafff7be0242afb01d350eb25159e1abe2a8d1d738444946197",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-042.stageA.verification-contract.md",
-    "size_bytes": 1020,
-    "hash": "778a24aa5647a60f3a680f88e484104b094c3c6810c2b4626e7f56cc96d4ec92",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-043.execution.closure.md",
-    "size_bytes": 212,
-    "hash": "c857f8ae33e63c6451f6cad31ec634e16e4bfbd10a7b2612af91e3601c0c852b",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-043.stageA.verification-contract.md",
-    "size_bytes": 1389,
-    "hash": "06e7fe5aea2451b24638316f64facfda54dde8752af90c71e94c94a4f4269c5a",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-044.execution.closure.md",
-    "size_bytes": 162,
-    "hash": "812bfff735b7ebc9c3d954f331230e3d69714ce5ff8a362926f6fd753123dfe0",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-044.stageA.verification-contract.md",
-    "size_bytes": 786,
-    "hash": "c488bc080540e538bdc163284782dc63c1590e01f1b7afbea345bfbd1ae7819f",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-045.execution.closure.md",
-    "size_bytes": 208,
-    "hash": "f1185430c368c1feb58bcb98aabae9977e497d9395818fcccaeee017dcb60e34",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-045.stageA.verification-contract.md",
-    "size_bytes": 899,
-    "hash": "90f92091e31f8d65ecad06b6e829c26708444dcc1c3960d1ca9bf60505056f0c",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-046.execution.closure.md",
-    "size_bytes": 214,
-    "hash": "15b0e3a92a2174f041983a5c202ff95034f989703a3882ee01ddbb8e9bd317d6",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-046.stageA.verification-contract.md",
-    "size_bytes": 952,
-    "hash": "11804fcace08c8248fab6c9cfe5f8ef9cae88e741492c683245b216458e4b8d0",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
     "path": "artifacts/tasks/TASK-047.stageA.module-flow-intake.md",
-    "size_bytes": 506,
-    "hash": "cfe28e6184656c69de1960f9fc0c72af8a4e0ffee2f94752c6130fdd6e959c12",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-048.execution.closure.md",
-    "size_bytes": 320,
-    "hash": "09c23f854153bf0cf59b0f9d829873fcab77468cda997f04d9285dd2dcf41806",
+    "size_bytes": 493,
+    "hash": "5cd98ff374610e1b14abcc9adc71abe6f3724a79d81c41d6b8170be7c4f84004",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/tasks/TASK-048.stageA.module-flow-audit.md",
-    "size_bytes": 649,
-    "hash": "d3414ffd022bf50b22160f400c7609b6002196d243f61ea01304a6a0876c97c7",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-049.execution.closure.md",
-    "size_bytes": 215,
-    "hash": "6bb69573ebaee384cb42ec46a198e17cd49a447914e7070f998e0df1a1b16b68",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-049.stageA.audit-refresh-contract.md",
-    "size_bytes": 1249,
-    "hash": "70adb9f04f976e506ef49162d46fce9d5240d3b27caec6a9000d9ac4d69deed1",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-050.execution.closure.md",
-    "size_bytes": 267,
-    "hash": "39677f6ff2dd85a036ada1b0931b802f754765fb05ea4a1251014f215753e96d",
+    "size_bytes": 631,
+    "hash": "e8b1b517040c0bb881ac15359b6627374c6028947e2e379431521d63dcf0b3be",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/tasks/TASK-050.stageA.module-flow-trace.md",
-    "size_bytes": 1544,
-    "hash": "dc4e730983772ee849efd90de4efa733bc715413d3e49a690b72fdfa38f51056",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-051.execution.closure.md",
-    "size_bytes": 260,
-    "hash": "23466744e87b84ce2de250850edf3d49a6eb3a049dccb47a7ab3470738e4b4bf",
+    "size_bytes": 1498,
+    "hash": "b5b396dc68598bd8703ad2a7815ad7012801bf504a7e4396ada8b0e3aa218dbf",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/tasks/TASK-051.stageA.module-flow-gap.md",
-    "size_bytes": 1587,
-    "hash": "a904648001b4d6b32f46ab2fb945b959fd1ff8e80326acf44a34170b0720769b",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-052.execution.closure.md",
-    "size_bytes": 301,
-    "hash": "b3c8d18ea1edd64c0ecc87135bc3bc4b044c255d4fbe023466a3c701e3ba4961",
+    "size_bytes": 1536,
+    "hash": "fa16be3cc0cc342c8102c8eaf16e4afcde5a21434e88d61ff30fae54e3598a3e",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/tasks/TASK-052.stageA.module-flow-decision-gate.md",
-    "size_bytes": 1190,
-    "hash": "6b3d67f5d516973a842cf9f11345a4833abb8be802b2fd0a3ccc2227487d2cd2",
+    "size_bytes": 1158,
+    "hash": "e403c7ae29cdb3a5c97205fb2518c9ee7e88a089966791293b5d792c2c986dc1",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/tasks/TASK-053.stageA.module-flow-backfill.md",
-    "size_bytes": 905,
-    "hash": "3618d2368350465efb54d7748481215c4521f766aa7040492837d9cd5cd7c955",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-054.execution.closure.md",
-    "size_bytes": 273,
-    "hash": "9b3edbfad9f54686954dc35d30778420bcc02f8497b076e43fa6c3d468bc1934",
+    "size_bytes": 864,
+    "hash": "10de2140ded0f3b64928004160112a5619d4cb2d53dd577d082b16953a11865e",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/tasks/TASK-054.stageA.module-flow-execute.md",
-    "size_bytes": 811,
-    "hash": "94aa41af1c3c4195b45f93c8586f6c64d8865af61c00b9b9f77c03c2dae24692",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-055.execution.closure.md",
-    "size_bytes": 330,
-    "hash": "8feeeb9dc46e549b219788aad668b902944b2d4518a43195cf664fbb84ab8bdf",
+    "size_bytes": 773,
+    "hash": "6fd02b5ca8b1ec81d6feb4f0dfe110a82823f7b224b2c19a86329e3271c8ae48",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/tasks/TASK-055.stageA.module-flow-closure.md",
-    "size_bytes": 1201,
-    "hash": "4b7f09bb8a90ea2b61a9a3f0e8bcc5ec4de2652734c10815e79b76bca5b0e245",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-056.stageA.operating-modes-contract.md",
-    "size_bytes": 1039,
-    "hash": "6d7a3fa4bbcfe63889136a63625448d31af0a8670dbe1338f7e0491c56394b26",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-057.stageA.intake-classification-contract.md",
-    "size_bytes": 1158,
-    "hash": "a28abc854ccd278ea6226befbcc8067a5f4b916bda700af8e67a9f2d1be8bdd4",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-058.stageA.intake-engine-contract.md",
-    "size_bytes": 940,
-    "hash": "067dc10f2dad73aa4e8cdc4f702588c3804de60632ff7b6327a4cd7a775c9445",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-059.execution.closure.md",
-    "size_bytes": 357,
-    "hash": "104eacb5b1e1d1a1e031cb85f9032b8648acce165422f924b7849caa15946099",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-060.execution.closure.md",
-    "size_bytes": 1189,
-    "hash": "eacf877c32b8216c2b134808f2cbfe9aea26e3a393b079fd6eb60879544b84b2",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-060.stageA.closure-realignment-contract.md",
-    "size_bytes": 4659,
-    "hash": "5b1fe2ab148e1b8f0608716cee425ad55991a9ce873e9b16fd8fd5d260ce354d",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-061.execution.closure.md",
-    "size_bytes": 284,
-    "hash": "3578555170e21cc1ad22fa0c3893436e44e5542bb61d000a92ad28d212e02e4a",
+    "size_bytes": 1160,
+    "hash": "b4a926d5c283238a9da92d1bbb7d82e1b3ef22284281cb0b14858eabf4442970",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/tasks/TASK-061.stageA.verification-layer-contract.md",
-    "size_bytes": 1261,
-    "hash": "7f9c4e3a0368ea47af0de39557932599c458f5545eeee525084c608c2a4d46f5",
+    "size_bytes": 1191,
+    "hash": "7e6ce6af1e00cf35179b8d8950b2837c47f16944ef476a0621fd5598110ce3f3",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
-    "path": "artifacts/tasks/TASK-061.stageB.verification-gap-analysis.md",
-    "size_bytes": 1504,
-    "hash": "8fcd0a7489ece5ce2cd67675f7b4a55e8452adf0a9d7c197f2225f18735ba701",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-061.stageC.verification-design.md",
-    "size_bytes": 1985,
-    "hash": "4e3ce361cdc8a0d6f5b8cb96cb6a9e96c68f27c724ca2cd237ead67f0046d68a",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-062.stageA.autonomous-orchestrator-contract.md",
-    "size_bytes": 14103,
-    "hash": "e04ad4734cb18a6371837fc6232b88e531c3bdd8a56e56b2d129c148b4be1cc6",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-062.stageB.orchestrator-gap-analysis.md",
-    "size_bytes": 4724,
-    "hash": "71a8f5f59dfe45cb0fdb2118b5ebd416949b756938e04a62a37855cfa2ae9406",
-    "captured_at": "SNAPSHOT_LOCKED"
-  },
-  {
-    "path": "artifacts/tasks/TASK-062.stageC.orchestrator-architecture-design.md",
-    "size_bytes": 13281,
-    "hash": "f528a1df7e0555ee6cc97e27e1ace6f2e084d51093f778b5b30a51743018b0a0",
+    "path": "artifacts/tasks/TASK-066.stageA.design-exploration-contract.md",
+    "size_bytes": 1285,
+    "hash": "404ac9c1faff8d2c7436018cdf9139353c16b3c8a67e4d456d147d5b519616f5",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -985,14 +1243,14 @@
   },
   {
     "path": "artifacts/trace/trace_matrix.json",
-    "size_bytes": 287480,
-    "hash": "a8236e81db823b63ba468c74116b07ff9813673bb219d96f1a9c19d068720cd0",
+    "size_bytes": 335481,
+    "hash": "505a56ce8e02ba50fb0a5a9b436fd7626cbe3b4507121287fe349be88a7d5d12",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/trace/trace_matrix.md",
-    "size_bytes": 287509,
-    "hash": "780d2b7e8f34f4467479ea3656b9327fcbdc3f817af79305d65e294faa45abc4",
+    "size_bytes": 335515,
+    "hash": "b01dac0a0c5a5cdff392c68b605198e7a6101a6493d802de73f75cff61879ff6",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1004,13 +1262,13 @@
   {
     "path": "artifacts/verify/verification_report.md",
     "size_bytes": 139,
-    "hash": "fa3873b57f1e9f21cc3a681c3838c2819eb4908ff858fa563975a1cf9840f5e1",
+    "hash": "af9cfc87090b0d7e4c6ae42873b7b07b5e051830cbe18cab9093e1b0a311fa74",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "artifacts/verify/verification_results.json",
     "size_bytes": 345,
-    "hash": "0a36d4376c5bbc68e07bd3af4c49f973a86a0526f9da270d205291cb3514b503",
+    "hash": "02c34e5407c1c070341ebc653c78a44ea29eb6445063c2672d8d7a64e23c7c3f",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1021,8 +1279,20 @@
   },
   {
     "path": "bin/forge-autonomous-run.js",
-    "size_bytes": 335,
-    "hash": "616008063402c01d85a3339ceccdc68e3b17cccca48dca1048c8edb2c8ca03df",
+    "size_bytes": 5566,
+    "hash": "aff946fa0f7be4201a0b0a757a8924843e79912439d22e7e05153bfa0d3e18f7",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "bin/forge-build-state.js",
+    "size_bytes": 374,
+    "hash": "34c8fb808506e7ba66a06b05dfcd617ced9d0c69a5148a8b114218ccb28cfdad",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "bin/forge-reset-new-project.js",
+    "size_bytes": 3838,
+    "hash": "5ec9d34b1fceec141fd00dbff634182b17abe1e3a602eeb1320f7b078fe7acb5",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1087,8 +1357,26 @@
   },
   {
     "path": "code/src/execution/task_registry.js",
-    "size_bytes": 64589,
-    "hash": "31fb08c7c8d552d12865b8764dbd4cccf7a1e06e9e2af8a78c7733fa42dcbeb9",
+    "size_bytes": 74286,
+    "hash": "4cc18bcb9c7d29773ef27e8701a9efae0b3e5a25c36310cdb5c1eef41a370430",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "code/src/forge/",
+    "size_bytes": 0,
+    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "code/src/forge/forge_state_resolver.js",
+    "size_bytes": 12754,
+    "hash": "28037afb854bc3ad80cea5cbc0caa5d64e61cbf968e832ba4b52ca776fe89611",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "code/src/forge/forge_state_writer.js",
+    "size_bytes": 669,
+    "hash": "8f16b466d3249c1ca38582d13906e21040913da2e9ba87903ccd24fd16b94dd5",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1099,38 +1387,44 @@
   },
   {
     "path": "code/src/modules/auditEngine.js",
-    "size_bytes": 19220,
-    "hash": "89bf7314f141c2e4435b516a049a2fa8800aab1191ac0593067d68016088335c",
+    "size_bytes": 22077,
+    "hash": "95c562be3e3ef4163c6f1cf45176480f7a24d186cc3d32a73d5cc0de4f0ae0f9",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "code/src/modules/backfillEngine.js",
-    "size_bytes": 11898,
-    "hash": "cfb08f111794e0326f83a7df8d123f16c3b0c2dbc2e894fa1c297b35ca5d9ba2",
+    "size_bytes": 12294,
+    "hash": "ae44ada045b3c3ff1a6b82b7dfb883343312fa33e29ddc653e3518c88d566227",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "code/src/modules/closureEngine.js",
-    "size_bytes": 20729,
-    "hash": "c3c407e8dec58db4c393a21aa7c258285e86403ad93cbdb0a4a82acc28acdd28",
+    "size_bytes": 20597,
+    "hash": "c13ad78f6eedf51d7045d04cd85776a8b94dbf5516ecd343cbe39e0c56d02e84",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "code/src/modules/decisionGate.js",
-    "size_bytes": 12461,
-    "hash": "5444eb837cdc7702a1c69b3ff67054685f0be2408878dc3b743fc9eabb9eabad",
+    "size_bytes": 14369,
+    "hash": "fe16e7d9bcbebc9e497229e360a0256d2b76d526e166e4a6863da8c1dbf01809",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "code/src/modules/designExplorationEngine.js",
+    "size_bytes": 6200,
+    "hash": "b7688cec37c73b0851056915b73d3518c7045d7502e1f082f5919868dda2e742",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "code/src/modules/executeEngine.js",
-    "size_bytes": 4814,
-    "hash": "30e90322721f1259be4e819426dfbad5ce84575a2b9184d7de219b814b34a0cb",
+    "size_bytes": 4868,
+    "hash": "bb5587952eb591b62149654f03ff0543905e7c9e131c3687a34bb658abb2d84c",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "code/src/modules/gapEngine.js",
-    "size_bytes": 12163,
-    "hash": "9effa41de592ad6387d9b66ebb102c64ebc7dbf2c6cbec4885c0e58aecf5ccfc",
+    "size_bytes": 12292,
+    "hash": "9fb6243eb71c4264fc2ca1eb4736010245ae5b63b6659e8b3e1ad70171706380",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1159,26 +1453,26 @@
   },
   {
     "path": "code/src/orchestrator/autonomous_runner.js",
-    "size_bytes": 5973,
-    "hash": "8b3fc84a1674cb84aa6e8ce306f011b2315d4e8997ea4a0a60781b28a223aeed",
+    "size_bytes": 9552,
+    "hash": "ae6138bec1e19d59fcf98ae92f7c72b57790686b0a2b3442b79af1c2f602eb65",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "code/src/orchestrator/entry_resolver.js",
-    "size_bytes": 4901,
-    "hash": "b1d36ab75fa25b5a30e9f25ebdbbfddbc9d682f15b9dc847abb498e3259d2333",
+    "size_bytes": 3939,
+    "hash": "cc8a414f67c15ee522208e620329089a132e79a2b51fddcd5ca7625930347df2",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "code/src/orchestrator/pipeline_definition.js",
-    "size_bytes": 2245,
-    "hash": "59db95a4ff011146693bd693e7cce034c630a153c4bdfddd8fa19aae412e7b37",
+    "size_bytes": 2464,
+    "hash": "b288793ada6d943e1afeae4aafc3071d4bfb57ff80805fc95d9b370aecc9753d",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "code/src/orchestrator/runner.js",
-    "size_bytes": 4010,
-    "hash": "c23c8ab1e22600ab0920ce368b0435b92257ca701c9ecb81dd380bd9507f66d2",
+    "size_bytes": 5688,
+    "hash": "5cc27975c6b731cdca449b7a86fec6d50eec73263c5a2fb76158931496f17394",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1203,6 +1497,12 @@
     "path": "decisions/",
     "size_bytes": 0,
     "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "doc_id_index.txt",
+    "size_bytes": 5169,
+    "hash": "5df3b80c12a0ef7b55ed0ba2a55acf488e457fa42fc15a2475fdbff1571f2c3f",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1291,8 +1591,8 @@
   },
   {
     "path": "docs/02_scope/02_Scope_and_Success_Contract.md",
-    "size_bytes": 23434,
-    "hash": "cd6b464acd198abe6986c7c5208f3efe4bf030b6c92adc332b6db1a027475314",
+    "size_bytes": 26431,
+    "hash": "b5e7bd89c6da29d5c1a3afe612b9f16c2b8988b948702a447dbef4602a274c32",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1305,6 +1605,12 @@
     "path": "docs/02_scope/04_Vision_Gap_Detection_Specification.md",
     "size_bytes": 4000,
     "hash": "4e1efba6b50bad5704a44584de677ea1ec7318492ea0d0d3de87e96945b9b54e",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+    "size_bytes": 7493,
+    "hash": "7c287de4e37a8ef4210255962280ec937252c92e29a88712f4de0788febbab0f",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1339,8 +1645,8 @@
   },
   {
     "path": "docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
-    "size_bytes": 5738,
-    "hash": "78bf0de7b61c950039ee363024fe0eba59c7c9a8a5719887fe7f0bcd44e8d6ce",
+    "size_bytes": 7603,
+    "hash": "5b8ffc368c2a2d57d41c8fef3a0a9cfe4f763a94b8d03133047ce079f8b10c9c",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1357,8 +1663,8 @@
   },
   {
     "path": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
-    "size_bytes": 5404,
-    "hash": "f8be751208bfbc790837d3a48ceb16f9bf4d58d3415328432638ab4557788fdc",
+    "size_bytes": 6673,
+    "hash": "8dfed93448065991b9ae3c07e0ad30c0c60db7cedb675a50957180c7ebe4e893",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1380,6 +1686,12 @@
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
+    "path": "docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
+    "size_bytes": 4649,
+    "hash": "9d5cf6a12ed16059ee28faa634a901d12afd70f9f075cbd1072985f01cf553cb",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
     "path": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
     "size_bytes": 5492,
     "hash": "82682f9b78e1ac16c3a479a42aef266ae72c011000522037b5cdb30f88336b2a",
@@ -1387,8 +1699,8 @@
   },
   {
     "path": "docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
-    "size_bytes": 4447,
-    "hash": "df2ada620daad269664c268151bd0538e8b1164347292cd5083e4164f3601611",
+    "size_bytes": 5196,
+    "hash": "33b21d9a2d6bcc922e104421f76a2213a3bc9c5e5ffbf232ab15c161b03ff8f8",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1399,8 +1711,14 @@
   },
   {
     "path": "docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
-    "size_bytes": 4407,
-    "hash": "bc9903c703572026fea04b3b7159ac75952db20188f1df1ea3a59cc0ba67972c",
+    "size_bytes": 5404,
+    "hash": "89a4fda53dfdd89d883136af93106db81d23cc1a0d4c826b91e0ce0ce329105a",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+    "size_bytes": 6937,
+    "hash": "b953ab4e7bf4f54ff215ccfb66716796938f886134949d5c4042db47b41b5d8e",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1423,14 +1741,26 @@
   },
   {
     "path": "docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
-    "size_bytes": 6006,
-    "hash": "f3c9eed338e0cdc4a67cdad82a544178d94b0d4747de718773f4dc03dafb3346",
+    "size_bytes": 7656,
+    "hash": "ff38d77a5dd8bb5d2879c3295a86b860d4681006f6acf9df0a2d9c1bbe08c88c",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "docs/03_pipeline/pipeline_contract_violation_v1.md",
+    "size_bytes": 4181,
+    "hash": "b93d00873275614d08100a41e0d40eb1e01a9d025cfef88b374dfc7a40aad03e",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+    "size_bytes": 7414,
+    "hash": "42c04e9559a9a5070d615a678cd05ac5e872f88e1a769a7be95f15fc149ec7a2",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
     "path": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
-    "size_bytes": 5092,
-    "hash": "4b13ec23318478be5d05ba0fe2bfd030d65e0de8740abf65b4c53f4432ad16f8",
+    "size_bytes": 7173,
+    "hash": "16557bd35223f4b4694066994d1f7cba85a93486837b29a0ecd16d2f3d571faa",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1447,8 +1777,8 @@
   },
   {
     "path": "docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
-    "size_bytes": 13759,
-    "hash": "01b2a88087ce9b7eb8ef8ece52f7d98257a5c4a36eef2c9e6edac4365353a972",
+    "size_bytes": 14914,
+    "hash": "dd79afb25cf35c0925f867fbefcbc33a3a0116116851b1e4ef9861ae1d74299b",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1459,8 +1789,8 @@
   },
   {
     "path": "docs/04_autonomy/06_Cognitive_Layer_Contract.md",
-    "size_bytes": 5063,
-    "hash": "c44aec4e959239a75a9799ffb26aeb3a292b70b7a13863da6581b7a407be8418",
+    "size_bytes": 5630,
+    "hash": "1347825e2f8e9624c14926304b6ef403f2280518a0ff83db46c970e33b70eb5a",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1477,8 +1807,8 @@
   },
   {
     "path": "docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
-    "size_bytes": 6821,
-    "hash": "03332b6d98af2bd6b1b5b144b064cd4788cf824876ceb8205c8a7fe96da18906",
+    "size_bytes": 8938,
+    "hash": "8b3f128841d00efa6de8cb01c7fdc02240399791cd86d085184ac05cb3fbd1db",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1543,8 +1873,50 @@
   },
   {
     "path": "docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
-    "size_bytes": 20366,
-    "hash": "901c459dae96796cf32f341dce5c7a55af195a1812f955e71b91952edf11e319",
+    "size_bytes": 23471,
+    "hash": "bcebe007d466883ab9d8c15820b4ad6fe98924fc75bbf9d4800af6d561b32b60",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+    "size_bytes": 4675,
+    "hash": "a4171ad2c6e5785793584c9919682b31da48e760471f397d9bf66fd4fe4b20e1",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+    "size_bytes": 4870,
+    "hash": "5a081da1661b0e83f60efffed3e7ecd3e8930fb1d8b8718b31a3d144eda79fcc",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "docs/07_decisions/DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1.md",
+    "size_bytes": 3634,
+    "hash": "5930cb1d688c1e3c5bceb91ccb39a0bd13c7e90c76792b9d35cb66443f5866c2",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+    "size_bytes": 6844,
+    "hash": "53f7ed52c1d2cf1f808da323d1cc268b5b54c005d26833897f30d2a5fccc3fa6",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+    "size_bytes": 5042,
+    "hash": "a6ba655b8cbf05c71bded6ffa76f5cab9467430f5dac74c968bd162c56ea05fc",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+    "size_bytes": 6424,
+    "hash": "a1f7782592e64241532adc8e60ce09ec8322e3606650a3b5b97181cce08a4d26",
+    "captured_at": "SNAPSHOT_LOCKED"
+  },
+  {
+    "path": "docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+    "size_bytes": 5526,
+    "hash": "7ac2f434c1f71f75f3babb8355cbaf29772b9cafa3dacd5b78f82b6e99fd6c9a",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1705,8 +2077,8 @@
   },
   {
     "path": "progress/status.json",
-    "size_bytes": 324,
-    "hash": "39fb429c0cd7981f0bed4dfd6646b699b639c15c6af08ab60e4e400df654c963",
+    "size_bytes": 313,
+    "hash": "42625dd06e0e03062ae4fad44d1e336d66902237649d53969c84df6bdebaef19",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {
@@ -1790,7 +2162,7 @@
   {
     "path": "release_local_v4.hashes.json",
     "size_bytes": 1456,
-    "hash": "4e94b82d32da944340e6dfe1b8fc031703060f67bd997dc9a30aa684633c05d8",
+    "hash": "5ea6c8e2287f0824c111292347f46010fdc905f664a954342b3a0ea9f21e13b7",
     "captured_at": "SNAPSHOT_LOCKED"
   },
   {

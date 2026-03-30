@@ -1,6 +1,6 @@
 {
   "decision_id": "MODULE_FLOW_DECISION_GATE",
-  "timestamp": "2026-03-29T15:27:23.641Z",
+  "timestamp": "2026-03-30T12:12:26.236Z",
   "task": "TASK-052",
   "policy": "AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK",
   "operating_mode": "IMPROVE",
@@ -8,7 +8,7 @@
   "override_mode": "APPROVE_ALL",
   "source": {
     "exploration_matrix_path": "artifacts/exploration/option_matrix.json",
-    "exploration_matrix_sha256": "fa43f3fce1ba2e7ee3653d71bd999cd2166baa095ba24059bad31f95ad69af37",
+    "exploration_matrix_sha256": "7a28d99e1acfb1b8366e64e04bb7d269b3913bff73c6170182d75533fc4cd60f",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84"
   },
@@ -124,6 +124,32 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
+      "gap_id": "GAP-074e311df76c",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/orchestrator/entry_resolver.js"
+      ],
+      "action_id": "ACT-035052872a11",
+      "description": "Map code unit CODE::code/src/orchestrator/entry_resolver.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).",
+      "impact_scope": "code/trace",
+      "requires_decision": true,
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
+    },
+    {
+      "gap_id": "GAP-074e311df76c",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/orchestrator/entry_resolver.js"
+      ],
+      "action_id": "ACT-3b3e007edf88",
+      "description": "Remove or relocate code unit CODE::code/src/orchestrator/entry_resolver.js::FILE if it is not part of Forge scope/contracts.",
+      "impact_scope": "code",
+      "requires_decision": true,
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
+    },
+    {
       "gap_id": "GAP-079a4b235261",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -174,32 +200,6 @@
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
-    },
-    {
-      "gap_id": "GAP-0871227c9609",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/modules/verifyEngine.js::FILE"
-      ],
-      "action_id": "ACT-2d908d8b001c",
-      "description": "Remove or relocate code unit CODE::code/src/modules/verifyEngine.js::FILE if it is not part of Forge scope/contracts.",
-      "impact_scope": "code",
-      "requires_decision": true,
-      "reason": "action explicitly marked requires_decision; approved by explicit override"
-    },
-    {
-      "gap_id": "GAP-0871227c9609",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/modules/verifyEngine.js::FILE"
-      ],
-      "action_id": "ACT-9026261250c9",
-      "description": "Map code unit CODE::code/src/modules/verifyEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).",
-      "impact_scope": "code/trace",
-      "requires_decision": true,
-      "reason": "action explicitly marked requires_decision; approved by explicit override"
     },
     {
       "gap_id": "GAP-08a14e21abc6",
@@ -434,32 +434,6 @@
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
-    },
-    {
-      "gap_id": "GAP-0e27bece3335",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/forge/forge_state_resolver.js::FILE"
-      ],
-      "action_id": "ACT-46dfb2e14667",
-      "description": "Remove or relocate code unit CODE::code/src/forge/forge_state_resolver.js::FILE if it is not part of Forge scope/contracts.",
-      "impact_scope": "code",
-      "requires_decision": true,
-      "reason": "action explicitly marked requires_decision; approved by explicit override"
-    },
-    {
-      "gap_id": "GAP-0e27bece3335",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/forge/forge_state_resolver.js::FILE"
-      ],
-      "action_id": "ACT-6b5ec58b6441",
-      "description": "Map code unit CODE::code/src/forge/forge_state_resolver.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).",
-      "impact_scope": "code/trace",
-      "requires_decision": true,
-      "reason": "action explicitly marked requires_decision; approved by explicit override"
     },
     {
       "gap_id": "GAP-0e69b3995ac0",
@@ -774,32 +748,6 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
-      "gap_id": "GAP-1ca602cffbf4",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/forge/forge_state_writer.js::FILE"
-      ],
-      "action_id": "ACT-1a8e066d0150",
-      "description": "Remove or relocate code unit CODE::code/src/forge/forge_state_writer.js::FILE if it is not part of Forge scope/contracts.",
-      "impact_scope": "code",
-      "requires_decision": true,
-      "reason": "action explicitly marked requires_decision; approved by explicit override"
-    },
-    {
-      "gap_id": "GAP-1ca602cffbf4",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/forge/forge_state_writer.js::FILE"
-      ],
-      "action_id": "ACT-dabeea77573b",
-      "description": "Map code unit CODE::code/src/forge/forge_state_writer.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).",
-      "impact_scope": "code/trace",
-      "requires_decision": true,
-      "reason": "action explicitly marked requires_decision; approved by explicit override"
-    },
-    {
       "gap_id": "GAP-1db7fe5eada5",
       "category": "PARTIAL_COVERAGE",
       "severity": "MEDIUM",
@@ -876,6 +824,32 @@
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
+      "gap_id": "GAP-1f164d54596a",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/forge/forge_state_resolver.js"
+      ],
+      "action_id": "ACT-ed002ae6bbbf",
+      "description": "Remove or relocate code unit CODE::code/src/forge/forge_state_resolver.js::FILE if it is not part of Forge scope/contracts.",
+      "impact_scope": "code",
+      "requires_decision": true,
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
+    },
+    {
+      "gap_id": "GAP-1f164d54596a",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/forge/forge_state_resolver.js"
+      ],
+      "action_id": "ACT-f325d2e88681",
+      "description": "Map code unit CODE::code/src/forge/forge_state_resolver.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).",
+      "impact_scope": "code/trace",
+      "requires_decision": true,
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
     },
     {
       "gap_id": "GAP-1f442ad7fb72",
@@ -1658,32 +1632,6 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
-      "gap_id": "GAP-3c318a069efc",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/modules/designExplorationEngine.js::FILE"
-      ],
-      "action_id": "ACT-7ac241ae8199",
-      "description": "Map code unit CODE::code/src/modules/designExplorationEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).",
-      "impact_scope": "code/trace",
-      "requires_decision": true,
-      "reason": "action explicitly marked requires_decision; approved by explicit override"
-    },
-    {
-      "gap_id": "GAP-3c318a069efc",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/modules/designExplorationEngine.js::FILE"
-      ],
-      "action_id": "ACT-f50ad75af21c",
-      "description": "Remove or relocate code unit CODE::code/src/modules/designExplorationEngine.js::FILE if it is not part of Forge scope/contracts.",
-      "impact_scope": "code",
-      "requires_decision": true,
-      "reason": "action explicitly marked requires_decision; approved by explicit override"
-    },
-    {
       "gap_id": "GAP-3d06b7a22ad7",
       "category": "PARTIAL_COVERAGE",
       "severity": "MEDIUM",
@@ -2399,32 +2347,6 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
-      "gap_id": "GAP-53c357436498",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/orchestrator/entry_resolver.js::FILE"
-      ],
-      "action_id": "ACT-00985768010e",
-      "description": "Remove or relocate code unit CODE::code/src/orchestrator/entry_resolver.js::FILE if it is not part of Forge scope/contracts.",
-      "impact_scope": "code",
-      "requires_decision": true,
-      "reason": "action explicitly marked requires_decision; approved by explicit override"
-    },
-    {
-      "gap_id": "GAP-53c357436498",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/orchestrator/entry_resolver.js::FILE"
-      ],
-      "action_id": "ACT-ff61f853ddc6",
-      "description": "Map code unit CODE::code/src/orchestrator/entry_resolver.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).",
-      "impact_scope": "code/trace",
-      "requires_decision": true,
-      "reason": "action explicitly marked requires_decision; approved by explicit override"
-    },
-    {
       "gap_id": "GAP-53e5f2fdc8c9",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -2841,32 +2763,6 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
-      "gap_id": "GAP-621add5464d5",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
-      ],
-      "action_id": "ACT-0b3852c0eb98",
-      "description": "Map code unit CODE::code/src/orchestrator/pipeline_definition.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).",
-      "impact_scope": "code/trace",
-      "requires_decision": true,
-      "reason": "action explicitly marked requires_decision; approved by explicit override"
-    },
-    {
-      "gap_id": "GAP-621add5464d5",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
-      ],
-      "action_id": "ACT-151b86d91cdd",
-      "description": "Remove or relocate code unit CODE::code/src/orchestrator/pipeline_definition.js::FILE if it is not part of Forge scope/contracts.",
-      "impact_scope": "code",
-      "requires_decision": true,
-      "reason": "action explicitly marked requires_decision; approved by explicit override"
-    },
-    {
       "gap_id": "GAP-621ca6717c49",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -3086,32 +2982,6 @@
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
-    },
-    {
-      "gap_id": "GAP-68a5d4852da1",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/orchestrator/autonomous_runner.js::FILE"
-      ],
-      "action_id": "ACT-2481b7063d69",
-      "description": "Map code unit CODE::code/src/orchestrator/autonomous_runner.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).",
-      "impact_scope": "code/trace",
-      "requires_decision": true,
-      "reason": "action explicitly marked requires_decision; approved by explicit override"
-    },
-    {
-      "gap_id": "GAP-68a5d4852da1",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "CODE::code/src/orchestrator/autonomous_runner.js::FILE"
-      ],
-      "action_id": "ACT-b7785f4325e9",
-      "description": "Remove or relocate code unit CODE::code/src/orchestrator/autonomous_runner.js::FILE if it is not part of Forge scope/contracts.",
-      "impact_scope": "code",
-      "requires_decision": true,
-      "reason": "action explicitly marked requires_decision; approved by explicit override"
     },
     {
       "gap_id": "GAP-693a71c6d721",
@@ -3946,6 +3816,32 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
+      "gap_id": "GAP-809aa1e92a60",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/forge/forge_state_writer.js"
+      ],
+      "action_id": "ACT-7803f533d7fc",
+      "description": "Remove or relocate code unit CODE::code/src/forge/forge_state_writer.js::FILE if it is not part of Forge scope/contracts.",
+      "impact_scope": "code",
+      "requires_decision": true,
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
+    },
+    {
+      "gap_id": "GAP-809aa1e92a60",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/forge/forge_state_writer.js"
+      ],
+      "action_id": "ACT-856790e4d718",
+      "description": "Map code unit CODE::code/src/forge/forge_state_writer.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).",
+      "impact_scope": "code/trace",
+      "requires_decision": true,
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
+    },
+    {
       "gap_id": "GAP-80aa6267d61c",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -4737,6 +4633,32 @@
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
+      "gap_id": "GAP-9c45e4a74c73",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/orchestrator/autonomous_runner.js"
+      ],
+      "action_id": "ACT-6ba47a501c75",
+      "description": "Remove or relocate code unit CODE::code/src/orchestrator/autonomous_runner.js::FILE if it is not part of Forge scope/contracts.",
+      "impact_scope": "code",
+      "requires_decision": true,
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
+    },
+    {
+      "gap_id": "GAP-9c45e4a74c73",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/orchestrator/autonomous_runner.js"
+      ],
+      "action_id": "ACT-71e754cc88e0",
+      "description": "Map code unit CODE::code/src/orchestrator/autonomous_runner.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).",
+      "impact_scope": "code/trace",
+      "requires_decision": true,
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
     },
     {
       "gap_id": "GAP-9d399470676e",
@@ -5857,6 +5779,32 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
+      "gap_id": "GAP-c2a71a938add",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/orchestrator/pipeline_definition.js"
+      ],
+      "action_id": "ACT-74b400e601ba",
+      "description": "Map code unit CODE::code/src/orchestrator/pipeline_definition.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).",
+      "impact_scope": "code/trace",
+      "requires_decision": true,
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
+    },
+    {
+      "gap_id": "GAP-c2a71a938add",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/orchestrator/pipeline_definition.js"
+      ],
+      "action_id": "ACT-a67e5427d467",
+      "description": "Remove or relocate code unit CODE::code/src/orchestrator/pipeline_definition.js::FILE if it is not part of Forge scope/contracts.",
+      "impact_scope": "code",
+      "requires_decision": true,
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
+    },
+    {
       "gap_id": "GAP-c308e4b7a724",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -5894,6 +5842,32 @@
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
+      "gap_id": "GAP-c3dcb5d54230",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/modules/verifyEngine.js"
+      ],
+      "action_id": "ACT-c528a94d8152",
+      "description": "Map code unit CODE::code/src/modules/verifyEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).",
+      "impact_scope": "code/trace",
+      "requires_decision": true,
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
+    },
+    {
+      "gap_id": "GAP-c3dcb5d54230",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/modules/verifyEngine.js"
+      ],
+      "action_id": "ACT-f15e393fc1a5",
+      "description": "Remove or relocate code unit CODE::code/src/modules/verifyEngine.js::FILE if it is not part of Forge scope/contracts.",
+      "impact_scope": "code",
+      "requires_decision": true,
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
     },
     {
       "gap_id": "GAP-c42645b04f23",
@@ -7025,6 +6999,32 @@
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
+      "gap_id": "GAP-eb36dafc91a5",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/modules/designExplorationEngine.js"
+      ],
+      "action_id": "ACT-782d6f9ff5aa",
+      "description": "Remove or relocate code unit CODE::code/src/modules/designExplorationEngine.js::FILE if it is not part of Forge scope/contracts.",
+      "impact_scope": "code",
+      "requires_decision": true,
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
+    },
+    {
+      "gap_id": "GAP-eb36dafc91a5",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/modules/designExplorationEngine.js"
+      ],
+      "action_id": "ACT-8a39542c392e",
+      "description": "Map code unit CODE::code/src/modules/designExplorationEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).",
+      "impact_scope": "code/trace",
+      "requires_decision": true,
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
     },
     {
       "gap_id": "GAP-eb3a66957d9e",

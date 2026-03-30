@@ -1,13 +1,13 @@
 # MODULE FLOW — Backfill Execution Log
 
-- generated_at: 2026-03-29T15:28:55.767Z
+- generated_at: 2026-03-30T12:12:26.316Z
 - operating_mode: IMPROVE
 - repository_state: MIXED
 - blocked: false
 
 ## Source
 - decision_gate_path: artifacts/decisions/module_flow_decision_gate.json
-- decision_gate_sha256: 9f50a101b7c36aeb0705e5e6ee0b103163c52ef298fa0924cab8cbe4ea6ec88a
+- decision_gate_sha256: 2dcb0811a591bd75dc11e0a57dee7e5c43f441296bffb0700c7dbbfa74e5c971
 - intake_context_path: artifacts/intake/intake_context.json
 - intake_context_sha256: eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84
 
@@ -50,6 +50,14 @@
   - target_path: DOC-16::R028
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-035052872a11 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: code/src/orchestrator/entry_resolver.js
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-3b3e007edf88 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: code/src/orchestrator/entry_resolver.js
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-07d83696e277 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-17::R005
   - action_type: GENERATE_DOCUMENT
@@ -65,14 +73,6 @@
 - ACT-d9b18f96fdf5 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-18::R005
   - action_type: GENERATE_DOCUMENT
-  - deterministic_template_used: true
-- ACT-2d908d8b001c [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
-  - target_path: CODE::code/src/modules/verifyEngine.js::FILE
-  - action_type: BACKFILL_RECONCILIATION
-  - deterministic_template_used: true
-- ACT-9026261250c9 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
-  - target_path: CODE::code/src/modules/verifyEngine.js::FILE
-  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-a32e1bdae813 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: -::R003
@@ -145,14 +145,6 @@
 - ACT-50007db99dee [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-00::R004
   - action_type: GENERATE_DOCUMENT
-  - deterministic_template_used: true
-- ACT-46dfb2e14667 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
-  - target_path: CODE::code/src/forge/forge_state_resolver.js::FILE
-  - action_type: BACKFILL_RECONCILIATION
-  - deterministic_template_used: true
-- ACT-6b5ec58b6441 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
-  - target_path: CODE::code/src/forge/forge_state_resolver.js::FILE
-  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-4a2766c77aec [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-19::R006
@@ -250,14 +242,6 @@
   - target_path: DOC-17::R017
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
-- ACT-1a8e066d0150 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
-  - target_path: CODE::code/src/forge/forge_state_writer.js::FILE
-  - action_type: BACKFILL_RECONCILIATION
-  - deterministic_template_used: true
-- ACT-dabeea77573b [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
-  - target_path: CODE::code/src/forge/forge_state_writer.js::FILE
-  - action_type: BACKFILL_RECONCILIATION
-  - deterministic_template_used: true
 - ACT-1f30d1299d88 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-32::R007
   - action_type: GENERATE_DOCUMENT
@@ -281,6 +265,14 @@
 - ACT-9eeaaf4eed2c [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-20::R022
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-ed002ae6bbbf [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: code/src/forge/forge_state_resolver.js
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-f325d2e88681 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: code/src/forge/forge_state_resolver.js
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-f65c792da1ed [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-01::R013
@@ -522,14 +514,6 @@
   - target_path: DOC-20::R020
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
-- ACT-7ac241ae8199 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
-  - target_path: CODE::code/src/modules/designExplorationEngine.js::FILE
-  - action_type: BACKFILL_RECONCILIATION
-  - deterministic_template_used: true
-- ACT-f50ad75af21c [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
-  - target_path: CODE::code/src/modules/designExplorationEngine.js::FILE
-  - action_type: BACKFILL_RECONCILIATION
-  - deterministic_template_used: true
 - ACT-193c76b65eb9 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-32::R014
   - action_type: GENERATE_DOCUMENT
@@ -750,14 +734,6 @@
   - target_path: DOC-13::R004
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
-- ACT-00985768010e [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
-  - target_path: CODE::code/src/orchestrator/entry_resolver.js::FILE
-  - action_type: BACKFILL_RECONCILIATION
-  - deterministic_template_used: true
-- ACT-ff61f853ddc6 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
-  - target_path: CODE::code/src/orchestrator/entry_resolver.js::FILE
-  - action_type: BACKFILL_RECONCILIATION
-  - deterministic_template_used: true
 - ACT-694e3d469851 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: -::R005
   - action_type: BACKFILL_RECONCILIATION
@@ -886,14 +862,6 @@
   - target_path: DOC-22::R004
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
-- ACT-0b3852c0eb98 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
-  - target_path: CODE::code/src/orchestrator/pipeline_definition.js::FILE
-  - action_type: BACKFILL_RECONCILIATION
-  - deterministic_template_used: true
-- ACT-151b86d91cdd [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
-  - target_path: CODE::code/src/orchestrator/pipeline_definition.js::FILE
-  - action_type: BACKFILL_RECONCILIATION
-  - deterministic_template_used: true
 - ACT-f76d80da81d9 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-01::R019
   - action_type: GENERATE_DOCUMENT
@@ -961,14 +929,6 @@
 - ACT-5a19645963c8 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-22::R018
   - action_type: GENERATE_DOCUMENT
-  - deterministic_template_used: true
-- ACT-2481b7063d69 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
-  - target_path: CODE::code/src/orchestrator/autonomous_runner.js::FILE
-  - action_type: BACKFILL_RECONCILIATION
-  - deterministic_template_used: true
-- ACT-b7785f4325e9 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
-  - target_path: CODE::code/src/orchestrator/autonomous_runner.js::FILE
-  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-588a2a2ac70a [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-23::R010
@@ -1226,6 +1186,14 @@
   - target_path: DOC-21::R008
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-7803f533d7fc [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: code/src/forge/forge_state_writer.js
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-856790e4d718 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: code/src/forge/forge_state_writer.js
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-1f7c6067c711 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R016
   - action_type: BACKFILL_RECONCILIATION
@@ -1469,6 +1437,14 @@
 - ACT-907c45606803 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-19::R008
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-6ba47a501c75 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: code/src/orchestrator/autonomous_runner.js
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-71e754cc88e0 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: code/src/orchestrator/autonomous_runner.js
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-5c861bda0383 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-35::R006
@@ -1814,6 +1790,14 @@
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R011
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-74b400e601ba [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: code/src/orchestrator/pipeline_definition.js
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-a67e5427d467 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: code/src/orchestrator/pipeline_definition.js
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-e65f59995260 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-14::R006
   - action_type: GENERATE_DOCUMENT
@@ -1825,6 +1809,14 @@
 - ACT-6b0a58915525 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-22::R003
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-c528a94d8152 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: code/src/modules/verifyEngine.js
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-f15e393fc1a5 [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: code/src/modules/verifyEngine.js
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-35a98f4e0021 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 06_Progress_Tracking_and_Status_Report_Contract_v1::R008
@@ -2172,6 +2164,14 @@
   - deterministic_template_used: true
 - ACT-d68fd52379d1 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R010
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-782d6f9ff5aa [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: code/src/modules/designExplorationEngine.js
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-8a39542c392e [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
+  - target_path: code/src/modules/designExplorationEngine.js
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-354571dc4f34 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation

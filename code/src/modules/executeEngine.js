@@ -110,8 +110,8 @@ function runExecute(context) {
     };
   }
 
-  const actions = Array.isArray(backfillPlan.approved_actions)
-    ? backfillPlan.approved_actions
+  const actions = Array.isArray(backfillPlan.approved_code_actions)
+    ? backfillPlan.approved_code_actions
     : [];
 
   const executeDir = path.resolve(ROOT, "artifacts/execute");
@@ -125,7 +125,7 @@ function runExecute(context) {
     generated_at: new Date().toISOString(),
     operating_mode: mode,
     repository_state: intake.repository_state,
-    approved_code_actions: []
+    approved_code_actions: actions
   };
 
   const intakeText = JSON.stringify(intake, null, 2);
@@ -146,6 +146,22 @@ function runExecute(context) {
 
   fs.writeFileSync(executePlanPath, JSON.stringify(planPayload, null, 2));
   fs.writeFileSync(executeReportPath, renderExecuteReport(reportPayload));
+
+  if (actions.length > 0) {
+    return {
+      stage_progress_percent: 100,
+      blocked: false,
+      artifact: "artifacts/execute/execute_report.md",
+      outputs: {
+        md: "artifacts/execute/execute_report.md",
+        json: "artifacts/execute/execute_plan.json"
+      },
+      status_patch: {
+        next_step: "MODULE_FLOW — Execute COMPLETE. Next=Verify.",
+        blocking_questions: []
+      }
+    };
+  }
 
   return {
     stage_progress_percent: 100,

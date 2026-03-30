@@ -2,10 +2,12 @@
   "status_type": "LIVE",
   "current_stage": "A",
   "overall_progress_percent": 12,
-  "stage_progress_percent": 100,
-  "last_completed_artifact": "artifacts/tasks/TASK-055.execution.closure.md",
-  "current_task": "",
+  "stage_progress_percent": 99,
+  "last_completed_artifact": "artifacts/tasks/TASK-061.execution.closure.md",
+  "current_task": "TASK-055: MODULE FLOW — Closure",
   "issues": [],
-  "blocking_questions": [],
+  "blocking_questions": [
+    "Closure BLOCKED: audit verification failed."
+  ],
   "next_step": ""
 }

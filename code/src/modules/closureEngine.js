@@ -436,8 +436,8 @@ function runClosure(context) {
     );
   }
 
-  const backfillActions = Array.isArray(backfillJson.approved_actions)
-    ? backfillJson.approved_actions
+  const backfillActions = Array.isArray(backfillJson.approved_code_actions)
+    ? backfillJson.approved_code_actions
     : [];
   const executeActions = Array.isArray(executeJson.actions)
     ? executeJson.actions
