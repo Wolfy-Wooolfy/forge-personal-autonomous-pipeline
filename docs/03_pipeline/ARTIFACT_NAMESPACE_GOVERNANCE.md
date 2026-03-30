@@ -71,6 +71,7 @@ artifacts/decisions/
 artifacts/backfill/
 artifacts/execute/
 artifacts/closure/
+artifacts/exploration/
 
 ```
 
@@ -89,7 +90,7 @@ Intake | artifacts/intake |
 Audit | artifacts/audit |
 Trace | artifacts/trace |
 Gap | artifacts/gap |
-Design Exploration | artifacts/analysis |
+Design Exploration | artifacts/exploration |
 Option Evaluation | artifacts/analysis |
 Decision Gate | artifacts/decisions |
 Backfill | artifacts/backfill |
@@ -127,14 +128,24 @@ artifacts/stage_C/
 artifacts/stage_D/
 artifacts/reports/
 artifacts/release/
+artifacts/archive/
 
 ```
 
-These namespaces are:
+
+These namespaces are (including archived reset outputs):
 
 - read-only
 - immutable
 - not permitted for new artifact generation.
+
+Exception:
+
+artifacts/archive/ is permitted ONLY for system-level reset operations
+(e.g. forge-reset-new-project.js).
+
+It is NOT considered a runtime module namespace
+and MUST NOT be written to by pipeline modules.
 
 ---
 

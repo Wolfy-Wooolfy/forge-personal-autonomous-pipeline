@@ -64,12 +64,11 @@ Modules MUST execute strictly in this order:
 3. Trace
 4. Gap
 5. Design Exploration
-6. Option Evaluation
-7. Recommendation
-8. Decision Gate
-9. Backfill
-10. Execute
-11. Closure
+6. Decision Gate
+7. Backfill
+8. Execute
+9. Verify
+10. Closure
 
 No module may skip forward.
 No module may execute out of order.
@@ -81,8 +80,6 @@ The following modules are conditional and execute ONLY when an
 Execution Fork is detected:
 
 - Design Exploration
-- Option Evaluation
-- Recommendation
 
 If Gap analysis produces a deterministic execution path,
 these modules MUST be skipped and execution proceeds directly to:
@@ -104,7 +101,6 @@ Its purpose is to:
 - Analyze structural or architectural proposals
 - Compare deterministic alternative paths
 - Generate structured option comparison artifacts
-- Produce recommendation artifacts
 
 Design Exploration MUST NOT:
 
@@ -125,12 +121,36 @@ Fork detection and exploration behavior are governed by:
 
 - docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md
 - docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md
-- docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md
 
 Decision creation and escalation remain governed by:
 
 - docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md
 - docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md
+
+---
+
+Verify Module Definition
+
+Verify is a mandatory execution module that runs after Execute
+and before Closure.
+
+Its purpose is to:
+
+- validate artifact completeness
+- ensure audit has passed (audit.blocked = false)
+- confirm pipeline integrity
+- detect execution inconsistencies
+
+Verify MUST NOT:
+
+- modify repository files
+- generate new code
+- alter governance documents
+- bypass Closure rules
+
+Verify is a validation-only module.
+
+Closure MUST NOT execute if Verify fails.
 
 ---
 
@@ -275,6 +295,7 @@ artifacts/decisions/
 artifacts/backfill/
 artifacts/execute/
 artifacts/closure/
+artifacts/exploration/
 
 In addition, the following namespaces are permitted as IMMUTABLE-LEGACY
 (GRANDFATHERED) for historical evidence only:

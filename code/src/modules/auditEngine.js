@@ -477,8 +477,8 @@ function runAudit(context) {
     }
   }
 
-  const allowedModules = new Set(["intake", "audit", "trace", "gap", "decisions", "backfill", "execute", "closure", "release", "orchestration", "verify", "forge"]);
-  const immutableLegacy = new Set(["tasks", "stage_A", "stage_B", "stage_C", "stage_D", "reports", "release"]);
+  const allowedModules = new Set(["intake", "audit", "trace", "gap", "decisions", "backfill", "execute", "closure", "release", "orchestration", "verify", "forge", "exploration"]);
+  const immutableLegacy = new Set(["tasks", "stage_A", "stage_B", "stage_C", "stage_D", "reports", "release", "archive"]);
 
   if (Array.isArray(inventory)) {
     const artifactPaths = inventory
