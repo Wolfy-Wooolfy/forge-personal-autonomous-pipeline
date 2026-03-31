@@ -2,12 +2,12 @@
 
 ~~~json
 {
-  "execution_id": "TRACE-2026-03-31T11:49:58.278Z",
+  "execution_id": "TRACE-2026-03-31T15:10:31.728Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "total_requirements": 578,
   "total_code_units": 20,
-  "total_artifacts": 15,
+  "total_artifacts": 26,
   "mappings": [
     {
       "requirement_id": "DOC-20::R001",
@@ -663,8 +663,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R014",
@@ -711,99 +714,266 @@
     {
       "requirement_id": "HALO-DOC-11::R001",
       "document": "docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-11::R002",
       "document": "docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-11::R003",
       "document": "docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-11::R004",
       "document": "docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-11::R005",
       "document": "docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-11::R006",
       "document": "docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-11::R007",
       "document": "docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-11::R008",
       "document": "docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-11::R009",
       "document": "docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-11::R010",
       "document": "docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-11::R011",
       "document": "docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-11::R012",
       "document": "docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-11::R013",
       "document": "docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-12::R001",
       "document": "docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -815,7 +985,18 @@
       "requirement_id": "HALO-DOC-12::R002",
       "document": "docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -827,7 +1008,18 @@
       "requirement_id": "HALO-DOC-12::R003",
       "document": "docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -839,7 +1031,18 @@
       "requirement_id": "HALO-DOC-12::R004",
       "document": "docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -851,7 +1054,18 @@
       "requirement_id": "HALO-DOC-12::R005",
       "document": "docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -863,7 +1077,18 @@
       "requirement_id": "HALO-DOC-12::R006",
       "document": "docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -875,7 +1100,18 @@
       "requirement_id": "HALO-DOC-12::R007",
       "document": "docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -887,7 +1123,18 @@
       "requirement_id": "HALO-DOC-12::R008",
       "document": "docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -899,7 +1146,18 @@
       "requirement_id": "HALO-DOC-12::R009",
       "document": "docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -911,8 +1169,19 @@
       "requirement_id": "HALO-DOC-12::R010",
       "document": "docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
         "CODE::code/src/modules/closureEngine.js::FILE",
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -926,7 +1195,18 @@
       "requirement_id": "HALO-DOC-12::R011",
       "document": "docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -938,7 +1218,18 @@
       "requirement_id": "HALO-DOC-12::R012",
       "document": "docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -950,7 +1241,18 @@
       "requirement_id": "HALO-DOC-12::R013",
       "document": "docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -962,7 +1264,18 @@
       "requirement_id": "HALO-DOC-13::R001",
       "document": "docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -975,7 +1288,18 @@
       "requirement_id": "HALO-DOC-13::R002",
       "document": "docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -988,7 +1312,18 @@
       "requirement_id": "HALO-DOC-13::R003",
       "document": "docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -1001,7 +1336,18 @@
       "requirement_id": "HALO-DOC-13::R004",
       "document": "docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -1014,7 +1360,18 @@
       "requirement_id": "HALO-DOC-13::R005",
       "document": "docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -1027,7 +1384,18 @@
       "requirement_id": "HALO-DOC-13::R006",
       "document": "docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -1040,7 +1408,18 @@
       "requirement_id": "HALO-DOC-13::R007",
       "document": "docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -1053,7 +1432,18 @@
       "requirement_id": "HALO-DOC-13::R008",
       "document": "docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -1066,8 +1456,19 @@
       "requirement_id": "HALO-DOC-13::R009",
       "document": "docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
         "CODE::code/src/modules/closureEngine.js::FILE",
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -1082,7 +1483,18 @@
       "requirement_id": "HALO-DOC-13::R010",
       "document": "docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -1094,57 +1506,152 @@
     {
       "requirement_id": "HALO-DOC-14::R001",
       "document": "docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-14::R002",
       "document": "docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-14::R003",
       "document": "docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-14::R004",
       "document": "docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-14::R005",
       "document": "docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-14::R006",
       "document": "docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-14::R007",
       "document": "docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-14::R008",
       "document": "docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -1155,30 +1662,78 @@
     {
       "requirement_id": "HALO-DOC-14::R009",
       "document": "docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-14::R010",
       "document": "docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-14::R011",
       "document": "docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-14::R012",
       "document": "docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-15::R001",
@@ -1188,8 +1743,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -1205,8 +1762,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -1222,8 +1781,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -1239,8 +1800,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -1256,8 +1819,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -1273,8 +1838,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -1290,8 +1857,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -1307,8 +1876,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -1324,8 +1895,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -1341,8 +1914,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -1358,8 +1933,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -1375,8 +1952,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -1392,8 +1971,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -1409,8 +1990,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -1421,113 +2004,304 @@
     {
       "requirement_id": "DOC-13::R001",
       "document": "docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-13::R002",
       "document": "docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-13::R003",
       "document": "docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-13::R004",
       "document": "docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-13::R005",
       "document": "docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-13::R006",
       "document": "docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-13::R007",
       "document": "docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-13::R008",
       "document": "docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-13::R009",
       "document": "docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R001",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R002",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R003",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R004",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R005",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R006",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R007",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -1538,29 +2312,76 @@
     {
       "requirement_id": "DOC-14::R008",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R009",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R010",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R011",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -1571,29 +2392,76 @@
     {
       "requirement_id": "DOC-14::R012",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R013",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R014",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R015",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -1604,29 +2472,76 @@
     {
       "requirement_id": "DOC-14::R016",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R017",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R018",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R019",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -1642,8 +2557,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -1654,288 +2571,779 @@
     {
       "requirement_id": "DOC-14::R021",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-14::R022",
       "document": "docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-20::R001",
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-20::R002",
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-20::R003",
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-20::R004",
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-20::R005",
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-20::R006",
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-20::R007",
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-20::R008",
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-20::R009",
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-20::R010",
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-20::R011",
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-20::R012",
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-20::R013",
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R001",
       "document": "docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R002",
       "document": "docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R003",
       "document": "docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R004",
       "document": "docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R005",
       "document": "docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R006",
       "document": "docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R007",
       "document": "docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R008",
       "document": "docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R009",
       "document": "docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R010",
       "document": "docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R011",
       "document": "docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R012",
       "document": "docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R013",
       "document": "docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Cognitive_Layer_Engines_Execution_Contracts::R001",
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Cognitive_Layer_Engines_Execution_Contracts::R002",
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Cognitive_Layer_Engines_Execution_Contracts::R003",
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Cognitive_Layer_Engines_Execution_Contracts::R004",
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Cognitive_Layer_Engines_Execution_Contracts::R005",
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Cognitive_Layer_Engines_Execution_Contracts::R006",
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Cognitive_Layer_Engines_Execution_Contracts::R007",
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Cognitive_Layer_Engines_Execution_Contracts::R008",
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Cognitive_Layer_Engines_Execution_Contracts::R009",
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R001",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R002",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R003",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R004",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -1946,225 +3354,600 @@
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R005",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R006",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R007",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R008",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R009",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R010",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R011",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R012",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R013",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R014",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R015",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R016",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R017",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R018",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [
         "artifacts/audit/audit_report.md",
         "artifacts/intake/intake_context.json"
       ],
-      "coverage_status": "PARTIAL"
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R019",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "03_Pipeline_Stages_Specification_A-D::R020",
       "document": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-24::R001",
       "document": "docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-24::R002",
       "document": "docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-24::R003",
       "document": "docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-24::R004",
       "document": "docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-24::R005",
       "document": "docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-24::R006",
       "document": "docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-24::R007",
       "document": "docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-24::R008",
       "document": "docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-24::R009",
       "document": "docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-24::R010",
       "document": "docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-24::R011",
       "document": "docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-24::R012",
       "document": "docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-24::R013",
       "document": "docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-24::R014",
       "document": "docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-31::R001",
       "document": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -2177,7 +3960,18 @@
       "requirement_id": "DOC-31::R002",
       "document": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -2190,7 +3984,18 @@
       "requirement_id": "DOC-31::R003",
       "document": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -2203,7 +4008,18 @@
       "requirement_id": "DOC-31::R004",
       "document": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -2216,7 +4032,18 @@
       "requirement_id": "DOC-31::R005",
       "document": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -2229,7 +4056,18 @@
       "requirement_id": "DOC-31::R006",
       "document": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -2242,7 +4080,18 @@
       "requirement_id": "DOC-31::R007",
       "document": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -2255,7 +4104,18 @@
       "requirement_id": "DOC-31::R008",
       "document": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -2268,7 +4128,18 @@
       "requirement_id": "DOC-31::R009",
       "document": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -2281,7 +4152,18 @@
       "requirement_id": "DOC-31::R010",
       "document": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -2294,7 +4176,18 @@
       "requirement_id": "DOC-31::R011",
       "document": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -2307,7 +4200,18 @@
       "requirement_id": "DOC-31::R012",
       "document": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -2320,7 +4224,18 @@
       "requirement_id": "DOC-31::R013",
       "document": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -2333,7 +4248,18 @@
       "requirement_id": "DOC-31::R014",
       "document": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -2346,7 +4272,18 @@
       "requirement_id": "DOC-31::R015",
       "document": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -2359,7 +4296,18 @@
       "requirement_id": "DOC-31::R016",
       "document": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -2372,7 +4320,18 @@
       "requirement_id": "DOC-31::R017",
       "document": "docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -2385,142 +4344,408 @@
       "requirement_id": "DOC-35::R001",
       "document": "docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/backfillEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/backfillEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R002",
       "document": "docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/backfillEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/backfillEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R003",
       "document": "docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/backfillEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/backfillEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R004",
       "document": "docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/backfillEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/backfillEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R005",
       "document": "docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/backfillEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/backfillEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R006",
       "document": "docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/backfillEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/backfillEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R007",
       "document": "docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/backfillEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/backfillEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R008",
       "document": "docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/backfillEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/backfillEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R009",
       "document": "docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/backfillEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/backfillEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R010",
       "document": "docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/backfillEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/backfillEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R011",
       "document": "docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/backfillEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/backfillEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R012",
       "document": "docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/backfillEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/backfillEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R013",
       "document": "docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/backfillEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/backfillEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R014",
       "document": "docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/backfillEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/backfillEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-35::R015",
       "document": "docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/backfillEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/backfillEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-37::R001",
       "document": "docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -2532,7 +4757,18 @@
       "requirement_id": "DOC-37::R002",
       "document": "docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -2544,7 +4780,18 @@
       "requirement_id": "DOC-37::R003",
       "document": "docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -2556,7 +4803,18 @@
       "requirement_id": "DOC-37::R004",
       "document": "docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -2568,7 +4826,18 @@
       "requirement_id": "DOC-37::R005",
       "document": "docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -2580,7 +4849,18 @@
       "requirement_id": "DOC-37::R006",
       "document": "docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -2592,7 +4872,18 @@
       "requirement_id": "DOC-37::R007",
       "document": "docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -2604,7 +4895,18 @@
       "requirement_id": "DOC-37::R008",
       "document": "docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -2616,7 +4918,18 @@
       "requirement_id": "DOC-37::R009",
       "document": "docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -2628,7 +4941,18 @@
       "requirement_id": "DOC-37::R010",
       "document": "docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -2640,7 +4964,18 @@
       "requirement_id": "DOC-37::R011",
       "document": "docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -2652,7 +4987,18 @@
       "requirement_id": "DOC-37::R012",
       "document": "docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -2664,7 +5010,18 @@
       "requirement_id": "DOC-37::R013",
       "document": "docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -2676,7 +5033,18 @@
       "requirement_id": "DOC-37::R014",
       "document": "docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -2688,7 +5056,18 @@
       "requirement_id": "DOC-37::R015",
       "document": "docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -2700,258 +5079,675 @@
       "requirement_id": "DOC-34::R001",
       "document": "docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R002",
       "document": "docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R003",
       "document": "docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R004",
       "document": "docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R005",
       "document": "docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R006",
       "document": "docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R007",
       "document": "docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R008",
       "document": "docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R009",
       "document": "docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R010",
       "document": "docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R011",
       "document": "docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R012",
       "document": "docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R013",
       "document": "docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R014",
       "document": "docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-34::R015",
       "document": "docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
+    },
+    {
+      "requirement_id": "HALO-DOC-18::R001",
+      "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [],
       "coverage_status": "PARTIAL"
     },
     {
-      "requirement_id": "HALO-DOC-18::R001",
-      "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
-      "mapped_code_units": [],
-      "mapped_artifacts": [],
-      "coverage_status": "NONE"
-    },
-    {
       "requirement_id": "HALO-DOC-18::R002",
       "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-18::R003",
       "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-18::R004",
       "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-18::R005",
       "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-18::R006",
       "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-18::R007",
       "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-18::R008",
       "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-18::R009",
       "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-18::R010",
       "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
+    },
+    {
+      "requirement_id": "HALO-DOC-18::R011",
+      "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [],
       "coverage_status": "PARTIAL"
     },
     {
-      "requirement_id": "HALO-DOC-18::R011",
-      "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
-      "mapped_code_units": [],
-      "mapped_artifacts": [],
-      "coverage_status": "NONE"
-    },
-    {
       "requirement_id": "HALO-DOC-18::R012",
       "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-18::R013",
       "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-18::R014",
       "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
+    },
+    {
+      "requirement_id": "HALO-DOC-18::R015",
+      "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [],
       "coverage_status": "PARTIAL"
     },
     {
-      "requirement_id": "HALO-DOC-18::R015",
-      "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
-      "mapped_code_units": [],
-      "mapped_artifacts": [],
-      "coverage_status": "NONE"
-    },
-    {
       "requirement_id": "HALO-DOC-18::R016",
       "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-18::R017",
       "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -2963,166 +5759,425 @@
     {
       "requirement_id": "HALO-DOC-18::R018",
       "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-18::R019",
       "document": "docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-36::R001",
       "document": "docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/executeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/executeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R002",
       "document": "docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/executeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/executeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R003",
       "document": "docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/executeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/executeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R004",
       "document": "docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/executeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/executeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R005",
       "document": "docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/executeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/executeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R006",
       "document": "docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/executeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/executeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R007",
       "document": "docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/executeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/executeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R008",
       "document": "docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/executeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/executeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R009",
       "document": "docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/executeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/executeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R010",
       "document": "docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/executeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/executeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R011",
       "document": "docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/executeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/executeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R012",
       "document": "docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/executeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/executeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R013",
       "document": "docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/executeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/executeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R014",
       "document": "docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/executeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/executeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R015",
       "document": "docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/executeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/executeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-36::R016",
       "document": "docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/executeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/executeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-33::R001",
       "document": "docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -3134,7 +6189,18 @@
       "requirement_id": "DOC-33::R002",
       "document": "docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -3146,7 +6212,18 @@
       "requirement_id": "DOC-33::R003",
       "document": "docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -3158,7 +6235,18 @@
       "requirement_id": "DOC-33::R004",
       "document": "docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -3170,7 +6258,18 @@
       "requirement_id": "DOC-33::R005",
       "document": "docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -3182,7 +6281,18 @@
       "requirement_id": "DOC-33::R006",
       "document": "docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -3194,7 +6304,18 @@
       "requirement_id": "DOC-33::R007",
       "document": "docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -3206,7 +6327,18 @@
       "requirement_id": "DOC-33::R008",
       "document": "docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -3218,7 +6350,18 @@
       "requirement_id": "DOC-33::R009",
       "document": "docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -3230,7 +6373,18 @@
       "requirement_id": "DOC-33::R010",
       "document": "docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -3242,7 +6396,18 @@
       "requirement_id": "DOC-33::R011",
       "document": "docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -3254,7 +6419,18 @@
       "requirement_id": "DOC-33::R012",
       "document": "docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -3266,7 +6442,18 @@
       "requirement_id": "DOC-33::R013",
       "document": "docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -3278,7 +6465,18 @@
       "requirement_id": "DOC-33::R014",
       "document": "docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -3290,7 +6488,18 @@
       "requirement_id": "DOC-33::R015",
       "document": "docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -3302,7 +6511,18 @@
       "requirement_id": "DOC-33::R016",
       "document": "docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -3314,7 +6534,18 @@
       "requirement_id": "DOC-30::R001",
       "document": "docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/intakeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/intakeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/intake/intake_context.json",
@@ -3327,7 +6558,18 @@
       "requirement_id": "DOC-30::R002",
       "document": "docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/intakeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/intakeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/intake/intake_context.json",
@@ -3340,7 +6582,18 @@
       "requirement_id": "DOC-30::R003",
       "document": "docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/intakeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/intakeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/intake/intake_context.json",
@@ -3353,7 +6606,18 @@
       "requirement_id": "DOC-30::R004",
       "document": "docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/intakeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/intakeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/intake/intake_context.json",
@@ -3366,7 +6630,18 @@
       "requirement_id": "DOC-30::R005",
       "document": "docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/intakeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/intakeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/intake/intake_context.json",
@@ -3379,7 +6654,18 @@
       "requirement_id": "DOC-30::R006",
       "document": "docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/intakeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/intakeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/intake/intake_context.json",
@@ -3392,7 +6678,18 @@
       "requirement_id": "DOC-30::R007",
       "document": "docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/intakeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/intakeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/intake/intake_context.json",
@@ -3405,7 +6702,18 @@
       "requirement_id": "DOC-30::R008",
       "document": "docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/intakeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/intakeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/intake/intake_context.json",
@@ -3418,7 +6726,18 @@
       "requirement_id": "DOC-30::R009",
       "document": "docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/intakeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/intakeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/intake/intake_context.json",
@@ -3431,7 +6750,18 @@
       "requirement_id": "DOC-30::R010",
       "document": "docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/intakeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/intakeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/intake/intake_context.json",
@@ -3444,7 +6774,18 @@
       "requirement_id": "DOC-30::R011",
       "document": "docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/intakeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/intakeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/intake/intake_context.json",
@@ -3457,7 +6798,18 @@
       "requirement_id": "DOC-30::R012",
       "document": "docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/intakeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/intakeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/intake/intake_context.json",
@@ -3470,7 +6822,18 @@
       "requirement_id": "DOC-30::R013",
       "document": "docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/intakeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/intakeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/intake/intake_context.json",
@@ -3483,7 +6846,18 @@
       "requirement_id": "DOC-30::R014",
       "document": "docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/intakeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/intakeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/intake/intake_context.json",
@@ -3500,8 +6874,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -3517,8 +6893,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -3534,8 +6912,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -3551,8 +6931,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -3568,8 +6950,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -3585,8 +6969,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -3602,8 +6988,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -3620,14 +7008,19 @@
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
         "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-38::R009",
@@ -3637,8 +7030,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -3654,8 +7049,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -3671,8 +7068,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -3688,8 +7087,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -3705,8 +7106,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -3722,8 +7125,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -3739,8 +7144,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -3756,8 +7163,10 @@
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -3768,155 +7177,418 @@
     {
       "requirement_id": "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R001",
       "document": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R002",
       "document": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R003",
       "document": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R004",
       "document": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R005",
       "document": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R006",
       "document": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R007",
       "document": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R008",
       "document": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R009",
       "document": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R010",
       "document": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R011",
       "document": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R012",
       "document": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R013",
       "document": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R014",
       "document": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R015",
       "document": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R016",
       "document": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R017",
       "document": "docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R001",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R002",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R003",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R004",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R005",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/intakeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/intakeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/intake/intake_context.json",
@@ -3929,7 +7601,18 @@
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R006",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/auditEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
@@ -3942,7 +7625,18 @@
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R007",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -3955,7 +7649,18 @@
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R008",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/gapEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/gapEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/gap/gap_actions.json",
@@ -3966,42 +7671,110 @@
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R009",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R010",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/decisionGate.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/decisionGate.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R011",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/backfillEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/backfillEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R012",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/executeEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/executeEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R013",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/closureEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/closureEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
@@ -4012,50 +7785,133 @@
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R014",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R015",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R016",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R017",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R018",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R019",
       "document": "docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-32::R001",
       "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -4068,7 +7924,18 @@
       "requirement_id": "DOC-32::R002",
       "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -4081,7 +7948,18 @@
       "requirement_id": "DOC-32::R003",
       "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -4094,7 +7972,18 @@
       "requirement_id": "DOC-32::R004",
       "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -4107,7 +7996,18 @@
       "requirement_id": "DOC-32::R005",
       "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -4120,7 +8020,18 @@
       "requirement_id": "DOC-32::R006",
       "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -4133,7 +8044,18 @@
       "requirement_id": "DOC-32::R007",
       "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -4146,7 +8068,18 @@
       "requirement_id": "DOC-32::R008",
       "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -4159,7 +8092,18 @@
       "requirement_id": "DOC-32::R009",
       "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -4172,7 +8116,18 @@
       "requirement_id": "DOC-32::R010",
       "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -4185,7 +8140,18 @@
       "requirement_id": "DOC-32::R011",
       "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -4198,7 +8164,18 @@
       "requirement_id": "DOC-32::R012",
       "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -4211,7 +8188,18 @@
       "requirement_id": "DOC-32::R013",
       "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -4224,7 +8212,18 @@
       "requirement_id": "DOC-32::R014",
       "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -4237,7 +8236,18 @@
       "requirement_id": "DOC-32::R015",
       "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -4250,7 +8260,18 @@
       "requirement_id": "DOC-32::R016",
       "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
-        "CODE::code/src/modules/traceEngine.js::FILE"
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
@@ -4262,79 +8283,211 @@
     {
       "requirement_id": "pipeline_contract_violation_v1::R001",
       "document": "docs/03_pipeline/pipeline_contract_violation_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "pipeline_contract_violation_v1::R002",
       "document": "docs/03_pipeline/pipeline_contract_violation_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "pipeline_contract_violation_v1::R003",
       "document": "docs/03_pipeline/pipeline_contract_violation_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "pipeline_contract_violation_v1::R004",
       "document": "docs/03_pipeline/pipeline_contract_violation_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "pipeline_contract_violation_v1::R005",
       "document": "docs/03_pipeline/pipeline_contract_violation_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "pipeline_contract_violation_v1::R006",
       "document": "docs/03_pipeline/pipeline_contract_violation_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "pipeline_contract_violation_v1::R007",
       "document": "docs/03_pipeline/pipeline_contract_violation_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "pipeline_contract_violation_v1::R008",
       "document": "docs/03_pipeline/pipeline_contract_violation_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "pipeline_contract_violation_v1::R009",
       "document": "docs/03_pipeline/pipeline_contract_violation_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "pipeline_contract_violation_v1::R010",
       "document": "docs/03_pipeline/pipeline_contract_violation_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "pipeline_contract_violation_v1::R011",
       "document": "docs/03_pipeline/pipeline_contract_violation_v1.md",
-      "mapped_code_units": [],
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
       "mapped_artifacts": [],
-      "coverage_status": "NONE"
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-11::R001",
@@ -4735,8 +8888,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R002",
@@ -4744,8 +8900,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R003",
@@ -4753,8 +8912,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R004",
@@ -4762,8 +8924,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R005",
@@ -4771,8 +8936,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R006",
@@ -4780,8 +8948,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R007",
@@ -4789,8 +8960,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R008",
@@ -4798,8 +8972,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R009",
@@ -4807,8 +8984,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R010",
@@ -4816,8 +8996,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R011",
@@ -4825,8 +9008,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R012",
@@ -4834,8 +9020,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R013",
@@ -4843,8 +9032,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R014",
@@ -4852,8 +9044,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R015",
@@ -4861,8 +9056,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R016",
@@ -4870,8 +9068,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R017",
@@ -4879,8 +9080,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R018",
@@ -4888,8 +9092,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R019",
@@ -4897,8 +9104,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R020",
@@ -4908,6 +9118,8 @@
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
         "artifacts/trace/trace_error.md",
         "artifacts/trace/trace_matrix.json",
         "artifacts/trace/trace_matrix.md"
@@ -4920,8 +9132,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-22::R022",
@@ -4929,8 +9144,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R001",
@@ -4938,8 +9156,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R002",
@@ -4947,8 +9168,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R003",
@@ -4956,8 +9180,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R004",
@@ -4965,8 +9192,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R005",
@@ -4974,8 +9204,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R006",
@@ -4983,8 +9216,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R007",
@@ -4992,8 +9228,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R008",
@@ -5001,8 +9240,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R009",
@@ -5010,8 +9252,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R010",
@@ -5019,8 +9264,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R011",
@@ -5028,8 +9276,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R012",
@@ -5037,8 +9288,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R013",
@@ -5046,8 +9300,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R014",
@@ -5055,8 +9312,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R015",
@@ -5064,8 +9324,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R016",
@@ -5075,6 +9338,8 @@
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
         "artifacts/trace/trace_error.md",
         "artifacts/trace/trace_matrix.json",
         "artifacts/trace/trace_matrix.md"
@@ -5087,8 +9352,11 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [],
-      "coverage_status": "PARTIAL"
+      "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
+      ],
+      "coverage_status": "FULL"
     },
     {
       "requirement_id": "DOC-AUD-0810::R001",
@@ -5138,8 +9406,10 @@
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
         "CODE::code/src/forge/forge_state_writer.js::FILE",
         "CODE::code/src/modules/auditEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName",
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
@@ -5351,36 +9621,9 @@
     }
   ],
   "orphan_code_units": [
-    "CODE::code/src/modules/designExplorationEngine.js::FILE",
-    "CODE::code/src/modules/verifyEngine.js::FILE",
-    "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
+    "CODE::code/src/modules/designExplorationEngine.js::FILE"
   ],
   "orphan_requirements": [
-    "03_Cognitive_Layer_Engines_Execution_Contracts::R001",
-    "03_Cognitive_Layer_Engines_Execution_Contracts::R002",
-    "03_Cognitive_Layer_Engines_Execution_Contracts::R003",
-    "03_Cognitive_Layer_Engines_Execution_Contracts::R004",
-    "03_Cognitive_Layer_Engines_Execution_Contracts::R005",
-    "03_Cognitive_Layer_Engines_Execution_Contracts::R006",
-    "03_Cognitive_Layer_Engines_Execution_Contracts::R007",
-    "03_Cognitive_Layer_Engines_Execution_Contracts::R008",
-    "03_Cognitive_Layer_Engines_Execution_Contracts::R009",
-    "03_Pipeline_Stages_Specification_A-D::R001",
-    "03_Pipeline_Stages_Specification_A-D::R002",
-    "03_Pipeline_Stages_Specification_A-D::R003",
-    "03_Pipeline_Stages_Specification_A-D::R005",
-    "03_Pipeline_Stages_Specification_A-D::R006",
-    "03_Pipeline_Stages_Specification_A-D::R007",
-    "03_Pipeline_Stages_Specification_A-D::R008",
-    "03_Pipeline_Stages_Specification_A-D::R009",
-    "03_Pipeline_Stages_Specification_A-D::R010",
-    "03_Pipeline_Stages_Specification_A-D::R011",
-    "03_Pipeline_Stages_Specification_A-D::R012",
-    "03_Pipeline_Stages_Specification_A-D::R013",
-    "03_Pipeline_Stages_Specification_A-D::R016",
-    "03_Pipeline_Stages_Specification_A-D::R017",
-    "03_Pipeline_Stages_Specification_A-D::R019",
-    "03_Pipeline_Stages_Specification_A-D::R020",
     "DOC-01-ADAPTER::R001",
     "DOC-01-ADAPTER::R002",
     "DOC-01-ADAPTER::R003",
@@ -5439,32 +9682,6 @@
     "DOC-12::R009",
     "DOC-12::R011",
     "DOC-12::R012",
-    "DOC-13::R001",
-    "DOC-13::R002",
-    "DOC-13::R003",
-    "DOC-13::R004",
-    "DOC-13::R005",
-    "DOC-13::R006",
-    "DOC-13::R007",
-    "DOC-13::R008",
-    "DOC-13::R009",
-    "DOC-14::R001",
-    "DOC-14::R002",
-    "DOC-14::R003",
-    "DOC-14::R004",
-    "DOC-14::R005",
-    "DOC-14::R006",
-    "DOC-14::R008",
-    "DOC-14::R009",
-    "DOC-14::R010",
-    "DOC-14::R012",
-    "DOC-14::R013",
-    "DOC-14::R014",
-    "DOC-14::R016",
-    "DOC-14::R017",
-    "DOC-14::R018",
-    "DOC-14::R021",
-    "DOC-14::R022",
     "DOC-15::R001",
     "DOC-15::R002",
     "DOC-15::R003",
@@ -5550,128 +9767,11 @@
     "DOC-RT-1010::R003",
     "DOC-RT-1010::R004",
     "DOC-RT-1010::R005",
-    "DOC-RT-1010::R007",
-    "HALO-DOC-11::R001",
-    "HALO-DOC-11::R002",
-    "HALO-DOC-11::R003",
-    "HALO-DOC-11::R004",
-    "HALO-DOC-11::R005",
-    "HALO-DOC-11::R006",
-    "HALO-DOC-11::R007",
-    "HALO-DOC-11::R008",
-    "HALO-DOC-11::R009",
-    "HALO-DOC-11::R010",
-    "HALO-DOC-11::R011",
-    "HALO-DOC-11::R012",
-    "HALO-DOC-11::R013",
-    "HALO-DOC-14::R001",
-    "HALO-DOC-14::R002",
-    "HALO-DOC-14::R003",
-    "HALO-DOC-14::R004",
-    "HALO-DOC-14::R005",
-    "HALO-DOC-14::R006",
-    "HALO-DOC-14::R007",
-    "HALO-DOC-14::R009",
-    "HALO-DOC-14::R010",
-    "HALO-DOC-14::R011",
-    "HALO-DOC-14::R012",
-    "HALO-DOC-18::R001",
-    "HALO-DOC-18::R002",
-    "HALO-DOC-18::R003",
-    "HALO-DOC-18::R004",
-    "HALO-DOC-18::R005",
-    "HALO-DOC-18::R006",
-    "HALO-DOC-18::R007",
-    "HALO-DOC-18::R008",
-    "HALO-DOC-18::R009",
-    "HALO-DOC-18::R011",
-    "HALO-DOC-18::R012",
-    "HALO-DOC-18::R013",
-    "HALO-DOC-18::R015",
-    "HALO-DOC-18::R016",
-    "HALO-DOC-18::R018",
-    "HALO-DOC-18::R019",
-    "HALO-DOC-20::R001",
-    "HALO-DOC-20::R002",
-    "HALO-DOC-20::R003",
-    "HALO-DOC-20::R004",
-    "HALO-DOC-20::R005",
-    "HALO-DOC-20::R006",
-    "HALO-DOC-20::R007",
-    "HALO-DOC-20::R008",
-    "HALO-DOC-20::R009",
-    "HALO-DOC-20::R010",
-    "HALO-DOC-20::R011",
-    "HALO-DOC-20::R012",
-    "HALO-DOC-20::R013",
-    "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R001",
-    "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R002",
-    "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R003",
-    "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R004",
-    "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R005",
-    "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R006",
-    "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R007",
-    "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R008",
-    "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R009",
-    "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R010",
-    "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R011",
-    "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R012",
-    "HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R013",
-    "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R001",
-    "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R002",
-    "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R003",
-    "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R004",
-    "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R005",
-    "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R006",
-    "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R007",
-    "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R008",
-    "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R009",
-    "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R010",
-    "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R011",
-    "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R012",
-    "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R013",
-    "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R014",
-    "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R015",
-    "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R016",
-    "HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R017",
-    "HALO-DOC-24::R001",
-    "HALO-DOC-24::R002",
-    "HALO-DOC-24::R003",
-    "HALO-DOC-24::R004",
-    "HALO-DOC-24::R005",
-    "HALO-DOC-24::R006",
-    "HALO-DOC-24::R007",
-    "HALO-DOC-24::R008",
-    "HALO-DOC-24::R009",
-    "HALO-DOC-24::R010",
-    "HALO-DOC-24::R011",
-    "HALO-DOC-24::R012",
-    "HALO-DOC-24::R013",
-    "HALO-DOC-24::R014",
-    "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R001",
-    "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R002",
-    "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R003",
-    "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R004",
-    "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R009",
-    "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R014",
-    "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R015",
-    "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R016",
-    "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R017",
-    "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R018",
-    "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R019",
-    "pipeline_contract_violation_v1::R001",
-    "pipeline_contract_violation_v1::R002",
-    "pipeline_contract_violation_v1::R003",
-    "pipeline_contract_violation_v1::R004",
-    "pipeline_contract_violation_v1::R005",
-    "pipeline_contract_violation_v1::R006",
-    "pipeline_contract_violation_v1::R007",
-    "pipeline_contract_violation_v1::R008",
-    "pipeline_contract_violation_v1::R009",
-    "pipeline_contract_violation_v1::R010",
-    "pipeline_contract_violation_v1::R011"
+    "DOC-RT-1010::R007"
   ],
   "orphan_artifacts": [
+    "artifacts/execute/execute_diff.md",
+    "artifacts/execute/execute_log.md",
     "artifacts/gap/gap_error.md",
     "artifacts/intake/repository_inventory.json"
   ]

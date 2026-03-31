@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-31T14:48:52.939Z",
+  "generated_at": "2026-03-31T15:10:32.168Z",
   "blocked": true,
   "status": "FAIL",
   "outcome": "FAIL",
@@ -9,11 +9,11 @@
     "failed_checks": 3
   },
   "closure_gate": {
-    "gap_count": 442,
+    "gap_count": 349,
     "critical_violations": 0,
-    "orphan_code_units": 3,
+    "orphan_code_units": 1,
     "orphan_requirements": 0,
-    "orphan_artifacts": 2,
+    "orphan_artifacts": 4,
     "deterministic_confirmation_ready": true,
     "execute_artifacts_complete": true,
     "decision_artifact_present": true,
@@ -68,12 +68,12 @@
     {
       "name": "execute_plan_matches_backfill_plan",
       "passed": true,
-      "detail": "backfill_actions=14; execute_actions=14"
+      "detail": "backfill_actions=2; execute_actions=2"
     },
     {
       "name": "gap_count_zero",
       "passed": false,
-      "detail": "gap_count=442"
+      "detail": "gap_count=349"
     },
     {
       "name": "critical_violations_zero",
@@ -83,7 +83,7 @@
     {
       "name": "orphan_code_units_zero",
       "passed": false,
-      "detail": "orphan_code_units=3"
+      "detail": "orphan_code_units=1"
     },
     {
       "name": "orphan_requirements_zero",
@@ -93,7 +93,7 @@
     {
       "name": "orphan_artifacts_zero",
       "passed": false,
-      "detail": "orphan_artifacts=2"
+      "detail": "orphan_artifacts=4"
     },
     {
       "name": "audit_not_blocked",

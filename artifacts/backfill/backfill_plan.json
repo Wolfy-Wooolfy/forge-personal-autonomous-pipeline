@@ -1,99 +1,15 @@
 {
   "execution_id": "MODULE_FLOW_BACKFILL_v2",
-  "generated_at": "2026-03-31T11:52:56.612Z",
+  "generated_at": "2026-03-31T15:10:32.038Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "source": {
     "decision_gate_path": "artifacts/decisions/module_flow_decision_gate.json",
-    "decision_gate_sha256": "f7668d64c9c9bc3514d9c7c79a774fe38fd75246cec65f1f6920ea12d7b269d0",
+    "decision_gate_sha256": "fbdf21484fdaea9f9c5aa05ac4c13554a8dda45dbdf19e1ebdaf1bc37e8efe19",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84"
   },
   "approved_code_actions": [
-    {
-      "action_id": "ACT-035052872a11",
-      "origin_gap_id": "GAP-074e311df76c",
-      "target_file": "code/src/orchestrator/entry_resolver.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-3b3e007edf88",
-      "origin_gap_id": "GAP-074e311df76c",
-      "target_file": "code/src/orchestrator/entry_resolver.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-ed002ae6bbbf",
-      "origin_gap_id": "GAP-1f164d54596a",
-      "target_file": "code/src/forge/forge_state_resolver.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-f325d2e88681",
-      "origin_gap_id": "GAP-1f164d54596a",
-      "target_file": "code/src/forge/forge_state_resolver.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-7803f533d7fc",
-      "origin_gap_id": "GAP-809aa1e92a60",
-      "target_file": "code/src/forge/forge_state_writer.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-856790e4d718",
-      "origin_gap_id": "GAP-809aa1e92a60",
-      "target_file": "code/src/forge/forge_state_writer.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-6ba47a501c75",
-      "origin_gap_id": "GAP-9c45e4a74c73",
-      "target_file": "code/src/orchestrator/autonomous_runner.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-71e754cc88e0",
-      "origin_gap_id": "GAP-9c45e4a74c73",
-      "target_file": "code/src/orchestrator/autonomous_runner.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-74b400e601ba",
-      "origin_gap_id": "GAP-c2a71a938add",
-      "target_file": "code/src/orchestrator/pipeline_definition.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-a67e5427d467",
-      "origin_gap_id": "GAP-c2a71a938add",
-      "target_file": "code/src/orchestrator/pipeline_definition.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-c528a94d8152",
-      "origin_gap_id": "GAP-c3dcb5d54230",
-      "target_file": "code/src/modules/verifyEngine.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-f15e393fc1a5",
-      "origin_gap_id": "GAP-c3dcb5d54230",
-      "target_file": "code/src/modules/verifyEngine.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
     {
       "action_id": "ACT-782d6f9ff5aa",
       "origin_gap_id": "GAP-eb36dafc91a5",

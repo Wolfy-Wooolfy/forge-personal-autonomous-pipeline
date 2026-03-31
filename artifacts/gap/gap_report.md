@@ -1,7 +1,7 @@
 # Gap Report
 
 ## Summary
-- total_gaps: 442
+- total_gaps: 349
 - critical_count: 0
 - requires_decision: true
 
@@ -16,81 +16,36 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-a9fe5979fb04: Implement requirement DOC-10-CE-SEL::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-009cee144b1f
-  - affected_entities: HALO-DOC-22::R012
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-0049d36ac747
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R002
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-f6ac15d66c1b: Complete coverage for HALO-DOC-22::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-00b80e342dc2
-  - affected_entities: HALO-DOC-20::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-910c4b92eaf6: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-012291ee5dab
+  - affected_entities: HALO-DOC-18::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-69bae917a92a: Implement requirement HALO-DOC-20::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0269ffdfe17d
-  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R006
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-e2d0c25294db: Implement requirement HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-c021780f68e6: Complete coverage for HALO-DOC-18::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0365ff90ec91
   - affected_entities: DOC-15::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-2c1b2036cdb9: Implement requirement DOC-15::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-03e0ea1b8489
-  - affected_entities: pipeline_contract_violation_v1::R006
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-053d440d286d
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-77878cc287d0: Implement requirement pipeline_contract_violation_v1::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0585feeabc3e
-  - affected_entities: HALO-DOC-20::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-58ebd40e96b3: Implement requirement HALO-DOC-20::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0626b68cb4cc
-  - affected_entities: HALO-DOC-18::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-b1182b4dacf1: Implement requirement HALO-DOC-18::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-062d3b4b5e33
-  - affected_entities: DOC-13::R006
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-38f27eda72ac: Implement requirement DOC-13::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-065c44b85c06
-  - affected_entities: HALO-DOC-20::R005
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-0534d6259c7d: Implement requirement HALO-DOC-20::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-0bbb70b52baa: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-06a278df370b
   - affected_entities: DOC-17__05_17_Artifact_Schema_Revision_v2::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-5501db9284fe: Implement requirement DOC-17__05_17_Artifact_Schema_Revision_v2::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-07c1be03a483
-  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-a65115b3bb7d: Implement requirement HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-07cb4cc8f286
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-38ffe467efff: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-07d2bbaf87e8
-  - affected_entities: HALO-DOC-20::R008
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-bd7d54ae18c6: Implement requirement HALO-DOC-20::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-0871e266067c
-  - affected_entities: HALO-DOC-22::R001
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-06ff43c7e422
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R007
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-6db4057594b8: Complete coverage for HALO-DOC-22::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-08d0a0b885e1
-  - affected_entities: DOC-35::R009
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-96774993fe2f: Complete coverage for DOC-35::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-5ab6c5f88856: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-090ad26d346b
   - affected_entities: DOC-01-DRIVER::R009
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -101,181 +56,126 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-bdf3d50e3832: Implement requirement DOC-01-DRIVER::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0990c6f0f7a8
-  - affected_entities: DOC-14::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-097365a552fe
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R017
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-5e1be7c95301: Implement requirement DOC-14::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-16871da57d00: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R017 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0a6b24c686ec
   - affected_entities: DOC-15::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-de7e83691882: Implement requirement DOC-15::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0c75ebb77780
-  - affected_entities: HALO-DOC-14::R010
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-0b51b1455a3d
+  - affected_entities: HALO-DOC-11::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-a43afde91980: Implement requirement HALO-DOC-14::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0cca4da67f39
-  - affected_entities: HALO-DOC-14::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-a92cd432df67: Complete coverage for HALO-DOC-11::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-0c3186dff9ef
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-58cb99399457: Implement requirement HALO-DOC-14::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-67e8a5784521: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0db8a76c4cce
   - affected_entities: DOC-19::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-932bc3f944ba: Implement requirement DOC-19::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0df19e62a258
-  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R008
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-0e3979faf1a0
+  - affected_entities: HALO-DOC-18::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-0567c84604cf: Implement requirement HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0dfb8a95695f
-  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-af925b855cf5: Implement requirement 03_Cognitive_Layer_Engines_Execution_Contracts::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0e0709574cf9
-  - affected_entities: DOC-14::R010
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-129de151d9ec: Implement requirement DOC-14::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0ecfe33d5509
-  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R014
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-b1d48713fd30: Implement requirement HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-7a141281c947: Complete coverage for HALO-DOC-18::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0f4483c9802e
   - affected_entities: DOC-21::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-1ed51607fb1d: Implement requirement DOC-21::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0f709772047a
-  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-521b4b12d4cb: Implement requirement HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-0f765189dee8
   - affected_entities: DOC-18::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-51015ca07eb4: Implement requirement DOC-18::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1160c5d262e7
-  - affected_entities: HALO-DOC-14::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1138dbff9e6f
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R018
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-2920a6183fa4: Implement requirement HALO-DOC-14::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-11d3c84cac71
-  - affected_entities: HALO-DOC-24::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-20ab3c26b49d: Implement requirement HALO-DOC-24::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-120a88d8a044
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R010
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-bdfc29fea59e: Implement requirement 03_Pipeline_Stages_Specification_A-D::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-63cc58605d13: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R018 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1213479bb199
   - affected_entities: DOC-19::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-8a4852c2d461: Implement requirement DOC-19::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1225e88f6102
-  - affected_entities: DOC-14::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-3d06e2d824f5: Implement requirement DOC-14::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-132788825ecd
-  - affected_entities: HALO-DOC-22::R005
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-14129e1385b3
+  - affected_entities: HALO-DOC-24::R008
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-40af1ff9921e: Complete coverage for HALO-DOC-22::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-273f4af40060: Complete coverage for HALO-DOC-24::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1435a6439bb5
   - affected_entities: DOC-01-DRIVER::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-60e0a111c69b: Implement requirement DOC-01-DRIVER::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-14db68f5294d
+  - affected_entities: DOC-14::R022
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5fb47d6be3fa: Complete coverage for DOC-14::R022 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-14dc87e7911c
   - affected_entities: DOC-38::R016
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-cdfaf38e206b: Complete coverage for DOC-38::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-165053044bf9
-  - affected_entities: HALO-DOC-18::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-a6f3b88bf068: Implement requirement HALO-DOC-18::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-1662cc2538c8
-  - affected_entities: HALO-DOC-22::R011
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-15bbee7426a7
+  - affected_entities: HALO-DOC-20::R007
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-cff0f23a6ca5: Complete coverage for HALO-DOC-22::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-189e6bce414d
-  - affected_entities: DOC-36::R013
+    - ACT-97611fcd9cc2: Complete coverage for HALO-DOC-20::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1740f01d4317
+  - affected_entities: HALO-DOC-14::R011
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-c7e1de8f972b: Complete coverage for DOC-36::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-9b5ae0289784: Complete coverage for HALO-DOC-14::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1814f91ac181
+  - affected_entities: HALO-DOC-20::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-293919822198: Complete coverage for HALO-DOC-20::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-18ed0cc74e00
   - affected_entities: DOC-21::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-eef5109137f4: Implement requirement DOC-21::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-197dc0db2bef
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5d39185c4142: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-19dcc9bbf900
   - affected_entities: DOC-21::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-6d63eddefce1: Implement requirement DOC-21::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1af7b7ccadeb
-  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R013
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-66840514b84d: Implement requirement HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1b4a20a503b8
   - affected_entities: DOC-18::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-937420c4e365: Implement requirement DOC-18::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-1c4429cd6d01
-  - affected_entities: DOC-36::R007
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1d0fd742c76c
+  - affected_entities: HALO-DOC-24::R001
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-10f9616d8a58: Complete coverage for DOC-36::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1d2482cd738c
-  - affected_entities: HALO-DOC-14::R005
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-ab591bcb42d4: Implement requirement HALO-DOC-14::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1ddd6c8ab656
-  - affected_entities: HALO-DOC-24::R013
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-8c5a7dd81427: Implement requirement HALO-DOC-24::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-1e01a346436c
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R012
+    - ACT-5fa5d1c437a3: Complete coverage for HALO-DOC-24::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1dba57243bc9
+  - affected_entities: HALO-DOC-20::R010
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-b8e56e7234a5: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-1e052ed2089a
-  - affected_entities: DOC-35::R013
+    - ACT-600e6c08354b: Complete coverage for HALO-DOC-20::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1e3bea68991f
+  - affected_entities: pipeline_contract_violation_v1::R004
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-ea3222c394df: Complete coverage for DOC-35::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-1edf140d5b32
-  - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R002
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-fbe9983387de: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1f2bfe97b0bb
-  - affected_entities: pipeline_contract_violation_v1::R011
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-c485303be93c: Implement requirement pipeline_contract_violation_v1::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-1fc441dc9fbb
-  - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R007
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-54e889b41dc7: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-4b7abd114d5d: Complete coverage for pipeline_contract_violation_v1::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-1ff46ec4d166
   - affected_entities: DOC-01-PROMPT::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -286,21 +186,31 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-e5fb4983e6c7: Implement requirement DOC-10-CE-SEL::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-21c822b9acf7
-  - affected_entities: HALO-DOC-22::R007
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-21680412b848
+  - affected_entities: HALO-DOC-24::R014
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-bb4738b401fa: Complete coverage for HALO-DOC-22::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-8b49ff25199b: Complete coverage for HALO-DOC-24::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-21d21340b9af
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R009
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-922a33b73631: Implement requirement DOC-17__PROJECT_OBJECTIVE_CONTRACT::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-21d7f5953293
-  - affected_entities: HALO-DOC-18::R014
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-21de0b45d7e1
+  - affected_entities: HALO-DOC-14::R004
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-6f5761dd0d63: Complete coverage for HALO-DOC-18::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-303fb24ea88a: Complete coverage for HALO-DOC-14::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-221d05541db0
+  - affected_entities: HALO-DOC-18::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c436a5abe0e7: Complete coverage for HALO-DOC-18::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-22836361ed7a
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4d981fd88310: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-228d547aad9e
   - affected_entities: DOC-20::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -311,71 +221,86 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-c6e6b5751a64: Implement requirement DOC-15::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-24021365d3df
-  - affected_entities: HALO-DOC-18::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-34330b7ece71: Implement requirement HALO-DOC-18::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-249cc23d91d2
-  - affected_entities: DOC-36::R016
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-23ba8c9f7ea0
+  - affected_entities: pipeline_contract_violation_v1::R005
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-36a3dc151f37: Complete coverage for DOC-36::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-a5c5d75242d1: Complete coverage for pipeline_contract_violation_v1::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-242eaf5d03cb
+  - affected_entities: DOC-13::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e0421c8d84f9: Complete coverage for DOC-13::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-24aa9dbaaf16
   - affected_entities: DOC-01-PROMPT::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-8000ecb69b0c: Implement requirement DOC-01-PROMPT::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-27487fa0ad44
-  - affected_entities: DOC-13::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-24abdbd719ad
+  - affected_entities: HALO-DOC-20::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-c1f7d15d4fc5: Implement requirement DOC-13::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-d852b83b5c07: Complete coverage for HALO-DOC-20::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-24dff701e744
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-057337d0c5c8: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-275b29a715c6
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-24a816abeded: Implement requirement DOC-17__PROJECT_OBJECTIVE_CONTRACT::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-2ace14cc0be3
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-67b2a7dbf8ca: Implement requirement 03_Pipeline_Stages_Specification_A-D::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-2c44ded953ce
-  - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R004
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-28a07113b5c0
+  - affected_entities: pipeline_contract_violation_v1::R003
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-980661966381: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-5d6ccaadba24: Complete coverage for pipeline_contract_violation_v1::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2976cfbdcea8
+  - affected_entities: HALO-DOC-20::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-47893ac9dc03: Complete coverage for HALO-DOC-20::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-29f5d69d5ece
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a620a535bbae: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2b583f0329ce
+  - affected_entities: HALO-DOC-14::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3dabab02beb4: Complete coverage for HALO-DOC-14::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2c17908e500a
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a42d65cf58f2: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-2c55f1ba2fe3
   - affected_entities: DOC-38::R013
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-4808f0099d9d: Complete coverage for DOC-38::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-2d25fc74c14e
-  - affected_entities: DOC-14::R005
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-2905e2b603a6: Implement requirement DOC-14::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-2e221fde9f4b
-  - affected_entities: HALO-DOC-22::R019
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2d35cecdc287
+  - affected_entities: HALO-DOC-20::R006
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-3798cad325e7: Complete coverage for HALO-DOC-22::R019 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-7630b993bc4d: Complete coverage for HALO-DOC-20::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2d484d8ce869
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-85ebc8eb0dc4: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-2e63cea57ed2
   - affected_entities: DOC-17__05_17_Artifact_Schema_Revision_v2::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-285b788ac361: Implement requirement DOC-17__05_17_Artifact_Schema_Revision_v2::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-2e973509a72e
-  - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R001
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2e9d33e241a3
+  - affected_entities: HALO-DOC-14::R007
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-5de46edf9413: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-2f7a2d89db5d
-  - affected_entities: DOC-34::R004
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-075afc85247b: Complete coverage for DOC-34::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-3c3eac4f728a: Complete coverage for HALO-DOC-14::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-2f8ff1a6278f
   - affected_entities: artifacts/gap/gap_error.md
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
@@ -391,31 +316,31 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-2e8934a31928: Complete coverage for HALO-DOC-15::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-300cb9ce1e83
-  - affected_entities: HALO-DOC-22::R021
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2fe70573368c
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R016
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-a74b0dd4a458: Complete coverage for HALO-DOC-22::R021 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-30e7e6924530
-  - affected_entities: HALO-DOC-24::R008
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-69e2216659e8: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-309a543c6e23
+  - affected_entities: HALO-DOC-11::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-a8b80f8fb497: Implement requirement HALO-DOC-24::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-dd79494817ba: Complete coverage for HALO-DOC-11::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-310f68bc8eb0
   - affected_entities: DOC-10-CE-SEL::R010
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-821c514ea5f8: Implement requirement DOC-10-CE-SEL::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-3152f6ed270f
-  - affected_entities: DOC-35::R001
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-32408d094244
+  - affected_entities: DOC-14::R018
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-9e991f306bbb: Complete coverage for DOC-35::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-317af84938e4
-  - affected_entities: DOC-34::R002
+    - ACT-e4661d040b44: Complete coverage for DOC-14::R018 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-329a725d6941
+  - affected_entities: HALO-DOC-11::R008
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-04c0ac55ee99: Complete coverage for DOC-34::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-f345b3a82edf: Complete coverage for HALO-DOC-11::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-329eb6ab2538
   - affected_entities: DOC-21::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -431,46 +356,66 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-3d3c1ed50625: Complete coverage for HALO-DOC-15::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3573eb31f314
+  - affected_entities: pipeline_contract_violation_v1::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c1904094c772: Complete coverage for pipeline_contract_violation_v1::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-357526caf51c
   - affected_entities: DOC-17__05_17_Artifact_Schema_Revision_v2::R011
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-bb2a35d05778: Implement requirement DOC-17__05_17_Artifact_Schema_Revision_v2::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-369861f873d0
-  - affected_entities: HALO-DOC-11::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-fdbd72e996f8: Implement requirement HALO-DOC-11::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-36edd18a3742
-  - affected_entities: HALO-DOC-22::R010
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-358b3af4b01e
+  - affected_entities: DOC-14::R003
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-80620ef86723: Complete coverage for HALO-DOC-22::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-373cad1f9396
-  - affected_entities: HALO-DOC-24::R011
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-e0025126a777: Complete coverage for DOC-14::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-37a1710fd3a4
+  - affected_entities: HALO-DOC-20::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-365cb72aa336: Implement requirement HALO-DOC-24::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-ace1e3cef9df: Complete coverage for HALO-DOC-20::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-381ad8b71fa1
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-38450c254d1a: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-386bb087678b
   - affected_entities: HALO-DOC-15::R011
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-86070adcc8af: Complete coverage for HALO-DOC-15::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-39df9fbfc690
-  - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R008
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-39379d188d90
+  - affected_entities: HALO-DOC-24::R007
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-d4edde404eb0: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-ddb32d5358ca: Complete coverage for HALO-DOC-24::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3aa3509f2cff
   - affected_entities: DOC-01-ADAPTER::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-6bd27aabb090: Implement requirement DOC-01-ADAPTER::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3ac23221bbb8
+  - affected_entities: HALO-DOC-11::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-2187812b663e: Complete coverage for HALO-DOC-11::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3ae4d352ecdc
   - affected_entities: DOC-RT-1010::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-1e174aa763d9: Implement requirement DOC-RT-1010::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3b80eb4b1c7c
+  - affected_entities: HALO-DOC-18::R019
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-60cb75bd2300: Complete coverage for HALO-DOC-18::R019 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3bc568ca6029
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-1efa532feeee: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3ccd15299782
   - affected_entities: DOC-12::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -481,36 +426,36 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-0a104b96b855: Implement requirement DOC-20::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3dc254997e3f
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R019
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-28ba80194c87: Implement requirement 03_Pipeline_Stages_Specification_A-D::R019 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-3ddc0c493d20
-  - affected_entities: HALO-DOC-24::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-424ac830220f: Implement requirement HALO-DOC-24::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-3f6fe833d69c
-  - affected_entities: DOC-34::R008
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3e09bcd5b9ea
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R017
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-5e0e9dd80841: Complete coverage for DOC-34::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-413d872f781a
-  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R013
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-d7645134db84: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R017 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3e7e6c64bf1b
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-05191e9fe781: Implement requirement HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-584d781663c7: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3f70276e9e49
+  - affected_entities: HALO-DOC-18::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6fbdbb2d2206: Complete coverage for HALO-DOC-18::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-407a0cac4dd7
+  - affected_entities: DOC-13::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ed0d94dbfbc3: Complete coverage for DOC-13::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4190d3bef224
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R017
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-58b2614119d6: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R017 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-419af18dd2b6
   - affected_entities: DOC-38::R005
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-80441dd97d67: Complete coverage for DOC-38::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-42bd74a85063
-  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R005
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-ccce595b6ff3: Implement requirement HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-42e3ef14f577
   - affected_entities: DOC-19::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -521,16 +466,16 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-4291afbe9d8c: Implement requirement DOC-19::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-437e5f8baaae
-  - affected_entities: DOC-34::R014
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-43c343e260bf
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R008
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-1d93fc20252f: Complete coverage for DOC-34::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-447bc9366859
-  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R006
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-c2981454c5cd: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4433bd673e6b
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R016
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-e534a1e85a20: Implement requirement 03_Cognitive_Layer_Engines_Execution_Contracts::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-e56e37a57282: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-44886789000c
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -541,61 +486,56 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-f0802dd7b122: Complete coverage for DOC-38::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-45670750525c
-  - affected_entities: HALO-DOC-24::R012
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-45042412dd24
+  - affected_entities: HALO-DOC-18::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-3cc8de13ad09: Implement requirement HALO-DOC-24::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-45d7d93160d5
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R014
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-9a00b3abc32c: Complete coverage for HALO-DOC-18::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-458992a24049
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R019
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-d30c0df2760f: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-45f4a63f85d3
-  - affected_entities: DOC-14::R016
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-09552292128d: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R019 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-45bb18ab60b7
+  - affected_entities: HALO-DOC-11::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-d59cd1360566: Implement requirement DOC-14::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-21b33587b11b: Complete coverage for HALO-DOC-11::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-469021aecb2b
+  - affected_entities: HALO-DOC-11::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c86ec5725fc3: Complete coverage for HALO-DOC-11::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-47a41acec405
   - affected_entities: DOC-10-CE-SEL::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-106d08fc748f: Implement requirement DOC-10-CE-SEL::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-47f39031aa49
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d683972b1c47: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-47f3c7ba4349
+  - affected_entities: DOC-14::R021
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-8fefab033941: Complete coverage for DOC-14::R021 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-484e89d89b21
   - affected_entities: DOC-17__05_17_Artifact_Schema_Revision_v2::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-460020edad68: Implement requirement DOC-17__05_17_Artifact_Schema_Revision_v2::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-48a4aef3ade4
-  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R012
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-c159c7df10cb: Implement requirement HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-48ab9a6da9ea
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R017
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-f8ef8659fdd8: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R017 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-495285c84dea
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-27c59a7934c5: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-49aa392c9bd8
-  - affected_entities: HALO-DOC-11::R006
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-05e066b1138e: Implement requirement HALO-DOC-11::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4af0b8ec0007
-  - affected_entities: HALO-DOC-11::R005
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-bae1b60036ec: Implement requirement HALO-DOC-11::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-4b25cd8a567b
-  - affected_entities: HALO-DOC-22::R018
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-491681b17653
+  - affected_entities: HALO-DOC-18::R001
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-26c3dbd541b3: Complete coverage for HALO-DOC-22::R018 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-66edfd4d1fe7: Complete coverage for HALO-DOC-18::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-49a8b1cde8d7
+  - affected_entities: HALO-DOC-24::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d2a2436cc212: Complete coverage for HALO-DOC-24::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4babad8e10ac
   - affected_entities: DOC-21::R002
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -606,26 +546,31 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-747ed90f9a45: Complete coverage for DOC-38::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4d5d2ca9a862
-  - affected_entities: HALO-DOC-20::R010
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4da1b8c86658
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-582746d896e1: Implement requirement HALO-DOC-20::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4dd6b61b1feb
-  - affected_entities: HALO-DOC-20::R012
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-1b5650b0c3e8: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4e71f7637237
+  - affected_entities: DOC-14::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-efb227031b58: Implement requirement HALO-DOC-20::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4e2161ffadc6
-  - affected_entities: HALO-DOC-18::R019
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-a24f9e247c34: Implement requirement HALO-DOC-18::R019 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-e2754ff936dc: Complete coverage for DOC-14::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-4e946a090b16
   - affected_entities: DOC-01-ADAPTER::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-09810ce372eb: Implement requirement DOC-01-ADAPTER::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4f352075f4f8
+  - affected_entities: HALO-DOC-24::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-bf5683db71ce: Complete coverage for HALO-DOC-24::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4f9544031403
+  - affected_entities: pipeline_contract_violation_v1::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-16d891b77581: Complete coverage for pipeline_contract_violation_v1::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-509bfcf480e9
   - affected_entities: DOC-15::R008
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -641,11 +586,6 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-09606adc0054: Implement requirement DOC-15::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-518125153a1d
-  - affected_entities: DOC-34::R003
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-a8f009f29513: Complete coverage for DOC-34::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-51d54e3943b6
   - affected_entities: DOC-18::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -656,76 +596,56 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-d803ffefff9d: Implement requirement DOC-10-CE-SEL::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-524853ed9ef5
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R013
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-2ad4d604d760: Implement requirement 03_Pipeline_Stages_Specification_A-D::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-526ec5387c00
-  - affected_entities: DOC-14::R012
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-0c183a4dc232: Implement requirement DOC-14::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-52abb59017e7
   - affected_entities: DOC-38::R012
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-4032a99f2080: Complete coverage for DOC-38::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-5376590146e9
-  - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R010
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-53a1f12168ab
+  - affected_entities: DOC-13::R004
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-1548cd4b57e3: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-53ad4e4ff3ba
-  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R005
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-f6d454b338fa: Complete coverage for DOC-13::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-53d5a9a7f5bf
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-4e20eca6ea85: Implement requirement 03_Cognitive_Layer_Engines_Execution_Contracts::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-3bff6b3e8dce: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-53f6d598935e
+  - affected_entities: HALO-DOC-11::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-0e0a0b5454fd: Complete coverage for HALO-DOC-11::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-544549b20411
   - affected_entities: DOC-17__05_17_Artifact_Schema_Revision_v2::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-ae1e6fffc913: Implement requirement DOC-17__05_17_Artifact_Schema_Revision_v2::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-546b8b934437
-  - affected_entities: DOC-36::R010
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-9e3a8db8d082: Complete coverage for DOC-36::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-54d1c94b86b6
-  - affected_entities: DOC-36::R004
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-1d7bfb06e947: Complete coverage for DOC-36::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-55ab83d18459
-  - affected_entities: pipeline_contract_violation_v1::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-95f8314eb329: Implement requirement pipeline_contract_violation_v1::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-55e1d2352fab
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R018
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-798c11643db7: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R018 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-57217b3662be
   - affected_entities: DOC-01-DRIVER::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-123587d73302: Implement requirement DOC-01-DRIVER::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-578ec48abc0d
-  - affected_entities: DOC-34::R005
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-a397701063d6: Complete coverage for DOC-34::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-57fa6e19d192
   - affected_entities: DOC-15::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-cde4d7030c23: Implement requirement DOC-15::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-5845b2d901c9
-  - affected_entities: DOC-35::R011
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-58e91324f2bd
+  - affected_entities: HALO-DOC-20::R005
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-3b916c19428f: Complete coverage for DOC-35::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-209232cb1cd4: Complete coverage for HALO-DOC-20::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-59667a662051
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-7962556827d0: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-597a1c150218
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-bc1d99f6e496: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-59cf75eb449c
   - affected_entities: DOC-01-ADAPTER::R009
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -736,61 +656,41 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-d098c6f0bad8: Implement requirement DOC-12::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5a9aa1f4571c
-  - affected_entities: HALO-DOC-18::R012
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-5a6361171cb0
+  - affected_entities: HALO-DOC-18::R016
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-044000f714d4: Implement requirement HALO-DOC-18::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-d7c6a8939faf: Complete coverage for HALO-DOC-18::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5ab2e30a2c64
   - affected_entities: DOC-18::R009
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-63b0b20499af: Implement requirement DOC-18::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5b821e3f6a7d
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R019
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-41157459b9f4: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R019 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-5b8b6d239d43
-  - affected_entities: HALO-DOC-22::R017
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-5ae0eec36643
+  - affected_entities: HALO-DOC-18::R003
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-eebff09b3592: Complete coverage for HALO-DOC-22::R017 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5c2b23acc0cd
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R005
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-ffebf8b22892: Complete coverage for HALO-DOC-18::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-5c98c68d0f7a
+  - affected_entities: HALO-DOC-24::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-88902cece20b: Implement requirement 03_Pipeline_Stages_Specification_A-D::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-6f2d93ab630b: Complete coverage for HALO-DOC-24::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5cd360a833ae
   - affected_entities: DOC-RT-1010::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-fb40206f3741: Implement requirement DOC-RT-1010::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5cdacefa4f01
-  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-c710449da7e6: Implement requirement HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5d0bdd3717c2
-  - affected_entities: HALO-DOC-18::R006
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-15ebabcc82d6: Implement requirement HALO-DOC-18::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5d6aebc890dd
   - affected_entities: DOC-15::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-ebba553091fd: Implement requirement DOC-15::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5db3bbcdf6f2
-  - affected_entities: HALO-DOC-14::R011
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-5f9f2bd0134d
+  - affected_entities: HALO-DOC-24::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-40a52fd84927: Implement requirement HALO-DOC-14::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5e6917cffe2c
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R020
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-7e0e0b084fd1: Implement requirement 03_Pipeline_Stages_Specification_A-D::R020 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-d56e5433bda3: Complete coverage for HALO-DOC-24::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-5fe622104cef
   - affected_entities: DOC-19::R010
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -801,31 +701,31 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-3af0169e4357: Implement requirement DOC-18::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-604d9fce0183
-  - affected_entities: HALO-DOC-22::R022
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-e6d4de4afb26: Complete coverage for HALO-DOC-22::R022 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-610e11d7c73c
   - affected_entities: DOC-19::R008
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-e2732a447edc: Implement requirement DOC-19::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-616b40e16342
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f3c09ea29b5d: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-61a06daabf34
   - affected_entities: DOC-10-CE-SEL::R009
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-89920ee4f0e2: Implement requirement DOC-10-CE-SEL::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-61dbcc247df6
-  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-336f8b608ff3: Implement requirement HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-62763f2204ea
-  - affected_entities: DOC-35::R007
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-61a11b293e40
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R005
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-6410b723daf9: Complete coverage for DOC-35::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-1cd221ffcbee: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-62c55ae81647
+  - affected_entities: pipeline_contract_violation_v1::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-619093016e15: Complete coverage for pipeline_contract_violation_v1::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-6338a2bdf0b4
   - affected_entities: HALO-DOC-15::R012
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -836,76 +736,46 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-b6ca427dfd3f: Implement requirement DOC-19::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-63e11d6557ae
-  - affected_entities: HALO-DOC-24::R010
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-3bb67dd5fa96: Implement requirement HALO-DOC-24::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6400739dd909
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R016
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-d46ae268336e: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-656cb4e78560
   - affected_entities: DOC-20::R008
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-9572273ff394: Implement requirement DOC-20::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-6593430a5fd0
-  - affected_entities: HALO-DOC-22::R015
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-683623ebca99
+  - affected_entities: HALO-DOC-14::R002
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-686530b6c3d5: Complete coverage for HALO-DOC-22::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-673caf036cad
-  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-f9254d7bd00a: Implement requirement HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-67acd0040327
-  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R011
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-b0cb644054d1: Implement requirement HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-688d61db53f6
-  - affected_entities: HALO-DOC-14::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-ebec3d48c38f: Implement requirement HALO-DOC-14::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-692fe9ed322d
-  - affected_entities: HALO-DOC-18::R015
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-1d64c28c95c1: Implement requirement HALO-DOC-18::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-ad8fc5744f07: Complete coverage for HALO-DOC-14::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6967f62dea71
   - affected_entities: DOC-12::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-c7f81fe283de: Implement requirement DOC-12::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6a63ce2581de
-  - affected_entities: DOC-14::R013
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6969184f30ef
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-7da33d507aa7: Implement requirement DOC-14::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6b29f123a89c
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R016
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-d546b394f3a4: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6aa67cdaebf0
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-25d5c3f0c724: Implement requirement 03_Pipeline_Stages_Specification_A-D::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-c4bd53aa03a6: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6ba9c5a4542f
   - affected_entities: DOC-01-PROMPT::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-4a679d6fc95e: Implement requirement DOC-01-PROMPT::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6e475a7b9781
-  - affected_entities: HALO-DOC-11::R011
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6c71f3d9fff8
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R020
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-fb14414ee39a: Implement requirement HALO-DOC-11::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-6ed8dec142ea
-  - affected_entities: HALO-DOC-20::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-69e741842ada: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R020 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6cdd82700cd9
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-ae22daa20ad2: Implement requirement HALO-DOC-20::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-31a7503ca34a: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-6ee13878b144
   - affected_entities: HALO-DOC-15::R006
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -916,31 +786,16 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-e2ca80b2e0f1: Implement requirement DOC-11::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-6fbf93f8235e
-  - affected_entities: DOC-34::R010
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-70f471d6912a
+  - affected_entities: DOC-14::R012
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-61e5cede16cd: Complete coverage for DOC-34::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-6fdf5709ed72
-  - affected_entities: DOC-34::R006
+    - ACT-452cc4899df7: Complete coverage for DOC-14::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-72708d363977
+  - affected_entities: HALO-DOC-24::R012
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-f257df48f39f: Complete coverage for DOC-34::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7074ce048798
-  - affected_entities: pipeline_contract_violation_v1::R008
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-d35e72119c3d: Implement requirement pipeline_contract_violation_v1::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-71f1393a92ed
-  - affected_entities: HALO-DOC-14::R012
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-f446ac5aa4ce: Implement requirement HALO-DOC-14::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-71fe389f8e10
-  - affected_entities: DOC-35::R004
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-788f806bff2b: Complete coverage for DOC-35::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-3fbce7c0ffd4: Complete coverage for HALO-DOC-24::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7271820cd9eb
   - affected_entities: DOC-01-DRIVER::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -966,31 +821,46 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-9528ffd90344: Implement requirement DOC-01-PROMPT::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7561072bbc82
-  - affected_entities: DOC-13::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-27812133c834: Implement requirement DOC-13::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-777a1e218bf9
-  - affected_entities: DOC-36::R011
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-69ea3bbaedfb: Complete coverage for DOC-36::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7809fc8f5398
   - affected_entities: DOC-20::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-fd2b996c0a1b: Implement requirement DOC-20::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-786bfadf4283
+  - affected_entities: HALO-DOC-18::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-daac355c04ba: Complete coverage for HALO-DOC-18::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-78b2ca958959
+  - affected_entities: pipeline_contract_violation_v1::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d7279803186c: Complete coverage for pipeline_contract_violation_v1::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-78ec654169c0
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-34a96e689c0c: Implement requirement DOC-17__PROJECT_OBJECTIVE_CONTRACT::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-79bb0aa86cdf
+  - affected_entities: HALO-DOC-14::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-9a0abad03324: Complete coverage for HALO-DOC-14::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7aa829638f63
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3a91c76933a4: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-7aa987477904
   - affected_entities: DOC-38::R015
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-ea4d943f35ca: Complete coverage for DOC-38::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7aec7b07562d
+  - affected_entities: HALO-DOC-24::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-8e4efa05c538: Complete coverage for HALO-DOC-24::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-7b85d958aaa0
   - affected_entities: DOC-38::R004
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -1006,36 +876,36 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-def84f8dec0b: Complete coverage for DOC-38::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7d3ecc38b7c1
-  - affected_entities: HALO-DOC-11::R012
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-09fe4dcb5dd4: Implement requirement HALO-DOC-11::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7d55137487b3
-  - affected_entities: HALO-DOC-11::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-e664123b3f8b: Implement requirement HALO-DOC-11::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7d7af7435535
   - affected_entities: DOC-01-PROMPT::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-c16b470c1bed: Implement requirement DOC-01-PROMPT::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7dc75b5da2b1
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7da33370228a
+  - affected_entities: pipeline_contract_violation_v1::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-946c758e0943: Implement requirement 03_Pipeline_Stages_Specification_A-D::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7e3b0ebe7ae1
-  - affected_entities: HALO-DOC-14::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-805ad10c3446: Complete coverage for pipeline_contract_violation_v1::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7e1fc7267929
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-cbc6c0b5d231: Implement requirement HALO-DOC-14::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-7e5e594efadf
-  - affected_entities: DOC-14::R017
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-928efdc0ddcd: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7e6451f6bde1
+  - affected_entities: HALO-DOC-14::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-e05c9bc4eec5: Implement requirement DOC-14::R017 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-328811d50229: Complete coverage for HALO-DOC-14::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7e8dcedd0fb0
+  - affected_entities: DOC-14::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-322530c35b49: Complete coverage for DOC-14::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7f07e741f9ba
+  - affected_entities: DOC-14::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ee61d8832af0: Complete coverage for DOC-14::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-7f46553b4690
   - affected_entities: HALO-DOC-15::R008
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -1056,11 +926,11 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-5e4e9cfea992: Implement requirement DOC-11::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-803d77d3180e
-  - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R011
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-802dfe6ef827
+  - affected_entities: HALO-DOC-18::R018
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-899a1abcc3c4: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-d81c162c180f: Complete coverage for HALO-DOC-18::R018 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8057401f66ac
   - affected_entities: DOC-01-PROMPT::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1071,6 +941,11 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-2e04e047bfb1: Implement requirement DOC-18::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-80aa74907f70
+  - affected_entities: HALO-DOC-14::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6198520f5650: Complete coverage for HALO-DOC-14::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-80f92fe49855
   - affected_entities: DOC-01-DRIVER::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1086,41 +961,31 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-20492d679d27: Implement requirement DOC-01-ADAPTER::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-819527edfe59
-  - affected_entities: HALO-DOC-20::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-27afb54548db: Implement requirement HALO-DOC-20::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-81eed0ce8af4
-  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R005
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-8f2b4390bca1: Implement requirement HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-83e5a9941bc9
-  - affected_entities: HALO-DOC-24::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-20a40c37ffc4: Implement requirement HALO-DOC-24::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-843aaf33b419
-  - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R014
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-82323ab8efc5
+  - affected_entities: HALO-DOC-11::R003
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-646b192b65ac: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-9aab10382814: Complete coverage for HALO-DOC-11::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8489df3a1296
   - affected_entities: DOC-17__05_17_Artifact_Schema_Revision_v2::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-efeaaa3fa8d1: Implement requirement DOC-17__05_17_Artifact_Schema_Revision_v2::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8595ff8e029e
-  - affected_entities: HALO-DOC-24::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-85708f979c8a
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-3ca334e45947: Implement requirement HALO-DOC-24::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-50742a4ecea4: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-860f7ea1c5c3
   - affected_entities: DOC-01-DRIVER::R002
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-5a31897da972: Implement requirement DOC-01-DRIVER::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-88176c608c6f
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-7e689f686e98: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8847be619c7d
   - affected_entities: DOC-21::R009
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1131,11 +996,6 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-56af824f4ab2: Implement requirement DOC-01-ADAPTER::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-897d67efafcb
-  - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R015
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-43c64656852e: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-8a5e81363d0c
   - affected_entities: DOC-38::R009
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -1146,216 +1006,101 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-210ab47248cf: Complete coverage for HALO-DOC-15::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8a9477186ed5
-  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-c9d417695be3: Implement requirement HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8aef9b1e54e3
   - affected_entities: DOC-01-ADAPTER::R011
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-7a1f42d29f4b: Implement requirement DOC-01-ADAPTER::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8b1bf9349bc4
-  - affected_entities: DOC-14::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-5d8ce8913dff: Implement requirement DOC-14::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8bee3e0188b4
-  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R012
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-852998b3e018: Implement requirement HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8c0f7e8d1f45
-  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-d4fd60988a5c: Implement requirement HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8c9098920744
-  - affected_entities: DOC-14::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-d10c34c6a31f: Implement requirement DOC-14::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8ccabbbae3e0
-  - affected_entities: HALO-DOC-18::R011
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-11f8c336902b: Implement requirement HALO-DOC-18::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8cd2651f2e5a
   - affected_entities: DOC-17__05_17_Artifact_Schema_Revision_v2::R010
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-4b0ce7c771a7: Implement requirement DOC-17__05_17_Artifact_Schema_Revision_v2::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-8cff584822be
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-7d68f666c26d: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-8d459ceaf751
+  - affected_entities: HALO-DOC-18::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3426b500b5a2: Complete coverage for HALO-DOC-18::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8de0aa0a3c6d
   - affected_entities: DOC-01-DRIVER::R010
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-4dd8ac4bdea1: Implement requirement DOC-01-DRIVER::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-8de9c430005b
-  - affected_entities: DOC-35::R002
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-d083920867d1: Complete coverage for DOC-35::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8e3e5e58ffed
   - affected_entities: DOC-10-CE-SEL::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-93f82c5fb05b: Implement requirement DOC-10-CE-SEL::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8ec206abb3d8
-  - affected_entities: HALO-DOC-11::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-78d0dd47e164: Implement requirement HALO-DOC-11::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-8ecdc3f65b96
-  - affected_entities: HALO-DOC-18::R010
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-b42b8be46ce7: Complete coverage for HALO-DOC-18::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-8f027007a09d
-  - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R009
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-7ab0e432baa0: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-8fe9af02e18e
-  - affected_entities: HALO-DOC-24::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-539018bfaeec: Implement requirement HALO-DOC-24::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-9022d83983a1
-  - affected_entities: HALO-DOC-22::R006
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-9f656660cfa5: Complete coverage for HALO-DOC-22::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-906ddafa36e9
   - affected_entities: DOC-RT-1010::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-2b5e8faf346e: Implement requirement DOC-RT-1010::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-90aa8d891a82
-  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-0ae3283706d7: Implement requirement HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-91240f72b7ab
-  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R008
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-61f3afb8520e: Implement requirement HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-915fc72b8a49
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-40cc3ef10cbb: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-9200494b8fef
-  - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R013
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-925fa2e3a0cb
+  - affected_entities: DOC-14::R013
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-d0591a40e8a2: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-921a2a95e723
-  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-b80ce462f136: Implement requirement 03_Cognitive_Layer_Engines_Execution_Contracts::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-b54e9d139d25: Complete coverage for DOC-14::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-926d57981a0f
   - affected_entities: DOC-12::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-ca29be64700a: Implement requirement DOC-12::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-931f58eb69a0
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R006
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-f47bb9fc0dd9: Implement requirement 03_Pipeline_Stages_Specification_A-D::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-93c3633c3559
-  - affected_entities: DOC-36::R001
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-933927a1e5e6
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R002
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-075c32235ac5: Complete coverage for DOC-36::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-c7dddc1a96fb: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9431c7e345af
   - affected_entities: DOC-17__05_17_Artifact_Schema_Revision_v2::R002
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-46f5313bb51b: Implement requirement DOC-17__05_17_Artifact_Schema_Revision_v2::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-944010037a7c
+  - affected_entities: DOC-13::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f5b929839d3b: Complete coverage for DOC-13::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-94de316dfd60
   - affected_entities: DOC-38::R011
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-eb26593eb4ac: Complete coverage for DOC-38::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-950fb45d8b26
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R018
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-9656fd3b7b60
+  - affected_entities: DOC-14::R016
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-01344b7cb958: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R018 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-952b3b39c2a2
-  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R017
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-c4ca79f7f081: Implement requirement HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R017 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-95c746e95241
-  - affected_entities: HALO-DOC-22::R003
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-4480250a54e3: Complete coverage for HALO-DOC-22::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-e76b44800c47: Complete coverage for DOC-14::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-97039d18a3f8
   - affected_entities: DOC-18::R006
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-05d3c5e0e812: Implement requirement DOC-18::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-972040bb77d1
-  - affected_entities: HALO-DOC-22::R002
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-9703a72a8525
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R015
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-e5a90aa2a381: Complete coverage for HALO-DOC-22::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-7b51ace1640d: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-97360779ae10
   - affected_entities: HALO-DOC-15::R014
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-7fbcdc1e1b4c: Complete coverage for HALO-DOC-15::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-98e02d338b55
-  - affected_entities: DOC-13::R005
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-d84f159d83c1: Implement requirement DOC-13::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-994b63b2afb0
   - affected_entities: DOC-38::R006
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-7cf51ee0cb82: Complete coverage for DOC-38::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9a6d763c1248
-  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-a380c9c50d6c: Implement requirement 03_Cognitive_Layer_Engines_Execution_Contracts::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9b186629b1e2
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-dff99abe4870: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-9b2a3645a5cc
-  - affected_entities: DOC-34::R012
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-ebc6f3fb3bd8: Complete coverage for DOC-34::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9b3214532628
-  - affected_entities: DOC-13::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-c8bb9cd1b5b4: Implement requirement DOC-13::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9b47118a954c
   - affected_entities: DOC-12::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-775f45f787b7: Implement requirement DOC-12::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9b66f0cac7d2
-  - affected_entities: HALO-DOC-18::R005
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-62cf1dc7a017: Implement requirement HALO-DOC-18::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-9d399470676e
-  - affected_entities: DOC-35::R006
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-5c861bda0383: Complete coverage for DOC-35::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9dcbe8c2a081
   - affected_entities: DOC-12::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1366,71 +1111,61 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-392ca94f3a8c: Implement requirement DOC-21::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-9f984a85cd76
-  - affected_entities: HALO-DOC-18::R008
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-eab7ea176f63: Implement requirement HALO-DOC-18::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-a0c31b74bdc0
-  - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R013
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a017fcf18df1
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R003
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-5d3b8835f871: Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-a1b0a8075dd1
-  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-acd1d7e13283: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a0246c5137e2
+  - affected_entities: HALO-DOC-14::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-f7c19d64480b: Implement requirement HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-f42b77b9241f: Complete coverage for HALO-DOC-14::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-a26399445558
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R019
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-8cac602572d5: Implement requirement DOC-17__PROJECT_OBJECTIVE_CONTRACT::R019 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-a589b6f5468b
-  - affected_entities: HALO-DOC-20::R011
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **LOW** [ORPHAN_ARTIFACT] GAP-a2dfcb1c31bd
+  - affected_entities: artifacts/execute/execute_diff.md
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
-    - ACT-0fb95c6d64bb: Implement requirement HALO-DOC-20::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-a5a7f19e7518
-  - affected_entities: HALO-DOC-20::R013
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-5a8c3cfec22d: Implement requirement HALO-DOC-20::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-a6a7f4907352
-  - affected_entities: DOC-13::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-93c0f4a228f2: Implement requirement DOC-13::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-a77463e61e49
-  - affected_entities: DOC-35::R010
+    - ACT-ceaf2b574cb2: Either map artifact artifacts/execute/execute_diff.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a4f7504c1cf3
+  - affected_entities: HALO-DOC-24::R003
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-da443b4e107a: Complete coverage for DOC-35::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-f5c19fa36393: Complete coverage for HALO-DOC-24::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a6222ea4b4fc
+  - affected_entities: DOC-14::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6affe9aa9615: Complete coverage for DOC-14::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a73d574b9097
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-976fd517f84a: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-aba903f5bcbd
   - affected_entities: DOC-10-CE-SEL::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-debc1b045f4b: Implement requirement DOC-10-CE-SEL::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ac96e73163d5
+  - affected_entities: HALO-DOC-20::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-60991faab428: Complete coverage for HALO-DOC-20::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ac9973d5a33f
   - affected_entities: DOC-18::R011
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-876db6cd0f4f: Implement requirement DOC-18::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-acbd7e83978d
-  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-56f595fba124: Implement requirement HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-ad61fe21ae2b
-  - affected_entities: HALO-DOC-22::R009
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ad14d4937c45
+  - affected_entities: DOC-13::R007
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-bebbdbf47485: Complete coverage for HALO-DOC-22::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ad77060326c8
-  - affected_entities: HALO-DOC-20::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-acec9bb73ccd: Implement requirement HALO-DOC-20::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-f89db148a103: Complete coverage for DOC-13::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ae7f1b898680
   - affected_entities: DOC-01-ADAPTER::R002
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1441,91 +1176,81 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-30eef5700160: Implement requirement DOC-15::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b00db8f365c2
-  - affected_entities: DOC-14::R021
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-508955303088: Implement requirement DOC-14::R021 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b1090fb0fa63
   - affected_entities: DOC-19::R009
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-e3dc9d5a3599: Implement requirement DOC-19::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b1aeeb68e3a7
-  - affected_entities: HALO-DOC-18::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-3bc57b48895c: Implement requirement HALO-DOC-18::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b1d1527a5332
-  - affected_entities: DOC-14::R018
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-ffd45ec5df8e: Implement requirement DOC-14::R018 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-b21e8ae58bb5
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R015
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b1e898df0ea8
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R002
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-1d92022287da: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-b230bbf6dcd4
-  - affected_entities: DOC-34::R007
+    - ACT-feeb53fec187: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b2299b6d2c74
+  - affected_entities: HALO-DOC-14::R009
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-5c3f8a5f7644: Complete coverage for DOC-34::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b2a5c9899b30
+    - ACT-72f566536f62: Complete coverage for HALO-DOC-14::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b26f0cf885fa
+  - affected_entities: HALO-DOC-20::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-9fd14612e2b5: Complete coverage for HALO-DOC-20::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b2ccba78cdde
+  - affected_entities: pipeline_contract_violation_v1::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4b015f395d7b: Complete coverage for pipeline_contract_violation_v1::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b484cb5d7462
+  - affected_entities: pipeline_contract_violation_v1::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-779e3b68e0b2: Complete coverage for pipeline_contract_violation_v1::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b4886999d7d5
   - affected_entities: 03_Pipeline_Stages_Specification_A-D::R012
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-65591ba0475a: Implement requirement 03_Pipeline_Stages_Specification_A-D::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-b300d24e6c6a
-  - affected_entities: DOC-35::R003
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-7bcf9e192e28: Complete coverage for DOC-35::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b41e76705727
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-3345753b0f9b: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-b47818146d79
-  - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R003
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-0127a8788caf: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b48b70c40970
-  - affected_entities: DOC-14::R014
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-6eb9dbe83588: Implement requirement DOC-14::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b5d164d0d4f6
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R015
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-45d61f25c28d: Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-d0e58ce7e8d0: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b6b350a4199e
   - affected_entities: DOC-10-CE-SEL::R002
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-712d07e1b569: Implement requirement DOC-10-CE-SEL::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-b8c66d15cc45
-  - affected_entities: DOC-14::R022
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-5aa053320908: Implement requirement DOC-14::R022 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-b91452164fa2
-  - affected_entities: DOC-36::R002
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b7e3c51332e6
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R014
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-c7125cf8affa: Complete coverage for DOC-36::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-7448000a4043: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b966b6dfcfcc
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4390d9b30481: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b9b3fee7d795
+  - affected_entities: DOC-14::R017
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e3c7dfe33ebf: Complete coverage for DOC-14::R017 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ba16a07e8b82
   - affected_entities: DOC-11::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-19aec4168f12: Implement requirement DOC-11::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ba61db59b206
+  - affected_entities: DOC-14::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5552f6da4ee6: Complete coverage for DOC-14::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ba98275bb812
   - affected_entities: DOC-11::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-a7c9a8182ea1: Implement requirement DOC-11::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ba997ab87b4f
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d43c088f0b56: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-bb5919d02e59
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R014
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1541,93 +1266,61 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-931b2850ad80: Implement requirement DOC-01-DRIVER::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-bcc2a4442e90
-  - affected_entities: DOC-35::R008
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-bd1a690a050f
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R006
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-f4ae6bd56b5d: Complete coverage for DOC-35::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-14d5ae6bfc5b: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-bdd7f3e8aeb8
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R002
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-fd8386d17dac: Implement requirement DOC-17__PROJECT_OBJECTIVE_CONTRACT::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-bfa8d880863c
-  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-bf5fd97fdec5
+  - affected_entities: HALO-DOC-20::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-0df770f2c73f: Implement requirement HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c0c910b7643d
-  - affected_entities: HALO-DOC-18::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-3f7ee969453f: Complete coverage for HALO-DOC-20::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c04531c6bc40
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-26b05b63e09b: Implement requirement HALO-DOC-18::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [ORPHAN_CODE] GAP-c2a71a938add
-  - affected_entities: code/src/orchestrator/pipeline_definition.js
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
+    - ACT-2d677c4cae75: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c0f53a49e0a7
+  - affected_entities: HALO-DOC-11::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-74b400e601ba: Map code unit CODE::code/src/orchestrator/pipeline_definition.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
-    - ACT-a67e5427d467: Remove or relocate code unit CODE::code/src/orchestrator/pipeline_definition.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c307a1a6aac9
-  - affected_entities: HALO-DOC-18::R016
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-bbbd0600a53a: Complete coverage for HALO-DOC-11::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c2478073bbe2
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-cae71893dd6a: Implement requirement HALO-DOC-18::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c308e4b7a724
-  - affected_entities: DOC-14::R006
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-096ba0bd823c: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c24b607c876e
+  - affected_entities: HALO-DOC-18::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-e65f59995260: Implement requirement DOC-14::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c36d122dcdb9
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R008
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-2f7b9159ff7e: Implement requirement 03_Pipeline_Stages_Specification_A-D::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c371b19ad7c3
-  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-8568a53a0d0b: Implement requirement 03_Cognitive_Layer_Engines_Execution_Contracts::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-74ef4bc74a19: Complete coverage for HALO-DOC-18::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c397674950f3
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R012
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-717c1bc4c0b5: Implement requirement DOC-17__PROJECT_OBJECTIVE_CONTRACT::R012 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [ORPHAN_CODE] GAP-c3dcb5d54230
-  - affected_entities: code/src/modules/verifyEngine.js
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
-  - actions:
-    - ACT-c528a94d8152: Map code unit CODE::code/src/modules/verifyEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
-    - ACT-f15e393fc1a5: Remove or relocate code unit CODE::code/src/modules/verifyEngine.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-c451f1bed00e
-  - affected_entities: DOC-35::R015
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c4fd18a195ee
+  - affected_entities: HALO-DOC-24::R013
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-2cea3a8ee2ec: Complete coverage for DOC-35::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c48726196a6c
-  - affected_entities: HALO-DOC-24::R014
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-a7da4ac5170b: Implement requirement HALO-DOC-24::R014 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c612eeee9d7b
-  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R016
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-d010a5b72e84: Implement requirement HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R016 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-b30b96f08c78: Complete coverage for HALO-DOC-24::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-c6608a2682d3
   - affected_entities: HALO-DOC-15::R009
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-0e68ba15f7c8: Complete coverage for HALO-DOC-15::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-c6c77d300c6a
-  - affected_entities: DOC-35::R014
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c6bc66a10bcc
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R009
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-ba662a6b01dc: Complete coverage for DOC-35::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c71d7fe8e534
-  - affected_entities: pipeline_contract_violation_v1::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-93a82150fb4a: Implement requirement pipeline_contract_violation_v1::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-9cde54c58909: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-c7285c9c38b1
   - affected_entities: HALO-DOC-15::R013
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -1643,61 +1336,56 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-883cab3c41bd: Implement requirement DOC-01-PROMPT::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c91ac8111d4d
+  - affected_entities: DOC-13::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d16424556573: Complete coverage for DOC-13::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-c9a13485b834
   - affected_entities: DOC-01-ADAPTER::R010
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-18364d5d8764: Implement requirement DOC-01-ADAPTER::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ca7052edd3fe
-  - affected_entities: DOC-13::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ca13eee20083
+  - affected_entities: HALO-DOC-20::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-5afcef626bd3: Implement requirement DOC-13::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-8526239662cb: Complete coverage for HALO-DOC-20::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ca26def2a3cc
+  - affected_entities: pipeline_contract_violation_v1::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f8aa738a7a4c: Complete coverage for pipeline_contract_violation_v1::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-caf69f5441cb
+  - affected_entities: HALO-DOC-14::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f6b6ec3f6cdc: Complete coverage for HALO-DOC-14::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-cb5bb9fdcdf9
   - affected_entities: HALO-DOC-15::R001
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-3cbe09bb5993: Complete coverage for HALO-DOC-15::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ce30b5015af7
-  - affected_entities: HALO-DOC-18::R018
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-cdfcf31b7726
+  - affected_entities: DOC-13::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-26b317f78616: Implement requirement HALO-DOC-18::R018 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-ecb9238334ac: Complete coverage for DOC-13::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ce53977a1ae5
   - affected_entities: DOC-12::R011
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-123da8bed7e7: Implement requirement DOC-12::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-ce94e686b5b0
-  - affected_entities: DOC-34::R009
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-e250df4e93b2: Complete coverage for DOC-34::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ced595196c63
   - affected_entities: DOC-20::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-16121e6c1e40: Implement requirement DOC-20::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-cee407191c93
-  - affected_entities: DOC-38::R008
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-26ee6fb0de59: Complete coverage for DOC-38::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-cf2d63ca063d
   - affected_entities: DOC-17__05_17_Artifact_Schema_Revision_v2::R008
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-37f7f61c1e5b: Implement requirement DOC-17__05_17_Artifact_Schema_Revision_v2::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-cf7353340b60
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R017
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-a8ca44223036: Implement requirement 03_Pipeline_Stages_Specification_A-D::R017 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-cfd1d4bce057
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R010
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-4defea013f78: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-cfd30bca8963
   - affected_entities: DOC-RT-1010::R001
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1708,46 +1396,26 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-d7c6b4044c79: Complete coverage for DOC-14::R020 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d10f09ca0fc0
-  - affected_entities: HALO-DOC-11::R010
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-99e8b04569e8: Implement requirement HALO-DOC-11::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d14850ecc5da
   - affected_entities: DOC-12::R009
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-73ff059d18ec: Implement requirement DOC-12::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d1c17c0a5800
-  - affected_entities: HALO-DOC-20::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-a3e11436120b: Implement requirement HALO-DOC-20::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d20216d9b00a
-  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R010
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-99f84f929945: Implement requirement HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d2a56e1a75d9
-  - affected_entities: HALO-DOC-11::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-982287c11bb1: Implement requirement HALO-DOC-11::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-d2bbd7f4712f
-  - affected_entities: DOC-36::R009
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d1eac4e356f4
+  - affected_entities: DOC-14::R006
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-bbcab19a689c: Complete coverage for DOC-36::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-d32a746bab9d
-  - affected_entities: DOC-36::R014
+    - ACT-fa6f7f7880f3: Complete coverage for DOC-14::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d28fb6f23143
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R002
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-f5fb2caef7be: Complete coverage for DOC-36::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-d32c5697e324
-  - affected_entities: DOC-35::R005
+    - ACT-e13c953b676e: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d2fd29ef0833
+  - affected_entities: DOC-14::R002
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-3156327ce908: Complete coverage for DOC-35::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-892a988696fc: Complete coverage for DOC-14::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d338b5863006
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R010
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1768,151 +1436,86 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-aa595c82bf2e: Implement requirement DOC-18::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-d6d4bc416e00
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R014
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d5e05b44791e
+  - affected_entities: HALO-DOC-18::R002
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-3c6f2c62e0e0: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-d7adc56535ae
-  - affected_entities: DOC-36::R015
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-09174113e6f6: Complete coverage for DOC-36::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-4356eb3540c5: Complete coverage for HALO-DOC-18::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d7f15847aaaf
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R011
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-86e46d303636: Implement requirement DOC-17__PROJECT_OBJECTIVE_CONTRACT::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d85fb848e5ae
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ab4f3fbefbb2: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d88c61675785
   - affected_entities: DOC-01-ADAPTER::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-e9a301a61644: Implement requirement DOC-01-ADAPTER::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-d934458d72f2
-  - affected_entities: DOC-14::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-4f92d33c9731: Implement requirement DOC-14::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-d93a1e72189d
-  - affected_entities: DOC-35::R012
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d8f4ac3ec12c
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R015
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-a511cce9450a: Complete coverage for DOC-35::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-d9d5b0427b45
-  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R011
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+    - ACT-bf481d96e6bb: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **LOW** [ORPHAN_ARTIFACT] GAP-d9a91024dc62
+  - affected_entities: artifacts/execute/execute_log.md
+  - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
-    - ACT-189aa48b1391: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-da1f4e14661c
-  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R008
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-ab1ae6f290bd: Implement requirement 03_Cognitive_Layer_Engines_Execution_Contracts::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-da6d8970e9df
-  - affected_entities: HALO-DOC-11::R013
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-b2b5a9da34b6: Implement requirement HALO-DOC-11::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-1d50a26e16ce: Either map artifact artifacts/execute/execute_log.md to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-da880c487e2b
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R015
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-40fee9a24dee: Implement requirement DOC-17__PROJECT_OBJECTIVE_CONTRACT::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-da8a30402049
-  - affected_entities: pipeline_contract_violation_v1::R005
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-089c4cb63994: Implement requirement pipeline_contract_violation_v1::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-db0cb6b8d229
-  - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R005
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-dbb2eaf2dc75
+  - affected_entities: HALO-DOC-24::R011
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-404ff8d10bfb: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-db8e697f9afb
-  - affected_entities: DOC-36::R012
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-6cd84ef7e956: Complete coverage for DOC-36::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-dbc7c0ecc07d
-  - affected_entities: HALO-DOC-22::R016
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-1189b94d7182: Complete coverage for HALO-DOC-22::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-783d35e78311: Complete coverage for HALO-DOC-24::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-dc82ba9848f9
   - affected_entities: DOC-18::R005
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-7a3a838ce117: Implement requirement DOC-18::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-dd018ca5b97b
-  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-b610f9339a50: Implement requirement 03_Cognitive_Layer_Engines_Execution_Contracts::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-dd50807f2a82
-  - affected_entities: DOC-34::R011
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-dd026e2ec7b7
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R001
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-40660f4e1ffe: Complete coverage for DOC-34::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-dda1a5c80a41
-  - affected_entities: DOC-14::R008
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-4d89da69cf38: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-debc25fb5483
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-9b8d1a3ea3c7: Implement requirement DOC-14::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-df38e3f35607
-  - affected_entities: HALO-DOC-11::R008
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-ab13a54d9c47: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-df7f7bdb0a12
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-507473075ae2: Implement requirement HALO-DOC-11::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-df5ef8cfe4bc
-  - affected_entities: HALO-DOC-24::R006
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-709dc43db494: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-df8f14b76f59
+  - affected_entities: HALO-DOC-11::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-a3d8a723ffc0: Implement requirement HALO-DOC-24::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-a1cff2e85b8a: Complete coverage for HALO-DOC-11::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **LOW** [ORPHAN_ARTIFACT] GAP-e014730ba9e7
   - affected_entities: artifacts/intake/repository_inventory.json
   - root_cause: Artifact exists in repository but is not mapped to any covered requirement per trace.
   - actions:
     - ACT-d044cb96dc45: Either map artifact artifacts/intake/repository_inventory.json to a requirement (if valid) or remove it if it violates namespace/scope rules. (requires_decision=true)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e12d6849e14a
-  - affected_entities: HALO-DOC-14::R006
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-4bc87cea5460: Implement requirement HALO-DOC-14::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e2d1c4f86622
   - affected_entities: DOC-19::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-6d8ad4c931af: Implement requirement DOC-19::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e2f010730d72
-  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R010
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-164cd0e3ad67: Implement requirement HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e312a19c11e3
-  - affected_entities: HALO-DOC-24::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-d8700fd72129: Implement requirement HALO-DOC-24::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-e3384238de06
   - affected_entities: HALO-DOC-15::R007
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-053081d96dfa: Complete coverage for HALO-DOC-15::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-e38c1dcb7d24
-  - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R006
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-c142e278d138: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-e456bb332eec
-  - affected_entities: DOC-34::R013
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-eaebf600affa: Complete coverage for DOC-34::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-e46578cf7598
-  - affected_entities: DOC-36::R005
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-159fb0ec9cbc: Complete coverage for DOC-36::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e525068e76f9
   - affected_entities: DOC-18::R012
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -1923,82 +1526,52 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-f0118530e735: Implement requirement DOC-20::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e63bf7da636b
-  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R011
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-81932cc44981: Implement requirement HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-e6c799e0150a
-  - affected_entities: DOC-36::R008
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-e7893d757e38
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R016
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-85b943aa1396: Complete coverage for DOC-36::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e6eb910e877e
-  - affected_entities: DOC-13::R002
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-ae2dc0732774: Implement requirement DOC-13::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e6f6e714e518
-  - affected_entities: pipeline_contract_violation_v1::R010
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-740fa0368cf9: Implement requirement pipeline_contract_violation_v1::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-e726a9c89bad
-  - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R012
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-ec715e0831af: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-58537c731c73: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-e82a5820cc6b
   - affected_entities: DOC-38::R003
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-a2d2660630d4: Complete coverage for DOC-38::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-e90eb4e8f569
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R011
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ea2890ae8f87
+  - affected_entities: DOC-13::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-ca490238d89b: Implement requirement 03_Pipeline_Stages_Specification_A-D::R011 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-e6f47b516ac7: Complete coverage for DOC-13::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [ORPHAN_CODE] GAP-eb36dafc91a5
   - affected_entities: code/src/modules/designExplorationEngine.js
   - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
   - actions:
     - ACT-782d6f9ff5aa: Remove or relocate code unit CODE::code/src/modules/designExplorationEngine.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
     - ACT-8a39542c392e: Map code unit CODE::code/src/modules/designExplorationEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-ebddaea2b43d
-  - affected_entities: HALO-DOC-22::R013
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-737e1fd32a16: Complete coverage for HALO-DOC-22::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ebde3dae68fc
-  - affected_entities: HALO-DOC-11::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-4f4a4ce0e6ce: Implement requirement HALO-DOC-11::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-ebe3a1939468
-  - affected_entities: DOC-36::R006
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-f6456a633ec0: Complete coverage for DOC-36::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ebff3d30218e
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ec6d1b6958fb
   - affected_entities: HALO-DOC-24::R005
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-5aa177f754c2: Implement requirement HALO-DOC-24::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-9ab2a10b38bc: Complete coverage for HALO-DOC-24::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ecf6896f2cca
   - affected_entities: DOC-20::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-149ab9bf1bd3: Implement requirement DOC-20::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ed59e025520a
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ed11176f9bba
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-9891364156e4: Implement requirement 03_Pipeline_Stages_Specification_A-D::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ed7c02cc49a8
-  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-613baa7d3093: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ed13437eabaa
+  - affected_entities: HALO-DOC-11::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-654d96451728: Implement requirement 03_Cognitive_Layer_Engines_Execution_Contracts::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-691a82c6d3d4: Complete coverage for HALO-DOC-11::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ed2d253a6477
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-2fd645103508: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-ed89ee7074b6
   - affected_entities: HALO-DOC-15::R010
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -2009,76 +1582,61 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-8b25e64a1c2d: Implement requirement DOC-11::R002 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-eda41ecf4cde
-  - affected_entities: DOC-34::R001
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-edecfcbc1750
+  - affected_entities: HALO-DOC-11::R004
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-b0c37185b0f8: Complete coverage for DOC-34::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-f1b29a6ebe11: Complete coverage for HALO-DOC-11::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-edf19953db91
   - affected_entities: DOC-RT-1010::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-14f82bc47577: Implement requirement DOC-RT-1010::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ee213cd8a17f
+  - affected_entities: DOC-14::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c0910e7b8708: Complete coverage for DOC-14::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ee8cac17fbe9
+  - affected_entities: DOC-13::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4e84baeef53d: Complete coverage for DOC-13::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ef109007d880
   - affected_entities: DOC-18::R010
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-2387f637424f: Implement requirement DOC-18::R010 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-ef1ccacebea7
-  - affected_entities: DOC-34::R015
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-2524aebbba3c: Complete coverage for DOC-34::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ef34f52706bf
   - affected_entities: DOC-01-PROMPT::R009
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-273ad90efb17: Implement requirement DOC-01-PROMPT::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-ef8f5b07bd8a
-  - affected_entities: HALO-DOC-14::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ef4b73703002
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-933862572c21: Implement requirement HALO-DOC-14::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-efa92d48f634
-  - affected_entities: pipeline_contract_violation_v1::R004
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-cc4e2158653c: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-f03a3e73da23
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-05e7d48ad363: Implement requirement pipeline_contract_violation_v1::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-862f3494131e: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f05077604c0b
   - affected_entities: DOC-15::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-dec602515862: Implement requirement DOC-15::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f2a49fdb34dc
-  - affected_entities: HALO-DOC-20::R006
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-58d92daa4d37: Implement requirement HALO-DOC-20::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-f2b5f6289869
-  - affected_entities: HALO-DOC-22::R014
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-f2b46d631ee0
+  - affected_entities: HALO-DOC-18::R011
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-847ac5473a55: Complete coverage for HALO-DOC-22::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-11c29558fbda: Complete coverage for HALO-DOC-18::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f2deabfa4b75
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R007
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-95e1cc0b3ccf: Implement requirement DOC-17__PROJECT_OBJECTIVE_CONTRACT::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-f2e919a814f2
-  - affected_entities: HALO-DOC-22::R008
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-3f4c17bdea60: Complete coverage for HALO-DOC-22::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f49f648451a4
-  - affected_entities: HALO-DOC-18::R013
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-d41bd2233e0a: Implement requirement HALO-DOC-18::R013 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f56003ba2365
-  - affected_entities: DOC-13::R008
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-583d8ba0f2ac: Implement requirement DOC-13::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f56fd5e64373
   - affected_entities: DOC-17__05_17_Artifact_Schema_Revision_v2::R009
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -2099,51 +1657,36 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-d8acdbc5dbb3: Implement requirement DOC-18::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-f6957b76fbc2
-  - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R017
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-f69dbcbf174c
+  - affected_entities: DOC-14::R009
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-495f1880e3be: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R017 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f6c470648c7d
-  - affected_entities: pipeline_contract_violation_v1::R009
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+    - ACT-82c0e20de7ee: Complete coverage for DOC-14::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-f7957b5f14e5
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-8eaf594adeac: Implement requirement pipeline_contract_violation_v1::R009 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f74f6118237c
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-7f08395374b1: Implement requirement 03_Pipeline_Stages_Specification_A-D::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-d2c471189bcf: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f7a9de8975d2
   - affected_entities: DOC-20::R004
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-5460915c4c4b: Implement requirement DOC-20::R004 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f8351599215e
-  - affected_entities: HALO-DOC-14::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-f7c6face922f
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-203c01094638: Implement requirement HALO-DOC-14::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-02d94d89f551: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f9750d8ad3ef
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R017
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-1cbe4b962d02: Implement requirement DOC-17__PROJECT_OBJECTIVE_CONTRACT::R017 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-f98cd334dbce
-  - affected_entities: DOC-36::R003
-  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
-  - actions:
-    - ACT-abb3ebae1350: Complete coverage for DOC-36::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f9cdc1e5a98f
   - affected_entities: DOC-01-DRIVER::R003
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-5879593b8721: Implement requirement DOC-01-DRIVER::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-f9dc3548d679
-  - affected_entities: HALO-DOC-18::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-28efa401967c: Implement requirement HALO-DOC-18::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fa04bfb106de
   - affected_entities: DOC-15::R002
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -2154,36 +1697,11 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-ea2b69bee870: Implement requirement DOC-21::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fa7feb5a8814
-  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R006
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-fc0a827d1cc0
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R019
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-1d72ac9e61d9: Implement requirement HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R006 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fad5221615a5
-  - affected_entities: pipeline_contract_violation_v1::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-43738d42dae2: Implement requirement pipeline_contract_violation_v1::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-faf0c4f3e190
-  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-5b6068fe1849: Implement requirement HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fb21bab97522
-  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R015
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-83459cbbe03d: Implement requirement HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R015 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fbbb240c9dbb
-  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R007
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-b145303b54c3: Implement requirement 03_Pipeline_Stages_Specification_A-D::R007 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fbfefb01cfa5
-  - affected_entities: pipeline_contract_violation_v1::R003
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
-  - actions:
-    - ACT-83ff4264a00b: Implement requirement pipeline_contract_violation_v1::R003 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-f8db14487c9c: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R019 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fc7e06ad0f2a
   - affected_entities: DOC-12::R002
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
@@ -2194,21 +1712,36 @@
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-68ea0442978d: Implement requirement DOC-11::R005 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **MEDIUM** [PARTIAL_COVERAGE] GAP-fd694bdd4ec5
-  - affected_entities: HALO-DOC-22::R004
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-fd9fd76d9615
+  - affected_entities: HALO-DOC-20::R009
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-75fb85f5b88e: Complete coverage for HALO-DOC-22::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+    - ACT-316ea93a306c: Complete coverage for HALO-DOC-20::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-fddf45b22191
+  - affected_entities: HALO-DOC-18::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4004e284d727: Complete coverage for HALO-DOC-18::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-fdf4ddff11da
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-1b90242c4b87: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-fdfd5a44fc1d
   - affected_entities: DOC-21::R008
   - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
   - actions:
     - ACT-a609b910fd15: Implement requirement DOC-21::R008 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
-- **HIGH** [UNIMPLEMENTED_REQUIREMENT] GAP-febdfc7c2c09
-  - affected_entities: HALO-DOC-11::R001
-  - root_cause: Requirement appears in docs but has no mapped code/artifact coverage per trace_matrix.json.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-fe0a03055d3c
+  - affected_entities: HALO-DOC-11::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-4e9e4d263d75: Implement requirement HALO-DOC-11::R001 by adding missing code unit(s) and required artifact(s). (requires_decision=false)
+    - ACT-40a106d3ad38: Complete coverage for HALO-DOC-11::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ff03b1130f48
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-0a7476f60464: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-ff987efa3969
   - affected_entities: HALO-DOC-15::R005
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).

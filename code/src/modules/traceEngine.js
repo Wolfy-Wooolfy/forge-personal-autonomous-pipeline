@@ -435,6 +435,7 @@ function mapDeterministically(requirements, codeUnits, artifacts, intakeContext)
         if (u.file_path.includes("code/src/orchestrator/runner.js")) mapped_code_units.push(u.unit_id);
         if (u.file_path.includes("code/src/orchestrator/autonomous_runner.js")) mapped_code_units.push(u.unit_id);
         if (u.file_path.includes("code/src/orchestrator/entry_resolver.js")) mapped_code_units.push(u.unit_id);
+        if (u.file_path.includes("code/src/modules/verifyEngine.js")) mapped_code_units.push(u.unit_id);
         if (u.file_path.includes("code/src/orchestrator/pipeline_definition.js")) mapped_code_units.push(u.unit_id);
         if (u.file_path.includes("code/src/orchestrator/stage_transitions.js")) mapped_code_units.push(u.unit_id);
         if (u.file_path.includes("code/src/orchestrator/status_writer.js")) mapped_code_units.push(u.unit_id);
