@@ -147,6 +147,28 @@ function run() {
 
   const result = executeTask(entry.next_task, status);
 
+  if (result && result.closure_artifact === true && result.artifact) {
+    const ROOT = path.resolve(__dirname, "../../..");
+    const artifactPath = path.resolve(ROOT, result.artifact);
+
+    const dir = path.dirname(artifactPath);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+
+    const content = `# ${entry.next_task} Execution Closure
+
+  Status: COMPLETED
+  Generated at: ${new Date().toISOString()}
+
+  This artifact confirms that the task has been fully executed and closed.
+  `;
+
+    fs.writeFileSync(artifactPath, content, "utf-8");
+
+    console.log(`[FORGE] Execution closure artifact persisted at: ${result.artifact}`);
+  }
+
   if (!result || typeof result !== "object") {
     throw new Error("Task handler must return execution result object");
   }

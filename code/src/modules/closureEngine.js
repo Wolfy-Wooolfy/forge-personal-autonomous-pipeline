@@ -439,11 +439,13 @@ function runClosure(context) {
   const backfillActions = Array.isArray(backfillJson.approved_code_actions)
     ? backfillJson.approved_code_actions
     : [];
-  const executeActions = Array.isArray(executeJson.actions)
-    ? executeJson.actions
-    : executeJson.plan && Array.isArray(executeJson.plan.actions)
-      ? executeJson.plan.actions
-      : [];
+  const executeActions = Array.isArray(executeJson.approved_code_actions)
+    ? executeJson.approved_code_actions
+    : Array.isArray(executeJson.actions)
+      ? executeJson.actions
+      : executeJson.plan && Array.isArray(executeJson.plan.actions)
+        ? executeJson.plan.actions
+        : [];
 
   if (backfillActions.length !== executeActions.length) {
     return buildBlockingResult(

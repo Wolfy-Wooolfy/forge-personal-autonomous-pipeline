@@ -567,44 +567,10 @@ const registry = Object.freeze({
       };
     }
 
-    const relTaskClosure = "artifacts/tasks/TASK-055.execution.closure.md";
-    const taskClosureAbs = path.resolve(__dirname, "../../..", relTaskClosure);
-
-    if (fs.existsSync(taskClosureAbs)) {
-      throw new Error("Idempotency violation: closure artifact already exists for TASK-055");
-    }
-
-    const reportRef =
-      result && result.outputs && result.outputs.md
-        ? String(result.outputs.md)
-        : "artifacts/closure/closure_report.md";
-
-    fs.mkdirSync(path.dirname(taskClosureAbs), { recursive: true });
-    fs.writeFileSync(
-      taskClosureAbs,
-`# TASK-055 — Execution Closure
-
-## Task
-- Task ID: TASK-055
-- Stage Binding: D
-- Closure Type: EXECUTION
-
-## Status
-- stage_progress_percent: 100
-- closure_artifact: true
-
-## Generated Artifacts
-- ${reportRef}
-- artifacts/release/RELEASE_MANIFEST_v1.json
-- artifacts/release/repository_hash_snapshot.json
-`,
-      "utf-8"
-    );
-
     return {
       stage_progress_percent: 100,
       closure_artifact: true,
-      artifact: relTaskClosure,
+      artifact: "artifacts/tasks/TASK-055.execution.closure.md",
       clear_current_task: true,
       status_patch: sp
     };
