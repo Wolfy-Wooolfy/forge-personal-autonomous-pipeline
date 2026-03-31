@@ -504,8 +504,13 @@ function runClosure(context) {
 
   const closureDir = path.resolve(ROOT, "artifacts", "closure");
   const releaseDir = path.resolve(ROOT, "artifacts", "release");
+  const tasksDir = path.resolve(ROOT, "artifacts", "tasks");
+  const taskClosureRel = "artifacts/tasks/TASK-055.execution.closure.md";
+  const taskClosureAbs = path.resolve(ROOT, taskClosureRel);
+
   ensureDir(closureDir);
   ensureDir(releaseDir);
+  ensureDir(tasksDir);
 
   const releaseManifest = {
     execution_id: executionId,
@@ -578,9 +583,24 @@ function runClosure(context) {
   fs.writeFileSync(path.resolve(ROOT, repoSnapshotRel), JSON.stringify(repositoryHashSnapshot, null, 2), { encoding: "utf8" });
   fs.writeFileSync(path.resolve(ROOT, closureReportRel), renderClosureReport(closurePayload), { encoding: "utf8" });
 
+  const taskClosureLines = [
+    "# TASK-055 Execution Closure",
+    "",
+    `- task: TASK-055`,
+    `- outcome: COMPLETE`,
+    `- execution_id: ${executionId}`,
+    `- closure_report: ${closureReportRel}`,
+    `- release_manifest: ${releaseManifestRel}`,
+    `- repository_hash_snapshot: ${repoSnapshotRel}`,
+    ""
+  ];
+
+  fs.writeFileSync(taskClosureAbs, taskClosureLines.join("\n"), { encoding: "utf8" });
+
   return {
     stage_progress_percent: 100,
-    artifact: closureReportRel,
+    closure_artifact: true,
+    artifact: taskClosureRel,
     outputs: {
       md: closureReportRel,
       release_manifest: releaseManifestRel,

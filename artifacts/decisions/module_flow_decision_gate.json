@@ -1,6 +1,6 @@
 {
   "decision_id": "MODULE_FLOW_DECISION_GATE",
-  "timestamp": "2026-03-30T12:12:26.236Z",
+  "timestamp": "2026-03-31T09:16:13.732Z",
   "task": "TASK-052",
   "policy": "AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK",
   "operating_mode": "IMPROVE",
@@ -8,13 +8,13 @@
   "override_mode": "APPROVE_ALL",
   "source": {
     "exploration_matrix_path": "artifacts/exploration/option_matrix.json",
-    "exploration_matrix_sha256": "7a28d99e1acfb1b8366e64e04bb7d269b3913bff73c6170182d75533fc4cd60f",
+    "exploration_matrix_sha256": "ca37b78d12374940bab9b0f1de182fb7dafc968424b290eb0fcd42bcf8878e14",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84"
   },
   "summary": {
-    "total_actions": 593,
-    "approved_count": 593,
+    "total_actions": 616,
+    "approved_count": 616,
     "review_required_count": 0,
     "rejected_count": 0
   },
@@ -67,6 +67,19 @@
       ],
       "action_id": "ACT-8c5985c18c0e",
       "description": "Complete coverage for DOC-16::R017 by ensuring both mapped_code_units and mapped_artifacts are present.",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
+      "gap_id": "GAP-03e0ea1b8489",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R006"
+      ],
+      "action_id": "ACT-77878cc287d0",
+      "description": "Implement requirement pipeline_contract_violation_v1::R006 by adding missing code unit(s) and required artifact(s).",
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
@@ -852,6 +865,19 @@
       "reason": "action explicitly marked requires_decision; approved by explicit override"
     },
     {
+      "gap_id": "GAP-1f2bfe97b0bb",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R011"
+      ],
+      "action_id": "ACT-c485303be93c",
+      "description": "Implement requirement pipeline_contract_violation_v1::R011 by adding missing code unit(s) and required artifact(s).",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
       "gap_id": "GAP-1f442ad7fb72",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -982,6 +1008,19 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
+      "gap_id": "GAP-24dc05d24a07",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R001"
+      ],
+      "action_id": "ACT-9786eacf3017",
+      "description": "Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R001 by ensuring both mapped_code_units and mapped_artifacts are present.",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
       "gap_id": "GAP-24f4a36cb1ab",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -1034,6 +1073,19 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
+      "gap_id": "GAP-27e7737d4f20",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R013"
+      ],
+      "action_id": "ACT-b54cd6196eb4",
+      "description": "Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R013 by ensuring both mapped_code_units and mapped_artifacts are present.",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
       "gap_id": "GAP-29c594a5a5a1",
       "category": "PARTIAL_COVERAGE",
       "severity": "MEDIUM",
@@ -1042,6 +1094,19 @@
       ],
       "action_id": "ACT-fcfba59e0b41",
       "description": "Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R017 by ensuring both mapped_code_units and mapped_artifacts are present.",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
+      "gap_id": "GAP-29f74a38ab37",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R014"
+      ],
+      "action_id": "ACT-5aa38ecb95e6",
+      "description": "Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R014 by ensuring both mapped_code_units and mapped_artifacts are present.",
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
@@ -1133,6 +1198,19 @@
       ],
       "action_id": "ACT-4808f0099d9d",
       "description": "Complete coverage for DOC-38::R013 by ensuring both mapped_code_units and mapped_artifacts are present.",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
+      "gap_id": "GAP-2c599af21b5f",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R005"
+      ],
+      "action_id": "ACT-7768f98896c5",
+      "description": "Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R005 by ensuring both mapped_code_units and mapped_artifacts are present.",
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
@@ -1268,19 +1346,6 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
-      "gap_id": "GAP-2f8ff1a6278f",
-      "category": "ORPHAN_ARTIFACT",
-      "severity": "LOW",
-      "affected_entities": [
-        "artifacts/gap/gap_error.md"
-      ],
-      "action_id": "ACT-a484b959468e",
-      "description": "Either map artifact artifacts/gap/gap_error.md to a requirement (if valid) or remove it if it violates namespace/scope rules.",
-      "impact_scope": "artifacts/trace",
-      "requires_decision": true,
-      "reason": "action explicitly marked requires_decision; approved by explicit override"
-    },
-    {
       "gap_id": "GAP-2fff9b9a931c",
       "category": "PARTIAL_COVERAGE",
       "severity": "MEDIUM",
@@ -1354,6 +1419,19 @@
       ],
       "action_id": "ACT-3efbf0bcd3ff",
       "description": "Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R022 by ensuring both mapped_code_units and mapped_artifacts are present.",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
+      "gap_id": "GAP-3342119798c7",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R002"
+      ],
+      "action_id": "ACT-f874186bb2c3",
+      "description": "Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R002 by ensuring both mapped_code_units and mapped_artifacts are present.",
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
@@ -1552,19 +1630,6 @@
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
-    },
-    {
-      "gap_id": "GAP-3ae78b552282",
-      "category": "ORPHAN_ARTIFACT",
-      "severity": "LOW",
-      "affected_entities": [
-        "artifacts/closure/closure_error.md"
-      ],
-      "action_id": "ACT-34368aff0a72",
-      "description": "Either map artifact artifacts/closure/closure_error.md to a requirement (if valid) or remove it if it violates namespace/scope rules.",
-      "impact_scope": "artifacts/trace",
-      "requires_decision": true,
-      "reason": "action explicitly marked requires_decision; approved by explicit override"
     },
     {
       "gap_id": "GAP-3afd64197646",
@@ -1879,6 +1944,19 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
+      "gap_id": "GAP-4836be93fe2b",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R007"
+      ],
+      "action_id": "ACT-f5a88d0ce6dd",
+      "description": "Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R007 by ensuring both mapped_code_units and mapped_artifacts are present.",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
       "gap_id": "GAP-48ab9a6da9ea",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -2030,6 +2108,19 @@
       ],
       "action_id": "ACT-46166ea78dc7",
       "description": "Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R009 by adding missing code unit(s) and required artifact(s).",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
+      "gap_id": "GAP-4cb78a317c9b",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R006"
+      ],
+      "action_id": "ACT-e611b7511964",
+      "description": "Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R006 by ensuring both mapped_code_units and mapped_artifacts are present.",
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
@@ -2394,6 +2485,19 @@
       ],
       "action_id": "ACT-1d7bfb06e947",
       "description": "Complete coverage for DOC-36::R004 by ensuring both mapped_code_units and mapped_artifacts are present.",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
+      "gap_id": "GAP-55ab83d18459",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R001"
+      ],
+      "action_id": "ACT-95f8314eb329",
+      "description": "Implement requirement pipeline_contract_violation_v1::R001 by adding missing code unit(s) and required artifact(s).",
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
@@ -3322,6 +3426,19 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
+      "gap_id": "GAP-7074ce048798",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R008"
+      ],
+      "action_id": "ACT-d35e72119c3d",
+      "description": "Implement requirement pipeline_contract_violation_v1::R008 by adding missing code unit(s) and required artifact(s).",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
       "gap_id": "GAP-7112558a4b8f",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -3686,6 +3803,19 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
+      "gap_id": "GAP-7d31688dcfa1",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R004"
+      ],
+      "action_id": "ACT-ac6acf6601f6",
+      "description": "Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R004 by ensuring both mapped_code_units and mapped_artifacts are present.",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
       "gap_id": "GAP-7d70261e061e",
       "category": "PARTIAL_COVERAGE",
       "severity": "MEDIUM",
@@ -3811,6 +3941,19 @@
       ],
       "action_id": "ACT-0a339badbf2f",
       "description": "Complete coverage for DOC-21::R008 by ensuring both mapped_code_units and mapped_artifacts are present.",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
+      "gap_id": "GAP-809a5d1cd3ae",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R011"
+      ],
+      "action_id": "ACT-3102b37241ac",
+      "description": "Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R011 by ensuring both mapped_code_units and mapped_artifacts are present.",
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
@@ -4669,6 +4812,19 @@
       ],
       "action_id": "ACT-5c861bda0383",
       "description": "Complete coverage for DOC-35::R006 by ensuring both mapped_code_units and mapped_artifacts are present.",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
+      "gap_id": "GAP-9e7213534f9a",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R003"
+      ],
+      "action_id": "ACT-63462f1ae45b",
+      "description": "Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R003 by ensuring both mapped_code_units and mapped_artifacts are present.",
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
@@ -5558,6 +5714,19 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
+      "gap_id": "GAP-bb886df67738",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R009"
+      ],
+      "action_id": "ACT-4829875dd2de",
+      "description": "Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R009 by ensuring both mapped_code_units and mapped_artifacts are present.",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
       "gap_id": "GAP-bbcd9c069842",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -5688,6 +5857,19 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
+      "gap_id": "GAP-bdc624003a3d",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R008"
+      ],
+      "action_id": "ACT-580bf50bdd3f",
+      "description": "Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R008 by ensuring both mapped_code_units and mapped_artifacts are present.",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
       "gap_id": "GAP-be76f539124a",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -5748,6 +5930,19 @@
       ],
       "action_id": "ACT-8cc6c0e36139",
       "description": "Complete coverage for DOC-23::R012 by ensuring both mapped_code_units and mapped_artifacts are present.",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
+      "gap_id": "GAP-c10fce6650d4",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R012"
+      ],
+      "action_id": "ACT-bedd02e7b673",
+      "description": "Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R012 by ensuring both mapped_code_units and mapped_artifacts are present.",
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
@@ -6008,6 +6203,19 @@
       ],
       "action_id": "ACT-21b5f39449d6",
       "description": "Complete coverage for DOC-32::R001 by ensuring both mapped_code_units and mapped_artifacts are present.",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
+      "gap_id": "GAP-c71d7fe8e534",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R002"
+      ],
+      "action_id": "ACT-93a82150fb4a",
+      "description": "Implement requirement pipeline_contract_violation_v1::R002 by adding missing code unit(s) and required artifact(s).",
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
@@ -6520,6 +6728,19 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
+      "gap_id": "GAP-da8a30402049",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R005"
+      ],
+      "action_id": "ACT-089c4cb63994",
+      "description": "Implement requirement pipeline_contract_violation_v1::R005 by adding missing code unit(s) and required artifact(s).",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
       "gap_id": "GAP-daa947bbda70",
       "category": "PARTIAL_COVERAGE",
       "severity": "MEDIUM",
@@ -6632,6 +6853,19 @@
       ],
       "action_id": "ACT-5bee324129dd",
       "description": "Complete coverage for DOC-19::R004 by ensuring both mapped_code_units and mapped_artifacts are present.",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
+      "gap_id": "GAP-dc4f76c0f123",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R010"
+      ],
+      "action_id": "ACT-79d7e848de76",
+      "description": "Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R010 by ensuring both mapped_code_units and mapped_artifacts are present.",
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"
@@ -6923,6 +7157,19 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
+      "gap_id": "GAP-e6f6e714e518",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R010"
+      ],
+      "action_id": "ACT-740fa0368cf9",
+      "description": "Implement requirement pipeline_contract_violation_v1::R010 by adding missing code unit(s) and required artifact(s).",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
       "gap_id": "GAP-e735e6c5673c",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -7209,6 +7456,19 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
+      "gap_id": "GAP-efa92d48f634",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R004"
+      ],
+      "action_id": "ACT-05e7d48ad363",
+      "description": "Implement requirement pipeline_contract_violation_v1::R004 by adding missing code unit(s) and required artifact(s).",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
       "gap_id": "GAP-f00b9d7e4083",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -7430,6 +7690,19 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
+      "gap_id": "GAP-f6c470648c7d",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R009"
+      ],
+      "action_id": "ACT-8eaf594adeac",
+      "description": "Implement requirement pipeline_contract_violation_v1::R009 by adding missing code unit(s) and required artifact(s).",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
       "gap_id": "GAP-f75be2fb2d15",
       "category": "PARTIAL_COVERAGE",
       "severity": "MEDIUM",
@@ -7560,6 +7833,19 @@
       "reason": "improve mode bounded non-destructive remediation"
     },
     {
+      "gap_id": "GAP-fad5221615a5",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R007"
+      ],
+      "action_id": "ACT-43738d42dae2",
+      "description": "Implement requirement pipeline_contract_violation_v1::R007 by adding missing code unit(s) and required artifact(s).",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
       "gap_id": "GAP-fafdfff9f869",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -7607,6 +7893,19 @@
       ],
       "action_id": "ACT-2fbea18ec0aa",
       "description": "Complete coverage for DOC-22::R020 by ensuring both mapped_code_units and mapped_artifacts are present.",
+      "impact_scope": "docs/code/artifacts",
+      "requires_decision": false,
+      "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
+      "gap_id": "GAP-fbfefb01cfa5",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R003"
+      ],
+      "action_id": "ACT-83ff4264a00b",
+      "description": "Implement requirement pipeline_contract_violation_v1::R003 by adding missing code unit(s) and required artifact(s).",
       "impact_scope": "docs/code/artifacts",
       "requires_decision": false,
       "reason": "improve mode bounded non-destructive remediation"

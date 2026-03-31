@@ -2,352 +2,352 @@
 
 ~~~json
 {
-  "execution_id": "TRACE-2026-03-21T18:59:51.400Z",
+  "execution_id": "TRACE-2026-03-31T09:16:13.511Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
-  "total_requirements": 946,
+  "total_requirements": 971,
   "total_code_units": 20,
-  "total_artifacts": 11,
+  "total_artifacts": 9,
   "mappings": [
     {
       "requirement_id": "-::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "-::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "-::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "-::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "-::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "-::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "-::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "-::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "-::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Document_ID_Normalization_and_Mapping_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-19::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-19::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-19::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-19::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-19::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-19::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-19::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-19::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-19::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-19::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/00_index/Documentation_Pack_Index_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-00::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/00_Project_Identity_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/00_Project_Identity_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-00::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/00_Project_Identity_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/00_Project_Identity_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-00::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/00_Project_Identity_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/00_Project_Identity_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-00::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/00_Project_Identity_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/00_Project_Identity_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-00::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/00_Project_Identity_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/00_Project_Identity_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-00::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/00_Project_Identity_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/00_Project_Identity_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-00::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/00_Project_Identity_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/00_Project_Identity_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-00::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/00_Project_Identity_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/00_Project_Identity_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/01_Idea_Admission_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/01_Idea_Admission_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/01_Idea_Admission_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/01_Idea_Admission_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/01_Idea_Admission_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/01_Idea_Admission_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/01_Idea_Admission_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/01_Idea_Admission_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/01_Idea_Admission_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/01_Idea_Admission_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/01_Idea_Admission_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/01_Idea_Admission_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/01_Idea_Admission_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/01_Idea_Admission_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/01_Idea_Admission_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/01_Idea_Admission_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -360,553 +360,553 @@
     },
     {
       "requirement_id": "DOC-10::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R018",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R019",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R020",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R021",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R022",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R023",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/02_System_Overview_and_Operating_Model.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-00::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/03_Project_Vision_Reference.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/03_Project_Vision_Reference.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-00::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/03_Project_Vision_Reference.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/03_Project_Vision_Reference.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-00::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/03_Project_Vision_Reference.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/03_Project_Vision_Reference.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-00::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/03_Project_Vision_Reference.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/03_Project_Vision_Reference.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-00::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/03_Project_Vision_Reference.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/03_Project_Vision_Reference.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-00::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/03_Project_Vision_Reference.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/03_Project_Vision_Reference.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-00::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/03_Project_Vision_Reference.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/03_Project_Vision_Reference.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-00::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/03_Project_Vision_Reference.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/03_Project_Vision_Reference.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-03::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/04_Vision_and_Cognitive_Layer_Reference.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/04_Vision_and_Cognitive_Layer_Reference.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-03::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/04_Vision_and_Cognitive_Layer_Reference.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/04_Vision_and_Cognitive_Layer_Reference.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-03::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/04_Vision_and_Cognitive_Layer_Reference.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/04_Vision_and_Cognitive_Layer_Reference.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-03::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/04_Vision_and_Cognitive_Layer_Reference.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/04_Vision_and_Cognitive_Layer_Reference.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-03::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/04_Vision_and_Cognitive_Layer_Reference.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/04_Vision_and_Cognitive_Layer_Reference.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-03::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/04_Vision_and_Cognitive_Layer_Reference.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/04_Vision_and_Cognitive_Layer_Reference.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-03::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/04_Vision_and_Cognitive_Layer_Reference.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/04_Vision_and_Cognitive_Layer_Reference.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-03::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/04_Vision_and_Cognitive_Layer_Reference.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/04_Vision_and_Cognitive_Layer_Reference.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-02::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-02::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-02::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-02::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-02::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-02::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-02::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-02::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-02::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-02::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-02::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-02::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/02_Scope_and_Success_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-15::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-15::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-15::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-15::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-15::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-15::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-15::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-15::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-15::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-15::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-15::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/03_Vision_Coverage_Matrix_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -915,7 +915,7 @@
     },
     {
       "requirement_id": "DOC-16::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -924,7 +924,7 @@
     },
     {
       "requirement_id": "DOC-16::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -933,7 +933,7 @@
     },
     {
       "requirement_id": "DOC-16::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -942,7 +942,7 @@
     },
     {
       "requirement_id": "DOC-16::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -951,7 +951,7 @@
     },
     {
       "requirement_id": "DOC-16::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -960,7 +960,7 @@
     },
     {
       "requirement_id": "DOC-16::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -969,7 +969,7 @@
     },
     {
       "requirement_id": "DOC-16::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -978,7 +978,7 @@
     },
     {
       "requirement_id": "DOC-16::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -987,7 +987,7 @@
     },
     {
       "requirement_id": "DOC-16::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -996,7 +996,7 @@
     },
     {
       "requirement_id": "DOC-16::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -1005,7 +1005,7 @@
     },
     {
       "requirement_id": "DOC-16::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/04_Vision_Gap_Detection_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -1014,91 +1014,91 @@
     },
     {
       "requirement_id": "DOC-17::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -1107,140 +1107,140 @@
     },
     {
       "requirement_id": "DOC-17::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R018",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R019",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/02_scope/PROJECT_OBJECTIVE_CONTRACT.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_11_Idea_Evaluation_and_Finalization_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-12::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -1249,7 +1249,7 @@
     },
     {
       "requirement_id": "DOC-12::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -1258,7 +1258,7 @@
     },
     {
       "requirement_id": "DOC-12::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -1267,7 +1267,7 @@
     },
     {
       "requirement_id": "DOC-12::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -1276,7 +1276,7 @@
     },
     {
       "requirement_id": "DOC-12::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -1285,7 +1285,7 @@
     },
     {
       "requirement_id": "DOC-12::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -1294,7 +1294,7 @@
     },
     {
       "requirement_id": "DOC-12::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -1303,7 +1303,7 @@
     },
     {
       "requirement_id": "DOC-12::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -1312,7 +1312,7 @@
     },
     {
       "requirement_id": "DOC-12::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -1321,7 +1321,7 @@
     },
     {
       "requirement_id": "DOC-12::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
@@ -1334,7 +1334,7 @@
     },
     {
       "requirement_id": "DOC-12::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -1343,7 +1343,7 @@
     },
     {
       "requirement_id": "DOC-12::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -1352,7 +1352,7 @@
     },
     {
       "requirement_id": "DOC-12::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_12_Documentation_Gap_Detection_and_Refinement_Loop_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -1361,7 +1361,7 @@
     },
     {
       "requirement_id": "DOC-13::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -1370,7 +1370,7 @@
     },
     {
       "requirement_id": "DOC-13::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -1379,7 +1379,7 @@
     },
     {
       "requirement_id": "DOC-13::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -1388,7 +1388,7 @@
     },
     {
       "requirement_id": "DOC-13::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -1397,7 +1397,7 @@
     },
     {
       "requirement_id": "DOC-13::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -1406,7 +1406,7 @@
     },
     {
       "requirement_id": "DOC-13::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -1415,7 +1415,7 @@
     },
     {
       "requirement_id": "DOC-13::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -1424,7 +1424,7 @@
     },
     {
       "requirement_id": "DOC-13::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -1433,7 +1433,7 @@
     },
     {
       "requirement_id": "DOC-13::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -1446,7 +1446,7 @@
     },
     {
       "requirement_id": "DOC-13::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_13_Code_to_Documentation_Trace_and_Consistency_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -1455,56 +1455,56 @@
     },
     {
       "requirement_id": "DOC-14::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -1516,35 +1516,35 @@
     },
     {
       "requirement_id": "DOC-14::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_14_Final_Acceptance_and_Release_Gate_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-15::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -1557,7 +1557,7 @@
     },
     {
       "requirement_id": "DOC-15::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -1570,7 +1570,7 @@
     },
     {
       "requirement_id": "DOC-15::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -1583,7 +1583,7 @@
     },
     {
       "requirement_id": "DOC-15::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -1596,7 +1596,7 @@
     },
     {
       "requirement_id": "DOC-15::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -1609,7 +1609,7 @@
     },
     {
       "requirement_id": "DOC-15::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -1622,7 +1622,7 @@
     },
     {
       "requirement_id": "DOC-15::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -1635,7 +1635,7 @@
     },
     {
       "requirement_id": "DOC-15::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -1648,7 +1648,7 @@
     },
     {
       "requirement_id": "DOC-15::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -1661,7 +1661,7 @@
     },
     {
       "requirement_id": "DOC-15::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -1674,7 +1674,7 @@
     },
     {
       "requirement_id": "DOC-15::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -1687,7 +1687,7 @@
     },
     {
       "requirement_id": "DOC-15::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -1700,7 +1700,7 @@
     },
     {
       "requirement_id": "DOC-15::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -1713,7 +1713,7 @@
     },
     {
       "requirement_id": "DOC-15::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -1726,112 +1726,112 @@
     },
     {
       "requirement_id": "DOC-01::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_16_Loop_Enforcement_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -1843,28 +1843,28 @@
     },
     {
       "requirement_id": "DOC-14::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -1876,28 +1876,28 @@
     },
     {
       "requirement_id": "DOC-14::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -1909,28 +1909,28 @@
     },
     {
       "requirement_id": "DOC-14::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R018",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R019",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -1942,7 +1942,7 @@
     },
     {
       "requirement_id": "DOC-14::R020",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -1955,287 +1955,287 @@
     },
     {
       "requirement_id": "DOC-14::R021",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-14::R022",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_17_Stage_Contracts_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-20::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-20::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-20::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-20::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-20::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-20::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-20::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-20::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-20::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-20::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-20::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-20::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-20::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-03::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-03::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-03::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-03::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-03::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-03::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-03::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-03::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-03::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -2247,70 +2247,70 @@
     },
     {
       "requirement_id": "DOC-01::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -2319,7 +2319,7 @@
     },
     {
       "requirement_id": "DOC-01::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -2328,21 +2328,21 @@
     },
     {
       "requirement_id": "DOC-01::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R018",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [],
       "mapped_artifacts": [
         "artifacts/audit/audit_report.md",
@@ -2352,119 +2352,119 @@
     },
     {
       "requirement_id": "DOC-01::R019",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-01::R020",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-24::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-24::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-24::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-24::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-24::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-24::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-24::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-24::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-24::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-24::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-24::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-24::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-24::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-24::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/ARTIFACT_NAMESPACE_GOVERNANCE.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-31::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -2477,7 +2477,7 @@
     },
     {
       "requirement_id": "DOC-31::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -2490,7 +2490,7 @@
     },
     {
       "requirement_id": "DOC-31::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -2503,7 +2503,7 @@
     },
     {
       "requirement_id": "DOC-31::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -2516,7 +2516,7 @@
     },
     {
       "requirement_id": "DOC-31::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -2529,7 +2529,7 @@
     },
     {
       "requirement_id": "DOC-31::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -2542,7 +2542,7 @@
     },
     {
       "requirement_id": "DOC-31::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -2555,7 +2555,7 @@
     },
     {
       "requirement_id": "DOC-31::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -2568,7 +2568,7 @@
     },
     {
       "requirement_id": "DOC-31::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -2581,7 +2581,7 @@
     },
     {
       "requirement_id": "DOC-31::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -2594,7 +2594,7 @@
     },
     {
       "requirement_id": "DOC-31::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -2607,7 +2607,7 @@
     },
     {
       "requirement_id": "DOC-31::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -2620,7 +2620,7 @@
     },
     {
       "requirement_id": "DOC-31::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -2633,7 +2633,7 @@
     },
     {
       "requirement_id": "DOC-31::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -2646,7 +2646,7 @@
     },
     {
       "requirement_id": "DOC-31::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -2659,7 +2659,7 @@
     },
     {
       "requirement_id": "DOC-31::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -2672,7 +2672,7 @@
     },
     {
       "requirement_id": "DOC-31::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/AUDIT_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -2685,7 +2685,7 @@
     },
     {
       "requirement_id": "DOC-35::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
@@ -2694,7 +2694,7 @@
     },
     {
       "requirement_id": "DOC-35::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
@@ -2703,7 +2703,7 @@
     },
     {
       "requirement_id": "DOC-35::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
@@ -2712,7 +2712,7 @@
     },
     {
       "requirement_id": "DOC-35::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
@@ -2721,7 +2721,7 @@
     },
     {
       "requirement_id": "DOC-35::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
@@ -2730,7 +2730,7 @@
     },
     {
       "requirement_id": "DOC-35::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
@@ -2739,7 +2739,7 @@
     },
     {
       "requirement_id": "DOC-35::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
@@ -2748,7 +2748,7 @@
     },
     {
       "requirement_id": "DOC-35::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
@@ -2757,7 +2757,7 @@
     },
     {
       "requirement_id": "DOC-35::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
@@ -2766,7 +2766,7 @@
     },
     {
       "requirement_id": "DOC-35::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
@@ -2775,7 +2775,7 @@
     },
     {
       "requirement_id": "DOC-35::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
@@ -2784,7 +2784,7 @@
     },
     {
       "requirement_id": "DOC-35::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
@@ -2793,7 +2793,7 @@
     },
     {
       "requirement_id": "DOC-35::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
@@ -2802,7 +2802,7 @@
     },
     {
       "requirement_id": "DOC-35::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
@@ -2811,7 +2811,7 @@
     },
     {
       "requirement_id": "DOC-35::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/BACKFILL_PROTOCOL_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
@@ -2820,7 +2820,7 @@
     },
     {
       "requirement_id": "DOC-37::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -2832,7 +2832,7 @@
     },
     {
       "requirement_id": "DOC-37::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -2844,7 +2844,7 @@
     },
     {
       "requirement_id": "DOC-37::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -2856,7 +2856,7 @@
     },
     {
       "requirement_id": "DOC-37::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -2868,7 +2868,7 @@
     },
     {
       "requirement_id": "DOC-37::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -2880,7 +2880,7 @@
     },
     {
       "requirement_id": "DOC-37::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -2892,7 +2892,7 @@
     },
     {
       "requirement_id": "DOC-37::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -2904,7 +2904,7 @@
     },
     {
       "requirement_id": "DOC-37::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -2916,7 +2916,7 @@
     },
     {
       "requirement_id": "DOC-37::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -2928,7 +2928,7 @@
     },
     {
       "requirement_id": "DOC-37::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -2940,7 +2940,7 @@
     },
     {
       "requirement_id": "DOC-37::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -2952,7 +2952,7 @@
     },
     {
       "requirement_id": "DOC-37::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -2964,7 +2964,7 @@
     },
     {
       "requirement_id": "DOC-37::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -2976,7 +2976,7 @@
     },
     {
       "requirement_id": "DOC-37::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -2988,7 +2988,7 @@
     },
     {
       "requirement_id": "DOC-37::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/CLOSURE_AND_RELEASE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -3000,7 +3000,7 @@
     },
     {
       "requirement_id": "DOC-34::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -3009,7 +3009,7 @@
     },
     {
       "requirement_id": "DOC-34::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -3018,7 +3018,7 @@
     },
     {
       "requirement_id": "DOC-34::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -3027,7 +3027,7 @@
     },
     {
       "requirement_id": "DOC-34::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -3036,7 +3036,7 @@
     },
     {
       "requirement_id": "DOC-34::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -3045,7 +3045,7 @@
     },
     {
       "requirement_id": "DOC-34::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -3054,7 +3054,7 @@
     },
     {
       "requirement_id": "DOC-34::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -3063,7 +3063,7 @@
     },
     {
       "requirement_id": "DOC-34::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -3072,7 +3072,7 @@
     },
     {
       "requirement_id": "DOC-34::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -3081,7 +3081,7 @@
     },
     {
       "requirement_id": "DOC-34::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -3090,7 +3090,7 @@
     },
     {
       "requirement_id": "DOC-34::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -3099,7 +3099,7 @@
     },
     {
       "requirement_id": "DOC-34::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -3108,7 +3108,7 @@
     },
     {
       "requirement_id": "DOC-34::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -3117,7 +3117,7 @@
     },
     {
       "requirement_id": "DOC-34::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -3126,7 +3126,7 @@
     },
     {
       "requirement_id": "DOC-34::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DECISION_GATE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -3135,70 +3135,70 @@
     },
     {
       "requirement_id": "DOC-18::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -3207,28 +3207,28 @@
     },
     {
       "requirement_id": "DOC-18::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -3237,21 +3237,21 @@
     },
     {
       "requirement_id": "DOC-18::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -3260,21 +3260,21 @@
     },
     {
       "requirement_id": "DOC-18::R018",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R019",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/DESIGN_EXPLORATION_PROTOCOL.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-36::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
@@ -3283,7 +3283,7 @@
     },
     {
       "requirement_id": "DOC-36::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
@@ -3292,7 +3292,7 @@
     },
     {
       "requirement_id": "DOC-36::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
@@ -3301,7 +3301,7 @@
     },
     {
       "requirement_id": "DOC-36::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
@@ -3310,7 +3310,7 @@
     },
     {
       "requirement_id": "DOC-36::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
@@ -3319,7 +3319,7 @@
     },
     {
       "requirement_id": "DOC-36::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
@@ -3328,7 +3328,7 @@
     },
     {
       "requirement_id": "DOC-36::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
@@ -3337,7 +3337,7 @@
     },
     {
       "requirement_id": "DOC-36::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
@@ -3346,7 +3346,7 @@
     },
     {
       "requirement_id": "DOC-36::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
@@ -3355,7 +3355,7 @@
     },
     {
       "requirement_id": "DOC-36::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
@@ -3364,7 +3364,7 @@
     },
     {
       "requirement_id": "DOC-36::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
@@ -3373,7 +3373,7 @@
     },
     {
       "requirement_id": "DOC-36::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
@@ -3382,7 +3382,7 @@
     },
     {
       "requirement_id": "DOC-36::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
@@ -3391,7 +3391,7 @@
     },
     {
       "requirement_id": "DOC-36::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
@@ -3400,7 +3400,7 @@
     },
     {
       "requirement_id": "DOC-36::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
@@ -3409,7 +3409,7 @@
     },
     {
       "requirement_id": "DOC-36::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/EXECUTE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
@@ -3418,7 +3418,7 @@
     },
     {
       "requirement_id": "DOC-33::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -3427,7 +3427,7 @@
     },
     {
       "requirement_id": "DOC-33::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -3436,7 +3436,7 @@
     },
     {
       "requirement_id": "DOC-33::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -3445,7 +3445,7 @@
     },
     {
       "requirement_id": "DOC-33::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -3454,7 +3454,7 @@
     },
     {
       "requirement_id": "DOC-33::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -3463,7 +3463,7 @@
     },
     {
       "requirement_id": "DOC-33::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -3472,7 +3472,7 @@
     },
     {
       "requirement_id": "DOC-33::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -3481,7 +3481,7 @@
     },
     {
       "requirement_id": "DOC-33::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -3490,7 +3490,7 @@
     },
     {
       "requirement_id": "DOC-33::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -3499,7 +3499,7 @@
     },
     {
       "requirement_id": "DOC-33::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -3508,7 +3508,7 @@
     },
     {
       "requirement_id": "DOC-33::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -3517,7 +3517,7 @@
     },
     {
       "requirement_id": "DOC-33::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -3526,7 +3526,7 @@
     },
     {
       "requirement_id": "DOC-33::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -3535,7 +3535,7 @@
     },
     {
       "requirement_id": "DOC-33::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -3544,7 +3544,7 @@
     },
     {
       "requirement_id": "DOC-33::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -3553,7 +3553,7 @@
     },
     {
       "requirement_id": "DOC-33::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/GAP_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -3562,7 +3562,7 @@
     },
     {
       "requirement_id": "DOC-30::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/intakeEngine.js::FILE"
       ],
@@ -3575,7 +3575,7 @@
     },
     {
       "requirement_id": "DOC-30::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/intakeEngine.js::FILE"
       ],
@@ -3588,7 +3588,7 @@
     },
     {
       "requirement_id": "DOC-30::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/intakeEngine.js::FILE"
       ],
@@ -3601,7 +3601,7 @@
     },
     {
       "requirement_id": "DOC-30::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/intakeEngine.js::FILE"
       ],
@@ -3614,7 +3614,7 @@
     },
     {
       "requirement_id": "DOC-30::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/intakeEngine.js::FILE"
       ],
@@ -3627,7 +3627,7 @@
     },
     {
       "requirement_id": "DOC-30::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/intakeEngine.js::FILE"
       ],
@@ -3640,7 +3640,7 @@
     },
     {
       "requirement_id": "DOC-30::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/intakeEngine.js::FILE"
       ],
@@ -3653,7 +3653,7 @@
     },
     {
       "requirement_id": "DOC-30::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/intakeEngine.js::FILE"
       ],
@@ -3666,7 +3666,7 @@
     },
     {
       "requirement_id": "DOC-30::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/intakeEngine.js::FILE"
       ],
@@ -3679,7 +3679,7 @@
     },
     {
       "requirement_id": "DOC-30::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/intakeEngine.js::FILE"
       ],
@@ -3692,7 +3692,7 @@
     },
     {
       "requirement_id": "DOC-30::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/intakeEngine.js::FILE"
       ],
@@ -3705,7 +3705,7 @@
     },
     {
       "requirement_id": "DOC-30::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/intakeEngine.js::FILE"
       ],
@@ -3718,7 +3718,7 @@
     },
     {
       "requirement_id": "DOC-30::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/intakeEngine.js::FILE"
       ],
@@ -3731,7 +3731,7 @@
     },
     {
       "requirement_id": "DOC-30::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/intakeEngine.js::FILE"
       ],
@@ -3744,7 +3744,7 @@
     },
     {
       "requirement_id": "DOC-38::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -3757,7 +3757,7 @@
     },
     {
       "requirement_id": "DOC-38::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -3770,7 +3770,7 @@
     },
     {
       "requirement_id": "DOC-38::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -3783,7 +3783,7 @@
     },
     {
       "requirement_id": "DOC-38::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -3796,7 +3796,7 @@
     },
     {
       "requirement_id": "DOC-38::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -3809,7 +3809,7 @@
     },
     {
       "requirement_id": "DOC-38::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -3822,7 +3822,7 @@
     },
     {
       "requirement_id": "DOC-38::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -3835,7 +3835,7 @@
     },
     {
       "requirement_id": "DOC-38::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -3849,7 +3849,7 @@
     },
     {
       "requirement_id": "DOC-38::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -3862,7 +3862,7 @@
     },
     {
       "requirement_id": "DOC-38::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -3875,7 +3875,7 @@
     },
     {
       "requirement_id": "DOC-38::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -3888,7 +3888,7 @@
     },
     {
       "requirement_id": "DOC-38::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -3901,7 +3901,7 @@
     },
     {
       "requirement_id": "DOC-38::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -3914,7 +3914,7 @@
     },
     {
       "requirement_id": "DOC-38::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -3927,7 +3927,7 @@
     },
     {
       "requirement_id": "DOC-38::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -3940,7 +3940,7 @@
     },
     {
       "requirement_id": "DOC-38::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/MODULE_ORCHESTRATION_GOVERNANCE_v1.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -3953,154 +3953,154 @@
     },
     {
       "requirement_id": "DOC-21::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_RUNTIME_ACTIVATION.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/intakeEngine.js::FILE"
       ],
@@ -4113,7 +4113,7 @@
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -4126,7 +4126,7 @@
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4135,7 +4135,7 @@
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -4144,14 +4144,14 @@
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -4160,7 +4160,7 @@
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/backfillEngine.js::FILE"
       ],
@@ -4169,7 +4169,7 @@
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/executeEngine.js::FILE"
       ],
@@ -4178,7 +4178,7 @@
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -4190,49 +4190,49 @@
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R018",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R019",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/SELF_BUILDING_SYSTEM_BLUEPRINT_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-32::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4241,7 +4241,7 @@
     },
     {
       "requirement_id": "DOC-32::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4250,7 +4250,7 @@
     },
     {
       "requirement_id": "DOC-32::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4259,7 +4259,7 @@
     },
     {
       "requirement_id": "DOC-32::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4268,7 +4268,7 @@
     },
     {
       "requirement_id": "DOC-32::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4277,7 +4277,7 @@
     },
     {
       "requirement_id": "DOC-32::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4286,7 +4286,7 @@
     },
     {
       "requirement_id": "DOC-32::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4295,7 +4295,7 @@
     },
     {
       "requirement_id": "DOC-32::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4304,7 +4304,7 @@
     },
     {
       "requirement_id": "DOC-32::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4313,7 +4313,7 @@
     },
     {
       "requirement_id": "DOC-32::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4322,7 +4322,7 @@
     },
     {
       "requirement_id": "DOC-32::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4331,7 +4331,7 @@
     },
     {
       "requirement_id": "DOC-32::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4340,7 +4340,7 @@
     },
     {
       "requirement_id": "DOC-32::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4349,7 +4349,7 @@
     },
     {
       "requirement_id": "DOC-32::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4358,7 +4358,7 @@
     },
     {
       "requirement_id": "DOC-32::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4367,7 +4367,7 @@
     },
     {
       "requirement_id": "DOC-32::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4375,127 +4375,204 @@
       "coverage_status": "PARTIAL"
     },
     {
+      "requirement_id": "pipeline_contract_violation_v1::R001",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/pipeline_contract_violation_v1.md",
+      "mapped_code_units": [],
+      "mapped_artifacts": [],
+      "coverage_status": "NONE"
+    },
+    {
+      "requirement_id": "pipeline_contract_violation_v1::R002",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/pipeline_contract_violation_v1.md",
+      "mapped_code_units": [],
+      "mapped_artifacts": [],
+      "coverage_status": "NONE"
+    },
+    {
+      "requirement_id": "pipeline_contract_violation_v1::R003",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/pipeline_contract_violation_v1.md",
+      "mapped_code_units": [],
+      "mapped_artifacts": [],
+      "coverage_status": "NONE"
+    },
+    {
+      "requirement_id": "pipeline_contract_violation_v1::R004",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/pipeline_contract_violation_v1.md",
+      "mapped_code_units": [],
+      "mapped_artifacts": [],
+      "coverage_status": "NONE"
+    },
+    {
+      "requirement_id": "pipeline_contract_violation_v1::R005",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/pipeline_contract_violation_v1.md",
+      "mapped_code_units": [],
+      "mapped_artifacts": [],
+      "coverage_status": "NONE"
+    },
+    {
+      "requirement_id": "pipeline_contract_violation_v1::R006",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/pipeline_contract_violation_v1.md",
+      "mapped_code_units": [],
+      "mapped_artifacts": [],
+      "coverage_status": "NONE"
+    },
+    {
+      "requirement_id": "pipeline_contract_violation_v1::R007",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/pipeline_contract_violation_v1.md",
+      "mapped_code_units": [],
+      "mapped_artifacts": [],
+      "coverage_status": "NONE"
+    },
+    {
+      "requirement_id": "pipeline_contract_violation_v1::R008",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/pipeline_contract_violation_v1.md",
+      "mapped_code_units": [],
+      "mapped_artifacts": [],
+      "coverage_status": "NONE"
+    },
+    {
+      "requirement_id": "pipeline_contract_violation_v1::R009",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/pipeline_contract_violation_v1.md",
+      "mapped_code_units": [],
+      "mapped_artifacts": [],
+      "coverage_status": "NONE"
+    },
+    {
+      "requirement_id": "pipeline_contract_violation_v1::R010",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/pipeline_contract_violation_v1.md",
+      "mapped_code_units": [],
+      "mapped_artifacts": [],
+      "coverage_status": "NONE"
+    },
+    {
+      "requirement_id": "pipeline_contract_violation_v1::R011",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/03_pipeline/pipeline_contract_violation_v1.md",
+      "mapped_code_units": [],
+      "mapped_artifacts": [],
+      "coverage_status": "NONE"
+    },
+    {
       "requirement_id": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "04_Autonomy_Policy_and_Human_Interrupt_Protocol::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-11::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-11::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-11::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-11::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-11::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-11::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -4507,91 +4584,91 @@
     },
     {
       "requirement_id": "DOC-11::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-11::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-11::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/05_Artifact_Authority_Hierarchy_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-12::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-12::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-12::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-12::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-12::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-12::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-12::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-12::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-12::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-12::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -4603,56 +4680,56 @@
     },
     {
       "requirement_id": "DOC-12::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-12::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-CE-01::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-CE-01::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-CE-01::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-CE-01::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-CE-01::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-CE-01::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -4665,63 +4742,63 @@
     },
     {
       "requirement_id": "DOC-CE-01::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-CE-01::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-CE-01::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/04_autonomy/07_Cognitive_Engine_Interface_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -4730,7 +4807,7 @@
     },
     {
       "requirement_id": "DOC-16::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -4739,7 +4816,7 @@
     },
     {
       "requirement_id": "DOC-16::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -4748,7 +4825,7 @@
     },
     {
       "requirement_id": "DOC-16::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -4757,7 +4834,7 @@
     },
     {
       "requirement_id": "DOC-16::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -4766,28 +4843,28 @@
     },
     {
       "requirement_id": "DOC-16::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -4799,21 +4876,21 @@
     },
     {
       "requirement_id": "DOC-16::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -4822,7 +4899,7 @@
     },
     {
       "requirement_id": "DOC-16::R018",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -4834,14 +4911,14 @@
     },
     {
       "requirement_id": "DOC-16::R019",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R020",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -4850,21 +4927,21 @@
     },
     {
       "requirement_id": "DOC-16::R021",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R022",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R023",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -4876,21 +4953,21 @@
     },
     {
       "requirement_id": "DOC-16::R024",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R025",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R026",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -4902,84 +4979,84 @@
     },
     {
       "requirement_id": "DOC-16::R027",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R028",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R029",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R030",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R031",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-16::R032",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_16_Cognitive_Artifacts_Definition_Specification.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
       "mapped_code_units": [
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
@@ -4991,483 +5068,483 @@
     },
     {
       "requirement_id": "DOC-17::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_17_Artifact_Schema_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-21::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R018",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R019",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R020",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R021",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "05_Artifact_Schema_and_Repository_Layout_Standard::R022",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/05_artifacts/05_Artifact_Schema_and_Repository_Layout_Standard.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Contract_Revision_v2.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R018",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "06_Progress_Tracking_and_Status_Report_Contract_v1::R019",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/06_progress/06_Progress_Tracking_and_Status_Report_Contract_v1.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5477,7 +5554,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5487,7 +5564,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5497,7 +5574,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5507,7 +5584,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5517,7 +5594,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5527,7 +5604,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5537,7 +5614,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5547,7 +5624,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5557,7 +5634,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5567,7 +5644,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5577,7 +5654,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5587,7 +5664,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5597,7 +5674,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5607,7 +5684,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5617,7 +5694,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5627,7 +5704,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5637,7 +5714,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R018",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5647,7 +5724,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R019",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5657,7 +5734,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R020",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5667,7 +5744,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R021",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5677,7 +5754,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R022",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5687,7 +5764,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R023",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE",
         "CODE::code/src/modules/decisionGate.js::FILE",
@@ -5702,7 +5779,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R024",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5712,7 +5789,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R025",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5722,7 +5799,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R026",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5732,7 +5809,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R027",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5742,7 +5819,7 @@
     },
     {
       "requirement_id": "07_Decision_Logging_and_Change_Traceability_Specification::R028",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5752,7 +5829,7 @@
     },
     {
       "requirement_id": "DOC-22::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5761,7 +5838,7 @@
     },
     {
       "requirement_id": "DOC-22::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5770,7 +5847,7 @@
     },
     {
       "requirement_id": "DOC-22::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5779,7 +5856,7 @@
     },
     {
       "requirement_id": "DOC-22::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5788,7 +5865,7 @@
     },
     {
       "requirement_id": "DOC-22::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5797,7 +5874,7 @@
     },
     {
       "requirement_id": "DOC-22::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5806,7 +5883,7 @@
     },
     {
       "requirement_id": "DOC-22::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5815,7 +5892,7 @@
     },
     {
       "requirement_id": "DOC-22::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5824,7 +5901,7 @@
     },
     {
       "requirement_id": "DOC-22::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5833,7 +5910,7 @@
     },
     {
       "requirement_id": "DOC-22::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5842,7 +5919,7 @@
     },
     {
       "requirement_id": "DOC-22::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5851,7 +5928,7 @@
     },
     {
       "requirement_id": "DOC-22::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5860,7 +5937,7 @@
     },
     {
       "requirement_id": "DOC-22::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5869,7 +5946,7 @@
     },
     {
       "requirement_id": "DOC-22::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5878,7 +5955,7 @@
     },
     {
       "requirement_id": "DOC-22::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5887,7 +5964,7 @@
     },
     {
       "requirement_id": "DOC-22::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5896,7 +5973,7 @@
     },
     {
       "requirement_id": "DOC-22::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5905,7 +5982,7 @@
     },
     {
       "requirement_id": "DOC-22::R018",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5914,7 +5991,7 @@
     },
     {
       "requirement_id": "DOC-22::R019",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5923,7 +6000,7 @@
     },
     {
       "requirement_id": "DOC-22::R020",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -5933,7 +6010,7 @@
     },
     {
       "requirement_id": "DOC-22::R021",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5942,7 +6019,7 @@
     },
     {
       "requirement_id": "DOC-22::R022",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_ARTIFACT_SCHEMA.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5951,7 +6028,7 @@
     },
     {
       "requirement_id": "DOC-21::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5960,7 +6037,7 @@
     },
     {
       "requirement_id": "DOC-21::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5969,7 +6046,7 @@
     },
     {
       "requirement_id": "DOC-21::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5978,7 +6055,7 @@
     },
     {
       "requirement_id": "DOC-21::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5987,7 +6064,7 @@
     },
     {
       "requirement_id": "DOC-21::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -5996,7 +6073,7 @@
     },
     {
       "requirement_id": "DOC-21::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6005,7 +6082,7 @@
     },
     {
       "requirement_id": "DOC-21::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6014,7 +6091,7 @@
     },
     {
       "requirement_id": "DOC-21::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6023,7 +6100,7 @@
     },
     {
       "requirement_id": "DOC-21::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6032,7 +6109,7 @@
     },
     {
       "requirement_id": "DOC-21::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6041,7 +6118,7 @@
     },
     {
       "requirement_id": "DOC-21::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6050,7 +6127,7 @@
     },
     {
       "requirement_id": "DOC-21::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6059,7 +6136,7 @@
     },
     {
       "requirement_id": "DOC-21::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6068,7 +6145,7 @@
     },
     {
       "requirement_id": "DOC-21::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6077,7 +6154,7 @@
     },
     {
       "requirement_id": "DOC-21::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6086,7 +6163,7 @@
     },
     {
       "requirement_id": "DOC-21::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -6096,7 +6173,133 @@
     },
     {
       "requirement_id": "DOC-21::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_GATE_BEHAVIOR_SPEC.md",
+      "mapped_code_units": [
+        "CODE::code/src/modules/decisionGate.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R001",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/modules/decisionGate.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R002",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/modules/decisionGate.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R003",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/modules/decisionGate.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R004",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/modules/decisionGate.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R005",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/modules/decisionGate.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R006",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/modules/decisionGate.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R007",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/modules/decisionGate.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R008",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/modules/decisionGate.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R009",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/modules/decisionGate.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R010",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/modules/decisionGate.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R011",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/modules/decisionGate.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R012",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/modules/decisionGate.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R013",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/modules/decisionGate.js::FILE"
+      ],
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
+    },
+    {
+      "requirement_id": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R014",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6105,7 +6308,7 @@
     },
     {
       "requirement_id": "DOC-20::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6114,7 +6317,7 @@
     },
     {
       "requirement_id": "DOC-20::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6123,7 +6326,7 @@
     },
     {
       "requirement_id": "DOC-20::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6132,7 +6335,7 @@
     },
     {
       "requirement_id": "DOC-20::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6141,7 +6344,7 @@
     },
     {
       "requirement_id": "DOC-20::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6150,7 +6353,7 @@
     },
     {
       "requirement_id": "DOC-20::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6159,7 +6362,7 @@
     },
     {
       "requirement_id": "DOC-20::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6168,7 +6371,7 @@
     },
     {
       "requirement_id": "DOC-20::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6177,7 +6380,7 @@
     },
     {
       "requirement_id": "DOC-20::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6186,7 +6389,7 @@
     },
     {
       "requirement_id": "DOC-20::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -6196,7 +6399,7 @@
     },
     {
       "requirement_id": "DOC-20::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6205,7 +6408,7 @@
     },
     {
       "requirement_id": "DOC-20::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6214,7 +6417,7 @@
     },
     {
       "requirement_id": "DOC-20::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6223,7 +6426,7 @@
     },
     {
       "requirement_id": "DOC-20::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6232,7 +6435,7 @@
     },
     {
       "requirement_id": "DOC-20::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6241,7 +6444,7 @@
     },
     {
       "requirement_id": "DOC-20::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6250,7 +6453,7 @@
     },
     {
       "requirement_id": "DOC-20::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_PROTOCOL.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6259,7 +6462,7 @@
     },
     {
       "requirement_id": "DOC-20::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6268,7 +6471,7 @@
     },
     {
       "requirement_id": "DOC-20::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6277,7 +6480,7 @@
     },
     {
       "requirement_id": "DOC-20::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6286,7 +6489,7 @@
     },
     {
       "requirement_id": "DOC-20::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6295,7 +6498,7 @@
     },
     {
       "requirement_id": "DOC-20::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6304,7 +6507,7 @@
     },
     {
       "requirement_id": "DOC-20::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6313,7 +6516,7 @@
     },
     {
       "requirement_id": "DOC-20::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6322,7 +6525,7 @@
     },
     {
       "requirement_id": "DOC-20::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6331,7 +6534,7 @@
     },
     {
       "requirement_id": "DOC-20::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6340,7 +6543,7 @@
     },
     {
       "requirement_id": "DOC-20::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6349,7 +6552,7 @@
     },
     {
       "requirement_id": "DOC-20::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6358,7 +6561,7 @@
     },
     {
       "requirement_id": "DOC-20::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6367,7 +6570,7 @@
     },
     {
       "requirement_id": "DOC-20::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6376,7 +6579,7 @@
     },
     {
       "requirement_id": "DOC-20::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6385,7 +6588,7 @@
     },
     {
       "requirement_id": "DOC-20::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6394,7 +6597,7 @@
     },
     {
       "requirement_id": "DOC-20::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6403,7 +6606,7 @@
     },
     {
       "requirement_id": "DOC-20::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6412,7 +6615,7 @@
     },
     {
       "requirement_id": "DOC-20::R018",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6421,7 +6624,7 @@
     },
     {
       "requirement_id": "DOC-20::R019",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6430,7 +6633,7 @@
     },
     {
       "requirement_id": "DOC-20::R020",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6439,7 +6642,7 @@
     },
     {
       "requirement_id": "DOC-20::R021",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6448,7 +6651,7 @@
     },
     {
       "requirement_id": "DOC-20::R022",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6457,7 +6660,7 @@
     },
     {
       "requirement_id": "DOC-20::R023",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -6467,7 +6670,7 @@
     },
     {
       "requirement_id": "DOC-20::R024",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/EXECUTION_FORK_DETECTION_RULES.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6476,7 +6679,7 @@
     },
     {
       "requirement_id": "DOC-19::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6485,7 +6688,7 @@
     },
     {
       "requirement_id": "DOC-19::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6494,7 +6697,7 @@
     },
     {
       "requirement_id": "DOC-19::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6503,7 +6706,7 @@
     },
     {
       "requirement_id": "DOC-19::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6512,7 +6715,7 @@
     },
     {
       "requirement_id": "DOC-19::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6521,7 +6724,7 @@
     },
     {
       "requirement_id": "DOC-19::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6530,7 +6733,7 @@
     },
     {
       "requirement_id": "DOC-19::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6539,7 +6742,7 @@
     },
     {
       "requirement_id": "DOC-19::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6548,7 +6751,7 @@
     },
     {
       "requirement_id": "DOC-19::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6557,7 +6760,7 @@
     },
     {
       "requirement_id": "DOC-19::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6566,7 +6769,7 @@
     },
     {
       "requirement_id": "DOC-19::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6575,7 +6778,7 @@
     },
     {
       "requirement_id": "DOC-19::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6584,7 +6787,7 @@
     },
     {
       "requirement_id": "DOC-19::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6593,7 +6796,7 @@
     },
     {
       "requirement_id": "DOC-19::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6602,7 +6805,7 @@
     },
     {
       "requirement_id": "DOC-19::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6611,7 +6814,7 @@
     },
     {
       "requirement_id": "DOC-19::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6620,7 +6823,7 @@
     },
     {
       "requirement_id": "DOC-19::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -6630,7 +6833,7 @@
     },
     {
       "requirement_id": "DOC-19::R018",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6639,7 +6842,7 @@
     },
     {
       "requirement_id": "DOC-19::R019",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/OPTION_EVALUATION_FRAMEWORK.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6648,7 +6851,7 @@
     },
     {
       "requirement_id": "DOC-23::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6657,7 +6860,7 @@
     },
     {
       "requirement_id": "DOC-23::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6666,7 +6869,7 @@
     },
     {
       "requirement_id": "DOC-23::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6675,7 +6878,7 @@
     },
     {
       "requirement_id": "DOC-23::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6684,7 +6887,7 @@
     },
     {
       "requirement_id": "DOC-23::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6693,7 +6896,7 @@
     },
     {
       "requirement_id": "DOC-23::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6702,7 +6905,7 @@
     },
     {
       "requirement_id": "DOC-23::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6711,7 +6914,7 @@
     },
     {
       "requirement_id": "DOC-23::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6720,7 +6923,7 @@
     },
     {
       "requirement_id": "DOC-23::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6729,7 +6932,7 @@
     },
     {
       "requirement_id": "DOC-23::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6738,7 +6941,7 @@
     },
     {
       "requirement_id": "DOC-23::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6747,7 +6950,7 @@
     },
     {
       "requirement_id": "DOC-23::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6756,7 +6959,7 @@
     },
     {
       "requirement_id": "DOC-23::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6765,7 +6968,7 @@
     },
     {
       "requirement_id": "DOC-23::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6774,7 +6977,7 @@
     },
     {
       "requirement_id": "DOC-23::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6783,7 +6986,7 @@
     },
     {
       "requirement_id": "DOC-23::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6792,7 +6995,7 @@
     },
     {
       "requirement_id": "DOC-23::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6801,7 +7004,7 @@
     },
     {
       "requirement_id": "DOC-23::R018",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6810,7 +7013,7 @@
     },
     {
       "requirement_id": "DOC-23::R019",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6819,7 +7022,7 @@
     },
     {
       "requirement_id": "DOC-23::R020",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -6829,7 +7032,7 @@
     },
     {
       "requirement_id": "DOC-23::R021",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6838,7 +7041,7 @@
     },
     {
       "requirement_id": "DOC-23::R022",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/07_decisions/RECOMMENDATION_ARTIFACT_SPECIFICATION.md",
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
@@ -6847,7 +7050,7 @@
     },
     {
       "requirement_id": "DOC-AUD-08_10::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -6860,7 +7063,7 @@
     },
     {
       "requirement_id": "DOC-AUD-08_10::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -6873,7 +7076,7 @@
     },
     {
       "requirement_id": "DOC-AUD-08_10::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -6886,7 +7089,7 @@
     },
     {
       "requirement_id": "DOC-AUD-08_10::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
       "mapped_code_units": [
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
@@ -6904,7 +7107,7 @@
     },
     {
       "requirement_id": "DOC-AUD-08_10::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -6917,7 +7120,7 @@
     },
     {
       "requirement_id": "DOC-AUD-08_10::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -6930,7 +7133,7 @@
     },
     {
       "requirement_id": "DOC-AUD-08_10::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -6943,7 +7146,7 @@
     },
     {
       "requirement_id": "DOC-AUD-08_10::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
@@ -6957,7 +7160,7 @@
     },
     {
       "requirement_id": "DOC-AUD-08_10::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_10_Docs_to_Code_Coverage_Map_Core_Runtime.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -6970,7 +7173,7 @@
     },
     {
       "requirement_id": "DOC-08::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -6983,7 +7186,7 @@
     },
     {
       "requirement_id": "DOC-08::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -6996,7 +7199,7 @@
     },
     {
       "requirement_id": "DOC-08::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7009,7 +7212,7 @@
     },
     {
       "requirement_id": "DOC-08::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7022,7 +7225,7 @@
     },
     {
       "requirement_id": "DOC-08::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE",
         "CODE::code/src/modules/decisionGate.js::FILE"
@@ -7036,7 +7239,7 @@
     },
     {
       "requirement_id": "DOC-08::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7049,7 +7252,7 @@
     },
     {
       "requirement_id": "DOC-08::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7062,7 +7265,7 @@
     },
     {
       "requirement_id": "DOC-08::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7075,7 +7278,7 @@
     },
     {
       "requirement_id": "DOC-08::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7088,7 +7291,7 @@
     },
     {
       "requirement_id": "DOC-08::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7101,7 +7304,7 @@
     },
     {
       "requirement_id": "DOC-08::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7114,7 +7317,7 @@
     },
     {
       "requirement_id": "DOC-08::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7127,7 +7330,7 @@
     },
     {
       "requirement_id": "DOC-08::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7140,7 +7343,7 @@
     },
     {
       "requirement_id": "DOC-08::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE",
         "CODE::code/src/modules/traceEngine.js::FILE"
@@ -7154,7 +7357,7 @@
     },
     {
       "requirement_id": "DOC-08::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/08_Forge_Boundary_Audit_Rules_Fail-Closed_Pack.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7167,7 +7370,7 @@
     },
     {
       "requirement_id": "Doc-03::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7180,7 +7383,7 @@
     },
     {
       "requirement_id": "Doc-03::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7193,7 +7396,7 @@
     },
     {
       "requirement_id": "Doc-03::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7206,7 +7409,7 @@
     },
     {
       "requirement_id": "Doc-03::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7219,7 +7422,7 @@
     },
     {
       "requirement_id": "Doc-03::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7232,7 +7435,7 @@
     },
     {
       "requirement_id": "Doc-03::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7245,7 +7448,7 @@
     },
     {
       "requirement_id": "Doc-03::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
@@ -7259,7 +7462,7 @@
     },
     {
       "requirement_id": "Doc-03::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7272,7 +7475,7 @@
     },
     {
       "requirement_id": "Doc-03::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7285,7 +7488,7 @@
     },
     {
       "requirement_id": "Doc-03::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7298,7 +7501,7 @@
     },
     {
       "requirement_id": "Doc-03::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7311,7 +7514,7 @@
     },
     {
       "requirement_id": "Doc-03::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
@@ -7325,7 +7528,7 @@
     },
     {
       "requirement_id": "Doc-03::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/08_audit/09_Vision_Alignment_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7338,63 +7541,63 @@
     },
     {
       "requirement_id": "DOC-17::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_17_Cross_Document_Consistency_Review_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_17_Cross_Document_Consistency_Review_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_17_Cross_Document_Consistency_Review_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_17_Cross_Document_Consistency_Review_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_17_Cross_Document_Consistency_Review_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_17_Cross_Document_Consistency_Review_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_17_Cross_Document_Consistency_Review_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_17_Cross_Document_Consistency_Review_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_17_Cross_Document_Consistency_Review_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_17_Cross_Document_Consistency_Review_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_17_Cross_Document_Consistency_Review_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_17_Cross_Document_Consistency_Review_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_17_Cross_Document_Consistency_Review_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_17_Cross_Document_Consistency_Review_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-17::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_17_Cross_Document_Consistency_Review_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_17_Cross_Document_Consistency_Review_Contract.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-18::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -7403,7 +7606,7 @@
     },
     {
       "requirement_id": "DOC-18::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -7412,7 +7615,7 @@
     },
     {
       "requirement_id": "DOC-18::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -7421,7 +7624,7 @@
     },
     {
       "requirement_id": "DOC-18::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -7430,7 +7633,7 @@
     },
     {
       "requirement_id": "DOC-18::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -7439,7 +7642,7 @@
     },
     {
       "requirement_id": "DOC-18::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -7448,7 +7651,7 @@
     },
     {
       "requirement_id": "DOC-18::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -7457,7 +7660,7 @@
     },
     {
       "requirement_id": "DOC-18::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -7466,7 +7669,7 @@
     },
     {
       "requirement_id": "DOC-18::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -7475,7 +7678,7 @@
     },
     {
       "requirement_id": "DOC-18::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -7484,7 +7687,7 @@
     },
     {
       "requirement_id": "DOC-18::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -7493,7 +7696,7 @@
     },
     {
       "requirement_id": "DOC-18::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -7502,7 +7705,7 @@
     },
     {
       "requirement_id": "DOC-18::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_18_Code_to_Spec_Trace_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -7511,7 +7714,7 @@
     },
     {
       "requirement_id": "DOC-19::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -7520,7 +7723,7 @@
     },
     {
       "requirement_id": "DOC-19::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -7529,7 +7732,7 @@
     },
     {
       "requirement_id": "DOC-19::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -7538,7 +7741,7 @@
     },
     {
       "requirement_id": "DOC-19::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -7547,7 +7750,7 @@
     },
     {
       "requirement_id": "DOC-19::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -7556,7 +7759,7 @@
     },
     {
       "requirement_id": "DOC-19::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -7565,7 +7768,7 @@
     },
     {
       "requirement_id": "DOC-19::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -7574,7 +7777,7 @@
     },
     {
       "requirement_id": "DOC-19::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -7583,7 +7786,7 @@
     },
     {
       "requirement_id": "DOC-19::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -7592,7 +7795,7 @@
     },
     {
       "requirement_id": "DOC-19::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -7601,7 +7804,7 @@
     },
     {
       "requirement_id": "DOC-19::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -7610,7 +7813,7 @@
     },
     {
       "requirement_id": "DOC-19::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -7619,7 +7822,7 @@
     },
     {
       "requirement_id": "DOC-19::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -7628,7 +7831,7 @@
     },
     {
       "requirement_id": "DOC-19::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_19_Docs_Gap_Analyzer_Validator_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -7637,49 +7840,49 @@
     },
     {
       "requirement_id": "Doc-04::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
@@ -7688,147 +7891,147 @@
     },
     {
       "requirement_id": "Doc-04::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R018",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R019",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "Doc-04::R020",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/09_verify/09_Build_and_Verify_Playbook_Local.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
@@ -7841,56 +8044,56 @@
     },
     {
       "requirement_id": "DOC-10::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-RT-10_10::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_10_Runtime_Entrypoints_and_Tooling.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_10_Runtime_Entrypoints_and_Tooling.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-RT-10_10::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_10_Runtime_Entrypoints_and_Tooling.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_10_Runtime_Entrypoints_and_Tooling.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-RT-10_10::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_10_Runtime_Entrypoints_and_Tooling.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_10_Runtime_Entrypoints_and_Tooling.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-RT-10_10::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_10_Runtime_Entrypoints_and_Tooling.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_10_Runtime_Entrypoints_and_Tooling.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-RT-10_10::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_10_Runtime_Entrypoints_and_Tooling.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_10_Runtime_Entrypoints_and_Tooling.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-RT-10_10::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_10_Runtime_Entrypoints_and_Tooling.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_10_Runtime_Entrypoints_and_Tooling.md",
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
@@ -7899,182 +8102,182 @@
     },
     {
       "requirement_id": "DOC-RT-10_10::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_10_Runtime_Entrypoints_and_Tooling.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_10_Runtime_Entrypoints_and_Tooling.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R001",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R002",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R003",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R004",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R005",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R006",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R007",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R008",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R009",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R010",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R011",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R012",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R013",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R014",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R015",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R016",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R017",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R018",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R019",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R020",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R021",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R022",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R023",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R024",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
     },
     {
       "requirement_id": "DOC-10::R025",
-      "document": "D:/S/Halo/Tech/halo-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
+      "document": "D:/S/Halo/Tech/forge-personal-autonomous-pipeline/docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md",
       "mapped_code_units": [],
       "mapped_artifacts": [],
       "coverage_status": "NONE"
@@ -8445,11 +8648,20 @@
     "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R016",
     "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R017",
     "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R018",
-    "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R019"
+    "SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R019",
+    "pipeline_contract_violation_v1::R001",
+    "pipeline_contract_violation_v1::R002",
+    "pipeline_contract_violation_v1::R003",
+    "pipeline_contract_violation_v1::R004",
+    "pipeline_contract_violation_v1::R005",
+    "pipeline_contract_violation_v1::R006",
+    "pipeline_contract_violation_v1::R007",
+    "pipeline_contract_violation_v1::R008",
+    "pipeline_contract_violation_v1::R009",
+    "pipeline_contract_violation_v1::R010",
+    "pipeline_contract_violation_v1::R011"
   ],
   "orphan_artifacts": [
-    "artifacts/closure/closure_error.md",
-    "artifacts/gap/gap_error.md",
     "artifacts/intake/repository_inventory.json"
   ]
 }

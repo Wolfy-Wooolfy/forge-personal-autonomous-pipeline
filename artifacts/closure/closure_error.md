@@ -1,8 +1,8 @@
 # MODULE FLOW — Closure Error
 
 - outcome: BLOCKED
-- message: Closure BLOCKED: audit verification failed.
+- message: Closure BLOCKED: execute plan is inconsistent with backfill plan.
 
 ## Details
-- audit.blocked=true
-- audit.failed_checks=115
+- backfill_actions=14
+- execute_actions=0

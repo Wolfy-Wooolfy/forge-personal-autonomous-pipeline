@@ -10,5 +10,5 @@
 - closure_artifact: true
 
 ## Generated Artifacts
-- artifacts/gap/gap_error.md
+- artifacts/gap/gap_report.md
 - artifacts/gap/gap_actions.json

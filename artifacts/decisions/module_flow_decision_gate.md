@@ -1,6 +1,6 @@
 # MODULE FLOW — Decision Gate
 
-- timestamp: 2026-03-30T12:12:26.236Z
+- timestamp: 2026-03-31T09:16:13.732Z
 - policy: AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK
 - operating_mode: IMPROVE
 - repository_state: MIXED
@@ -8,13 +8,13 @@
 
 ## Source
 - exploration_matrix_path: artifacts/exploration/option_matrix.json
-- exploration_matrix_sha256: 7a28d99e1acfb1b8366e64e04bb7d269b3913bff73c6170182d75533fc4cd60f
+- exploration_matrix_sha256: ca37b78d12374940bab9b0f1de182fb7dafc968424b290eb0fcd42bcf8878e14
 - intake_context_path: artifacts/intake/intake_context.json
 - intake_context_sha256: eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84
 
 ## Summary
-- total_actions: 593
-- approved_count: 593
+- total_actions: 616
+- approved_count: 616
 - review_required_count: 0
 - rejected_count: 0
 
@@ -26,6 +26,8 @@
 - ACT-b8cdb16e09d8 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R003 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-8c5985c18c0e [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-16::R017 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-77878cc287d0 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement pipeline_contract_violation_v1::R006 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-2c89f742fa8a [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement -::R006 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
@@ -147,6 +149,8 @@
   - reason: action explicitly marked requires_decision; approved by explicit override
 - ACT-f325d2e88681 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/forge/forge_state_resolver.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
   - reason: action explicitly marked requires_decision; approved by explicit override
+- ACT-c485303be93c [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement pipeline_contract_violation_v1::R011 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
 - ACT-f65c792da1ed [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R013 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-bd9081472c6d [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R012 by adding missing code unit(s) and required artifact(s).
@@ -167,6 +171,8 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-44e4ddd601ce [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-23::R006 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
+- ACT-9786eacf3017 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R001 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
 - ACT-1ffd3f97bab6 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement -::R007 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-1b9693f6d22e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-CE-01::R002 by adding missing code unit(s) and required artifact(s).
@@ -175,7 +181,11 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-1da2082c90b3 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R014 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
+- ACT-b54cd6196eb4 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R013 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
 - ACT-fcfba59e0b41 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R017 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-5aa38ecb95e6 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R014 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-59ef5f692c83 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-18::R013 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
@@ -190,6 +200,8 @@
 - ACT-3b77c19f9bed [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-00::R008 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-4808f0099d9d [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-38::R013 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-7768f98896c5 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R005 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-6bb41f7eeb97 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-20::R003 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
@@ -211,8 +223,6 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-65f885d0335b [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-16::R005 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
-- ACT-a484b959468e [ORPHAN_ARTIFACT/LOW] Either map artifact artifacts/gap/gap_error.md to a requirement (if valid) or remove it if it violates namespace/scope rules.
-  - reason: action explicitly marked requires_decision; approved by explicit override
 - ACT-063cedcf8073 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R006 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-7d49a79e243c [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-02::R003 by adding missing code unit(s) and required artifact(s).
@@ -224,6 +234,8 @@
 - ACT-04c0ac55ee99 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-34::R002 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-3efbf0bcd3ff [PARTIAL_COVERAGE/MEDIUM] Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R022 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-f874186bb2c3 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R002 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-902018cd08ef [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-38::R007 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
@@ -255,8 +267,6 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-3531a8dab1c9 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R003 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
-- ACT-34368aff0a72 [ORPHAN_ARTIFACT/LOW] Either map artifact artifacts/closure/closure_error.md to a requirement (if valid) or remove it if it violates namespace/scope rules.
-  - reason: action explicitly marked requires_decision; approved by explicit override
 - ACT-a5c8a7b0b00a [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R021 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-0602e0fcfca7 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R012 by adding missing code unit(s) and required artifact(s).
@@ -305,6 +315,8 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-a36a59c0eba4 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-01::R009 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
+- ACT-f5a88d0ce6dd [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R007 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
 - ACT-f8ef8659fdd8 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R017 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-ff1516d8b7b8 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R004 by adding missing code unit(s) and required artifact(s).
@@ -328,6 +340,8 @@
 - ACT-b1637926a839 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-12::R013 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-46166ea78dc7 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 06_Progress_Tracking_and_Status_Report_Contract_v1::R009 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
+- ACT-e611b7511964 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R006 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-453a7da7bb1b [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-23::R022 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
@@ -384,6 +398,8 @@
 - ACT-9e3a8db8d082 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-36::R010 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-1d7bfb06e947 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-36::R004 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-95f8314eb329 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement pipeline_contract_violation_v1::R001 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-fc3505420f20 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for 07_Decision_Logging_and_Change_Traceability_Specification::R025 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
@@ -527,6 +543,8 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-6e3dc8b321ce [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-23::R002 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
+- ACT-d35e72119c3d [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement pipeline_contract_violation_v1::R008 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
 - ACT-7c63a594ca54 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-16::R024 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-bbbe72afb924 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R009 by ensuring both mapped_code_units and mapped_artifacts are present.
@@ -583,6 +601,8 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-3d2f95500c1c [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-21::R014 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
+- ACT-ac6acf6601f6 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R004 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
 - ACT-c66c8146c9df [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-12::R002 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-126bb7c9dbda [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-22::R010 by ensuring both mapped_code_units and mapped_artifacts are present.
@@ -602,6 +622,8 @@
 - ACT-5e4e9cfea992 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-11::R001 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-0a339badbf2f [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-21::R008 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-3102b37241ac [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R011 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-7803f533d7fc [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/forge/forge_state_writer.js::FILE if it is not part of Forge scope/contracts.
   - reason: action explicitly marked requires_decision; approved by explicit override
@@ -734,6 +756,8 @@
 - ACT-71e754cc88e0 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/orchestrator/autonomous_runner.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
   - reason: action explicitly marked requires_decision; approved by explicit override
 - ACT-5c861bda0383 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-35::R006 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-63462f1ae45b [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R003 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-bccf18830183 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-17::R011 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
@@ -871,6 +895,8 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-1aba96b4c563 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-02::R010 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
+- ACT-4829875dd2de [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R009 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
 - ACT-4df371a95d6e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-10::R002 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-c48b05af336e [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-22::R021 by ensuring both mapped_code_units and mapped_artifacts are present.
@@ -891,6 +917,8 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-37afc190f548 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-RT-10_10::R003 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
+- ACT-580bf50bdd3f [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R008 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
 - ACT-e2806d02619e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R017 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-55df4139db77 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-18::R014 by ensuring both mapped_code_units and mapped_artifacts are present.
@@ -900,6 +928,8 @@
 - ACT-172cd3eb4351 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-19::R013 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-8cc6c0e36139 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-23::R012 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-bedd02e7b673 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R012 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-648ecfb1b322 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-CE-01::R005 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
@@ -940,6 +970,8 @@
 - ACT-ebc9e89958f1 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-01::R015 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-21b5f39449d6 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-32::R001 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-93a82150fb4a [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement pipeline_contract_violation_v1::R002 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-f6a0df91ccce [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement -::R008 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
@@ -1019,6 +1051,8 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-ea3183edb021 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R011 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
+- ACT-089c4cb63994 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement pipeline_contract_violation_v1::R005 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
 - ACT-eaa4cb80e105 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-20::R009 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-eaa4cb80e105 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-20::R009 by ensuring both mapped_code_units and mapped_artifacts are present.
@@ -1036,6 +1070,8 @@
 - ACT-5bee324129dd [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-19::R004 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-5bee324129dd [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-19::R004 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-79d7e848de76 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R010 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-40660f4e1ffe [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-34::R011 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
@@ -1081,6 +1117,8 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-85b943aa1396 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-36::R008 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
+- ACT-740fa0368cf9 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement pipeline_contract_violation_v1::R010 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
 - ACT-702f11a56619 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R012 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-c4884b078a0e [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R017 by adding missing code unit(s) and required artifact(s).
@@ -1125,6 +1163,8 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-fb28a67974a8 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement 05_Artifact_Schema_and_Repository_Layout_Standard::R005 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
+- ACT-05e7d48ad363 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement pipeline_contract_violation_v1::R004 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
 - ACT-0388bf69bfef [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-17::R019 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-25ae6527b6a7 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-23::R013 by ensuring both mapped_code_units and mapped_artifacts are present.
@@ -1159,6 +1199,8 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-2771eac94471 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R014 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
+- ACT-8eaf594adeac [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement pipeline_contract_violation_v1::R009 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
 - ACT-efbfa349ef95 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-20::R002 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-efbfa349ef95 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-20::R002 by ensuring both mapped_code_units and mapped_artifacts are present.
@@ -1179,6 +1221,8 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-13dff37b8fda [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R002 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
+- ACT-43738d42dae2 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement pipeline_contract_violation_v1::R007 by adding missing code unit(s) and required artifact(s).
+  - reason: improve mode bounded non-destructive remediation
 - ACT-431e157f30e4 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-RT-10_10::R005 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-8b132eb9bc14 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement Doc-04::R009 by adding missing code unit(s) and required artifact(s).
@@ -1186,6 +1230,8 @@
 - ACT-c331eb890be4 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-21::R010 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-2fbea18ec0aa [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-22::R020 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-83ff4264a00b [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement pipeline_contract_violation_v1::R003 by adding missing code unit(s) and required artifact(s).
   - reason: improve mode bounded non-destructive remediation
 - ACT-54ab0ca75bd1 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-33::R008 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation

@@ -10,5 +10,5 @@
 - closure_artifact: true
 
 ## Generated Artifacts
-- artifacts/trace/trace_error.md
+- artifacts/trace/trace_matrix.md
 - artifacts/trace/trace_matrix.json

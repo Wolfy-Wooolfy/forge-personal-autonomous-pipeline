@@ -1,19 +1,19 @@
 {
   "backfill_id": "MODULE_FLOW_BACKFILL_v2",
-  "generated_at": "2026-03-30T12:12:26.316Z",
+  "generated_at": "2026-03-31T09:16:13.802Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "source": {
     "decision_gate_path": "artifacts/decisions/module_flow_decision_gate.json",
-    "decision_gate_sha256": "2dcb0811a591bd75dc11e0a57dee7e5c43f441296bffb0700c7dbbfa74e5c971",
+    "decision_gate_sha256": "36205ef9c2e15716a9560e6318f67e827c3289143426d0a0b595c3d39713bddd",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84"
   },
   "summary": {
-    "approved_actions_seen": 593,
-    "deterministic_backfill_actions": 593,
+    "approved_actions_seen": 616,
+    "deterministic_backfill_actions": 616,
     "excluded_non_backfill_actions": 0,
-    "items_emitted": 593
+    "items_emitted": 616
   },
   "items": [
     {
@@ -81,6 +81,23 @@
         "requires_decision": false,
         "target_path": "DOC-16::R017",
         "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-03e0ea1b8489",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R006"
+      ],
+      "action": {
+        "action_id": "ACT-77878cc287d0",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "pipeline_contract_violation_v1::R006",
+        "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
     },
@@ -1105,6 +1122,23 @@
       }
     },
     {
+      "gap_id": "GAP-1f2bfe97b0bb",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R011"
+      ],
+      "action": {
+        "action_id": "ACT-c485303be93c",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "pipeline_contract_violation_v1::R011",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
       "gap_id": "GAP-1f442ad7fb72",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -1275,6 +1309,23 @@
       }
     },
     {
+      "gap_id": "GAP-24dc05d24a07",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R001"
+      ],
+      "action": {
+        "action_id": "ACT-9786eacf3017",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R001",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
       "gap_id": "GAP-24f4a36cb1ab",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -1343,6 +1394,23 @@
       }
     },
     {
+      "gap_id": "GAP-27e7737d4f20",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R013"
+      ],
+      "action": {
+        "action_id": "ACT-b54cd6196eb4",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R013",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
       "gap_id": "GAP-29c594a5a5a1",
       "category": "PARTIAL_COVERAGE",
       "severity": "MEDIUM",
@@ -1355,6 +1423,23 @@
         "impact_scope": "docs/code/artifacts",
         "requires_decision": false,
         "target_path": "07_Decision_Logging_and_Change_Traceability_Specification::R017",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-29f74a38ab37",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R014"
+      ],
+      "action": {
+        "action_id": "ACT-5aa38ecb95e6",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R014",
         "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
@@ -1475,6 +1560,23 @@
         "requires_decision": false,
         "target_path": "DOC-38::R013",
         "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-2c599af21b5f",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R005"
+      ],
+      "action": {
+        "action_id": "ACT-7768f98896c5",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R005",
+        "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
     },
@@ -1649,23 +1751,6 @@
       }
     },
     {
-      "gap_id": "GAP-2f8ff1a6278f",
-      "category": "ORPHAN_ARTIFACT",
-      "severity": "LOW",
-      "affected_entities": [
-        "artifacts/gap/gap_error.md"
-      ],
-      "action": {
-        "action_id": "ACT-a484b959468e",
-        "description": "action explicitly marked requires_decision; approved by explicit override",
-        "impact_scope": "artifacts/trace",
-        "requires_decision": true,
-        "target_path": "artifacts/gap/gap_error.md",
-        "action_type": "GENERATE_DOCUMENT",
-        "deterministic_template_used": true
-      }
-    },
-    {
       "gap_id": "GAP-2fff9b9a931c",
       "category": "PARTIAL_COVERAGE",
       "severity": "MEDIUM",
@@ -1763,6 +1848,23 @@
         "impact_scope": "docs/code/artifacts",
         "requires_decision": false,
         "target_path": "07_Decision_Logging_and_Change_Traceability_Specification::R022",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-3342119798c7",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R002"
+      ],
+      "action": {
+        "action_id": "ACT-f874186bb2c3",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R002",
         "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
@@ -2018,23 +2120,6 @@
         "impact_scope": "docs/code/artifacts",
         "requires_decision": false,
         "target_path": "DOC-10::R003",
-        "action_type": "GENERATE_DOCUMENT",
-        "deterministic_template_used": true
-      }
-    },
-    {
-      "gap_id": "GAP-3ae78b552282",
-      "category": "ORPHAN_ARTIFACT",
-      "severity": "LOW",
-      "affected_entities": [
-        "artifacts/closure/closure_error.md"
-      ],
-      "action": {
-        "action_id": "ACT-34368aff0a72",
-        "description": "action explicitly marked requires_decision; approved by explicit override",
-        "impact_scope": "artifacts/trace",
-        "requires_decision": true,
-        "target_path": "artifacts/closure/closure_error.md",
         "action_type": "GENERATE_DOCUMENT",
         "deterministic_template_used": true
       }
@@ -2448,6 +2533,23 @@
       }
     },
     {
+      "gap_id": "GAP-4836be93fe2b",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R007"
+      ],
+      "action": {
+        "action_id": "ACT-f5a88d0ce6dd",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R007",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
       "gap_id": "GAP-48ab9a6da9ea",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -2647,6 +2749,23 @@
         "impact_scope": "docs/code/artifacts",
         "requires_decision": false,
         "target_path": "06_Progress_Tracking_and_Status_Report_Contract_v1::R009",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-4cb78a317c9b",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R006"
+      ],
+      "action": {
+        "action_id": "ACT-e611b7511964",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R006",
         "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
@@ -3124,6 +3243,23 @@
         "requires_decision": false,
         "target_path": "DOC-36::R004",
         "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-55ab83d18459",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R001"
+      ],
+      "action": {
+        "action_id": "ACT-95f8314eb329",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "pipeline_contract_violation_v1::R001",
+        "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
     },
@@ -4335,6 +4471,23 @@
       }
     },
     {
+      "gap_id": "GAP-7074ce048798",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R008"
+      ],
+      "action": {
+        "action_id": "ACT-d35e72119c3d",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "pipeline_contract_violation_v1::R008",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
       "gap_id": "GAP-7112558a4b8f",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -4811,6 +4964,23 @@
       }
     },
     {
+      "gap_id": "GAP-7d31688dcfa1",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R004"
+      ],
+      "action": {
+        "action_id": "ACT-ac6acf6601f6",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R004",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
       "gap_id": "GAP-7d70261e061e",
       "category": "PARTIAL_COVERAGE",
       "severity": "MEDIUM",
@@ -4977,6 +5147,23 @@
         "requires_decision": false,
         "target_path": "DOC-21::R008",
         "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-809a5d1cd3ae",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R011"
+      ],
+      "action": {
+        "action_id": "ACT-3102b37241ac",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R011",
+        "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
     },
@@ -6099,6 +6286,23 @@
         "requires_decision": false,
         "target_path": "DOC-35::R006",
         "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-9e7213534f9a",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R003"
+      ],
+      "action": {
+        "action_id": "ACT-63462f1ae45b",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R003",
+        "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
     },
@@ -7259,6 +7463,23 @@
       }
     },
     {
+      "gap_id": "GAP-bb886df67738",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R009"
+      ],
+      "action": {
+        "action_id": "ACT-4829875dd2de",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R009",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
       "gap_id": "GAP-bbcd9c069842",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -7429,6 +7650,23 @@
       }
     },
     {
+      "gap_id": "GAP-bdc624003a3d",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R008"
+      ],
+      "action": {
+        "action_id": "ACT-580bf50bdd3f",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R008",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
       "gap_id": "GAP-be76f539124a",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -7510,6 +7748,23 @@
         "requires_decision": false,
         "target_path": "DOC-23::R012",
         "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-c10fce6650d4",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R012"
+      ],
+      "action": {
+        "action_id": "ACT-bedd02e7b673",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R012",
+        "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
     },
@@ -7850,6 +8105,23 @@
         "requires_decision": false,
         "target_path": "DOC-32::R001",
         "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-c71d7fe8e534",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R002"
+      ],
+      "action": {
+        "action_id": "ACT-93a82150fb4a",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "pipeline_contract_violation_v1::R002",
+        "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
     },
@@ -8517,6 +8789,23 @@
       }
     },
     {
+      "gap_id": "GAP-da8a30402049",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R005"
+      ],
+      "action": {
+        "action_id": "ACT-089c4cb63994",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "pipeline_contract_violation_v1::R005",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
       "gap_id": "GAP-daa947bbda70",
       "category": "PARTIAL_COVERAGE",
       "severity": "MEDIUM",
@@ -8666,6 +8955,23 @@
         "requires_decision": false,
         "target_path": "DOC-19::R004",
         "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-dc4f76c0f123",
+      "category": "PARTIAL_COVERAGE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R010"
+      ],
+      "action": {
+        "action_id": "ACT-79d7e848de76",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R010",
+        "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
     },
@@ -9044,6 +9350,23 @@
       }
     },
     {
+      "gap_id": "GAP-e6f6e714e518",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R010"
+      ],
+      "action": {
+        "action_id": "ACT-740fa0368cf9",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "pipeline_contract_violation_v1::R010",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
       "gap_id": "GAP-e735e6c5673c",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -9418,6 +9741,23 @@
       }
     },
     {
+      "gap_id": "GAP-efa92d48f634",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R004"
+      ],
+      "action": {
+        "action_id": "ACT-05e7d48ad363",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "pipeline_contract_violation_v1::R004",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
       "gap_id": "GAP-f00b9d7e4083",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -9707,6 +10047,23 @@
       }
     },
     {
+      "gap_id": "GAP-f6c470648c7d",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R009"
+      ],
+      "action": {
+        "action_id": "ACT-8eaf594adeac",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "pipeline_contract_violation_v1::R009",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
       "gap_id": "GAP-f75be2fb2d15",
       "category": "PARTIAL_COVERAGE",
       "severity": "MEDIUM",
@@ -9877,6 +10234,23 @@
       }
     },
     {
+      "gap_id": "GAP-fad5221615a5",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R007"
+      ],
+      "action": {
+        "action_id": "ACT-43738d42dae2",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "pipeline_contract_violation_v1::R007",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    },
+    {
       "gap_id": "GAP-fafdfff9f869",
       "category": "UNIMPLEMENTED_REQUIREMENT",
       "severity": "HIGH",
@@ -9941,6 +10315,23 @@
         "requires_decision": false,
         "target_path": "DOC-22::R020",
         "action_type": "GENERATE_DOCUMENT",
+        "deterministic_template_used": true
+      }
+    },
+    {
+      "gap_id": "GAP-fbfefb01cfa5",
+      "category": "UNIMPLEMENTED_REQUIREMENT",
+      "severity": "HIGH",
+      "affected_entities": [
+        "pipeline_contract_violation_v1::R003"
+      ],
+      "action": {
+        "action_id": "ACT-83ff4264a00b",
+        "description": "improve mode bounded non-destructive remediation",
+        "impact_scope": "docs/code/artifacts",
+        "requires_decision": false,
+        "target_path": "pipeline_contract_violation_v1::R003",
+        "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
     },

@@ -7,7 +7,7 @@
   "current_task": "TASK-055: MODULE FLOW — Closure",
   "issues": [],
   "blocking_questions": [
-    "Closure BLOCKED: audit verification failed."
+    "Closure BLOCKED: execute plan is inconsistent with backfill plan."
   ],
   "next_step": ""
 }

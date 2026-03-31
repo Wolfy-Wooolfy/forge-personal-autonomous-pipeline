@@ -1,21 +1,21 @@
 # MODULE FLOW — Backfill Execution Log
 
-- generated_at: 2026-03-30T12:12:26.316Z
+- generated_at: 2026-03-31T09:16:13.802Z
 - operating_mode: IMPROVE
 - repository_state: MIXED
 - blocked: false
 
 ## Source
 - decision_gate_path: artifacts/decisions/module_flow_decision_gate.json
-- decision_gate_sha256: 2dcb0811a591bd75dc11e0a57dee7e5c43f441296bffb0700c7dbbfa74e5c971
+- decision_gate_sha256: 36205ef9c2e15716a9560e6318f67e827c3289143426d0a0b595c3d39713bddd
 - intake_context_path: artifacts/intake/intake_context.json
 - intake_context_sha256: eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84
 
 ## Summary
-- approved_actions_seen: 593
-- deterministic_backfill_actions: 593
+- approved_actions_seen: 616
+- deterministic_backfill_actions: 616
 - excluded_non_backfill_actions: 0
-- items_emitted: 593
+- items_emitted: 616
 
 ## Approved Backfill Actions
 - ACT-9e6a1a61cf61 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -33,6 +33,10 @@
 - ACT-8c5985c18c0e [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-16::R017
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-77878cc287d0 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
+  - target_path: pipeline_contract_violation_v1::R006
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-2c89f742fa8a [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: -::R006
@@ -274,6 +278,10 @@
   - target_path: code/src/forge/forge_state_resolver.js
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-c485303be93c [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
+  - target_path: pipeline_contract_violation_v1::R011
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-f65c792da1ed [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-01::R013
   - action_type: GENERATE_DOCUMENT
@@ -314,6 +322,10 @@
   - target_path: DOC-23::R006
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-9786eacf3017 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R001
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-1ffd3f97bab6 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: -::R007
   - action_type: BACKFILL_RECONCILIATION
@@ -330,8 +342,16 @@
   - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R014
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-b54cd6196eb4 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R013
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-fcfba59e0b41 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R017
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-5aa38ecb95e6 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R014
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-59ef5f692c83 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
@@ -361,6 +381,10 @@
 - ACT-4808f0099d9d [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-38::R013
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-7768f98896c5 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R005
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-6bb41f7eeb97 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-20::R003
@@ -402,10 +426,6 @@
   - target_path: DOC-16::R005
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
-- ACT-a484b959468e [ORPHAN_ARTIFACT/LOW] action explicitly marked requires_decision; approved by explicit override
-  - target_path: artifacts/gap/gap_error.md
-  - action_type: GENERATE_DOCUMENT
-  - deterministic_template_used: true
 - ACT-063cedcf8073 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R006
   - action_type: BACKFILL_RECONCILIATION
@@ -428,6 +448,10 @@
   - deterministic_template_used: true
 - ACT-3efbf0bcd3ff [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R022
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-f874186bb2c3 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R002
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-902018cd08ef [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
@@ -488,10 +512,6 @@
   - deterministic_template_used: true
 - ACT-3531a8dab1c9 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-10::R003
-  - action_type: GENERATE_DOCUMENT
-  - deterministic_template_used: true
-- ACT-34368aff0a72 [ORPHAN_ARTIFACT/LOW] action explicitly marked requires_decision; approved by explicit override
-  - target_path: artifacts/closure/closure_error.md
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
 - ACT-a5c8a7b0b00a [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -590,6 +610,10 @@
   - target_path: DOC-01::R009
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-f5a88d0ce6dd [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R007
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-f8ef8659fdd8 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R017
   - action_type: BACKFILL_RECONCILIATION
@@ -636,6 +660,10 @@
   - deterministic_template_used: true
 - ACT-46166ea78dc7 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 06_Progress_Tracking_and_Status_Report_Contract_v1::R009
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
+- ACT-e611b7511964 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R006
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-453a7da7bb1b [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
@@ -749,6 +777,10 @@
 - ACT-1d7bfb06e947 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-36::R004
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-95f8314eb329 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
+  - target_path: pipeline_contract_violation_v1::R001
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-fc3505420f20 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: 07_Decision_Logging_and_Change_Traceability_Specification::R025
@@ -1034,6 +1066,10 @@
   - target_path: DOC-23::R002
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-d35e72119c3d [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
+  - target_path: pipeline_contract_violation_v1::R008
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-7c63a594ca54 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-16::R024
   - action_type: GENERATE_DOCUMENT
@@ -1146,6 +1182,10 @@
   - target_path: DOC-21::R014
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-ac6acf6601f6 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R004
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-c66c8146c9df [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-12::R002
   - action_type: GENERATE_DOCUMENT
@@ -1185,6 +1225,10 @@
 - ACT-0a339badbf2f [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-21::R008
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-3102b37241ac [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R011
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-7803f533d7fc [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
   - target_path: code/src/forge/forge_state_writer.js
@@ -1449,6 +1493,10 @@
 - ACT-5c861bda0383 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-35::R006
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-63462f1ae45b [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R003
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-bccf18830183 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-17::R011
@@ -1722,6 +1770,10 @@
   - target_path: DOC-02::R010
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-4829875dd2de [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R009
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-4df371a95d6e [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-10::R002
   - action_type: GENERATE_DOCUMENT
@@ -1762,6 +1814,10 @@
   - target_path: DOC-RT-10_10::R003
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-580bf50bdd3f [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R008
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-e2806d02619e [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: Doc-04::R017
   - action_type: GENERATE_DOCUMENT
@@ -1781,6 +1837,10 @@
 - ACT-8cc6c0e36139 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-23::R012
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-bedd02e7b673 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R012
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-648ecfb1b322 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-CE-01::R005
@@ -1861,6 +1921,10 @@
 - ACT-21b5f39449d6 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-32::R001
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-93a82150fb4a [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
+  - target_path: pipeline_contract_violation_v1::R002
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-f6a0df91ccce [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: -::R008
@@ -2018,6 +2082,10 @@
   - target_path: Doc-04::R011
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-089c4cb63994 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
+  - target_path: pipeline_contract_violation_v1::R005
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-eaa4cb80e105 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-20::R009
   - action_type: GENERATE_DOCUMENT
@@ -2053,6 +2121,10 @@
 - ACT-5bee324129dd [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-19::R004
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-79d7e848de76 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
+  - target_path: DECISION_PIPELINE_CONTRACT_ENFORCEMENT_v1::R010
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-40660f4e1ffe [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-34::R011
@@ -2142,6 +2214,10 @@
   - target_path: DOC-36::R008
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-740fa0368cf9 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
+  - target_path: pipeline_contract_violation_v1::R010
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-702f11a56619 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R012
   - action_type: BACKFILL_RECONCILIATION
@@ -2230,6 +2306,10 @@
   - target_path: 05_Artifact_Schema_and_Repository_Layout_Standard::R005
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
+- ACT-05e7d48ad363 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
+  - target_path: pipeline_contract_violation_v1::R004
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-0388bf69bfef [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-17::R019
   - action_type: GENERATE_DOCUMENT
@@ -2298,6 +2378,10 @@
   - target_path: Doc-04::R014
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-8eaf594adeac [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
+  - target_path: pipeline_contract_violation_v1::R009
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-efbfa349ef95 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-20::R002
   - action_type: GENERATE_DOCUMENT
@@ -2338,6 +2422,10 @@
   - target_path: Doc-04::R002
   - action_type: GENERATE_DOCUMENT
   - deterministic_template_used: true
+- ACT-43738d42dae2 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
+  - target_path: pipeline_contract_violation_v1::R007
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 - ACT-431e157f30e4 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
   - target_path: DOC-RT-10_10::R005
   - action_type: GENERATE_DOCUMENT
@@ -2353,6 +2441,10 @@
 - ACT-2fbea18ec0aa [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-22::R020
   - action_type: GENERATE_DOCUMENT
+  - deterministic_template_used: true
+- ACT-83ff4264a00b [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
+  - target_path: pipeline_contract_violation_v1::R003
+  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-54ab0ca75bd1 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-33::R008

@@ -10,6 +10,8 @@ const STATUS_PATH = path.resolve(__dirname, "../../..", "progress", "status.json
 
 const TASKS_DIR = path.resolve(__dirname, "../../..", "artifacts", "tasks");
 
+const AUDIT_FINDINGS_PATH = path.resolve(__dirname, "../../..", "artifacts", "audit", "audit_findings.json");
+
 function hasExecutionClosureForTask(taskName) {
   if (typeof taskName !== "string" || !taskName.trim().startsWith("TASK-")) {
     return false;
@@ -22,6 +24,15 @@ function hasExecutionClosureForTask(taskName) {
 
 function loadStatus() {
   const raw = fs.readFileSync(STATUS_PATH, { encoding: "utf8" });
+  return JSON.parse(raw);
+}
+
+function loadAuditFindings() {
+  if (!fs.existsSync(AUDIT_FINDINGS_PATH)) {
+    return null;
+  }
+
+  const raw = fs.readFileSync(AUDIT_FINDINGS_PATH, { encoding: "utf8" });
   return JSON.parse(raw);
 }
 
@@ -103,6 +114,19 @@ function run() {
   if (!entry.next_task) {
     console.log("[FORGE] No task resolved from entry.");
     return;
+  }
+
+  const auditFindings = loadAuditFindings();
+  const isAuditModule = entry.next_module === "AUDIT";
+  const isIntakeModule = entry.next_module === "INTAKE";
+
+  if (
+    auditFindings &&
+    auditFindings.blocked === true &&
+    !isAuditModule &&
+    !isIntakeModule
+  ) {
+    throw new Error(`[AUDIT BLOCKED] ${entry.next_module} blocked because artifacts/audit/audit_findings.json reports blocked=true`);
   }
 
   if (typeof status.current_task !== "string") {

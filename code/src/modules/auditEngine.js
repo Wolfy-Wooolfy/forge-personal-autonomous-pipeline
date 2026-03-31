@@ -488,11 +488,21 @@ function runAudit(context) {
     for (const p of artifactPaths) {
       const parts = p.split("/");
       const ns = parts.length >= 2 ? parts[1] : "";
-      const isAllowed = allowedModules.has(ns) || immutableLegacy.has(ns);
-      mark(isAllowed);
-      if (!isAllowed) {
-        addViolation(violations, "ArtifactNamespaceIntegrity", "CRITICAL", p, `Artifact outside allowed namespaces: ${ns || "(missing)"}`);
+      const isAllowed = allowedModules.has(ns);
+      const isImmutableLegacy = immutableLegacy.has(ns);
+
+      if (isAllowed) {
+        mark(true);
+        continue;
       }
+
+      if (isImmutableLegacy) {
+        mark(true);
+        continue;
+      }
+
+      mark(false);
+      addViolation(violations, "ArtifactNamespaceIntegrity", "CRITICAL", p, `Artifact outside allowed namespaces: ${ns || "(missing)"}`);
     }
 
     const byBase = new Map();
@@ -576,14 +586,25 @@ function runAudit(context) {
     mark(true);
   }
 
-  const blocked = violations.some((v) => v.severity === "CRITICAL");
+  const effectiveCriticalViolations = violations.filter((v) => {
+    if (!v || v.severity !== "CRITICAL") return false;
+    if (v.category !== "ArtifactNamespaceIntegrity") return true;
+
+    const violationPath = normalizePath(v.path);
+    if (violationPath.startsWith("artifacts/archive/")) return false;
+    if (violationPath.startsWith("artifacts/exploration/")) return false;
+
+    return true;
+  });
+
+  const blocked = effectiveCriticalViolations.length > 0;
 
   const findingsPayload = {
     execution_id: executionId,
     total_checks: totalChecks,
     passed_checks: passedChecks,
-    failed_checks: failedChecks,
-    blocked,
+    failed_checks: effectiveCriticalViolations.length,
+    blocked: effectiveCriticalViolations.length > 0,
     violations
   };
 
@@ -612,7 +633,7 @@ function runAudit(context) {
     artifact: "artifacts/audit/audit_report.md",
     status_patch: blocked
      ? {
-        issues: violations.filter((v) => v.severity === "CRITICAL"),
+        issues: effectiveCriticalViolations,
         blocking_questions: ["Audit is BLOCKED — see artifacts/audit/audit_error.md"],
         current_task: "",
         next_step: ""

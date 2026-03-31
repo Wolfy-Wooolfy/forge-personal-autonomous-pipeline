@@ -1,7 +1,7 @@
 {
   "code/src/orchestrator/stage_transitions.js": "c677d6f55cb6cd70c5812ce90b18227094f0ad13328f66ec7c3b33aad8ee74d1",
   "code/src/orchestrator/status_writer.js": "5cdf433025879abf5dd629b1132a5911f8de8ef73cd96cc2fcabd5f24b7bfe6c",
-  "code/src/orchestrator/runner.js": "35ad017f8d387136074886d2f010f00afd19d961f262091fc6a081dd64db5d03",
+  "code/src/orchestrator/runner.js": "2058c1e1db037a7d4efb905cf38559f18d5e212ffab2aee45b5f2945017389f1",
   "bin/halo-run.js": "569f26e60ca4fde96ee32fea94224699b644f4a700882d37eec733d83bd750b2",
   "verify/smoke/stage_transitions_smoke.js": "8bff6aeb74d9665679d0fb6562c06aa1dd81c80d6eb7b4e31d729f8ab2c4dda4",
   "verify/smoke/status_writer_smoke.js": "294dfd5c87cb2c7687bf52c9867d4d37e8e5280ee1fb9e25c11b87ab577256c1",
