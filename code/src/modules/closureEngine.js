@@ -71,7 +71,8 @@ function computeRepositorySnapshot() {
     "artifacts/closure/closure_report.md",
     "artifacts/closure/closure_error.md",
     "artifacts/release/RELEASE_MANIFEST_v1.json",
-    "artifacts/release/repository_hash_snapshot.json"
+    "artifacts/release/repository_hash_snapshot.json",
+    "artifacts/tasks/TASK-055.execution.closure.md"
   ]);
 
   const relFiles = [];
@@ -215,6 +216,7 @@ function renderClosureReport(payload) {
   lines.push(`- intake_snapshot_locked: ${payload.deterministic_validation.intake_snapshot_locked ? "true" : "false"}`);
   lines.push(`- artifact_namespaces_valid: ${payload.deterministic_validation.artifact_namespaces_valid ? "true" : "false"}`);
   lines.push(`- decision_artifact_valid: ${payload.deterministic_validation.decision_artifact_valid ? "true" : "false"}`);
+  lines.push(`- verify_contract_ready: ${payload.deterministic_validation.verify_contract_ready ? "true" : "false"}`);
   lines.push(`- deterministic_confirmation: ${payload.deterministic_validation.deterministic_confirmation ? "true" : "false"}`);
   lines.push(`- snapshot_hash: ${payload.deterministic_validation.snapshot_hash}`);
   lines.push("");
@@ -236,6 +238,8 @@ function runClosure(context) {
   const decisionRel = "artifacts/decisions/module_flow_decision_gate.json";
   const backfillRel = "artifacts/backfill/backfill_plan.json";
   const executeRel = "artifacts/execute/execute_plan.json";
+  const executeDiffRel = "artifacts/execute/execute_diff.md";
+  const executeLogRel = "artifacts/execute/execute_log.md";
   const verifyResultsRel = "artifacts/verify/verification_results.json";
   const verifyReportRel = "artifacts/verify/verification_report.md";
   const closureReportRel = "artifacts/closure/closure_report.md";
@@ -251,6 +255,8 @@ function runClosure(context) {
   const decisionAbs = path.resolve(ROOT, decisionRel);
   const backfillAbs = path.resolve(ROOT, backfillRel);
   const executeAbs = path.resolve(ROOT, executeRel);
+  const executeDiffAbs = path.resolve(ROOT, executeDiffRel);
+  const executeLogAbs = path.resolve(ROOT, executeLogRel);
   const verifyResultsAbs = path.resolve(ROOT, verifyResultsRel);
   const verifyReportAbs = path.resolve(ROOT, verifyReportRel);
 
@@ -314,6 +320,22 @@ function runClosure(context) {
     return buildBlockingResult(
       "Closure BLOCKED: required artifact missing (artifacts/execute/execute_plan.json).",
       ["Missing execute plan artifact."],
+      closureErrorRel
+    );
+  }
+
+  if (!fileExists(executeDiffAbs)) {
+    return buildBlockingResult(
+      "Closure BLOCKED: required artifact missing (artifacts/execute/execute_diff.md).",
+      ["Missing execute diff artifact."],
+      closureErrorRel
+    );
+  }
+
+  if (!fileExists(executeLogAbs)) {
+    return buildBlockingResult(
+      "Closure BLOCKED: required artifact missing (artifacts/execute/execute_log.md).",
+      ["Missing execute log artifact."],
       closureErrorRel
     );
   }
@@ -395,6 +417,14 @@ function runClosure(context) {
 
   const gapMetrics = computeGapMetrics(gapJson);
 
+  if (gapMetrics.total_gaps !== 0) {
+    return buildBlockingResult(
+      "Closure BLOCKED: unresolved gaps remain.",
+      [`gap_count=${gapMetrics.total_gaps}`],
+      closureErrorRel
+    );
+  }
+
   if (gapMetrics.critical_violations > 0) {
     return buildBlockingResult(
       "Closure BLOCKED: unresolved critical violations remain.",
@@ -403,22 +433,24 @@ function runClosure(context) {
     );
   }
 
-  const acceptableForFinalClosure =
-    gapMetrics.critical_violations === 0;
-
-  if (!acceptableForFinalClosure) {
+  if (gapMetrics.orphan_code_units > 0 || gapMetrics.orphan_requirements > 0 || gapMetrics.orphan_artifacts > 0) {
     return buildBlockingResult(
-      "Closure BLOCKED: gap state is not acceptable for final closure.",
+      "Closure BLOCKED: orphan entities remain.",
       [
-        `critical_violations=${gapMetrics.critical_violations}`,
         `orphan_code_units=${gapMetrics.orphan_code_units}`,
         `orphan_requirements=${gapMetrics.orphan_requirements}`,
-        `orphan_artifacts=${gapMetrics.orphan_artifacts}`,
-        `gap_count=${gapMetrics.total_gaps}`
+        `orphan_artifacts=${gapMetrics.orphan_artifacts}`
       ],
       closureErrorRel
     );
   }
+
+  const acceptableForFinalClosure =
+    gapMetrics.total_gaps === 0 &&
+    gapMetrics.critical_violations === 0 &&
+    gapMetrics.orphan_code_units === 0 &&
+    gapMetrics.orphan_requirements === 0 &&
+    gapMetrics.orphan_artifacts === 0;
 
   const decisionHasReview =
     Array.isArray(decisionJson.review_required_actions) && decisionJson.review_required_actions.length > 0;
@@ -470,16 +502,23 @@ function runClosure(context) {
     )
   ).toUpperCase();
 
+  const verifyContractReady =
+    verifyResultsJson &&
+    verifyResultsJson.closure_gate &&
+    verifyResultsJson.closure_gate.closure_contract_ready === true;
+
   const verifyPassed =
     verifyBlocked !== true &&
-    (verifyOutcome === "PASS" || verifyOutcome === "PASSED" || verifyOutcome === "OK");
+    (verifyOutcome === "PASS" || verifyOutcome === "PASSED" || verifyOutcome === "OK") &&
+    verifyContractReady === true;
 
   if (!verifyPassed) {
     return buildBlockingResult(
-      "Closure BLOCKED: verification layer did not pass.",
+      "Closure BLOCKED: verification layer did not pass closure contract.",
       [
         `verify_blocked=${verifyBlocked === true ? "true" : "false"}`,
-        `verify_outcome=${verifyOutcome || "(empty)"}`
+        `verify_outcome=${verifyOutcome || "(empty)"}`,
+        `verify_contract_ready=${verifyContractReady === true ? "true" : "false"}`
       ],
       closureErrorRel
     );
@@ -570,6 +609,7 @@ function runClosure(context) {
       intake_snapshot_locked: true,
       artifact_namespaces_valid: true,
       decision_artifact_valid: true,
+      verify_contract_ready: true,
       deterministic_confirmation: true,
       snapshot_hash: snapshot.repository_hash
     },

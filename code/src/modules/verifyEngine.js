@@ -9,7 +9,7 @@ function ensureDir(absDir) {
 
 function fileExists(rel) {
   const abs = path.resolve(ROOT, rel);
-  return fs.existsSync(abs);
+  return fs.existsSync(abs) && fs.statSync(abs).isFile();
 }
 
 function readJson(rel) {
@@ -18,16 +18,79 @@ function readJson(rel) {
   return JSON.parse(raw);
 }
 
+function getGapMetrics(gapJson) {
+  const gaps = Array.isArray(gapJson && gapJson.gaps) ? gapJson.gaps : [];
+
+  const totalGaps =
+    typeof (gapJson && gapJson.total_gaps) === "number"
+      ? gapJson.total_gaps
+      : gaps.length;
+
+  const criticalViolations =
+    typeof (gapJson && gapJson.critical_count) === "number"
+      ? gapJson.critical_count
+      : gaps.filter((gap) => String(gap && gap.severity ? gap.severity : "").toUpperCase() === "CRITICAL").length;
+
+  let orphanCodeUnits = 0;
+  let orphanRequirements = 0;
+  let orphanArtifacts = 0;
+
+  for (const gap of gaps) {
+    const category = String(gap && gap.category ? gap.category : "").toUpperCase();
+
+    if (category === "ORPHAN_CODE" || category === "ORPHAN_CODE_UNITS") {
+      orphanCodeUnits += 1;
+    } else if (category === "ORPHAN_REQUIREMENT" || category === "ORPHAN_REQUIREMENTS") {
+      orphanRequirements += 1;
+    } else if (category === "ORPHAN_ARTIFACT" || category === "ORPHAN_ARTIFACTS") {
+      orphanArtifacts += 1;
+    }
+  }
+
+  return {
+    total_gaps: totalGaps,
+    critical_violations: criticalViolations,
+    orphan_code_units: orphanCodeUnits,
+    orphan_requirements: orphanRequirements,
+    orphan_artifacts: orphanArtifacts
+  };
+}
+
 function runVerify(context) {
-
-  const executePlan = "artifacts/execute/execute_plan.json";
-  const backfillPlan = "artifacts/backfill/backfill_plan.json";
-
   const verifyDir = path.resolve(ROOT, "artifacts/verify");
   ensureDir(verifyDir);
 
-  const reportPath = path.resolve(verifyDir, "verification_report.md");
-  const jsonPath = path.resolve(verifyDir, "verification_results.json");
+  const reportRel = "artifacts/verify/verification_report.md";
+  const jsonRel = "artifacts/verify/verification_results.json";
+  const reportPath = path.resolve(ROOT, reportRel);
+  const jsonPath = path.resolve(ROOT, jsonRel);
+
+  const requiredJsonArtifacts = [
+    "artifacts/intake/intake_snapshot.json",
+    "artifacts/audit/audit_findings.json",
+    "artifacts/trace/trace_matrix.json",
+    "artifacts/gap/gap_actions.json",
+    "artifacts/backfill/backfill_plan.json",
+    "artifacts/execute/execute_plan.json"
+  ];
+
+  const requiredMdArtifacts = [
+    "artifacts/execute/execute_diff.md",
+    "artifacts/execute/execute_log.md"
+  ];
+
+  const decisionArtifactOptions = [
+    "artifacts/decisions/decision_packet.json",
+    "artifacts/decisions/decision_auto_pass.md",
+    "artifacts/decisions/module_flow_decision_gate.json"
+  ];
+
+  const executePlanRel = "artifacts/execute/execute_plan.json";
+  const backfillPlanRel = "artifacts/backfill/backfill_plan.json";
+  const gapRel = "artifacts/gap/gap_actions.json";
+  const auditRel = "artifacts/audit/audit_findings.json";
+  const traceRel = "artifacts/trace/trace_matrix.json";
+  const intakeSnapshotRel = "artifacts/intake/intake_snapshot.json";
 
   const results = {
     generated_at: new Date().toISOString(),
@@ -35,6 +98,21 @@ function runVerify(context) {
     status: "",
     outcome: "",
     final_outcome: "",
+    summary: {
+      total_checks: 0,
+      failed_checks: 0
+    },
+    closure_gate: {
+      gap_count: null,
+      critical_violations: null,
+      orphan_code_units: null,
+      orphan_requirements: null,
+      orphan_artifacts: null,
+      deterministic_confirmation_ready: false,
+      execute_artifacts_complete: false,
+      decision_artifact_present: false,
+      closure_contract_ready: false
+    },
     checks: []
   };
 
@@ -46,61 +124,195 @@ function runVerify(context) {
     });
   }
 
-  if (!fileExists(executePlan)) {
-    addCheck("execute_plan_exists", false, executePlan + " missing");
-  } else {
+  for (const rel of requiredJsonArtifacts) {
+    if (!fileExists(rel)) {
+      addCheck(rel.replace(/[/.]/g, "_") + "_exists", false, rel + " missing");
+      continue;
+    }
+
     try {
-      readJson(executePlan);
-      addCheck("execute_plan_valid_json", true, "");
+      readJson(rel);
+      addCheck(rel.replace(/[/.]/g, "_") + "_valid_json", true, rel);
     } catch (e) {
-      addCheck("execute_plan_valid_json", false, "invalid JSON");
+      addCheck(rel.replace(/[/.]/g, "_") + "_valid_json", false, rel + " invalid JSON");
     }
   }
 
-  if (!fileExists(backfillPlan)) {
-    addCheck("backfill_plan_exists", false, backfillPlan + " missing");
-  } else {
-    try {
-      readJson(backfillPlan);
-      addCheck("backfill_plan_valid_json", true, "");
-    } catch (e) {
-      addCheck("backfill_plan_valid_json", false, "invalid JSON");
-    }
+  for (const rel of requiredMdArtifacts) {
+    addCheck(rel.replace(/[/.]/g, "_") + "_exists", fileExists(rel), fileExists(rel) ? rel : rel + " missing");
   }
 
-  const failed = results.checks.filter(c => !c.passed);
+  const decisionArtifactPresent = decisionArtifactOptions.some((rel) => fileExists(rel));
+  addCheck(
+    "decision_artifact_present",
+    decisionArtifactPresent,
+    decisionArtifactPresent
+      ? decisionArtifactOptions.filter((rel) => fileExists(rel)).join(", ")
+      : "No decision artifact found"
+  );
+
+  let executePlan = null;
+  let backfillPlan = null;
+  let gapJson = null;
+  let auditJson = null;
+  let traceJson = null;
+  let intakeSnapshot = null;
+
+  try {
+    if (fileExists(executePlanRel)) {
+      executePlan = readJson(executePlanRel);
+    }
+  } catch (e) {}
+
+  try {
+    if (fileExists(backfillPlanRel)) {
+      backfillPlan = readJson(backfillPlanRel);
+    }
+  } catch (e) {}
+
+  try {
+    if (fileExists(gapRel)) {
+      gapJson = readJson(gapRel);
+    }
+  } catch (e) {}
+
+  try {
+    if (fileExists(auditRel)) {
+      auditJson = readJson(auditRel);
+    }
+  } catch (e) {}
+
+  try {
+    if (fileExists(traceRel)) {
+      traceJson = readJson(traceRel);
+    }
+  } catch (e) {}
+
+  try {
+    if (fileExists(intakeSnapshotRel)) {
+      intakeSnapshot = readJson(intakeSnapshotRel);
+    }
+  } catch (e) {}
+
+  const backfillActions = Array.isArray(backfillPlan && backfillPlan.approved_code_actions)
+    ? backfillPlan.approved_code_actions
+    : [];
+
+  const executeActions = Array.isArray(executePlan && executePlan.approved_code_actions)
+    ? executePlan.approved_code_actions
+    : Array.isArray(executePlan && executePlan.actions)
+      ? executePlan.actions
+      : executePlan && executePlan.plan && Array.isArray(executePlan.plan.actions)
+        ? executePlan.plan.actions
+        : [];
+
+  addCheck(
+    "execute_plan_matches_backfill_plan",
+    backfillPlan !== null && executePlan !== null && backfillActions.length === executeActions.length,
+    `backfill_actions=${backfillActions.length}; execute_actions=${executeActions.length}`
+  );
+
+  const gapMetrics = gapJson ? getGapMetrics(gapJson) : null;
+
+  if (gapMetrics) {
+    results.closure_gate.gap_count = gapMetrics.total_gaps;
+    results.closure_gate.critical_violations = gapMetrics.critical_violations;
+    results.closure_gate.orphan_code_units = gapMetrics.orphan_code_units;
+    results.closure_gate.orphan_requirements = gapMetrics.orphan_requirements;
+    results.closure_gate.orphan_artifacts = gapMetrics.orphan_artifacts;
+
+    addCheck("gap_count_zero", gapMetrics.total_gaps === 0, `gap_count=${gapMetrics.total_gaps}`);
+    addCheck("critical_violations_zero", gapMetrics.critical_violations === 0, `critical_violations=${gapMetrics.critical_violations}`);
+    addCheck("orphan_code_units_zero", gapMetrics.orphan_code_units === 0, `orphan_code_units=${gapMetrics.orphan_code_units}`);
+    addCheck("orphan_requirements_zero", gapMetrics.orphan_requirements === 0, `orphan_requirements=${gapMetrics.orphan_requirements}`);
+    addCheck("orphan_artifacts_zero", gapMetrics.orphan_artifacts === 0, `orphan_artifacts=${gapMetrics.orphan_artifacts}`);
+  }
+
+  addCheck(
+    "audit_not_blocked",
+    auditJson !== null && auditJson.blocked !== true,
+    auditJson !== null ? `audit_blocked=${auditJson.blocked === true ? "true" : "false"}` : "audit findings unavailable"
+  );
+
+  addCheck(
+    "trace_mappings_present",
+    traceJson !== null && Array.isArray(traceJson.mappings),
+    traceJson !== null ? `mappings=${Array.isArray(traceJson.mappings) ? traceJson.mappings.length : 0}` : "trace matrix unavailable"
+  );
+
+  addCheck(
+    "intake_snapshot_locked",
+    intakeSnapshot !== null && intakeSnapshot.locked_snapshot_flag === true,
+    intakeSnapshot !== null ? `locked_snapshot_flag=${intakeSnapshot.locked_snapshot_flag === true ? "true" : "false"}` : "intake snapshot unavailable"
+  );
+
+  results.closure_gate.execute_artifacts_complete =
+    fileExists("artifacts/execute/execute_plan.json") &&
+    fileExists("artifacts/execute/execute_diff.md") &&
+    fileExists("artifacts/execute/execute_log.md");
+
+  results.closure_gate.decision_artifact_present = decisionArtifactPresent;
+
+  results.closure_gate.deterministic_confirmation_ready =
+    intakeSnapshot !== null &&
+    intakeSnapshot.locked_snapshot_flag === true;
+
+  results.closure_gate.closure_contract_ready =
+    results.closure_gate.execute_artifacts_complete === true &&
+    results.closure_gate.decision_artifact_present === true &&
+    results.closure_gate.deterministic_confirmation_ready === true &&
+    results.closure_gate.gap_count === 0 &&
+    results.closure_gate.critical_violations === 0 &&
+    results.closure_gate.orphan_code_units === 0 &&
+    results.closure_gate.orphan_requirements === 0 &&
+    results.closure_gate.orphan_artifacts === 0;
+
+  results.summary.total_checks = results.checks.length;
+  results.summary.failed_checks = results.checks.filter((c) => !c.passed).length;
 
   const md = [];
-
   md.push("# Verification Report");
   md.push("");
   md.push(`generated_at: ${results.generated_at}`);
+  md.push(`status: ${results.summary.failed_checks === 0 ? "PASS" : "FAIL"}`);
   md.push("");
-
+  md.push("## Closure Gate Readiness");
+  md.push(`- gap_count: ${results.closure_gate.gap_count}`);
+  md.push(`- critical_violations: ${results.closure_gate.critical_violations}`);
+  md.push(`- orphan_code_units: ${results.closure_gate.orphan_code_units}`);
+  md.push(`- orphan_requirements: ${results.closure_gate.orphan_requirements}`);
+  md.push(`- orphan_artifacts: ${results.closure_gate.orphan_artifacts}`);
+  md.push(`- execute_artifacts_complete: ${results.closure_gate.execute_artifacts_complete ? "true" : "false"}`);
+  md.push(`- decision_artifact_present: ${results.closure_gate.decision_artifact_present ? "true" : "false"}`);
+  md.push(`- deterministic_confirmation_ready: ${results.closure_gate.deterministic_confirmation_ready ? "true" : "false"}`);
+  md.push(`- closure_contract_ready: ${results.closure_gate.closure_contract_ready ? "true" : "false"}`);
+  md.push("");
   md.push("## Checks");
 
   for (const c of results.checks) {
     md.push(`- ${c.name}: ${c.passed ? "PASS" : "FAIL"} ${c.detail}`);
   }
 
-  if (failed.length > 0) {
+  const failed = results.summary.failed_checks > 0;
+
+  if (failed) {
     results.blocked = true;
     results.status = "FAIL";
     results.outcome = "FAIL";
     results.final_outcome = "FAIL";
 
-    fs.writeFileSync(reportPath, md.join("\n"));
-    fs.writeFileSync(jsonPath, JSON.stringify(results, null, 2));
+    fs.writeFileSync(reportPath, md.join("\n"), { encoding: "utf8" });
+    fs.writeFileSync(jsonPath, JSON.stringify(results, null, 2), { encoding: "utf8" });
 
     return {
       blocked: true,
-      artifact: "artifacts/verify/verification_report.md",
+      artifact: reportRel,
       outputs: {
-        md: "artifacts/verify/verification_report.md",
-        json: "artifacts/verify/verification_results.json"
+        md: reportRel,
+        json: jsonRel
       },
       status_patch: {
-        blocking_questions: ["Verification failed — review verification_report.md"],
+        blocking_questions: ["Verification failed — review artifacts/verify/verification_report.md"],
         next_step: ""
       }
     };
@@ -111,22 +323,21 @@ function runVerify(context) {
   results.outcome = "PASS";
   results.final_outcome = "PASS";
 
-  fs.writeFileSync(reportPath, md.join("\n"));
-  fs.writeFileSync(jsonPath, JSON.stringify(results, null, 2));
+  fs.writeFileSync(reportPath, md.join("\n"), { encoding: "utf8" });
+  fs.writeFileSync(jsonPath, JSON.stringify(results, null, 2), { encoding: "utf8" });
 
   return {
     stage_progress_percent: 100,
-    artifact: "artifacts/verify/verification_report.md",
+    artifact: reportRel,
     outputs: {
-      md: "artifacts/verify/verification_report.md",
-      json: "artifacts/verify/verification_results.json"
+      md: reportRel,
+      json: jsonRel
     },
     status_patch: {
       blocking_questions: [],
-      next_step: "MODULE_FLOW — Verify COMPLETE. Next=Closure"
+      next_step: "MODULE FLOW — Verify COMPLETE. Next=Closure"
     }
   };
-
 }
 
 module.exports = {
