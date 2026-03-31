@@ -1,19 +1,23 @@
 # Orchestration Run Report
 
-- Run ID: RUN-21366B8AAC5A
-- Run Mode: COMPLETE
-- Started At: 2026-03-31T11:57:05.407Z
-- Last Updated At: 2026-03-31T11:57:05.412Z
-- Status: COMPLETE
-- Entry Type: COMPLETE
-- Blocked: NO
-- Blocking Reason: N/A
-- Reason: Pipeline already complete
-- Current Module: N/A
-- Next Task: N/A
-- Final Outcome: COMPLETE
+- Run ID: RUN-EBB1F9D7D9A4
+- Run Mode: RESUME
+- Started At: 2026-03-31T14:16:18.551Z
+- Last Updated At: 2026-03-31T14:16:18.633Z
+- Status: BLOCKED
+- Entry Type: RESUME
+- Blocked: YES
+- Blocking Reason: Verification failed — review artifacts/verify/verification_report.md
+- Reason: Resume from next incomplete module
+- Current Module: VERIFY
+- Next Task: TASK-061: MODULE FLOW — Verify
+- Final Outcome: BLOCKED
 
 ## Completed Modules
+
+- None
+
+## Pending Modules
 
 - INTAKE
 - AUDIT
@@ -26,10 +30,6 @@
 - VERIFY
 - CLOSURE
 
-## Pending Modules
-
-- None
-
 ## Execution Log
 
-- No module execution performed
+- 2026-03-31T14:16:18.632Z | VERIFY | TASK-061: MODULE FLOW — Verify | BLOCKED

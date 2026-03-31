@@ -120,6 +120,9 @@ function runExecute(context) {
   const executePlanPath = path.resolve(executeDir, "execute_plan.json");
   const executeReportPath = path.resolve(executeDir, "execute_report.md");
 
+  const executeDiffPath = path.resolve(executeDir, "execute_diff.md");
+  const executeLogPath = path.resolve(executeDir, "execute_log.md");
+
   const planPayload = {
     execution_id: "MODULE_FLOW_EXECUTE_v1",
     generated_at: new Date().toISOString(),
@@ -146,6 +149,28 @@ function runExecute(context) {
 
   fs.writeFileSync(executePlanPath, JSON.stringify(planPayload, null, 2));
   fs.writeFileSync(executeReportPath, renderExecuteReport(reportPayload));
+
+  const diffLines = [];
+  diffLines.push("# Execute Diff");
+  diffLines.push("");
+  if (actions.length === 0) {
+    diffLines.push("- No changes applied");
+  } else {
+    actions.forEach((a) => {
+      diffLines.push(`- ${a.action_id} → ${a.target_path || "(no target)"}`);
+    });
+  }
+  fs.writeFileSync(executeDiffPath, diffLines.join("\n"));
+
+  const logLines = [];
+  logLines.push("# Execute Log");
+  logLines.push("");
+  logLines.push(`generated_at: ${planPayload.generated_at}`);
+  logLines.push(`actions_count: ${actions.length}`);
+  actions.forEach((a, i) => {
+    logLines.push(`- [${i + 1}] ${a.action_id} (${a.action_type})`);
+  });
+  fs.writeFileSync(executeLogPath, logLines.join("\n"));
 
   if (actions.length > 0) {
     return {

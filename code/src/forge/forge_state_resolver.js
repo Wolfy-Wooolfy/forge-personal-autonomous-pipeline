@@ -6,6 +6,113 @@ const TASKS_DIR = path.join(ROOT, "artifacts", "tasks");
 const REGISTRY_PATH = path.join(ROOT, "code", "src", "execution", "task_registry.js");
 const PIPELINE_PATH = path.join(ROOT, "code", "src", "orchestrator", "pipeline_definition.js");
 
+const RELEASE_MANIFEST_PATH = path.join(ROOT, "artifacts", "release", "RELEASE_MANIFEST_v1.json");
+const REPOSITORY_HASH_SNAPSHOT_PATH = path.join(ROOT, "artifacts", "release", "repository_hash_snapshot.json");
+const CLOSURE_REPORT_PATH = path.join(ROOT, "artifacts", "closure", "closure_report.md");
+const VERIFY_RESULTS_PATH = path.join(ROOT, "artifacts", "verify", "verification_results.json");
+
+function safeReadJson(absPath) {
+  try {
+    if (!fs.existsSync(absPath)) {
+      return null;
+    }
+    return JSON.parse(fs.readFileSync(absPath, "utf8"));
+  } catch (error) {
+    return null;
+  }
+}
+
+function isAuthoritativeClosureArtifact(taskId) {
+  if (taskId === "TASK-054") {
+    const executePlanPath = path.join(ROOT, "artifacts", "execute", "execute_plan.json");
+    const executeDiffPath = path.join(ROOT, "artifacts", "execute", "execute_diff.md");
+    const executeLogPath = path.join(ROOT, "artifacts", "execute", "execute_log.md");
+
+    return (
+      fs.existsSync(executePlanPath) &&
+      fs.existsSync(executeDiffPath) &&
+      fs.existsSync(executeLogPath)
+    );
+  }
+
+  if (taskId === "TASK-061") {
+    const verifyReportPath = path.join(ROOT, "artifacts", "verify", "verification_report.md");
+    const verifyResultsPath = path.join(ROOT, "artifacts", "verify", "verification_results.json");
+
+    if (!fs.existsSync(verifyReportPath) || !fs.existsSync(verifyResultsPath)) {
+      return false;
+    }
+
+    const verifyResults = safeReadJson(verifyResultsPath);
+
+    if (!verifyResults) {
+      return false;
+    }
+
+    const verifyOutcome = String(
+      verifyResults.final_outcome ||
+      verifyResults.outcome ||
+      verifyResults.status ||
+      verifyResults.verification_status ||
+      ""
+    ).toUpperCase();
+
+    const verifyPassed =
+      verifyResults.blocked !== true &&
+      (verifyOutcome === "PASS" || verifyOutcome === "PASSED" || verifyOutcome === "OK");
+
+    const verifyContractReady =
+      verifyResults.closure_gate &&
+      verifyResults.closure_gate.closure_contract_ready === true;
+
+    return verifyPassed === true && verifyContractReady === true;
+  }
+
+  if (taskId !== "TASK-055") {
+    return true;
+  }
+
+  if (
+    !fs.existsSync(CLOSURE_REPORT_PATH) ||
+    !fs.existsSync(RELEASE_MANIFEST_PATH) ||
+    !fs.existsSync(REPOSITORY_HASH_SNAPSHOT_PATH) ||
+    !fs.existsSync(VERIFY_RESULTS_PATH)
+  ) {
+    return false;
+  }
+
+  const releaseManifest = safeReadJson(RELEASE_MANIFEST_PATH);
+  const verifyResults = safeReadJson(VERIFY_RESULTS_PATH);
+
+  if (!releaseManifest || !verifyResults) {
+    return false;
+  }
+
+  const verifyOutcome = String(
+    verifyResults.final_outcome ||
+    verifyResults.outcome ||
+    verifyResults.status ||
+    verifyResults.verification_status ||
+    ""
+  ).toUpperCase();
+
+  const verifyPassed =
+    verifyResults.blocked !== true &&
+    (verifyOutcome === "PASS" || verifyOutcome === "PASSED" || verifyOutcome === "OK");
+
+  const verifyContractReady =
+    verifyResults.closure_gate &&
+    verifyResults.closure_gate.closure_contract_ready === true;
+
+  return (
+    Number(releaseManifest.gap_count) === 0 &&
+    Number(releaseManifest.critical_violations) === 0 &&
+    releaseManifest.deterministic_confirmation === true &&
+    verifyPassed === true &&
+    verifyContractReady === true
+  );
+}
+
 function loadRegistryModule() {
   delete require.cache[require.resolve(REGISTRY_PATH)];
   const registryModule = require(REGISTRY_PATH);
@@ -103,6 +210,10 @@ function buildClosureMap(closureFiles) {
 
   for (const file of closureFiles) {
     const taskId = extractTaskIdFromArtifact(file);
+
+    if (!isAuthoritativeClosureArtifact(taskId)) {
+      continue;
+    }
 
     if (closureMap.has(taskId)) {
       throw new Error(`DUPLICATE CLOSURE ARTIFACT FOR ${taskId}`);

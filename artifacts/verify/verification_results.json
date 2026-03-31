@@ -1,19 +1,114 @@
 {
-  "generated_at": "2026-03-31T11:55:13.085Z",
-  "blocked": false,
-  "status": "PASS",
-  "outcome": "PASS",
-  "final_outcome": "PASS",
+  "generated_at": "2026-03-31T14:16:18.582Z",
+  "blocked": true,
+  "status": "FAIL",
+  "outcome": "FAIL",
+  "final_outcome": "FAIL",
+  "summary": {
+    "total_checks": 18,
+    "failed_checks": 3
+  },
+  "closure_gate": {
+    "gap_count": 442,
+    "critical_violations": 0,
+    "orphan_code_units": 3,
+    "orphan_requirements": 0,
+    "orphan_artifacts": 2,
+    "deterministic_confirmation_ready": true,
+    "execute_artifacts_complete": true,
+    "decision_artifact_present": true,
+    "closure_contract_ready": false
+  },
   "checks": [
     {
-      "name": "execute_plan_valid_json",
+      "name": "artifacts_intake_intake_snapshot_json_valid_json",
       "passed": true,
-      "detail": ""
+      "detail": "artifacts/intake/intake_snapshot.json"
     },
     {
-      "name": "backfill_plan_valid_json",
+      "name": "artifacts_audit_audit_findings_json_valid_json",
       "passed": true,
-      "detail": ""
+      "detail": "artifacts/audit/audit_findings.json"
+    },
+    {
+      "name": "artifacts_trace_trace_matrix_json_valid_json",
+      "passed": true,
+      "detail": "artifacts/trace/trace_matrix.json"
+    },
+    {
+      "name": "artifacts_gap_gap_actions_json_valid_json",
+      "passed": true,
+      "detail": "artifacts/gap/gap_actions.json"
+    },
+    {
+      "name": "artifacts_backfill_backfill_plan_json_valid_json",
+      "passed": true,
+      "detail": "artifacts/backfill/backfill_plan.json"
+    },
+    {
+      "name": "artifacts_execute_execute_plan_json_valid_json",
+      "passed": true,
+      "detail": "artifacts/execute/execute_plan.json"
+    },
+    {
+      "name": "artifacts_execute_execute_diff_md_exists",
+      "passed": true,
+      "detail": "artifacts/execute/execute_diff.md"
+    },
+    {
+      "name": "artifacts_execute_execute_log_md_exists",
+      "passed": true,
+      "detail": "artifacts/execute/execute_log.md"
+    },
+    {
+      "name": "decision_artifact_present",
+      "passed": true,
+      "detail": "artifacts/decisions/module_flow_decision_gate.json"
+    },
+    {
+      "name": "execute_plan_matches_backfill_plan",
+      "passed": true,
+      "detail": "backfill_actions=14; execute_actions=14"
+    },
+    {
+      "name": "gap_count_zero",
+      "passed": false,
+      "detail": "gap_count=442"
+    },
+    {
+      "name": "critical_violations_zero",
+      "passed": true,
+      "detail": "critical_violations=0"
+    },
+    {
+      "name": "orphan_code_units_zero",
+      "passed": false,
+      "detail": "orphan_code_units=3"
+    },
+    {
+      "name": "orphan_requirements_zero",
+      "passed": true,
+      "detail": "orphan_requirements=0"
+    },
+    {
+      "name": "orphan_artifacts_zero",
+      "passed": false,
+      "detail": "orphan_artifacts=2"
+    },
+    {
+      "name": "audit_not_blocked",
+      "passed": true,
+      "detail": "audit_blocked=false"
+    },
+    {
+      "name": "trace_mappings_present",
+      "passed": true,
+      "detail": "mappings=578"
+    },
+    {
+      "name": "intake_snapshot_locked",
+      "passed": true,
+      "detail": "locked_snapshot_flag=true"
     }
   ]
 }
