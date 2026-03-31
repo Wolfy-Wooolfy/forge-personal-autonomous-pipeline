@@ -394,6 +394,15 @@ function mapDeterministically(requirements, codeUnits, artifacts, intakeContext)
       title.includes("orchestrator") ||
       section.includes("orchestrator") ||
       document.includes("orchestrator") ||
+      title.includes("pipeline") ||
+      section.includes("pipeline") ||
+      document.includes("pipeline") ||
+      title.includes("module ordering") ||
+      section.includes("module ordering") ||
+      document.includes("module ordering") ||
+      title.includes("pipeline definition") ||
+      section.includes("pipeline definition") ||
+      document.includes("pipeline definition") ||
       title.includes("runner") ||
       section.includes("runner") ||
       document.includes("runner") ||
@@ -426,6 +435,7 @@ function mapDeterministically(requirements, codeUnits, artifacts, intakeContext)
         if (u.file_path.includes("code/src/orchestrator/runner.js")) mapped_code_units.push(u.unit_id);
         if (u.file_path.includes("code/src/orchestrator/autonomous_runner.js")) mapped_code_units.push(u.unit_id);
         if (u.file_path.includes("code/src/orchestrator/entry_resolver.js")) mapped_code_units.push(u.unit_id);
+        if (u.file_path.includes("code/src/orchestrator/pipeline_definition.js")) mapped_code_units.push(u.unit_id);
         if (u.file_path.includes("code/src/orchestrator/stage_transitions.js")) mapped_code_units.push(u.unit_id);
         if (u.file_path.includes("code/src/orchestrator/status_writer.js")) mapped_code_units.push(u.unit_id);
         if (u.file_path.includes("code/src/execution/task_registry.js")) mapped_code_units.push(u.unit_id);

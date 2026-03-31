@@ -1,6 +1,6 @@
 # Verification Report
 
-generated_at: 2026-03-31T14:16:18.582Z
+generated_at: 2026-03-31T14:48:52.939Z
 status: FAIL
 
 ## Closure Gate Readiness
