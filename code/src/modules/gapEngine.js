@@ -95,6 +95,19 @@ function renderGapReport(payload) {
   return lines.join("\n");
 }
 
+function findDuplicateValues(values) {
+  const seen = new Set();
+  const dup = new Set();
+
+  for (const value of values) {
+    const key = String(value || "");
+    if (seen.has(key)) dup.add(key);
+    else seen.add(key);
+  }
+
+  return Array.from(dup).sort();
+}
+
 function buildGapsFromTrace(trace) {
   const gaps = [];
 
@@ -320,6 +333,19 @@ function runGap(context) {
   }
 
   const gaps = buildGapsFromTrace(trace);
+  const duplicateGapIds = findDuplicateValues(gaps.map((g) => g.gap_id));
+
+  if (duplicateGapIds.length > 0) {
+    const errRef = writeGapError(rootAbs, `BLOCKED: duplicate gap_id detected: ${duplicateGapIds.join(", ")}`);
+    return {
+      blocked: true,
+      artifact: errRef,
+      status_patch: {
+        blocking_questions: ["Gap BLOCKED: duplicate gap_id detected"],
+        next_step: ""
+      }
+    };
+  }
 
   let requiresDecision = false;
   let criticalCount = 0;

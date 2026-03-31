@@ -1,6 +1,6 @@
 # MODULE FLOW — Decision Gate
 
-- timestamp: 2026-03-31T09:16:13.732Z
+- timestamp: 2026-03-31T11:51:39.477Z
 - policy: AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK
 - operating_mode: IMPROVE
 - repository_state: MIXED

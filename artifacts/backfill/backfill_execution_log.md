@@ -1,13 +1,13 @@
 # MODULE FLOW — Backfill Execution Log
 
-- generated_at: 2026-03-31T09:16:13.802Z
+- generated_at: 2026-03-31T11:52:56.612Z
 - operating_mode: IMPROVE
 - repository_state: MIXED
 - blocked: false
 
 ## Source
 - decision_gate_path: artifacts/decisions/module_flow_decision_gate.json
-- decision_gate_sha256: 36205ef9c2e15716a9560e6318f67e827c3289143426d0a0b595c3d39713bddd
+- decision_gate_sha256: f7668d64c9c9bc3514d9c7c79a774fe38fd75246cec65f1f6920ea12d7b269d0
 - intake_context_path: artifacts/intake/intake_context.json
 - intake_context_sha256: eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84
 

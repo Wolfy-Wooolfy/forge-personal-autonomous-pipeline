@@ -1,6 +1,6 @@
 {
-  "execution_id": "MODULE_FLOW_CLOSURE_3235eb7a8c20",
-  "release_timestamp": "2026-03-31T09:16:13.865Z",
+  "execution_id": "MODULE_FLOW_CLOSURE_43311d7cf3e5",
+  "release_timestamp": "2026-03-31T11:54:19.580Z",
   "modules_executed": [
     "Intake",
     "Audit",
@@ -12,8 +12,8 @@
     "Verify",
     "Closure"
   ],
-  "gap_count": 609,
+  "gap_count": 442,
   "critical_violations": 0,
-  "snapshot_hash": "9b6158b621e54c52bff2ef03e4dd285869f1440547b8a783fd42c734dcee65bb",
+  "snapshot_hash": "82471a374043290f22118dd8b6f0c6747c081adae762abc450be96ca57fc49ea",
   "deterministic_confirmation": true
 }

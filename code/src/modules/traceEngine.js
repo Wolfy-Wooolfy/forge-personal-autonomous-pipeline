@@ -34,12 +34,28 @@ function listFilesRecursive(rootAbs) {
   return out;
 }
 
-function extractDocId(docText) {
-  const m = docText.match(/Document ID:\s*([A-Za-z0-9\-\_]+)/i);
-  if (m && m[1]) return String(m[1]).trim();
-  const m2 = docText.match(/DOC-\d+/i);
-  if (m2 && m2[0]) return String(m2[0]).trim();
-  return "";
+function stripMarkdownDecorators(s) {
+  return String(s || "")
+    .replace(/[`*_]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function extractDocId(docText, absPath) {
+  const lines = String(docText || "").split(/\r?\n/);
+
+  for (const rawLine of lines) {
+    const line = stripMarkdownDecorators(rawLine);
+    const m = line.match(/^Document ID\s*:\s*([A-Za-z0-9][A-Za-z0-9._-]*)$/i);
+    if (m && m[1]) return String(m[1]).trim();
+  }
+
+  const stem = path.basename(String(absPath || "")).replace(/\.md$/i, "").trim();
+  if (/^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(stem)) {
+    return stem;
+  }
+
+  throw new Error(`TRACE_ENGINE_CONTRACT_VIOLATION: unable to derive deterministic document id for ${String(absPath || "")}`);
 }
 
 function normalizeTitle(s) {
@@ -48,16 +64,49 @@ function normalizeTitle(s) {
     .trim();
 }
 
-function buildRequirementsFromDocs(docsDirAbs) {
-  const mdFiles = listFilesRecursive(docsDirAbs)
-    .filter((p) => p.toLowerCase().endsWith(".md"))
-    .filter((p) => !p.replace(/\\/g, "/").startsWith(path.resolve(docsDirAbs, "..", "..", "artifacts").replace(/\\/g, "/")));
+function isExecutionBoundDoc(docText) {
+  const lines = String(docText || "").split(/\r?\n/);
+
+  for (const rawLine of lines) {
+    const line = stripMarkdownDecorators(rawLine);
+    if (/^Status\s*:\s*EXECUTION-BOUND$/i.test(line)) return true;
+  }
+
+  return false;
+}
+
+function buildRequirementsFromDocFiles(docFilesAbs, rootAbs) {
   const requirements = [];
-  for (const abs of mdFiles) {
-    const rel = abs.replace(/\\/g, "/");
+  const docEntries = [];
+
+  for (const abs of docFilesAbs) {
+    const rel = path.relative(rootAbs, abs).replace(/\\/g, "/");
     const text = fs.readFileSync(abs, "utf-8");
-    const docId = extractDocId(text) || path.basename(abs).replace(/\.md$/i, "");
-    const lines = text.split(/\r?\n/);
+    const baseDocId = extractDocId(text, abs);
+    const fileStem = path.basename(abs, path.extname(abs)).trim();
+
+    docEntries.push({
+      abs,
+      rel,
+      text,
+      baseDocId,
+      fileStem
+    });
+  }
+
+  const docIdCounts = new Map();
+  for (const entry of docEntries) {
+    const key = String(entry.baseDocId || "");
+    docIdCounts.set(key, (docIdCounts.get(key) || 0) + 1);
+  }
+
+  for (const entry of docEntries) {
+    const lines = entry.text.split(/\r?\n/);
+
+    const docId =
+      (docIdCounts.get(entry.baseDocId) || 0) > 1
+        ? `${entry.baseDocId}__${entry.fileStem}`
+        : entry.baseDocId;
 
     const headings = [];
     for (let i = 0; i < lines.length; i++) {
@@ -67,13 +116,14 @@ function buildRequirementsFromDocs(docsDirAbs) {
     }
 
     let localIdx = 0;
+
     if (headings.length === 0) {
       localIdx += 1;
       requirements.push({
         requirement_id: `${docId}::R${String(localIdx).padStart(3, "0")}`,
-        source_document: rel,
+        source_document: entry.rel,
         section_path: "",
-        normalized_title: path.basename(abs)
+        normalized_title: path.basename(entry.abs)
       });
       continue;
     }
@@ -83,9 +133,10 @@ function buildRequirementsFromDocs(docsDirAbs) {
       if (h.level === 1) currentH1 = h.title || "";
       localIdx += 1;
       const sectionPath = h.level === 1 ? currentH1 : `${currentH1} > ${h.title}`;
+
       requirements.push({
         requirement_id: `${docId}::R${String(localIdx).padStart(3, "0")}`,
-        source_document: rel,
+        source_document: entry.rel,
         section_path: sectionPath,
         normalized_title: h.title || ""
       });
@@ -157,12 +208,44 @@ function buildCodeUnitsFromSrc(codeSrcAbs, rootAbs) {
   return units;
 }
 
+function findDuplicateValues(values) {
+  const seen = new Set();
+  const dup = new Set();
+
+  for (const value of values) {
+    const key = String(value || "");
+    if (seen.has(key)) dup.add(key);
+    else seen.add(key);
+  }
+
+  return Array.from(dup).sort();
+}
+
 function buildRequirementsFromAllDocs(rootAbs) {
   const docsRootAbs = path.resolve(rootAbs, "docs");
   if (!fs.existsSync(docsRootAbs)) {
     return [];
   }
-  return buildRequirementsFromDocs(docsRootAbs);
+
+  const allMdFiles = listFilesRecursive(docsRootAbs).filter((p) => p.toLowerCase().endsWith(".md"));
+  const traceableDocs = [];
+
+  for (const abs of allMdFiles) {
+    const rel = path.relative(rootAbs, abs).replace(/\\/g, "/");
+    const text = fs.readFileSync(abs, "utf-8");
+
+    if (rel.startsWith("docs/03_pipeline/")) {
+      traceableDocs.push(abs);
+      continue;
+    }
+
+    if (isExecutionBoundDoc(text)) {
+      traceableDocs.push(abs);
+    }
+  }
+
+  traceableDocs.sort();
+  return buildRequirementsFromDocFiles(traceableDocs, rootAbs);
 }
 
 function shouldTraceArtifact(relPath) {
@@ -325,14 +408,30 @@ function mapDeterministically(requirements, codeUnits, artifacts, intakeContext)
       document.includes("task registry") ||
       title.includes("task executor") ||
       section.includes("task executor") ||
-      document.includes("task executor")
+      document.includes("task executor") ||
+      title.includes("entry resolver") ||
+      section.includes("entry resolver") ||
+      document.includes("entry resolver") ||
+      title.includes("autonomous runner") ||
+      section.includes("autonomous runner") ||
+      document.includes("autonomous runner") ||
+      title.includes("forge state") ||
+      section.includes("forge state") ||
+      document.includes("forge_state") ||
+      title.includes("build state") ||
+      section.includes("build state") ||
+      document.includes("build_state")
     ) {
       for (const u of codeUnits) {
         if (u.file_path.includes("code/src/orchestrator/runner.js")) mapped_code_units.push(u.unit_id);
+        if (u.file_path.includes("code/src/orchestrator/autonomous_runner.js")) mapped_code_units.push(u.unit_id);
+        if (u.file_path.includes("code/src/orchestrator/entry_resolver.js")) mapped_code_units.push(u.unit_id);
         if (u.file_path.includes("code/src/orchestrator/stage_transitions.js")) mapped_code_units.push(u.unit_id);
         if (u.file_path.includes("code/src/orchestrator/status_writer.js")) mapped_code_units.push(u.unit_id);
         if (u.file_path.includes("code/src/execution/task_registry.js")) mapped_code_units.push(u.unit_id);
         if (u.file_path.includes("code/src/execution/task_executor.js")) mapped_code_units.push(u.unit_id);
+        if (u.file_path.includes("code/src/forge/forge_state_resolver.js")) mapped_code_units.push(u.unit_id);
+        if (u.file_path.includes("code/src/forge/forge_state_writer.js")) mapped_code_units.push(u.unit_id);
       }
     }
 
@@ -511,6 +610,32 @@ function runTrace(contextOrStatus) {
   const requirements = buildRequirementsFromAllDocs(rootAbs);
   const codeUnits = buildCodeUnitsFromSrc(path.resolve(rootAbs, "code", "src"), rootAbs);
   const artifacts = buildArtifactsIndex(path.resolve(rootAbs, "artifacts"), rootAbs);
+
+  const duplicateRequirementIds = findDuplicateValues(requirements.map((r) => r.requirement_id));
+  if (duplicateRequirementIds.length > 0) {
+    const errRef = writeTraceError(rootAbs, `BLOCKED: duplicate requirement_id detected: ${duplicateRequirementIds.join(", ")}`);
+    return {
+      blocked: true,
+      artifact: errRef,
+      status_patch: {
+        blocking_questions: ["Trace BLOCKED: duplicate requirement_id detected"],
+        next_step: ""
+      }
+    };
+  }
+
+  const duplicateUnitIds = findDuplicateValues(codeUnits.map((u) => u.unit_id));
+  if (duplicateUnitIds.length > 0) {
+    const errRef = writeTraceError(rootAbs, `BLOCKED: duplicate unit_id detected: ${duplicateUnitIds.join(", ")}`);
+    return {
+      blocked: true,
+      artifact: errRef,
+      status_patch: {
+        blocking_questions: ["Trace BLOCKED: duplicate unit_id detected"],
+        next_step: ""
+      }
+    };
+  }
 
   const mapped = mapDeterministically(requirements, codeUnits, artifacts, intakeContext);
 
