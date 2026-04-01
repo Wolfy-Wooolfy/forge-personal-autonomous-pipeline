@@ -1,6 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
+const { executeCognitive } = require("../cognitive/cognitive_adapter");
+
 function readJson(absPath) {
   const txt = fs.readFileSync(absPath, "utf-8");
   return JSON.parse(txt);
@@ -764,6 +766,33 @@ function writeTraceError(rootAbs, msg) {
   fs.writeFileSync(errAbs, md, "utf-8");
 
   return "artifacts/trace/trace_error.md";
+}
+
+async function runCognitiveTraceAnalysis(context) {
+  const request = {
+    request_id: `TRACE-${Date.now()}`,
+    timestamp: new Date().toISOString(),
+    task_context: {
+      task_id: "TASK-050",
+      module: "TRACE"
+    },
+    input: {
+      type: "structured",
+      content: context
+    },
+    constraints: {
+      deterministic: true,
+      max_tokens: 1000,
+      temperature: 0
+    }
+  };
+
+  return await executeCognitive(request, () => {
+    return {
+      note: "Cognitive trace placeholder",
+      coverage_hint: []
+    };
+  });
 }
 
 function runTrace(contextOrStatus) {
