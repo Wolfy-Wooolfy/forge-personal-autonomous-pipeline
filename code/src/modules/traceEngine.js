@@ -927,7 +927,8 @@ function runTrace(contextOrStatus) {
     mappings: mapped.mappings,
     orphan_code_units: mapped.orphan_code_units,
     orphan_requirements: mapped.orphan_requirements,
-    orphan_artifacts: mapped.orphan_artifacts
+    orphan_artifacts: mapped.orphan_artifacts,
+    cognitive_trace: cognitiveResult
   };
 
   const outRefs = writeTraceOutputs(rootAbs, traceJson);
