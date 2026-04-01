@@ -795,7 +795,7 @@ async function runCognitiveTraceAnalysis(context) {
   });
 }
 
-function runTrace(contextOrStatus) {
+async function runTrace(contextOrStatus) {
   const rootAbs = path.resolve(__dirname, "../../..");
 
   const artifactsIntakeAbs = path.resolve(rootAbs, "artifacts", "intake", "intake_snapshot.json");
@@ -916,6 +916,20 @@ function runTrace(contextOrStatus) {
   }
 
   const mapped = mapDeterministically(requirements, codeUnits, artifacts, intakeContext);
+
+  let cognitiveResult = null;
+
+  try {
+    cognitiveResult = await runCognitiveTraceAnalysis({
+      requirements_count: requirements.length,
+      code_units_count: codeUnits.length,
+      artifacts_count: artifacts.length
+    });
+  } catch (err) {
+    cognitiveResult = {
+      error: err.message
+    };
+  }
 
   const traceJson = {
     execution_id: `TRACE-${new Date().toISOString()}`,
