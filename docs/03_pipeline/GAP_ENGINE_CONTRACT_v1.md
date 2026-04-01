@@ -59,6 +59,38 @@ Authority Rule:
 
 ---
 
+### Cognitive Assisted Detection (Restricted Mode)
+
+The GAP module MAY use cognitive analysis to assist in identifying
+patterns or signals that may indicate potential gaps.
+
+However, strict constraints apply:
+
+Cognitive MUST NOT:
+
+- Create new gaps independently
+- Introduce gap_ids not derived from trace
+- Override deterministic gap detection rules
+
+Cognitive MAY:
+
+- Highlight suspicious mappings
+- Suggest grouping of related gaps
+- Provide confidence signals for existing gaps
+
+Activation Rule:
+
+- Cognitive signals MUST always be validated against trace outputs
+- Only gaps already derivable from deterministic trace may be enhanced
+
+Future Extension Note:
+
+This section enables future controlled evolution toward
+cognitive-assisted gap discovery without breaking
+deterministic guarantees of the system.
+
+---
+
 # 2. Activation Preconditions
 
 Gap may execute ONLY IF:
