@@ -55,6 +55,36 @@ If none of the above → Decision Gate auto-pass.
 
 ---
 
+### Cognitive Input (Conditional – Non-Authoritative)
+
+The Decision Gate MAY consume cognitive outputs produced by upstream modules
+(e.g., TRACE cognitive augmentation).
+
+Conditions:
+
+- Cognitive input MUST originate from Cognitive Adapter artifacts
+- Cognitive input MUST be normalized and validated
+- Cognitive input MUST NOT override deterministic rules
+
+Usage Rules:
+
+- Cognitive input may assist prioritization of decisions
+- Cognitive input may provide ranking hints or contextual insights
+- Cognitive input MUST NOT create new decision items independently
+- Cognitive input MUST NOT bypass existing decision logic
+
+Failure Handling:
+
+- Missing or failed cognitive input MUST NOT block Decision Gate
+- Decision Gate MUST fall back to deterministic logic
+
+Authority Rule:
+
+- Cognitive input is advisory only
+- Final decision authority remains strictly deterministic unless explicitly elevated by future contract
+
+---
+
 Exploration Artifacts Integration
 
 If upstream modules produce exploration artifacts such as:
