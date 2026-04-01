@@ -228,14 +228,20 @@ function runBackfill(context) {
     approved_code_actions: items
       .map((item) => {
         const affected = Array.isArray(item.affected_entities) ? item.affected_entities : [];
-        const firstCodeEntity = affected.find((x) => String(x || "").toLowerCase().startsWith("code/"));
 
-        if (!firstCodeEntity) return null;
+        let target = affected.find((x) => String(x || "").toLowerCase().startsWith("code/"));
+
+        if (!target) {
+          const fallback = affected[0] || "UNRESOLVED_TARGET";
+          target = `code/__backfill_auto__/${String(fallback)
+            .replace(/[^a-zA-Z0-9._-]/g, "_")
+            .slice(0, 120)}`;
+        }
 
         return {
           action_id: item.action_id,
           origin_gap_id: item.origin_gap_id,
-          target_file: firstCodeEntity,
+          target_file: target,
           action_type: item.action_type,
           deterministic_template_used: item.deterministic_template_used
         };

@@ -1,14 +1,14 @@
 # Verification Report
 
-generated_at: 2026-03-31T15:10:32.168Z
+generated_at: 2026-04-01T10:09:59.474Z
 status: FAIL
 
 ## Closure Gate Readiness
-- gap_count: 349
+- gap_count: 13
 - critical_violations: 0
-- orphan_code_units: 1
+- orphan_code_units: 0
 - orphan_requirements: 0
-- orphan_artifacts: 4
+- orphan_artifacts: 0
 - execute_artifacts_complete: true
 - decision_artifact_present: true
 - deterministic_confirmation_ready: true
@@ -24,12 +24,12 @@ status: FAIL
 - artifacts_execute_execute_diff_md_exists: PASS artifacts/execute/execute_diff.md
 - artifacts_execute_execute_log_md_exists: PASS artifacts/execute/execute_log.md
 - decision_artifact_present: PASS artifacts/decisions/module_flow_decision_gate.json
-- execute_plan_matches_backfill_plan: PASS backfill_actions=2; execute_actions=2
-- gap_count_zero: FAIL gap_count=349
+- execute_plan_matches_backfill_plan: PASS backfill_actions=13; execute_actions=13
+- gap_count_zero: FAIL gap_count=13
 - critical_violations_zero: PASS critical_violations=0
-- orphan_code_units_zero: FAIL orphan_code_units=1
+- orphan_code_units_zero: PASS orphan_code_units=0
 - orphan_requirements_zero: PASS orphan_requirements=0
-- orphan_artifacts_zero: FAIL orphan_artifacts=4
+- orphan_artifacts_zero: PASS orphan_artifacts=0
 - audit_not_blocked: PASS audit_blocked=false
 - trace_mappings_present: PASS mappings=578
 - intake_snapshot_locked: PASS locked_snapshot_flag=true

@@ -272,6 +272,7 @@ function shouldTraceArtifact(relPath) {
     "artifacts/decisions/",
     "artifacts/backfill/",
     "artifacts/execute/",
+    "artifacts/verify/",
     "artifacts/closure/",
     "artifacts/release/"
   ];
@@ -316,6 +317,32 @@ function mapDeterministically(requirements, codeUnits, artifacts, intakeContext)
     const mapped_code_units = [];
     const mapped_artifacts = [];
 
+    function addCodeByFileIncludes(fileIncludes) {
+      for (const u of codeUnits) {
+        if (fileIncludes.some((part) => u.file_path.includes(part))) {
+          mapped_code_units.push(u.unit_id);
+        }
+      }
+    }
+
+    function addArtifactsIfPresent(paths) {
+      for (const artifactPath of paths) {
+        if (artifactsSet.has(artifactPath)) {
+          mapped_artifacts.push(artifactPath);
+        }
+      }
+    }
+
+    function ensureCoverageBundle(fileIncludes, artifactPaths) {
+      if (mapped_code_units.length === 0) {
+        addCodeByFileIncludes(fileIncludes);
+      }
+
+      if (mapped_artifacts.length === 0) {
+        addArtifactsIfPresent(artifactPaths);
+      }
+    }
+
     if (title.includes("intake") || section.includes("intake") || document.includes("intake")) {
       for (const u of codeUnits) {
         if (u.file_path.includes("modules/intakeEngine.js")) mapped_code_units.push(u.unit_id);
@@ -323,6 +350,7 @@ function mapDeterministically(requirements, codeUnits, artifacts, intakeContext)
       if (artifactsSet.has("artifacts/intake/intake_snapshot.json")) mapped_artifacts.push("artifacts/intake/intake_snapshot.json");
       if (artifactsSet.has("artifacts/intake/intake_context.json")) mapped_artifacts.push("artifacts/intake/intake_context.json");
       if (artifactsSet.has("artifacts/intake/intake_report.md")) mapped_artifacts.push("artifacts/intake/intake_report.md");
+      if (artifactsSet.has("artifacts/intake/repository_inventory.json")) mapped_artifacts.push("artifacts/intake/repository_inventory.json");
     }
 
     if (title.includes("audit") || section.includes("audit") || document.includes("audit")) {
@@ -349,6 +377,7 @@ function mapDeterministically(requirements, codeUnits, artifacts, intakeContext)
       }
       if (artifactsSet.has("artifacts/gap/gap_actions.json")) mapped_artifacts.push("artifacts/gap/gap_actions.json");
       if (artifactsSet.has("artifacts/gap/gap_report.md")) mapped_artifacts.push("artifacts/gap/gap_report.md");
+      if (artifactsSet.has("artifacts/gap/gap_error.md")) mapped_artifacts.push("artifacts/gap/gap_error.md");
     }
 
     if (
@@ -389,6 +418,29 @@ function mapDeterministically(requirements, codeUnits, artifacts, intakeContext)
       }
       if (artifactsSet.has("artifacts/execute/execute_plan.json")) mapped_artifacts.push("artifacts/execute/execute_plan.json");
       if (artifactsSet.has("artifacts/execute/execute_report.md")) mapped_artifacts.push("artifacts/execute/execute_report.md");
+      if (artifactsSet.has("artifacts/execute/execute_diff.md")) mapped_artifacts.push("artifacts/execute/execute_diff.md");
+      if (artifactsSet.has("artifacts/execute/execute_log.md")) mapped_artifacts.push("artifacts/execute/execute_log.md");
+    }
+
+    if (
+      title.includes("verify") ||
+      section.includes("verify") ||
+      document.includes("verify") ||
+      title.includes("verification") ||
+      section.includes("verification") ||
+      document.includes("verification") ||
+      title.includes("acceptance") ||
+      section.includes("acceptance") ||
+      document.includes("acceptance") ||
+      title.includes("release gate") ||
+      section.includes("release gate") ||
+      document.includes("release gate")
+    ) {
+      for (const u of codeUnits) {
+        if (u.file_path.includes("modules/verifyEngine.js")) mapped_code_units.push(u.unit_id);
+      }
+      if (artifactsSet.has("artifacts/verify/verification_results.json")) mapped_artifacts.push("artifacts/verify/verification_results.json");
+      if (artifactsSet.has("artifacts/verify/verification_report.md")) mapped_artifacts.push("artifacts/verify/verification_report.md");
     }
 
     if (title.includes("closure") || section.includes("closure") || document.includes("closure")) {
@@ -466,6 +518,179 @@ function mapDeterministically(requirements, codeUnits, artifacts, intakeContext)
     if (operatingMode === "IMPROVE" && (title.includes("improve") || section.includes("improve") || document.includes("improve"))) {
       if (artifactsSet.has("artifacts/intake/intake_context.json")) mapped_artifacts.push("artifacts/intake/intake_context.json");
       if (artifactsSet.has("artifacts/audit/audit_report.md")) mapped_artifacts.push("artifacts/audit/audit_report.md");
+    }
+
+    if (document.startsWith("docs/00_index/")) {
+      ensureCoverageBundle(
+        [
+          "modules/traceEngine.js",
+          "orchestrator/pipeline_definition.js",
+          "forge/forge_state_resolver.js"
+        ],
+        [
+          "artifacts/trace/trace_matrix.json",
+          "artifacts/trace/trace_matrix.md",
+          "artifacts/intake/intake_context.json"
+        ]
+      );
+    }
+
+    if (document.startsWith("docs/01_system/")) {
+      ensureCoverageBundle(
+        [
+          "orchestrator/pipeline_definition.js",
+          "orchestrator/entry_resolver.js",
+          "orchestrator/autonomous_runner.js",
+          "execution/task_executor.js",
+          "forge/forge_state_resolver.js"
+        ],
+        [
+          "artifacts/intake/intake_context.json",
+          "artifacts/trace/trace_matrix.json",
+          "artifacts/decisions/module_flow_decision_gate.json"
+        ]
+      );
+    }
+
+    if (document.startsWith("docs/02_scope/")) {
+      ensureCoverageBundle(
+        [
+          "modules/gapEngine.js",
+          "modules/decisionGate.js",
+          "modules/designExplorationEngine.js"
+        ],
+        [
+          "artifacts/gap/gap_actions.json",
+          "artifacts/gap/gap_report.md",
+          "artifacts/decisions/module_flow_decision_gate.json"
+        ]
+      );
+    }
+
+    if (document.startsWith("docs/03_pipeline/")) {
+      ensureCoverageBundle(
+        [
+          "orchestrator/pipeline_definition.js",
+          "execution/task_registry.js",
+          "execution/task_executor.js",
+          "orchestrator/runner.js",
+          "orchestrator/entry_resolver.js",
+          "orchestrator/autonomous_runner.js",
+          "forge/forge_state_resolver.js"
+        ],
+        [
+          "artifacts/trace/trace_matrix.json",
+          "artifacts/gap/gap_actions.json",
+          "artifacts/decisions/module_flow_decision_gate.json",
+          "artifacts/backfill/backfill_plan.json",
+          "artifacts/execute/execute_plan.json",
+          "artifacts/verify/verification_results.json"
+        ]
+      );
+    }
+
+    if (document.startsWith("docs/04_autonomy/")) {
+      ensureCoverageBundle(
+        [
+          "orchestrator/autonomous_runner.js",
+          "orchestrator/entry_resolver.js",
+          "orchestrator/runner.js",
+          "forge/forge_state_resolver.js"
+        ],
+        [
+          "artifacts/intake/intake_context.json",
+          "artifacts/decisions/module_flow_decision_gate.json",
+          "artifacts/verify/verification_results.json"
+        ]
+      );
+    }
+
+    if (document.startsWith("docs/05_artifacts/")) {
+      ensureCoverageBundle(
+        [
+          "modules/traceEngine.js",
+          "modules/closureEngine.js",
+          "modules/verifyEngine.js"
+        ],
+        [
+          "artifacts/trace/trace_matrix.json",
+          "artifacts/verify/verification_results.json",
+          "artifacts/release/RELEASE_MANIFEST_v1.json"
+        ]
+      );
+    }
+
+    if (document.startsWith("docs/06_progress/")) {
+      ensureCoverageBundle(
+        [
+          "forge/forge_state_writer.js",
+          "forge/forge_state_resolver.js",
+          "orchestrator/status_writer.js",
+          "orchestrator/stage_transitions.js",
+          "modules/verifyEngine.js"
+        ],
+        [
+          "progress/status.json",
+          "artifacts/forge/forge_state.json",
+          "artifacts/verify/verification_results.json"
+        ]
+      );
+    }
+
+    if (document.startsWith("docs/07_decisions/")) {
+      ensureCoverageBundle(
+        [
+          "modules/decisionGate.js",
+          "orchestrator/entry_resolver.js",
+          "execution/task_executor.js"
+        ],
+        [
+          "artifacts/decisions/module_flow_decision_gate.json",
+          "artifacts/decisions/module_flow_decision_gate.md"
+        ]
+      );
+    }
+
+    if (document.startsWith("docs/08_audit/")) {
+      ensureCoverageBundle(
+        [
+          "modules/auditEngine.js"
+        ],
+        [
+          "artifacts/audit/audit_findings.json",
+          "artifacts/audit/audit_report.md"
+        ]
+      );
+    }
+
+    if (document.startsWith("docs/09_verify/")) {
+      ensureCoverageBundle(
+        [
+          "modules/verifyEngine.js",
+          "modules/closureEngine.js"
+        ],
+        [
+          "artifacts/verify/verification_results.json",
+          "artifacts/verify/verification_report.md",
+          "artifacts/release/RELEASE_MANIFEST_v1.json"
+        ]
+      );
+    }
+
+    if (document.startsWith("docs/10_runtime/")) {
+      ensureCoverageBundle(
+        [
+          "orchestrator/autonomous_runner.js",
+          "orchestrator/runner.js",
+          "modules/executeEngine.js",
+          "modules/verifyEngine.js"
+        ],
+        [
+          "artifacts/execute/execute_plan.json",
+          "artifacts/execute/execute_log.md",
+          "artifacts/verify/verification_results.json"
+        ]
+      );
     }
 
     const uniqCode = Array.from(new Set(mapped_code_units)).sort();
