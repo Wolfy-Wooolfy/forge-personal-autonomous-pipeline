@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+const { executeCognitive } = require("../cognitive/cognitive_adapter");
 
 function ensureDir(abs) {
   fs.mkdirSync(abs, { recursive: true });
@@ -122,6 +123,7 @@ function buildGapsFromTrace(trace) {
       action_id: actionIdForGap(gapId, desc),
       description: desc,
       impact_scope: "docs/code/artifacts",
+      cognitive_priority_hint: null,
       requires_decision: false
     };
     gaps.push({
@@ -152,12 +154,14 @@ function buildGapsFromTrace(trace) {
       action_id: actionIdForGap(gapId, desc1),
       description: desc1,
       impact_scope: "code/trace",
+      cognitive_priority_hint: null,
       requires_decision: true
     };
     const action2 = {
       action_id: actionIdForGap(gapId, desc2),
       description: desc2,
       impact_scope: "code",
+      cognitive_priority_hint: null,
       requires_decision: true
     };
 
@@ -182,6 +186,7 @@ function buildGapsFromTrace(trace) {
       action_id: actionIdForGap(gapId, desc),
       description: desc,
       impact_scope: "artifacts/trace",
+      cognitive_priority_hint: null,
       requires_decision: true
     };
     gaps.push({
@@ -210,6 +215,7 @@ function buildGapsFromTrace(trace) {
       action_id: actionIdForGap(gapId, desc),
       description: desc,
       impact_scope: "docs/code/artifacts",
+      cognitive_priority_hint: null,
       requires_decision: false
     };
 
@@ -234,7 +240,33 @@ function buildGapsFromTrace(trace) {
   return gaps;
 }
 
-function runGap(context) {
+async function runCognitiveGapAnalysis(context) {
+  const request = {
+    request_id: `GAP-${Date.now()}`,
+    timestamp: new Date().toISOString(),
+    task_context: {
+      task_id: "TASK-051",
+      module: "GAP"
+    },
+    input: {
+      type: "structured",
+      content: context
+    },
+    constraints: {
+      deterministic: true,
+      max_tokens: 1000,
+      temperature: 0
+    }
+  };
+
+  return await executeCognitive(request, () => {
+    return {
+      priority_hints: []
+    };
+  });
+}
+
+async function runGap(context) {
   const rootAbs = path.resolve(__dirname, "../../..");
 
   const traceJsonAbs = path.resolve(rootAbs, "artifacts", "trace", "trace_matrix.json");
@@ -333,6 +365,19 @@ function runGap(context) {
   }
 
   const gaps = buildGapsFromTrace(trace);
+
+  let cognitiveResult = null;
+
+  try {
+    cognitiveResult = await runCognitiveGapAnalysis({
+      gap_count: gaps.length
+    });
+  } catch (err) {
+    cognitiveResult = {
+      error: err.message
+    };
+  }
+
   const duplicateGapIds = findDuplicateValues(gaps.map((g) => g.gap_id));
 
   if (duplicateGapIds.length > 0) {
@@ -364,6 +409,7 @@ function runGap(context) {
     total_gaps: gaps.length,
     critical_count: criticalCount,
     requires_decision: requiresDecision,
+    cognitive_analysis: cognitiveResult,
     gaps
   };
 
