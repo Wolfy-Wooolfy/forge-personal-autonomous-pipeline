@@ -147,7 +147,8 @@ artifacts/trace/trace_matrix.md
   ],
   "orphan_code_units": [],
   "orphan_requirements": [],
-  "orphan_artifacts": []
+  "orphan_artifacts": [],
+  "cognitive_trace": {}
 }
 
 ---
@@ -266,6 +267,35 @@ Without traceability:
 - No deterministic building possible
 
 Trace must be complete before any corrective action begins.
+
+---
+
+# 16. Cognitive Augmentation (Non-Authoritative)
+
+The TRACE module MAY invoke the Cognitive Adapter Layer for auxiliary analysis.
+
+This output:
+
+- MUST be stored under `trace.cognitive_trace`
+- MUST NOT affect deterministic mappings
+- MUST NOT modify `mapped_code_units` or `mapped_artifacts`
+- MUST NOT change coverage calculations
+
+The cognitive output is:
+
+- Informational only
+- Non-authoritative
+- Ignored by downstream modules unless explicitly activated by a future contract
+
+Failure of cognitive execution:
+
+- MUST NOT block TRACE
+- MUST NOT alter TRACE outputs
+
+All cognitive operations MUST:
+
+- Pass through the Cognitive Adapter
+- Follow Cognitive Request/Response Contract
 
 ---
 
