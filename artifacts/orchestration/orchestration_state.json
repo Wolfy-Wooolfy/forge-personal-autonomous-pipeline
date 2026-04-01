@@ -1,27 +1,27 @@
 {
-  "run_id": "RUN-4326351BA1E0",
+  "run_id": "RUN-56949C81ED75",
   "run_mode": "RESUME",
-  "started_at": "2026-03-31T15:10:31.507Z",
-  "last_updated_at": "2026-03-31T15:10:32.213Z",
+  "started_at": "2026-04-01T08:52:34.395Z",
+  "last_updated_at": "2026-04-01T08:52:35.018Z",
   "status": "BLOCKED",
   "blocked": true,
-  "blocking_reason": "Verification failed — review artifacts/verify/verification_report.md",
+  "blocking_reason": "Execute BLOCKED: no authorized approved_code_actions and execution artifacts are incomplete.",
   "reason": "Resume from next incomplete module",
   "entry_type": "RESUME",
-  "next_task": "TASK-061: MODULE FLOW — Verify",
-  "next_module": "VERIFY",
-  "current_module": "VERIFY",
+  "next_task": "TASK-054: MODULE FLOW — Execute",
+  "next_module": "EXECUTE",
+  "current_module": "EXECUTE",
   "completed_modules": [
     "TRACE",
     "GAP",
     "DESIGN_EXPLORATION",
     "DECISION_GATE",
-    "BACKFILL",
-    "EXECUTE"
+    "BACKFILL"
   ],
   "pending_modules": [
     "INTAKE",
     "AUDIT",
+    "EXECUTE",
     "VERIFY",
     "CLOSURE"
   ],

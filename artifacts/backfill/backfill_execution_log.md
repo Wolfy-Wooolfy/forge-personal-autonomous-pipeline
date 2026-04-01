@@ -1,21 +1,21 @@
 # MODULE FLOW — Backfill Execution Log
 
-- generated_at: 2026-03-31T15:10:32.038Z
+- generated_at: 2026-04-01T08:52:34.952Z
 - operating_mode: IMPROVE
 - repository_state: MIXED
 - blocked: false
 
 ## Source
 - decision_gate_path: artifacts/decisions/module_flow_decision_gate.json
-- decision_gate_sha256: fbdf21484fdaea9f9c5aa05ac4c13554a8dda45dbdf19e1ebdaf1bc37e8efe19
+- decision_gate_sha256: 7be43969dcd5ed1c2ab4211e1e6349acccf2cb4395fefa8689351e08662233fa
 - intake_context_path: artifacts/intake/intake_context.json
 - intake_context_sha256: eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84
 
 ## Summary
-- approved_actions_seen: 350
-- deterministic_backfill_actions: 350
+- approved_actions_seen: 348
+- deterministic_backfill_actions: 348
 - excluded_non_backfill_actions: 0
-- items_emitted: 350
+- items_emitted: 348
 
 ## Approved Backfill Actions
 - ACT-8d488fa99a61 [UNIMPLEMENTED_REQUIREMENT/HIGH] improve mode bounded non-destructive remediation
@@ -1245,14 +1245,6 @@
 - ACT-e6f47b516ac7 [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: DOC-13::R003
   - action_type: GENERATE_DOCUMENT
-  - deterministic_template_used: true
-- ACT-782d6f9ff5aa [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
-  - target_path: code/src/modules/designExplorationEngine.js
-  - action_type: BACKFILL_RECONCILIATION
-  - deterministic_template_used: true
-- ACT-8a39542c392e [ORPHAN_CODE/MEDIUM] action explicitly marked requires_decision; approved by explicit override
-  - target_path: code/src/modules/designExplorationEngine.js
-  - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 - ACT-9ab2a10b38bc [PARTIAL_COVERAGE/MEDIUM] improve mode bounded non-destructive remediation
   - target_path: HALO-DOC-24::R005

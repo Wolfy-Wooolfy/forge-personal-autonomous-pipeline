@@ -1,28 +1,13 @@
 {
   "execution_id": "MODULE_FLOW_BACKFILL_v2",
-  "generated_at": "2026-03-31T15:10:32.038Z",
+  "generated_at": "2026-04-01T08:52:34.952Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "source": {
     "decision_gate_path": "artifacts/decisions/module_flow_decision_gate.json",
-    "decision_gate_sha256": "fbdf21484fdaea9f9c5aa05ac4c13554a8dda45dbdf19e1ebdaf1bc37e8efe19",
+    "decision_gate_sha256": "7be43969dcd5ed1c2ab4211e1e6349acccf2cb4395fefa8689351e08662233fa",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84"
   },
-  "approved_code_actions": [
-    {
-      "action_id": "ACT-782d6f9ff5aa",
-      "origin_gap_id": "GAP-eb36dafc91a5",
-      "target_file": "code/src/modules/designExplorationEngine.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-8a39542c392e",
-      "origin_gap_id": "GAP-eb36dafc91a5",
-      "target_file": "code/src/modules/designExplorationEngine.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    }
-  ]
+  "approved_code_actions": []
 }

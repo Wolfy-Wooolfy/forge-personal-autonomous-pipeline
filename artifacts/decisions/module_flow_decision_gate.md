@@ -1,6 +1,6 @@
 # MODULE FLOW — Decision Gate
 
-- timestamp: 2026-03-31T15:10:31.973Z
+- timestamp: 2026-04-01T08:52:34.899Z
 - policy: AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK
 - operating_mode: IMPROVE
 - repository_state: MIXED
@@ -8,13 +8,13 @@
 
 ## Source
 - exploration_matrix_path: artifacts/exploration/option_matrix.json
-- exploration_matrix_sha256: 7e6d7e34d33767394fafcbf5f980f8d49c9a9d1a69939dfdd4e52fbd1e480353
+- exploration_matrix_sha256: 63f81685c28ab776b87486e03a264198a411e70ff9b4f81dc0146809df338ee0
 - intake_context_path: artifacts/intake/intake_context.json
 - intake_context_sha256: eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84
 
 ## Summary
-- total_actions: 350
-- approved_count: 350
+- total_actions: 348
+- approved_count: 348
 - review_required_count: 0
 - rejected_count: 0
 
@@ -633,10 +633,6 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-e6f47b516ac7 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-13::R003 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
-- ACT-782d6f9ff5aa [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/modules/designExplorationEngine.js::FILE if it is not part of Forge scope/contracts.
-  - reason: action explicitly marked requires_decision; approved by explicit override
-- ACT-8a39542c392e [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/modules/designExplorationEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
-  - reason: action explicitly marked requires_decision; approved by explicit override
 - ACT-9ab2a10b38bc [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-24::R005 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-149ab9bf1bd3 [UNIMPLEMENTED_REQUIREMENT/HIGH] Implement requirement DOC-20::R007 by adding missing code unit(s) and required artifact(s).

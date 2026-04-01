@@ -1,6 +1,6 @@
 {
-  "execution_id": "GAP-2026-03-31T15:10:31.834Z",
-  "total_gaps": 349,
+  "execution_id": "GAP-2026-04-01T08:52:34.782Z",
+  "total_gaps": 348,
   "critical_count": 0,
   "requires_decision": true,
   "gaps": [
@@ -5220,29 +5220,6 @@
           "description": "Complete coverage for DOC-13::R003 by ensuring both mapped_code_units and mapped_artifacts are present.",
           "impact_scope": "docs/code/artifacts",
           "requires_decision": false
-        }
-      ]
-    },
-    {
-      "gap_id": "GAP-eb36dafc91a5",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "code/src/modules/designExplorationEngine.js"
-      ],
-      "root_cause": "Code unit is exported/detected but not mapped to any requirement by trace rules.",
-      "recommended_actions": [
-        {
-          "action_id": "ACT-782d6f9ff5aa",
-          "description": "Remove or relocate code unit CODE::code/src/modules/designExplorationEngine.js::FILE if it is not part of Forge scope/contracts.",
-          "impact_scope": "code",
-          "requires_decision": true
-        },
-        {
-          "action_id": "ACT-8a39542c392e",
-          "description": "Map code unit CODE::code/src/modules/designExplorationEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).",
-          "impact_scope": "code/trace",
-          "requires_decision": true
         }
       ]
     },

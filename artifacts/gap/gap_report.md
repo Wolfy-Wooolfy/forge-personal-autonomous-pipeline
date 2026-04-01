@@ -1,7 +1,7 @@
 # Gap Report
 
 ## Summary
-- total_gaps: 349
+- total_gaps: 348
 - critical_count: 0
 - requires_decision: true
 
@@ -1541,12 +1541,6 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-e6f47b516ac7: Complete coverage for DOC-13::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [ORPHAN_CODE] GAP-eb36dafc91a5
-  - affected_entities: code/src/modules/designExplorationEngine.js
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
-  - actions:
-    - ACT-782d6f9ff5aa: Remove or relocate code unit CODE::code/src/modules/designExplorationEngine.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
-    - ACT-8a39542c392e: Map code unit CODE::code/src/modules/designExplorationEngine.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-ec6d1b6958fb
   - affected_entities: HALO-DOC-24::R005
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).

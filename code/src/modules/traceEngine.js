@@ -351,6 +351,19 @@ function mapDeterministically(requirements, codeUnits, artifacts, intakeContext)
       if (artifactsSet.has("artifacts/gap/gap_report.md")) mapped_artifacts.push("artifacts/gap/gap_report.md");
     }
 
+    if (
+      title.includes("design exploration") ||
+      section.includes("design exploration") ||
+      document.includes("design exploration") ||
+      title.includes("exploration") ||
+      section.includes("exploration") ||
+      document.includes("exploration")
+    ) {
+      for (const u of codeUnits) {
+        if (u.file_path.includes("modules/designExplorationEngine.js")) mapped_code_units.push(u.unit_id);
+      }
+    }
+
     if (title.includes("decision") || section.includes("decision") || document.includes("decision")) {
       for (const u of codeUnits) {
         if (u.file_path.includes("modules/decisionGate.js")) mapped_code_units.push(u.unit_id);
