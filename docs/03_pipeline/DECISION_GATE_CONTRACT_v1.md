@@ -174,6 +174,46 @@ Decision Packet MUST include:
 
 ---
 
+### Cognitive Priority Hint Interpretation
+
+The field `cognitive_priority_hint` represents a normalized score in the range:
+
+0.0 → 1.0
+
+Interpretation Rules:
+
+- 0.0 → lowest priority relevance
+- 1.0 → highest priority relevance
+- null → no cognitive input available
+
+Usage Constraints:
+
+- The score MUST NOT override deterministic decision logic
+- The score MUST NOT change option eligibility
+- The score MUST NOT introduce new options
+
+Permitted Usage:
+
+- Ranking within same severity group
+- UI ordering (optional)
+- Future advisory sorting mechanisms
+
+Prohibited Usage:
+
+- Decision override
+- Gap severity modification
+- Auto-selection of options
+
+Deterministic Precedence Rule:
+
+If any conflict exists between:
+- deterministic rules
+- cognitive hint
+
+→ deterministic rules ALWAYS win
+
+---
+
 # 6. Blocking State Enforcement
 
 Upon Decision Gate activation:

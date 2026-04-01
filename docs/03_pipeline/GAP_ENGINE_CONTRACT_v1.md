@@ -24,6 +24,41 @@ Gap produces structured corrective actions only.
 
 ---
 
+### Cognitive Augmentation (Advisory Only)
+
+The GAP module MAY utilize cognitive analysis as an auxiliary input
+to assist in gap prioritization and classification.
+
+Constraints:
+
+- Cognitive input MUST originate from Cognitive Adapter artifacts
+- Cognitive input MUST NOT generate new gaps
+- Cognitive input MUST NOT suppress existing gaps
+- Cognitive input MUST NOT alter severity levels directly
+
+Permitted Use:
+
+- Suggest prioritization hints
+- Highlight potential hidden patterns
+- Provide contextual grouping signals
+
+Prohibited Use:
+
+- Creating gaps not derived from deterministic trace
+- Modifying gap definitions
+- Altering gap_actions structure
+
+Failure Handling:
+
+- Missing or failed cognitive input MUST NOT block GAP execution
+
+Authority Rule:
+
+- GAP output remains strictly deterministic
+- Cognitive signals are advisory only
+
+---
+
 # 2. Activation Preconditions
 
 Gap may execute ONLY IF:
