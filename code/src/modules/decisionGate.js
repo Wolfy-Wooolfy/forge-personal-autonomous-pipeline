@@ -279,14 +279,55 @@ function runDecisionGate(context) {
   const flatActions = flattenGapActions(actionsObj);
 
   if (flatActions.length === 0) {
+    const decisionsDirAbs = path.resolve(ROOT, "artifacts", "decisions");
+    ensureDir(decisionsDirAbs);
+
+    const relDecisionJson = "artifacts/decisions/module_flow_decision_gate.json";
+    const relDecisionMd = "artifacts/decisions/module_flow_decision_gate.md";
+
+    const decisionJsonAbs = path.resolve(ROOT, relDecisionJson);
+    const decisionMdAbs = path.resolve(ROOT, relDecisionMd);
+
+    const intakeText = JSON.stringify(intakeContext, null, 2);
+    const stamp = new Date().toISOString();
+
+    const decisionPayload = {
+      decision_id: "MODULE_FLOW_DECISION_GATE",
+      timestamp: stamp,
+      task: "TASK-052",
+      policy: "AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK",
+      operating_mode: intakeContext.operating_mode,
+      repository_state: intakeContext.repository_state,
+      override_mode: decision.mode,
+      source: {
+        exploration_matrix_path: "artifacts/exploration/option_matrix.json",
+        exploration_matrix_sha256: sha256Text(JSON.stringify(actionsObj, null, 2)),
+        intake_context_path: "artifacts/intake/intake_context.json",
+        intake_context_sha256: sha256Text(intakeText)
+      },
+      summary: {
+        total_actions: 0,
+        approved_count: 0,
+        review_required_count: 0,
+        rejected_count: 0
+      },
+      approved_actions: [],
+      review_required_actions: [],
+      rejected_actions: [],
+      blocked: false
+    };
+
+    fs.writeFileSync(decisionJsonAbs, JSON.stringify(decisionPayload, null, 2), { encoding: "utf8" });
+    fs.writeFileSync(decisionMdAbs, renderDecisionMd(decisionPayload), { encoding: "utf8" });
+
     return {
       stage_progress_percent: 100,
-      blocked: true,
+      artifact: relDecisionMd,
+      outputs: { md: relDecisionMd, json: relDecisionJson },
+      blocked: false,
       status_patch: {
-        next_step: "",
-        blocking_questions: [
-          "Decision Gate BLOCKED: no exploration items found in artifacts/exploration/option_matrix.json."
-        ]
+        blocking_questions: [],
+        next_step: "MODULE FLOW — Decision Gate COMPLETE. Next=Backfill (implement backfillEngine + task bridge)."
       }
     };
   }

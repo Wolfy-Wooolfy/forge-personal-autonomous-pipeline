@@ -153,13 +153,27 @@ function runDesignExploration(context) {
   const actions = normalizeGapActions(rawPayload);
 
   if (actions.length === 0) {
+    writeJson("artifacts/exploration/option_matrix.json", {
+      generated_by: "runDesignExploration",
+      source_artifact: gapActionsPath,
+      total_items: 0,
+      items: []
+    });
+
+    writeText(
+      "artifacts/exploration/exploration_report.md",
+      "# Design Exploration Report\n\nNo actionable entries were found in artifacts/gap/gap_actions.json.\n"
+    );
+
     return {
-      blocked: true,
+      blocked: false,
+      artifact: "artifacts/exploration/exploration_report.md",
+      outputs: {
+        md: "artifacts/exploration/exploration_report.md",
+        json: "artifacts/exploration/option_matrix.json"
+      },
       status_patch: {
-        next_step: "",
-        blocking_questions: [
-          "Design Exploration blocked: no actionable entries were found in artifacts/gap/gap_actions.json."
-        ]
+        next_step: "MODULE FLOW — Design Exploration COMPLETE. Next=Decision Gate."
       }
     };
   }

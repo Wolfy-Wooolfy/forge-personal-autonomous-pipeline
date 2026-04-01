@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-01T10:09:59.474Z",
-  "blocked": true,
-  "status": "FAIL",
-  "outcome": "FAIL",
-  "final_outcome": "FAIL",
+  "generated_at": "2026-04-01T11:00:35.028Z",
+  "blocked": false,
+  "status": "PASS",
+  "outcome": "PASS",
+  "final_outcome": "PASS",
   "summary": {
     "total_checks": 18,
-    "failed_checks": 1
+    "failed_checks": 0
   },
   "closure_gate": {
-    "gap_count": 13,
+    "gap_count": 0,
     "critical_violations": 0,
     "orphan_code_units": 0,
     "orphan_requirements": 0,
@@ -17,7 +17,7 @@
     "deterministic_confirmation_ready": true,
     "execute_artifacts_complete": true,
     "decision_artifact_present": true,
-    "closure_contract_ready": false
+    "closure_contract_ready": true
   },
   "checks": [
     {
@@ -68,12 +68,12 @@
     {
       "name": "execute_plan_matches_backfill_plan",
       "passed": true,
-      "detail": "backfill_actions=13; execute_actions=13"
+      "detail": "backfill_actions=0; execute_actions=0"
     },
     {
       "name": "gap_count_zero",
-      "passed": false,
-      "detail": "gap_count=13"
+      "passed": true,
+      "detail": "gap_count=0"
     },
     {
       "name": "critical_violations_zero",
