@@ -292,7 +292,7 @@ In an Execution Abort:
 - No Decision MUST be logged
 
 Human visibility MUST occur ONLY through  
-the authoritative execution state  
+the authoritative status reflection  
 in `progress/status.json`.
 
 Execution Abort enforces boundaries.  

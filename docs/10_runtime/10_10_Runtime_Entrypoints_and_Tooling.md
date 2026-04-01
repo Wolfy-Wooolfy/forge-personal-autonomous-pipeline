@@ -16,31 +16,33 @@ It is execution-bound in the sense that:
 
 ### 2.1 Primary CLI Entrypoints
 
-#### A) Single-step autonomy runner
+#### A) Governed autonomous runner
 Path:
-- bin/halo-autonomy-step.js
+- bin/forge-autonomous-run.js
 
 Purpose:
-- Executes exactly one bounded autonomy step.
-- Reads progress/status.json for next_step.
-- Enforces idempotency at task/artifact level.
-
-Expected behavior:
-- If next_step is empty or READY, exits without mutation.
-- If next_step indicates a task handler, dispatches to task executor.
-
-#### B) Full run orchestrator
-Path:
-- bin/halo-run.js
-
-Purpose:
-- Executes the orchestrated pipeline run.
-- Delegates to orchestrator modules.
-- Uses status_writer to persist progress mutations.
+- Executes the governed Forge pipeline run.
+- Resolves entry from authoritative runtime artifacts.
+- Writes governed Forge/orchestration state and keeps status reflection synchronized.
 
 Expected behavior:
 - Fail-closed: stops on any contract mismatch or idempotency violation.
 - Deterministic: same inputs produce same artifacts.
+- If the pipeline is already complete, emits `PIPELINE COMPLETE — NO ACTION REQUIRED` without mutating execution continuity.
+
+#### B) Legacy status-driven wrappers
+Paths:
+- bin/halo-run.js
+- bin/halo-autonomy-step.js
+- bin/forge.js
+
+Purpose:
+- Provide bounded compatibility tooling around the older status-driven runtime path.
+- Support direct status-driven runs where explicitly invoked.
+
+Expected behavior:
+- They MUST NOT override governed runtime authority.
+- They are subordinate to `bin/forge-autonomous-run.js` for current autonomous execution claims.
 
 ### 2.2 Core Runtime Modules
 
@@ -53,7 +55,7 @@ Paths:
 Responsibilities:
 - runner.js: runtime control loop and bounded execution sequencing.
 - stage_transitions.js: gate and stage transition enforcement.
-- status_writer.js: authoritative state mutation to progress/status.json.
+- status_writer.js: governed mutation of the human-visible status reflection at `progress/status.json`.
 
 #### Task Execution
 Paths:
@@ -110,5 +112,6 @@ Purpose:
 
 ## 6) Non-authority Clause
 
-This document does not override progress/status.json.
-The next_step in progress/status.json remains the only authority for what runs next.
+This document does not override the governed runtime authority model.
+`progress/status.json` is a reflection/output artifact for status visibility.
+Execution authority remains with `artifacts/forge/forge_state.json`, `artifacts/orchestration/orchestration_state.json`, authoritative task closures under `artifacts/tasks/*`, and deterministic module order in `code/src/orchestrator/pipeline_definition.js`.

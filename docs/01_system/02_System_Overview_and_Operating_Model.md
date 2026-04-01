@@ -119,7 +119,7 @@ For the purpose of this system, the following terms are canonical and non-negoti
   - Sequencing pipeline stages
   - Invoking agents and tools
   - Enforcing validation gates
-  - Writing authoritative execution state
+  - Writing governed execution state artifacts and authoritative progress reflections
   - Halting execution on undefined or invalid behavior  
 
   The Pipeline Orchestrator does NOT:

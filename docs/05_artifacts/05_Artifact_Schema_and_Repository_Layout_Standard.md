@@ -323,13 +323,13 @@ Decision authority exists ONLY in `/decisions`.
 
 ## 4.5 Progress Artifacts
 
-Progress artifacts represent the **authoritative execution state**
+Progress artifacts represent the **authoritative progress/status reflection layer**
 and are governed by strict isolation and authority rules.
 
 Progress artifacts are divided into TWO
 and ONLY TWO layers:
 
-1. Live Execution State (Authoritative)  
+1. Live Status Reflection (Authoritative for reporting fidelity)  
 2. Historical Records (Non-Authoritative)
 
 No other progress representation is permitted.

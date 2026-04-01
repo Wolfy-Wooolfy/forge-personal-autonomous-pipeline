@@ -477,7 +477,7 @@ When a Fail-Closed event occurs, the system MUST:
 
 1) Stop execution immediately
 2) Preserve current state without mutation
-3) Write the authoritative execution state to:
+3) Write the authoritative status reflection to:
    `progress/status.json` (Doc-06 compliant)
 4) Ensure a Boundary Audit failure artifact exists under:
    `verify/audit/` (Section 2.2.1)

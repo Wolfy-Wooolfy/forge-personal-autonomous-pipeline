@@ -17,18 +17,20 @@ It exists to:
 
 ## 2) Coverage Map — Runtime Entrypoints
 
-### 2.1 bin/halo-autonomy-step.js
+### 2.1 bin/forge-autonomous-run.js
 Covered by:
 - docs/10_runtime/10_10_Runtime_Entrypoints_and_Tooling.md (Section 2.1.A)
 Implements:
-- Single bounded autonomy step execution
-- next_step dispatch behavior
+- Governed autonomous pipeline execution
+- Entry resolution from authoritative runtime artifacts
+- Forge/orchestration state synchronization
 
-### 2.2 bin/halo-run.js
+### 2.2 Legacy runtime wrappers
 Covered by:
 - docs/10_runtime/10_10_Runtime_Entrypoints_and_Tooling.md (Section 2.1.B)
 Implements:
-- Orchestrated run execution
+- Compatibility status-driven execution wrappers
+- Direct status-based run/step tooling when explicitly invoked
 
 ## 3) Coverage Map — Orchestrator
 
@@ -48,7 +50,7 @@ Implements:
 Covered by:
 - docs/10_runtime/10_10_Runtime_Entrypoints_and_Tooling.md (Section 2.2)
 Implements:
-- Authoritative mutations to progress/status.json
+- Governed mutations to the progress/status reflection
 
 ## 4) Coverage Map — Task Execution
 
@@ -97,5 +99,5 @@ Implements:
 
 ## 8) Non-authority Clause
 
-This document does not override progress/status.json.
-progress/status.json remains the only authority for next_step execution order.
+This document does not override the governed runtime authority model.
+`progress/status.json` is a reflection/output artifact and MUST remain aligned with higher-authority runtime artifacts.

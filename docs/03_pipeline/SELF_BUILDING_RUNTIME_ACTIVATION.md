@@ -104,54 +104,56 @@ Selected module begins execution.
 
 ---
 
-# 5. progress/status.json Authority
+# 5. Runtime Authority
 
-The file:
+The authoritative runtime state is carried by:
 
-```
+- `artifacts/forge/forge_state.json`
+- `artifacts/orchestration/orchestration_state.json`
+- authoritative task closure continuity under `artifacts/tasks/*`
+- deterministic module order declared in `code/src/orchestrator/pipeline_definition.js`
 
-progress/status.json
+These artifacts define:
 
-```
+- pipeline continuity
+- current task lineage
+- execution integrity
+- next allowed step
+- closure validity
 
-is the authoritative runtime state descriptor.
+Forge MUST treat these artifacts as the execution source of truth.
 
-It defines:
+No module may bypass them.
 
-- pipeline state
-- stage progress
-- blocking conditions
-- next deterministic step
-
-Forge MUST treat status.json as the single source of truth.
-
-No module may bypass this file.
+`progress/status.json` remains a reflection/output artifact for human-visible status only.
 
 ---
 
 # 6. Execution State Recognition
 
-Forge MUST recognize the following states.
+Forge MUST recognize the following runtime states.
 
 ### READY
 
-System may begin execution.
+A project context has been initialized and is eligible for governed startup.
 
 ### RUNNING
 
-A module is actively executing.
+A valid next module has been resolved from authoritative execution artifacts.
 
 ### BLOCKED
 
-Execution halted due to a human interrupt.
+Execution is halted because authoritative artifacts prove ambiguity,
+contract failure,
+or an invalid continuation path.
 
 ### ABORTED
 
-Execution terminated due to no valid path.
+Execution is terminated because no valid governed continuation exists.
 
-### CLOSED
+### COMPLETE
 
-Lifecycle execution completed successfully.
+Lifecycle execution completed successfully with authoritative closure continuity.
 
 Modules MUST respect these states.
 
@@ -159,19 +161,13 @@ Modules MUST respect these states.
 
 # 7. Resume Behavior
 
-If runtime activation occurs while:
-
-```
-
-status = RUNNING
-
-```
-
+If runtime activation occurs while authoritative execution artifacts indicate RUNNING,
 Forge MUST:
 
 - verify artifact integrity
-- determine last completed module
-- resume execution from next module
+- determine the last contiguous closed module from `artifacts/tasks/*`
+- verify `forge_state.json` consistency
+- resume from the next deterministic module in `pipeline_definition.js`
 
 Partial module execution MUST NOT resume.
 
@@ -181,39 +177,25 @@ Modules are atomic.
 
 # 8. Blocked State Handling
 
-If:
-
-```
-
-status = BLOCKED
-
-```
-
+If authoritative execution artifacts indicate BLOCKED,
 Forge MUST:
 
 - halt module execution
-- wait for resolution of blocking_questions
-- verify resolution artifact
+- preserve the blocking reason in governed state artifacts
+- refuse continuation until the blocking condition is remediated through valid artifacts
 
-Execution may resume ONLY after resolution.
+Execution may resume ONLY after governed continuity is restored.
 
 ---
 
 # 9. Aborted Execution Handling
 
-If:
-
-```
-
-status = ABORTED
-
-```
-
+If authoritative execution artifacts indicate ABORTED,
 Forge MUST:
 
 - terminate execution attempt
 - prevent automatic restart
-- require new task registration
+- require a new governed continuation path
 
 Aborted runs are terminal.
 
@@ -221,28 +203,18 @@ Aborted runs are terminal.
 
 # 10. Lifecycle Initialization
 
-If status.json does not exist
+If governed runtime state does not exist
 and a new project is introduced:
 
-Forge MUST initialize:
+Forge MUST initialize authoritative runtime state artifacts,
+including:
 
-```
+- `artifacts/forge/forge_state.json`
+- `artifacts/orchestration/orchestration_state.json` when orchestration begins
+- `progress/status.json` as a reflection/output artifact
 
-progress/status.json
-
-```
-
-with:
-
-```
-
-state = READY
-stage = A
-progress = 0
-
-```
-
-Then begin Intake Module.
+Initialization MUST establish a deterministic starting point
+that resolves to the Intake Module through governed runtime logic.
 
 ---
 
@@ -308,7 +280,7 @@ is strictly forbidden.
 The Runtime Activation Protocol guarantees that:
 
 - Forge begins execution only under deterministic conditions
-- runtime state is controlled by status.json
+- runtime state is controlled by governed execution artifacts
 - lifecycle modules execute in proper order
 - autonomous execution remains auditable
 

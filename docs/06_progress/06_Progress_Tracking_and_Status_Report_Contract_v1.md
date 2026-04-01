@@ -9,7 +9,7 @@
 
 ## 1. Purpose
 
-This document defines the **single, authoritative mechanism** by which progress is tracked, reported, and queried inside the Autonomous Pipeline.
+This document defines the **single, authoritative progress-reporting mechanism** by which progress is tracked, reported, and queried inside the Autonomous Pipeline. It does NOT define execution control authority.
 
 The objective is to ensure that:
 
@@ -166,9 +166,9 @@ by the contents of:
 There is NO distinction between:
 
 * A “status report”
-* The live execution state file
+* The live status reflection file
 
-They are the SAME artifact.
+They are the SAME artifact for human-visible status.
 
 Any status report:
 
@@ -184,6 +184,9 @@ summaries,
 or derived representations
 are permitted.
 
+`progress/status.json` is authoritative for reporting fidelity only.
+It does NOT override execution authority carried by higher-order runtime artifacts.
+
 If a reported status differs in ANY way
 from `progress/status.json`:
 
@@ -193,10 +196,11 @@ from `progress/status.json`:
 
 ---
 
-### 3.1 Execution State Representation (Mandatory)
+### 3.1 Status-State Representation (Mandatory)
 
-The execution state is derived deterministically
+The reported state is derived deterministically
 from the status report fields.
+This representation is for status/reporting consistency only and MUST remain aligned with higher-authority execution artifacts.
 
 Exactly ONE execution state MUST apply:
 
@@ -226,7 +230,7 @@ is invalid.
 
 ## 3.0.1 Project Addressability Contract (Hard)
 
-`progress/status.json` represents the authoritative execution state
+`progress/status.json` represents the authoritative progress/status reflection
 for exactly ONE active project context.
 
 Forge MUST treat execution state as project-addressable.
@@ -247,7 +251,7 @@ However:
 The architecture MUST NOT assume permanent singleton execution.
 
 If future multi-project support requires redefining
-the authority model of `progress/status.json`:
+the reporting model of `progress/status.json`:
 
 - The architecture is considered defective.
 
@@ -469,9 +473,9 @@ and no valid fork exists:
 
 ### 4.8 next_step
 
-The next_step field represents
+The next_step field reflects
 ONE and ONLY ONE
-immediately executable action.
+immediately executable action as resolved by higher-authority execution artifacts.
 
 Rules:
 
