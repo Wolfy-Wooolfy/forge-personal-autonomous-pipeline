@@ -464,38 +464,68 @@ is a system violation.
 
 ---
 
-## 4.6 Cognitive Engine Interaction Artifacts (Mandatory)
+## 4.6 Cognitive Artifacts Governance
 
-All interactions with the external Cognitive Engine
-MUST be persisted as artifacts under the following structure:
+Forge distinguishes between two separate artifact classes:
 
-projects/<project_id>/artifacts/llm/prompts/<task_id>.prompt.txt  
-projects/<project_id>/artifacts/llm/responses/<task_id>.response.txt  
-projects/<project_id>/artifacts/llm/metadata/<task_id>.json  
+### A) Internal Cognitive Adapter Artifacts
 
-### Metadata Requirements
+All internal cognitive operations executed through the Cognitive Adapter
+MUST be persisted under:
 
-The metadata file MUST include:
+artifacts/cognitive/<response_id>/raw_response.json  
+artifacts/cognitive/<response_id>/normalized_response.json  
 
-- provider (string)
-- model_id (string)
-- timestamp (ISO format)
-- stage
+These artifacts are the authoritative storage format
+for provider-agnostic cognitive execution inside Forge.
+
+#### Governance Rules
+
+Internal cognitive artifacts MUST:
+
+- Be produced only through the Cognitive Adapter
+- Store both raw and normalized forms
+- Preserve request/response linkage
+- Remain non-authoritative for execution decisions unless a module contract explicitly activates downstream use
+
+Missing internal cognitive artifacts
+constitute a cognitive execution integrity violation.
+
+---
+
+### B) External Cognitive Engine Interaction Logs
+
+If Forge later invokes an external provider or model,
+the provider-specific interaction logs MUST be persisted separately.
+
+These external interaction logs are NOT a replacement
+for internal cognitive artifacts.
+
+They MUST include, at minimum:
+
+- provider
+- model_id
+- timestamp
 - task_id
 - token_usage (if available)
 - execution_context (optional summary)
 
+Their final repository location may be implementation-specific,
+but they MUST remain logically separate from:
+
+artifacts/cognitive/
+
+---
+
 ### Governance Rule
 
-No Cognitive Engine output is considered valid
-unless:
+No external cognitive provider output is considered governance-valid unless:
 
-1. Prompt is stored
-2. Response is stored
-3. Metadata is stored
-4. Artifact passes integrity validation
+1. Internal cognitive artifacts exist
+2. Provider interaction logging exists when an external provider is used
+3. Normalized output passes integrity validation
 
-Missing interaction logs
+Missing required cognitive logs
 constitute a governance violation.
 
 ---
