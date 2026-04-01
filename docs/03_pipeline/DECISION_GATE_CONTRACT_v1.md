@@ -164,7 +164,8 @@ Decision Packet MUST include:
       "description": "",
       "impact_scope": "",
       "risk_level": "",
-      "downstream_effects": []
+      "downstream_effects": [],
+      "cognitive_priority_hint": null
     }
   ],
   "recommendation_reference": "",

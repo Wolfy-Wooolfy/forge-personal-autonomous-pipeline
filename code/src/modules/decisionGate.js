@@ -152,6 +152,72 @@ function flattenGapActions(gapPayload) {
   return rows;
 }
 
+function normalizeCognitivePriorityHint(value) {
+  if (typeof value !== "number" || Number.isNaN(value)) {
+    return null;
+  }
+
+  if (value < 0 || value > 1) {
+    return null;
+  }
+
+  return Number(value.toFixed(4));
+}
+
+function readTraceCognitivePayload() {
+  const traceMatrixAbs = path.resolve(ROOT, "artifacts", "trace", "trace_matrix.json");
+
+  if (!fs.existsSync(traceMatrixAbs)) {
+    return null;
+  }
+
+  const tracePayload = readJson(traceMatrixAbs);
+
+  if (!tracePayload || typeof tracePayload !== "object") {
+    return null;
+  }
+
+  if (!Object.prototype.hasOwnProperty.call(tracePayload, "cognitive_trace")) {
+    return null;
+  }
+
+  return tracePayload.cognitive_trace;
+}
+
+function resolveCognitivePriorityHint(row, cognitiveTrace) {
+  if (!cognitiveTrace || typeof cognitiveTrace !== "object") {
+    return null;
+  }
+
+  const output =
+    cognitiveTrace.output &&
+    typeof cognitiveTrace.output === "object" &&
+    Object.prototype.hasOwnProperty.call(cognitiveTrace.output, "content")
+      ? cognitiveTrace.output.content
+      : null;
+
+  if (!output || typeof output !== "object") {
+    return null;
+  }
+
+  const directMatches = Array.isArray(output.priority_hints) ? output.priority_hints : [];
+
+  for (const item of directMatches) {
+    if (!item || typeof item !== "object") {
+      continue;
+    }
+
+    const actionId = typeof item.action_id === "string" ? item.action_id : "";
+    const gapId = typeof item.gap_id === "string" ? item.gap_id : "";
+
+    if ((actionId && actionId === row.action_id) || (gapId && gapId === row.gap_id)) {
+      return normalizeCognitivePriorityHint(item.score);
+    }
+  }
+
+  return null;
+}
+
 function renderDecisionMd(payload) {
   const lines = [];
 
@@ -183,6 +249,9 @@ function renderDecisionMd(payload) {
     for (const row of payload.approved_actions) {
       lines.push(`- ${row.action_id} [${row.category}/${row.severity}] ${row.description}`);
       lines.push(`  - reason: ${row.reason}`);
+      if (row.cognitive_priority_hint !== null) {
+        lines.push(`  - cognitive_priority_hint: ${row.cognitive_priority_hint}`);
+      }
     }
   }
   lines.push("");
@@ -194,6 +263,9 @@ function renderDecisionMd(payload) {
     for (const row of payload.review_required_actions) {
       lines.push(`- ${row.action_id} [${row.category}/${row.severity}] ${row.description}`);
       lines.push(`  - reason: ${row.reason}`);
+      if (row.cognitive_priority_hint !== null) {
+        lines.push(`  - cognitive_priority_hint: ${row.cognitive_priority_hint}`);
+      }
     }
   }
   lines.push("");
@@ -205,6 +277,9 @@ function renderDecisionMd(payload) {
     for (const row of payload.rejected_actions) {
       lines.push(`- ${row.action_id} [${row.category}/${row.severity}] ${row.description}`);
       lines.push(`  - reason: ${row.reason}`);
+      if (row.cognitive_priority_hint !== null) {
+        lines.push(`  - cognitive_priority_hint: ${row.cognitive_priority_hint}`);
+      }
     }
   }
   lines.push("");
@@ -257,6 +332,8 @@ function runDecisionGate(context) {
   const decision = parseDecisionFromStatus(status);
   const actionsObj = readJson(explorationMatrixAbs);
   const intakeContext = readJson(intakeContextAbs);
+
+  const traceCognitivePayload = readTraceCognitivePayload();
 
   const validOperatingMode =
     intakeContext &&
@@ -352,6 +429,7 @@ function runDecisionGate(context) {
       description: row.description,
       impact_scope: row.impact_scope,
       requires_decision: row.requires_decision,
+      cognitive_priority_hint: resolveCognitivePriorityHint(row, traceCognitivePayload),
       reason: verdict.reason
     };
 
