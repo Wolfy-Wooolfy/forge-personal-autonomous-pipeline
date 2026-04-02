@@ -574,7 +574,9 @@ is a system violation.
 
 Upon any Boundary Audit FAIL:
 
-1) The orchestrator MUST first write the authoritative blocked/aborted state to:
+1) The orchestrator MUST first write the authoritative blocked/aborted state to governed runtime authority artifacts
+
+2) The orchestrator MUST then mirror the blocked/aborted status reflection to:
    `progress/status.json` (Doc-06 compliant), including:
    - `current_stage` (the owning stage of the failed artifact)
    - `blocking_questions`:
@@ -582,7 +584,7 @@ Upon any Boundary Audit FAIL:
      - empty array if Execution Abort applies
    - `next_step` MUST be an empty string
 
-2) After the state is written, `progress/status.json` enters a Progress Freeze.
+3) After the reflection state is written, `progress/status.json` enters a Progress Freeze.
 
 Progress Freeze means:
 - No further mutation is permitted
