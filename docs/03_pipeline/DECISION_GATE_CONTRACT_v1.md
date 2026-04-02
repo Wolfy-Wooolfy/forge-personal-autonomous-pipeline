@@ -220,7 +220,8 @@ Upon Decision Gate activation:
 
 System MUST:
 
-- Write BLOCKED state into progress/status.json
+- Write BLOCKED state into governed runtime authority artifacts
+- Mirror the blocked state into `progress/status.json` only as reflection/output
 - Suspend execution
 - Prevent Backfill
 - Prevent Execute

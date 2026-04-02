@@ -202,7 +202,7 @@ The system MUST NOT:
 - Infer missing intent
 - Continue optimistically
 
-BLOCKED state MUST be written into progress/status.json.
+BLOCKED state MUST be written into governed runtime authority artifacts, and MAY be mirrored into `progress/status.json` as reflection/output.
 
 ---
 
@@ -338,7 +338,7 @@ Soft warnings are not permitted.
 
 System activates when:
 
-- progress/status.json indicates READY
+- governed runtime authority artifacts resolve a valid deterministic entry state
 - Or a new execution task is registered
 
 Activation MUST:

@@ -129,7 +129,8 @@ After Closure:
 - All artifacts become immutable
 - Governance docs must not change
 - Any modification requires new execution cycle
-- progress/status.json must update to reflect stable state
+- governed runtime authority artifacts must finalize stable completion state
+- `progress/status.json` may update to reflect the stable state as output only
 
 Silent modification is forbidden.
 

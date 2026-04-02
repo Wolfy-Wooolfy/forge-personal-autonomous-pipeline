@@ -14,10 +14,10 @@
 
 ---
 
-### A-002 - Status authority is file-based
-**Statement:** `progress/status.json` is the single authoritative live execution state for the pipeline.  
+### A-002 - Runtime authority is split by state role
+**Statement:** Forge runtime authority is file-based but not singular. `artifacts/forge/forge_state.json` is the authoritative Forge self-build state, `artifacts/orchestration/orchestration_state.json` is the authoritative runtime execution state for the current run, and `progress/status.json` is a non-authoritative reflection/output artifact for human-visible target-project progress only.  
 **Status:** VALIDATED  
-**Evidence:** `progress/status.json` exists and is already being updated deterministically.
+**Evidence:** Current governed runtime contracts and entrypoint tooling bind execution continuity to Forge/orchestration artifacts and treat `progress/status.json` as reflection only.
 
 ---
 

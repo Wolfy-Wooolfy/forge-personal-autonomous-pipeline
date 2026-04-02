@@ -323,7 +323,8 @@ Decision authority exists ONLY in `/decisions`.
 
 ## 4.5 Progress Artifacts
 
-Progress artifacts represent the **authoritative progress/status reflection layer**
+Progress artifacts represent the **authoritative reporting/reflection layer**
+for human-visible status only and do NOT carry execution authority.
 and are governed by strict isolation and authority rules.
 
 Progress artifacts are divided into TWO
@@ -350,7 +351,9 @@ ONE file and ONE file only:
 
 Rules:
 - JSON format ONLY
-- Single source of truth
+- Target-project reporting artifact
+- Human-visible progress/state reflection
+- ZERO execution authority for Forge self-build control
 - Always overwritten
 - No append behavior
 - No narration

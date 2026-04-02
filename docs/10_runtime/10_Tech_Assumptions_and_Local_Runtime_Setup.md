@@ -119,12 +119,15 @@ is a critical system violation.
 
 The system may resume runtime ONLY when ALL are true:
 
-- `progress/status.json` exists, AND
-- `progress/status.json` is schema-valid per Doc-06, AND
+- `artifacts/forge/forge_state.json` exists and is schema-valid for Forge self-build continuity, AND
+- `artifacts/orchestration/orchestration_state.json` exists and is schema-valid for current-run continuity when a governed run is already in progress, AND
 - Startup validation confirms repository structure and required governance docs, AND
-- Execution state derived deterministically from `progress/status.json` is exactly ONE of:
+- Execution state derived deterministically from governed runtime artifacts is exactly ONE of:
   - RUNNING, OR
   - BLOCKED
+
+`progress/status.json` MAY exist and MAY be validated as a reflection artifact,
+but it MUST NOT be used as the source of resume authority.
 
 If state is BLOCKED:
 - The runtime MAY start in a non-executing mode
@@ -423,8 +426,15 @@ The system MUST persist state exclusively
 through schema-bound artifacts,
 not narrative files.
 
-The single authoritative live execution state is:
+Authoritative persisted state is role-separated.
 
+Forge self-build authority:
+`artifacts/forge/forge_state.json`
+
+Runtime execution authority:
+`artifacts/orchestration/orchestration_state.json`
+
+Human-visible status reflection:
 `progress/status.json`
 
 All other persisted state representations
@@ -455,14 +465,18 @@ never rebuilt.
 Persistent execution state is authoritative
 and MUST be schema-bound.
 
-The single authoritative live execution state is:
-`progress/status.json`
-as defined EXCLUSIVELY by:
-- Progress Tracking & Status Report Contract (v1)
+There is no single authoritative live execution file.
 
-Therefore, mandatory persistent state elements
-MUST be representable within the current
-approved `progress/status.json` schema.
+Authoritative persistent state is split as follows:
+- Forge self-build authority: `artifacts/forge/forge_state.json`
+- Runtime execution authority: `artifacts/orchestration/orchestration_state.json`
+
+`progress/status.json` remains mandatory only as a status reflection/output artifact
+and MUST NOT be treated as execution authority.
+
+Therefore, mandatory execution state elements
+MUST be representable within the governed Forge/orchestration state schemas,
+while status-reporting elements remain representable in `progress/status.json`.
 
 Mandatory elements include (if supported by the approved schema):
 - Current pipeline stage
@@ -594,7 +608,9 @@ exist and are writable before any execution begins.
 
 Mandatory writable paths:
 
-- `progress/status.json` (when execution state is RUNNING or BLOCKED)
+- `artifacts/forge/forge_state.json`
+- `artifacts/orchestration/orchestration_state.json`
+- `progress/status.json` (reflection/output layer)
 - `verify/audit/` (directory must exist and be writable)
 - `verify/unit/` (directory must exist and be writable)
 - `verify/unit/verification_report.json` (must be creatable/overwritable by the verifier layer)
@@ -626,7 +642,7 @@ If any mandatory path is missing or not writable:
   - a historical snapshot under `progress/history/`
   - triggered by deterministic events
   - and MUST NEVER be used for live execution state
-  - live state remains exclusively `progress/status.json`
+  - live execution authority remains exclusively in governed Forge/orchestration state artifacts, while `progress/status.json` remains a reflection layer only
 
 ---
 

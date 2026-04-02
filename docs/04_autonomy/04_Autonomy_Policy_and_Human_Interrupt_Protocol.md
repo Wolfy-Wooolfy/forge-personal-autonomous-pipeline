@@ -76,8 +76,9 @@ and no contract-compliant continuation path exists:
 - No questions MUST be asked
 
 Human visibility after Execution Abort  
-MUST occur ONLY via `progress/status.json`  
-as governed by the Progress Tracking & Status Report Contract (v1).
+MUST occur through the governed status reflection channel,  
+with execution authority remaining in governed runtime artifacts  
+and human-visible rendering allowed via `progress/status.json`.
 
 No narrative notification,  
 message framing,  
@@ -291,9 +292,10 @@ In an Execution Abort:
 - No questions MUST be asked
 - No Decision MUST be logged
 
-Human visibility MUST occur ONLY through  
-the authoritative status reflection  
-in `progress/status.json`.
+Human visibility MUST occur through  
+the governed status reflection layer,  
+without transferring execution authority  
+to `progress/status.json`.
 
 Execution Abort enforces boundaries.  
 It does NOT request guidance.  

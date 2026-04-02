@@ -477,7 +477,8 @@ When a Fail-Closed event occurs, the system MUST:
 
 1) Stop execution immediately
 2) Preserve current state without mutation
-3) Write the authoritative status reflection to:
+3) Write the authoritative blocked/aborted execution state to governed runtime authority artifacts
+4) Mirror the resulting human-visible status reflection to:
    `progress/status.json` (Doc-06 compliant)
 4) Ensure a Boundary Audit failure artifact exists under:
    `verify/audit/` (Section 2.2.1)
@@ -492,7 +493,8 @@ No additional escalation report, summary, explanation, or narrative
 is permitted outside the Doc-04 interrupt format.
 
 All required escalation facts MUST be represented ONLY as:
-- Structured fields in `progress/status.json`, AND
+- Structured fields in governed runtime authority artifacts, AND
+- Reflected human-visible fields in `progress/status.json`, AND
 - The structured audit failure artifact under `verify/audit/`
 
 ---
@@ -541,14 +543,18 @@ not a recoverable failure.
 
 Upon any Boundary Audit FAIL or Execution Abort:
 
-1) The orchestrator MUST FIRST write the authoritative live execution state to:
+1) The orchestrator MUST FIRST write the authoritative live execution state to governed runtime authority artifacts, including:
+   - Correct owning stage/runtime position
+   - Correct blocked/aborted semantics
+   - Correct continuation prohibition
+2) The orchestrator MUST THEN mirror the human-visible blocked/aborted reflection to:
    `progress/status.json` in FULL compliance with Doc-06, including:
    - Correct `current_stage`
    - Correct `blocking_questions` rules
    - `next_step` as an empty string when BLOCKED/ABORTED
-- Any required progress values mandated by Doc-06 (including the Abort progress-freeze rules)
+   - Any required progress values mandated by Doc-06
 
-2) ONLY AFTER the Doc-06-compliant state is written:
+3) ONLY AFTER the Doc-06-compliant state is written:
    - Progress MUST freeze immediately
    - No further mutation is permitted
    - No percentage recalculation is allowed

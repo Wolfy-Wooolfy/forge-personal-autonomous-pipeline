@@ -17,7 +17,8 @@ Audit ensures:
 
 - Mandatory governance documents exist
 - Required directories exist
-- progress/status.json is valid
+- governed runtime state artifacts are valid
+- status reflection artifact is valid if reporting output is enabled
 - Artifact namespace rules are respected
 - Naming authority rules are respected
 - No structural drift exists
@@ -103,7 +104,7 @@ Missing or malformed governance files → BLOCKED.
 
 Audit MUST validate:
 
-- progress/status.json exists
+- governed runtime authority artifacts exist
 - status_type is defined
 - current_stage exists
 - stage_progress_percent exists

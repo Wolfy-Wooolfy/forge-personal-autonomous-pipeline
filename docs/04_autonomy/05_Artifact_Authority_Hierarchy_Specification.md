@@ -82,21 +82,20 @@ NOT governance authorities.
 
 ---
 
-### Layer 3 — progress/status.json
+### Layer 3 — Governed runtime state split
 
-Defines:
-- Current stage
-- Current task
-- Blocking state
-- Next step
+#### Layer 3A — `artifacts/forge/forge_state.json`
+Carries authoritative Forge self-build continuity, next allowed step, closed-task lineage, and execution integrity.
 
-Status file:
-- Reflects execution reality
-- MUST NOT invent authority
-- MUST NOT contradict Stage contracts
+#### Layer 3B — `artifacts/orchestration/orchestration_state.json`
+Carries authoritative current-run orchestration status for governed runtime execution.
 
-If status contradicts artifacts:
-→ Execution enters BLOCKED state.
+#### Layer 3C — `progress/status.json`
+Carries human-visible status reflection for target-project progress/reporting only.
+
+`progress/status.json` MUST NOT grant execution authority,
+resume authority,
+or module-selection authority.
 
 ---
 

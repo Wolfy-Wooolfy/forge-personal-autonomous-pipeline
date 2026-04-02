@@ -28,7 +28,7 @@ No downstream module may execute without successful Intake completion.
 
 Intake activates when:
 
-- progress/status.json indicates READY
+- governed Forge runtime artifacts indicate a valid deterministic entry condition
 OR
 - A new execution cycle is registered
 
@@ -92,7 +92,8 @@ FULL_PIPELINE_STATE:
 - docs/
 - code/
 - artifacts/
-- progress/status.json present and valid
+- governed runtime state artifacts present and valid
+- `progress/status.json` optional as reflection/output validation only
 
 Classification MUST be rule-based.
 No inference beyond structural presence.
@@ -159,7 +160,8 @@ Only structured reasoning.
 
 Intake MUST halt if:
 
-- progress/status.json corrupted
+- governed runtime state artifact corrupted
+- or status reflection corrupted in a way that prevents reporting fidelity
 - Repository unreadable
 - File access denied
 - Duplicate path anomalies

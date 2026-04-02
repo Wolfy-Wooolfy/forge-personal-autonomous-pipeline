@@ -2,7 +2,7 @@
 
 **Task ID:** TASK-001  
 **Stage:** A (Architecture)  
-**Goal:** Define a minimal deterministic orchestrator skeleton that updates `progress/status.json` only and does not execute real stage logic yet.  
+**Goal:** Define a minimal deterministic orchestrator skeleton with explicit separation between Forge self-build authority, runtime execution state, and human-visible project status reflection.  
 **Scope:** Repository-local, no external dependencies, no CI, no network calls.
 
 ---
@@ -12,10 +12,12 @@
 Create the minimal foundation for a deterministic pipeline orchestrator that:
 
 - Enforces stage naming and sequencing (A -> D)
-- Writes authoritative execution state to `progress/status.json`
+- Writes authoritative Forge self-build state to `artifacts/forge/forge_state.json`
+- Writes authoritative per-run orchestration state to `artifacts/orchestration/orchestration_state.json`
+- Writes human-visible status reflection to `progress/status.json` without granting it execution authority
 - Produces no narrative outputs as authority
 - Does not implement agent execution yet
-- Uses file artifacts as the only authoritative state
+- Uses schema-bound file artifacts as the only authoritative state carriers
 
 ---
 
@@ -52,7 +54,9 @@ Downstream placeholders (NOT produced in Stage A, listed for traceability only):
 - Lock scope: status.json update only, no execution of real stages
 
 ### A2 - Define orchestrator responsibilities (minimal)
-- State writing: update `progress/status.json`
+- Forge build-state writing: update `artifacts/forge/forge_state.json`
+- Runtime execution-state writing: update `artifacts/orchestration/orchestration_state.json`
+- Status reflection writing: update `progress/status.json` as output only
 - Stage vocabulary: INIT, READY, A, B, C, D
 - Allowed execution_state set: IDLE, RUNNING, BLOCKED, ABORTED, COMPLETE
 - No derived authority: orchestrator behavior must be justified by explicit contracts
@@ -102,7 +106,7 @@ If ambiguity, missing authority, or missing mandatory inputs exist:
 Stage A for TASK-001 is DONE when:
 - `architecture/task_plan.md` is present and complete
 - `architecture/validated_assumptions.md` is present with all assumptions resolved
-- `progress/status.json` reflects the correct next_step for Stage B entry
+- Forge authority, orchestration authority, and status reflection roles are explicitly separated with no claim that `progress/status.json` controls execution
 
 ---
 
