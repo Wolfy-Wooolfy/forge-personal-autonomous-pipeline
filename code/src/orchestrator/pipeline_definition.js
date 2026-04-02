@@ -67,6 +67,13 @@ const pipeline = [
     task_name: "TASK-055: MODULE FLOW — Closure",
     ordinal_position: 10,
     required_previous_module: "VERIFY",
+    terminal_flag: false
+  },
+  {
+    module_id: "VISION_COMPLIANCE",
+    task_name: "TASK-067: ENFORCE FULL VISION RUNTIME",
+    ordinal_position: 11,
+    required_previous_module: "CLOSURE",
     terminal_flag: true
   }
 ];
