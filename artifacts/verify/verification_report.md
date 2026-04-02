@@ -1,12 +1,12 @@
 # Verification Report
 
-generated_at: 2026-04-02T10:01:35.469Z
+generated_at: 2026-04-02T10:35:18.085Z
 status: FAIL
 
 ## Closure Gate Readiness
-- gap_count: 109
+- gap_count: 391
 - critical_violations: 0
-- orphan_code_units: 1
+- orphan_code_units: 0
 - orphan_requirements: 0
 - orphan_artifacts: 0
 - execute_artifacts_complete: true
@@ -24,10 +24,10 @@ status: FAIL
 - artifacts_execute_execute_diff_md_exists: PASS artifacts/execute/execute_diff.md
 - artifacts_execute_execute_log_md_exists: PASS artifacts/execute/execute_log.md
 - decision_artifact_present: PASS artifacts/decisions/module_flow_decision_gate.json
-- execute_plan_matches_backfill_plan: PASS backfill_actions=110; execute_actions=110
-- gap_count_zero: FAIL gap_count=109
+- execute_plan_matches_backfill_plan: PASS backfill_actions=391; execute_actions=391
+- gap_count_zero: FAIL gap_count=391
 - critical_violations_zero: PASS critical_violations=0
-- orphan_code_units_zero: FAIL orphan_code_units=1
+- orphan_code_units_zero: PASS orphan_code_units=0
 - orphan_requirements_zero: PASS orphan_requirements=0
 - orphan_artifacts_zero: PASS orphan_artifacts=0
 - audit_not_blocked: PASS audit_blocked=false

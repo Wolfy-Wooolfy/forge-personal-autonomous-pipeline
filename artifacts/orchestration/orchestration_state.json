@@ -1,8 +1,8 @@
 {
-  "run_id": "RUN-6AB5C400DF51",
+  "run_id": "RUN-33EF96AC0C5E",
   "run_mode": "RESUME",
-  "started_at": "2026-04-02T10:01:35.268Z",
-  "last_updated_at": "2026-04-02T10:01:35.501Z",
+  "started_at": "2026-04-02T10:35:17.512Z",
+  "last_updated_at": "2026-04-02T10:35:18.116Z",
   "status": "BLOCKED",
   "blocked": true,
   "blocking_reason": "Verification failed — review artifacts/verify/verification_report.md",
@@ -12,6 +12,9 @@
   "next_module": "VERIFY",
   "current_module": "VERIFY",
   "completed_modules": [
+    "TRACE",
+    "GAP",
+    "DESIGN_EXPLORATION",
     "DECISION_GATE",
     "BACKFILL",
     "EXECUTE"
@@ -19,9 +22,6 @@
   "pending_modules": [
     "INTAKE",
     "AUDIT",
-    "TRACE",
-    "GAP",
-    "DESIGN_EXPLORATION",
     "VERIFY",
     "CLOSURE"
   ],

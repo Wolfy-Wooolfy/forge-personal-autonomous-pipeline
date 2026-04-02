@@ -513,6 +513,40 @@ function mapDeterministically(requirements, codeUnits, artifacts, intakeContext)
       }
     }
 
+    if (
+      title.includes("cognitive") ||
+      section.includes("cognitive") ||
+      document.includes("cognitive") ||
+      title.includes("adapter") ||
+      section.includes("adapter") ||
+      document.includes("adapter") ||
+      title.includes("provider-agnostic") ||
+      section.includes("provider-agnostic") ||
+      document.includes("provider-agnostic")
+    ) {
+      for (const u of codeUnits) {
+        if (u.file_path.includes("code/src/cognitive/cognitive_adapter.js")) mapped_code_units.push(u.unit_id);
+      }
+    }
+
+    if (
+      title.includes("cognitive") ||
+      section.includes("cognitive") ||
+      document.includes("cognitive") ||
+      title.includes("adapter") ||
+      section.includes("adapter") ||
+      document.includes("adapter") ||
+      title.includes("provider-agnostic") ||
+      section.includes("provider-agnostic") ||
+      document.includes("provider-agnostic")
+    ) {
+      for (const a of artifacts) {
+        if (a.file_path.includes("artifacts/cognitive/")) {
+          mapped_artifacts.push(a.artifact_id);
+        }
+      }
+    }
+
     if (operatingMode === "BUILD" && (title.includes("build") || section.includes("build") || document.includes("build"))) {
       if (artifactsSet.has("artifacts/intake/intake_context.json")) mapped_artifacts.push("artifacts/intake/intake_context.json");
     }

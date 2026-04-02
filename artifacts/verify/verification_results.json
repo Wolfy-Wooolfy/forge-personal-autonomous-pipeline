@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-04-02T10:01:35.469Z",
+  "generated_at": "2026-04-02T10:35:18.085Z",
   "blocked": true,
   "status": "FAIL",
   "outcome": "FAIL",
   "final_outcome": "FAIL",
   "summary": {
     "total_checks": 18,
-    "failed_checks": 2
+    "failed_checks": 1
   },
   "closure_gate": {
-    "gap_count": 109,
+    "gap_count": 391,
     "critical_violations": 0,
-    "orphan_code_units": 1,
+    "orphan_code_units": 0,
     "orphan_requirements": 0,
     "orphan_artifacts": 0,
     "deterministic_confirmation_ready": true,
@@ -68,12 +68,12 @@
     {
       "name": "execute_plan_matches_backfill_plan",
       "passed": true,
-      "detail": "backfill_actions=110; execute_actions=110"
+      "detail": "backfill_actions=391; execute_actions=391"
     },
     {
       "name": "gap_count_zero",
       "passed": false,
-      "detail": "gap_count=109"
+      "detail": "gap_count=391"
     },
     {
       "name": "critical_violations_zero",
@@ -82,8 +82,8 @@
     },
     {
       "name": "orphan_code_units_zero",
-      "passed": false,
-      "detail": "orphan_code_units=1"
+      "passed": true,
+      "detail": "orphan_code_units=0"
     },
     {
       "name": "orphan_requirements_zero",

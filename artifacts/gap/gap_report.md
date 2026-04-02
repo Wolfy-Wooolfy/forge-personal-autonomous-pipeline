@@ -1,16 +1,46 @@
 # Gap Report
 
 ## Summary
-- total_gaps: 109
+- total_gaps: 391
 - critical_count: 0
-- requires_decision: true
+- requires_decision: false
 
 ## Gaps
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-0049d36ac747
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-910c4b92eaf6: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-004c29da718f
+  - affected_entities: DOC-33::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3daafb2b6cd7: Complete coverage for DOC-33::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-009cee144b1f
   - affected_entities: HALO-DOC-22::R012
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-f6ac15d66c1b: Complete coverage for HALO-DOC-22::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-012291ee5dab
+  - affected_entities: HALO-DOC-18::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c021780f68e6: Complete coverage for HALO-DOC-18::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-03bd355e7d89
+  - affected_entities: HALO-DOC-12::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ad9e1b1a6c27: Complete coverage for HALO-DOC-12::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-053d440d286d
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-0bbb70b52baa: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-06ff43c7e422
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5ab6c5f88856: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-082b3bb69983
   - affected_entities: DOC-18::R005
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -21,27 +51,136 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-6db4057594b8: Complete coverage for HALO-DOC-22::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-08d0a0b885e1
+  - affected_entities: DOC-35::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-96774993fe2f: Complete coverage for DOC-35::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-097365a552fe
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R017
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-16871da57d00: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R017 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-0adb00dcb3b4
+  - affected_entities: DOC-33::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-1a31aa763226: Complete coverage for DOC-33::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-0b51b1455a3d
+  - affected_entities: HALO-DOC-11::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a92cd432df67: Complete coverage for HALO-DOC-11::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-0c3186dff9ef
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-67e8a5784521: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-0e3979faf1a0
+  - affected_entities: HALO-DOC-18::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-7a141281c947: Complete coverage for HALO-DOC-18::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-0fafb0f9bbc0
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R002
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-cffd2f59ad80: Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1097ac1e572d
+  - affected_entities: DOC-33::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d756c883ce0e: Complete coverage for DOC-33::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1138dbff9e6f
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R018
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-63cc58605d13: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R018 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-132788825ecd
   - affected_entities: HALO-DOC-22::R005
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-40af1ff9921e: Complete coverage for HALO-DOC-22::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
-- **MEDIUM** [ORPHAN_CODE] GAP-1560da0d9861
-  - affected_entities: code/src/cognitive/cognitive_adapter.js
-  - root_cause: Code unit is exported/detected but not mapped to any requirement by trace rules.
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-14129e1385b3
+  - affected_entities: HALO-DOC-24::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
-    - ACT-2f228d1cb3f1: Map code unit CODE::code/src/cognitive/cognitive_adapter.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid). (requires_decision=true)
-    - ACT-eca0e2c7ec2b: Remove or relocate code unit CODE::code/src/cognitive/cognitive_adapter.js::FILE if it is not part of Forge scope/contracts. (requires_decision=true)
+    - ACT-273f4af40060: Complete coverage for HALO-DOC-24::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-14db68f5294d
+  - affected_entities: DOC-14::R022
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5fb47d6be3fa: Complete coverage for DOC-14::R022 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-14dc87e7911c
+  - affected_entities: DOC-38::R016
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-cdfaf38e206b: Complete coverage for DOC-38::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-15bbee7426a7
+  - affected_entities: HALO-DOC-20::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-97611fcd9cc2: Complete coverage for HALO-DOC-20::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-1662cc2538c8
   - affected_entities: HALO-DOC-22::R011
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-cff0f23a6ca5: Complete coverage for HALO-DOC-22::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1740f01d4317
+  - affected_entities: HALO-DOC-14::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-9b5ae0289784: Complete coverage for HALO-DOC-14::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1814f91ac181
+  - affected_entities: HALO-DOC-20::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-293919822198: Complete coverage for HALO-DOC-20::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-189e6bce414d
+  - affected_entities: DOC-36::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c7e1de8f972b: Complete coverage for DOC-36::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-197dc0db2bef
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5d39185c4142: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1be526738fc8
+  - affected_entities: DOC-33::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c614002d55a1: Complete coverage for DOC-33::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1c4429cd6d01
+  - affected_entities: DOC-36::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-10f9616d8a58: Complete coverage for DOC-36::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1d0fd742c76c
+  - affected_entities: HALO-DOC-24::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5fa5d1c437a3: Complete coverage for HALO-DOC-24::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1dba57243bc9
+  - affected_entities: HALO-DOC-20::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-600e6c08354b: Complete coverage for HALO-DOC-20::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1e01a346436c
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-b8e56e7234a5: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1e052ed2089a
+  - affected_entities: DOC-35::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ea3222c394df: Complete coverage for DOC-35::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-1e3bea68991f
+  - affected_entities: pipeline_contract_violation_v1::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4b7abd114d5d: Complete coverage for pipeline_contract_violation_v1::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-1edf140d5b32
   - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R002
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -57,26 +196,126 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-8f4368ae05ee: Complete coverage for DOC-15::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2122fedcde25
+  - affected_entities: DOC-33::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6490512645fa: Complete coverage for DOC-33::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-21680412b848
+  - affected_entities: HALO-DOC-24::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-8b49ff25199b: Complete coverage for HALO-DOC-24::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-21c822b9acf7
   - affected_entities: HALO-DOC-22::R007
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-bb4738b401fa: Complete coverage for HALO-DOC-22::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-21d7f5953293
+  - affected_entities: HALO-DOC-18::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6f5761dd0d63: Complete coverage for HALO-DOC-18::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-21de0b45d7e1
+  - affected_entities: HALO-DOC-14::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-303fb24ea88a: Complete coverage for HALO-DOC-14::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-221d05541db0
+  - affected_entities: HALO-DOC-18::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c436a5abe0e7: Complete coverage for HALO-DOC-18::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-22836361ed7a
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4d981fd88310: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-23ba8c9f7ea0
+  - affected_entities: pipeline_contract_violation_v1::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a5c5d75242d1: Complete coverage for pipeline_contract_violation_v1::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-242eaf5d03cb
+  - affected_entities: DOC-13::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e0421c8d84f9: Complete coverage for DOC-13::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-249cc23d91d2
+  - affected_entities: DOC-36::R016
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-36a3dc151f37: Complete coverage for DOC-36::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-24abdbd719ad
+  - affected_entities: HALO-DOC-20::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d852b83b5c07: Complete coverage for HALO-DOC-20::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-24dff701e744
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-057337d0c5c8: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-27338b46c43c
+  - affected_entities: HALO-DOC-12::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-19cc6c46663d: Complete coverage for HALO-DOC-12::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-28a07113b5c0
+  - affected_entities: pipeline_contract_violation_v1::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5d6ccaadba24: Complete coverage for pipeline_contract_violation_v1::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2976cfbdcea8
+  - affected_entities: HALO-DOC-20::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-47893ac9dc03: Complete coverage for HALO-DOC-20::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-29f5d69d5ece
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a620a535bbae: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-2ab99d960334
   - affected_entities: DOC-18::R013
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-59ef5f692c83: Complete coverage for DOC-18::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2b583f0329ce
+  - affected_entities: HALO-DOC-14::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3dabab02beb4: Complete coverage for HALO-DOC-14::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-2ba29b96674d
   - affected_entities: DOC-15::R002
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-339fd278e167: Complete coverage for DOC-15::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2c17908e500a
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a42d65cf58f2: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-2c44ded953ce
   - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R004
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-980661966381: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2c55f1ba2fe3
+  - affected_entities: DOC-38::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4808f0099d9d: Complete coverage for DOC-38::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2d35cecdc287
+  - affected_entities: HALO-DOC-20::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-7630b993bc4d: Complete coverage for HALO-DOC-20::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2d484d8ce869
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-85ebc8eb0dc4: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-2de7e01ea135
   - affected_entities: DOC-16::R004
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -92,6 +331,16 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-5de46edf9413: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2e9d33e241a3
+  - affected_entities: HALO-DOC-14::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3c3eac4f728a: Complete coverage for HALO-DOC-14::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2f7a2d89db5d
+  - affected_entities: DOC-34::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-075afc85247b: Complete coverage for DOC-34::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-2f81195d1e08
   - affected_entities: DOC-RT-1010::R003
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -102,16 +351,71 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-65f885d0335b: Complete coverage for DOC-16::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2fd16d50c15a
+  - affected_entities: HALO-DOC-15::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-2e8934a31928: Complete coverage for HALO-DOC-15::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-2fe70573368c
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R016
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-69e2216659e8: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-300cb9ce1e83
   - affected_entities: HALO-DOC-22::R021
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-a74b0dd4a458: Complete coverage for HALO-DOC-22::R021 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-309a543c6e23
+  - affected_entities: HALO-DOC-11::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-dd79494817ba: Complete coverage for HALO-DOC-11::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3152f6ed270f
+  - affected_entities: DOC-35::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-9e991f306bbb: Complete coverage for DOC-35::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-317af84938e4
+  - affected_entities: DOC-34::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-04c0ac55ee99: Complete coverage for DOC-34::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-32408d094244
+  - affected_entities: DOC-14::R018
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e4661d040b44: Complete coverage for DOC-14::R018 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-329a725d6941
+  - affected_entities: HALO-DOC-11::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f345b3a82edf: Complete coverage for HALO-DOC-11::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-337c3deeabda
+  - affected_entities: DOC-38::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-902018cd08ef: Complete coverage for DOC-38::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-33a3122cf910
   - affected_entities: DOC-16::R001
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-c85e563b0a78: Complete coverage for DOC-16::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-34a6b65fb65f
+  - affected_entities: HALO-DOC-15::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3d3c1ed50625: Complete coverage for HALO-DOC-15::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3573eb31f314
+  - affected_entities: pipeline_contract_violation_v1::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c1904094c772: Complete coverage for pipeline_contract_violation_v1::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-358b3af4b01e
+  - affected_entities: DOC-14::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e0025126a777: Complete coverage for DOC-14::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-35ad02ccf262
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R010
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -132,31 +436,101 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-bd0e52c40d9f: Complete coverage for DOC-15::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-37a1710fd3a4
+  - affected_entities: HALO-DOC-20::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ace1e3cef9df: Complete coverage for HALO-DOC-20::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-381ad8b71fa1
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-38450c254d1a: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3861588c8332
+  - affected_entities: HALO-DOC-12::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5bb687cfed5f: Complete coverage for HALO-DOC-12::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-386bb087678b
+  - affected_entities: HALO-DOC-15::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-86070adcc8af: Complete coverage for HALO-DOC-15::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-38c0757512ad
   - affected_entities: DOC-18::R008
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-f1415ff5fe09: Complete coverage for DOC-18::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-39379d188d90
+  - affected_entities: HALO-DOC-24::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ddb32d5358ca: Complete coverage for HALO-DOC-24::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-39df9fbfc690
   - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R008
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-d4edde404eb0: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3ac23221bbb8
+  - affected_entities: HALO-DOC-11::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-2187812b663e: Complete coverage for HALO-DOC-11::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3adda688a1f0
+  - affected_entities: HALO-DOC-12::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-b95ebece9848: Complete coverage for HALO-DOC-12::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3b80eb4b1c7c
+  - affected_entities: HALO-DOC-18::R019
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-60cb75bd2300: Complete coverage for HALO-DOC-18::R019 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3bc568ca6029
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-1efa532feeee: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-3d151d78a2ef
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R018
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-5fced1c4bf53: Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R018 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3e09bcd5b9ea
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R017
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d7645134db84: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R017 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3e7e6c64bf1b
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-584d781663c7: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-3ea05d6ab21a
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R016
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-375e45c0bdd9: Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3f6fe833d69c
+  - affected_entities: DOC-34::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5e0e9dd80841: Complete coverage for DOC-34::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-3f70276e9e49
+  - affected_entities: HALO-DOC-18::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6fbdbb2d2206: Complete coverage for HALO-DOC-18::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-3fd0941030b5
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R011
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-13ecdaaf433f: Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-407a0cac4dd7
+  - affected_entities: DOC-13::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ed0d94dbfbc3: Complete coverage for DOC-13::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-409070674ba3
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R017
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -167,61 +541,271 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-019782af6e0d: Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4190d3bef224
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R017
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-58b2614119d6: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R017 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-419af18dd2b6
+  - affected_entities: DOC-38::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-80441dd97d67: Complete coverage for DOC-38::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4258ee7aa9dd
+  - affected_entities: HALO-DOC-12::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e789d19d56c1: Complete coverage for HALO-DOC-12::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-437e5f8baaae
+  - affected_entities: DOC-34::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-1d93fc20252f: Complete coverage for DOC-34::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-43c343e260bf
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c2981454c5cd: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4433bd673e6b
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R016
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e56e37a57282: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-44a48985b5c7
+  - affected_entities: DOC-38::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f0802dd7b122: Complete coverage for DOC-38::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-44a7a9a83218
   - affected_entities: DOC-10-CE-SEL::R001
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-2249c07c552c: Complete coverage for DOC-10-CE-SEL::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-45042412dd24
+  - affected_entities: HALO-DOC-18::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-9a00b3abc32c: Complete coverage for HALO-DOC-18::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-458992a24049
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R019
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-09552292128d: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R019 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-458a645c82cb
+  - affected_entities: HALO-DOC-12::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-02d3ac808d1f: Complete coverage for HALO-DOC-12::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-45975296064c
+  - affected_entities: HALO-DOC-12::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-1123b75d5f9c: Complete coverage for HALO-DOC-12::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-45bb18ab60b7
+  - affected_entities: HALO-DOC-11::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-21b33587b11b: Complete coverage for HALO-DOC-11::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-469021aecb2b
+  - affected_entities: HALO-DOC-11::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c86ec5725fc3: Complete coverage for HALO-DOC-11::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-47f39031aa49
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d683972b1c47: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-47f3c7ba4349
+  - affected_entities: DOC-14::R021
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-8fefab033941: Complete coverage for DOC-14::R021 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-491681b17653
+  - affected_entities: HALO-DOC-18::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-66edfd4d1fe7: Complete coverage for HALO-DOC-18::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-49a8b1cde8d7
+  - affected_entities: HALO-DOC-24::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d2a2436cc212: Complete coverage for HALO-DOC-24::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-4b25cd8a567b
   - affected_entities: HALO-DOC-22::R018
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-26c3dbd541b3: Complete coverage for HALO-DOC-22::R018 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4c7dbdf99d95
+  - affected_entities: DOC-38::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-747ed90f9a45: Complete coverage for DOC-38::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-4d71ae69909b
   - affected_entities: DOC-15::R003
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-2b234fcfc86f: Complete coverage for DOC-15::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4da1b8c86658
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-1b5650b0c3e8: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4e71f7637237
+  - affected_entities: DOC-14::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e2754ff936dc: Complete coverage for DOC-14::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4f352075f4f8
+  - affected_entities: HALO-DOC-24::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-bf5683db71ce: Complete coverage for HALO-DOC-24::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-4f9544031403
+  - affected_entities: pipeline_contract_violation_v1::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-16d891b77581: Complete coverage for pipeline_contract_violation_v1::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-518125153a1d
+  - affected_entities: DOC-34::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a8f009f29513: Complete coverage for DOC-34::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-5216d898dacc
   - affected_entities: DOC-10-CE-SEL::R002
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-4f4fc0074672: Complete coverage for DOC-10-CE-SEL::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-522991c18966
+  - affected_entities: HALO-DOC-12::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-91253d22ebdf: Complete coverage for HALO-DOC-12::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-52abb59017e7
+  - affected_entities: DOC-38::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4032a99f2080: Complete coverage for DOC-38::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-52be286ae041
   - affected_entities: DOC-18::R001
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-469a51130214: Complete coverage for DOC-18::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-536d88b8bb64
+  - affected_entities: DOC-33::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3bed0381f329: Complete coverage for DOC-33::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-5376590146e9
   - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R010
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-1548cd4b57e3: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-53a1f12168ab
+  - affected_entities: DOC-13::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f6d454b338fa: Complete coverage for DOC-13::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-53d5a9a7f5bf
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3bff6b3e8dce: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-53f6d598935e
+  - affected_entities: HALO-DOC-11::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-0e0a0b5454fd: Complete coverage for HALO-DOC-11::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-546b8b934437
+  - affected_entities: DOC-36::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-9e3a8db8d082: Complete coverage for DOC-36::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-54d1c94b86b6
+  - affected_entities: DOC-36::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-1d7bfb06e947: Complete coverage for DOC-36::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-570411c2c012
   - affected_entities: DOC-RT-1010::R006
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-9aee51b01907: Complete coverage for DOC-RT-1010::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-578ec48abc0d
+  - affected_entities: DOC-34::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a397701063d6: Complete coverage for DOC-34::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-579060350431
+  - affected_entities: HALO-DOC-12::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d87a2ec57341: Complete coverage for HALO-DOC-12::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-5820d43d781f
   - affected_entities: DOC-RT-1010::R007
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-d14fd52f7b52: Complete coverage for DOC-RT-1010::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-5845b2d901c9
+  - affected_entities: DOC-35::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3b916c19428f: Complete coverage for DOC-35::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-58e91324f2bd
+  - affected_entities: HALO-DOC-20::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-209232cb1cd4: Complete coverage for HALO-DOC-20::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-59667a662051
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-7962556827d0: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-597a1c150218
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-bc1d99f6e496: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-5a00c45ba88f
   - affected_entities: DOC-RT-1010::R002
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-955933d579d1: Complete coverage for DOC-RT-1010::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-5a2088c8461c
+  - affected_entities: DOC-33::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6d3f94967dda: Complete coverage for DOC-33::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-5a6361171cb0
+  - affected_entities: HALO-DOC-18::R016
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d7c6a8939faf: Complete coverage for HALO-DOC-18::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-5ae0eec36643
+  - affected_entities: HALO-DOC-18::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ffebf8b22892: Complete coverage for HALO-DOC-18::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-5b8b6d239d43
   - affected_entities: HALO-DOC-22::R017
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-eebff09b3592: Complete coverage for HALO-DOC-22::R017 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-5c98c68d0f7a
+  - affected_entities: HALO-DOC-24::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6f2d93ab630b: Complete coverage for HALO-DOC-24::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-5ccf719ab3b3
   - affected_entities: DOC-16::R003
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-90845fed8b3c: Complete coverage for DOC-16::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-5f9f2bd0134d
+  - affected_entities: HALO-DOC-24::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d56e5433bda3: Complete coverage for HALO-DOC-24::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-604d9fce0183
   - affected_entities: HALO-DOC-22::R022
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -232,36 +816,111 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-24c6e42e1939: Complete coverage for DOC-10-CE-SEL::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-616b40e16342
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f3c09ea29b5d: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-6185c0e93ed9
   - affected_entities: DOC-18::R002
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-e87e12d431ee: Complete coverage for DOC-18::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-61a11b293e40
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-1cd221ffcbee: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-62763f2204ea
+  - affected_entities: DOC-35::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6410b723daf9: Complete coverage for DOC-35::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-62c55ae81647
+  - affected_entities: pipeline_contract_violation_v1::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-619093016e15: Complete coverage for pipeline_contract_violation_v1::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6338a2bdf0b4
+  - affected_entities: HALO-DOC-15::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6278ac4b91f1: Complete coverage for HALO-DOC-15::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-6593430a5fd0
   - affected_entities: HALO-DOC-22::R015
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-686530b6c3d5: Complete coverage for HALO-DOC-22::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-683623ebca99
+  - affected_entities: HALO-DOC-14::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ad8fc5744f07: Complete coverage for HALO-DOC-14::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6969184f30ef
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d546b394f3a4: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-6a07fef5e0d2
   - affected_entities: DOC-15::R011
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-363823248652: Complete coverage for DOC-15::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6aa67cdaebf0
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c4bd53aa03a6: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-6bbec036a42a
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R015
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-d2669ec38ba8: Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6c71f3d9fff8
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R020
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-69e741842ada: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R020 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-6cd463ae4271
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R004
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-9988f1a30994: Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6cdd82700cd9
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-31a7503ca34a: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6dc4a836a6d0
+  - affected_entities: DOC-33::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-728c61f7bd1e: Complete coverage for DOC-33::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-6eb5681cd4d1
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R005
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-7d2f3c2033c0: Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6ee13878b144
+  - affected_entities: HALO-DOC-15::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c5be81a4fc7d: Complete coverage for HALO-DOC-15::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6fbf93f8235e
+  - affected_entities: DOC-34::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-61e5cede16cd: Complete coverage for DOC-34::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-6fdf5709ed72
+  - affected_entities: DOC-34::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f257df48f39f: Complete coverage for DOC-34::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-70f471d6912a
+  - affected_entities: DOC-14::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-452cc4899df7: Complete coverage for DOC-14::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-716aba04cc4f
   - affected_entities: DOC-15::R009
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -272,26 +931,136 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-5dc4cac02b16: Complete coverage for DOC-18::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-71fe389f8e10
+  - affected_entities: DOC-35::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-788f806bff2b: Complete coverage for DOC-35::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-72708d363977
+  - affected_entities: HALO-DOC-24::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3fbce7c0ffd4: Complete coverage for HALO-DOC-24::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-777a1e218bf9
+  - affected_entities: DOC-36::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-69ea3bbaedfb: Complete coverage for DOC-36::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-77b0bb0abd13
   - affected_entities: DOC-16::R009
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-450e2f93d684: Complete coverage for DOC-16::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-786bfadf4283
+  - affected_entities: HALO-DOC-18::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-daac355c04ba: Complete coverage for HALO-DOC-18::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-78b2ca958959
+  - affected_entities: pipeline_contract_violation_v1::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d7279803186c: Complete coverage for pipeline_contract_violation_v1::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-79bb0aa86cdf
+  - affected_entities: HALO-DOC-14::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-9a0abad03324: Complete coverage for HALO-DOC-14::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7a1a3a4c6484
+  - affected_entities: DOC-33::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-94c7e119134a: Complete coverage for DOC-33::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7aa829638f63
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3a91c76933a4: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7aa987477904
+  - affected_entities: DOC-38::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ea4d943f35ca: Complete coverage for DOC-38::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7aec7b07562d
+  - affected_entities: HALO-DOC-24::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-8e4efa05c538: Complete coverage for HALO-DOC-24::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7b85d958aaa0
+  - affected_entities: DOC-38::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a8a403f8e522: Complete coverage for DOC-38::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-7ba3a5fdda06
   - affected_entities: DOC-10-CE-SEL::R004
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-a62c6c149998: Complete coverage for DOC-10-CE-SEL::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7bdd7b88ce99
+  - affected_entities: DOC-38::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-def84f8dec0b: Complete coverage for DOC-38::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7da33370228a
+  - affected_entities: pipeline_contract_violation_v1::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-805ad10c3446: Complete coverage for pipeline_contract_violation_v1::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7e1fc7267929
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-928efdc0ddcd: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7e6451f6bde1
+  - affected_entities: HALO-DOC-14::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-328811d50229: Complete coverage for HALO-DOC-14::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7e8dcedd0fb0
+  - affected_entities: DOC-14::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-322530c35b49: Complete coverage for DOC-14::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7f07e741f9ba
+  - affected_entities: DOC-14::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ee61d8832af0: Complete coverage for DOC-14::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7f46553b4690
+  - affected_entities: HALO-DOC-15::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d6e29d540156: Complete coverage for HALO-DOC-15::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-7fbb30d7bf4a
   - affected_entities: DOC-10-CE-SEL::R010
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-1277e8bd9da0: Complete coverage for DOC-10-CE-SEL::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-7fe6b47981cc
+  - affected_entities: DOC-38::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-0749d76954f2: Complete coverage for DOC-38::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-802dfe6ef827
+  - affected_entities: HALO-DOC-18::R018
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d81c162c180f: Complete coverage for HALO-DOC-18::R018 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-803d77d3180e
   - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R011
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-899a1abcc3c4: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-80aa74907f70
+  - affected_entities: HALO-DOC-14::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6198520f5650: Complete coverage for HALO-DOC-14::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-82323ab8efc5
+  - affected_entities: HALO-DOC-11::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-9aab10382814: Complete coverage for HALO-DOC-11::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-832de4a959f5
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R012
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -302,6 +1071,16 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-646b192b65ac: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-85708f979c8a
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-50742a4ecea4: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-88176c608c6f
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-7e689f686e98: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-897d67efafcb
   - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R015
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -312,11 +1091,41 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-093dacead2da: Complete coverage for DOC-16::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-8a5e81363d0c
+  - affected_entities: DOC-38::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ec4f1d66ef99: Complete coverage for DOC-38::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-8a5e83dff178
+  - affected_entities: HALO-DOC-15::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-210ab47248cf: Complete coverage for HALO-DOC-15::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-8cff584822be
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-7d68f666c26d: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-8d459ceaf751
+  - affected_entities: HALO-DOC-18::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3426b500b5a2: Complete coverage for HALO-DOC-18::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-8de9c430005b
+  - affected_entities: DOC-35::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d083920867d1: Complete coverage for DOC-35::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-8e29331abc51
   - affected_entities: DOC-18::R012
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-143246e8ed72: Complete coverage for DOC-18::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-8ecdc3f65b96
+  - affected_entities: HALO-DOC-18::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-b42b8be46ce7: Complete coverage for HALO-DOC-18::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-8f027007a09d
   - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R009
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -347,31 +1156,106 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-d0591a40e8a2: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-925fa2e3a0cb
+  - affected_entities: DOC-14::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-b54e9d139d25: Complete coverage for DOC-14::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-927f8383095d
+  - affected_entities: HALO-DOC-12::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a4f87c1b6b34: Complete coverage for HALO-DOC-12::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-933927a1e5e6
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c7dddc1a96fb: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-93c3633c3559
+  - affected_entities: DOC-36::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-075c32235ac5: Complete coverage for DOC-36::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-944010037a7c
+  - affected_entities: DOC-13::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f5b929839d3b: Complete coverage for DOC-13::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-945a2b173a5e
   - affected_entities: DOC-16::R008
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-b3ee868ef088: Complete coverage for DOC-16::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-94de316dfd60
+  - affected_entities: DOC-38::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-eb26593eb4ac: Complete coverage for DOC-38::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-95c746e95241
   - affected_entities: HALO-DOC-22::R003
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-4480250a54e3: Complete coverage for HALO-DOC-22::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-9656fd3b7b60
+  - affected_entities: DOC-14::R016
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e76b44800c47: Complete coverage for DOC-14::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-9703a72a8525
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-7b51ace1640d: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-972040bb77d1
   - affected_entities: HALO-DOC-22::R002
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-e5a90aa2a381: Complete coverage for HALO-DOC-22::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-97360779ae10
+  - affected_entities: HALO-DOC-15::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-7fbcdc1e1b4c: Complete coverage for HALO-DOC-15::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-994b63b2afb0
+  - affected_entities: DOC-38::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-7cf51ee0cb82: Complete coverage for DOC-38::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-9a8547b3c9d8
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R019
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-0c2e49676a6a: Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R019 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-9b2a3645a5cc
+  - affected_entities: DOC-34::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ebc6f3fb3bd8: Complete coverage for DOC-34::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-9bc322dee3a1
   - affected_entities: DOC-RT-1010::R001
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-9266cca5f038: Complete coverage for DOC-RT-1010::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-9d399470676e
+  - affected_entities: DOC-35::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5c861bda0383: Complete coverage for DOC-35::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-9f0b358b2431
+  - affected_entities: HALO-DOC-12::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-b60a147f5a9f: Complete coverage for HALO-DOC-12::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a017fcf18df1
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-acd1d7e13283: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a0246c5137e2
+  - affected_entities: HALO-DOC-14::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f42b77b9241f: Complete coverage for HALO-DOC-14::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-a0c31b74bdc0
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R013
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -382,21 +1266,61 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-97b9a9cf216c: Complete coverage for DOC-16::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a4f7504c1cf3
+  - affected_entities: HALO-DOC-24::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f5c19fa36393: Complete coverage for HALO-DOC-24::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-a5c053a80b49
   - affected_entities: DOC-18::R007
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-f015eda54ab0: Complete coverage for DOC-18::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a6222ea4b4fc
+  - affected_entities: DOC-14::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6affe9aa9615: Complete coverage for DOC-14::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a646f03b5cd3
+  - affected_entities: HALO-DOC-12::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6e1ea81aacc1: Complete coverage for HALO-DOC-12::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a73d574b9097
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-976fd517f84a: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-a77463e61e49
+  - affected_entities: DOC-35::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-da443b4e107a: Complete coverage for DOC-35::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-a9153a2ea61f
   - affected_entities: DOC-18::R011
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-2dad916d6db3: Complete coverage for DOC-18::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ac96e73163d5
+  - affected_entities: HALO-DOC-20::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-60991faab428: Complete coverage for HALO-DOC-20::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ad14d4937c45
+  - affected_entities: DOC-13::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f89db148a103: Complete coverage for DOC-13::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-ad61fe21ae2b
   - affected_entities: HALO-DOC-22::R009
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-bebbdbf47485: Complete coverage for HALO-DOC-22::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-aeaf1782634c
+  - affected_entities: DOC-33::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-08b8d170b734: Complete coverage for DOC-33::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-b173c7bf8d81
   - affected_entities: DOC-16::R002
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -407,36 +1331,231 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-c284e32d1b6b: Complete coverage for DOC-10-CE-SEL::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b1e898df0ea8
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-feeb53fec187: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b21e8ae58bb5
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-1d92022287da: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b2299b6d2c74
+  - affected_entities: HALO-DOC-14::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-72f566536f62: Complete coverage for HALO-DOC-14::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b230bbf6dcd4
+  - affected_entities: DOC-34::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5c3f8a5f7644: Complete coverage for DOC-34::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b26f0cf885fa
+  - affected_entities: HALO-DOC-20::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-9fd14612e2b5: Complete coverage for HALO-DOC-20::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b2ccba78cdde
+  - affected_entities: pipeline_contract_violation_v1::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4b015f395d7b: Complete coverage for pipeline_contract_violation_v1::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b300d24e6c6a
+  - affected_entities: DOC-35::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-7bcf9e192e28: Complete coverage for DOC-35::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-b47818146d79
   - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R003
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-0127a8788caf: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b484cb5d7462
+  - affected_entities: pipeline_contract_violation_v1::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-779e3b68e0b2: Complete coverage for pipeline_contract_violation_v1::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b4886999d7d5
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d0e58ce7e8d0: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-b6f5b2c046a6
   - affected_entities: DOC-16::R011
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-ced1f0f44cab: Complete coverage for DOC-16::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b7e3c51332e6
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-7448000a4043: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-b8f70e110046
   - affected_entities: DOC-18::R009
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-3ad7596b1992: Complete coverage for DOC-18::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b91452164fa2
+  - affected_entities: DOC-36::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c7125cf8affa: Complete coverage for DOC-36::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b966b6dfcfcc
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4390d9b30481: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-b9b3fee7d795
+  - affected_entities: DOC-14::R017
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e3c7dfe33ebf: Complete coverage for DOC-14::R017 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ba61db59b206
+  - affected_entities: DOC-14::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-5552f6da4ee6: Complete coverage for DOC-14::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ba997ab87b4f
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d43c088f0b56: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-bcc2a4442e90
+  - affected_entities: DOC-35::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f4ae6bd56b5d: Complete coverage for DOC-35::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-bd1a690a050f
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-14d5ae6bfc5b: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-bf5fd97fdec5
+  - affected_entities: HALO-DOC-20::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3f7ee969453f: Complete coverage for HALO-DOC-20::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c04531c6bc40
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-2d677c4cae75: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c0f53a49e0a7
+  - affected_entities: HALO-DOC-11::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-bbbd0600a53a: Complete coverage for HALO-DOC-11::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c2478073bbe2
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-096ba0bd823c: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c24b607c876e
+  - affected_entities: HALO-DOC-18::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-74ef4bc74a19: Complete coverage for HALO-DOC-18::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c451f1bed00e
+  - affected_entities: DOC-35::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-2cea3a8ee2ec: Complete coverage for DOC-35::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-c477d42d0f93
   - affected_entities: DOC-18::R003
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-f51c8c692b54: Complete coverage for DOC-18::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c4fd18a195ee
+  - affected_entities: HALO-DOC-24::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-b30b96f08c78: Complete coverage for HALO-DOC-24::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c6608a2682d3
+  - affected_entities: HALO-DOC-15::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-0e68ba15f7c8: Complete coverage for HALO-DOC-15::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c6bc66a10bcc
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-9cde54c58909: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-c6bc810a50b9
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R014
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-7d24c1f4310d: Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c6c77d300c6a
+  - affected_entities: DOC-35::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ba662a6b01dc: Complete coverage for DOC-35::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c7285c9c38b1
+  - affected_entities: HALO-DOC-15::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-bfaf772acfdd: Complete coverage for HALO-DOC-15::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-c91ac8111d4d
+  - affected_entities: DOC-13::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d16424556573: Complete coverage for DOC-13::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ca13eee20083
+  - affected_entities: HALO-DOC-20::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-8526239662cb: Complete coverage for HALO-DOC-20::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ca26def2a3cc
+  - affected_entities: pipeline_contract_violation_v1::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f8aa738a7a4c: Complete coverage for pipeline_contract_violation_v1::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-caf69f5441cb
+  - affected_entities: HALO-DOC-14::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f6b6ec3f6cdc: Complete coverage for HALO-DOC-14::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-cb5bb9fdcdf9
+  - affected_entities: HALO-DOC-15::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3cbe09bb5993: Complete coverage for HALO-DOC-15::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-cdfcf31b7726
+  - affected_entities: DOC-13::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ecb9238334ac: Complete coverage for DOC-13::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ce94e686b5b0
+  - affected_entities: DOC-34::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e250df4e93b2: Complete coverage for DOC-34::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-cee407191c93
+  - affected_entities: DOC-38::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-26ee6fb0de59: Complete coverage for DOC-38::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-cfd1d4bce057
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4defea013f78: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-d0212bf3e6b9
   - affected_entities: DOC-10-CE-SEL::R009
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-afaf22b7170a: Complete coverage for DOC-10-CE-SEL::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d0f1320f989f
+  - affected_entities: DOC-14::R020
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d7c6b4044c79: Complete coverage for DOC-14::R020 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d1eac4e356f4
+  - affected_entities: DOC-14::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-fa6f7f7880f3: Complete coverage for DOC-14::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-d2071229e49b
   - affected_entities: DOC-15::R007
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -452,16 +1571,81 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-2bb90251d5fb: Complete coverage for DOC-18::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d28fb6f23143
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e13c953b676e: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d2bbd7f4712f
+  - affected_entities: DOC-36::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-bbcab19a689c: Complete coverage for DOC-36::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d2fd29ef0833
+  - affected_entities: DOC-14::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-892a988696fc: Complete coverage for DOC-14::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d32a746bab9d
+  - affected_entities: DOC-36::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f5fb2caef7be: Complete coverage for DOC-36::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d32c5697e324
+  - affected_entities: DOC-35::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3156327ce908: Complete coverage for DOC-35::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d58ae63404cb
+  - affected_entities: DOC-33::R016
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a63de07946f3: Complete coverage for DOC-33::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-d590730c0c26
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R007
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-c3e09bdc65a9: Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d5e05b44791e
+  - affected_entities: HALO-DOC-18::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4356eb3540c5: Complete coverage for HALO-DOC-18::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d6d4bc416e00
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R014
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-3c6f2c62e0e0: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R014 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d7adc56535ae
+  - affected_entities: DOC-36::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-09174113e6f6: Complete coverage for DOC-36::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d85fb848e5ae
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ab4f3fbefbb2: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d8f4ac3ec12c
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-bf481d96e6bb: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d93a1e72189d
+  - affected_entities: DOC-35::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a511cce9450a: Complete coverage for DOC-35::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-d98cab74d10c
   - affected_entities: DOC-15::R008
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-f71858862ae7: Complete coverage for DOC-15::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-d9d5b0427b45
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-189aa48b1391: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-db0cb6b8d229
   - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R005
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -472,51 +1656,211 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-6b53c49ba7d6: Complete coverage for DOC-15::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-db8e697f9afb
+  - affected_entities: DOC-36::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-6cd84ef7e956: Complete coverage for DOC-36::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-dbb2eaf2dc75
+  - affected_entities: HALO-DOC-24::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-783d35e78311: Complete coverage for HALO-DOC-24::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-dbc7c0ecc07d
   - affected_entities: HALO-DOC-22::R016
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-1189b94d7182: Complete coverage for HALO-DOC-22::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-dbd5db8614e4
+  - affected_entities: SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-321a2c754627: Complete coverage for SELF_BUILDING_SYSTEM_BLUEPRINT_v1::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-dd026e2ec7b7
+  - affected_entities: 03_Cognitive_Layer_Engines_Execution_Contracts::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4d89da69cf38: Complete coverage for 03_Cognitive_Layer_Engines_Execution_Contracts::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-dd50807f2a82
+  - affected_entities: DOC-34::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-40660f4e1ffe: Complete coverage for DOC-34::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-ddc7b40436d0
   - affected_entities: DOC-16::R010
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-aa442b153ac0: Complete coverage for DOC-16::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-debc25fb5483
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ab13a54d9c47: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-df6ab17a1b26
   - affected_entities: DOC-10-CE-SEL::R006
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-80dd82b0764c: Complete coverage for DOC-10-CE-SEL::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-df7f7bdb0a12
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-709dc43db494: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-df8f14b76f59
+  - affected_entities: HALO-DOC-11::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a1cff2e85b8a: Complete coverage for HALO-DOC-11::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-e1353cb9e41a
   - affected_entities: DOC-10-CE-SEL::R007
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-5548de4227c0: Complete coverage for DOC-10-CE-SEL::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-e3384238de06
+  - affected_entities: HALO-DOC-15::R007
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-053081d96dfa: Complete coverage for HALO-DOC-15::R007 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-e38c1dcb7d24
   - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R006
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-c142e278d138: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-e456bb332eec
+  - affected_entities: DOC-34::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-eaebf600affa: Complete coverage for DOC-34::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-e46578cf7598
+  - affected_entities: DOC-36::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-159fb0ec9cbc: Complete coverage for DOC-36::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-e59070eda3b6
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R003
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-0192d0e3fe57: Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-e5f729493620
+  - affected_entities: DOC-33::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-00c076044dd5: Complete coverage for DOC-33::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-e6c799e0150a
+  - affected_entities: DOC-36::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-85b943aa1396: Complete coverage for DOC-36::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-e726a9c89bad
   - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R012
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-ec715e0831af: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-e7893d757e38
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R016
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-58537c731c73: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R016 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-e82a5820cc6b
+  - affected_entities: DOC-38::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a2d2660630d4: Complete coverage for DOC-38::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-e8664ea8754b
   - affected_entities: DOC-15::R001
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-31ec524618b7: Complete coverage for DOC-15::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ea2890ae8f87
+  - affected_entities: DOC-13::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-e6f47b516ac7: Complete coverage for DOC-13::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-ebddaea2b43d
   - affected_entities: HALO-DOC-22::R013
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-737e1fd32a16: Complete coverage for HALO-DOC-22::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ebe3a1939468
+  - affected_entities: DOC-36::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f6456a633ec0: Complete coverage for DOC-36::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ec6d1b6958fb
+  - affected_entities: HALO-DOC-24::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-9ab2a10b38bc: Complete coverage for HALO-DOC-24::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ed11176f9bba
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-613baa7d3093: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ed13437eabaa
+  - affected_entities: HALO-DOC-11::R002
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-691a82c6d3d4: Complete coverage for HALO-DOC-11::R002 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ed2d253a6477
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-2fd645103508: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ed82b49ce40d
+  - affected_entities: DOC-33::R012
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-78d452f47f8a: Complete coverage for DOC-33::R012 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ed89ee7074b6
+  - affected_entities: HALO-DOC-15::R010
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-9eedb0d9ef84: Complete coverage for HALO-DOC-15::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-eda41ecf4cde
+  - affected_entities: DOC-34::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-b0c37185b0f8: Complete coverage for DOC-34::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-edecfcbc1750
+  - affected_entities: HALO-DOC-11::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f1b29a6ebe11: Complete coverage for HALO-DOC-11::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ee213cd8a17f
+  - affected_entities: DOC-14::R001
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-c0910e7b8708: Complete coverage for DOC-14::R001 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ee734fe79105
+  - affected_entities: DOC-33::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-ed9489dfadc1: Complete coverage for DOC-33::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ee8cac17fbe9
+  - affected_entities: DOC-13::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4e84baeef53d: Complete coverage for DOC-13::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ef1ccacebea7
+  - affected_entities: DOC-34::R015
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-2524aebbba3c: Complete coverage for DOC-34::R015 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ef4b73703002
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-cc4e2158653c: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-f03a3e73da23
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R004
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-862f3494131e: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R004 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-f2b46d631ee0
+  - affected_entities: HALO-DOC-18::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-11c29558fbda: Complete coverage for HALO-DOC-18::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-f2b5f6289869
   - affected_entities: HALO-DOC-22::R014
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -527,16 +1871,51 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-3f4c17bdea60: Complete coverage for HALO-DOC-22::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-f62108fa28c5
+  - affected_entities: DOC-33::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-248a4e3bd44e: Complete coverage for DOC-33::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-f6957b76fbc2
   - affected_entities: HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R017
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-495f1880e3be: Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R017 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-f69dbcbf174c
+  - affected_entities: DOC-14::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-82c0e20de7ee: Complete coverage for DOC-14::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-f7957b5f14e5
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R013
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-d2c471189bcf: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R013 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-f7c6face922f
+  - affected_entities: HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-02d94d89f551: Complete coverage for HALO-DOC-21__03_21_Candidate_Transformation_and_Authority_Separation_Contract::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-f980c7b01d5e
   - affected_entities: DOC-17__PROJECT_OBJECTIVE_CONTRACT::R006
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-986415a78187: Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-f98cd334dbce
+  - affected_entities: DOC-36::R003
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-abb3ebae1350: Complete coverage for DOC-36::R003 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-fc0a827d1cc0
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R019
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-f8db14487c9c: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R019 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-fca83c8017c0
+  - affected_entities: DOC-33::R008
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-54ab0ca75bd1: Complete coverage for DOC-33::R008 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
 - **MEDIUM** [PARTIAL_COVERAGE] GAP-fcb4e79141a8
   - affected_entities: DOC-18::R004
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
@@ -552,3 +1931,33 @@
   - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
   - actions:
     - ACT-acb599207faa: Complete coverage for DOC-15::R010 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-fd9fd76d9615
+  - affected_entities: HALO-DOC-20::R009
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-316ea93a306c: Complete coverage for HALO-DOC-20::R009 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-fddf45b22191
+  - affected_entities: HALO-DOC-18::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-4004e284d727: Complete coverage for HALO-DOC-18::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-fdf4ddff11da
+  - affected_entities: 03_Pipeline_Stages_Specification_A-D::R006
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-1b90242c4b87: Complete coverage for 03_Pipeline_Stages_Specification_A-D::R006 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-fe0a03055d3c
+  - affected_entities: HALO-DOC-11::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-40a106d3ad38: Complete coverage for HALO-DOC-11::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ff03b1130f48
+  - affected_entities: HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R011
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-0a7476f60464: Complete coverage for HALO-DOC-21__SELF_BUILDING_RUNTIME_ACTIVATION::R011 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
+- **MEDIUM** [PARTIAL_COVERAGE] GAP-ff987efa3969
+  - affected_entities: HALO-DOC-15::R005
+  - root_cause: Trace shows only code or only artifacts mapped for this requirement (coverage_status=PARTIAL).
+  - actions:
+    - ACT-a33d509e9d3a: Complete coverage for HALO-DOC-15::R005 by ensuring both mapped_code_units and mapped_artifacts are present. (requires_decision=false)
