@@ -156,7 +156,7 @@ function loadAuditFindings() {
   return JSON.parse(raw);
 }
 
-function writeStatusAndRun(taskName) {
+async function writeStatusAndRun(taskName) {
   const current = loadStatus();
 
   writeStatus({
@@ -222,7 +222,7 @@ function assertIdempotency(status) {
   }
 }
 
-function run() {
+async function run() {
   const status = loadStatus();
 
   const entry = resolveEntry();

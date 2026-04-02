@@ -174,7 +174,7 @@ function findExistingClosureFile(taskName) {
   return closurePath;
 }
 
-function executeTask(taskName, context) {
+async function executeTask(taskName, context) {
   if (!taskName) {
     throw new Error("Cannot execute undefined task");
   }
@@ -203,7 +203,7 @@ function executeTask(taskName, context) {
     status: Object.freeze({ ...context })
   });
 
-  const result = handler(frozenContext);
+  const result = await handler(frozenContext);
 
   validateExecutionResult(result);
 

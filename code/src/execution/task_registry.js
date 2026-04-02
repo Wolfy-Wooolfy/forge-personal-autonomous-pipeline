@@ -155,8 +155,8 @@ const registry = Object.freeze({
     };
   },
 
-  "TASK-050: MODULE FLOW — Trace": (context) => {
-    const result = runTrace(context);
+  "TASK-050: MODULE FLOW — Trace": async (context) => {
+    const result = await runTrace(context);
 
     const relTaskClosure = "artifacts/tasks/TASK-050.execution.closure.md";
     const taskClosureAbs = path.resolve(__dirname, "../../..", relTaskClosure);
@@ -217,8 +217,8 @@ const registry = Object.freeze({
     };
   },
 
-  "TASK-051: MODULE FLOW — Gap": (context) => {
-    const result = runGap(context);
+  "TASK-051: MODULE FLOW — Gap": async (context) => {
+    const result = await runGap(context);
 
     const relTaskClosure = "artifacts/tasks/TASK-051.execution.closure.md";
     const taskClosureAbs = path.resolve(__dirname, "../../..", relTaskClosure);

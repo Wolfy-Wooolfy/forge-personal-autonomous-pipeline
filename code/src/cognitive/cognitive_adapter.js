@@ -202,7 +202,9 @@ function writeJson(filePath, data) {
 }
 
 function storeArtifacts(responseId, rawResponse, normalizedResponse) {
-  const baseDir = path.resolve(process.cwd(), "artifacts", "cognitive", responseId);
+  const rootDir = path.resolve(__dirname, "../../..");
+  const baseDir = path.join(rootDir, "artifacts", "cognitive", responseId);
+
   fs.mkdirSync(baseDir, { recursive: true });
 
   writeJson(path.join(baseDir, "raw_response.json"), rawResponse);

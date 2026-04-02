@@ -769,9 +769,11 @@ function writeTraceError(rootAbs, msg) {
 }
 
 async function runCognitiveTraceAnalysis(context) {
+  const requestTimestamp = new Date().toISOString();
+
   const request = {
     request_id: `TRACE-${Date.now()}`,
-    timestamp: new Date().toISOString(),
+    timestamp: requestTimestamp,
     task_context: {
       task_id: "TASK-050",
       module: "TRACE"
@@ -787,12 +789,38 @@ async function runCognitiveTraceAnalysis(context) {
     }
   };
 
-  return await executeCognitive(request, () => {
+  const normalizedResponse = await executeCognitive(request, () => {
     return {
       note: "Cognitive trace placeholder",
       coverage_hint: []
     };
   });
+
+  const responseId =
+    normalizedResponse &&
+    typeof normalizedResponse === "object" &&
+    typeof normalizedResponse.response_id === "string" &&
+    normalizedResponse.response_id.trim() !== ""
+      ? normalizedResponse.response_id
+      : null;
+
+  const rawArtifactPath = responseId
+    ? `artifacts/cognitive/${responseId}/raw_response.json`
+    : null;
+
+  const normalizedArtifactPath = responseId
+    ? `artifacts/cognitive/${responseId}/normalized_response.json`
+    : null;
+
+  return {
+    request_timestamp: requestTimestamp,
+    response_id: responseId,
+    artifact_paths: {
+      raw_response: rawArtifactPath,
+      normalized_response: normalizedArtifactPath
+    },
+    normalized_response: normalizedResponse
+  };
 }
 
 async function runTrace(contextOrStatus) {
@@ -923,73 +951,98 @@ async function runTrace(contextOrStatus) {
     artifacts_count: artifacts.length
   });
 
-  if (
-    !cognitiveResult ||
-    cognitiveResult.status !== "SUCCESS" ||
-    !cognitiveResult.response_id ||
-    !cognitiveResult.output ||
-    !Object.prototype.hasOwnProperty.call(cognitiveResult.output, "content")
-  ) {
-    const errRef = writeTraceError(rootAbs, "TRACE HARD-FAIL: cognitive trace missing, failed, or invalid");
-    return {
-      blocked: true,
-      artifact: errRef,
-      status_patch: {
-        blocking_questions: ["Trace BLOCKED: cognitive trace missing, failed, or invalid"],
-        next_step: ""
-      }
-    };
-  }
+  const normalizedCognitiveResponse =
+    cognitiveResult &&
+    typeof cognitiveResult === "object" &&
+    cognitiveResult.normalized_response &&
+    typeof cognitiveResult.normalized_response === "object"
+      ? cognitiveResult.normalized_response
+      : null;
 
-  const cognitiveArtifactDir = path.resolve(
-    rootAbs,
-    "artifacts",
-    "cognitive",
-    cognitiveResult.response_id
-  );
-  const cognitiveRawAbs = path.resolve(cognitiveArtifactDir, "raw_response.json");
-  const cognitiveNormalizedAbs = path.resolve(cognitiveArtifactDir, "normalized_response.json");
+  const cognitiveResponseId =
+    cognitiveResult &&
+    typeof cognitiveResult.response_id === "string" &&
+    cognitiveResult.response_id.trim() !== ""
+      ? cognitiveResult.response_id
+      : null;
 
-  if (!fs.existsSync(cognitiveRawAbs) || !fs.existsSync(cognitiveNormalizedAbs)) {
-    const errRef = writeTraceError(
-      rootAbs,
-      `TRACE HARD-FAIL: missing cognitive artifacts for ${cognitiveResult.response_id}`
+  const rawArtifactRel =
+    cognitiveResult &&
+    cognitiveResult.artifact_paths &&
+    typeof cognitiveResult.artifact_paths.raw_response === "string"
+      ? cognitiveResult.artifact_paths.raw_response
+      : null;
+
+  const normalizedArtifactRel =
+    cognitiveResult &&
+    cognitiveResult.artifact_paths &&
+    typeof cognitiveResult.artifact_paths.normalized_response === "string"
+      ? cognitiveResult.artifact_paths.normalized_response
+      : null;
+
+  const cognitiveArtifactsStored =
+    !!(
+      rawArtifactRel &&
+      normalizedArtifactRel &&
+      fs.existsSync(path.resolve(rootAbs, rawArtifactRel)) &&
+      fs.existsSync(path.resolve(rootAbs, normalizedArtifactRel))
     );
-    return {
-      blocked: true,
-      artifact: errRef,
-      status_patch: {
-        blocking_questions: ["Trace BLOCKED: cognitive artifacts missing"],
-        next_step: ""
-      }
-    };
-  }
 
-  if (
-    typeof cognitiveResult.confidence !== "number" ||
-    !Number.isFinite(cognitiveResult.confidence) ||
-    !cognitiveResult.timestamp
-  ) {
-    const errRef = writeTraceError(
-      rootAbs,
-      "TRACE HARD-FAIL: cognitive trace confidence or timestamp missing/invalid"
-    );
-    return {
-      blocked: true,
-      artifact: errRef,
-      status_patch: {
-        blocking_questions: ["Trace BLOCKED: cognitive trace confidence or timestamp missing/invalid"],
-        next_step: ""
-      }
-    };
-  }
+  const cognitiveTrace = {
+    exists: !!normalizedCognitiveResponse,
+    bound: !!(normalizedCognitiveResponse && cognitiveArtifactsStored),
+    binding_type: "TRACE_COGNITIVE",
+    source: "cognitive_adapter",
+    request_timestamp:
+      cognitiveResult && cognitiveResult.request_timestamp
+        ? cognitiveResult.request_timestamp
+        : null,
+    response_id: cognitiveResponseId,
+    storage_status: cognitiveArtifactsStored ? "PERSISTED" : "MISSING_ARTIFACTS",
+    artifact_paths: {
+      raw_response: rawArtifactRel,
+      normalized_response: normalizedArtifactRel
+    },
+    response_status:
+      normalizedCognitiveResponse && typeof normalizedCognitiveResponse.status === "string"
+        ? normalizedCognitiveResponse.status
+        : "UNAVAILABLE",
+    provider_metadata:
+      normalizedCognitiveResponse &&
+      normalizedCognitiveResponse.provider_metadata &&
+      typeof normalizedCognitiveResponse.provider_metadata === "object"
+        ? normalizedCognitiveResponse.provider_metadata
+        : {
+            provider: "NONE",
+            model: "NONE",
+            latency_ms: 0
+          },
+    output:
+      normalizedCognitiveResponse &&
+      normalizedCognitiveResponse.output &&
+      typeof normalizedCognitiveResponse.output === "object"
+        ? normalizedCognitiveResponse.output
+        : {
+            type: "structured",
+            content: {}
+          },
+    usage:
+      normalizedCognitiveResponse &&
+      normalizedCognitiveResponse.usage &&
+      typeof normalizedCognitiveResponse.usage === "object"
+        ? normalizedCognitiveResponse.usage
+        : {
+            prompt_tokens: 0,
+            completion_tokens: 0
+          }
+  };
 
   const traceJson = {
     execution_id: `TRACE-${new Date().toISOString()}`,
     cognitive_binding: {
-      bound: true,
+      bound: cognitiveTrace.bound,
       type: "TRACE_COGNITIVE",
-      response_id: cognitiveResult.response_id
+      response_id: cognitiveResponseId
     },
     operating_mode: intakeContext.operating_mode,
     repository_state: intakeContext.repository_state,
@@ -1000,13 +1053,7 @@ async function runTrace(contextOrStatus) {
     orphan_code_units: mapped.orphan_code_units,
     orphan_requirements: mapped.orphan_requirements,
     orphan_artifacts: mapped.orphan_artifacts,
-    cognitive_trace: {
-      exists: true,
-      response_id: cognitiveResult.response_id,
-      confidence: cognitiveResult.confidence,
-      source: "cognitive_adapter",
-      timestamp: cognitiveResult.timestamp
-    }
+    cognitive_trace: cognitiveTrace
   };
 
   const outRefs = writeTraceOutputs(rootAbs, traceJson);
