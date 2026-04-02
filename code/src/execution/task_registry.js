@@ -2021,6 +2021,45 @@ Execution Closed
     };
   },
 
+  "TASK-067: ENFORCE FULL VISION RUNTIME": (context) => {
+    const relTaskClosure = "artifacts/tasks/TASK-067.execution.closure.md";
+    const taskClosureAbs = path.resolve(__dirname, "../../..", relTaskClosure);
+
+    if (fs.existsSync(taskClosureAbs)) {
+      throw new Error("Idempotency violation: closure artifact already exists for TASK-067");
+    }
+
+    fs.mkdirSync(path.dirname(taskClosureAbs), { recursive: true });
+
+    fs.writeFileSync(
+      taskClosureAbs,
+      `# TASK-067 — Execution Closure
+
+## Task
+- Task ID: TASK-067
+- Stage Binding: VISION_COMPLIANCE
+- Closure Type: EXECUTION
+
+## Status
+- stage_progress_percent: 10
+- closure_artifact: true
+
+## Notes
+- Vision runtime enforcement initiated
+- Stage A→D lifecycle not yet implemented
+- Further tasks required to transform pipeline
+`,
+      "utf-8"
+    );
+
+    return {
+      stage_progress_percent: 10,
+      closure_artifact: true,
+      artifact: relTaskClosure,
+      clear_current_task: false
+    };
+  },
+
   "TASK-064": (context) => {
     const relTaskClosure = "artifacts/tasks/TASK-064.execution.closure.md";
     const taskClosureAbs = path.resolve(__dirname, "../../..", relTaskClosure);

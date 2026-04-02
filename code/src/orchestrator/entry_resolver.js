@@ -178,8 +178,6 @@ function resolveEntry() {
   const contiguousClosedIndex = getContiguousClosedIndex(pipeline, closureFiles);
   const laterClosureAfterGap = hasLaterClosureAfterGap(pipeline, closureFiles, contiguousClosedIndex);
 
-
-
   if (laterClosureAfterGap) {
     return {
       entry_type: "BLOCKED",
@@ -192,6 +190,21 @@ function resolveEntry() {
 
   const allClosed = contiguousClosedIndex === pipeline.length - 1;
   const forgeTask = String(forgeState.current_task || "").trim();
+  const forgeStage = String(forgeState.current_stage || "").trim();
+  const integrity = String(forgeState.execution_integrity || "").trim().toUpperCase();
+
+  if (
+    forgeStage === "VISION_COMPLIANCE" &&
+    forgeTask !== ""
+  ) {
+    return {
+      entry_type: "RESUME",
+      next_module: "VISION_COMPLIANCE",
+      next_task: forgeTask,
+      blocked: false,
+      reason: "Resume from vision compliance task"
+    };
+  }
 
   if (allClosed) {
     return {

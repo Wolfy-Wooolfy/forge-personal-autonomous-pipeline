@@ -1,19 +1,18 @@
 # Orchestration Run Report
 
-- Run ID: RUN-617107B0C1AE
-- Run Mode: COMPLETE
-- Started At: 2026-04-02T14:45:56.865Z
-- Last Updated At: 2026-04-02T14:45:56.869Z
-- Status: COMPLETE
-- Entry Type: COMPLETE
-- Blocked: NO
-- Blocking Reason: N/A
-- Reason: Pipeline already complete
+- Run Mode: BLOCKED
+- Status: BLOCKED
+- Entry Type: BLOCKED
+- Blocking Reason: PIPELINE_CONTRACT_VIOLATION: TASK-067
 - Current Module: N/A
 - Next Task: N/A
-- Final Outcome: COMPLETE
+- Final Outcome: BLOCKED
 
 ## Completed Modules
+
+- None
+
+## Pending Modules
 
 - INTAKE
 - AUDIT
@@ -25,11 +24,3 @@
 - EXECUTE
 - VERIFY
 - CLOSURE
-
-## Pending Modules
-
-- None
-
-## Execution Log
-
-- No module execution performed

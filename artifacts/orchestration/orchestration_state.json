@@ -1,17 +1,46 @@
 {
-  "run_id": "RUN-617107B0C1AE",
-  "run_mode": "COMPLETE",
-  "started_at": "2026-04-02T14:45:56.865Z",
-  "last_updated_at": "2026-04-02T14:45:56.869Z",
-  "status": "COMPLETE",
-  "blocked": false,
-  "blocking_reason": "",
-  "reason": "Pipeline already complete",
-  "entry_type": "COMPLETE",
+  "run_id": "RUN-1775144615674",
+  "run_mode": "BLOCKED",
+  "started_at": "2026-04-02T15:43:35.674Z",
+  "last_updated_at": "2026-04-02T15:43:35.674Z",
+  "status": "BLOCKED",
+  "blocked": true,
+  "blocking_reason": "PIPELINE_CONTRACT_VIOLATION: TASK-067",
+  "reason": "PIPELINE_CONTRACT_VIOLATION: TASK-067",
+  "pipeline_contract_violation": {
+    "violation_type": "PIPELINE_CONTRACT_VIOLATION",
+    "detected_at": "2026-04-02T15:43:35.670Z",
+    "context": {
+      "pipeline_source": "code/src/orchestrator/pipeline_definition.js",
+      "detected_in": [
+        "artifacts/tasks",
+        "forge_state",
+        "execution_registry"
+      ]
+    },
+    "invalid_tasks": [
+      "TASK-067"
+    ],
+    "impact": {
+      "execution_integrity": "INCONSISTENT",
+      "system_status": "BLOCKED",
+      "completion_allowed": false
+    },
+    "enforcement": {
+      "mode": "FAIL_CLOSED",
+      "action": "HARD_STOP",
+      "layers": [
+        "forge_state_resolver",
+        "orchestrator"
+      ]
+    }
+  },
+  "entry_type": "BLOCKED",
   "next_task": null,
   "next_module": null,
   "current_module": null,
-  "completed_modules": [
+  "completed_modules": [],
+  "pending_modules": [
     "INTAKE",
     "AUDIT",
     "TRACE",
@@ -23,6 +52,5 @@
     "VERIFY",
     "CLOSURE"
   ],
-  "pending_modules": [],
-  "final_outcome": "COMPLETE"
+  "final_outcome": "BLOCKED"
 }
