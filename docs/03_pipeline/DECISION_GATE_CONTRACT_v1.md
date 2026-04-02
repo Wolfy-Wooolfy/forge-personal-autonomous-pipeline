@@ -256,6 +256,23 @@ Decision file MUST include:
 
 ---
 
+### Override Channel Rule
+
+Decision override MUST NOT be derived from `progress/status.json`
+or any status reflection field.
+
+If an explicit human override path is permitted by runtime policy,
+it MUST come through a governed override channel external to status reflection.
+
+In the current runtime implementation, the permitted override channel is:
+- `FORGE_DECISION_OVERRIDE`
+
+Allowed values:
+- `APPROVE ALL`
+- `REJECT`
+
+---
+
 # 8. Decision Immutability Rule
 
 Once recorded:

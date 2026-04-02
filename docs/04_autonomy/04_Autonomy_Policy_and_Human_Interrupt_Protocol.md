@@ -360,7 +360,7 @@ When a Human Interrupt occurs, the system MUST:
 3. Emit EXACTLY ONE interrupt message  
 
 The interrupt message MUST be a direct,
-lossless rendering of `progress/status.json`
+lossless rendering of the governed human-visible status reflection
 and MUST follow this structure EXACTLY:
 
 ```
@@ -401,8 +401,8 @@ If these conditions are not met:
 - No Decision may be requested
 - Execution MUST NOT pause for choice
 
-Selectable options MUST be represented ONLY inside:
-`progress/status.json`
+Selectable options MUST be represented ONLY inside
+the governed human-visible status reflection artifact.
 
 They MUST NOT be printed or re-described elsewhere.
 
@@ -440,7 +440,7 @@ At any time, the human authority may request status.
 The system MUST respond with:
 
 - A full status report
-- A direct, lossless rendering of `progress/status.json`
+- A direct, lossless rendering of the governed human-visible status reflection
 - NO additional text
 - NO commentary
 - NO explanation
@@ -455,6 +455,7 @@ This document does NOT define:
 
 All status semantics are governed EXCLUSIVELY by:
 
+- governed runtime state contracts
 - Progress Tracking & Status Report Contract (v1)
 
 ---
@@ -508,7 +509,7 @@ within the configured silent window:
 
 - Silence is no longer permitted
 - A mandatory status report MUST be emitted automatically
-- The report MUST be a direct rendering of `progress/status.json`
+- The report MUST be a direct rendering of the governed human-visible status reflection
 
 Silent execution beyond the configured window
 without status emission
@@ -547,6 +548,19 @@ All human authority actions MUST be captured as:
 Overrides are NOT conversational.  
 Overrides are NOT implicit.  
 Overrides are NOT contextual.
+
+Human override input MUST NOT be injected through `progress/status.json`
+or any reflected status field.
+
+Human override, when explicitly permitted by contract,
+MUST use a governed override channel separate from execution reflection.
+
+Current governed override channel:
+- environment variable `FORGE_DECISION_OVERRIDE`
+
+Permitted values:
+- `APPROVE ALL`
+- `REJECT`
 
 Execution Abort is terminal.  
 No override may revive an aborted execution path.

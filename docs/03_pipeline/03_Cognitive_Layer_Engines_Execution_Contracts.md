@@ -254,6 +254,13 @@ Human Interrupt is permitted ONLY if:
 
 All blocking MUST be represented first in governed runtime authority artifacts and then mirrored in `progress/status.json` per Doc-06.
 
+No cognitive engine, decision engine, or continuation gate may derive approval,
+rejection,
+resume,
+or override authority from `progress/status.json`.
+
+`progress/status.json` is reflection/output only.
+
 No comfort questions, no preference selection prompts.
 
 ---

@@ -17,15 +17,31 @@ function ensureDir(absDir) {
   fs.mkdirSync(absDir, { recursive: true });
 }
 
-function parseDecisionFromStatus(status) {
-  const envValue = String(process.env.FORGE_DECISION_OVERRIDE || "");
-  const statusValue = String(status && status.next_step ? status.next_step : "");
-  const source = envValue || statusValue;
-  const m = source.match(/\(([^)]+)\)\s*$/);
-  const suffix = m ? String(m[1]).trim().toUpperCase() : "";
-  if (suffix === "APPROVE ALL") return { mode: "APPROVE_ALL" };
-  if (suffix === "REJECT") return { mode: "REJECT" };
-  return { mode: "UNSPECIFIED" };
+function parseDecisionOverride() {
+  const envValue = String(process.env.FORGE_DECISION_OVERRIDE || "").trim();
+  const normalized = envValue.toUpperCase();
+
+  if (normalized === "APPROVE ALL" || normalized === "APPROVE_ALL") {
+    return {
+      mode: "APPROVE_ALL",
+      source: "ENV",
+      raw: envValue
+    };
+  }
+
+  if (normalized === "REJECT") {
+    return {
+      mode: "REJECT",
+      source: "ENV",
+      raw: envValue
+    };
+  }
+
+  return {
+    mode: "UNSPECIFIED",
+    source: envValue === "" ? "NONE" : "ENV",
+    raw: envValue
+  };
 }
 
 function classifyActionRisk({ action, gap, intakeContext }) {
@@ -329,7 +345,7 @@ function runDecisionGate(context) {
     };
   }
 
-  const decision = parseDecisionFromStatus(status);
+  const decision = parseDecisionOverride();
   const actionsObj = readJson(explorationMatrixAbs);
   const intakeContext = readJson(intakeContextAbs);
 
@@ -376,6 +392,8 @@ function runDecisionGate(context) {
       operating_mode: intakeContext.operating_mode,
       repository_state: intakeContext.repository_state,
       override_mode: decision.mode,
+      override_source: decision.source,
+      override_raw: decision.raw,
       source: {
         exploration_matrix_path: "artifacts/exploration/option_matrix.json",
         exploration_matrix_sha256: sha256Text(JSON.stringify(actionsObj, null, 2)),
@@ -434,7 +452,7 @@ function runDecisionGate(context) {
     };
 
     if (decision.mode === "REJECT") {
-      cleanRow.reason = "explicit REJECT from status.next_step";
+      cleanRow.reason = "explicit REJECT from governed override channel";
       rejectedActions.push(cleanRow);
       continue;
     }
@@ -475,6 +493,8 @@ function runDecisionGate(context) {
     operating_mode: intakeContext.operating_mode,
     repository_state: intakeContext.repository_state,
     override_mode: decision.mode,
+    override_source: decision.source,
+    override_raw: decision.raw,
     source: {
       exploration_matrix_path: "artifacts/exploration/option_matrix.json",
       exploration_matrix_sha256: sha256Text(actionsText),
@@ -505,7 +525,7 @@ function runDecisionGate(context) {
       status_patch: {
         next_step: "IDLE — Decision Gate REJECTED",
         blocking_questions: [
-          "Decision Gate REJECTED: update next_step with explicit approval to proceed."
+          "Decision Gate REJECTED: override must come from FORGE_DECISION_OVERRIDE, not from status reflection."
         ]
       }
     };
@@ -520,7 +540,7 @@ function runDecisionGate(context) {
       status_patch: {
         next_step: "",
         blocking_questions: [
-          "Decision Gate BLOCKED: high-risk or ambiguous actions require explicit override. Set next_step to include (APPROVE ALL) or (REJECT) then re-run Decision Gate."
+          "Decision Gate BLOCKED: high-risk or ambiguous actions require explicit override. Set FORGE_DECISION_OVERRIDE to APPROVE ALL or REJECT, then re-run Decision Gate."
         ]
       }
     };
