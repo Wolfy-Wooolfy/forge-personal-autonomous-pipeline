@@ -2022,18 +2022,53 @@ Execution Closed
   },
 
   "TASK-067: ENFORCE FULL VISION RUNTIME": (context) => {
-    const stageAArtifacts = [
+    const requiredArtifacts = [
       "artifacts/stage_A",
       "artifacts/stage_B",
       "artifacts/stage_C",
-      "artifacts/stage_D/final_acceptance_report.json",
-      "artifacts/stage_D/release_gate_closure.md"
+      "artifacts/stage_D/final_acceptance_report.json"
     ];
 
-    const missing = stageAArtifacts.filter((rel) => {
+    const missing = requiredArtifacts.filter((rel) => {
       const abs = path.resolve(__dirname, "../../..", rel);
       return !fs.existsSync(abs);
     });
+
+    const finalAcceptanceRel = "artifacts/stage_D/final_acceptance_report.json";
+    const finalAcceptanceAbs = path.resolve(__dirname, "../../..", finalAcceptanceRel);
+
+    let acceptanceResult = "";
+
+    if (missing.length === 0) {
+      try {
+        const acceptance = JSON.parse(fs.readFileSync(finalAcceptanceAbs, "utf-8"));
+        acceptanceResult = String(acceptance.final_result || acceptance.result || "").trim().toUpperCase();
+      } catch (error) {
+        return {
+          stage_progress_percent: 10,
+          clear_current_task: false,
+          status_patch: {
+            current_stage: "A",
+            current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
+            next_step: "TASK-067 remains OPEN until final acceptance report is valid JSON",
+            blocking_questions: [],
+            issues: [
+              `Invalid or unreadable vision runtime artifact: ${finalAcceptanceRel}`
+            ]
+          },
+          blocked: true
+        };
+      }
+    }
+
+    if (acceptanceResult === "ACCEPTED") {
+      const releaseGateRel = "artifacts/stage_D/release_gate_closure.md";
+      const releaseGateAbs = path.resolve(__dirname, "../../..", releaseGateRel);
+
+      if (!fs.existsSync(releaseGateAbs)) {
+        missing.push(releaseGateRel);
+      }
+    }
 
     if (missing.length > 0) {
       return {
@@ -2042,7 +2077,7 @@ Execution Closed
         status_patch: {
           current_stage: "A",
           current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
-          next_step: "TASK-067 remains OPEN until full Stage A→D runtime evidence exists",
+          next_step: "TASK-067 remains OPEN until required Stage D acceptance artifacts exist",
           blocking_questions: [],
           issues: missing.map((rel) => `Missing required vision runtime artifact: ${rel}`)
         },
