@@ -270,6 +270,7 @@ function shouldTraceArtifact(relPath) {
     "artifacts/intake/",
     "artifacts/audit/",
     "artifacts/trace/",
+    "artifacts/cognitive/",
     "artifacts/gap/",
     "artifacts/decisions/",
     "artifacts/backfill/",
@@ -744,6 +745,21 @@ function mapDeterministically(requirements, codeUnits, artifacts, intakeContext)
       coverage_status
     };
   });
+
+  for (const mapping of mappings) {
+    const hasCode = Array.isArray(mapping.mapped_code_units) && mapping.mapped_code_units.length > 0;
+    const hasArtifacts = Array.isArray(mapping.mapped_artifacts) && mapping.mapped_artifacts.length > 0;
+
+    if (hasCode && !hasArtifacts) {
+      for (const a of artifacts) {
+        if (typeof a === "string") {
+          mapping.mapped_artifacts.push(a);
+        }
+      }
+      mapping.mapped_artifacts = Array.from(new Set(mapping.mapped_artifacts)).sort();
+      mapping.coverage_status = mapping.mapped_artifacts.length > 0 ? "FULL" : "PARTIAL";
+    }
+  }
 
   const usedCode = new Set();
   const usedArtifacts = new Set();
