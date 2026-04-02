@@ -1,28 +1,29 @@
 {
-  "run_id": "RUN-5D7AD6A33D4C",
+  "run_id": "RUN-C76D3EB3992A",
   "run_mode": "RESUME",
-  "started_at": "2026-04-02T09:41:32.995Z",
-  "last_updated_at": "2026-04-02T09:41:34.653Z",
-  "status": "COMPLETE",
-  "blocked": false,
-  "blocking_reason": "",
+  "started_at": "2026-04-02T09:49:24.675Z",
+  "last_updated_at": "2026-04-02T09:49:24.827Z",
+  "status": "BLOCKED",
+  "blocked": true,
+  "blocking_reason": "Decision Gate BLOCKED: high-risk or ambiguous actions require explicit override. Set next_step to include (APPROVE ALL) or (REJECT) then re-run Decision Gate.",
   "reason": "Resume from next incomplete module",
   "entry_type": "RESUME",
-  "next_task": null,
-  "next_module": null,
-  "current_module": null,
+  "next_task": "TASK-052: MODULE FLOW — Decision Gate",
+  "next_module": "DECISION_GATE",
+  "current_module": "DECISION_GATE",
   "completed_modules": [
+    "GAP",
+    "DESIGN_EXPLORATION"
+  ],
+  "pending_modules": [
     "INTAKE",
     "AUDIT",
     "TRACE",
-    "GAP",
-    "DESIGN_EXPLORATION",
     "DECISION_GATE",
     "BACKFILL",
     "EXECUTE",
     "VERIFY",
     "CLOSURE"
   ],
-  "pending_modules": [],
-  "final_outcome": "COMPLETE"
+  "final_outcome": "BLOCKED"
 }

@@ -164,7 +164,7 @@ async function writeStatusAndRun(taskName) {
     current_task: taskName
   });
 
-  return run();
+  return await run();
 }
 
 function extractTargetStage(nextStep) {
@@ -265,7 +265,7 @@ async function run() {
     return;
   }
 
-  const result = executeTask(entry.next_task, status);
+  const result = await executeTask(entry.next_task, status);
 
   if (result && result.closure_artifact === true && result.artifact) {
     const ROOT = path.resolve(__dirname, "../../..");

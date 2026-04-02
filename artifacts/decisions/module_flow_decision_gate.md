@@ -1,0 +1,249 @@
+# MODULE FLOW — Decision Gate
+
+- timestamp: 2026-04-02T09:49:24.818Z
+- policy: AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK
+- operating_mode: IMPROVE
+- repository_state: MIXED
+- blocked: true
+
+## Source
+- exploration_matrix_path: artifacts/exploration/option_matrix.json
+- exploration_matrix_sha256: 88085867a129f8ae63791dc72cb225d8652803d2cece19db6382097a19ef0b9e
+- intake_context_path: artifacts/intake/intake_context.json
+- intake_context_sha256: eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84
+
+## Summary
+- total_actions: 110
+- approved_count: 108
+- review_required_count: 2
+- rejected_count: 0
+
+## Approved Actions
+- ACT-f6ac15d66c1b [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R012 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d9b18f96fdf5 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-18::R005 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-6db4057594b8 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R001 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-cffd2f59ad80 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R002 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-40af1ff9921e [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R005 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-cff0f23a6ca5 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R011 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-fbe9983387de [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R002 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-54e889b41dc7 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R007 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-8f4368ae05ee [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R006 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-bb4738b401fa [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R007 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-59ef5f692c83 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-18::R013 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-339fd278e167 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R002 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-980661966381 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R004 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-3247fa38c9a7 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-16::R004 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-3798cad325e7 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R019 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-5de46edf9413 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R001 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-e1efdfd4f377 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-RT-1010::R003 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-65f885d0335b [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-16::R005 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-a74b0dd4a458 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R021 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-c85e563b0a78 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-16::R001 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-a957e4ca6b1d [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R010 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-dc84c3d67265 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-RT-1010::R005 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-80620ef86723 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R010 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-bd0e52c40d9f [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R005 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-f1415ff5fe09 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-18::R008 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d4edde404eb0 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R008 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-5fced1c4bf53 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R018 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-375e45c0bdd9 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R016 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-13ecdaaf433f [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R011 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-6a52657ce493 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R017 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-019782af6e0d [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R009 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-2249c07c552c [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-10-CE-SEL::R001 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-26c3dbd541b3 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R018 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-2b234fcfc86f [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R003 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-4f4fc0074672 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-10-CE-SEL::R002 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-469a51130214 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-18::R001 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-1548cd4b57e3 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R010 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-9aee51b01907 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-RT-1010::R006 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d14fd52f7b52 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-RT-1010::R007 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-955933d579d1 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-RT-1010::R002 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-eebff09b3592 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R017 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-90845fed8b3c [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-16::R003 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-e6d4de4afb26 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R022 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-24c6e42e1939 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-10-CE-SEL::R003 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-e87e12d431ee [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-18::R002 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-686530b6c3d5 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R015 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-363823248652 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R011 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d2669ec38ba8 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R015 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-9988f1a30994 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R004 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-7d2f3c2033c0 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R005 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-bbbe72afb924 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R009 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-5dc4cac02b16 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-18::R010 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-450e2f93d684 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-16::R009 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-a62c6c149998 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-10-CE-SEL::R004 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-1277e8bd9da0 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-10-CE-SEL::R010 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-899a1abcc3c4 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R011 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-b3b10a188240 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R012 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-646b192b65ac [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R014 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-43c64656852e [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R015 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-093dacead2da [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-16::R007 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-143246e8ed72 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-18::R012 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-7ab0e432baa0 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R009 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-85d3ea94b40e [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-16::R006 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-ec930e624725 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R008 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-9f656660cfa5 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R006 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-4da6e42056bb [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-RT-1010::R004 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-d0591a40e8a2 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R013 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-b3ee868ef088 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-16::R008 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-4480250a54e3 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R003 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-e5a90aa2a381 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R002 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-0c2e49676a6a [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R019 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-9266cca5f038 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-RT-1010::R001 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-5d3b8835f871 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R013 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-97b9a9cf216c [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-16::R012 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-f015eda54ab0 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-18::R007 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-2dad916d6db3 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-18::R011 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-bebbdbf47485 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R009 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-0170cea9269a [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-16::R002 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-c284e32d1b6b [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-10-CE-SEL::R005 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-0127a8788caf [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R003 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-ced1f0f44cab [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-16::R011 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-3ad7596b1992 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-18::R009 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-f51c8c692b54 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-18::R003 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-7d24c1f4310d [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R014 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-afaf22b7170a [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-10-CE-SEL::R009 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-f50c5a2c2486 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R007 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-ed2e04cb29c6 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R001 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-2bb90251d5fb [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-18::R006 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-c3e09bdc65a9 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R007 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-f71858862ae7 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R008 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-404ff8d10bfb [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R005 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-6b53c49ba7d6 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R004 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-1189b94d7182 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R016 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-aa442b153ac0 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-16::R010 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-80dd82b0764c [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-10-CE-SEL::R006 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-5548de4227c0 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-10-CE-SEL::R007 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-c142e278d138 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R006 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-0192d0e3fe57 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R003 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-ec715e0831af [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R012 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-31ec524618b7 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R001 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-737e1fd32a16 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R013 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-847ac5473a55 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R014 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-3f4c17bdea60 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R008 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-495f1880e3be [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R017 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-986415a78187 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-17__PROJECT_OBJECTIVE_CONTRACT::R006 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-dfd3bddd4e87 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-18::R004 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-75fb85f5b88e [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R004 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+- ACT-acb599207faa [PARTIAL_COVERAGE/MEDIUM] Complete coverage for DOC-15::R010 by ensuring both mapped_code_units and mapped_artifacts are present.
+  - reason: improve mode bounded non-destructive remediation
+
+## Review Required
+- ACT-2f228d1cb3f1 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/cognitive/cognitive_adapter.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
+  - reason: action explicitly marked requires_decision
+- ACT-eca0e2c7ec2b [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/cognitive/cognitive_adapter.js::FILE if it is not part of Forge scope/contracts.
+  - reason: action explicitly marked requires_decision
+
+## Rejected Actions
+- None
+
+## Next
+- next_step: BLOCKED pending explicit decision override

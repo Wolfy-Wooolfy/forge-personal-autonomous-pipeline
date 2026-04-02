@@ -2,12 +2,17 @@
 
 ~~~json
 {
-  "execution_id": "TRACE-2026-04-01T10:30:47.530Z",
+  "execution_id": "TRACE-2026-04-02T09:48:11.154Z",
+  "cognitive_binding": {
+    "bound": true,
+    "type": "TRACE_COGNITIVE",
+    "response_id": "RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957"
+  },
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
-  "total_requirements": 578,
-  "total_code_units": 20,
-  "total_artifacts": 28,
+  "total_requirements": 579,
+  "total_code_units": 21,
+  "total_artifacts": 12,
   "mappings": [
     {
       "requirement_id": "DOC-20::R001",
@@ -305,7 +310,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -322,7 +326,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -339,7 +342,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -356,7 +358,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -373,7 +374,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -390,7 +390,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -407,7 +406,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -424,7 +422,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -441,7 +438,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -458,7 +454,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -471,8 +466,8 @@
         "CODE::code/src/modules/verifyEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -487,7 +482,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -504,7 +498,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -521,7 +514,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -538,7 +530,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -555,7 +546,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -572,7 +562,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -589,7 +578,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -606,7 +594,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -623,7 +610,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -636,8 +622,8 @@
         "CODE::code/src/modules/verifyEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -652,7 +638,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -669,7 +654,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -686,7 +670,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -703,7 +686,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -720,7 +702,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -737,7 +718,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -754,7 +734,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -771,7 +750,6 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/trace/trace_matrix.json"
       ],
@@ -784,8 +762,8 @@
         "CODE::code/src/modules/verifyEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -797,12 +775,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R002",
@@ -812,12 +786,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R003",
@@ -827,12 +797,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R004",
@@ -842,12 +808,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R005",
@@ -857,12 +819,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R006",
@@ -872,12 +830,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R007",
@@ -887,12 +841,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R008",
@@ -902,12 +852,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R009",
@@ -917,12 +863,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R010",
@@ -932,12 +874,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-15::R011",
@@ -947,12 +885,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-16::R001",
@@ -960,12 +894,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-16::R002",
@@ -973,12 +903,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-16::R003",
@@ -986,12 +912,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-16::R004",
@@ -999,12 +921,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-16::R005",
@@ -1012,12 +930,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-16::R006",
@@ -1025,12 +939,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-16::R007",
@@ -1038,12 +948,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-16::R008",
@@ -1051,12 +957,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-16::R009",
@@ -1064,12 +966,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-16::R010",
@@ -1077,12 +975,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-16::R011",
@@ -1090,12 +984,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-16::R012",
@@ -1103,12 +993,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R001",
@@ -1118,12 +1004,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R002",
@@ -1133,12 +1015,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R003",
@@ -1148,12 +1026,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R004",
@@ -1163,12 +1037,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R005",
@@ -1178,12 +1048,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R006",
@@ -1193,12 +1059,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R007",
@@ -1208,12 +1070,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R008",
@@ -1223,12 +1081,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R009",
@@ -1238,12 +1092,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R010",
@@ -1253,12 +1103,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R011",
@@ -1268,12 +1114,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R012",
@@ -1283,12 +1125,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R013",
@@ -1296,11 +1134,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R014",
@@ -1310,12 +1145,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R015",
@@ -1325,12 +1156,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R016",
@@ -1340,12 +1167,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R017",
@@ -1355,12 +1178,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R018",
@@ -1370,12 +1189,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-17__PROJECT_OBJECTIVE_CONTRACT::R019",
@@ -1385,12 +1200,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE",
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-11::R001",
@@ -1409,12 +1220,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1435,12 +1241,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1461,12 +1262,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1487,12 +1283,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1513,12 +1304,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1539,12 +1325,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1565,12 +1346,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1591,12 +1367,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1617,12 +1388,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1643,12 +1409,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1669,12 +1430,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1695,12 +1451,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1721,12 +1472,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1748,9 +1494,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1772,9 +1516,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1796,9 +1538,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1820,9 +1560,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1844,9 +1582,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1868,9 +1604,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1892,9 +1626,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1916,9 +1648,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1940,9 +1670,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1965,9 +1693,6 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md",
         "artifacts/release/RELEASE_MANIFEST_v1.json",
         "artifacts/release/repository_hash_snapshot.json"
       ],
@@ -1991,9 +1716,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2015,9 +1738,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2039,9 +1760,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2209,9 +1928,7 @@
       "mapped_artifacts": [
         "artifacts/trace/trace_error.md",
         "artifacts/trace/trace_matrix.json",
-        "artifacts/trace/trace_matrix.md",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -2307,8 +2024,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2329,8 +2045,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2351,8 +2066,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2373,8 +2087,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2395,8 +2108,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2417,8 +2129,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2439,8 +2150,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2463,9 +2173,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2486,8 +2194,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2508,8 +2215,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2530,8 +2236,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2552,8 +2257,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2574,12 +2278,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2600,12 +2299,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2626,12 +2320,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2652,12 +2341,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2678,12 +2362,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2704,12 +2383,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2731,12 +2405,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2757,12 +2426,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2783,12 +2447,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2809,12 +2468,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2835,12 +2489,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2861,12 +2510,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2887,12 +2531,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2913,12 +2552,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2939,12 +2573,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2965,12 +2594,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -2991,12 +2615,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3017,12 +2636,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3043,8 +2657,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3065,12 +2678,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3091,12 +2699,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3117,12 +2720,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3143,12 +2741,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3169,12 +2762,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3195,12 +2783,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3221,12 +2804,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3247,12 +2825,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3273,12 +2846,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3299,12 +2867,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3348,12 +2911,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3374,12 +2932,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3400,12 +2953,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3449,8 +2997,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3471,8 +3018,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3493,8 +3039,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3517,9 +3062,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3540,12 +3083,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3566,12 +3104,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3592,12 +3125,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3641,12 +3169,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3667,12 +3190,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3693,12 +3211,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3719,12 +3232,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3745,12 +3253,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3771,12 +3274,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3797,12 +3295,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3823,12 +3316,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3849,12 +3337,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3875,12 +3358,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3901,12 +3379,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3927,12 +3400,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3953,12 +3421,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -3980,12 +3443,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4006,12 +3464,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4032,12 +3485,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4058,12 +3506,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4084,12 +3527,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4110,12 +3548,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4136,12 +3569,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4162,12 +3590,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4188,12 +3611,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4214,12 +3632,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4240,12 +3653,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4266,12 +3674,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4292,12 +3695,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4318,12 +3716,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4344,12 +3737,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4370,12 +3758,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4396,12 +3779,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4422,12 +3800,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4448,12 +3821,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4474,12 +3842,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4500,12 +3863,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4526,8 +3884,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4548,8 +3905,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4570,12 +3926,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4596,12 +3947,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4622,12 +3968,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4648,12 +3989,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4674,12 +4010,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4723,12 +4054,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4749,12 +4075,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4775,12 +4096,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4801,12 +4117,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4827,12 +4138,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4853,12 +4159,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4879,12 +4180,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4905,12 +4201,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4931,12 +4222,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4958,10 +4244,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -4983,8 +4266,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5005,12 +4287,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5031,12 +4308,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5079,12 +4351,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5105,12 +4372,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5131,12 +4393,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5157,12 +4414,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5183,12 +4435,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5209,12 +4456,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5235,12 +4477,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5261,12 +4498,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5287,12 +4519,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5313,12 +4540,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5339,12 +4561,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5365,12 +4582,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5391,12 +4603,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5417,12 +4624,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5443,12 +4645,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5469,12 +4666,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5904,11 +5096,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_created_files.json",
-        "artifacts/backfill/backfill_execution_log.md",
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/backfill/backfill_report.md",
-        "artifacts/backfill/backfill_tasks.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5930,11 +5118,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_created_files.json",
-        "artifacts/backfill/backfill_execution_log.md",
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/backfill/backfill_report.md",
-        "artifacts/backfill/backfill_tasks.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5956,11 +5140,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_created_files.json",
-        "artifacts/backfill/backfill_execution_log.md",
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/backfill/backfill_report.md",
-        "artifacts/backfill/backfill_tasks.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -5982,11 +5162,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_created_files.json",
-        "artifacts/backfill/backfill_execution_log.md",
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/backfill/backfill_report.md",
-        "artifacts/backfill/backfill_tasks.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6008,11 +5184,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_created_files.json",
-        "artifacts/backfill/backfill_execution_log.md",
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/backfill/backfill_report.md",
-        "artifacts/backfill/backfill_tasks.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6034,11 +5206,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_created_files.json",
-        "artifacts/backfill/backfill_execution_log.md",
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/backfill/backfill_report.md",
-        "artifacts/backfill/backfill_tasks.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6060,11 +5228,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_created_files.json",
-        "artifacts/backfill/backfill_execution_log.md",
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/backfill/backfill_report.md",
-        "artifacts/backfill/backfill_tasks.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6086,11 +5250,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_created_files.json",
-        "artifacts/backfill/backfill_execution_log.md",
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/backfill/backfill_report.md",
-        "artifacts/backfill/backfill_tasks.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6112,11 +5272,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_created_files.json",
-        "artifacts/backfill/backfill_execution_log.md",
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/backfill/backfill_report.md",
-        "artifacts/backfill/backfill_tasks.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6138,11 +5294,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_created_files.json",
-        "artifacts/backfill/backfill_execution_log.md",
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/backfill/backfill_report.md",
-        "artifacts/backfill/backfill_tasks.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6164,11 +5316,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_created_files.json",
-        "artifacts/backfill/backfill_execution_log.md",
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/backfill/backfill_report.md",
-        "artifacts/backfill/backfill_tasks.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6190,11 +5338,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_created_files.json",
-        "artifacts/backfill/backfill_execution_log.md",
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/backfill/backfill_report.md",
-        "artifacts/backfill/backfill_tasks.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6216,11 +5360,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_created_files.json",
-        "artifacts/backfill/backfill_execution_log.md",
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/backfill/backfill_report.md",
-        "artifacts/backfill/backfill_tasks.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6242,11 +5382,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_created_files.json",
-        "artifacts/backfill/backfill_execution_log.md",
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/backfill/backfill_report.md",
-        "artifacts/backfill/backfill_tasks.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6268,11 +5404,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_created_files.json",
-        "artifacts/backfill/backfill_execution_log.md",
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/backfill/backfill_report.md",
-        "artifacts/backfill/backfill_tasks.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6364,9 +5496,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/release/repository_hash_snapshot.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6641,8 +5771,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6664,8 +5793,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6687,8 +5815,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6710,8 +5837,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6733,8 +5859,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6756,8 +5881,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6779,8 +5903,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6802,8 +5925,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6825,8 +5947,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6848,8 +5969,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6871,8 +5991,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6894,8 +6013,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6917,8 +6035,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6940,8 +6057,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6963,8 +6079,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -6986,12 +6101,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7013,12 +6123,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7040,12 +6145,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7067,12 +6167,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7094,12 +6189,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7121,12 +6211,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7148,12 +6233,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7175,12 +6255,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7202,12 +6277,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7230,8 +6300,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7253,12 +6322,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7280,12 +6344,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7307,12 +6366,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7335,8 +6389,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7358,12 +6411,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7385,12 +6433,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7437,12 +6480,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7464,12 +6502,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7491,10 +6524,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/execute/execute_diff.md",
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/execute/execute_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7516,10 +6546,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/execute/execute_diff.md",
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/execute/execute_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7541,10 +6568,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/execute/execute_diff.md",
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/execute/execute_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7566,10 +6590,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/execute/execute_diff.md",
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/execute/execute_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7591,10 +6612,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/execute/execute_diff.md",
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/execute/execute_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7616,10 +6634,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/execute/execute_diff.md",
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/execute/execute_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7641,10 +6656,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/execute/execute_diff.md",
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/execute/execute_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7666,10 +6678,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/execute/execute_diff.md",
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/execute/execute_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7691,10 +6700,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/execute/execute_diff.md",
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/execute/execute_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7716,10 +6722,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/execute/execute_diff.md",
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/execute/execute_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7741,10 +6744,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/execute/execute_diff.md",
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/execute/execute_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7766,10 +6766,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/execute/execute_diff.md",
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/execute/execute_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7791,10 +6788,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/execute/execute_diff.md",
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/execute/execute_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7816,10 +6810,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/execute/execute_diff.md",
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/execute/execute_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7841,10 +6832,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/execute/execute_diff.md",
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/execute/execute_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7866,10 +6854,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/execute/execute_diff.md",
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/execute/execute_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7891,9 +6876,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7915,9 +6898,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7939,9 +6920,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7963,9 +6942,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -7987,9 +6964,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8011,9 +6986,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8035,9 +7008,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8059,9 +7030,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8083,9 +7052,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8107,9 +7074,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8131,9 +7096,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8155,9 +7118,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8179,9 +7140,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8203,9 +7162,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8227,9 +7184,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8251,9 +7206,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8624,12 +7577,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8650,12 +7598,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8676,12 +7619,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8702,12 +7640,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8728,12 +7661,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8754,12 +7682,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8780,12 +7703,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8807,8 +7725,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8829,12 +7746,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8855,12 +7767,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8881,12 +7788,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8907,12 +7809,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8933,12 +7830,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8959,12 +7851,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -8985,12 +7872,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9011,12 +7893,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9037,12 +7914,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9063,12 +7935,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9089,12 +7956,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9115,12 +7977,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9141,12 +7998,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9167,12 +8019,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9193,12 +8040,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9219,12 +8061,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9245,12 +8082,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9271,12 +8103,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9297,12 +8124,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9323,12 +8145,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9349,12 +8166,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9375,12 +8187,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9401,12 +8208,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9427,12 +8229,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9453,12 +8250,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9479,12 +8271,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9505,12 +8292,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9531,12 +8313,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9557,12 +8334,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9657,9 +8429,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9681,12 +8451,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9708,8 +8473,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9731,11 +8495,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_created_files.json",
-        "artifacts/backfill/backfill_execution_log.md",
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/backfill/backfill_report.md",
-        "artifacts/backfill/backfill_tasks.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9757,10 +8517,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/execute/execute_diff.md",
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/execute/execute_report.md"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9804,12 +8561,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9830,12 +8582,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9856,12 +8603,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9882,12 +8624,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9908,12 +8645,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -9934,12 +8666,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10328,6 +9055,30 @@
       "coverage_status": "FULL"
     },
     {
+      "requirement_id": "DOC-32::R017",
+      "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
+      "mapped_code_units": [
+        "CODE::code/src/execution/task_executor.js::FILE",
+        "CODE::code/src/execution/task_registry.js::getTaskHandler",
+        "CODE::code/src/forge/forge_state_resolver.js::FILE",
+        "CODE::code/src/forge/forge_state_writer.js::FILE",
+        "CODE::code/src/modules/traceEngine.js::FILE",
+        "CODE::code/src/modules/verifyEngine.js::FILE",
+        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
+        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
+        "CODE::code/src/orchestrator/pipeline_definition.js::FILE",
+        "CODE::code/src/orchestrator/runner.js::runTaskByName",
+        "CODE::code/src/orchestrator/stage_transitions.js::FILE",
+        "CODE::code/src/orchestrator/status_writer.js::FILE"
+      ],
+      "mapped_artifacts": [
+        "artifacts/trace/trace_error.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
+      ],
+      "coverage_status": "FULL"
+    },
+    {
       "requirement_id": "pipeline_contract_violation_v1::R001",
       "document": "docs/03_pipeline/pipeline_contract_violation_v1.md",
       "mapped_code_units": [
@@ -10344,12 +9095,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10370,12 +9116,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10396,12 +9137,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10422,12 +9158,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10448,12 +9179,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10474,12 +9200,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10500,12 +9221,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10526,12 +9242,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10552,12 +9263,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10578,12 +9284,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10604,12 +9305,7 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/backfill/backfill_plan.json",
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10623,9 +9319,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10639,9 +9333,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10655,9 +9347,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10671,9 +9361,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10687,9 +9375,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10715,9 +9401,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10731,9 +9415,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10747,9 +9429,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10763,9 +9443,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10779,9 +9457,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10795,9 +9471,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10811,9 +9485,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10827,9 +9499,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10843,9 +9513,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10859,9 +9527,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10875,9 +9541,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10891,9 +9555,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10919,9 +9581,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10935,9 +9595,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/intake/intake_context.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10951,8 +9609,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10966,8 +9623,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10981,8 +9637,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10996,8 +9651,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -11011,8 +9665,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -11038,8 +9691,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -11050,8 +9702,8 @@
         "CODE::code/src/modules/verifyEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -11065,8 +9717,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -11080,8 +9731,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -11095,8 +9745,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -11110,8 +9759,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -11125,8 +9773,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -11140,8 +9787,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -11155,8 +9801,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -11170,8 +9815,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -11182,8 +9826,8 @@
         "CODE::code/src/modules/verifyEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -11197,8 +9841,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -11212,8 +9855,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -11227,8 +9869,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/trace/trace_matrix.json",
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -11242,10 +9883,8 @@
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-18::R002",
@@ -11257,10 +9896,8 @@
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-18::R003",
@@ -11272,10 +9909,8 @@
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-18::R004",
@@ -11287,10 +9922,8 @@
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-18::R005",
@@ -11302,10 +9935,8 @@
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-18::R006",
@@ -11317,10 +9948,8 @@
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-18::R007",
@@ -11332,10 +9961,8 @@
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-18::R008",
@@ -11347,10 +9974,8 @@
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-18::R009",
@@ -11362,10 +9987,8 @@
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-18::R010",
@@ -11377,10 +10000,8 @@
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-18::R011",
@@ -11392,10 +10013,8 @@
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-18::R012",
@@ -11407,10 +10026,8 @@
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-18::R013",
@@ -11422,10 +10039,8 @@
         "CODE::code/src/orchestrator/stage_transitions.js::FILE",
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R001",
@@ -11433,11 +10048,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R002",
@@ -11445,11 +10057,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R003",
@@ -11457,11 +10066,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R004",
@@ -11469,11 +10075,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R005",
@@ -11481,11 +10084,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R006",
@@ -11493,11 +10093,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R007",
@@ -11505,11 +10102,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R008",
@@ -11517,11 +10111,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R009",
@@ -11529,11 +10120,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R010",
@@ -11541,11 +10129,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R011",
@@ -11553,11 +10138,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R012",
@@ -11565,11 +10147,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R013",
@@ -11577,11 +10156,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R014",
@@ -11589,11 +10165,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R015",
@@ -11601,11 +10174,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R016",
@@ -11613,11 +10183,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R017",
@@ -11625,11 +10192,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R018",
@@ -11637,11 +10201,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R019",
@@ -11649,11 +10210,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R020",
@@ -11663,8 +10221,6 @@
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md",
         "artifacts/trace/trace_error.md",
         "artifacts/trace/trace_matrix.json",
         "artifacts/trace/trace_matrix.md"
@@ -11677,11 +10233,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-22::R022",
@@ -11689,11 +10242,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R001",
@@ -11701,11 +10251,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R002",
@@ -11713,11 +10260,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R003",
@@ -11725,11 +10269,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R004",
@@ -11737,11 +10278,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R005",
@@ -11749,11 +10287,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R006",
@@ -11761,11 +10296,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R007",
@@ -11774,11 +10306,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE",
         "CODE::code/src/modules/designExplorationEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R008",
@@ -11786,11 +10315,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R009",
@@ -11798,11 +10324,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R010",
@@ -11810,11 +10333,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R011",
@@ -11822,11 +10342,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R012",
@@ -11834,11 +10351,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R013",
@@ -11846,11 +10360,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R014",
@@ -11858,11 +10369,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R015",
@@ -11870,11 +10378,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R016",
@@ -11884,8 +10389,6 @@
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md",
         "artifacts/trace/trace_error.md",
         "artifacts/trace/trace_matrix.json",
         "artifacts/trace/trace_matrix.md"
@@ -11898,11 +10401,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/decisions/module_flow_decision_gate.json",
-        "artifacts/decisions/module_flow_decision_gate.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-AUD-0810::R001",
@@ -12003,9 +10503,7 @@
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
         "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/audit/audit_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12019,10 +10517,7 @@
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
         "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
+        "artifacts/audit/audit_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12048,12 +10543,8 @@
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
-      "mapped_artifacts": [
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-10-CE-SEL::R002",
@@ -12064,12 +10555,8 @@
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
-      "mapped_artifacts": [
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-10-CE-SEL::R003",
@@ -12080,12 +10567,8 @@
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
-      "mapped_artifacts": [
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-10-CE-SEL::R004",
@@ -12096,12 +10579,8 @@
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
-      "mapped_artifacts": [
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-10-CE-SEL::R005",
@@ -12112,12 +10591,8 @@
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
-      "mapped_artifacts": [
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-10-CE-SEL::R006",
@@ -12128,12 +10603,8 @@
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
-      "mapped_artifacts": [
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-10-CE-SEL::R007",
@@ -12144,12 +10615,8 @@
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
-      "mapped_artifacts": [
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-10-CE-SEL::R008",
@@ -12173,12 +10640,8 @@
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
-      "mapped_artifacts": [
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-10-CE-SEL::R010",
@@ -12189,12 +10652,8 @@
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
-      "mapped_artifacts": [
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-RT-1010::R001",
@@ -12205,12 +10664,8 @@
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
-      "mapped_artifacts": [
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-RT-1010::R002",
@@ -12221,12 +10676,8 @@
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
-      "mapped_artifacts": [
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-RT-1010::R003",
@@ -12237,12 +10688,8 @@
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
-      "mapped_artifacts": [
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-RT-1010::R004",
@@ -12253,12 +10700,8 @@
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
-      "mapped_artifacts": [
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-RT-1010::R005",
@@ -12266,11 +10709,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/verifyEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-RT-1010::R006",
@@ -12278,12 +10718,8 @@
       "mapped_code_units": [
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
-      "mapped_artifacts": [
-        "artifacts/gap/gap_actions.json",
-        "artifacts/gap/gap_error.md",
-        "artifacts/gap/gap_report.md"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     },
     {
       "requirement_id": "DOC-RT-1010::R007",
@@ -12294,16 +10730,44 @@
         "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
-      "mapped_artifacts": [
-        "artifacts/execute/execute_log.md",
-        "artifacts/execute/execute_plan.json",
-        "artifacts/verify/verification_results.json"
-      ],
-      "coverage_status": "FULL"
+      "mapped_artifacts": [],
+      "coverage_status": "PARTIAL"
     }
   ],
-  "orphan_code_units": [],
+  "orphan_code_units": [
+    "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+  ],
   "orphan_requirements": [],
-  "orphan_artifacts": []
+  "orphan_artifacts": [],
+  "cognitive_trace": {
+    "exists": true,
+    "bound": true,
+    "binding_type": "TRACE_COGNITIVE",
+    "source": "cognitive_adapter",
+    "request_timestamp": "2026-04-02T09:48:10.949Z",
+    "response_id": "RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957",
+    "storage_status": "PERSISTED",
+    "artifact_paths": {
+      "raw_response": "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
+      "normalized_response": "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json"
+    },
+    "response_status": "SUCCESS",
+    "provider_metadata": {
+      "provider": "NONE",
+      "model": "NONE",
+      "latency_ms": 37
+    },
+    "output": {
+      "type": "structured",
+      "content": {
+        "note": "Cognitive trace placeholder",
+        "coverage_hint": []
+      }
+    },
+    "usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0
+    }
+  }
 }
 ~~~

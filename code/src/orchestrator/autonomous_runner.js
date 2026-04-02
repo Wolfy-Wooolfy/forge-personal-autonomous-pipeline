@@ -219,7 +219,7 @@ function finalizeComplete(state, executionLog) {
   return state;
 }
 
-function runAutonomous() {
+async function runAutonomous() {
   const entry = resolveEntry();
   assertForgeGovernanceGate(entry);
 
@@ -253,7 +253,7 @@ function runAutonomous() {
     writeState(state);
     writeReport(state, executionLog);
 
-    const taskResult = runTaskByName(step.task_name);
+    const taskResult = await runTaskByName(step.task_name);
 
     const taskBlocked =
       taskResult &&
