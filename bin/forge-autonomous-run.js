@@ -2,6 +2,7 @@
 
 const { runAutonomous } = require("../code/src/orchestrator/autonomous_runner");
 const { writeForgeState } = require("../code/src/forge/forge_state_writer");
+const { writeStatus } = require("../code/src/orchestrator/status_writer");
 
 const fs = require("fs");
 const path = require("path");
@@ -12,6 +13,46 @@ const FORGE_STATE_PATH = path.resolve(__dirname, "..", "artifacts", "forge", "fo
 const ORCHESTRATION_DIR = path.resolve(__dirname, "..", "artifacts", "orchestration");
 const ORCHESTRATION_STATE_PATH = path.join(ORCHESTRATION_DIR, "orchestration_state.json");
 const ORCHESTRATION_REPORT_PATH = path.join(ORCHESTRATION_DIR, "orchestration_run_report.md");
+
+function writeStatusReflectionFromAuthority({
+  forgeState,
+  orchestrationState,
+  currentTask = "",
+  completed = false,
+  blocked = false,
+  blockingReason = ""
+}) {
+  const overallProgressRaw =
+    typeof forgeState.build_progress_percent === "number"
+      ? forgeState.build_progress_percent
+      : completed
+        ? 100
+        : 0;
+
+  const overallProgress = completed
+    ? 100
+    : blocked
+      ? Math.max(0, Math.min(99, overallProgressRaw))
+      : Math.max(0, Math.min(100, overallProgressRaw));
+
+  writeStatus({
+    status_type: "LIVE",
+    current_stage: "A",
+    overall_progress_percent: overallProgress,
+    stage_progress_percent: completed ? 100 : 0,
+    last_completed_artifact:
+      typeof forgeState.last_completed_artifact === "string"
+        ? forgeState.last_completed_artifact
+        : "",
+    current_task: completed ? "" : String(currentTask || ""),
+    issues: [],
+    blocking_questions:
+      blocked && typeof blockingReason === "string" && blockingReason.trim() !== ""
+        ? [blockingReason.trim()]
+        : [],
+    next_step: completed ? "" : blocked ? "" : ""
+  });
+}
 
 function syncLiveStatusFromForgeState() {
   if (!fs.existsSync(FORGE_STATE_PATH)) {
@@ -26,6 +67,19 @@ function syncLiveStatusFromForgeState() {
   if (!isComplete) {
     return;
   }
+
+  const orchestrationState = fs.existsSync(ORCHESTRATION_STATE_PATH)
+    ? JSON.parse(fs.readFileSync(ORCHESTRATION_STATE_PATH, "utf8"))
+    : {};
+
+  writeStatusReflectionFromAuthority({
+    forgeState,
+    orchestrationState,
+    currentTask: "",
+    completed: true,
+    blocked: false,
+    blockingReason: ""
+  });
 
   console.log("[FORGE] PIPELINE COMPLETE — NO ACTION REQUIRED");
   return;
@@ -67,7 +121,7 @@ function syncBlockedRuntimeStateFromForgeState(error) {
     typeof forgeState.build_progress_percent === "number" ? forgeState.build_progress_percent : 0;
   const blockedProgress = Math.max(0, Math.min(99, blockedProgressRaw));
 
-  // status.json is no longer used as execution authority
+  // progress/status.json remains reflection-only and must be synced from authority
 
   fs.mkdirSync(ORCHESTRATION_DIR, { recursive: true });
 
@@ -118,6 +172,15 @@ function syncBlockedRuntimeStateFromForgeState(error) {
   ];
 
   fs.writeFileSync(ORCHESTRATION_REPORT_PATH, reportLines.join("\n"), "utf8");
+
+  writeStatusReflectionFromAuthority({
+    forgeState,
+    orchestrationState,
+    currentTask: currentTask || "",
+    completed: false,
+    blocked: true,
+    blockingReason: reason
+  });
 }
 
 function finalizeAndExit(error) {
