@@ -1,9 +1,9 @@
 {
-  "execution_id": "TRACE-2026-04-02T10:35:17.744Z",
+  "execution_id": "TRACE-2026-04-02T10:51:01.579Z",
   "cognitive_binding": {
     "bound": true,
     "type": "TRACE_COGNITIVE",
-    "response_id": "RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7"
+    "response_id": "RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546"
   },
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
@@ -9984,12 +9984,12 @@
     "bound": true,
     "binding_type": "TRACE_COGNITIVE",
     "source": "cognitive_adapter",
-    "request_timestamp": "2026-04-02T10:35:17.740Z",
-    "response_id": "RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7",
+    "request_timestamp": "2026-04-02T10:51:01.575Z",
+    "response_id": "RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546",
     "storage_status": "PERSISTED",
     "artifact_paths": {
-      "raw_response": "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-      "normalized_response": "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json"
+      "raw_response": "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
+      "normalized_response": "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json"
     },
     "response_status": "SUCCESS",
     "provider_metadata": {

@@ -1,11 +1,11 @@
 {
   "backfill_id": "MODULE_FLOW_BACKFILL_v2",
-  "generated_at": "2026-04-02T10:35:17.990Z",
+  "generated_at": "2026-04-02T10:51:01.821Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "source": {
     "decision_gate_path": "artifacts/decisions/module_flow_decision_gate.json",
-    "decision_gate_sha256": "eaa5ae86bcf44a432ffcabd3460f204f1c9bc618ae60bfcf60cce5e8288277ed",
+    "decision_gate_sha256": "b7a1cfdb81b9465e7f77908f3e68ae9f8a85475e5b56f72585f9fd2f6a7d0310",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84"
   },

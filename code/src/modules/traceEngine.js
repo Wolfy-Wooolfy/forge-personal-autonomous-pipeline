@@ -541,8 +541,8 @@ function mapDeterministically(requirements, codeUnits, artifacts, intakeContext)
       document.includes("provider-agnostic")
     ) {
       for (const a of artifacts) {
-        if (a.file_path.includes("artifacts/cognitive/")) {
-          mapped_artifacts.push(a.artifact_id);
+        if (typeof a === "string" && a.includes("artifacts/cognitive/")) {
+          mapped_artifacts.push(a);
         }
       }
     }
