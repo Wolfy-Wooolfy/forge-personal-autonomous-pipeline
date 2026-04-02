@@ -1,10 +1,10 @@
 # MODULE FLOW — Decision Gate
 
-- timestamp: 2026-04-02T09:49:24.818Z
+- timestamp: 2026-04-02T10:01:35.310Z
 - policy: AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK
 - operating_mode: IMPROVE
 - repository_state: MIXED
-- blocked: true
+- blocked: false
 
 ## Source
 - exploration_matrix_path: artifacts/exploration/option_matrix.json
@@ -14,8 +14,8 @@
 
 ## Summary
 - total_actions: 110
-- approved_count: 108
-- review_required_count: 2
+- approved_count: 110
+- review_required_count: 0
 - rejected_count: 0
 
 ## Approved Actions
@@ -29,6 +29,10 @@
   - reason: improve mode bounded non-destructive remediation
 - ACT-40af1ff9921e [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R005 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
+- ACT-2f228d1cb3f1 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/cognitive/cognitive_adapter.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
+  - reason: action explicitly marked requires_decision; approved by explicit override
+- ACT-eca0e2c7ec2b [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/cognitive/cognitive_adapter.js::FILE if it is not part of Forge scope/contracts.
+  - reason: action explicitly marked requires_decision; approved by explicit override
 - ACT-cff0f23a6ca5 [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-22::R011 by ensuring both mapped_code_units and mapped_artifacts are present.
   - reason: improve mode bounded non-destructive remediation
 - ACT-fbe9983387de [PARTIAL_COVERAGE/MEDIUM] Complete coverage for HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC::R002 by ensuring both mapped_code_units and mapped_artifacts are present.
@@ -237,13 +241,10 @@
   - reason: improve mode bounded non-destructive remediation
 
 ## Review Required
-- ACT-2f228d1cb3f1 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/cognitive/cognitive_adapter.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
-  - reason: action explicitly marked requires_decision
-- ACT-eca0e2c7ec2b [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/cognitive/cognitive_adapter.js::FILE if it is not part of Forge scope/contracts.
-  - reason: action explicitly marked requires_decision
+- None
 
 ## Rejected Actions
 - None
 
 ## Next
-- next_step: BLOCKED pending explicit decision override
+- next_step: MODULE_FLOW — Decision Gate COMPLETE. Next=Backfill (implement backfillEngine + task bridge).

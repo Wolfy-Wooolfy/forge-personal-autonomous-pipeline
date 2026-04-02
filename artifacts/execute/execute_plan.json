@@ -1,0 +1,778 @@
+{
+  "execution_id": "MODULE_FLOW_EXECUTE_v1",
+  "generated_at": "2026-04-02T10:01:35.421Z",
+  "operating_mode": "IMPROVE",
+  "repository_state": "MIXED",
+  "approved_code_actions": [
+    {
+      "action_id": "ACT-f6ac15d66c1b",
+      "origin_gap_id": "GAP-009cee144b1f",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R012",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-d9b18f96fdf5",
+      "origin_gap_id": "GAP-082b3bb69983",
+      "target_file": "code/__backfill_auto__/DOC-18__R005",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-6db4057594b8",
+      "origin_gap_id": "GAP-0871e266067c",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R001",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-cffd2f59ad80",
+      "origin_gap_id": "GAP-0fafb0f9bbc0",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R002",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-40af1ff9921e",
+      "origin_gap_id": "GAP-132788825ecd",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R005",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-2f228d1cb3f1",
+      "origin_gap_id": "GAP-1560da0d9861",
+      "target_file": "code/src/cognitive/cognitive_adapter.js",
+      "action_type": "BACKFILL_RECONCILIATION",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-eca0e2c7ec2b",
+      "origin_gap_id": "GAP-1560da0d9861",
+      "target_file": "code/src/cognitive/cognitive_adapter.js",
+      "action_type": "BACKFILL_RECONCILIATION",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-cff0f23a6ca5",
+      "origin_gap_id": "GAP-1662cc2538c8",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R011",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-fbe9983387de",
+      "origin_gap_id": "GAP-1edf140d5b32",
+      "target_file": "code/__backfill_auto__/HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC__R002",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-54e889b41dc7",
+      "origin_gap_id": "GAP-1fc441dc9fbb",
+      "target_file": "code/__backfill_auto__/HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC__R007",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-8f4368ae05ee",
+      "origin_gap_id": "GAP-1fee77544300",
+      "target_file": "code/__backfill_auto__/DOC-15__R006",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-bb4738b401fa",
+      "origin_gap_id": "GAP-21c822b9acf7",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R007",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-59ef5f692c83",
+      "origin_gap_id": "GAP-2ab99d960334",
+      "target_file": "code/__backfill_auto__/DOC-18__R013",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-339fd278e167",
+      "origin_gap_id": "GAP-2ba29b96674d",
+      "target_file": "code/__backfill_auto__/DOC-15__R002",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-980661966381",
+      "origin_gap_id": "GAP-2c44ded953ce",
+      "target_file": "code/__backfill_auto__/HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC__R004",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-3247fa38c9a7",
+      "origin_gap_id": "GAP-2de7e01ea135",
+      "target_file": "code/__backfill_auto__/DOC-16__R004",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-3798cad325e7",
+      "origin_gap_id": "GAP-2e221fde9f4b",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R019",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-5de46edf9413",
+      "origin_gap_id": "GAP-2e973509a72e",
+      "target_file": "code/__backfill_auto__/HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC__R001",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-e1efdfd4f377",
+      "origin_gap_id": "GAP-2f81195d1e08",
+      "target_file": "code/__backfill_auto__/DOC-RT-1010__R003",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-65f885d0335b",
+      "origin_gap_id": "GAP-2f8fa018bdef",
+      "target_file": "code/__backfill_auto__/DOC-16__R005",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-a74b0dd4a458",
+      "origin_gap_id": "GAP-300cb9ce1e83",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R021",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-c85e563b0a78",
+      "origin_gap_id": "GAP-33a3122cf910",
+      "target_file": "code/__backfill_auto__/DOC-16__R001",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-a957e4ca6b1d",
+      "origin_gap_id": "GAP-35ad02ccf262",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R010",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-dc84c3d67265",
+      "origin_gap_id": "GAP-35efa27e00c8",
+      "target_file": "code/__backfill_auto__/DOC-RT-1010__R005",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-80620ef86723",
+      "origin_gap_id": "GAP-36edd18a3742",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R010",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-bd0e52c40d9f",
+      "origin_gap_id": "GAP-3788950ccee0",
+      "target_file": "code/__backfill_auto__/DOC-15__R005",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-f1415ff5fe09",
+      "origin_gap_id": "GAP-38c0757512ad",
+      "target_file": "code/__backfill_auto__/DOC-18__R008",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-d4edde404eb0",
+      "origin_gap_id": "GAP-39df9fbfc690",
+      "target_file": "code/__backfill_auto__/HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC__R008",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-5fced1c4bf53",
+      "origin_gap_id": "GAP-3d151d78a2ef",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R018",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-375e45c0bdd9",
+      "origin_gap_id": "GAP-3ea05d6ab21a",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R016",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-13ecdaaf433f",
+      "origin_gap_id": "GAP-3fd0941030b5",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R011",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-6a52657ce493",
+      "origin_gap_id": "GAP-409070674ba3",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R017",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-019782af6e0d",
+      "origin_gap_id": "GAP-417b4f54bd99",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R009",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-2249c07c552c",
+      "origin_gap_id": "GAP-44a7a9a83218",
+      "target_file": "code/__backfill_auto__/DOC-10-CE-SEL__R001",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-26c3dbd541b3",
+      "origin_gap_id": "GAP-4b25cd8a567b",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R018",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-2b234fcfc86f",
+      "origin_gap_id": "GAP-4d71ae69909b",
+      "target_file": "code/__backfill_auto__/DOC-15__R003",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-4f4fc0074672",
+      "origin_gap_id": "GAP-5216d898dacc",
+      "target_file": "code/__backfill_auto__/DOC-10-CE-SEL__R002",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-469a51130214",
+      "origin_gap_id": "GAP-52be286ae041",
+      "target_file": "code/__backfill_auto__/DOC-18__R001",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-1548cd4b57e3",
+      "origin_gap_id": "GAP-5376590146e9",
+      "target_file": "code/__backfill_auto__/HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC__R010",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-9aee51b01907",
+      "origin_gap_id": "GAP-570411c2c012",
+      "target_file": "code/__backfill_auto__/DOC-RT-1010__R006",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-d14fd52f7b52",
+      "origin_gap_id": "GAP-5820d43d781f",
+      "target_file": "code/__backfill_auto__/DOC-RT-1010__R007",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-955933d579d1",
+      "origin_gap_id": "GAP-5a00c45ba88f",
+      "target_file": "code/__backfill_auto__/DOC-RT-1010__R002",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-eebff09b3592",
+      "origin_gap_id": "GAP-5b8b6d239d43",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R017",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-90845fed8b3c",
+      "origin_gap_id": "GAP-5ccf719ab3b3",
+      "target_file": "code/__backfill_auto__/DOC-16__R003",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-e6d4de4afb26",
+      "origin_gap_id": "GAP-604d9fce0183",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R022",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-24c6e42e1939",
+      "origin_gap_id": "GAP-604e3f204675",
+      "target_file": "code/__backfill_auto__/DOC-10-CE-SEL__R003",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-e87e12d431ee",
+      "origin_gap_id": "GAP-6185c0e93ed9",
+      "target_file": "code/__backfill_auto__/DOC-18__R002",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-686530b6c3d5",
+      "origin_gap_id": "GAP-6593430a5fd0",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R015",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-363823248652",
+      "origin_gap_id": "GAP-6a07fef5e0d2",
+      "target_file": "code/__backfill_auto__/DOC-15__R011",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-d2669ec38ba8",
+      "origin_gap_id": "GAP-6bbec036a42a",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R015",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-9988f1a30994",
+      "origin_gap_id": "GAP-6cd463ae4271",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R004",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-7d2f3c2033c0",
+      "origin_gap_id": "GAP-6eb5681cd4d1",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R005",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-bbbe72afb924",
+      "origin_gap_id": "GAP-716aba04cc4f",
+      "target_file": "code/__backfill_auto__/DOC-15__R009",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-5dc4cac02b16",
+      "origin_gap_id": "GAP-716b1056f621",
+      "target_file": "code/__backfill_auto__/DOC-18__R010",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-450e2f93d684",
+      "origin_gap_id": "GAP-77b0bb0abd13",
+      "target_file": "code/__backfill_auto__/DOC-16__R009",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-a62c6c149998",
+      "origin_gap_id": "GAP-7ba3a5fdda06",
+      "target_file": "code/__backfill_auto__/DOC-10-CE-SEL__R004",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-1277e8bd9da0",
+      "origin_gap_id": "GAP-7fbb30d7bf4a",
+      "target_file": "code/__backfill_auto__/DOC-10-CE-SEL__R010",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-899a1abcc3c4",
+      "origin_gap_id": "GAP-803d77d3180e",
+      "target_file": "code/__backfill_auto__/HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC__R011",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-b3b10a188240",
+      "origin_gap_id": "GAP-832de4a959f5",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R012",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-646b192b65ac",
+      "origin_gap_id": "GAP-843aaf33b419",
+      "target_file": "code/__backfill_auto__/HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC__R014",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-43c64656852e",
+      "origin_gap_id": "GAP-897d67efafcb",
+      "target_file": "code/__backfill_auto__/HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC__R015",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-093dacead2da",
+      "origin_gap_id": "GAP-89d5b474d937",
+      "target_file": "code/__backfill_auto__/DOC-16__R007",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-143246e8ed72",
+      "origin_gap_id": "GAP-8e29331abc51",
+      "target_file": "code/__backfill_auto__/DOC-18__R012",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-7ab0e432baa0",
+      "origin_gap_id": "GAP-8f027007a09d",
+      "target_file": "code/__backfill_auto__/HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC__R009",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-85d3ea94b40e",
+      "origin_gap_id": "GAP-8fc5a20273b2",
+      "target_file": "code/__backfill_auto__/DOC-16__R006",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-ec930e624725",
+      "origin_gap_id": "GAP-90136324d6e2",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R008",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-9f656660cfa5",
+      "origin_gap_id": "GAP-9022d83983a1",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R006",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-4da6e42056bb",
+      "origin_gap_id": "GAP-91f73512e5bb",
+      "target_file": "code/__backfill_auto__/DOC-RT-1010__R004",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-d0591a40e8a2",
+      "origin_gap_id": "GAP-9200494b8fef",
+      "target_file": "code/__backfill_auto__/HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC__R013",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-b3ee868ef088",
+      "origin_gap_id": "GAP-945a2b173a5e",
+      "target_file": "code/__backfill_auto__/DOC-16__R008",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-4480250a54e3",
+      "origin_gap_id": "GAP-95c746e95241",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R003",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-e5a90aa2a381",
+      "origin_gap_id": "GAP-972040bb77d1",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R002",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-0c2e49676a6a",
+      "origin_gap_id": "GAP-9a8547b3c9d8",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R019",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-9266cca5f038",
+      "origin_gap_id": "GAP-9bc322dee3a1",
+      "target_file": "code/__backfill_auto__/DOC-RT-1010__R001",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-5d3b8835f871",
+      "origin_gap_id": "GAP-a0c31b74bdc0",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R013",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-97b9a9cf216c",
+      "origin_gap_id": "GAP-a2e786bea5c1",
+      "target_file": "code/__backfill_auto__/DOC-16__R012",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-f015eda54ab0",
+      "origin_gap_id": "GAP-a5c053a80b49",
+      "target_file": "code/__backfill_auto__/DOC-18__R007",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-2dad916d6db3",
+      "origin_gap_id": "GAP-a9153a2ea61f",
+      "target_file": "code/__backfill_auto__/DOC-18__R011",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-bebbdbf47485",
+      "origin_gap_id": "GAP-ad61fe21ae2b",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R009",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-0170cea9269a",
+      "origin_gap_id": "GAP-b173c7bf8d81",
+      "target_file": "code/__backfill_auto__/DOC-16__R002",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-c284e32d1b6b",
+      "origin_gap_id": "GAP-b19e2af7e307",
+      "target_file": "code/__backfill_auto__/DOC-10-CE-SEL__R005",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-0127a8788caf",
+      "origin_gap_id": "GAP-b47818146d79",
+      "target_file": "code/__backfill_auto__/HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC__R003",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-ced1f0f44cab",
+      "origin_gap_id": "GAP-b6f5b2c046a6",
+      "target_file": "code/__backfill_auto__/DOC-16__R011",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-3ad7596b1992",
+      "origin_gap_id": "GAP-b8f70e110046",
+      "target_file": "code/__backfill_auto__/DOC-18__R009",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-f51c8c692b54",
+      "origin_gap_id": "GAP-c477d42d0f93",
+      "target_file": "code/__backfill_auto__/DOC-18__R003",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-7d24c1f4310d",
+      "origin_gap_id": "GAP-c6bc810a50b9",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R014",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-afaf22b7170a",
+      "origin_gap_id": "GAP-d0212bf3e6b9",
+      "target_file": "code/__backfill_auto__/DOC-10-CE-SEL__R009",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-f50c5a2c2486",
+      "origin_gap_id": "GAP-d2071229e49b",
+      "target_file": "code/__backfill_auto__/DOC-15__R007",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-ed2e04cb29c6",
+      "origin_gap_id": "GAP-d21d055b765c",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R001",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-2bb90251d5fb",
+      "origin_gap_id": "GAP-d265b7b289d5",
+      "target_file": "code/__backfill_auto__/DOC-18__R006",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-c3e09bdc65a9",
+      "origin_gap_id": "GAP-d590730c0c26",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R007",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-f71858862ae7",
+      "origin_gap_id": "GAP-d98cab74d10c",
+      "target_file": "code/__backfill_auto__/DOC-15__R008",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-404ff8d10bfb",
+      "origin_gap_id": "GAP-db0cb6b8d229",
+      "target_file": "code/__backfill_auto__/HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC__R005",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-6b53c49ba7d6",
+      "origin_gap_id": "GAP-db63968da002",
+      "target_file": "code/__backfill_auto__/DOC-15__R004",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-1189b94d7182",
+      "origin_gap_id": "GAP-dbc7c0ecc07d",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R016",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-aa442b153ac0",
+      "origin_gap_id": "GAP-ddc7b40436d0",
+      "target_file": "code/__backfill_auto__/DOC-16__R010",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-80dd82b0764c",
+      "origin_gap_id": "GAP-df6ab17a1b26",
+      "target_file": "code/__backfill_auto__/DOC-10-CE-SEL__R006",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-5548de4227c0",
+      "origin_gap_id": "GAP-e1353cb9e41a",
+      "target_file": "code/__backfill_auto__/DOC-10-CE-SEL__R007",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-c142e278d138",
+      "origin_gap_id": "GAP-e38c1dcb7d24",
+      "target_file": "code/__backfill_auto__/HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC__R006",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-0192d0e3fe57",
+      "origin_gap_id": "GAP-e59070eda3b6",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R003",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-ec715e0831af",
+      "origin_gap_id": "GAP-e726a9c89bad",
+      "target_file": "code/__backfill_auto__/HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC__R012",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-31ec524618b7",
+      "origin_gap_id": "GAP-e8664ea8754b",
+      "target_file": "code/__backfill_auto__/DOC-15__R001",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-737e1fd32a16",
+      "origin_gap_id": "GAP-ebddaea2b43d",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R013",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-847ac5473a55",
+      "origin_gap_id": "GAP-f2b5f6289869",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R014",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-3f4c17bdea60",
+      "origin_gap_id": "GAP-f2e919a814f2",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R008",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-495f1880e3be",
+      "origin_gap_id": "GAP-f6957b76fbc2",
+      "target_file": "code/__backfill_auto__/HALO-DOC-21__DECISION_GATE_BEHAVIOR_SPEC__R017",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-986415a78187",
+      "origin_gap_id": "GAP-f980c7b01d5e",
+      "target_file": "code/__backfill_auto__/DOC-17__PROJECT_OBJECTIVE_CONTRACT__R006",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-dfd3bddd4e87",
+      "origin_gap_id": "GAP-fcb4e79141a8",
+      "target_file": "code/__backfill_auto__/DOC-18__R004",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-75fb85f5b88e",
+      "origin_gap_id": "GAP-fd694bdd4ec5",
+      "target_file": "code/__backfill_auto__/HALO-DOC-22__R004",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    },
+    {
+      "action_id": "ACT-acb599207faa",
+      "origin_gap_id": "GAP-fd7a0f4be5e4",
+      "target_file": "code/__backfill_auto__/DOC-15__R010",
+      "action_type": "GENERATE_DOCUMENT",
+      "deterministic_template_used": true
+    }
+  ]
+}

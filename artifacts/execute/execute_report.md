@@ -1,0 +1,346 @@
+# MODULE FLOW — Execute Report
+
+- generated_at: 2026-04-02T10:01:35.421Z
+- operating_mode: IMPROVE
+- repository_state: MIXED
+
+## Source
+- backfill_plan: artifacts/backfill/backfill_plan.json
+- backfill_sha256: 21bfcdabc565d9b9ccb0885d5ec578a33ba307bd891c5546e76eec69466c7be7
+- intake_context: artifacts/intake/intake_context.json
+- intake_sha256: eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84
+
+## Execution Plan
+- ACT-f6ac15d66c1b
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-d9b18f96fdf5
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-6db4057594b8
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-cffd2f59ad80
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-40af1ff9921e
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-2f228d1cb3f1
+  - type: BACKFILL_RECONCILIATION
+  - target: (none)
+- ACT-eca0e2c7ec2b
+  - type: BACKFILL_RECONCILIATION
+  - target: (none)
+- ACT-cff0f23a6ca5
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-fbe9983387de
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-54e889b41dc7
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-8f4368ae05ee
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-bb4738b401fa
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-59ef5f692c83
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-339fd278e167
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-980661966381
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-3247fa38c9a7
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-3798cad325e7
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-5de46edf9413
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-e1efdfd4f377
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-65f885d0335b
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-a74b0dd4a458
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-c85e563b0a78
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-a957e4ca6b1d
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-dc84c3d67265
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-80620ef86723
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-bd0e52c40d9f
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-f1415ff5fe09
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-d4edde404eb0
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-5fced1c4bf53
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-375e45c0bdd9
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-13ecdaaf433f
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-6a52657ce493
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-019782af6e0d
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-2249c07c552c
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-26c3dbd541b3
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-2b234fcfc86f
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-4f4fc0074672
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-469a51130214
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-1548cd4b57e3
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-9aee51b01907
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-d14fd52f7b52
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-955933d579d1
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-eebff09b3592
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-90845fed8b3c
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-e6d4de4afb26
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-24c6e42e1939
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-e87e12d431ee
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-686530b6c3d5
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-363823248652
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-d2669ec38ba8
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-9988f1a30994
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-7d2f3c2033c0
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-bbbe72afb924
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-5dc4cac02b16
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-450e2f93d684
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-a62c6c149998
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-1277e8bd9da0
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-899a1abcc3c4
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-b3b10a188240
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-646b192b65ac
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-43c64656852e
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-093dacead2da
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-143246e8ed72
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-7ab0e432baa0
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-85d3ea94b40e
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-ec930e624725
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-9f656660cfa5
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-4da6e42056bb
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-d0591a40e8a2
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-b3ee868ef088
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-4480250a54e3
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-e5a90aa2a381
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-0c2e49676a6a
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-9266cca5f038
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-5d3b8835f871
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-97b9a9cf216c
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-f015eda54ab0
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-2dad916d6db3
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-bebbdbf47485
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-0170cea9269a
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-c284e32d1b6b
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-0127a8788caf
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-ced1f0f44cab
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-3ad7596b1992
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-f51c8c692b54
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-7d24c1f4310d
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-afaf22b7170a
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-f50c5a2c2486
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-ed2e04cb29c6
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-2bb90251d5fb
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-c3e09bdc65a9
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-f71858862ae7
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-404ff8d10bfb
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-6b53c49ba7d6
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-1189b94d7182
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-aa442b153ac0
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-80dd82b0764c
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-5548de4227c0
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-c142e278d138
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-0192d0e3fe57
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-ec715e0831af
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-31ec524618b7
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-737e1fd32a16
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-847ac5473a55
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-3f4c17bdea60
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-495f1880e3be
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-986415a78187
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-dfd3bddd4e87
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-75fb85f5b88e
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+- ACT-acb599207faa
+  - type: GENERATE_DOCUMENT
+  - target: (none)
+
+## Next
+- next_step: MODULE_FLOW — Execute COMPLETE. Next=Closure (implement closureEngine + task bridge).

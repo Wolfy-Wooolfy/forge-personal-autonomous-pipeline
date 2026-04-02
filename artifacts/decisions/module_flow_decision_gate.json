@@ -1,11 +1,11 @@
 {
   "decision_id": "MODULE_FLOW_DECISION_GATE",
-  "timestamp": "2026-04-02T09:49:24.818Z",
+  "timestamp": "2026-04-02T10:01:35.310Z",
   "task": "TASK-052",
   "policy": "AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
-  "override_mode": "UNSPECIFIED",
+  "override_mode": "APPROVE_ALL",
   "source": {
     "exploration_matrix_path": "artifacts/exploration/option_matrix.json",
     "exploration_matrix_sha256": "88085867a129f8ae63791dc72cb225d8652803d2cece19db6382097a19ef0b9e",
@@ -14,8 +14,8 @@
   },
   "summary": {
     "total_actions": 110,
-    "approved_count": 108,
-    "review_required_count": 2,
+    "approved_count": 110,
+    "review_required_count": 0,
     "rejected_count": 0
   },
   "approved_actions": [
@@ -88,6 +88,34 @@
       "requires_decision": false,
       "cognitive_priority_hint": null,
       "reason": "improve mode bounded non-destructive remediation"
+    },
+    {
+      "gap_id": "GAP-1560da0d9861",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/cognitive/cognitive_adapter.js"
+      ],
+      "action_id": "ACT-2f228d1cb3f1",
+      "description": "Map code unit CODE::code/src/cognitive/cognitive_adapter.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).",
+      "impact_scope": "code/trace",
+      "requires_decision": true,
+      "cognitive_priority_hint": null,
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
+    },
+    {
+      "gap_id": "GAP-1560da0d9861",
+      "category": "ORPHAN_CODE",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/src/cognitive/cognitive_adapter.js"
+      ],
+      "action_id": "ACT-eca0e2c7ec2b",
+      "description": "Remove or relocate code unit CODE::code/src/cognitive/cognitive_adapter.js::FILE if it is not part of Forge scope/contracts.",
+      "impact_scope": "code",
+      "requires_decision": true,
+      "cognitive_priority_hint": null,
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
     },
     {
       "gap_id": "GAP-1662cc2538c8",
@@ -1532,36 +1560,7 @@
       "reason": "improve mode bounded non-destructive remediation"
     }
   ],
-  "review_required_actions": [
-    {
-      "gap_id": "GAP-1560da0d9861",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "code/src/cognitive/cognitive_adapter.js"
-      ],
-      "action_id": "ACT-2f228d1cb3f1",
-      "description": "Map code unit CODE::code/src/cognitive/cognitive_adapter.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).",
-      "impact_scope": "code/trace",
-      "requires_decision": true,
-      "cognitive_priority_hint": null,
-      "reason": "action explicitly marked requires_decision"
-    },
-    {
-      "gap_id": "GAP-1560da0d9861",
-      "category": "ORPHAN_CODE",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "code/src/cognitive/cognitive_adapter.js"
-      ],
-      "action_id": "ACT-eca0e2c7ec2b",
-      "description": "Remove or relocate code unit CODE::code/src/cognitive/cognitive_adapter.js::FILE if it is not part of Forge scope/contracts.",
-      "impact_scope": "code",
-      "requires_decision": true,
-      "cognitive_priority_hint": null,
-      "reason": "action explicitly marked requires_decision"
-    }
-  ],
+  "review_required_actions": [],
   "rejected_actions": [],
-  "blocked": true
+  "blocked": false
 }
