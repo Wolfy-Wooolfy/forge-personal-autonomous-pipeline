@@ -917,22 +917,80 @@ async function runTrace(contextOrStatus) {
 
   const mapped = mapDeterministically(requirements, codeUnits, artifacts, intakeContext);
 
-  let cognitiveResult = null;
+  const cognitiveResult = await runCognitiveTraceAnalysis({
+    requirements_count: requirements.length,
+    code_units_count: codeUnits.length,
+    artifacts_count: artifacts.length
+  });
 
-  try {
-    cognitiveResult = await runCognitiveTraceAnalysis({
-      requirements_count: requirements.length,
-      code_units_count: codeUnits.length,
-      artifacts_count: artifacts.length
-    });
-  } catch (err) {
-    cognitiveResult = {
-      error: err.message
+  if (
+    !cognitiveResult ||
+    cognitiveResult.status !== "SUCCESS" ||
+    !cognitiveResult.response_id ||
+    !cognitiveResult.output ||
+    !Object.prototype.hasOwnProperty.call(cognitiveResult.output, "content")
+  ) {
+    const errRef = writeTraceError(rootAbs, "TRACE HARD-FAIL: cognitive trace missing, failed, or invalid");
+    return {
+      blocked: true,
+      artifact: errRef,
+      status_patch: {
+        blocking_questions: ["Trace BLOCKED: cognitive trace missing, failed, or invalid"],
+        next_step: ""
+      }
+    };
+  }
+
+  const cognitiveArtifactDir = path.resolve(
+    rootAbs,
+    "artifacts",
+    "cognitive",
+    cognitiveResult.response_id
+  );
+  const cognitiveRawAbs = path.resolve(cognitiveArtifactDir, "raw_response.json");
+  const cognitiveNormalizedAbs = path.resolve(cognitiveArtifactDir, "normalized_response.json");
+
+  if (!fs.existsSync(cognitiveRawAbs) || !fs.existsSync(cognitiveNormalizedAbs)) {
+    const errRef = writeTraceError(
+      rootAbs,
+      `TRACE HARD-FAIL: missing cognitive artifacts for ${cognitiveResult.response_id}`
+    );
+    return {
+      blocked: true,
+      artifact: errRef,
+      status_patch: {
+        blocking_questions: ["Trace BLOCKED: cognitive artifacts missing"],
+        next_step: ""
+      }
+    };
+  }
+
+  if (
+    typeof cognitiveResult.confidence !== "number" ||
+    !Number.isFinite(cognitiveResult.confidence) ||
+    !cognitiveResult.timestamp
+  ) {
+    const errRef = writeTraceError(
+      rootAbs,
+      "TRACE HARD-FAIL: cognitive trace confidence or timestamp missing/invalid"
+    );
+    return {
+      blocked: true,
+      artifact: errRef,
+      status_patch: {
+        blocking_questions: ["Trace BLOCKED: cognitive trace confidence or timestamp missing/invalid"],
+        next_step: ""
+      }
     };
   }
 
   const traceJson = {
     execution_id: `TRACE-${new Date().toISOString()}`,
+    cognitive_binding: {
+      bound: true,
+      type: "TRACE_COGNITIVE",
+      response_id: cognitiveResult.response_id
+    },
     operating_mode: intakeContext.operating_mode,
     repository_state: intakeContext.repository_state,
     total_requirements: requirements.length,
@@ -942,7 +1000,13 @@ async function runTrace(contextOrStatus) {
     orphan_code_units: mapped.orphan_code_units,
     orphan_requirements: mapped.orphan_requirements,
     orphan_artifacts: mapped.orphan_artifacts,
-    cognitive_trace: cognitiveResult
+    cognitive_trace: {
+      exists: true,
+      response_id: cognitiveResult.response_id,
+      confidence: cognitiveResult.confidence,
+      source: "cognitive_adapter",
+      timestamp: cognitiveResult.timestamp
+    }
   };
 
   const outRefs = writeTraceOutputs(rootAbs, traceJson);
