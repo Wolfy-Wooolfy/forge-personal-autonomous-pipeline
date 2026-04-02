@@ -1,17 +1,18 @@
 {
-  "run_id": "RUN-575653ECAD4A",
-  "run_mode": "COMPLETE",
-  "started_at": "2026-04-02T19:13:43.790Z",
-  "last_updated_at": "2026-04-02T19:13:43.791Z",
-  "status": "COMPLETE",
-  "blocked": false,
-  "blocking_reason": "",
-  "reason": "Pipeline already complete",
-  "entry_type": "COMPLETE",
-  "next_task": null,
-  "next_module": null,
-  "current_module": null,
-  "completed_modules": [
+  "run_id": "RUN-08E565B3A363",
+  "run_mode": "RESUME",
+  "started_at": "2026-04-02T19:28:02.676Z",
+  "last_updated_at": "2026-04-02T19:28:02.686Z",
+  "status": "BLOCKED",
+  "blocked": true,
+  "blocking_reason": "Task blocked: TASK-067: ENFORCE FULL VISION RUNTIME",
+  "reason": "Resume from next incomplete module",
+  "entry_type": "RESUME",
+  "next_task": "TASK-067: ENFORCE FULL VISION RUNTIME",
+  "next_module": "VISION_COMPLIANCE",
+  "current_module": "VISION_COMPLIANCE",
+  "completed_modules": [],
+  "pending_modules": [
     "INTAKE",
     "AUDIT",
     "TRACE",
@@ -24,6 +25,5 @@
     "CLOSURE",
     "VISION_COMPLIANCE"
   ],
-  "pending_modules": [],
-  "final_outcome": "COMPLETE"
+  "final_outcome": "BLOCKED"
 }

@@ -2040,7 +2040,7 @@ Execution Closed
         stage_progress_percent: 10,
         clear_current_task: false,
         status_patch: {
-          current_stage: "VISION_COMPLIANCE",
+          current_stage: "A",
           current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
           next_step: "TASK-067 remains OPEN until full Stage A→D runtime evidence exists",
           blocking_questions: [],

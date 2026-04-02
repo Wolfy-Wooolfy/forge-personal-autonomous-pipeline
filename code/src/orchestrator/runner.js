@@ -343,13 +343,6 @@ async function run() {
     };
   }
 
-  const patchHasBlockingQuestion =
-    !!(
-      result.status_patch &&
-      Array.isArray(result.status_patch.blocking_questions) &&
-      result.status_patch.blocking_questions.length > 0
-    );
-
   if (result.blocked !== true && !patchHasBlockingQuestion) {
     updated = {
       ...updated,

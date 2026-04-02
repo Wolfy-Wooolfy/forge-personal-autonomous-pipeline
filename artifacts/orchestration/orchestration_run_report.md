@@ -1,19 +1,23 @@
 # Orchestration Run Report
 
-- Run ID: RUN-575653ECAD4A
-- Run Mode: COMPLETE
-- Started At: 2026-04-02T19:13:43.790Z
-- Last Updated At: 2026-04-02T19:13:43.791Z
-- Status: COMPLETE
-- Entry Type: COMPLETE
-- Blocked: NO
-- Blocking Reason: N/A
-- Reason: Pipeline already complete
-- Current Module: N/A
-- Next Task: N/A
-- Final Outcome: COMPLETE
+- Run ID: RUN-08E565B3A363
+- Run Mode: RESUME
+- Started At: 2026-04-02T19:28:02.676Z
+- Last Updated At: 2026-04-02T19:28:02.686Z
+- Status: BLOCKED
+- Entry Type: RESUME
+- Blocked: YES
+- Blocking Reason: Task blocked: TASK-067: ENFORCE FULL VISION RUNTIME
+- Reason: Resume from next incomplete module
+- Current Module: VISION_COMPLIANCE
+- Next Task: TASK-067: ENFORCE FULL VISION RUNTIME
+- Final Outcome: BLOCKED
 
 ## Completed Modules
+
+- None
+
+## Pending Modules
 
 - INTAKE
 - AUDIT
@@ -27,10 +31,6 @@
 - CLOSURE
 - VISION_COMPLIANCE
 
-## Pending Modules
-
-- None
-
 ## Execution Log
 
-- No module execution performed
+- 2026-04-02T19:28:02.686Z | VISION_COMPLIANCE | TASK-067: ENFORCE FULL VISION RUNTIME | BLOCKED
