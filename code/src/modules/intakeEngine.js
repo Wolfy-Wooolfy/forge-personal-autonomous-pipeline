@@ -86,14 +86,14 @@ function detectRepositoryState(rootAbs) {
   const hasArtifacts = fs.existsSync(path.join(rootAbs, "artifacts")) && fs.statSync(path.join(rootAbs, "artifacts")).isDirectory();
   const hasStatus = fs.existsSync(path.join(rootAbs, "progress", "status.json"));
 
-  if (!hasDocs && !hasCode && !hasArtifacts && !hasStatus) {
+  if (!hasDocs && !hasCode && !hasArtifacts) {
     return {
       repository_state: "IDEA_ONLY",
       docs_present: false,
       code_present: false,
       artifacts_present: false,
-      status_present: false,
-      rules: ["no docs/", "no code/", "no artifacts/", "no progress/status.json"]
+      status_present: hasStatus,
+      rules: ["no docs/", "no code/", "no artifacts/"]
     };
   }
 

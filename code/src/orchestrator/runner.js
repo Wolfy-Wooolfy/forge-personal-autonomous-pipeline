@@ -2,11 +2,12 @@ const fs = require("fs");
 const path = require("path");
 
 const { resolveEntry } = require("./entry_resolver");
-const { validateTransition } = require("./stage_transitions");
 const { writeStatus } = require("./status_writer");
 const { executeTask } = require("../execution/task_executor");
 
 const STATUS_PATH = path.resolve(__dirname, "../../..", "progress", "status.json");
+const FORGE_STATE_PATH = path.resolve(__dirname, "../../..", "artifacts", "forge", "forge_state.json");
+const ORCHESTRATION_STATE_PATH = path.resolve(__dirname, "../../..", "artifacts", "orchestration", "orchestration_state.json");
 
 const TASKS_DIR = path.resolve(__dirname, "../../..", "artifacts", "tasks");
 
@@ -142,9 +143,69 @@ function hasExecutionClosureForTask(taskName) {
   return true;
 }
 
-function loadStatus() {
-  const raw = fs.readFileSync(STATUS_PATH, { encoding: "utf8" });
-  return JSON.parse(raw);
+function buildStatusReflectionSeed(entry) {
+  const forgeState = safeReadJson(FORGE_STATE_PATH) || {};
+  const orchestrationState = safeReadJson(ORCHESTRATION_STATE_PATH) || {};
+
+  const orchestrationBlocked =
+    orchestrationState.blocked === true ||
+    String(orchestrationState.status || "").toUpperCase() === "BLOCKED";
+
+  const forgeComplete =
+    String(forgeState.execution_integrity || "").toUpperCase() === "CONSISTENT" &&
+    String(forgeState.next_allowed_step || "").trim().toUpperCase() === "COMPLETE";
+
+  return {
+    status_type: "LIVE",
+    current_stage: "A",
+    overall_progress_percent: forgeComplete
+      ? 100
+      : Number.isInteger(forgeState.build_progress_percent)
+        ? forgeState.build_progress_percent
+        : 0,
+    stage_progress_percent: forgeComplete ? 100 : 0,
+    last_completed_artifact:
+      typeof forgeState.last_completed_artifact === "string"
+        ? forgeState.last_completed_artifact
+        : "",
+    current_task:
+      entry && typeof entry.next_task === "string" && entry.next_task.trim() !== ""
+        ? entry.next_task
+        : typeof forgeState.current_task === "string"
+          ? forgeState.current_task
+          : "",
+    issues: [],
+    blocking_questions:
+      orchestrationBlocked &&
+      typeof orchestrationState.blocking_reason === "string" &&
+      orchestrationState.blocking_reason.trim() !== ""
+        ? [orchestrationState.blocking_reason.trim()]
+        : [],
+    next_step:
+      entry && typeof entry.next_task === "string"
+        ? entry.next_task
+        : forgeComplete
+          ? ""
+          : typeof forgeState.next_allowed_step === "string"
+            ? forgeState.next_allowed_step
+            : ""
+  };
+}
+
+function loadStatusReflection(entry) {
+  try {
+    if (fs.existsSync(STATUS_PATH)) {
+      const raw = fs.readFileSync(STATUS_PATH, { encoding: "utf8" });
+      const parsed = JSON.parse(raw);
+
+      if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
+        return parsed;
+      }
+    }
+  } catch (error) {
+  }
+
+  return buildStatusReflectionSeed(entry);
 }
 
 function loadAuditFindings() {
@@ -157,7 +218,9 @@ function loadAuditFindings() {
 }
 
 async function writeStatusAndRun(taskName) {
-  const current = loadStatus();
+  const current = loadStatusReflection({
+    next_task: taskName
+  });
 
   writeStatus({
     ...current,
@@ -165,19 +228,6 @@ async function writeStatusAndRun(taskName) {
   });
 
   return await run();
-}
-
-function extractTargetStage(nextStep) {
-  if (typeof nextStep !== "string") {
-    return null;
-  }
-
-  const match = nextStep.match(/Stage\s+([A-D])/i);
-  if (!match) {
-    return null;
-  }
-
-  return match[1].toUpperCase();
 }
 
 function isDryRun() {
@@ -223,9 +273,8 @@ function assertIdempotency(status) {
 }
 
 async function run() {
-  const status = loadStatus();
-
   const entry = resolveEntry();
+  const status = loadStatusReflection(entry);
 
   if (entry.blocked) {
     throw new Error(`[ENTRY BLOCKED] ${entry.reason}`);
@@ -293,14 +342,6 @@ async function run() {
     throw new Error("Task handler must return execution result object");
   }
 
-  if (typeof status.stage_progress_percent !== "number") {
-    throw new Error("stage_progress_percent must be number in status");
-  }
-
-  if (result.stage_progress_percent < status.stage_progress_percent) {
-    throw new Error("Monotonicity violation: stage_progress_percent cannot decrease");
-  }
-
   let updated = {
     ...status,
     stage_progress_percent: result.stage_progress_percent,
@@ -363,24 +404,6 @@ async function run() {
 
   if (result.closure_artifact) {
     console.log(`[FORGE] ${entry.next_task} execution closure artifact created.`);
-  }
-
-  const targetStage = extractTargetStage(updated.next_step);
-  if (targetStage && targetStage !== status.current_stage) {
-    validateTransition(status.current_stage, targetStage);
-
-    const stageUpdated = {
-      ...updated,
-      current_stage: targetStage,
-      stage_progress_percent: 0
-    };
-
-    writeStatus(stageUpdated);
-
-    return {
-      ...result,
-      updated_status: stageUpdated
-    };
   }
 
   return {

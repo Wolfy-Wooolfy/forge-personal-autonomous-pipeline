@@ -3,6 +3,8 @@ const path = require("path");
 
 const STATUS_PATH = path.resolve(__dirname, "../../..", "progress", "status.json");
 
+const STATUS_DIR = path.dirname(STATUS_PATH);
+
 const CANONICAL_FIELDS = [
   "status_type",
   "current_stage",
@@ -92,6 +94,7 @@ function validatePayload(payload) {
 function writeStatus(payload) {
   validatePayload(payload);
   const json = JSON.stringify(payload, null, 2);
+  fs.mkdirSync(STATUS_DIR, { recursive: true });
   fs.writeFileSync(STATUS_PATH, json, { encoding: "utf8" });
 }
 

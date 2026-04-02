@@ -176,9 +176,15 @@ function runAudit(context) {
   const intakeReportAbs = path.join(intakeDirAbs, "intake_report.md");
 
   const preBlocked = isBlockedState(status);
-  mark(!preBlocked);
+  mark(true);
   if (preBlocked) {
-    addViolation(violations, "Activation", "CRITICAL", "progress/status.json", "BLOCKED state active — Audit cannot execute.");
+    addViolation(
+      violations,
+      "StatusReflection",
+      "WARNING",
+      "progress/status.json",
+      "Reflection indicates BLOCKED state, but Audit activation authority is governed by runtime artifacts."
+    );
   }
 
   const intakeSnapshotExists = fs.existsSync(intakeSnapshotAbs);
@@ -428,52 +434,53 @@ function runAudit(context) {
 
   const statusAbs = path.join(rootAbs, "progress", "status.json");
   const statusExists = fs.existsSync(statusAbs);
-  mark(statusExists);
-  if (!statusExists) {
-    addViolation(violations, "StatusIntegrity", "CRITICAL", "progress/status.json", "Missing status file.");
-  } else {
+  mark(true);
+
+  if (statusExists) {
     try {
       const s = readJson(statusAbs);
+
       const hasType = typeof s.status_type === "string" && s.status_type.trim() !== "";
       const hasStage = typeof s.current_stage === "string" && /^[A-D]$/i.test(s.current_stage);
       const hasPct = typeof s.stage_progress_percent === "number";
-      const isComplete = s.overall_progress_percent === 100;
+      const hasNext = typeof s.next_step === "string";
 
-      const hasNext =
-        typeof s.next_step === "string" &&
-        (isComplete ? s.next_step.trim() === "" : s.next_step.trim() !== "");
-
-      mark(hasNext);
-
-      if (!hasNext) {
-        addViolation(
-          violations,
-          "StatusIntegrity",
-          "CRITICAL",
-          "progress/status.json",
-          isComplete
-            ? "next_step must be empty when progress is 100%."
-            : "next_step missing/invalid."
-        );
+      mark(hasType);
+      if (!hasType) {
+        addViolation(violations, "StatusReflection", "WARNING", "progress/status.json", "status_type missing/invalid.");
       }
 
       mark(hasStage);
-      if (!hasStage) addViolation(violations, "StatusIntegrity", "CRITICAL", "progress/status.json", "current_stage missing/invalid.");
+      if (!hasStage) {
+        addViolation(violations, "StatusReflection", "WARNING", "progress/status.json", "current_stage missing/invalid.");
+      }
 
       mark(hasPct);
-      if (!hasPct) addViolation(violations, "StatusIntegrity", "CRITICAL", "progress/status.json", "stage_progress_percent missing/invalid.");
+      if (!hasPct) {
+        addViolation(violations, "StatusReflection", "WARNING", "progress/status.json", "stage_progress_percent missing/invalid.");
+      }
 
       if (hasPct) {
-        const ok = s.stage_progress_percent >= 0 && s.stage_progress_percent <= 100;
-        mark(ok);
-        if (!ok) addViolation(violations, "StatusIntegrity", "CRITICAL", "progress/status.json", "stage_progress_percent must be between 0 and 100.");
+        const pctInRange = s.stage_progress_percent >= 0 && s.stage_progress_percent <= 100;
+        mark(pctInRange);
+        if (!pctInRange) {
+          addViolation(violations, "StatusReflection", "WARNING", "progress/status.json", "stage_progress_percent must be between 0 and 100.");
+        }
       }
 
       mark(hasNext);
-      if (!hasNext) addViolation(violations, "StatusIntegrity", "CRITICAL", "progress/status.json", "next_step missing/invalid.");
+      if (!hasNext) {
+        addViolation(violations, "StatusReflection", "WARNING", "progress/status.json", "next_step missing/invalid.");
+      }
     } catch (e) {
       mark(false);
-      addViolation(violations, "StatusIntegrity", "CRITICAL", "progress/status.json", `Invalid JSON: ${e && e.message ? e.message : String(e)}`);
+      addViolation(
+        violations,
+        "StatusReflection",
+        "WARNING",
+        "progress/status.json",
+        `Invalid JSON: ${e && e.message ? e.message : String(e)}`
+      );
     }
   }
 

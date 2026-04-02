@@ -1,16 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
-const path = require("path");
-
 const { run } = require("../code/src/orchestrator/runner");
-
-const STATUS_PATH = path.resolve(__dirname, "..", "progress", "status.json");
-
-function loadStatus() {
-  const raw = fs.readFileSync(STATUS_PATH, { encoding: "utf8" });
-  return JSON.parse(raw);
-}
+const { resolveEntry } = require("../code/src/orchestrator/entry_resolver");
 
 function parseMaxSteps() {
   const arg = process.argv.find(a => a.startsWith("--max-steps="));
@@ -22,38 +13,35 @@ function parseMaxSteps() {
   return value;
 }
 
-function shouldStop(status) {
-  if (!status) return true;
+function shouldStopFromAuthority() {
+  const entry = resolveEntry();
 
-  if (Array.isArray(status.blocking_questions) && status.blocking_questions.length > 0)
-    return true;
-
-  if (typeof status.next_step !== "string" || /^IDLE/i.test(status.next_step.trim()))
-    return true;
-
-  if (status.stage_progress_percent === 100)
-    return true;
+  if (!entry) return true;
+  if (entry.blocked) return true;
+  if (entry.entry_type === "COMPLETE") return true;
+  if (!entry.next_task) return true;
 
   return false;
 }
 
-try {
+async function main() {
   const maxSteps = parseMaxSteps();
 
   for (let i = 0; i < maxSteps; i++) {
-    run();
+    await run();
 
-    const status = loadStatus();
-
-    if (shouldStop(status)) {
+    if (shouldStopFromAuthority()) {
       break;
     }
   }
-
-  process.exit(0);
-
-} catch (err) {
-  console.error("FORGE RUN ERROR:");
-  console.error(err.message);
-  process.exit(1);
 }
+
+main()
+  .then(() => {
+    process.exit(0);
+  })
+  .catch((err) => {
+    console.error("FORGE RUN ERROR:");
+    console.error(err.message);
+    process.exit(1);
+  });

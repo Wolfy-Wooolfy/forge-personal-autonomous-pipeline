@@ -5,10 +5,28 @@ const path = require("path");
 const { spawnSync } = require("child_process");
 
 const ROOT = path.resolve(__dirname, "..");
+const FORGE_STATE_PATH = path.resolve(ROOT, "artifacts", "forge", "forge_state.json");
+const ORCHESTRATION_STATE_PATH = path.resolve(ROOT, "artifacts", "orchestration", "orchestration_state.json");
 const STATUS_PATH = path.resolve(ROOT, "progress", "status.json");
 
-function readStatusRaw() {
-  return fs.readFileSync(STATUS_PATH, { encoding: "utf8" });
+function readJsonIfExists(absPath) {
+  if (!fs.existsSync(absPath)) {
+    return null;
+  }
+
+  return JSON.parse(fs.readFileSync(absPath, { encoding: "utf8" }));
+}
+
+function readGovernedStatusRaw() {
+  return JSON.stringify(
+    {
+      forge_build_state: readJsonIfExists(FORGE_STATE_PATH),
+      orchestration_state: readJsonIfExists(ORCHESTRATION_STATE_PATH),
+      status_reflection: readJsonIfExists(STATUS_PATH)
+    },
+    null,
+    2
+  );
 }
 
 function isAutonomyEnabled() {
@@ -43,7 +61,7 @@ function main() {
   const cmd = argv[0] ? String(argv[0]).toLowerCase() : "";
 
   if (cmd === "status") {
-    const raw = readStatusRaw();
+    const raw = readGovernedStatusRaw();
     process.stdout.write(raw);
     process.exit(0);
   }
