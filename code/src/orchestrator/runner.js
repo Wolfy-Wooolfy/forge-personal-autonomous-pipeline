@@ -5,7 +5,6 @@ const { resolveEntry } = require("./entry_resolver");
 const { writeStatus } = require("./status_writer");
 const { executeTask } = require("../execution/task_executor");
 
-const STATUS_PATH = path.resolve(__dirname, "../../..", "progress", "status.json");
 const FORGE_STATE_PATH = path.resolve(__dirname, "../../..", "artifacts", "forge", "forge_state.json");
 const ORCHESTRATION_STATE_PATH = path.resolve(__dirname, "../../..", "artifacts", "orchestration", "orchestration_state.json");
 
@@ -193,18 +192,6 @@ function buildStatusReflectionSeed(entry) {
 }
 
 function loadStatusReflection(entry) {
-  try {
-    if (fs.existsSync(STATUS_PATH)) {
-      const raw = fs.readFileSync(STATUS_PATH, { encoding: "utf8" });
-      const parsed = JSON.parse(raw);
-
-      if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
-        return parsed;
-      }
-    }
-  } catch (error) {
-  }
-
   return buildStatusReflectionSeed(entry);
 }
 
@@ -241,17 +228,8 @@ function isDryRun() {
 
 function allowPostStageCompletion(status) {
   const t = String(status.current_task || "");
-  const ns = String(status.next_step || "");
-  if (/\bTASK-040\b/.test(t) || /\bTASK-040\b/.test(ns)) {
-    return true;
-  }
 
-  if (
-    status.current_stage === "D" &&
-    status.stage_progress_percent === 100 &&
-    String(process.env.HALO_ALLOW_POST_STAGE_TASKS || "") === "1" &&
-    String(status.current_task || "").trim() !== ""
-  ) {
+  if (/\bTASK-040\b/.test(t)) {
     return true;
   }
 
@@ -303,9 +281,9 @@ async function run() {
   }
 
   assertIdempotency({
-  ...status,
-  current_task: entry.next_task
-});
+    ...status,
+    current_task: entry.next_task
+  });
 
   if (isDryRun()) {
     console.log("[FORGE DRY-RUN]");
