@@ -294,7 +294,21 @@ async function run() {
 
   const result = await executeTask(entry.next_task, status);
 
-  if (result && result.closure_artifact === true && result.artifact) {
+  if (!result || typeof result !== "object") {
+    throw new Error("Task handler must return execution result object");
+  }
+
+  const patchHasBlockingQuestion =
+    !!(
+      result.status_patch &&
+      Array.isArray(result.status_patch.blocking_questions) &&
+      result.status_patch.blocking_questions.length > 0
+    );
+
+  const taskBlocked =
+    result.blocked === true || patchHasBlockingQuestion;
+
+  if (!taskBlocked && result.closure_artifact === true && result.artifact) {
     const ROOT = path.resolve(__dirname, "../../..");
     const artifactPath = path.resolve(ROOT, result.artifact);
 
@@ -314,10 +328,6 @@ async function run() {
     fs.writeFileSync(artifactPath, content, "utf-8");
 
     console.log(`[FORGE] Execution closure artifact persisted at: ${result.artifact}`);
-  }
-
-  if (!result || typeof result !== "object") {
-    throw new Error("Task handler must return execution result object");
   }
 
   let updated = {

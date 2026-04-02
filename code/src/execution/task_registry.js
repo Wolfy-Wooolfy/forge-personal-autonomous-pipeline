@@ -2022,6 +2022,34 @@ Execution Closed
   },
 
   "TASK-067: ENFORCE FULL VISION RUNTIME": (context) => {
+    const stageAArtifacts = [
+      "artifacts/stage_A",
+      "artifacts/stage_B",
+      "artifacts/stage_C",
+      "artifacts/stage_D/final_acceptance_report.json",
+      "artifacts/stage_D/release_gate_closure.md"
+    ];
+
+    const missing = stageAArtifacts.filter((rel) => {
+      const abs = path.resolve(__dirname, "../../..", rel);
+      return !fs.existsSync(abs);
+    });
+
+    if (missing.length > 0) {
+      return {
+        stage_progress_percent: 10,
+        clear_current_task: false,
+        status_patch: {
+          current_stage: "VISION_COMPLIANCE",
+          current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
+          next_step: "TASK-067 remains OPEN until full Stage A→D runtime evidence exists",
+          blocking_questions: [],
+          issues: missing.map((rel) => `Missing required vision runtime artifact: ${rel}`)
+        },
+        blocked: true
+      };
+    }
+
     const relTaskClosure = "artifacts/tasks/TASK-067.execution.closure.md";
     const taskClosureAbs = path.resolve(__dirname, "../../..", relTaskClosure);
 
@@ -2035,28 +2063,30 @@ Execution Closed
       taskClosureAbs,
       `# TASK-067 — Execution Closure
 
-## Task
-- Task ID: TASK-067
-- Stage Binding: VISION_COMPLIANCE
-- Closure Type: EXECUTION
+  ## Task
+  - Task ID: TASK-067
+  - Stage Binding: VISION_COMPLIANCE
+  - Closure Type: EXECUTION
 
-## Status
-- stage_progress_percent: 10
-- closure_artifact: true
+  ## Status
+  - stage_progress_percent: 100
+  - closure_artifact: true
 
-## Notes
-- Vision runtime enforcement initiated
-- Stage A→D lifecycle not yet implemented
-- Further tasks required to transform pipeline
-`,
+  ## Generated Artifacts
+  - artifacts/stage_A
+  - artifacts/stage_B
+  - artifacts/stage_C
+  - artifacts/stage_D/final_acceptance_report.json
+  - artifacts/stage_D/release_gate_closure.md
+  `,
       "utf-8"
     );
 
     return {
-      stage_progress_percent: 10,
+      stage_progress_percent: 100,
       closure_artifact: true,
       artifact: relTaskClosure,
-      clear_current_task: false
+      clear_current_task: true
     };
   },
 
