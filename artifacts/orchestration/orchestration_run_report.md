@@ -1,23 +1,14 @@
 # Orchestration Run Report
 
-- Run ID: RUN-08E565B3A363
-- Run Mode: RESUME
-- Started At: 2026-04-02T19:28:02.676Z
-- Last Updated At: 2026-04-02T19:28:02.686Z
+- Run Mode: BLOCKED
 - Status: BLOCKED
-- Entry Type: RESUME
-- Blocked: YES
+- Entry Type: BLOCKED
 - Blocking Reason: Task blocked: TASK-067: ENFORCE FULL VISION RUNTIME
-- Reason: Resume from next incomplete module
 - Current Module: VISION_COMPLIANCE
 - Next Task: TASK-067: ENFORCE FULL VISION RUNTIME
 - Final Outcome: BLOCKED
 
 ## Completed Modules
-
-- None
-
-## Pending Modules
 
 - INTAKE
 - AUDIT
@@ -29,8 +20,7 @@
 - EXECUTE
 - VERIFY
 - CLOSURE
+
+## Pending Modules
+
 - VISION_COMPLIANCE
-
-## Execution Log
-
-- 2026-04-02T19:28:02.686Z | VISION_COMPLIANCE | TASK-067: ENFORCE FULL VISION RUNTIME | BLOCKED

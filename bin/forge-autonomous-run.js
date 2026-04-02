@@ -220,8 +220,19 @@ Promise.resolve()
 
     return runAutonomous();
   })
-  .then(() => {
+  .then((result) => {
     writeForgeState();
+
+    if (
+      result &&
+      typeof result === "object" &&
+      String(result.status || "").toUpperCase() === "BLOCKED"
+    ) {
+      throw new Error(
+        result.blocking_reason || result.reason || "FORGE GOVERNANCE BLOCK: autonomous run ended BLOCKED"
+      );
+    }
+
     syncLiveStatusFromForgeState();
   })
   .then(() => {

@@ -2,13 +2,12 @@
   "status_type": "LIVE",
   "current_stage": "A",
   "overall_progress_percent": 91,
-  "stage_progress_percent": 10,
+  "stage_progress_percent": 0,
   "last_completed_artifact": "artifacts/tasks/TASK-055.execution.closure.md",
   "current_task": "TASK-067: ENFORCE FULL VISION RUNTIME",
-  "issues": [
-    "Missing required vision runtime artifact: artifacts/stage_D/final_acceptance_report.json",
-    "Missing required vision runtime artifact: artifacts/stage_D/release_gate_closure.md"
+  "issues": [],
+  "blocking_questions": [
+    "Task blocked: TASK-067: ENFORCE FULL VISION RUNTIME"
   ],
-  "blocking_questions": [],
-  "next_step": "TASK-067 remains OPEN until full Stage A→D runtime evidence exists"
+  "next_step": ""
 }
