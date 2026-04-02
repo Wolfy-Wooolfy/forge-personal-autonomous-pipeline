@@ -2023,9 +2023,15 @@ Execution Closed
 
   "TASK-067: ENFORCE FULL VISION RUNTIME": (context) => {
     const requiredArtifacts = [
-      "artifacts/stage_A",
+      "artifacts/stage_A/task_plan.md",
+      "artifacts/stage_A/validated_assumptions.md",
+      "artifacts/stage_A/idea_evaluation.md",
+      "artifacts/stage_A/idea_final_spec.md",
+      "artifacts/stage_A/idea_approval_record.md",
+
       "artifacts/stage_B",
       "artifacts/stage_C",
+
       "artifacts/stage_D/final_acceptance_report.json"
     ];
 
@@ -2080,6 +2086,23 @@ Execution Closed
           next_step: "TASK-067 remains OPEN until required Stage D acceptance artifacts exist",
           blocking_questions: [],
           issues: missing.map((rel) => `Missing required vision runtime artifact: ${rel}`)
+        },
+        blocked: true
+      };
+    }
+
+    if (acceptanceResult !== "ACCEPTED") {
+      return {
+        stage_progress_percent: 10,
+        clear_current_task: false,
+        status_patch: {
+          current_stage: "A",
+          current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
+          next_step: "TASK-067 remains OPEN until Stage D final acceptance result becomes ACCEPTED",
+          blocking_questions: [],
+          issues: [
+            `Stage D final acceptance result is not ACCEPTED: ${acceptanceResult || "MISSING_RESULT"}`
+          ]
         },
         blocked: true
       };
