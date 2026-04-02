@@ -251,13 +251,13 @@ A selectable execution fork exists ONLY if:
 If a selectable execution fork exists:
 - Execution MUST be classified as BLOCKED (not ABORTED)
 - Human interrupt handling MUST follow the Autonomy Policy & Human Interrupt Protocol
-- The block MUST be represented in `progress/status.json` per the Progress Tracking Contract
+- The block MUST be represented in governed runtime authority artifacts and mirrored in `progress/status.json` per the Progress Tracking Contract
 
 If no selectable execution fork exists:
 - Execution MUST be classified as ABORTED
 - NO Decision MUST be logged
 - NO questions MUST be asked
-- The abort MUST be represented in `progress/status.json` per the Progress Tracking Contract
+- The abort MUST be represented in governed runtime authority artifacts and mirrored in `progress/status.json` per the Progress Tracking Contract
 
 Execution Abort MUST NOT be treated as a Decision
 and MUST NOT produce a Decision artifact.
@@ -295,7 +295,7 @@ This approval gate:
 
 If approval is required and not available:
 - Execution MUST enter BLOCKED
-- The block MUST be represented in `progress/status.json`
+- The block MUST be represented in governed runtime authority artifacts and mirrored in `progress/status.json`
 - No downstream stage may begin
 
 Approval MUST be captured as a CLOSED artifact.
@@ -1025,8 +1025,10 @@ This document MUST NOT:
 - Define reporting format
 - Permit summaries or derived representations
 
-Any emitted status response MUST be a direct, lossless rendering of:
+Any emitted human-visible status response MUST be a direct, lossless rendering of:
 - `progress/status.json`
+
+Execution authority itself MUST remain with governed runtime authority artifacts.
 
 Any deviation constitutes a contract violation and MUST halt execution.
 

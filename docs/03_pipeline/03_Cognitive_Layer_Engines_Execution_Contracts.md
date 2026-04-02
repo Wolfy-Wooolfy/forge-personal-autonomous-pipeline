@@ -55,7 +55,7 @@ All probabilistic outputs are Candidates and MUST NOT mutate authoritative state
 
 If any engine cannot proceed deterministically:
 - Execution MUST halt under Doc-03 rules
-- State MUST be represented ONLY via `progress/status.json` per Doc-06
+- State MUST be represented via governed runtime authority artifacts, with human-visible reflection emitted through `progress/status.json` per Doc-06
 - A Human Interrupt is permitted ONLY per Doc-04 conditions
 
 No engine is allowed to continue “temporarily”.
@@ -252,7 +252,7 @@ Human Interrupt is permitted ONLY if:
 - Mandatory external input is missing (credentials, non-derivable config), OR
 - Retry limits are exceeded under Doc-04 and a fork exists
 
-All blocking MUST be represented ONLY in `progress/status.json` per Doc-06.
+All blocking MUST be represented first in governed runtime authority artifacts and then mirrored in `progress/status.json` per Doc-06.
 
 No comfort questions, no preference selection prompts.
 

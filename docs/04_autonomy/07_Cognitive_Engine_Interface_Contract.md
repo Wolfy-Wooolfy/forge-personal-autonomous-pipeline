@@ -85,7 +85,7 @@ They become authoritative ONLY IF:
 1. Persisted as artifacts
 2. Validated against contracts
 3. Pass integrity checks
-4. Recorded in progress/status.json (if required)
+4. Recorded in governed runtime authority artifacts and mirrored in `progress/status.json` if human-visible reflection is required
 
 No raw model output has authority.
 

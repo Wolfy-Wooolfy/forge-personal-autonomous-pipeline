@@ -445,12 +445,12 @@ A selectable execution fork exists ONLY if:
 
 If BLOCKED:
 - Human interrupt is REQUIRED under the Autonomy Policy & Human Interrupt Protocol
-- The block MUST be represented in `progress/status.json` per the Progress Tracking Contract
+- The block MUST be represented in governed runtime authority artifacts and mirrored in `progress/status.json` per the Progress Tracking Contract
 
 If ABORTED:
 - NO Decision MUST be logged
 - NO questions MUST be asked
-- The abort MUST be represented in `progress/status.json` per the Progress Tracking Contract
+- The abort MUST be represented in governed runtime authority artifacts and mirrored in `progress/status.json` per the Progress Tracking Contract
 
 Logging impossibility as a Decision without a selectable execution fork is forbidden.
 
@@ -755,9 +755,9 @@ ONLY when ALL of the following are true simultaneously:
   WITHOUT triggering Execution Abort
 
 - The Progress Tracking & Status Report Contract (v1)
-  is satisfied by the live execution state file (`progress/status.json`),
+  is satisfied by the governed runtime authority artifacts plus the reflected human-visible status file (`progress/status.json`),
   and the execution state is deterministically derived as COMPLETED
-  according to Doc-06 (including all required fields, values, and emptiness conditions)
+  according to the governed runtime state contracts and Doc-06 reporting rules
 
 - No unresolved risks, ambiguities,
   blocking questions,

@@ -96,7 +96,8 @@ Skipping any step → SYSTEM VIOLATION
 
 AI outputs MUST NEVER:
 
-- Update progress/status.json
+- Update governed runtime authority artifacts
+- Update `progress/status.json`
 - Modify stage transitions
 - Log decisions
 - Trigger retries

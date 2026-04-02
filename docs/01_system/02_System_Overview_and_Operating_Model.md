@@ -541,14 +541,15 @@ The orchestrator enters a terminal passive state.
 The ONLY permitted actions after an Execution Abort are:
 
 - Preserve all artifacts and state (no deletion, no overwrite)
-- Write the authoritative final execution state into `progress/status.json`
+- Write the authoritative final execution state into governed runtime authority artifacts
+- Mirror the resulting human-visible final status into `progress/status.json`
   in strict compliance with the Progress Tracking & Status Report Contract (v1)
 - Produce any mandatory abort/audit artifacts ONLY if explicitly required
   by an authoritative contract (e.g., audit failure artifacts), with no narrative text
 
 No human-facing narrative notification is permitted.
-All human visibility MUST occur exclusively through `progress/status.json`
-as governed by the Progress Tracking & Status Report Contract (v1).
+All human visibility MUST occur through the governed reflection layer,
+with `progress/status.json` serving as the human-visible status surface only.
 
 Any autonomous action taken after Execution Abort
 constitutes an authority violation

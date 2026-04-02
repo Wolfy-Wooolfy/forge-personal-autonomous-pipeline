@@ -513,6 +513,7 @@ that exposed the fork.
 Example:
 - docs/03_pipeline/...
 - verify/unit/...
+- governed runtime authority artifacts
 - progress/status.json
 
 ---

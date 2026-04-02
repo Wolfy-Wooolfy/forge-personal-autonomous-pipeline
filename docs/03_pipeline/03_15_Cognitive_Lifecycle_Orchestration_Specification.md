@@ -64,7 +64,7 @@ Stage A may begin ONLY when:
 
 - A raw idea artifact exists
 - No active lifecycle execution is running
-- progress/status.json allows Stage A
+- governed runtime authority artifacts allow deterministic Stage A entry
 
 Stage A MUST produce:
 - idea_evaluation_report
@@ -158,7 +158,8 @@ Stage transitions are allowed ONLY when:
 - No boundary audit FAIL exists
 - No retry in-progress
 - No rollback active
-- progress/status.json updated by orchestrator
+- governed runtime authority artifacts updated by orchestrator
+- `progress/status.json` updated by orchestrator only as reflection/output
 
 Stage transitions MUST NOT be triggered by:
 
@@ -263,7 +264,8 @@ Execution Abort at any stage:
 
 Only the orchestrator may:
 
-- Update progress/status.json
+- Update governed runtime authority artifacts
+- Update `progress/status.json` as reflection/output
 - Approve stage transition
 - Freeze progress
 - Recalculate progress percentages

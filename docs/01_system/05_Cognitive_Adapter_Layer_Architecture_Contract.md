@@ -115,7 +115,7 @@ The adapter MUST NOT:
 - Auto-switch providers in AUTO mode.
 - Modify Forge documentation or contracts.
 - Treat model output as authoritative truth.
-- Write to progress/status.json directly.
+- Write to governed runtime authority artifacts or to `progress/status.json` directly.
 - Create or close stage artifacts.
 
 The adapter is IO + normalization + persistence ONLY.

@@ -59,7 +59,7 @@ The current codebase primarily provides:
 - Fail-Closed execution discipline
 - Artifact-based progress tracking
 - Idempotency / bounded execution steps
-- Status-as-truth (`progress/status.json`)
+- Governed runtime authority split with `progress/status.json` as reflection only
 - Task handler registry + deterministic task execution contract
 
 This is a discipline and governance engine.
@@ -141,7 +141,7 @@ Key property:
 - No discretionary autonomy
 - No authority derived from narrative documents
 - Candidate outputs have zero authority
-- Status-as-truth via `progress/status.json`
+- Runtime truth carried by governed authority artifacts, with `progress/status.json` limited to reflection
 - Immutable closed artifacts
 - Boundary Audit supremacy over all other checks
 - Verification evidence must be artifact-bound, replayable, and logged

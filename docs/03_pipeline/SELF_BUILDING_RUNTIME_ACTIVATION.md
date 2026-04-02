@@ -19,7 +19,7 @@ It specifies:
 - repository readiness conditions
 - execution bootstrap sequence
 - runtime state initialization
-- interaction with progress/status.json
+- interaction with governed runtime state artifacts and reflection/output status reporting
 
 The purpose of this protocol is to ensure that
 Forge begins autonomous execution only when the system
@@ -32,7 +32,7 @@ is in a valid deterministic state.
 The Self-Building System activates when ANY of the following occurs:
 
 1. A new task is registered.
-2. progress/status.json indicates READY state.
+2. Governed runtime authority artifacts indicate a valid deterministic entry or resume state.
 3. A lifecycle execution was previously interrupted and must resume.
 4. A repository snapshot is loaded for autonomous processing.
 
@@ -46,7 +46,8 @@ Before activation, Forge MUST verify:
 
 - Required governance documents exist
 - Required artifact directories exist
-- progress/status.json exists
+- governed runtime authority artifacts exist
+- progress/status.json may exist as reflection/output only
 - Lifecycle state is deterministic
 - No corruption exists in artifacts
 
@@ -79,13 +80,14 @@ Forge MUST perform the following steps.
 Step 1 — Repository Snapshot Lock  
 The repository state MUST be frozen for deterministic analysis.
 
-Step 2 — Status Initialization  
-Forge MUST read progress/status.json and determine:
+Step 2 — Runtime State Initialization  
+Forge MUST read governed runtime authority artifacts and determine:
 
-- current stage
+- current governed runtime position
 - execution state
 - pending actions
-- blocking questions
+- blocking/abort semantics
+- deterministic continuation eligibility
 
 Step 3 — Artifact Integrity Verification  
 All artifacts referenced by status.json MUST exist.
@@ -353,7 +355,7 @@ After enforcement:
 
 - Forge becomes a fully autonomous deterministic pipeline
 - `status.json` becomes a pure reflection layer
-- Execution consistency is guaranteed by Forge state only
+- Execution consistency is guaranteed by governed Forge/orchestration runtime authority artifacts
 
 ---
 
@@ -367,7 +369,8 @@ The following runtime files MUST treat `progress/status.json` as reflection/outp
 Execution entry, resume, and deterministic task selection MUST be derived from:
 
 - `artifacts/forge/forge_state.json`
-- pipeline closure continuity under `artifacts/tasks/`
+- `artifacts/orchestration/orchestration_state.json` when current-run state exists
+- pipeline closure continuity under `artifacts/tasks/*`
 
 ---
 

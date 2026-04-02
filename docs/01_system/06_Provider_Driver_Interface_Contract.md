@@ -105,7 +105,8 @@ If provider returns malformed structure:
 Drivers MUST NOT:
 
 - Persist artifacts directly
-- Write to progress/status.json
+- Write to governed runtime authority artifacts
+- Write to `progress/status.json`
 - Perform retries internally
 - Swallow errors silently
 - Convert provider errors into success

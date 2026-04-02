@@ -308,7 +308,7 @@ Governance documents under `docs/` are permitted to contain structured prose
 as long as they do NOT:
 - get treated as live execution state
 - get parsed as executable instructions outside their declared authority scope
-- bypass schema-bound authoritative artifacts (e.g., `progress/status.json`)
+- bypass schema-bound authoritative artifacts (e.g., `artifacts/forge/forge_state.json`, `artifacts/orchestration/orchestration_state.json`, or `progress/status.json`)
 
 ---
 
@@ -369,7 +369,8 @@ If a retry does not change the execution outcome deterministically:
 
 In all cases:
 - Execution MUST halt
-- A status report MUST be emitted via `progress/status.json` (Doc-06 compliant)
+- The authoritative runtime state MUST be written into governed runtime authority artifacts
+- A status report MUST be emitted via `progress/status.json` as reflection/output (Doc-06 compliant)
 - No continuation is permitted without the applicable control path:
   - Abort finality, OR
   - Logged Decision (if blocked by a selectable fork)
@@ -936,6 +937,7 @@ This playbook is considered satisfied for a given local execution attempt ONLY w
 This playbook grants ZERO authority to:
 - Declare overall task success
 - Advance pipeline stages
+- Modify governed runtime authority artifacts
 - Modify `progress/status.json`
 
 Only then may the pipeline proceed to the next contract-governed stage gate.
