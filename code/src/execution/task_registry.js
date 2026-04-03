@@ -2056,11 +2056,12 @@ Execution Closed
           status_patch: {
             current_stage: "A",
             current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
-            next_step: "TASK-067 remains OPEN until final acceptance report is valid JSON",
-            blocking_questions: [],
-            issues: [
-              `Invalid or unreadable vision runtime artifact: ${finalAcceptanceRel}`
-            ]
+            next_step: "Review decision prompt and respond",
+            blocking_questions: [
+              "Review artifacts/stage_A/decision_prompt.md and provide your decision"
+            ],
+            issues: missing.map((rel) => `Missing required vision runtime artifact: ${rel}`),
+            decision_artifact: "artifacts/stage_A/decision_prompt.md"
           },
           blocked: true
         };
