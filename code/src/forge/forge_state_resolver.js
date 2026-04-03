@@ -257,6 +257,24 @@ function deriveStageFromTask(taskId, allFiles) {
   return null;
 }
 
+function deriveNextAllowedStepForTask(taskId, allFiles) {
+  if (!taskId) {
+    return "COMPLETE";
+  }
+
+  const hasStageAClosure = allFiles.includes(`${taskId}.stageA.closure.md`);
+  const hasStageBClosure = allFiles.includes(`${taskId}.stageB.closure.md`);
+  const hasStageCClosure = allFiles.includes(`${taskId}.stageC.closure.md`);
+  const hasStageDClosure = allFiles.includes(`${taskId}.stageD.closure.md`);
+
+  if (hasStageDClosure) return `artifacts/tasks/${taskId}.stageD.*`;
+  if (hasStageCClosure) return `artifacts/tasks/${taskId}.stageD.*`;
+  if (hasStageBClosure) return `artifacts/tasks/${taskId}.stageC.*`;
+  if (hasStageAClosure) return `artifacts/tasks/${taskId}.stageB.*`;
+
+  return `artifacts/tasks/${taskId}.stageA.*`;
+}
+
 function buildTaskFacts(taskNames, closureMap, allFiles) {
   return taskNames.map((taskName) => {
     const taskId = extractTaskIdFromArtifact(taskName);
@@ -309,10 +327,12 @@ function buildConsistentState(taskFacts, closureMap) {
     }
   }
 
-  const currentStage = deriveStageFromTask(
-    currentTask,
-    taskFacts.map((item) => path.basename(item.stage_artifact || ""))
-  );
+  const allStageFiles = taskFacts
+    .map((item) => path.basename(item.stage_artifact || ""))
+    .filter(Boolean);
+
+  const currentStage = deriveStageFromTask(currentTask, allStageFiles);
+  const nextAllowedStep = deriveNextAllowedStepForTask(currentTask, allStageFiles);
 
   return {
     status_type: "FORGE_BUILD_STATE",
@@ -327,9 +347,7 @@ function buildConsistentState(taskFacts, closureMap) {
     build_progress_percent:
       taskFacts.length === 0 ? 0 : Math.round((closedTasks.length / taskFacts.length) * 100),
     execution_integrity: "CONSISTENT",
-    next_allowed_step: currentTask
-      ? `artifacts/tasks/${currentTask}.stageA.*`
-      : "COMPLETE",
+    next_allowed_step: currentTask ? nextAllowedStep : "COMPLETE",
     derived_from: {
       registry: "code/src/execution/task_registry.js",
       task_artifacts_directory: "artifacts/tasks",
@@ -374,9 +392,17 @@ function buildInconsistentState(taskFacts, firstBrokenClosedTaskId) {
   }
 
   const currentTask = openTasksBeforeBreak.length > 0 ? openTasksBeforeBreak[0] : "";
+  const allStageFiles = taskFacts
+    .map((item) => path.basename(item.stage_artifact || ""))
+    .filter(Boolean);
+
   const currentStage = currentTask
     ? (taskFacts.find((fact) => fact.task_id === currentTask)?.stage || null)
     : null;
+
+  const nextAllowedStep = currentTask
+    ? deriveNextAllowedStepForTask(currentTask, allStageFiles)
+    : "";
 
   return {
     status_type: "FORGE_BUILD_STATE",
@@ -392,9 +418,7 @@ function buildInconsistentState(taskFacts, firstBrokenClosedTaskId) {
     build_progress_percent:
       taskFacts.length === 0 ? 0 : Math.round((closedTasks.length / taskFacts.length) * 100),
     execution_integrity: "INCONSISTENT",
-    next_allowed_step: currentTask
-      ? `artifacts/tasks/${currentTask}.stageA.*`
-      : "",
+    next_allowed_step: nextAllowedStep,
     inconsistency_code: "CLOSURE_CONTINUITY_BROKEN",
     reason: `Closed task found after open task: ${firstBrokenClosedTaskId}`,
     inconsistent_closed_tasks_after_gap: closedTasksAfterBreak,
