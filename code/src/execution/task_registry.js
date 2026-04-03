@@ -2025,7 +2025,8 @@ Execution Closed
     const stageAArtifacts = [
       "artifacts/tasks/TASK-067.stageA.idea-evaluation.md",
       "artifacts/tasks/TASK-067.stageA.final-spec.md",
-      "artifacts/tasks/TASK-067.stageA.approval.md"
+      "artifacts/tasks/TASK-067.stageA.approval.md",
+      "artifacts/tasks/TASK-067.stageA.closure.md"
     ];
 
     const missingStageA = stageAArtifacts.filter((rel) => {
