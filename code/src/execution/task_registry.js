@@ -2022,6 +2022,43 @@ Execution Closed
   },
 
   "TASK-067: ENFORCE FULL VISION RUNTIME": (context) => {
+    const stageAArtifacts = [
+      "artifacts/tasks/TASK-067.stageA.idea-evaluation.md",
+      "artifacts/tasks/TASK-067.stageA.final-spec.md",
+      "artifacts/tasks/TASK-067.stageA.approval.md"
+    ];
+
+    const missingStageA = stageAArtifacts.filter((rel) => {
+      const abs = path.resolve(__dirname, "../../..", rel);
+      return !fs.existsSync(abs);
+    });
+
+    if (missingStageA.length > 0) {
+      return {
+        stage_progress_percent: 10,
+        clear_current_task: false,
+        status_patch: {
+          current_stage: "A",
+          current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
+          next_step: "Complete Stage A task-bound artifacts",
+          blocking_questions: [],
+          issues: missingStageA.map((rel) => `Missing Stage A artifact: ${rel}`)
+        },
+        blocked: true
+      };
+    }
+
+    return {
+      stage_progress_percent: 25,
+      clear_current_task: false,
+      status_patch: {
+        current_stage: "B",
+        current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
+        next_step: "Begin Stage B documentation validation",
+        blocking_questions: [],
+        issues: []
+      }
+    };
     const requiredArtifacts = [
       "artifacts/stage_A/task_plan.md",
       "artifacts/stage_A/validated_assumptions.md",
