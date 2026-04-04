@@ -337,12 +337,10 @@ function buildConsistentState(taskFacts, closureMap) {
     }
   }
 
-  const allStageFiles = taskFacts
-    .map((item) => path.basename(item.stage_artifact || ""))
-    .filter(Boolean);
+  const allTaskArtifactFiles = listTaskArtifactFiles();
 
-  const currentStage = deriveStageFromTask(currentTask, allStageFiles);
-  const nextAllowedStep = deriveNextAllowedStepForTask(currentTask, allStageFiles);
+  const currentStage = deriveStageFromTask(currentTask, allTaskArtifactFiles);
+  const nextAllowedStep = deriveNextAllowedStepForTask(currentTask, allTaskArtifactFiles);
 
   return {
     status_type: "FORGE_BUILD_STATE",
@@ -402,16 +400,14 @@ function buildInconsistentState(taskFacts, firstBrokenClosedTaskId) {
   }
 
   const currentTask = openTasksBeforeBreak.length > 0 ? openTasksBeforeBreak[0] : "";
-  const allStageFiles = taskFacts
-    .map((item) => path.basename(item.stage_artifact || ""))
-    .filter(Boolean);
+  const allTaskArtifactFiles = listTaskArtifactFiles();
 
   const currentStage = currentTask
-    ? (taskFacts.find((fact) => fact.task_id === currentTask)?.stage || null)
+    ? deriveStageFromTask(currentTask, allTaskArtifactFiles)
     : null;
 
   const nextAllowedStep = currentTask
-    ? deriveNextAllowedStepForTask(currentTask, allStageFiles)
+    ? deriveNextAllowedStepForTask(currentTask, allTaskArtifactFiles)
     : "";
 
   return {
