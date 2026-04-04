@@ -81,7 +81,36 @@ function syncLiveStatusFromForgeState() {
     blockingReason: ""
   });
 
-  console.log("[FORGE] PIPELINE COMPLETE — NO ACTION REQUIRED");
+  fs.mkdirSync(ORCHESTRATION_DIR, { recursive: true });
+
+  const completedPipeline = getPipeline();
+
+  const orchestrationStateComplete = {
+    run_id: RUN_CONTEXT.run_id,
+    run_mode: "COMPLETE",
+    started_at: RUN_CONTEXT.started_at,
+    last_updated_at: new Date().toISOString(),
+    status: "COMPLETE",
+    blocked: false,
+    blocking_reason: "",
+    reason: "PIPELINE COMPLETE",
+    pipeline_contract_violation: null,
+    entry_type: "COMPLETE",
+    next_task: null,
+    next_module: null,
+    current_module: null,
+    completed_modules: completedPipeline.map((item) => item.module_id),
+    pending_modules: [],
+    final_outcome: "COMPLETE"
+  };
+
+  fs.writeFileSync(
+    ORCHESTRATION_STATE_PATH,
+    `${JSON.stringify(orchestrationStateComplete, null, 2)}\n`,
+    "utf8"
+  );
+
+  console.log(`[FORGE] ${RUN_CONTEXT.run_id}: PIPELINE COMPLETE — NO ACTION REQUIRED`);
   return;
 }
 
@@ -126,6 +155,7 @@ function syncBlockedRuntimeStateFromForgeState(error) {
   fs.mkdirSync(ORCHESTRATION_DIR, { recursive: true });
 
   const orchestrationState = {
+    run_id: RUN_CONTEXT.run_id,
     run_id: `RUN-${Date.now()}`,
     run_mode: "BLOCKED",
     started_at: new Date().toISOString(),
