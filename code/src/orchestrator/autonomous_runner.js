@@ -265,7 +265,7 @@ async function runAutonomous(runContextInput = {}) {
     writeState(state);
     writeReport(state, executionLog);
 
-    const taskResult = await runTaskByName(step.task_name);
+    const taskResult = await runTaskByName(step.task_name, runContext);
 
     const taskBlocked =
       taskResult &&

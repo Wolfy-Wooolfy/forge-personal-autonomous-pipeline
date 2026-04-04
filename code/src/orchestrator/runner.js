@@ -204,17 +204,23 @@ function loadAuditFindings() {
   return JSON.parse(raw);
 }
 
-async function writeStatusAndRun(taskName) {
-  const current = loadStatusReflection({
-    next_task: taskName
-  });
+async function writeStatusAndRun(taskName, runContext = {}) {
+  const current = {
+    ...loadStatusReflection({
+      next_task: taskName
+    }),
+    run_id:
+      typeof runContext.run_id === "string" && runContext.run_id.trim() !== ""
+        ? runContext.run_id
+        : "GLOBAL"
+  };
 
   writeStatus({
     ...current,
     current_task: taskName
   });
 
-  return await run();
+  return await run(runContext);
 }
 
 function isDryRun() {
@@ -250,9 +256,15 @@ function assertIdempotency(status) {
   }
 }
 
-async function run() {
+async function run(runContext = {}) {
   const entry = resolveEntry();
-  const status = loadStatusReflection(entry);
+  const status = {
+    ...loadStatusReflection(entry),
+    run_id:
+      typeof runContext.run_id === "string" && runContext.run_id.trim() !== ""
+        ? runContext.run_id
+        : "GLOBAL"
+  };
 
   if (entry.blocked) {
     throw new Error(`[ENTRY BLOCKED] ${entry.reason}`);
