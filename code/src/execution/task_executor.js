@@ -148,7 +148,7 @@ function validateExecutionResult(result) {
   }
 }
 
-function enforceTaskContract(taskName) {
+function enforceTaskContract(taskName, context) {
   if (taskName.startsWith("SMOKE:")) {
     return;
   }
@@ -172,7 +172,7 @@ function expectedClosureArtifact(taskName) {
   return `artifacts/tasks/${taskPrefix}.execution.closure.md`;
 }
 
-function findExistingClosureFile(taskName) {
+function findExistingClosureFile(taskName, context) {
   const taskPrefix = taskName.split(":")[0];
   const TASKS_DIR = resolveTasksDir(context.status);
   const closurePath = path.join(TASKS_DIR, `${taskPrefix}.execution.closure.md`);
@@ -197,10 +197,10 @@ async function executeTask(taskName, context) {
     throw new Error("Invalid execution context");
   }
 
-  enforceTaskContract(taskName);
+  enforceTaskContract(taskName, context);
 
   if (taskName.startsWith("TASK-")) {
-    const existingClosure = findExistingClosureFile(taskName);
+    const existingClosure = findExistingClosureFile(taskName, context);
 
     if (existingClosure && isAuthoritativeExistingClosure(taskName)) {
       throw new Error(`Idempotency violation: closure artifact already exists for ${taskName}`);
