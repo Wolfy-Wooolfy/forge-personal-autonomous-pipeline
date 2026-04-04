@@ -205,6 +205,11 @@ function finalizeAndExit(error) {
   }
 }
 
+const RUN_CONTEXT = {
+  run_id: `RUN-${Date.now()}`,
+  started_at: new Date().toISOString()
+};
+
 Promise.resolve()
   .then(() => {
     const forgeState = writeForgeState();
@@ -218,7 +223,7 @@ Promise.resolve()
       );
     }
 
-    return runAutonomous();
+    return runAutonomous(RUN_CONTEXT);
   })
   .then((result) => {
     writeForgeState();

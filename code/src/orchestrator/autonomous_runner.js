@@ -101,13 +101,13 @@ function assertForgeGovernanceGate(entry) {
   }
 }
 
-function buildStateBase(entry, runId) {
+function buildStateBase(entry, runContext) {
   const pipeline = getPipeline();
 
   return {
-    run_id: runId,
+    run_id: runContext.run_id,
     run_mode: normalizeEntryType(entry.entry_type),
-    started_at: nowIso(),
+    started_at: runContext.started_at,
     last_updated_at: nowIso(),
     status: entry.blocked ? "BLOCKED" : entry.entry_type === "COMPLETE" ? "COMPLETE" : "RUNNING",
     blocked: Boolean(entry.blocked),
@@ -219,12 +219,24 @@ function finalizeComplete(state, executionLog) {
   return state;
 }
 
-async function runAutonomous() {
+async function runAutonomous(runContextInput = {}) {
   const entry = resolveEntry();
+
+  const runContext = {
+    run_id:
+      typeof runContextInput.run_id === "string" && runContextInput.run_id.trim() !== ""
+        ? runContextInput.run_id
+        : makeRunId(),
+    started_at:
+      typeof runContextInput.started_at === "string" && runContextInput.started_at.trim() !== ""
+        ? runContextInput.started_at
+        : nowIso()
+  };
+
   assertForgeGovernanceGate(entry);
 
   const executionLog = [];
-  const state = buildStateBase(entry, makeRunId());
+  const state = buildStateBase(entry, runContext);
 
   writeState(state);
   writeReport(state, executionLog);
