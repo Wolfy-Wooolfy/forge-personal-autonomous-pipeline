@@ -7,10 +7,9 @@ const BASE_TASKS_DIR = path.resolve(__dirname, "../../..", "artifacts", "tasks")
 function resolveTasksDir(context) {
   const runId =
     context &&
-    context.status &&
-    typeof context.status.run_id === "string" &&
-    context.status.run_id.trim() !== ""
-      ? context.status.run_id
+    typeof context.run_id === "string" &&
+    context.run_id.trim() !== ""
+      ? context.run_id
       : "GLOBAL";
 
   return path.join(BASE_TASKS_DIR, runId);
@@ -158,7 +157,7 @@ function enforceTaskContract(taskName, context) {
   }
 
   const taskPrefix = taskName.split(":")[0];
-  const TASKS_DIR = resolveTasksDir(context.status);
+  const TASKS_DIR = resolveTasksDir(context);
   const files = fs.existsSync(TASKS_DIR) ? fs.readdirSync(TASKS_DIR) : [];
   const matchingFile = files.find(file => file.startsWith(taskPrefix));
 
@@ -174,7 +173,7 @@ function expectedClosureArtifact(taskName) {
 
 function findExistingClosureFile(taskName, context) {
   const taskPrefix = taskName.split(":")[0];
-  const TASKS_DIR = resolveTasksDir(context.status);
+  const TASKS_DIR = resolveTasksDir(context);
   const closurePath = path.join(TASKS_DIR, `${taskPrefix}.execution.closure.md`);
 
   if (!fs.existsSync(closurePath)) {
@@ -214,7 +213,15 @@ async function executeTask(taskName, context) {
   }
 
   const frozenContext = Object.freeze({
-    status: Object.freeze({ ...context })
+    status: Object.freeze({
+      ...context,
+      run_id:
+        context &&
+        typeof context.run_id === "string" &&
+        context.run_id.trim() !== ""
+          ? context.run_id
+          : "GLOBAL"
+    })
   });
 
   const result = await handler(frozenContext);
