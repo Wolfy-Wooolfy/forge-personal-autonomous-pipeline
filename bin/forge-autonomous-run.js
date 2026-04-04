@@ -156,9 +156,8 @@ function syncBlockedRuntimeStateFromForgeState(error) {
 
   const orchestrationState = {
     run_id: RUN_CONTEXT.run_id,
-    run_id: `RUN-${Date.now()}`,
     run_mode: "BLOCKED",
-    started_at: new Date().toISOString(),
+    started_at: RUN_CONTEXT.started_at,
     last_updated_at: new Date().toISOString(),
     status: "BLOCKED",
     blocked: true,

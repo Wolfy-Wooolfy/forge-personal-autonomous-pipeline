@@ -2,7 +2,19 @@ const fs = require("fs");
 const path = require("path");
 const { getHandler } = require("./task_registry");
 
-const TASKS_DIR = path.resolve(__dirname, "../../..", "artifacts", "tasks");
+const BASE_TASKS_DIR = path.resolve(__dirname, "../../..", "artifacts", "tasks");
+
+function resolveTasksDir(context) {
+  const runId =
+    context &&
+    context.status &&
+    typeof context.status.run_id === "string" &&
+    context.status.run_id.trim() !== ""
+      ? context.status.run_id
+      : "GLOBAL";
+
+  return path.join(BASE_TASKS_DIR, runId);
+}
 
 const ROOT = path.resolve(__dirname, "../../..");
 const RELEASE_MANIFEST_PATH = path.join(ROOT, "artifacts", "release", "RELEASE_MANIFEST_v1.json");
@@ -146,7 +158,8 @@ function enforceTaskContract(taskName) {
   }
 
   const taskPrefix = taskName.split(":")[0];
-  const files = fs.readdirSync(TASKS_DIR);
+  const TASKS_DIR = resolveTasksDir(context.status);
+  const files = fs.existsSync(TASKS_DIR) ? fs.readdirSync(TASKS_DIR) : [];
   const matchingFile = files.find(file => file.startsWith(taskPrefix));
 
   if (!matchingFile) {
@@ -161,6 +174,7 @@ function expectedClosureArtifact(taskName) {
 
 function findExistingClosureFile(taskName) {
   const taskPrefix = taskName.split(":")[0];
+  const TASKS_DIR = resolveTasksDir(context.status);
   const closurePath = path.join(TASKS_DIR, `${taskPrefix}.execution.closure.md`);
 
   if (!fs.existsSync(closurePath)) {
