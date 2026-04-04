@@ -1,17 +1,16 @@
 {
-  "run_id": "RUN-1775303829072",
-  "run_mode": "BLOCKED",
-  "started_at": "2026-04-04T11:57:09.072Z",
-  "last_updated_at": "2026-04-04T11:57:09.072Z",
-  "status": "BLOCKED",
-  "blocked": true,
-  "blocking_reason": "Task blocked: TASK-067: ENFORCE FULL VISION RUNTIME",
-  "reason": "Task blocked: TASK-067: ENFORCE FULL VISION RUNTIME",
-  "pipeline_contract_violation": null,
-  "entry_type": "BLOCKED",
-  "next_task": "TASK-067: ENFORCE FULL VISION RUNTIME",
-  "next_module": "VISION_COMPLIANCE",
-  "current_module": "VISION_COMPLIANCE",
+  "run_id": "RUN-4B531044EC37",
+  "run_mode": "RESUME",
+  "started_at": "2026-04-04T12:00:23.362Z",
+  "last_updated_at": "2026-04-04T12:00:23.378Z",
+  "status": "COMPLETE",
+  "blocked": false,
+  "blocking_reason": "",
+  "reason": "Resume from next incomplete module",
+  "entry_type": "RESUME",
+  "next_task": null,
+  "next_module": null,
+  "current_module": null,
   "completed_modules": [
     "INTAKE",
     "AUDIT",
@@ -22,10 +21,9 @@
     "BACKFILL",
     "EXECUTE",
     "VERIFY",
-    "CLOSURE"
-  ],
-  "pending_modules": [
+    "CLOSURE",
     "VISION_COMPLIANCE"
   ],
-  "final_outcome": "BLOCKED"
+  "pending_modules": [],
+  "final_outcome": "COMPLETE"
 }
