@@ -92,8 +92,21 @@ function validatePayload(payload) {
 }
 
 function writeStatus(payload) {
-  validatePayload(payload);
-  const json = JSON.stringify(payload, null, 2);
+  const normalizedPayload = { ...payload };
+
+  if (
+    normalizedPayload.overall_progress_percent === 100 &&
+    Array.isArray(normalizedPayload.blocking_questions) &&
+    normalizedPayload.blocking_questions.length === 0
+  ) {
+    normalizedPayload.current_stage = "D";
+    normalizedPayload.current_task = "";
+    normalizedPayload.next_step = "";
+    normalizedPayload.stage_progress_percent = 100;
+  }
+
+  validatePayload(normalizedPayload);
+  const json = JSON.stringify(normalizedPayload, null, 2);
   fs.mkdirSync(STATUS_DIR, { recursive: true });
   fs.writeFileSync(STATUS_PATH, json, { encoding: "utf8" });
 }
