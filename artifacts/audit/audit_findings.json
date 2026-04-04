@@ -1,22 +1,10 @@
 {
-  "execution_id": "AUDIT-2026-04-04T16:05:19.970Z",
+  "execution_id": "AUDIT-2026-04-04T16:15:20.992Z",
   "total_checks": 325,
-  "passed_checks": 321,
-  "failed_checks": 3,
+  "passed_checks": 323,
+  "failed_checks": 1,
   "blocked": true,
   "violations": [
-    {
-      "category": "ArtifactNamespaceIntegrity",
-      "severity": "CRITICAL",
-      "path": "artifacts/coverage/vision_coverage_matrix.md",
-      "description": "Artifact outside allowed namespaces: coverage"
-    },
-    {
-      "category": "ArtifactNamespaceIntegrity",
-      "severity": "CRITICAL",
-      "path": "artifacts/coverage/vision_gap_report.md",
-      "description": "Artifact outside allowed namespaces: coverage"
-    },
     {
       "category": "ArtifactNamespaceIntegrity",
       "severity": "WARNING",

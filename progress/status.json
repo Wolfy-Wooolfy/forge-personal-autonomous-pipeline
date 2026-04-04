@@ -7,7 +7,7 @@
   "current_task": "TASK-050: MODULE FLOW — Trace",
   "issues": [],
   "blocking_questions": [
-    "[AUDIT BLOCKED] TRACE blocked because artifacts/audit/audit_findings.json reports blocked=true"
+    "Audit is BLOCKED — see artifacts/audit/audit_error.md"
   ],
   "next_step": ""
 }
