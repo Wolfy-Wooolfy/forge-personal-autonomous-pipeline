@@ -2049,20 +2049,45 @@ Execution Closed
       };
     }
 
-    return {
-      stage_progress_percent: 25,
-      clear_current_task: false,
-      status_patch: {
-        current_stage: "B",
-        current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
-        next_step: "Create artifacts/tasks/TASK-067.stageB.documentation-validation.md",
-        blocking_questions: [],
-        issues: [
-          "TASK-067 is in Stage B but no Stage B task-bound artifact exists yet: artifacts/tasks/TASK-067.stageB.documentation-validation.md"
-        ]
-      },
-      blocked: true
-    };
+    const stageBDocumentationRel = "artifacts/tasks/TASK-067.stageB.documentation-validation.md";
+    const stageBDocumentationAbs = path.resolve(__dirname, "../../..", stageBDocumentationRel);
+
+    if (!fs.existsSync(stageBDocumentationAbs)) {
+      return {
+        stage_progress_percent: 25,
+        clear_current_task: false,
+        status_patch: {
+          current_stage: "B",
+          current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
+          next_step: `Create ${stageBDocumentationRel}`,
+          blocking_questions: [],
+          issues: [
+            `TASK-067 is in Stage B but no Stage B task-bound artifact exists yet: ${stageBDocumentationRel}`
+          ]
+        },
+        blocked: true
+      };
+    }
+
+    const stageBClosureRel = "artifacts/tasks/TASK-067.stageB.closure.md";
+    const stageBClosureAbs = path.resolve(__dirname, "../../..", stageBClosureRel);
+
+    if (!fs.existsSync(stageBClosureAbs)) {
+      return {
+        stage_progress_percent: 50,
+        clear_current_task: false,
+        status_patch: {
+          current_stage: "B",
+          current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
+          next_step: `Create ${stageBClosureRel}`,
+          blocking_questions: [],
+          issues: [
+            `Stage B documentation validation exists but Stage B is not formally closed yet: ${stageBClosureRel}`
+          ]
+        },
+        blocked: true
+      };
+    }
     const requiredArtifacts = [
       "artifacts/stage_A/task_plan.md",
       "artifacts/stage_A/validated_assumptions.md",
