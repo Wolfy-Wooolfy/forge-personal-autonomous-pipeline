@@ -3,7 +3,7 @@
 - Run Mode: BLOCKED
 - Status: BLOCKED
 - Entry Type: BLOCKED
-- Blocking Reason: STATUS SCHEMA VIOLATION: field count mismatch
+- Blocking Reason: No contract artifact found for task: TASK-047: MODULE FLOW — Intake
 - Current Module: INTAKE
 - Next Task: TASK-047: MODULE FLOW — Intake
 - Final Outcome: BLOCKED
