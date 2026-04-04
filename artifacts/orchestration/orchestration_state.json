@@ -1,25 +1,25 @@
 {
-  "run_id": "RUN-1775323477124",
+  "run_id": "RUN-1775326731530",
   "run_mode": "BLOCKED",
-  "started_at": "2026-04-04T17:24:37.124Z",
-  "last_updated_at": "2026-04-04T17:24:37.137Z",
+  "started_at": "2026-04-04T18:18:51.530Z",
+  "last_updated_at": "2026-04-04T18:18:57.413Z",
   "status": "BLOCKED",
   "blocked": true,
-  "blocking_reason": "[AUDIT BLOCKED] TRACE blocked because artifacts/audit/audit_findings.json reports blocked=true",
-  "reason": "[AUDIT BLOCKED] TRACE blocked because artifacts/audit/audit_findings.json reports blocked=true",
+  "blocking_reason": "Decision Gate BLOCKED: high-risk or ambiguous actions require explicit override. Set FORGE_DECISION_OVERRIDE to APPROVE ALL or REJECT, then re-run Decision Gate.",
+  "reason": "Decision Gate BLOCKED: high-risk or ambiguous actions require explicit override. Set FORGE_DECISION_OVERRIDE to APPROVE ALL or REJECT, then re-run Decision Gate.",
   "pipeline_contract_violation": null,
   "entry_type": "BLOCKED",
-  "next_task": "TASK-050: MODULE FLOW — Trace",
-  "next_module": "TRACE",
-  "current_module": "TRACE",
+  "next_task": "TASK-052: MODULE FLOW — Decision Gate",
+  "next_module": "DECISION_GATE",
+  "current_module": "DECISION_GATE",
   "completed_modules": [
     "INTAKE",
-    "AUDIT"
-  ],
-  "pending_modules": [
+    "AUDIT",
     "TRACE",
     "GAP",
-    "DESIGN_EXPLORATION",
+    "DESIGN_EXPLORATION"
+  ],
+  "pending_modules": [
     "DECISION_GATE",
     "BACKFILL",
     "EXECUTE",

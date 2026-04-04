@@ -1,21 +1,15 @@
 {
-  "execution_id": "AUDIT-2026-04-04T16:15:20.992Z",
+  "execution_id": "AUDIT-2026-04-04T18:18:51.540Z",
   "total_checks": 325,
-  "passed_checks": 323,
-  "failed_checks": 1,
-  "blocked": true,
+  "passed_checks": 324,
+  "failed_checks": 0,
+  "blocked": false,
   "violations": [
     {
       "category": "ArtifactNamespaceIntegrity",
       "severity": "WARNING",
       "path": "artifacts/archive/new_project_reset_2026-03-30T10-45-46-281Z/forge/forge_state.json",
       "description": "Duplicate artifact filename across namespaces: forge_state.json"
-    },
-    {
-      "category": "DriftDetection",
-      "severity": "CRITICAL",
-      "path": "code/src/orchestrator/stage_transitions.js",
-      "description": "Hash snapshot mismatch detected (hash_mismatch) vs release_local_v4.hashes.json"
     }
   ]
 }
