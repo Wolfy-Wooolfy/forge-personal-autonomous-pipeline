@@ -1,8 +1,8 @@
 {
-  "run_id": "RUN-1775303522717",
+  "run_id": "RUN-1775303829072",
   "run_mode": "BLOCKED",
-  "started_at": "2026-04-04T11:52:02.717Z",
-  "last_updated_at": "2026-04-04T11:52:02.717Z",
+  "started_at": "2026-04-04T11:57:09.072Z",
+  "last_updated_at": "2026-04-04T11:57:09.072Z",
   "status": "BLOCKED",
   "blocked": true,
   "blocking_reason": "Task blocked: TASK-067: ENFORCE FULL VISION RUNTIME",
