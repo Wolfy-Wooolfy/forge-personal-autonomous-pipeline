@@ -58,6 +58,31 @@ function moveDirectoryContents(sourceDir, targetDir) {
   return moved;
 }
 
+function archiveTaskExecutionArtifactsOnly(sourceDir, targetDir) {
+  if (!fs.existsSync(sourceDir)) {
+    return [];
+  }
+
+  ensureDir(targetDir);
+
+  const entries = fs.readdirSync(sourceDir);
+  const moved = [];
+
+  for (const entry of entries) {
+    if (!entry.endsWith(".execution.closure.md")) {
+      continue;
+    }
+
+    const sourcePath = path.join(sourceDir, entry);
+    const targetPath = path.join(targetDir, entry);
+
+    fs.renameSync(sourcePath, targetPath);
+    moved.push(entry);
+  }
+
+  return moved;
+}
+
 function resetNewProjectScope() {
   requireExplicitConfirmation();
 
@@ -69,7 +94,7 @@ function resetNewProjectScope() {
 
   ensureDir(archiveDir);
 
-  const archivedTasks = moveDirectoryContents(
+  const archivedTasks = archiveTaskExecutionArtifactsOnly(
     TASKS_DIR,
     path.join(archiveDir, "tasks")
   );
@@ -92,6 +117,16 @@ function resetNewProjectScope() {
   ensureDir(TASKS_DIR);
   ensureDir(FORGE_DIR);
   ensureDir(ORCHESTRATION_DIR);
+
+  const remainingTaskContracts = fs.existsSync(TASKS_DIR)
+    ? fs.readdirSync(TASKS_DIR).filter((entry) => entry.startsWith("TASK-"))
+    : [];
+
+  if (remainingTaskContracts.length === 0) {
+    throw new Error(
+      "RESET BLOCKED: artifacts/tasks lost all TASK contract artifacts after reset"
+    );
+  }
 
   const summary = {
     reset_type: "NEW_PROJECT_SCOPE_RESET",
