@@ -1088,7 +1088,13 @@ async function runTrace(contextOrStatus) {
   };
 
   const traceJson = {
-    execution_id: `TRACE-${new Date().toISOString()}`,
+    execution_id: `TRACE-${
+  contextOrStatus &&
+  typeof contextOrStatus.run_id === "string" &&
+  contextOrStatus.run_id.trim() !== ""
+    ? contextOrStatus.run_id
+    : new Date().toISOString()
+}`,
     cognitive_binding: {
       bound: cognitiveTrace.bound,
       type: "TRACE_COGNITIVE",
