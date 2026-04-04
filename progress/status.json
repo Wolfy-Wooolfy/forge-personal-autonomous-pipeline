@@ -1,13 +1,13 @@
 {
   "status_type": "LIVE",
   "current_stage": "A",
-  "overall_progress_percent": 0,
+  "overall_progress_percent": 18,
   "stage_progress_percent": 0,
-  "last_completed_artifact": "",
-  "current_task": "TASK-047: MODULE FLOW — Intake",
+  "last_completed_artifact": "artifacts/tasks/TASK-048.execution.closure.md",
+  "current_task": "TASK-050: MODULE FLOW — Trace",
   "issues": [],
   "blocking_questions": [
-    "No contract artifact found for task: TASK-047: MODULE FLOW — Intake"
+    "Audit is BLOCKED — see artifacts/audit/audit_error.md"
   ],
   "next_step": ""
 }

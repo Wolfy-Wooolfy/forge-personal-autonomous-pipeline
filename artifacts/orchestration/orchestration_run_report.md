@@ -3,19 +3,18 @@
 - Run Mode: BLOCKED
 - Status: BLOCKED
 - Entry Type: BLOCKED
-- Blocking Reason: No contract artifact found for task: TASK-047: MODULE FLOW — Intake
-- Current Module: INTAKE
-- Next Task: TASK-047: MODULE FLOW — Intake
+- Blocking Reason: Audit is BLOCKED — see artifacts/audit/audit_error.md
+- Current Module: TRACE
+- Next Task: TASK-050: MODULE FLOW — Trace
 - Final Outcome: BLOCKED
 
 ## Completed Modules
 
-- None
+- INTAKE
+- AUDIT
 
 ## Pending Modules
 
-- INTAKE
-- AUDIT
 - TRACE
 - GAP
 - DESIGN_EXPLORATION
