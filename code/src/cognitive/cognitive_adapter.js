@@ -1,6 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+const openaiDriver = require("./drivers/openai_driver");
+const { resolveCognitiveConfig } = require("./cognitive_config_resolver");
 
 function ensureObject(value, fieldName) {
   if (!value || typeof value !== "object" || Array.isArray(value)) {
@@ -221,8 +223,65 @@ async function executeCognitive(request, handler) {
   const responseId = makeResponseId();
   const startedAt = Date.now();
 
+  const cognitiveConfig = resolveCognitiveConfig({
+    stage_key:
+      request &&
+      request.task_context &&
+      typeof request.task_context.module === "string" &&
+      request.task_context.module.trim() !== ""
+        ? request.task_context.module.trim().toUpperCase()
+        : "",
+    task_category:
+      request &&
+      request.task_context &&
+      typeof request.task_context.task_category === "string" &&
+      request.task_context.task_category.trim() !== ""
+        ? request.task_context.task_category.trim().toUpperCase()
+        : "ANALYZER",
+    cognitive_engine_provider:
+      request &&
+      typeof request.cognitive_engine_provider === "string" &&
+      request.cognitive_engine_provider.trim() !== ""
+        ? request.cognitive_engine_provider.trim()
+        : "",
+    cognitive_engine_model_id:
+      request &&
+      typeof request.cognitive_engine_model_id === "string" &&
+      request.cognitive_engine_model_id.trim() !== ""
+        ? request.cognitive_engine_model_id.trim()
+        : ""
+  });
+
   try {
-    const handlerResult = await Promise.resolve(handler(request));
+    const handlerResult = cognitiveConfig.enabled === true &&
+      String(cognitiveConfig.provider_id || "").toUpperCase() === "OPENAI"
+      ? await openaiDriver.execute({
+          provider_id: cognitiveConfig.provider_id,
+          model_id: cognitiveConfig.model_id,
+          task_category: cognitiveConfig.task_category || "ANALYZER",
+          prompt:
+            request.input.type === "text"
+              ? String(request.input.content || "")
+              : JSON.stringify(request.input.content),
+          timeout_ms:
+            request.constraints &&
+            typeof request.constraints.timeout_ms === "number" &&
+            Number.isFinite(request.constraints.timeout_ms) &&
+            request.constraints.timeout_ms > 0
+              ? request.constraints.timeout_ms
+              : 30000,
+          attempt_number: 1,
+          constraints: {
+            max_output_tokens:
+              request.constraints &&
+              typeof request.constraints.max_tokens === "number" &&
+              Number.isFinite(request.constraints.max_tokens) &&
+              request.constraints.max_tokens > 0
+                ? request.constraints.max_tokens
+                : undefined
+          }
+        })
+      : await Promise.resolve(handler(request));
     const latencyMs = Date.now() - startedAt;
 
     const rawResponse = {
