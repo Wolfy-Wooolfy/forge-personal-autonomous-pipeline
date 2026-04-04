@@ -205,15 +205,9 @@ function loadAuditFindings() {
 }
 
 async function writeStatusAndRun(taskName, runContext = {}) {
-  const current = {
-    ...loadStatusReflection({
-      next_task: taskName
-    }),
-    run_id:
-      typeof runContext.run_id === "string" && runContext.run_id.trim() !== ""
-        ? runContext.run_id
-        : "GLOBAL"
-  };
+  const current = loadStatusReflection({
+    next_task: taskName
+  });
 
   writeStatus({
     ...current,
@@ -391,7 +385,19 @@ async function run(runContext = {}) {
     };
   }
 
-  writeStatus(updated);
+  const statusPayload = {
+    status_type: updated.status_type,
+    current_stage: updated.current_stage,
+    overall_progress_percent: updated.overall_progress_percent,
+    stage_progress_percent: updated.stage_progress_percent,
+    last_completed_artifact: updated.last_completed_artifact,
+    current_task: updated.current_task,
+    issues: updated.issues,
+    blocking_questions: updated.blocking_questions,
+    next_step: updated.next_step
+  };
+
+  writeStatus(statusPayload);
 
   console.log(`[FORGE] ${entry.next_task} progressed stage to ${result.stage_progress_percent}%`);
 
