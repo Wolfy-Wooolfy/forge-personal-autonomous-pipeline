@@ -1,13 +1,13 @@
 {
   "status_type": "LIVE",
   "current_stage": "A",
-  "overall_progress_percent": 45,
+  "overall_progress_percent": 73,
   "stage_progress_percent": 0,
-  "last_completed_artifact": "artifacts/tasks/TASK-066.execution.closure.md",
-  "current_task": "TASK-052: MODULE FLOW — Decision Gate",
+  "last_completed_artifact": "artifacts/tasks/TASK-054.execution.closure.md",
+  "current_task": "TASK-061: MODULE FLOW — Verify",
   "issues": [],
   "blocking_questions": [
-    "Decision Gate BLOCKED: high-risk or ambiguous actions require explicit override. Set FORGE_DECISION_OVERRIDE to APPROVE ALL or REJECT, then re-run Decision Gate."
+    "Verification failed — review artifacts/verify/verification_report.md"
   ],
   "next_step": ""
 }

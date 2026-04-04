@@ -1,18 +1,18 @@
 # Verification Report
 
-generated_at: 2026-04-02T11:08:16.609Z
-status: PASS
+generated_at: 2026-04-04T18:21:21.089Z
+status: FAIL
 
 ## Closure Gate Readiness
-- gap_count: 0
+- gap_count: 2
 - critical_violations: 0
-- orphan_code_units: 0
+- orphan_code_units: 2
 - orphan_requirements: 0
 - orphan_artifacts: 0
 - execute_artifacts_complete: true
 - decision_artifact_present: true
 - deterministic_confirmation_ready: true
-- closure_contract_ready: true
+- closure_contract_ready: false
 
 ## Checks
 - artifacts_intake_intake_snapshot_json_valid_json: PASS artifacts/intake/intake_snapshot.json
@@ -24,10 +24,10 @@ status: PASS
 - artifacts_execute_execute_diff_md_exists: PASS artifacts/execute/execute_diff.md
 - artifacts_execute_execute_log_md_exists: PASS artifacts/execute/execute_log.md
 - decision_artifact_present: PASS artifacts/decisions/module_flow_decision_gate.json
-- execute_plan_matches_backfill_plan: PASS backfill_actions=0; execute_actions=0
-- gap_count_zero: PASS gap_count=0
+- execute_plan_matches_backfill_plan: PASS backfill_actions=4; execute_actions=4
+- gap_count_zero: FAIL gap_count=2
 - critical_violations_zero: PASS critical_violations=0
-- orphan_code_units_zero: PASS orphan_code_units=0
+- orphan_code_units_zero: FAIL orphan_code_units=2
 - orphan_requirements_zero: PASS orphan_requirements=0
 - orphan_artifacts_zero: PASS orphan_artifacts=0
 - audit_not_blocked: PASS audit_blocked=false

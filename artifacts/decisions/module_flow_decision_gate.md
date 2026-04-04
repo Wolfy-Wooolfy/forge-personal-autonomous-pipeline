@@ -1,10 +1,10 @@
 # MODULE FLOW — Decision Gate
 
-- timestamp: 2026-04-04T18:18:57.405Z
+- timestamp: 2026-04-04T18:21:21.058Z
 - policy: AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK
 - operating_mode: IMPROVE
 - repository_state: MIXED
-- blocked: true
+- blocked: false
 
 ## Source
 - exploration_matrix_path: artifacts/exploration/option_matrix.json
@@ -14,25 +14,25 @@
 
 ## Summary
 - total_actions: 4
-- approved_count: 0
-- review_required_count: 4
+- approved_count: 4
+- review_required_count: 0
 - rejected_count: 0
 
 ## Approved Actions
-- None
+- ACT-19548f8ab493 [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/cognitive/cognitive_config_resolver.js::FILE if it is not part of Forge scope/contracts.
+  - reason: action explicitly marked requires_decision; approved by explicit override
+- ACT-9ee5a048eaf2 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/cognitive/cognitive_config_resolver.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
+  - reason: action explicitly marked requires_decision; approved by explicit override
+- ACT-65a38bca0c98 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/cognitive/drivers/openai_driver.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
+  - reason: action explicitly marked requires_decision; approved by explicit override
+- ACT-d5fea2ff89d4 [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/cognitive/drivers/openai_driver.js::FILE if it is not part of Forge scope/contracts.
+  - reason: action explicitly marked requires_decision; approved by explicit override
 
 ## Review Required
-- ACT-19548f8ab493 [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/cognitive/cognitive_config_resolver.js::FILE if it is not part of Forge scope/contracts.
-  - reason: action explicitly marked requires_decision
-- ACT-9ee5a048eaf2 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/cognitive/cognitive_config_resolver.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
-  - reason: action explicitly marked requires_decision
-- ACT-65a38bca0c98 [ORPHAN_CODE/MEDIUM] Map code unit CODE::code/src/cognitive/drivers/openai_driver.js::FILE to an existing requirement by adding deterministic mapping rules in Trace (if valid).
-  - reason: action explicitly marked requires_decision
-- ACT-d5fea2ff89d4 [ORPHAN_CODE/MEDIUM] Remove or relocate code unit CODE::code/src/cognitive/drivers/openai_driver.js::FILE if it is not part of Forge scope/contracts.
-  - reason: action explicitly marked requires_decision
+- None
 
 ## Rejected Actions
 - None
 
 ## Next
-- next_step: BLOCKED pending explicit decision override
+- next_step: MODULE_FLOW — Decision Gate COMPLETE. Next=Backfill (implement backfillEngine + task bridge).

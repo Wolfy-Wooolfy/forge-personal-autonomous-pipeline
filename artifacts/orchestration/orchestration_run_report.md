@@ -3,9 +3,9 @@
 - Run Mode: BLOCKED
 - Status: BLOCKED
 - Entry Type: BLOCKED
-- Blocking Reason: Decision Gate BLOCKED: high-risk or ambiguous actions require explicit override. Set FORGE_DECISION_OVERRIDE to APPROVE ALL or REJECT, then re-run Decision Gate.
-- Current Module: DECISION_GATE
-- Next Task: TASK-052: MODULE FLOW — Decision Gate
+- Blocking Reason: Verification failed — review artifacts/verify/verification_report.md
+- Current Module: VERIFY
+- Next Task: TASK-061: MODULE FLOW — Verify
 - Final Outcome: BLOCKED
 
 ## Completed Modules
@@ -15,12 +15,12 @@
 - TRACE
 - GAP
 - DESIGN_EXPLORATION
-
-## Pending Modules
-
 - DECISION_GATE
 - BACKFILL
 - EXECUTE
+
+## Pending Modules
+
 - VERIFY
 - CLOSURE
 - VISION_COMPLIANCE

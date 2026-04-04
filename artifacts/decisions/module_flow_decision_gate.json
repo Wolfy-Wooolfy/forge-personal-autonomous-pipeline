@@ -1,13 +1,13 @@
 {
   "decision_id": "MODULE_FLOW_DECISION_GATE",
-  "timestamp": "2026-04-04T18:18:57.405Z",
+  "timestamp": "2026-04-04T18:21:21.058Z",
   "task": "TASK-052",
   "policy": "AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
-  "override_mode": "UNSPECIFIED",
-  "override_source": "NONE",
-  "override_raw": "",
+  "override_mode": "APPROVE_ALL",
+  "override_source": "ENV",
+  "override_raw": "APPROVE ALL",
   "source": {
     "exploration_matrix_path": "artifacts/exploration/option_matrix.json",
     "exploration_matrix_sha256": "7d8cd41c4f3d4bf10f4c2efde86110b9c065c64e78041befd176505ad8d1ea51",
@@ -16,12 +16,11 @@
   },
   "summary": {
     "total_actions": 4,
-    "approved_count": 0,
-    "review_required_count": 4,
+    "approved_count": 4,
+    "review_required_count": 0,
     "rejected_count": 0
   },
-  "approved_actions": [],
-  "review_required_actions": [
+  "approved_actions": [
     {
       "gap_id": "GAP-047122a31360",
       "category": "ORPHAN_CODE",
@@ -34,7 +33,7 @@
       "impact_scope": "code",
       "requires_decision": true,
       "cognitive_priority_hint": null,
-      "reason": "action explicitly marked requires_decision"
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
     },
     {
       "gap_id": "GAP-047122a31360",
@@ -48,7 +47,7 @@
       "impact_scope": "code/trace",
       "requires_decision": true,
       "cognitive_priority_hint": null,
-      "reason": "action explicitly marked requires_decision"
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
     },
     {
       "gap_id": "GAP-0c18d91e82d2",
@@ -62,7 +61,7 @@
       "impact_scope": "code/trace",
       "requires_decision": true,
       "cognitive_priority_hint": null,
-      "reason": "action explicitly marked requires_decision"
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
     },
     {
       "gap_id": "GAP-0c18d91e82d2",
@@ -76,9 +75,10 @@
       "impact_scope": "code",
       "requires_decision": true,
       "cognitive_priority_hint": null,
-      "reason": "action explicitly marked requires_decision"
+      "reason": "action explicitly marked requires_decision; approved by explicit override"
     }
   ],
+  "review_required_actions": [],
   "rejected_actions": [],
-  "blocked": true
+  "blocked": false
 }

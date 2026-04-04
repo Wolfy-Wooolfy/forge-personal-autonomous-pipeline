@@ -1,28 +1,28 @@
 {
-  "run_id": "RUN-1775326731530",
+  "run_id": "RUN-1775326881042",
   "run_mode": "BLOCKED",
-  "started_at": "2026-04-04T18:18:51.530Z",
-  "last_updated_at": "2026-04-04T18:18:57.413Z",
+  "started_at": "2026-04-04T18:21:21.042Z",
+  "last_updated_at": "2026-04-04T18:21:21.109Z",
   "status": "BLOCKED",
   "blocked": true,
-  "blocking_reason": "Decision Gate BLOCKED: high-risk or ambiguous actions require explicit override. Set FORGE_DECISION_OVERRIDE to APPROVE ALL or REJECT, then re-run Decision Gate.",
-  "reason": "Decision Gate BLOCKED: high-risk or ambiguous actions require explicit override. Set FORGE_DECISION_OVERRIDE to APPROVE ALL or REJECT, then re-run Decision Gate.",
+  "blocking_reason": "Verification failed — review artifacts/verify/verification_report.md",
+  "reason": "Verification failed — review artifacts/verify/verification_report.md",
   "pipeline_contract_violation": null,
   "entry_type": "BLOCKED",
-  "next_task": "TASK-052: MODULE FLOW — Decision Gate",
-  "next_module": "DECISION_GATE",
-  "current_module": "DECISION_GATE",
+  "next_task": "TASK-061: MODULE FLOW — Verify",
+  "next_module": "VERIFY",
+  "current_module": "VERIFY",
   "completed_modules": [
     "INTAKE",
     "AUDIT",
     "TRACE",
     "GAP",
-    "DESIGN_EXPLORATION"
-  ],
-  "pending_modules": [
+    "DESIGN_EXPLORATION",
     "DECISION_GATE",
     "BACKFILL",
-    "EXECUTE",
+    "EXECUTE"
+  ],
+  "pending_modules": [
     "VERIFY",
     "CLOSURE",
     "VISION_COMPLIANCE"
