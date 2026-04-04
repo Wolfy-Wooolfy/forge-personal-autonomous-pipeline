@@ -1,36 +1,7 @@
 {
   "execution_id": "MODULE_FLOW_EXECUTE_v1",
-  "generated_at": "2026-04-04T18:21:21.080Z",
+  "generated_at": "2026-04-04T18:29:26.861Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
-  "approved_code_actions": [
-    {
-      "action_id": "ACT-19548f8ab493",
-      "origin_gap_id": "GAP-047122a31360",
-      "target_file": "code/src/cognitive/cognitive_config_resolver.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-9ee5a048eaf2",
-      "origin_gap_id": "GAP-047122a31360",
-      "target_file": "code/src/cognitive/cognitive_config_resolver.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-65a38bca0c98",
-      "origin_gap_id": "GAP-0c18d91e82d2",
-      "target_file": "code/src/cognitive/drivers/openai_driver.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-d5fea2ff89d4",
-      "origin_gap_id": "GAP-0c18d91e82d2",
-      "target_file": "code/src/cognitive/drivers/openai_driver.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    }
-  ]
+  "approved_code_actions": []
 }

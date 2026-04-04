@@ -1,42 +1,13 @@
 {
   "execution_id": "MODULE_FLOW_BACKFILL_v2",
-  "generated_at": "2026-04-04T18:21:21.073Z",
+  "generated_at": "2026-04-04T18:29:26.854Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "source": {
     "decision_gate_path": "artifacts/decisions/module_flow_decision_gate.json",
-    "decision_gate_sha256": "557736b8fb398aea88a9eb7cdfc639db1e07e679ca5c0469fd8c8656d1d99ef3",
+    "decision_gate_sha256": "5ef5313479ffa25f007e29cdfde7acac2df630cf161009552337a5cc58341fd5",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84"
   },
-  "approved_code_actions": [
-    {
-      "action_id": "ACT-19548f8ab493",
-      "origin_gap_id": "GAP-047122a31360",
-      "target_file": "code/src/cognitive/cognitive_config_resolver.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-9ee5a048eaf2",
-      "origin_gap_id": "GAP-047122a31360",
-      "target_file": "code/src/cognitive/cognitive_config_resolver.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-65a38bca0c98",
-      "origin_gap_id": "GAP-0c18d91e82d2",
-      "target_file": "code/src/cognitive/drivers/openai_driver.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    },
-    {
-      "action_id": "ACT-d5fea2ff89d4",
-      "origin_gap_id": "GAP-0c18d91e82d2",
-      "target_file": "code/src/cognitive/drivers/openai_driver.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true
-    }
-  ]
+  "approved_code_actions": []
 }

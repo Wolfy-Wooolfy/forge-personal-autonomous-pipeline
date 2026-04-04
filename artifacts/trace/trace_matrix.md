@@ -2,17 +2,17 @@
 
 ~~~json
 {
-  "execution_id": "TRACE-2026-04-04T18:18:55.515Z",
+  "execution_id": "TRACE-2026-04-04T18:29:24.443Z",
   "cognitive_binding": {
     "bound": true,
     "type": "TRACE_COGNITIVE",
-    "response_id": "RESP-1b693a88-03cf-491f-be14-9a2e01e518c3"
+    "response_id": "RESP-0cb02de7-42c6-4fea-8b8e-c1dd916e52b5"
   },
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "total_requirements": 579,
   "total_code_units": 23,
-  "total_artifacts": 61,
+  "total_artifacts": 80,
   "mappings": [
     {
       "requirement_id": "DOC-20::R001",
@@ -23,7 +23,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -36,7 +38,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -49,7 +53,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -62,7 +68,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -75,7 +83,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -88,7 +98,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -101,7 +113,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -114,7 +128,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -127,7 +143,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -140,7 +158,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -153,7 +173,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -166,7 +188,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -179,7 +203,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -192,7 +218,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -205,7 +233,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -218,7 +248,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -231,7 +263,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -244,7 +278,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -257,7 +293,9 @@
         "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -265,11 +303,15 @@
       "requirement_id": "DOC-01-ADAPTER::R001",
       "document": "docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -302,6 +344,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -325,11 +369,15 @@
       "requirement_id": "DOC-01-ADAPTER::R002",
       "document": "docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -362,6 +410,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -385,11 +435,15 @@
       "requirement_id": "DOC-01-ADAPTER::R003",
       "document": "docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -422,6 +476,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -445,11 +501,15 @@
       "requirement_id": "DOC-01-ADAPTER::R004",
       "document": "docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -482,6 +542,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -505,11 +567,15 @@
       "requirement_id": "DOC-01-ADAPTER::R005",
       "document": "docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -542,6 +608,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -565,11 +633,15 @@
       "requirement_id": "DOC-01-ADAPTER::R006",
       "document": "docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -602,6 +674,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -625,11 +699,15 @@
       "requirement_id": "DOC-01-ADAPTER::R007",
       "document": "docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -662,6 +740,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -685,11 +765,15 @@
       "requirement_id": "DOC-01-ADAPTER::R008",
       "document": "docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -722,6 +806,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -745,11 +831,15 @@
       "requirement_id": "DOC-01-ADAPTER::R009",
       "document": "docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -782,6 +872,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -805,11 +897,15 @@
       "requirement_id": "DOC-01-ADAPTER::R010",
       "document": "docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -842,6 +938,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -866,11 +964,15 @@
       "document": "docs/01_system/05_Cognitive_Adapter_Layer_Architecture_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/modules/verifyEngine.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -903,6 +1005,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -928,14 +1032,14 @@
       "requirement_id": "DOC-01-DRIVER::R001",
       "document": "docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/execution/task_executor.js::FILE",
-        "CODE::code/src/forge/forge_state_resolver.js::FILE",
-        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
-        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
-        "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -943,14 +1047,14 @@
       "requirement_id": "DOC-01-DRIVER::R002",
       "document": "docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/execution/task_executor.js::FILE",
-        "CODE::code/src/forge/forge_state_resolver.js::FILE",
-        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
-        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
-        "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -958,14 +1062,14 @@
       "requirement_id": "DOC-01-DRIVER::R003",
       "document": "docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/execution/task_executor.js::FILE",
-        "CODE::code/src/forge/forge_state_resolver.js::FILE",
-        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
-        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
-        "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -973,14 +1077,14 @@
       "requirement_id": "DOC-01-DRIVER::R004",
       "document": "docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/execution/task_executor.js::FILE",
-        "CODE::code/src/forge/forge_state_resolver.js::FILE",
-        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
-        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
-        "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -988,14 +1092,14 @@
       "requirement_id": "DOC-01-DRIVER::R005",
       "document": "docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/execution/task_executor.js::FILE",
-        "CODE::code/src/forge/forge_state_resolver.js::FILE",
-        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
-        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
-        "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1003,14 +1107,14 @@
       "requirement_id": "DOC-01-DRIVER::R006",
       "document": "docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/execution/task_executor.js::FILE",
-        "CODE::code/src/forge/forge_state_resolver.js::FILE",
-        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
-        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
-        "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1018,14 +1122,14 @@
       "requirement_id": "DOC-01-DRIVER::R007",
       "document": "docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/execution/task_executor.js::FILE",
-        "CODE::code/src/forge/forge_state_resolver.js::FILE",
-        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
-        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
-        "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1033,14 +1137,14 @@
       "requirement_id": "DOC-01-DRIVER::R008",
       "document": "docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/execution/task_executor.js::FILE",
-        "CODE::code/src/forge/forge_state_resolver.js::FILE",
-        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
-        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
-        "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1048,14 +1152,14 @@
       "requirement_id": "DOC-01-DRIVER::R009",
       "document": "docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/execution/task_executor.js::FILE",
-        "CODE::code/src/forge/forge_state_resolver.js::FILE",
-        "CODE::code/src/orchestrator/autonomous_runner.js::FILE",
-        "CODE::code/src/orchestrator/entry_resolver.js::FILE",
-        "CODE::code/src/orchestrator/pipeline_definition.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/intake/intake_context.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/intake/intake_context.json",
+        "artifacts/trace/trace_matrix.json"
       ],
       "coverage_status": "FULL"
     },
@@ -1063,6 +1167,9 @@
       "requirement_id": "DOC-01-DRIVER::R010",
       "document": "docs/01_system/06_Provider_Driver_Interface_Contract.md",
       "mapped_code_units": [
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/modules/verifyEngine.js::FILE"
       ],
       "mapped_artifacts": [
@@ -1075,11 +1182,15 @@
       "requirement_id": "DOC-01-PROMPT::R001",
       "document": "docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -1112,6 +1223,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -1135,11 +1248,15 @@
       "requirement_id": "DOC-01-PROMPT::R002",
       "document": "docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -1172,6 +1289,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -1195,11 +1314,15 @@
       "requirement_id": "DOC-01-PROMPT::R003",
       "document": "docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -1232,6 +1355,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -1255,11 +1380,15 @@
       "requirement_id": "DOC-01-PROMPT::R004",
       "document": "docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -1292,6 +1421,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -1315,11 +1446,15 @@
       "requirement_id": "DOC-01-PROMPT::R005",
       "document": "docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -1352,6 +1487,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -1375,11 +1512,15 @@
       "requirement_id": "DOC-01-PROMPT::R006",
       "document": "docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -1412,6 +1553,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -1435,11 +1578,15 @@
       "requirement_id": "DOC-01-PROMPT::R007",
       "document": "docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -1472,6 +1619,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -1495,11 +1644,15 @@
       "requirement_id": "DOC-01-PROMPT::R008",
       "document": "docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -1532,6 +1685,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -1556,11 +1711,15 @@
       "document": "docs/01_system/07_Cognitive_Prompt_Construction_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/modules/verifyEngine.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -1593,6 +1752,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -1623,67 +1784,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -1696,67 +1799,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -1769,67 +1814,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -1842,67 +1829,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -1915,67 +1844,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -1988,67 +1859,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -2061,67 +1874,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -2134,67 +1889,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -2207,67 +1904,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -2280,67 +1919,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -2353,67 +1934,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -2424,67 +1947,8 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -2495,67 +1959,8 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -2566,67 +1971,8 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -2637,67 +1983,8 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -2708,67 +1995,8 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -2779,67 +2007,8 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -2850,67 +2019,8 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -2921,67 +2031,8 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -2992,67 +2043,8 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -3063,67 +2055,8 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -3134,67 +2067,8 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -3205,67 +2079,8 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -3278,67 +2093,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -3351,67 +2108,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -3424,67 +2123,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -3497,67 +2138,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -3570,67 +2153,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -3643,67 +2168,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -3716,67 +2183,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -3789,67 +2198,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -3862,67 +2213,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -3935,67 +2228,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -4008,67 +2243,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -4081,67 +2258,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -4152,67 +2271,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -4225,67 +2285,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -4298,67 +2300,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -4371,67 +2315,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -4444,67 +2330,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -4517,67 +2345,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -4590,67 +2360,9 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -4671,6 +2383,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -4692,6 +2409,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -4713,6 +2435,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -4734,6 +2461,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -4755,6 +2487,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -4776,6 +2513,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -4797,6 +2539,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -4818,6 +2565,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -4839,6 +2591,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -4860,6 +2617,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -4881,6 +2643,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -4902,6 +2669,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -4923,6 +2695,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -4945,7 +2722,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -4967,7 +2745,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -4989,7 +2768,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5011,7 +2791,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5033,7 +2814,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5055,7 +2837,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5077,7 +2860,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5099,7 +2883,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5121,7 +2906,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5144,6 +2930,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md",
         "artifacts/release/RELEASE_MANIFEST_v1.json",
         "artifacts/release/repository_hash_snapshot.json"
       ],
@@ -5167,7 +2955,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5189,7 +2978,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5211,7 +3001,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5233,7 +3024,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5255,7 +3047,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5277,7 +3070,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5299,7 +3093,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5321,7 +3116,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5343,7 +3139,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5365,6 +3162,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md",
         "artifacts/verify/verification_report.md",
         "artifacts/verify/verification_results.json"
       ],
@@ -5388,7 +3187,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5412,7 +3212,9 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json"
+        "artifacts/release/repository_hash_snapshot.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5434,7 +3236,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -5710,6 +3513,8 @@
       "document": "docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -5725,6 +3530,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -5757,6 +3564,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -5781,6 +3590,8 @@
       "document": "docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -5796,6 +3607,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -5828,6 +3641,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -5852,6 +3667,8 @@
       "document": "docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -5867,6 +3684,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -5899,6 +3718,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -5923,6 +3744,8 @@
       "document": "docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -5938,6 +3761,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -5970,6 +3795,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -5994,6 +3821,8 @@
       "document": "docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -6009,6 +3838,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -6041,6 +3872,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -6065,6 +3898,8 @@
       "document": "docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -6080,6 +3915,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -6112,6 +3949,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -6136,6 +3975,8 @@
       "document": "docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -6152,6 +3993,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -6184,6 +4027,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -6208,6 +4053,8 @@
       "document": "docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -6223,6 +4070,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -6255,6 +4104,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -6279,6 +4130,8 @@
       "document": "docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -6294,6 +4147,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -6326,6 +4181,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -6350,6 +4207,8 @@
       "document": "docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -6365,6 +4224,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -6397,6 +4258,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -6421,6 +4284,8 @@
       "document": "docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -6436,6 +4301,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -6468,6 +4335,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -6492,6 +4361,8 @@
       "document": "docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -6507,6 +4378,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -6539,6 +4412,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -6563,6 +4438,8 @@
       "document": "docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -6578,6 +4455,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -6610,6 +4489,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -6634,6 +4515,8 @@
       "document": "docs/03_pipeline/03_15_Cognitive_Lifecycle_Orchestration_Specification.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -6649,6 +4532,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -6681,6 +4566,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -6717,6 +4604,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -6738,6 +4630,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -6759,6 +4656,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -6780,6 +4682,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -6823,6 +4730,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -6844,6 +4756,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -6865,6 +4782,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -6886,6 +4808,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -6907,6 +4834,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -6928,6 +4860,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -6949,6 +4886,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -6970,6 +4912,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -6991,6 +4938,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -7012,6 +4964,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -7056,6 +5013,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -7077,6 +5039,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -7098,6 +5065,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -7233,6 +5205,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -7254,6 +5231,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -7275,6 +5257,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -7319,6 +5306,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -7340,6 +5332,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -7361,6 +5358,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -7370,6 +5372,8 @@
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -7385,6 +5389,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -7417,6 +5423,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -7441,6 +5449,8 @@
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -7456,6 +5466,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -7488,6 +5500,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -7512,6 +5526,8 @@
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -7527,6 +5543,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -7559,6 +5577,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -7583,6 +5603,8 @@
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -7598,6 +5620,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -7630,6 +5654,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -7654,6 +5680,8 @@
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -7669,6 +5697,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -7701,6 +5731,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -7725,6 +5757,8 @@
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -7740,6 +5774,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -7772,6 +5808,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -7796,6 +5834,8 @@
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -7811,6 +5851,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -7843,6 +5885,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -7867,6 +5911,8 @@
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -7882,6 +5928,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -7914,6 +5962,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -7938,6 +5988,8 @@
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -7953,6 +6005,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -7985,6 +6039,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -8009,6 +6065,8 @@
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -8024,6 +6082,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -8056,6 +6116,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -8080,6 +6142,8 @@
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -8096,6 +6160,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -8128,6 +6194,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -8152,6 +6220,8 @@
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -8167,6 +6237,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -8199,6 +6271,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -8223,6 +6297,8 @@
       "document": "docs/03_pipeline/03_20_AI_Cognitive_Loop_Execution_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -8238,6 +6314,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -8270,6 +6348,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -8306,6 +6386,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -8327,6 +6412,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -8348,6 +6438,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -8369,6 +6464,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -8390,6 +6490,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -8411,6 +6516,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -8432,6 +6542,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -8453,6 +6568,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -8474,6 +6594,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -8495,6 +6620,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -8504,6 +6634,8 @@
       "document": "docs/03_pipeline/03_21_Candidate_Transformation_and_Authority_Separation_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -8519,6 +6651,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -8551,6 +6685,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -8587,6 +6723,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -8608,6 +6749,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -8617,6 +6763,8 @@
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -8632,6 +6780,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -8664,6 +6814,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -8688,6 +6840,8 @@
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -8703,6 +6857,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -8735,6 +6891,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -8759,6 +6917,8 @@
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -8774,6 +6934,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -8806,6 +6968,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -8830,6 +6994,8 @@
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -8845,6 +7011,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -8877,6 +7045,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -8901,6 +7071,8 @@
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -8916,6 +7088,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -8948,6 +7122,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -8972,6 +7148,8 @@
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -8987,6 +7165,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -9019,6 +7199,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -9045,6 +7227,8 @@
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -9060,6 +7244,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -9092,6 +7278,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -9118,6 +7306,8 @@
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -9133,6 +7323,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -9165,6 +7357,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -9189,6 +7383,8 @@
       "document": "docs/03_pipeline/03_Cognitive_Layer_Engines_Execution_Contracts.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -9204,6 +7400,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -9236,6 +7434,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -9272,6 +7472,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9293,6 +7498,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9314,6 +7524,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9358,6 +7573,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9379,6 +7599,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9400,6 +7625,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9421,6 +7651,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9442,6 +7677,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9463,6 +7703,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9484,6 +7729,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9505,6 +7755,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9526,6 +7781,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9548,6 +7808,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
         "artifacts/verify/verification_report.md",
         "artifacts/verify/verification_results.json"
       ],
@@ -9571,7 +7833,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -9592,6 +7855,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9613,6 +7881,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9656,6 +7929,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9677,6 +7955,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9698,6 +7981,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9719,6 +8007,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9740,6 +8033,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9761,6 +8059,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9782,6 +8085,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9803,6 +8111,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9824,6 +8137,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9845,6 +8163,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9866,6 +8189,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9887,6 +8215,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9908,6 +8241,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9929,6 +8267,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9950,6 +8293,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -9971,6 +8319,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -10401,7 +8754,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10423,7 +8780,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10445,7 +8806,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10467,7 +8832,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10489,7 +8858,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10511,7 +8884,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10533,7 +8910,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10555,7 +8936,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10577,7 +8962,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10599,7 +8988,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10621,7 +9014,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10643,7 +9040,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10665,7 +9066,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10687,7 +9092,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
       ],
       "coverage_status": "FULL"
     },
@@ -10709,7 +9118,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
       ],
       "coverage_status": "FULL"
     },
@@ -11078,7 +9491,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11100,7 +9514,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11122,7 +9537,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11144,7 +9560,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11166,7 +9583,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11188,7 +9606,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11210,7 +9629,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11232,7 +9652,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11254,7 +9675,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11276,7 +9698,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11298,7 +9721,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11320,7 +9744,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11342,7 +9767,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11364,7 +9790,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11386,7 +9813,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11408,6 +9836,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -11430,6 +9863,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -11452,6 +9890,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -11474,6 +9917,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -11496,6 +9944,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -11518,6 +9971,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -11540,6 +9998,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -11562,6 +10025,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -11584,6 +10052,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -11607,7 +10080,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11629,6 +10103,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -11651,6 +10130,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -11673,6 +10157,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -11696,7 +10185,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11718,6 +10208,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -11740,6 +10235,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -11763,7 +10263,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11785,6 +10286,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -11807,6 +10313,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -11829,7 +10340,10 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/execute/execute_diff.md",
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11851,7 +10365,10 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/execute/execute_diff.md",
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11873,7 +10390,10 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/execute/execute_diff.md",
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11895,7 +10415,10 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/execute/execute_diff.md",
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11917,7 +10440,10 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/execute/execute_diff.md",
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11939,7 +10465,10 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/execute/execute_diff.md",
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11961,7 +10490,10 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/execute/execute_diff.md",
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -11983,7 +10515,10 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/execute/execute_diff.md",
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12005,7 +10540,10 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/execute/execute_diff.md",
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12027,7 +10565,10 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/execute/execute_diff.md",
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12049,7 +10590,10 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/execute/execute_diff.md",
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12071,7 +10615,10 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/execute/execute_diff.md",
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12093,7 +10640,10 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/execute/execute_diff.md",
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12115,7 +10665,10 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/execute/execute_diff.md",
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12137,7 +10690,10 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/execute/execute_diff.md",
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12159,7 +10715,10 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/execute/execute_diff.md",
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12181,7 +10740,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12203,7 +10763,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12225,7 +10786,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12247,7 +10809,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12269,7 +10832,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12291,7 +10855,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12313,7 +10878,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12335,7 +10901,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12357,7 +10924,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12379,7 +10947,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12401,7 +10970,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12423,7 +10993,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12445,7 +11016,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12467,7 +11039,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12489,7 +11062,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12511,7 +11085,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -12882,6 +11457,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -12903,6 +11483,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -12924,6 +11509,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -12945,6 +11535,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -12966,6 +11561,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -12987,6 +11587,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13008,6 +11613,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13030,7 +11640,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -13051,6 +11662,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13072,6 +11688,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13093,6 +11714,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13114,6 +11740,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13135,6 +11766,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13156,6 +11792,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13177,6 +11818,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13198,6 +11844,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13219,6 +11870,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13240,6 +11896,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13261,6 +11922,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13282,6 +11948,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13303,6 +11974,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13324,6 +12000,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13345,6 +12026,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13366,6 +12052,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13387,6 +12078,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13408,6 +12104,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13429,6 +12130,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13450,6 +12156,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13471,6 +12182,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13492,6 +12208,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13513,6 +12234,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13534,6 +12260,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13555,6 +12286,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13576,6 +12312,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13597,6 +12338,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13618,6 +12364,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13639,6 +12390,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13710,7 +12466,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -13732,7 +12489,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -13754,6 +12512,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13776,7 +12539,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -13798,7 +12562,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/backfill/backfill_created_files.json",
+        "artifacts/backfill/backfill_execution_log.md",
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/backfill/backfill_report.md",
+        "artifacts/backfill/backfill_tasks.json"
       ],
       "coverage_status": "FULL"
     },
@@ -13820,7 +12588,10 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/execute/execute_diff.md",
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/execute/execute_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -13864,6 +12635,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13885,6 +12661,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13906,6 +12687,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13927,6 +12713,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13948,6 +12739,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13969,6 +12765,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -13991,7 +12792,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -14013,7 +12815,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -14035,7 +12838,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -14057,7 +12861,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -14079,7 +12884,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -14101,7 +12907,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -14123,7 +12930,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -14145,7 +12953,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -14167,7 +12976,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -14189,7 +12999,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -14211,7 +13022,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -14233,7 +13045,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -14255,7 +13068,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -14277,7 +13091,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -14299,7 +13114,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -14321,7 +13137,8 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -14330,6 +13147,8 @@
       "document": "docs/03_pipeline/TRACE_ENGINE_CONTRACT_v1.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/execution/task_executor.js::FILE",
         "CODE::code/src/execution/task_registry.js::getTaskHandler",
         "CODE::code/src/forge/forge_state_resolver.js::FILE",
@@ -14346,6 +13165,8 @@
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -14378,6 +13199,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -14393,7 +13216,9 @@
         "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
         "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
         "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json"
+        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -14414,6 +13239,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -14435,6 +13265,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -14456,6 +13291,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -14477,6 +13317,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -14498,6 +13343,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -14519,6 +13369,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -14540,6 +13395,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -14561,6 +13421,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -14582,6 +13447,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -14603,6 +13473,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -14624,6 +13499,11 @@
         "CODE::code/src/orchestrator/status_writer.js::FILE"
       ],
       "mapped_artifacts": [
+        "artifacts/backfill/backfill_plan.json",
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/execute/execute_plan.json",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -14638,6 +13518,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/verify/verification_results.json"
       ],
@@ -14653,6 +13534,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/verify/verification_results.json"
       ],
@@ -14668,6 +13550,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/verify/verification_results.json"
       ],
@@ -14683,6 +13566,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/verify/verification_results.json"
       ],
@@ -14698,6 +13582,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/verify/verification_results.json"
       ],
@@ -14725,6 +13610,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/verify/verification_results.json"
       ],
@@ -14740,6 +13626,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/verify/verification_results.json"
       ],
@@ -14755,6 +13642,7 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
+        "artifacts/decisions/module_flow_decision_gate.json",
         "artifacts/intake/intake_context.json",
         "artifacts/verify/verification_results.json"
       ],
@@ -14764,11 +13652,15 @@
       "requirement_id": "DOC-12::R001",
       "document": "docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -14801,6 +13693,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -14824,11 +13718,15 @@
       "requirement_id": "DOC-12::R002",
       "document": "docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -14861,6 +13759,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -14884,11 +13784,15 @@
       "requirement_id": "DOC-12::R003",
       "document": "docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -14921,6 +13825,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -14944,11 +13850,15 @@
       "requirement_id": "DOC-12::R004",
       "document": "docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -14981,6 +13891,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -15004,11 +13916,15 @@
       "requirement_id": "DOC-12::R005",
       "document": "docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -15041,6 +13957,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -15064,11 +13982,15 @@
       "requirement_id": "DOC-12::R006",
       "document": "docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -15101,6 +14023,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -15124,11 +14048,15 @@
       "requirement_id": "DOC-12::R007",
       "document": "docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -15161,6 +14089,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -15184,11 +14114,15 @@
       "requirement_id": "DOC-12::R008",
       "document": "docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -15221,6 +14155,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -15244,11 +14180,15 @@
       "requirement_id": "DOC-12::R009",
       "document": "docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -15281,6 +14221,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -15305,11 +14247,15 @@
       "document": "docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/modules/closureEngine.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -15342,6 +14288,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -15367,11 +14315,15 @@
       "requirement_id": "DOC-12::R011",
       "document": "docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -15404,6 +14356,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -15427,11 +14381,15 @@
       "requirement_id": "DOC-12::R012",
       "document": "docs/04_autonomy/06_Cognitive_Layer_Contract.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -15464,6 +14422,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -15493,6 +14453,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -15507,6 +14468,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -15521,6 +14483,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -15535,6 +14498,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -15549,6 +14513,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -15575,6 +14540,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -15601,6 +14567,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -15615,6 +14582,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -15629,6 +14597,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -15643,6 +14612,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -15657,6 +14627,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -15671,6 +14642,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -15685,6 +14657,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -15699,6 +14672,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -15725,6 +14699,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -15739,6 +14714,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -15753,6 +14729,7 @@
       ],
       "mapped_artifacts": [
         "artifacts/release/RELEASE_MANIFEST_v1.json",
+        "artifacts/trace/trace_matrix.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -15959,67 +14936,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -16030,67 +14948,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -16101,67 +14960,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -16172,67 +14972,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -16243,67 +14984,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -16314,67 +14996,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -16385,67 +15008,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -16456,67 +15020,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -16527,67 +15032,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -16598,67 +15044,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -16669,67 +15056,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -16740,67 +15068,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -16811,67 +15080,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -16882,67 +15092,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -16953,67 +15104,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -17024,67 +15116,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -17095,67 +15128,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -17166,67 +15140,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -17237,67 +15152,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -17309,67 +15165,10 @@
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -17380,67 +15179,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -17451,67 +15191,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -17522,67 +15203,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -17593,67 +15215,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -17664,67 +15227,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -17735,67 +15239,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -17806,67 +15251,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -17877,67 +15263,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -17949,67 +15276,8 @@
         "CODE::code/src/modules/designExplorationEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -18020,67 +15288,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -18091,67 +15300,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -18162,67 +15312,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -18233,67 +15324,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -18304,67 +15336,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -18375,67 +15348,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -18446,67 +15360,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -18517,67 +15372,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -18589,67 +15385,10 @@
         "CODE::code/src/modules/traceEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md",
+        "artifacts/trace/trace_matrix.json",
+        "artifacts/trace/trace_matrix.md"
       ],
       "coverage_status": "FULL"
     },
@@ -18660,67 +15399,8 @@
         "CODE::code/src/modules/decisionGate.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/audit/audit_error.md",
-        "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
-        "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
-        "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
-        "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/raw_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/normalized_response.json",
-        "artifacts/cognitive/RESP-43a94b31-4d2b-43e0-8df5-9f4d981d4d70/raw_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/normalized_response.json",
-        "artifacts/cognitive/RESP-555bdc29-ffb8-42dc-b5f7-f7de7c094deb/raw_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/normalized_response.json",
-        "artifacts/cognitive/RESP-6649416d-88b2-42ad-8e62-280bc2bd267b/raw_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/normalized_response.json",
-        "artifacts/cognitive/RESP-70873dc0-65a6-4413-ae76-4a10ce2eb850/raw_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/normalized_response.json",
-        "artifacts/cognitive/RESP-7c69fb81-e6a2-4e3c-b694-8f83643ad94b/raw_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/normalized_response.json",
-        "artifacts/cognitive/RESP-9f15583e-bec1-4126-a7f3-837be957393d/raw_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/normalized_response.json",
-        "artifacts/cognitive/RESP-9f5dd917-7a4f-4fb7-a7ce-613453e9ff79/raw_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/normalized_response.json",
-        "artifacts/cognitive/RESP-a0072bc3-8a7f-4d09-852f-75f02aec7957/raw_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/normalized_response.json",
-        "artifacts/cognitive/RESP-a4d39b13-f1da-4718-b3ba-ee812bda0369/raw_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/normalized_response.json",
-        "artifacts/cognitive/RESP-ad8898e2-c57e-4123-9396-68eefad6dbb2/raw_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/normalized_response.json",
-        "artifacts/cognitive/RESP-b59fac2e-5b70-42ac-9cf5-ed99c873df59/raw_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/normalized_response.json",
-        "artifacts/cognitive/RESP-b7b23191-d590-48e6-91c6-1b1fbaff984c/raw_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/normalized_response.json",
-        "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
-        "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
-        "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
-        "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/raw_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/normalized_response.json",
-        "artifacts/cognitive/RESP-e7c33f39-15d6-4928-a8f7-79c8a05d1546/raw_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/normalized_response.json",
-        "artifacts/cognitive/RESP-e83e6bb1-8dd9-4479-8fc6-563820cb3ea1/raw_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/normalized_response.json",
-        "artifacts/cognitive/RESP-ebfaa89d-8adf-43cd-b233-7ea69f99f359/raw_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/normalized_response.json",
-        "artifacts/cognitive/RESP-f39f3292-71c6-4260-928e-9404fd075f36/raw_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/normalized_response.json",
-        "artifacts/cognitive/RESP-f45bb1ee-1a2d-4d7e-8708-d02a600911d0/raw_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/normalized_response.json",
-        "artifacts/cognitive/RESP-fd54870d-e9cb-45f2-9883-991c78fb6dd7/raw_response.json",
-        "artifacts/intake/intake_context.json",
-        "artifacts/intake/intake_report.md",
-        "artifacts/intake/intake_snapshot.json",
-        "artifacts/intake/repository_inventory.json",
-        "artifacts/release/RELEASE_MANIFEST_v1.json",
-        "artifacts/release/repository_hash_snapshot.json",
-        "artifacts/verify/verification_report.md",
-        "artifacts/verify/verification_results.json"
+        "artifacts/decisions/module_flow_decision_gate.json",
+        "artifacts/decisions/module_flow_decision_gate.md"
       ],
       "coverage_status": "FULL"
     },
@@ -18839,7 +15519,9 @@
       "mapped_artifacts": [
         "artifacts/audit/audit_error.md",
         "artifacts/audit/audit_findings.json",
-        "artifacts/audit/audit_report.md"
+        "artifacts/audit/audit_report.md",
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -18860,11 +15542,15 @@
       "requirement_id": "DOC-10-CE-SEL::R001",
       "document": "docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -18897,6 +15583,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -18920,11 +15608,15 @@
       "requirement_id": "DOC-10-CE-SEL::R002",
       "document": "docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -18957,6 +15649,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -18980,11 +15674,15 @@
       "requirement_id": "DOC-10-CE-SEL::R003",
       "document": "docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -19017,6 +15715,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -19040,11 +15740,15 @@
       "requirement_id": "DOC-10-CE-SEL::R004",
       "document": "docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -19077,6 +15781,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -19100,11 +15806,15 @@
       "requirement_id": "DOC-10-CE-SEL::R005",
       "document": "docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -19137,6 +15847,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -19160,11 +15872,15 @@
       "requirement_id": "DOC-10-CE-SEL::R006",
       "document": "docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -19197,6 +15913,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -19220,11 +15938,15 @@
       "requirement_id": "DOC-10-CE-SEL::R007",
       "document": "docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -19257,6 +15979,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -19281,6 +16005,8 @@
       "document": "docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [
         "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE",
         "CODE::code/src/modules/auditEngine.js::FILE"
       ],
       "mapped_artifacts": [
@@ -19289,6 +16015,8 @@
         "artifacts/audit/audit_report.md",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -19321,6 +16049,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -19344,11 +16074,15 @@
       "requirement_id": "DOC-10-CE-SEL::R009",
       "document": "docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -19381,6 +16115,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -19404,11 +16140,15 @@
       "requirement_id": "DOC-10-CE-SEL::R010",
       "document": "docs/10_runtime/10_05_Cognitive_Engine_Selection_and_Routing_Policy.md",
       "mapped_code_units": [
-        "CODE::code/src/cognitive/cognitive_adapter.js::FILE"
+        "CODE::code/src/cognitive/cognitive_adapter.js::FILE",
+        "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
+        "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
       ],
       "mapped_artifacts": [
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/normalized_response.json",
         "artifacts/cognitive/RESP-19000307-c4a0-499e-a6bb-37c5d98bedc6/raw_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json",
+        "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/normalized_response.json",
         "artifacts/cognitive/RESP-210df6c8-2605-49fe-ae85-f29b5af192a9/raw_response.json",
         "artifacts/cognitive/RESP-31747711-f939-457f-a354-fac64cc415f6/normalized_response.json",
@@ -19441,6 +16181,8 @@
         "artifacts/cognitive/RESP-c6676a6a-c4bd-4dd2-8aac-e0bda7277c65/raw_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/normalized_response.json",
         "artifacts/cognitive/RESP-d627d160-3fdd-4cbe-80bc-677686bf5f99/raw_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/normalized_response.json",
+        "artifacts/cognitive/RESP-d6323289-5f9f-4eae-b64b-35565b146a8c/raw_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/normalized_response.json",
         "artifacts/cognitive/RESP-d787f59d-7b10-4ec2-9650-0851afc0c2cb/raw_response.json",
         "artifacts/cognitive/RESP-dabe070f-615c-4686-9b7f-51f746c90a77/normalized_response.json",
@@ -19470,6 +16212,8 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -19484,6 +16228,8 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -19498,6 +16244,8 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -19512,6 +16260,8 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
@@ -19535,7 +16285,8 @@
         "CODE::code/src/modules/gapEngine.js::FILE"
       ],
       "mapped_artifacts": [
-        "artifacts/verify/verification_results.json"
+        "artifacts/gap/gap_actions.json",
+        "artifacts/gap/gap_report.md"
       ],
       "coverage_status": "FULL"
     },
@@ -19549,15 +16300,14 @@
         "CODE::code/src/orchestrator/runner.js::runTaskByName"
       ],
       "mapped_artifacts": [
+        "artifacts/execute/execute_log.md",
+        "artifacts/execute/execute_plan.json",
         "artifacts/verify/verification_results.json"
       ],
       "coverage_status": "FULL"
     }
   ],
-  "orphan_code_units": [
-    "CODE::code/src/cognitive/cognitive_config_resolver.js::FILE",
-    "CODE::code/src/cognitive/drivers/openai_driver.js::FILE"
-  ],
+  "orphan_code_units": [],
   "orphan_requirements": [],
   "orphan_artifacts": [],
   "cognitive_trace": {
@@ -19565,26 +16315,26 @@
     "bound": true,
     "binding_type": "TRACE_COGNITIVE",
     "source": "cognitive_adapter",
-    "request_timestamp": "2026-04-04T18:18:51.659Z",
-    "response_id": "RESP-1b693a88-03cf-491f-be14-9a2e01e518c3",
+    "request_timestamp": "2026-04-04T18:29:21.856Z",
+    "response_id": "RESP-0cb02de7-42c6-4fea-8b8e-c1dd916e52b5",
     "storage_status": "PERSISTED",
     "artifact_paths": {
-      "raw_response": "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/raw_response.json",
-      "normalized_response": "artifacts/cognitive/RESP-1b693a88-03cf-491f-be14-9a2e01e518c3/normalized_response.json"
+      "raw_response": "artifacts/cognitive/RESP-0cb02de7-42c6-4fea-8b8e-c1dd916e52b5/raw_response.json",
+      "normalized_response": "artifacts/cognitive/RESP-0cb02de7-42c6-4fea-8b8e-c1dd916e52b5/normalized_response.json"
     },
     "response_status": "SUCCESS",
     "provider_metadata": {
       "provider": "OPENAI",
       "model": "gpt-4.1-mini",
-      "latency_ms": 3849
+      "latency_ms": 2579
     },
     "output": {
       "type": "text",
-      "content": "It looks like you shared some counts related to a project or dataset, specifically:\n\n- Requirements count: 579\n- Code units count: 23\n- Artifacts count: 61\n\nHow can I assist you with this information? Are you looking for analysis, report generation, or help with organizing or processing these items? Please provide more details or context."
+      "content": "It looks like you’ve provided some counts related to a project or dataset:  \n- Requirements count: 579  \n- Code units count: 23  \n- Artifacts count: 80  \n\nHow can I assist you with this information? Would you like me to help analyze, organize, generate reports, or do something else related to these numbers?"
     },
     "usage": {
       "prompt_tokens": 25,
-      "completion_tokens": 74
+      "completion_tokens": 71
     }
   }
 }
