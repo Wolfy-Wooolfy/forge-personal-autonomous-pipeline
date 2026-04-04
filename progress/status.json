@@ -1,11 +1,13 @@
 {
   "status_type": "LIVE",
-  "current_stage": "B",
+  "current_stage": "A",
   "overall_progress_percent": 91,
-  "stage_progress_percent": 25,
+  "stage_progress_percent": 0,
   "last_completed_artifact": "artifacts/tasks/TASK-055.execution.closure.md",
   "current_task": "TASK-067: ENFORCE FULL VISION RUNTIME",
   "issues": [],
-  "blocking_questions": [],
-  "next_step": "Begin Stage B documentation validation"
+  "blocking_questions": [
+    "Task blocked: TASK-067: ENFORCE FULL VISION RUNTIME"
+  ],
+  "next_step": ""
 }

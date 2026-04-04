@@ -2055,10 +2055,13 @@ Execution Closed
       status_patch: {
         current_stage: "B",
         current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
-        next_step: "Begin Stage B documentation validation",
+        next_step: "Create artifacts/tasks/TASK-067.stageB.documentation-validation.md",
         blocking_questions: [],
-        issues: []
-      }
+        issues: [
+          "TASK-067 is in Stage B but no Stage B task-bound artifact exists yet: artifacts/tasks/TASK-067.stageB.documentation-validation.md"
+        ]
+      },
+      blocked: true
     };
     const requiredArtifacts = [
       "artifacts/stage_A/task_plan.md",
