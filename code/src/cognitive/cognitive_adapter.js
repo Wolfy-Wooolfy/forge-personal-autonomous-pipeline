@@ -282,6 +282,18 @@ async function executeCognitive(request, handler) {
           }
         })
       : await Promise.resolve(handler(request));
+
+    if (
+      handlerResult &&
+      typeof handlerResult === "object" &&
+      typeof handlerResult.error_classification === "string" &&
+      handlerResult.error_classification.trim() !== ""
+    ) {
+      throw new Error(
+        `COGNITIVE_PROVIDER_FAILED: ${handlerResult.error_classification}`
+      );
+    }
+
     const latencyMs = Date.now() - startedAt;
 
     const rawResponse = {
