@@ -155,7 +155,10 @@ function normalizeSuccessResult(handlerResult, request, responseId, latencyMs) {
         typeof providerMetadata.model === "string" && providerMetadata.model.trim() !== ""
           ? providerMetadata.model
           : "NONE",
-      latency_ms: latencyMs
+      latency_ms:
+        typeof providerMetadata.latency_ms === "number" && !Number.isNaN(providerMetadata.latency_ms)
+          ? providerMetadata.latency_ms
+          : latencyMs
     },
     output: {
       type: inferOutputType(outputContent),
@@ -176,12 +179,29 @@ function normalizeSuccessResult(handlerResult, request, responseId, latencyMs) {
 }
 
 function normalizeFailureResult(error, request, responseId, latencyMs) {
+  const resolvedConfig =
+    request &&
+    request._resolved_cognitive_config &&
+    typeof request._resolved_cognitive_config === "object"
+      ? request._resolved_cognitive_config
+      : null;
+
   return {
     response_id: responseId,
     request_id: request.request_id,
     provider_metadata: {
-      provider: "NONE",
-      model: "NONE",
+      provider:
+        resolvedConfig &&
+        typeof resolvedConfig.provider_id === "string" &&
+        resolvedConfig.provider_id.trim() !== ""
+          ? resolvedConfig.provider_id.trim().toUpperCase()
+          : "NONE",
+      model:
+        resolvedConfig &&
+        typeof resolvedConfig.model_id === "string" &&
+        resolvedConfig.model_id.trim() !== ""
+          ? resolvedConfig.model_id.trim()
+          : "NONE",
       latency_ms: latencyMs
     },
     output: {
