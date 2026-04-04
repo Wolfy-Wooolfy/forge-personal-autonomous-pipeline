@@ -1,11 +1,13 @@
 {
   "status_type": "LIVE",
-  "current_stage": "D",
-  "overall_progress_percent": 100,
-  "stage_progress_percent": 100,
-  "last_completed_artifact": "artifacts/tasks/TASK-067.execution.closure.md",
-  "current_task": "",
+  "current_stage": "A",
+  "overall_progress_percent": 0,
+  "stage_progress_percent": 0,
+  "last_completed_artifact": "",
+  "current_task": "TASK-047: MODULE FLOW — Intake",
   "issues": [],
-  "blocking_questions": [],
+  "blocking_questions": [
+    "STATUS SCHEMA VIOLATION: field count mismatch"
+  ],
   "next_step": ""
 }

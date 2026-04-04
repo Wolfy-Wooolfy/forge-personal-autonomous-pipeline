@@ -1,0 +1,42 @@
+{
+  "status_type": "FORGE_BUILD_STATE",
+  "current_stage": null,
+  "current_task": "TASK-047",
+  "last_completed_artifact": "",
+  "closed_tasks": [],
+  "open_tasks": [
+    "TASK-047",
+    "TASK-048",
+    "TASK-050",
+    "TASK-051",
+    "TASK-066",
+    "TASK-052",
+    "TASK-053",
+    "TASK-054",
+    "TASK-061",
+    "TASK-055",
+    "TASK-067"
+  ],
+  "pending_gaps": [
+    "TASK-047: MISSING_STAGE_ARTIFACTS_AND_CLOSURE",
+    "TASK-048: MISSING_STAGE_ARTIFACTS_AND_CLOSURE",
+    "TASK-050: MISSING_STAGE_ARTIFACTS_AND_CLOSURE",
+    "TASK-051: MISSING_STAGE_ARTIFACTS_AND_CLOSURE",
+    "TASK-066: MISSING_STAGE_ARTIFACTS_AND_CLOSURE",
+    "TASK-052: MISSING_STAGE_ARTIFACTS_AND_CLOSURE",
+    "TASK-053: MISSING_STAGE_ARTIFACTS_AND_CLOSURE",
+    "TASK-054: MISSING_STAGE_ARTIFACTS_AND_CLOSURE",
+    "TASK-061: MISSING_STAGE_ARTIFACTS_AND_CLOSURE",
+    "TASK-055: MISSING_STAGE_ARTIFACTS_AND_CLOSURE",
+    "TASK-067: MISSING_STAGE_ARTIFACTS_AND_CLOSURE"
+  ],
+  "build_progress_percent": 0,
+  "execution_integrity": "CONSISTENT",
+  "next_allowed_step": "artifacts/tasks/TASK-047.stageA.*",
+  "derived_from": {
+    "registry": "code/src/execution/task_registry.js",
+    "task_artifacts_directory": "artifacts/tasks",
+    "closure_artifacts": []
+  },
+  "derived_at": "2026-04-04T14:20:52.432Z"
+}
