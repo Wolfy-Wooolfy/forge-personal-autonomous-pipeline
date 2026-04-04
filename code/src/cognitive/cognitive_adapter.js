@@ -301,6 +301,55 @@ async function executeCognitive(request, handler) {
 
   request._resolved_cognitive_config = cognitiveConfig;
 
+  if (cognitiveConfig.enabled === false) {
+    try {
+      const handlerResult = await Promise.resolve(handler(request));
+      const latencyMs = Date.now() - startedAt;
+
+      const rawResponse = {
+        response_id: responseId,
+        request_id: request.request_id,
+        status: "SUCCESS",
+        payload: handlerResult
+      };
+
+      const normalizedResponse = normalizeSuccessResult(
+        handlerResult,
+        request,
+        responseId,
+        latencyMs
+      );
+
+      validateNormalizedResponse(normalizedResponse, request);
+      storeArtifacts(responseId, rawResponse, normalizedResponse);
+
+      return normalizedResponse;
+    } catch (error) {
+      const latencyMs = Date.now() - startedAt;
+
+      const rawResponse = {
+        response_id: responseId,
+        request_id: request.request_id,
+        status: "FAILED",
+        payload: {
+          error: error.message
+        }
+      };
+
+      const normalizedResponse = normalizeFailureResult(
+        error,
+        request,
+        responseId,
+        latencyMs
+      );
+
+      validateNormalizedResponse(normalizedResponse, request);
+      storeArtifacts(responseId, rawResponse, normalizedResponse);
+
+      return normalizedResponse;
+    }
+  }
+
   try {
     const handlerResult = cognitiveConfig.enabled === true &&
       String(cognitiveConfig.provider_id || "").toUpperCase() === "OPENAI"
