@@ -2088,71 +2088,65 @@ Execution Closed
         blocked: true
       };
     }
-    const requiredArtifacts = [
-      "artifacts/stage_A/task_plan.md",
-      "artifacts/stage_A/validated_assumptions.md",
-      "artifacts/stage_A/idea_evaluation.md",
-      "artifacts/stage_A/idea_final_spec.md",
-      "artifacts/stage_A/idea_approval_record.md",
+    const stageCClosureRel = "artifacts/tasks/TASK-067.stageC.closure.md";
+    const stageCClosureAbs = path.resolve(__dirname, "../../..", stageCClosureRel);
 
-      "artifacts/stage_B",
-      "artifacts/stage_C",
-
-      "artifacts/stage_D/final_acceptance_report.json"
-    ];
-
-    const missing = requiredArtifacts.filter((rel) => {
-      const abs = path.resolve(__dirname, "../../..", rel);
-      return !fs.existsSync(abs);
-    });
+    if (!fs.existsSync(stageCClosureAbs)) {
+      return {
+        stage_progress_percent: 75,
+        clear_current_task: false,
+        status_patch: {
+          current_stage: "C",
+          current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
+          next_step: `Create ${stageCClosureRel}`,
+          blocking_questions: [],
+          issues: [
+            `Stage B is closed but Stage C is not formally closed yet: ${stageCClosureRel}`
+          ]
+        },
+        blocked: true
+      };
+    }
 
     const finalAcceptanceRel = "artifacts/stage_D/final_acceptance_report.json";
     const finalAcceptanceAbs = path.resolve(__dirname, "../../..", finalAcceptanceRel);
 
-    let acceptanceResult = "";
-
-    if (missing.length === 0) {
-      try {
-        const acceptance = JSON.parse(fs.readFileSync(finalAcceptanceAbs, "utf-8"));
-        acceptanceResult = String(acceptance.final_result || acceptance.result || "").trim().toUpperCase();
-      } catch (error) {
-        return {
-          stage_progress_percent: 10,
-          clear_current_task: false,
-          status_patch: {
-            current_stage: "A",
-            current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
-            next_step: "Review decision prompt and respond",
-            blocking_questions: [
-              "Review artifacts/stage_A/decision_prompt.md and provide your decision"
-            ],
-            issues: missing.map((rel) => `Missing required vision runtime artifact: ${rel}`),
-            decision_artifact: "artifacts/stage_A/decision_prompt.md"
-          },
-          blocked: true
-        };
-      }
-    }
-
-    if (acceptanceResult === "ACCEPTED") {
-      const releaseGateRel = "artifacts/stage_D/release_gate_closure.md";
-      const releaseGateAbs = path.resolve(__dirname, "../../..", releaseGateRel);
-
-      if (!fs.existsSync(releaseGateAbs)) {
-        missing.push(releaseGateRel);
-      }
-    }
-
-    if (missing.length > 0) {
+    if (!fs.existsSync(finalAcceptanceAbs)) {
       return {
-        stage_progress_percent: 10,
+        stage_progress_percent: 90,
         clear_current_task: false,
         status_patch: {
-          current_stage: "A",
+          current_stage: "D",
           current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
-          next_step: "TASK-067 remains OPEN until required Stage D acceptance artifacts exist",
+          next_step: `Create ${finalAcceptanceRel}`,
           blocking_questions: [],
-          issues: missing.map((rel) => `Missing required vision runtime artifact: ${rel}`)
+          issues: [
+            `Stage C is closed but Stage D final acceptance artifact is missing: ${finalAcceptanceRel}`
+          ]
+        },
+        blocked: true
+      };
+    }
+
+    let acceptanceResult = "";
+
+    try {
+      const acceptance = JSON.parse(fs.readFileSync(finalAcceptanceAbs, "utf-8"));
+      acceptanceResult = String(
+        acceptance.final_result || acceptance.result || ""
+      ).trim().toUpperCase();
+    } catch (error) {
+      return {
+        stage_progress_percent: 90,
+        clear_current_task: false,
+        status_patch: {
+          current_stage: "D",
+          current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
+          next_step: `Fix JSON format in ${finalAcceptanceRel}`,
+          blocking_questions: [],
+          issues: [
+            `Stage D final acceptance artifact is unreadable or invalid JSON: ${finalAcceptanceRel}`
+          ]
         },
         blocked: true
       };
@@ -2160,10 +2154,10 @@ Execution Closed
 
     if (acceptanceResult !== "ACCEPTED") {
       return {
-        stage_progress_percent: 10,
+        stage_progress_percent: 90,
         clear_current_task: false,
         status_patch: {
-          current_stage: "A",
+          current_stage: "D",
           current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
           next_step: "TASK-067 remains OPEN until Stage D final acceptance result becomes ACCEPTED",
           blocking_questions: [],
@@ -2175,6 +2169,26 @@ Execution Closed
       };
     }
 
+    const releaseGateRel = "artifacts/stage_D/release_gate_closure.md";
+    const releaseGateAbs = path.resolve(__dirname, "../../..", releaseGateRel);
+
+    if (!fs.existsSync(releaseGateAbs)) {
+      return {
+        stage_progress_percent: 95,
+        clear_current_task: false,
+        status_patch: {
+          current_stage: "D",
+          current_task: "TASK-067: ENFORCE FULL VISION RUNTIME",
+          next_step: `Create ${releaseGateRel}`,
+          blocking_questions: [],
+          issues: [
+            `Stage D final acceptance is ACCEPTED but release gate closure is missing: ${releaseGateRel}`
+          ]
+        },
+        blocked: true
+      };
+    }
+    
     const relTaskClosure = "artifacts/tasks/TASK-067.execution.closure.md";
     const taskClosureAbs = path.resolve(__dirname, "../../..", relTaskClosure);
 
