@@ -70,31 +70,78 @@ function inferOutputType(content) {
 }
 
 function normalizeSuccessResult(handlerResult, request, responseId, latencyMs) {
-  const providerMetadata =
+  const isDriverResult =
     handlerResult &&
     typeof handlerResult === "object" &&
     !Array.isArray(handlerResult) &&
-    handlerResult.provider_metadata &&
-    typeof handlerResult.provider_metadata === "object"
-      ? handlerResult.provider_metadata
-      : {};
+    (
+      Object.prototype.hasOwnProperty.call(handlerResult, "raw_provider_response") ||
+      Object.prototype.hasOwnProperty.call(handlerResult, "token_usage") ||
+      Object.prototype.hasOwnProperty.call(handlerResult, "provider_latency_ms")
+    );
 
-  const usage =
-    handlerResult &&
-    typeof handlerResult === "object" &&
-    !Array.isArray(handlerResult) &&
-    handlerResult.usage &&
-    typeof handlerResult.usage === "object"
-      ? handlerResult.usage
-      : {};
+  const providerMetadata = isDriverResult
+    ? {
+        provider:
+          request &&
+          request._resolved_cognitive_config &&
+          typeof request._resolved_cognitive_config.provider_id === "string" &&
+          request._resolved_cognitive_config.provider_id.trim() !== ""
+            ? request._resolved_cognitive_config.provider_id.trim().toUpperCase()
+            : "NONE",
+        model:
+          request &&
+          request._resolved_cognitive_config &&
+          typeof request._resolved_cognitive_config.model_id === "string" &&
+          request._resolved_cognitive_config.model_id.trim() !== ""
+            ? request._resolved_cognitive_config.model_id.trim()
+            : "NONE",
+        latency_ms:
+          typeof handlerResult.provider_latency_ms === "number" &&
+          !Number.isNaN(handlerResult.provider_latency_ms)
+            ? handlerResult.provider_latency_ms
+            : latencyMs
+      }
+    : handlerResult &&
+      typeof handlerResult === "object" &&
+      !Array.isArray(handlerResult) &&
+      handlerResult.provider_metadata &&
+      typeof handlerResult.provider_metadata === "object"
+        ? handlerResult.provider_metadata
+        : {};
+
+  const usage = isDriverResult
+    ? {
+        prompt_tokens:
+          handlerResult.token_usage &&
+          typeof handlerResult.token_usage.input_tokens === "number" &&
+          !Number.isNaN(handlerResult.token_usage.input_tokens)
+            ? handlerResult.token_usage.input_tokens
+            : 0,
+        completion_tokens:
+          handlerResult.token_usage &&
+          typeof handlerResult.token_usage.output_tokens === "number" &&
+          !Number.isNaN(handlerResult.token_usage.output_tokens)
+            ? handlerResult.token_usage.output_tokens
+            : 0
+      }
+    : handlerResult &&
+      typeof handlerResult === "object" &&
+      !Array.isArray(handlerResult) &&
+      handlerResult.usage &&
+      typeof handlerResult.usage === "object"
+        ? handlerResult.usage
+        : {};
 
   const outputContent =
-    handlerResult &&
-    typeof handlerResult === "object" &&
-    !Array.isArray(handlerResult) &&
-    Object.prototype.hasOwnProperty.call(handlerResult, "output")
+    isDriverResult
       ? handlerResult.output
-      : handlerResult;
+      : handlerResult &&
+        typeof handlerResult === "object" &&
+        !Array.isArray(handlerResult) &&
+        Object.prototype.hasOwnProperty.call(handlerResult, "output")
+          ? handlerResult.output
+          : handlerResult;
 
   return {
     response_id: responseId,
@@ -251,6 +298,8 @@ async function executeCognitive(request, handler) {
         ? request.cognitive_engine_model_id.trim()
         : ""
   });
+
+  request._resolved_cognitive_config = cognitiveConfig;
 
   try {
     const handlerResult = cognitiveConfig.enabled === true &&
