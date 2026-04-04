@@ -15,6 +15,26 @@ function resolveTasksDir(context) {
   return path.join(BASE_TASKS_DIR, runId);
 }
 
+function resolveTaskContractFiles(taskPrefix, context) {
+  const scopedDir = resolveTasksDir(context);
+  const scopedFiles = fs.existsSync(scopedDir) ? fs.readdirSync(scopedDir) : [];
+  const scopedMatches = scopedFiles.filter((file) => file.startsWith(taskPrefix));
+
+  if (scopedMatches.length > 0) {
+    return {
+      dir: scopedDir,
+      files: scopedFiles
+    };
+  }
+
+  const globalFiles = fs.existsSync(BASE_TASKS_DIR) ? fs.readdirSync(BASE_TASKS_DIR) : [];
+
+  return {
+    dir: BASE_TASKS_DIR,
+    files: globalFiles
+  };
+}
+
 const ROOT = path.resolve(__dirname, "../../..");
 const RELEASE_MANIFEST_PATH = path.join(ROOT, "artifacts", "release", "RELEASE_MANIFEST_v1.json");
 const REPOSITORY_HASH_SNAPSHOT_PATH = path.join(ROOT, "artifacts", "release", "repository_hash_snapshot.json");
@@ -157,9 +177,8 @@ function enforceTaskContract(taskName, context) {
   }
 
   const taskPrefix = taskName.split(":")[0];
-  const TASKS_DIR = resolveTasksDir(context);
-  const files = fs.existsSync(TASKS_DIR) ? fs.readdirSync(TASKS_DIR) : [];
-  const matchingFile = files.find(file => file.startsWith(taskPrefix));
+  const contractSource = resolveTaskContractFiles(taskPrefix, context);
+  const matchingFile = contractSource.files.find((file) => file.startsWith(taskPrefix));
 
   if (!matchingFile) {
     throw new Error(`No contract artifact found for task: ${taskName}`);
@@ -173,8 +192,8 @@ function expectedClosureArtifact(taskName) {
 
 function findExistingClosureFile(taskName, context) {
   const taskPrefix = taskName.split(":")[0];
-  const TASKS_DIR = resolveTasksDir(context);
-  const closurePath = path.join(TASKS_DIR, `${taskPrefix}.execution.closure.md`);
+  const scopedTasksDir = resolveTasksDir(context);
+  const closurePath = path.join(scopedTasksDir, `${taskPrefix}.execution.closure.md`);
 
   if (!fs.existsSync(closurePath)) {
     return null;
