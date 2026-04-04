@@ -1,8 +1,8 @@
 {
-  "run_id": "RUN-1775322659477",
+  "run_id": "RUN-1775323477124",
   "run_mode": "BLOCKED",
-  "started_at": "2026-04-04T17:10:59.477Z",
-  "last_updated_at": "2026-04-04T17:10:59.488Z",
+  "started_at": "2026-04-04T17:24:37.124Z",
+  "last_updated_at": "2026-04-04T17:24:37.137Z",
   "status": "BLOCKED",
   "blocked": true,
   "blocking_reason": "[AUDIT BLOCKED] TRACE blocked because artifacts/audit/audit_findings.json reports blocked=true",

@@ -1,5 +1,5 @@
 {
-  "code/src/orchestrator/stage_transitions.js": "c677d6f55cb6cd70c5812ce90b18227094f0ad13328f66ec7c3b33aad8ee74d1",
+  "code/src/orchestrator/stage_transitions.js": "3f991fb7826c413e3c3ec76a5aef19e31aac98a4198ae8fc77a22fe25847b1a9",
   "code/src/orchestrator/status_writer.js": "5cdf433025879abf5dd629b1132a5911f8de8ef73cd96cc2fcabd5f24b7bfe6c",
   "code/src/orchestrator/runner.js": "2058c1e1db037a7d4efb905cf38559f18d5e212ffab2aee45b5f2945017389f1",
   "bin/halo-run.js": "569f26e60ca4fde96ee32fea94224699b644f4a700882d37eec733d83bd750b2",
