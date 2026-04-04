@@ -243,16 +243,26 @@ function deriveStageFromTask(taskId, allFiles) {
     return null;
   }
 
+  const hasStageAClosure = allFiles.includes(`${taskId}.stageA.closure.md`);
+  const hasStageBClosure = allFiles.includes(`${taskId}.stageB.closure.md`);
+  const hasStageCClosure = allFiles.includes(`${taskId}.stageC.closure.md`);
+  const hasStageDClosure = allFiles.includes(`${taskId}.stageD.closure.md`);
+
+  if (hasStageDClosure) return "D";
+  if (hasStageCClosure) return "D";
+  if (hasStageBClosure) return "C";
+  if (hasStageAClosure) return "B";
+
   const artifactFile = findStageArtifactForTask(taskId, allFiles);
 
   if (!artifactFile) {
     return null;
   }
 
-  if (artifactFile.includes(".stageA.")) return "A";
-  if (artifactFile.includes(".stageB.")) return "B";
-  if (artifactFile.includes(".stageC.")) return "C";
   if (artifactFile.includes(".stageD.")) return "D";
+  if (artifactFile.includes(".stageC.")) return "C";
+  if (artifactFile.includes(".stageB.")) return "B";
+  if (artifactFile.includes(".stageA.")) return "A";
 
   return null;
 }
