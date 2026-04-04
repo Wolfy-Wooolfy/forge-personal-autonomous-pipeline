@@ -3,24 +3,24 @@
 - Run Mode: BLOCKED
 - Status: BLOCKED
 - Entry Type: BLOCKED
-- Blocking Reason: Verification failed — review artifacts/verify/verification_report.md
-- Current Module: VERIFY
-- Next Task: TASK-061: MODULE FLOW — Verify
+- Blocking Reason: Closed task found after open task: TASK-052
+- Current Module: TRACE
+- Next Task: TASK-050: MODULE FLOW — Trace
 - Final Outcome: BLOCKED
 
 ## Completed Modules
 
 - INTAKE
 - AUDIT
+
+## Pending Modules
+
 - TRACE
 - GAP
 - DESIGN_EXPLORATION
 - DECISION_GATE
 - BACKFILL
 - EXECUTE
-
-## Pending Modules
-
 - VERIFY
 - CLOSURE
 - VISION_COMPLIANCE

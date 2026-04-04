@@ -1,28 +1,28 @@
 {
-  "run_id": "RUN-1775326881042",
+  "run_id": "RUN-1775327178516",
   "run_mode": "BLOCKED",
-  "started_at": "2026-04-04T18:21:21.042Z",
-  "last_updated_at": "2026-04-04T18:21:21.109Z",
+  "started_at": "2026-04-04T18:26:18.517Z",
+  "last_updated_at": "2026-04-04T18:26:18.527Z",
   "status": "BLOCKED",
   "blocked": true,
-  "blocking_reason": "Verification failed — review artifacts/verify/verification_report.md",
-  "reason": "Verification failed — review artifacts/verify/verification_report.md",
+  "blocking_reason": "Closed task found after open task: TASK-052",
+  "reason": "Closed task found after open task: TASK-052",
   "pipeline_contract_violation": null,
   "entry_type": "BLOCKED",
-  "next_task": "TASK-061: MODULE FLOW — Verify",
-  "next_module": "VERIFY",
-  "current_module": "VERIFY",
+  "next_task": "TASK-050: MODULE FLOW — Trace",
+  "next_module": "TRACE",
+  "current_module": "TRACE",
   "completed_modules": [
     "INTAKE",
-    "AUDIT",
+    "AUDIT"
+  ],
+  "pending_modules": [
     "TRACE",
     "GAP",
     "DESIGN_EXPLORATION",
     "DECISION_GATE",
     "BACKFILL",
-    "EXECUTE"
-  ],
-  "pending_modules": [
+    "EXECUTE",
     "VERIFY",
     "CLOSURE",
     "VISION_COMPLIANCE"

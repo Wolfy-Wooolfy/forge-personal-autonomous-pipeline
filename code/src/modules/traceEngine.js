@@ -523,10 +523,24 @@ function mapDeterministically(requirements, codeUnits, artifacts, intakeContext)
       document.includes("adapter") ||
       title.includes("provider-agnostic") ||
       section.includes("provider-agnostic") ||
-      document.includes("provider-agnostic")
+      document.includes("provider-agnostic") ||
+      title.includes("driver") ||
+      section.includes("driver") ||
+      document.includes("driver") ||
+      title.includes("routing") ||
+      section.includes("routing") ||
+      document.includes("routing") ||
+      title.includes("selection") ||
+      section.includes("selection") ||
+      document.includes("selection") ||
+      title.includes("config") ||
+      section.includes("config") ||
+      document.includes("config")
     ) {
       for (const u of codeUnits) {
         if (u.file_path.includes("code/src/cognitive/cognitive_adapter.js")) mapped_code_units.push(u.unit_id);
+        if (u.file_path.includes("code/src/cognitive/cognitive_config_resolver.js")) mapped_code_units.push(u.unit_id);
+        if (u.file_path.includes("code/src/cognitive/drivers/openai_driver.js")) mapped_code_units.push(u.unit_id);
       }
     }
 
