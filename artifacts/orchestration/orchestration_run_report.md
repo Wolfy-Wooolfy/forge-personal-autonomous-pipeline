@@ -3,7 +3,7 @@
 - Run Mode: BLOCKED
 - Status: BLOCKED
 - Entry Type: BLOCKED
-- Blocking Reason: Audit is BLOCKED — see artifacts/audit/audit_error.md
+- Blocking Reason: [AUDIT BLOCKED] TRACE blocked because artifacts/audit/audit_findings.json reports blocked=true
 - Current Module: TRACE
 - Next Task: TASK-050: MODULE FLOW — Trace
 - Final Outcome: BLOCKED
