@@ -833,59 +833,18 @@ function writeTraceError(rootAbs, msg) {
 }
 
 async function runCognitiveTraceAnalysis(context) {
-  const hasAmbiguity =
-    !!(
-      context &&
-      (
-        (Array.isArray(context.orphan_code_units) && context.orphan_code_units.length > 0) ||
-        (Array.isArray(context.orphan_requirements) && context.orphan_requirements.length > 0) ||
-        (Array.isArray(context.orphan_artifacts) && context.orphan_artifacts.length > 0)
-      )
-    );
-
-  if (!hasAmbiguity) {
-    return {
-      invoked: false,
-      request_timestamp: null,
-      response_id: null,
-      artifact_paths: {
-        raw_response: null,
-        normalized_response: null
-      },
-      normalized_response: null
-    };
-  }
-
   const requestTimestamp = new Date().toISOString();
 
   const request = {
     request_id: `TRACE-${Date.now()}`,
     timestamp: requestTimestamp,
     task_context: {
-      task_id: "TASK-068",
+      task_id: "TASK-050",
       module: "TRACE"
     },
     input: {
       type: "structured",
-      content: {
-        invocation_reason: "AMBIGUOUS_TRACE_MAPPING",
-        requirement_fragment: null,
-        candidate_code_units: Array.isArray(context.orphan_code_units) ? context.orphan_code_units : [],
-        candidate_artifact_references: Array.isArray(context.orphan_artifacts) ? context.orphan_artifacts : [],
-        trace_context: {
-          orphan_code_units: Array.isArray(context.orphan_code_units) ? context.orphan_code_units : [],
-          orphan_requirements: Array.isArray(context.orphan_requirements) ? context.orphan_requirements : [],
-          orphan_artifacts: Array.isArray(context.orphan_artifacts) ? context.orphan_artifacts : [],
-          total_requirements: context.requirements_count,
-          total_code_units: context.code_units_count,
-          total_artifacts: context.artifacts_count
-        },
-        constraint_block: {
-          no_authority: true,
-          suggestion_only: true,
-          ranked_candidates_required: true
-        }
-      }
+      content: context
     },
     constraints: {
       deterministic: true,
@@ -896,7 +855,8 @@ async function runCognitiveTraceAnalysis(context) {
 
   const normalizedResponse = await executeCognitive(request, () => {
     return {
-      candidate_mappings: []
+      note: "Cognitive trace placeholder",
+      coverage_hint: []
     };
   });
 
@@ -917,7 +877,6 @@ async function runCognitiveTraceAnalysis(context) {
     : null;
 
   return {
-    invoked: true,
     request_timestamp: requestTimestamp,
     response_id: responseId,
     artifact_paths: {
@@ -1053,10 +1012,7 @@ async function runTrace(contextOrStatus) {
   const cognitiveResult = await runCognitiveTraceAnalysis({
     requirements_count: requirements.length,
     code_units_count: codeUnits.length,
-    artifacts_count: artifacts.length,
-    orphan_code_units: mapped.orphan_code_units,
-    orphan_requirements: mapped.orphan_requirements,
-    orphan_artifacts: mapped.orphan_artifacts
+    artifacts_count: artifacts.length
   });
 
   const normalizedCognitiveResponse =
