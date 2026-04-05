@@ -1,20 +1,22 @@
 {
-  "run_id": "RUN-1775414088850",
-  "run_mode": "COMPLETE",
-  "started_at": "2026-04-05T18:34:48.850Z",
-  "last_updated_at": "2026-04-05T18:34:48.866Z",
-  "status": "COMPLETE",
-  "blocked": false,
-  "blocking_reason": "",
-  "reason": "PIPELINE COMPLETE",
+  "run_id": "RUN-1775414408015",
+  "run_mode": "BLOCKED",
+  "started_at": "2026-04-05T18:40:08.015Z",
+  "last_updated_at": "2026-04-05T18:40:09.946Z",
+  "status": "BLOCKED",
+  "blocked": true,
+  "blocking_reason": "COGNITIVE_CONFIG_BLOCKED: missing required environment variable COGNITIVE_ENGINE_ENABLED",
+  "reason": "COGNITIVE_CONFIG_BLOCKED: missing required environment variable COGNITIVE_ENGINE_ENABLED",
   "pipeline_contract_violation": null,
-  "entry_type": "COMPLETE",
-  "next_task": null,
-  "next_module": null,
-  "current_module": null,
+  "entry_type": "BLOCKED",
+  "next_task": "TASK-050: MODULE FLOW — Trace",
+  "next_module": "TRACE",
+  "current_module": "TRACE",
   "completed_modules": [
     "INTAKE",
-    "AUDIT",
+    "AUDIT"
+  ],
+  "pending_modules": [
     "TRACE",
     "GAP",
     "DESIGN_EXPLORATION",
@@ -25,6 +27,5 @@
     "CLOSURE",
     "VISION_COMPLIANCE"
   ],
-  "pending_modules": [],
-  "final_outcome": "COMPLETE"
+  "final_outcome": "BLOCKED"
 }
