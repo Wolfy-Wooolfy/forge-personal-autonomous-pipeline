@@ -478,16 +478,6 @@ function storeArtifacts(request, responseId, rawResponse, normalizedResponse, st
   writeJson(path.join(metadataDir, `${taskId}.json`), metadataArtifact);
 }
 
-function storeArtifacts(responseId, rawResponse, normalizedResponse) {
-  const rootDir = path.resolve(__dirname, "../../..");
-  const baseDir = path.join(rootDir, "artifacts", "cognitive", responseId);
-
-  fs.mkdirSync(baseDir, { recursive: true });
-
-  writeJson(path.join(baseDir, "raw_response.json"), rawResponse);
-  writeJson(path.join(baseDir, "normalized_response.json"), normalizedResponse);
-}
-
 async function executeCognitive(request, handler) {
   validateRequest(request);
 
