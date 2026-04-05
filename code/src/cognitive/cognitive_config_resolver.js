@@ -1,3 +1,24 @@
+function applyDefaultCognitiveEnv() {
+  if (!process.env.COGNITIVE_ENGINE_ENABLED) {
+    process.env.COGNITIVE_ENGINE_ENABLED = "true";
+  }
+
+  if (!process.env.COGNITIVE_ENGINE_MODE && !process.env.COGNITIVE_ENGINE_SELECTION_MODE) {
+    process.env.COGNITIVE_ENGINE_MODE = "MANUAL";
+  }
+
+  if (!process.env.COGNITIVE_ENGINE_SCOPE) {
+    process.env.COGNITIVE_ENGINE_SCOPE = "SYSTEM";
+  }
+
+  if (!process.env.COGNITIVE_ENGINE_PROVIDER) {
+    process.env.COGNITIVE_ENGINE_PROVIDER = "OPENAI";
+  }
+
+  if (!process.env.COGNITIVE_ENGINE_MODEL_ID) {
+    process.env.COGNITIVE_ENGINE_MODEL_ID = "gpt-4.1-mini";
+  }
+}
 function readRequiredEnv(name) {
   const value = process.env[name];
   if (typeof value !== "string" || value.trim() === "") {
@@ -127,6 +148,7 @@ function resolveAutoConfig(taskContext) {
 }
 
 function resolveCognitiveConfig(taskContext = {}) {
+  applyDefaultCognitiveEnv();
   const enabledValue = requireBooleanString("COGNITIVE_ENGINE_ENABLED");
 
   if (enabledValue === "false") {
