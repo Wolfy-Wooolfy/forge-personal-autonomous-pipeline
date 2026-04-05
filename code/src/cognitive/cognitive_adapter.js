@@ -270,6 +270,214 @@ function writeJson(filePath, data) {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 }
 
+function sha256(value) {
+  return crypto.createHash("sha256").update(String(value || ""), "utf8").digest("hex");
+}
+
+function sanitizeArtifactSegment(value, fallback) {
+  const normalized =
+    typeof value === "string" && value.trim() !== ""
+      ? value.trim().replace(/[^A-Za-z0-9._-]/g, "_")
+      : "";
+
+  return normalized !== "" ? normalized : fallback;
+}
+
+function buildPromptText(request) {
+  if (request.input.type === "text") {
+    return String(request.input.content || "");
+  }
+
+  return JSON.stringify(request.input.content);
+}
+
+function buildLlmMetadata(request, rawResponse, normalizedResponse, startedAtIso, completedAtIso) {
+  const resolvedConfig =
+    request &&
+    request._resolved_cognitive_config &&
+    typeof request._resolved_cognitive_config === "object"
+      ? request._resolved_cognitive_config
+      : {};
+
+  const taskId = sanitizeArtifactSegment(
+    request &&
+      request.task_context &&
+      typeof request.task_context.task_id === "string"
+      ? request.task_context.task_id
+      : "",
+    "TASK-UNKNOWN"
+  );
+
+  const attemptNumber =
+    request &&
+    Number.isInteger(request.attempt_number) &&
+    request.attempt_number > 0
+      ? request.attempt_number
+      : 1;
+
+  const promptText = buildPromptText(request);
+
+  const templateId =
+    typeof request.template_id === "string" && request.template_id.trim() !== ""
+      ? request.template_id.trim()
+      : "DIRECT_INPUT";
+
+  const templateVersion =
+    typeof request.template_version === "string" && request.template_version.trim() !== ""
+      ? request.template_version.trim()
+      : "v1";
+
+  const templateHash =
+    typeof request.template_hash === "string" && request.template_hash.trim() !== ""
+      ? request.template_hash.trim()
+      : sha256(promptText);
+
+  return {
+    task_id: taskId,
+    request_id: request.request_id,
+    response_id: normalizedResponse.response_id,
+    module:
+      request &&
+      request.task_context &&
+      typeof request.task_context.module === "string"
+        ? request.task_context.module
+        : "",
+    task_category:
+      request &&
+      request.task_context &&
+      typeof request.task_context.task_category === "string" &&
+      request.task_context.task_category.trim() !== ""
+        ? request.task_context.task_category.trim()
+        : "ANALYZER",
+    status: normalizedResponse.status,
+    started_at: startedAtIso,
+    completed_at: completedAtIso,
+    attempt_count: attemptNumber,
+    attempt_number: attemptNumber,
+    cognitive_engine_provider:
+      typeof resolvedConfig.provider_id === "string" && resolvedConfig.provider_id.trim() !== ""
+        ? resolvedConfig.provider_id.trim().toUpperCase()
+        : "NONE",
+    cognitive_engine_model_id:
+      typeof resolvedConfig.model_id === "string" && resolvedConfig.model_id.trim() !== ""
+        ? resolvedConfig.model_id.trim()
+        : "NONE",
+    provider:
+      normalizedResponse &&
+      normalizedResponse.provider_metadata &&
+      typeof normalizedResponse.provider_metadata.provider === "string"
+        ? normalizedResponse.provider_metadata.provider
+        : "NONE",
+    model:
+      normalizedResponse &&
+      normalizedResponse.provider_metadata &&
+      typeof normalizedResponse.provider_metadata.model === "string"
+        ? normalizedResponse.provider_metadata.model
+        : "NONE",
+    classification:
+      normalizedResponse.status === "SUCCESS" ? "SUCCESS" : "FAILED",
+    template_id: templateId,
+    template_version: templateVersion,
+    template_hash: templateHash,
+    request_artifact: `artifacts/llm/requests/${taskId}.${attemptNumber}.json`,
+    response_artifact: `artifacts/llm/responses/${taskId}.${attemptNumber}.json`,
+    legacy_cognitive_artifact_dir: `artifacts/cognitive/${rawResponse.response_id}`
+  };
+}
+
+function storeArtifacts(request, responseId, rawResponse, normalizedResponse, startedAtIso) {
+  const rootDir = path.resolve(__dirname, "../../..");
+
+  const legacyBaseDir = path.join(rootDir, "artifacts", "cognitive", responseId);
+  fs.mkdirSync(legacyBaseDir, { recursive: true });
+  writeJson(path.join(legacyBaseDir, "raw_response.json"), rawResponse);
+  writeJson(path.join(legacyBaseDir, "normalized_response.json"), normalizedResponse);
+
+  const taskId = sanitizeArtifactSegment(
+    request &&
+      request.task_context &&
+      typeof request.task_context.task_id === "string"
+      ? request.task_context.task_id
+      : "",
+    "TASK-UNKNOWN"
+  );
+
+  const attemptNumber =
+    request &&
+    Number.isInteger(request.attempt_number) &&
+    request.attempt_number > 0
+      ? request.attempt_number
+      : 1;
+
+  const llmBaseDir = path.join(rootDir, "artifacts", "llm");
+  const metadataDir = path.join(llmBaseDir, "metadata");
+  const requestsDir = path.join(llmBaseDir, "requests");
+  const responsesDir = path.join(llmBaseDir, "responses");
+
+  fs.mkdirSync(metadataDir, { recursive: true });
+  fs.mkdirSync(requestsDir, { recursive: true });
+  fs.mkdirSync(responsesDir, { recursive: true });
+
+  const completedAtIso = new Date().toISOString();
+
+  const requestArtifact = {
+    request_id: request.request_id,
+    task_id: taskId,
+    attempt_number: attemptNumber,
+    timestamp:
+      typeof request.timestamp === "string" && request.timestamp.trim() !== ""
+        ? request.timestamp
+        : startedAtIso,
+    task_context: request.task_context,
+    input: request.input,
+    constraints: request.constraints,
+    cognitive_engine_provider:
+      typeof request.cognitive_engine_provider === "string" &&
+      request.cognitive_engine_provider.trim() !== ""
+        ? request.cognitive_engine_provider.trim()
+        : "",
+    cognitive_engine_model_id:
+      typeof request.cognitive_engine_model_id === "string" &&
+      request.cognitive_engine_model_id.trim() !== ""
+        ? request.cognitive_engine_model_id.trim()
+        : "",
+    template_id:
+      typeof request.template_id === "string" && request.template_id.trim() !== ""
+        ? request.template_id.trim()
+        : "DIRECT_INPUT",
+    template_version:
+      typeof request.template_version === "string" && request.template_version.trim() !== ""
+        ? request.template_version.trim()
+        : "v1",
+    template_hash:
+      typeof request.template_hash === "string" && request.template_hash.trim() !== ""
+        ? request.template_hash.trim()
+        : sha256(buildPromptText(request))
+  };
+
+  const responseArtifact = {
+    response_id: normalizedResponse.response_id,
+    request_id: normalizedResponse.request_id,
+    status: normalizedResponse.status,
+    provider_metadata: normalizedResponse.provider_metadata,
+    output: normalizedResponse.output,
+    usage: normalizedResponse.usage,
+    raw_provider_response: rawResponse
+  };
+
+  const metadataArtifact = buildLlmMetadata(
+    request,
+    rawResponse,
+    normalizedResponse,
+    startedAtIso,
+    completedAtIso
+  );
+
+  writeJson(path.join(requestsDir, `${taskId}.${attemptNumber}.json`), requestArtifact);
+  writeJson(path.join(responsesDir, `${taskId}.${attemptNumber}.json`), responseArtifact);
+  writeJson(path.join(metadataDir, `${taskId}.json`), metadataArtifact);
+}
+
 function storeArtifacts(responseId, rawResponse, normalizedResponse) {
   const rootDir = path.resolve(__dirname, "../../..");
   const baseDir = path.join(rootDir, "artifacts", "cognitive", responseId);
@@ -289,6 +497,7 @@ async function executeCognitive(request, handler) {
 
   const responseId = makeResponseId();
   const startedAt = Date.now();
+  const startedAtIso = new Date().toISOString();
 
   const cognitiveConfig = resolveCognitiveConfig({
     stage_key:
@@ -341,7 +550,7 @@ async function executeCognitive(request, handler) {
       );
 
       validateNormalizedResponse(normalizedResponse, request);
-      storeArtifacts(responseId, rawResponse, normalizedResponse);
+      storeArtifacts(request, responseId, rawResponse, normalizedResponse, startedAtIso);
 
       return normalizedResponse;
     } catch (error) {
@@ -364,7 +573,7 @@ async function executeCognitive(request, handler) {
       );
 
       validateNormalizedResponse(normalizedResponse, request);
-      storeArtifacts(responseId, rawResponse, normalizedResponse);
+      storeArtifacts(request, responseId, rawResponse, normalizedResponse, startedAtIso);
 
       return normalizedResponse;
     }
@@ -429,7 +638,7 @@ async function executeCognitive(request, handler) {
     );
 
     validateNormalizedResponse(normalizedResponse, request);
-    storeArtifacts(responseId, rawResponse, normalizedResponse);
+    storeArtifacts(request, responseId, rawResponse, normalizedResponse, startedAtIso);
 
     return normalizedResponse;
   } catch (error) {
@@ -452,7 +661,7 @@ async function executeCognitive(request, handler) {
     );
 
     validateNormalizedResponse(normalizedResponse, request);
-    storeArtifacts(responseId, rawResponse, normalizedResponse);
+    storeArtifacts(request, responseId, rawResponse, normalizedResponse, startedAtIso);
 
     return normalizedResponse;
   }
