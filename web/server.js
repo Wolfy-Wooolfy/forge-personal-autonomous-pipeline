@@ -342,6 +342,47 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
+    if (req.method === "POST" && req.url === "/api/ai/preview") {
+      const rawBody = await readRequestBody(req);
+      let body;
+
+      try {
+        body = JSON.parse(rawBody || "{}");
+      } catch (err) {
+        sendJson(res, 400, { error: "Invalid JSON body" });
+        return;
+      }
+
+      const draft = body && typeof body === "object" ? body.draft : null;
+
+      if (!draft || typeof draft !== "object") {
+        sendJson(res, 400, { error: "Draft payload is required" });
+        return;
+      }
+
+      const normalizedFiles = normalizeDraftFiles(draft.files);
+
+      const diffs = normalizedFiles.map(file => {
+        let oldContent = "";
+
+        if (fs.existsSync(file.absolutePath)) {
+          try {
+            oldContent = fs.readFileSync(file.absolutePath, "utf-8");
+          } catch (err) {
+            oldContent = "";
+          }
+        }
+
+        return {
+          path: file.path,
+          diff: buildSimpleDiff(oldContent, file.content || "")
+        };
+      });
+
+      sendJson(res, 200, { diffs });
+      return;
+    }
+
     if (req.method === "POST" && req.url === "/api/ai/write") {
       const rawBody = await readRequestBody(req);
       let body;
