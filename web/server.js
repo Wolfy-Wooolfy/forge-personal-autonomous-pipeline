@@ -76,6 +76,25 @@ function normalizeDraftFiles(files) {
 function writeApprovedDraft(draft, userRequest) {
   const normalizedFiles = normalizeDraftFiles(draft.files);
 
+  const diffs = normalizedFiles.map(file => {
+    let oldContent = "";
+
+    if (fs.existsSync(file.absolutePath)) {
+      try {
+        oldContent = fs.readFileSync(file.absolutePath, "utf-8");
+      } catch (err) {
+        oldContent = "";
+      }
+    }
+
+    const newContent = file.content || "";
+
+    return {
+      path: file.path,
+      diff: buildSimpleDiff(oldContent, newContent)
+    };
+  });
+
   ensureDir(path.join(llmRoot, "requests"));
   ensureDir(path.join(llmRoot, "responses"));
   ensureDir(path.join(llmRoot, "metadata"));
@@ -107,7 +126,8 @@ function writeApprovedDraft(draft, userRequest) {
     ok: true,
     write_id: writeId,
     written_files: normalizedFiles.map(file => file.path),
-    summary: typeof draft.summary === "string" ? draft.summary : "Draft generated successfully."
+    summary: typeof draft.summary === "string" ? draft.summary : "Draft generated successfully.",
+    diffs
   };
 
   fs.writeFileSync(metadataPath, JSON.stringify(result, null, 2));
