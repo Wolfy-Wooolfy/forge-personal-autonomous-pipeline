@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forge AI Workspace</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    .app {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .header {
+      margin-bottom: 24px;
+    }
+
+    .header h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+
+    .header p {
+      margin: 0;
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 20px;
+    }
+
+    .panel {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .panel h2 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #cbd5e1;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 260px;
+      resize: vertical;
+      border-radius: 12px;
+      border: 1px solid #334155;
+      background: #0b1220;
+      color: #e2e8f0;
+      padding: 14px;
+      font-size: 15px;
+      line-height: 1.6;
+      outline: none;
+    }
+
+    textarea:focus {
+      border-color: #38bdf8;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: 0;
+      border-radius: 12px;
+      padding: 12px 18px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .primary {
+      background: #38bdf8;
+      color: #082f49;
+    }
+
+    .secondary {
+      background: #1e293b;
+      color: #e2e8f0;
+      border: 1px solid #334155;
+    }
+
+    .danger {
+      background: #3f1d1d;
+      color: #fecaca;
+      border: 1px solid #7f1d1d;
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .status {
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: #0b1220;
+      border: 1px solid #1e293b;
+      color: #cbd5e1;
+      min-height: 46px;
+      white-space: pre-wrap;
+    }
+
+    .section {
+      margin-top: 18px;
+    }
+
+    .output-box {
+      background: #0b1220;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 14px;
+      min-height: 180px;
+      white-space: pre-wrap;
+      overflow: auto;
+      line-height: 1.6;
+    }
+
+    .file-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .file-card {
+      background: #0b1220;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 14px;
+    }
+
+    .file-path {
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #7dd3fc;
+      word-break: break-word;
+    }
+
+    .file-preview {
+      color: #cbd5e1;
+      white-space: pre-wrap;
+      word-break: break-word;
+      max-height: 180px;
+      overflow: auto;
+      line-height: 1.6;
+    }
+
+    .empty {
+      color: #94a3b8;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <h1>Forge AI Workspace</h1>
+      <p>اكتب طلبك بالعربي أو بالإنجليزي. النظام هيجهز Draft للملفات المقترحة، وبعد مراجعتك وموافقتك فقط يتم تنفيذ الكتابة.</p>
+    </div>
+
+    <div class="grid">
+      <div class="panel">
+        <h2>Request</h2>
+        <label for="requestInput">Your request</label>
+        <textarea id="requestInput" placeholder="اكتب طلبك هنا...&#10;&#10;مثال: أنشئ ملف نصي يحتوي خطة عملية لبناء أول MVP لمشروع تقليل الهدر في المصانع الصغيرة في مصر."></textarea>
+
+        <div class="actions">
+          <button id="generateBtn" class="primary">Generate Draft</button>
+          <button id="clearBtn" class="secondary">Clear</button>
+        </div>
+
+        <div id="statusBox" class="status">Ready.</div>
+
+        <div class="section">
+          <h2>AI Response</h2>
+          <div id="responseBox" class="output-box empty">No response yet.</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Proposed Files</h2>
+        <div id="filesBox" class="file-list">
+          <div class="file-card empty">No files proposed yet.</div>
+        </div>
+
+        <div class="actions">
+          <button id="approveBtn" class="primary" disabled>Approve & Write</button>
+          <button id="rejectBtn" class="danger" disabled>Reject</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const requestInput = document.getElementById("requestInput");
+    const generateBtn = document.getElementById("generateBtn");
+    const clearBtn = document.getElementById("clearBtn");
+    const approveBtn = document.getElementById("approveBtn");
+    const rejectBtn = document.getElementById("rejectBtn");
+    const statusBox = document.getElementById("statusBox");
+    const responseBox = document.getElementById("responseBox");
+    const filesBox = document.getElementById("filesBox");
+
+    let currentDraft = null;
+
+    function setStatus(text) {
+      statusBox.textContent = text;
+    }
+
+    function renderResponse(data) {
+      if (!data) {
+        responseBox.textContent = "No response yet.";
+        responseBox.classList.add("empty");
+        return;
+      }
+
+      responseBox.textContent = JSON.stringify(data, null, 2);
+      responseBox.classList.remove("empty");
+    }
+
+    function renderFiles(files) {
+      filesBox.innerHTML = "";
+
+      if (!Array.isArray(files) || files.length === 0) {
+        const empty = document.createElement("div");
+        empty.className = "file-card empty";
+        empty.textContent = "No files proposed yet.";
+        filesBox.appendChild(empty);
+        return;
+      }
+
+      files.forEach((file) => {
+        const card = document.createElement("div");
+        card.className = "file-card";
+
+        const pathEl = document.createElement("div");
+        pathEl.className = "file-path";
+        pathEl.textContent = file.path || "Unknown path";
+
+        const previewEl = document.createElement("div");
+        previewEl.className = "file-preview";
+        previewEl.textContent = file.content || "";
+
+        card.appendChild(pathEl);
+        card.appendChild(previewEl);
+        filesBox.appendChild(card);
+      });
+    }
+
+    function resetDraft() {
+      currentDraft = null;
+      approveBtn.disabled = true;
+      rejectBtn.disabled = true;
+      renderResponse(null);
+      renderFiles([]);
+      setStatus("Ready.");
+    }
+
+    generateBtn.addEventListener("click", async () => {
+      const request = requestInput.value.trim();
+
+      if (!request) {
+        setStatus("Please enter a request first.");
+        return;
+      }
+
+      generateBtn.disabled = true;
+      approveBtn.disabled = true;
+      rejectBtn.disabled = true;
+      setStatus("Generating draft...");
+
+      try {
+        const res = await fetch("/api/ai/draft", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ request })
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          throw new Error(data.error || "Draft generation failed.");
+        }
+
+        currentDraft = data;
+        renderResponse(data);
+        renderFiles(data.files || []);
+        approveBtn.disabled = false;
+        rejectBtn.disabled = false;
+        setStatus("Draft ready for review.");
+      } catch (err) {
+        currentDraft = null;
+        renderResponse({ error: err.message });
+        renderFiles([]);
+        setStatus("Backend not connected yet or request failed.");
+      } finally {
+        generateBtn.disabled = false;
+      }
+    });
+
+    approveBtn.addEventListener("click", async () => {
+      if (!currentDraft) {
+        setStatus("No draft available to approve.");
+        return;
+      }
+
+      approveBtn.disabled = true;
+      rejectBtn.disabled = true;
+      setStatus("Approval endpoint not connected yet.");
+    });
+
+    rejectBtn.addEventListener("click", () => {
+      resetDraft();
+      setStatus("Draft rejected.");
+    });
+
+    clearBtn.addEventListener("click", () => {
+      requestInput.value = "";
+      resetDraft();
+    });
+
+    renderFiles([]);
+  </script>
+</body>
+</html>

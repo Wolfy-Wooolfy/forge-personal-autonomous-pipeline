@@ -5,26 +5,17 @@ const OpenAI = require("openai");
 async function main() {
   const root = path.resolve(__dirname, "../../");
 
-  const tracePath = path.join(root, "artifacts/trace/trace_matrix.json");
-  if (!fs.existsSync(tracePath)) {
-    console.log("Missing trace_matrix.json");
+  const inputPath = path.join(root, "artifacts/llm/input/factory_mvp_scope.txt");
+
+  if (!fs.existsSync(inputPath)) {
+    console.log("Missing project_description.txt");
     return;
   }
 
-  const trace = JSON.parse(fs.readFileSync(tracePath, "utf-8"));
+  const description = fs.readFileSync(inputPath, "utf-8").trim();
 
-  const input = {
-    orphan_code_units: trace.orphan_code_units || [],
-    orphan_requirements: trace.orphan_requirements || [],
-    orphan_artifacts: trace.orphan_artifacts || []
-  };
-
-  if (
-    input.orphan_code_units.length === 0 &&
-    input.orphan_requirements.length === 0 &&
-    input.orphan_artifacts.length === 0
-  ) {
-    console.log("No ambiguity detected — nothing to analyze");
+  if (!description) {
+    console.log("Empty project description");
     return;
   }
 
@@ -32,31 +23,36 @@ async function main() {
     apiKey: process.env.OPENAI_API_KEY
   });
 
-  const prompt = `
-You are assisting in TRACE mapping.
+const prompt = `
+You are a CTO-level decision engine.
 
-Return ONLY JSON in this format:
+Analyze the project and return STRICT JSON with actionable decisions:
+
 {
-  "candidate_mappings": [
-    {
-      "requirement": "...",
-      "code_units": [],
-      "artifacts": [],
-      "confidence": 0.0,
-      "reasoning": "..."
-    }
-  ]
+  "project_summary": "...",
+  "should_build_now": true/false,
+  "confidence": 0-100,
+  "first_mvp_scope": [
+    "exact feature 1",
+    "exact feature 2"
+  ],
+  "core_value_proposition": "...",
+  "biggest_risk": "...",
+  "fastest_path_to_money": "...",
+  "recommended_target_user": "...",
+  "execution_difficulty": "LOW | MEDIUM | HIGH",
+  "killer_insight": "one non-obvious insight that can change success probability"
 }
 
-Input:
-${JSON.stringify(input, null, 2)}
+Project:
+${description}
 `;
 
   const response = await openai.chat.completions.create({
     model: "gpt-4.1",
     temperature: 0,
     messages: [
-      { role: "system", content: "Strict JSON only" },
+      { role: "system", content: "Strict JSON only. No text." },
       { role: "user", content: prompt }
     ]
   });
@@ -66,12 +62,40 @@ ${JSON.stringify(input, null, 2)}
   const outDir = path.join(root, "artifacts/llm/outputs");
   fs.mkdirSync(outDir, { recursive: true });
 
-  const fileName = `trace_mapping_${Date.now()}.json`;
+  const fileName = `project_analysis_${Date.now()}.json`;
   const outPath = path.join(outDir, fileName);
 
   fs.writeFileSync(outPath, content);
 
+  // --- Decision Memory Logging ---
+  const logPath = path.join(root, "artifacts/llm/decision_log.json");
+
+  let log = [];
+  if (fs.existsSync(logPath)) {
+    try {
+      log = JSON.parse(fs.readFileSync(logPath, "utf-8"));
+    } catch (e) {
+      log = [];
+    }
+  }
+
+  let parsed;
+  try {
+    parsed = JSON.parse(content);
+  } catch (e) {
+    parsed = { raw_output: content };
+  }
+
+  log.push({
+    timestamp: new Date().toISOString(),
+    input: description,
+    decision: parsed
+  });
+
+  fs.writeFileSync(logPath, JSON.stringify(log, null, 2));
+
   console.log("Saved:", outPath);
+  console.log("Decision logged.");
 }
 
 main().catch(err => {
