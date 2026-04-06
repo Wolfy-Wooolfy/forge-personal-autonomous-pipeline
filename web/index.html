@@ -237,6 +237,8 @@
 
     let currentDraft = null;
 
+    let currentRequest = "";
+
     function setStatus(text) {
       statusBox.textContent = text;
     }
@@ -283,6 +285,7 @@
 
     function resetDraft() {
       currentDraft = null;
+      currentRequest = "";
       approveBtn.disabled = true;
       rejectBtn.disabled = true;
       renderResponse(null);
@@ -318,6 +321,7 @@
           throw new Error(data.error || "Draft generation failed.");
         }
 
+        currentRequest = request;
         currentDraft = data;
         renderResponse(data);
         renderFiles(data.files || []);
@@ -342,7 +346,38 @@
 
       approveBtn.disabled = true;
       rejectBtn.disabled = true;
-      setStatus("Approval endpoint not connected yet.");
+      generateBtn.disabled = true;
+      setStatus("Writing approved draft...");
+
+      try {
+        const res = await fetch("/api/ai/write", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            request: currentRequest,
+            draft: currentDraft
+          })
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          throw new Error(data.error || "Write failed.");
+        }
+
+        renderResponse(data);
+        setStatus(`Write completed successfully.\nWrite ID: ${data.write_id}\nFiles written: ${(data.written_files || []).length}`);
+        approveBtn.disabled = true;
+        rejectBtn.disabled = true;
+      } catch (err) {
+        setStatus(`Write failed: ${err.message}`);
+        approveBtn.disabled = false;
+        rejectBtn.disabled = false;
+      } finally {
+        generateBtn.disabled = false;
+      }
     });
 
     rejectBtn.addEventListener("click", () => {

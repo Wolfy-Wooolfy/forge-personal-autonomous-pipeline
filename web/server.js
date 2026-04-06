@@ -11,6 +11,102 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
 
+const llmRoot = path.resolve(root, "artifacts/llm");
+const allowedWriteRoots = [
+  path.resolve(root, "artifacts/llm"),
+  path.resolve(root, "web"),
+  path.resolve(root, "code/tools")
+];
+
+function ensureDir(dirPath) {
+  fs.mkdirSync(dirPath, { recursive: true });
+}
+
+function isWithin(parentPath, childPath) {
+  const relative = path.relative(parentPath, childPath);
+  return relative && !relative.startsWith("..") && !path.isAbsolute(relative) || relative === "";
+}
+
+function normalizeDraftFiles(files) {
+  if (!Array.isArray(files)) {
+    throw new Error("Draft payload missing files array");
+  }
+
+  return files.map(file => {
+    const filePath = typeof file.path === "string" ? file.path.trim() : "";
+    const fileContent = typeof file.content === "string" ? file.content : "";
+
+    if (!filePath) {
+      throw new Error("Draft contains invalid file path");
+    }
+
+    if (path.isAbsolute(filePath)) {
+      throw new Error("Absolute paths are not allowed");
+    }
+
+    const normalizedPath = filePath.replace(/\\/g, "/");
+    const targetPath = path.resolve(root, normalizedPath);
+
+    if (!isWithin(root, targetPath)) {
+      throw new Error(`Path escapes workspace: ${normalizedPath}`);
+    }
+
+    const allowed = allowedWriteRoots.some(basePath => isWithin(basePath, targetPath));
+
+    if (!allowed) {
+      throw new Error(`Write blocked for path: ${normalizedPath}`);
+    }
+
+    return {
+      path: normalizedPath,
+      content: fileContent,
+      absolutePath: targetPath
+    };
+  });
+}
+
+function writeApprovedDraft(draft, userRequest) {
+  const normalizedFiles = normalizeDraftFiles(draft.files);
+
+  ensureDir(path.join(llmRoot, "requests"));
+  ensureDir(path.join(llmRoot, "responses"));
+  ensureDir(path.join(llmRoot, "metadata"));
+
+  const writeId = `write_${Date.now()}`;
+  const requestPath = path.join(llmRoot, "requests", `${writeId}.request.json`);
+  const responsePath = path.join(llmRoot, "responses", `${writeId}.response.json`);
+  const metadataPath = path.join(llmRoot, "metadata", `${writeId}.write.json`);
+
+  fs.writeFileSync(requestPath, JSON.stringify({
+    request: userRequest || "",
+    approved_at: new Date().toISOString()
+  }, null, 2));
+
+  fs.writeFileSync(responsePath, JSON.stringify({
+    summary: typeof draft.summary === "string" ? draft.summary : "Draft generated successfully.",
+    files: normalizedFiles.map(file => ({
+      path: file.path,
+      content: file.content
+    }))
+  }, null, 2));
+
+  normalizedFiles.forEach(file => {
+    ensureDir(path.dirname(file.absolutePath));
+    fs.writeFileSync(file.absolutePath, file.content);
+  });
+
+  const result = {
+    ok: true,
+    write_id: writeId,
+    written_files: normalizedFiles.map(file => file.path),
+    summary: typeof draft.summary === "string" ? draft.summary : "Draft generated successfully."
+  };
+
+  fs.writeFileSync(metadataPath, JSON.stringify(result, null, 2));
+
+  return result;
+}
+
 function sendJson(res, statusCode, payload) {
   res.writeHead(statusCode, { "Content-Type": "application/json; charset=utf-8" });
   res.end(JSON.stringify(payload, null, 2));
@@ -60,8 +156,14 @@ Rules:
 - Paths must be relative
 - Do not include explanations outside JSON
 - Do not propose deleting files
-- Do not write anything inside Forge pipeline governance paths unless explicitly requested
-- Prefer paths under artifacts/llm/, web/, or code/tools/ unless the request clearly requires another location
+- Do not write anything inside Forge pipeline governance paths
+- Allowed write areas are only:
+  - artifacts/llm/
+  - web/
+  - code/tools/
+- Do not use absolute paths
+- Do not use path traversal
+- When updating an existing file, return the full new file content
 
 User request:
 ${userRequest}
@@ -97,27 +199,10 @@ async function generateDraft(userRequest) {
     throw new Error("Invalid draft payload");
   }
 
-  if (!Array.isArray(parsed.files)) {
-    throw new Error("Draft payload missing files array");
-  }
-
-  const normalizedFiles = parsed.files.map(file => {
-    const filePath = typeof file.path === "string" ? file.path.trim() : "";
-    const fileContent = typeof file.content === "string" ? file.content : "";
-
-    if (!filePath) {
-      throw new Error("Draft contains invalid file path");
-    }
-
-    if (path.isAbsolute(filePath)) {
-      throw new Error("Absolute paths are not allowed");
-    }
-
-    return {
-      path: filePath.replace(/\\/g, "/"),
-      content: fileContent
-    };
-  });
+  const normalizedFiles = normalizeDraftFiles(parsed.files).map(file => ({
+    path: file.path,
+    content: file.content
+  }));
 
   return {
     summary: typeof parsed.summary === "string" ? parsed.summary : "Draft generated successfully.",
@@ -163,6 +248,30 @@ const server = http.createServer(async (req, res) => {
 
       const draft = await generateDraft(userRequest);
       sendJson(res, 200, draft);
+      return;
+    }
+
+    if (req.method === "POST" && req.url === "/api/ai/write") {
+      const rawBody = await readRequestBody(req);
+      let body;
+
+      try {
+        body = JSON.parse(rawBody || "{}");
+      } catch (err) {
+        sendJson(res, 400, { error: "Invalid JSON body" });
+        return;
+      }
+
+      const draft = body && typeof body === "object" ? body.draft : null;
+      const userRequest = typeof body.request === "string" ? body.request.trim() : "";
+
+      if (!draft || typeof draft !== "object") {
+        sendJson(res, 400, { error: "Draft payload is required" });
+        return;
+      }
+
+      const result = writeApprovedDraft(draft, userRequest);
+      sendJson(res, 200, result);
       return;
     }
 
