@@ -155,6 +155,19 @@ function getRecentWrites(limit = 10) {
   return items;
 }
 
+function buildSimpleDiff(oldContent, newContent) {
+  if (oldContent === newContent) {
+    return "No changes";
+  }
+
+  return [
+    "----- OLD -----",
+    oldContent,
+    "----- NEW -----",
+    newContent
+  ].join("\n");
+}
+
 function sendJson(res, statusCode, payload) {
   res.writeHead(statusCode, { "Content-Type": "application/json; charset=utf-8" });
   res.end(JSON.stringify(payload, null, 2));
