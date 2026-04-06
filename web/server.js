@@ -50,7 +50,11 @@ function normalizeDraftFiles(files) {
     const exists = fs.existsSync(targetPath);
 
     if (exists) {
-      throw new Error(`File already exists: ${normalizedPath}`);
+      const allowOverwrite = file.allow_overwrite === true;
+
+      if (!allowOverwrite) {
+        throw new Error(`File already exists: ${normalizedPath}`);
+      }
     }
 
     if (!isWithin(root, targetPath)) {
