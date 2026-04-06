@@ -250,9 +250,10 @@ async function generateDraft(userRequest) {
     throw new Error("Invalid draft payload");
   }
 
-  const normalizedFiles = normalizeDraftFiles(parsed.files).map(file => ({
+  const normalizedFiles = normalizeDraftFiles(parsed.files).map((file, index) => ({
     path: file.path,
-    content: file.content
+    content: file.content,
+    allow_overwrite: parsed.files[index] && parsed.files[index].allow_overwrite === true
   }));
 
   return {
