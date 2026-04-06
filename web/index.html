@@ -221,6 +221,13 @@
           <button id="approveBtn" class="primary" disabled>Approve & Write</button>
           <button id="rejectBtn" class="danger" disabled>Reject</button>
         </div>
+
+        <div class="section">
+          <h2>Recent Writes</h2>
+          <div id="historyBox" class="file-list">
+            <div class="file-card empty">No write history yet.</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -234,6 +241,7 @@
     const statusBox = document.getElementById("statusBox");
     const responseBox = document.getElementById("responseBox");
     const filesBox = document.getElementById("filesBox");
+    const historyBox = document.getElementById("historyBox");
 
     let currentDraft = null;
 
@@ -281,6 +289,53 @@
         card.appendChild(previewEl);
         filesBox.appendChild(card);
       });
+    }
+
+    function renderHistory(items) {
+      historyBox.innerHTML = "";
+
+      if (!Array.isArray(items) || items.length === 0) {
+        const empty = document.createElement("div");
+        empty.className = "file-card empty";
+        empty.textContent = "No write history yet.";
+        historyBox.appendChild(empty);
+        return;
+      }
+
+      items.forEach((item) => {
+        const card = document.createElement("div");
+        card.className = "file-card";
+
+        const idEl = document.createElement("div");
+        idEl.className = "file-path";
+        idEl.textContent = item.write_id || "Unknown write id";
+
+        const summaryEl = document.createElement("div");
+        summaryEl.className = "file-preview";
+        summaryEl.textContent =
+          `Time: ${item.logged_at || ""}\n` +
+          `Files: ${(item.written_files || []).join(", ") || "None"}\n` +
+          `Summary: ${item.summary || ""}`;
+
+        card.appendChild(idEl);
+        card.appendChild(summaryEl);
+        historyBox.appendChild(card);
+      });
+    }
+
+    async function loadHistory() {
+      try {
+        const res = await fetch("/api/ai/history");
+        const data = await res.json();
+
+        if (!res.ok) {
+          throw new Error(data.error || "Failed to load history.");
+        }
+
+        renderHistory(data.items || []);
+      } catch (err) {
+        renderHistory([]);
+      }
     }
 
     function resetDraft() {
@@ -369,6 +424,7 @@
 
         renderResponse(data);
         setStatus(`Write completed successfully.\nWrite ID: ${data.write_id}\nFiles written: ${(data.written_files || []).length}`);
+        await loadHistory();
         approveBtn.disabled = true;
         rejectBtn.disabled = true;
       } catch (err) {
@@ -391,6 +447,7 @@
     });
 
     renderFiles([]);
+    loadHistory();
   </script>
 </body>
 </html>

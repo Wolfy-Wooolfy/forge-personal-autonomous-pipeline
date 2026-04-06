@@ -47,6 +47,12 @@ function normalizeDraftFiles(files) {
     const normalizedPath = filePath.replace(/\\/g, "/");
     const targetPath = path.resolve(root, normalizedPath);
 
+    const exists = fs.existsSync(targetPath);
+
+    if (exists) {
+      throw new Error(`File already exists: ${normalizedPath}`);
+    }
+
     if (!isWithin(root, targetPath)) {
       throw new Error(`Path escapes workspace: ${normalizedPath}`);
     }
@@ -105,6 +111,46 @@ function writeApprovedDraft(draft, userRequest) {
   fs.writeFileSync(metadataPath, JSON.stringify(result, null, 2));
 
   return result;
+}
+
+function getRecentWrites(limit = 10) {
+  const metadataDir = path.join(llmRoot, "metadata");
+
+  if (!fs.existsSync(metadataDir)) {
+    return [];
+  }
+
+  const items = fs.readdirSync(metadataDir)
+    .filter(name => name.endsWith(".write.json"))
+    .map(name => {
+      const fullPath = path.join(metadataDir, name);
+      const stat = fs.statSync(fullPath);
+
+      let parsed = null;
+      try {
+        parsed = JSON.parse(fs.readFileSync(fullPath, "utf-8"));
+      } catch (err) {
+        parsed = null;
+      }
+
+      return {
+        name,
+        fullPath,
+        mtimeMs: stat.mtimeMs,
+        data: parsed
+      };
+    })
+    .sort((a, b) => b.mtimeMs - a.mtimeMs)
+    .slice(0, limit)
+    .map(item => ({
+      write_id: item.data && typeof item.data.write_id === "string" ? item.data.write_id : item.name.replace(/\.write\.json$/, ""),
+      written_files: item.data && Array.isArray(item.data.written_files) ? item.data.written_files : [],
+      summary: item.data && typeof item.data.summary === "string" ? item.data.summary : "",
+      ok: !!(item.data && item.data.ok),
+      logged_at: new Date(item.mtimeMs).toISOString()
+    }));
+
+  return items;
 }
 
 function sendJson(res, statusCode, payload) {
@@ -220,6 +266,12 @@ const server = http.createServer(async (req, res) => {
 
     if (req.method === "GET" && req.url === "/health") {
       sendJson(res, 200, { ok: true });
+      return;
+    }
+
+    if (req.method === "GET" && req.url === "/api/ai/history") {
+      const items = getRecentWrites(10);
+      sendJson(res, 200, { items });
       return;
     }
 
