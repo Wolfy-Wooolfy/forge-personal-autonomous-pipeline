@@ -50,10 +50,8 @@ function normalizeDraftFiles(files) {
     const exists = fs.existsSync(targetPath);
 
     if (exists) {
-      const allowOverwrite = file.allow_overwrite === true;
-
-      if (!allowOverwrite) {
-        throw new Error(`File already exists: ${normalizedPath}`);
+      if (file.allow_overwrite !== true) {
+        throw new Error(`Overwrite requires allow_overwrite=true: ${normalizedPath}`);
       }
     }
 
@@ -213,7 +211,10 @@ Rules:
   - code/tools/
 - Do not use absolute paths
 - Do not use path traversal
-- When updating an existing file, return the full new file content
+- When updating an existing file, you MUST include:
+  "allow_overwrite": true
+  inside the file object
+- If the request is an update and you do not include allow_overwrite, the write will be rejected
 
 User request:
 ${userRequest}
