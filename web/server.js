@@ -180,12 +180,32 @@ function buildSimpleDiff(oldContent, newContent) {
     return "No changes";
   }
 
-  return [
-    "----- OLD -----",
-    oldContent,
-    "----- NEW -----",
-    newContent
-  ].join("\n");
+  const oldLines = String(oldContent || "").split("\n");
+  const newLines = String(newContent || "").split("\n");
+  const maxLength = Math.max(oldLines.length, newLines.length);
+  const diffLines = [];
+
+  for (let i = 0; i < maxLength; i += 1) {
+    const oldLine = oldLines[i];
+    const newLine = newLines[i];
+
+    if (oldLine === newLine) {
+      if (oldLine !== undefined) {
+        diffLines.push(`  ${oldLine}`);
+      }
+      continue;
+    }
+
+    if (oldLine !== undefined) {
+      diffLines.push(`- ${oldLine}`);
+    }
+
+    if (newLine !== undefined) {
+      diffLines.push(`+ ${newLine}`);
+    }
+  }
+
+  return diffLines.join("\n");
 }
 
 function sendJson(res, statusCode, payload) {
