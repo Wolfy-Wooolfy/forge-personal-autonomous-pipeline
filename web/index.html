@@ -461,6 +461,11 @@
         return;
       }
 
+      if (!currentPreview || currentPreview.length === 0) {
+        setStatus("You must preview changes before approving.");
+        return;
+      }
+
       approveBtn.disabled = true;
       rejectBtn.disabled = true;
       generateBtn.disabled = true;
