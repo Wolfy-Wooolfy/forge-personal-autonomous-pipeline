@@ -2,6 +2,7 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 const OpenAI = require("openai");
+const crypto = require("crypto");
 
 const root = path.resolve(__dirname, "..");
 const webRoot = path.resolve(root, "web");
@@ -17,6 +18,8 @@ const allowedWriteRoots = [
   path.resolve(root, "web"),
   path.resolve(root, "code/tools")
 ];
+
+const decisionsRoot = path.resolve(root, "artifacts/decisions");
 
 function ensureDir(dirPath) {
   fs.mkdirSync(dirPath, { recursive: true });
@@ -73,7 +76,7 @@ function normalizeDraftFiles(files) {
   });
 }
 
-function writeApprovedDraft(draft, userRequest) {
+function createDecisionPacket(draft, userRequest) {
   const normalizedFiles = normalizeDraftFiles(draft.files);
 
   const diffs = normalizedFiles.map(file => {
@@ -91,46 +94,101 @@ function writeApprovedDraft(draft, userRequest) {
 
     return {
       path: file.path,
-      diff: buildSimpleDiff(oldContent, newContent)
+      diff: buildSimpleDiff(oldContent, newContent),
+      sha256: sha256(newContent)
     };
   });
 
   ensureDir(path.join(llmRoot, "requests"));
   ensureDir(path.join(llmRoot, "responses"));
   ensureDir(path.join(llmRoot, "metadata"));
+  ensureDir(decisionsRoot);
 
-  const writeId = `write_${Date.now()}`;
-  const requestPath = path.join(llmRoot, "requests", `${writeId}.request.json`);
-  const responsePath = path.join(llmRoot, "responses", `${writeId}.response.json`);
-  const metadataPath = path.join(llmRoot, "metadata", `${writeId}.write.json`);
+  const decisionPacketId = `workspace_decision_${Date.now()}`;
+  const workspaceId = "personal";
+  const projectId = path.basename(root);
+
+  const requestPath = path.join(llmRoot, "requests", `${decisionPacketId}.request.json`);
+  const responsePath = path.join(llmRoot, "responses", `${decisionPacketId}.response.json`);
+  const metadataPath = path.join(llmRoot, "metadata", `${decisionPacketId}.decision.json`);
+
+  const decisionPacketJsonRel = "artifacts/decisions/decision_packet.json";
+  const decisionPacketMdRel = "artifacts/decisions/decision_packet.md";
+  const decisionPacketJsonAbs = path.join(decisionsRoot, "decision_packet.json");
+  const decisionPacketMdAbs = path.join(decisionsRoot, "decision_packet.md");
+
+  const packet = {
+    execution_id: decisionPacketId,
+    workspace_id: workspaceId,
+    project_id: projectId,
+    source: "EXTERNAL_AI_WORKSPACE",
+    triggering_gaps: [
+      "WORKSPACE_CHANGE_REQUEST"
+    ],
+    question: "Approve the queued workspace draft for governed deterministic application?",
+    context_summary: userRequest || "",
+    options: [
+      {
+        option_id: "OPTION-APPROVE-WORKSPACE-DRAFT",
+        description: "Queue the workspace draft as a governed pending change set.",
+        impact_scope: "EXTERNAL_WORKSPACE",
+        risk_level: "MEDIUM",
+        downstream_effects: normalizedFiles.map(file => `Apply candidate change to ${file.path}`),
+        cognitive_priority_hint: null
+      }
+    ],
+    recommendation_reference: `artifacts/llm/metadata/${decisionPacketId}.decision.json`,
+    confirmation_required_format: "OPTION-APPROVE-WORKSPACE-DRAFT",
+    proposed_files: normalizedFiles.map((file, index) => ({
+      path: file.path,
+      allow_overwrite: draft.files[index] && draft.files[index].allow_overwrite === true,
+      sha256: diffs[index].sha256,
+      diff: diffs[index].diff
+    }))
+  };
 
   fs.writeFileSync(requestPath, JSON.stringify({
     request: userRequest || "",
-    approved_at: new Date().toISOString()
+    approved_at: new Date().toISOString(),
+    workspace_id: workspaceId,
+    project_id: projectId
   }, null, 2));
 
   fs.writeFileSync(responsePath, JSON.stringify({
-    summary: typeof draft.summary === "string" ? draft.summary : "Draft generated successfully.",
+    summary: typeof draft.summary === "string" ? draft.summary : "Decision packet created successfully.",
     files: normalizedFiles.map(file => ({
       path: file.path,
       content: file.content
     }))
   }, null, 2));
 
-  normalizedFiles.forEach(file => {
-    ensureDir(path.dirname(file.absolutePath));
-    fs.writeFileSync(file.absolutePath, file.content);
-  });
+  fs.writeFileSync(decisionPacketJsonAbs, JSON.stringify(packet, null, 2));
+  fs.writeFileSync(decisionPacketMdAbs, renderDecisionPacketMd(packet));
 
   const result = {
     ok: true,
-    write_id: writeId,
-    written_files: normalizedFiles.map(file => file.path),
-    summary: typeof draft.summary === "string" ? draft.summary : "Draft generated successfully.",
+    entry_type: "DECISION_PACKET",
+    decision_packet_id: decisionPacketId,
+    decision_packet_paths: [
+      decisionPacketJsonRel,
+      decisionPacketMdRel
+    ],
+    queued_files: normalizedFiles.map(file => file.path),
+    summary: typeof draft.summary === "string" ? draft.summary : "Decision packet created successfully.",
     diffs
   };
 
   fs.writeFileSync(metadataPath, JSON.stringify(result, null, 2));
+
+  appendDecisionLog({
+    timestamp: new Date().toISOString(),
+    type: "DECISION_PACKET",
+    decision_packet_id: decisionPacketId,
+    workspace_id: workspaceId,
+    project_id: projectId,
+    request: userRequest || "",
+    queued_files: normalizedFiles.map(file => file.path)
+  });
 
   return result;
 }
@@ -143,7 +201,7 @@ function getRecentWrites(limit = 10) {
   }
 
   const items = fs.readdirSync(metadataDir)
-    .filter(name => name.endsWith(".write.json"))
+    .filter(name => name.endsWith(".write.json") || name.endsWith(".decision.json"))
     .map(name => {
       const fullPath = path.join(metadataDir, name);
       const stat = fs.statSync(fullPath);
@@ -164,13 +222,21 @@ function getRecentWrites(limit = 10) {
     })
     .sort((a, b) => b.mtimeMs - a.mtimeMs)
     .slice(0, limit)
-    .map(item => ({
-      write_id: item.data && typeof item.data.write_id === "string" ? item.data.write_id : item.name.replace(/\.write\.json$/, ""),
-      written_files: item.data && Array.isArray(item.data.written_files) ? item.data.written_files : [],
-      summary: item.data && typeof item.data.summary === "string" ? item.data.summary : "",
-      ok: !!(item.data && item.data.ok),
-      logged_at: new Date(item.mtimeMs).toISOString()
-    }));
+    .map(item => {
+      const data = item.data && typeof item.data === "object" ? item.data : {};
+      const isDecision = item.name.endsWith(".decision.json");
+
+      return {
+        entry_type: isDecision ? "DECISION_PACKET" : "WRITE",
+        write_id: typeof data.write_id === "string" ? data.write_id : "",
+        decision_packet_id: typeof data.decision_packet_id === "string" ? data.decision_packet_id : "",
+        written_files: Array.isArray(data.written_files) ? data.written_files : [],
+        queued_files: Array.isArray(data.queued_files) ? data.queued_files : [],
+        summary: typeof data.summary === "string" ? data.summary : "",
+        ok: !!data.ok,
+        logged_at: new Date(item.mtimeMs).toISOString()
+      };
+    });
 
   return items;
 }
@@ -206,6 +272,75 @@ function buildSimpleDiff(oldContent, newContent) {
   }
 
   return diffLines.join("\n");
+}
+
+function readJsonSafe(filePath, fallback) {
+  if (!fs.existsSync(filePath)) {
+    return fallback;
+  }
+
+  try {
+    return JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  } catch (err) {
+    return fallback;
+  }
+}
+
+function sha256(content) {
+  return crypto.createHash("sha256").update(String(content || ""), "utf8").digest("hex");
+}
+
+function appendDecisionLog(entry) {
+  const logPath = path.join(llmRoot, "decision_log.json");
+  const current = readJsonSafe(logPath, []);
+  const items = Array.isArray(current) ? current : [];
+  items.push(entry);
+  fs.writeFileSync(logPath, JSON.stringify(items, null, 2));
+}
+
+function renderDecisionPacketMd(packet) {
+  const lines = [];
+
+  lines.push("# Decision Packet");
+  lines.push("");
+  lines.push(`- execution_id: ${packet.execution_id}`);
+  lines.push(`- workspace_id: ${packet.workspace_id}`);
+  lines.push(`- project_id: ${packet.project_id}`);
+  lines.push(`- source: ${packet.source}`);
+  lines.push("");
+
+  lines.push("## Question");
+  lines.push(packet.question);
+  lines.push("");
+
+  lines.push("## Context Summary");
+  lines.push(packet.context_summary || "N/A");
+  lines.push("");
+
+  lines.push("## Options");
+  (packet.options || []).forEach(option => {
+    lines.push(`- ${option.option_id}: ${option.description}`);
+    lines.push(`  - impact_scope: ${option.impact_scope}`);
+    lines.push(`  - risk_level: ${option.risk_level}`);
+    (option.downstream_effects || []).forEach(effect => {
+      lines.push(`  - downstream_effect: ${effect}`);
+    });
+  });
+  lines.push("");
+
+  lines.push("## Proposed Files");
+  (packet.proposed_files || []).forEach(file => {
+    lines.push(`- ${file.path}`);
+    lines.push(`  - allow_overwrite: ${file.allow_overwrite ? "true" : "false"}`);
+    lines.push(`  - sha256: ${file.sha256}`);
+  });
+  lines.push("");
+
+  lines.push("## Confirmation Required Format");
+  lines.push(`- ${packet.confirmation_required_format}`);
+  lines.push("");
+
+  return lines.join("\n");
 }
 
 function sendJson(res, statusCode, payload) {
@@ -403,7 +538,7 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
-    if (req.method === "POST" && req.url === "/api/ai/write") {
+    if (req.method === "POST" && (req.url === "/api/ai/write" || req.url === "/api/ai/decision")) {
       const rawBody = await readRequestBody(req);
       let body;
 
@@ -422,7 +557,7 @@ const server = http.createServer(async (req, res) => {
         return;
       }
 
-      const result = writeApprovedDraft(draft, userRequest);
+      const result = createDecisionPacket(draft, userRequest);
       sendJson(res, 200, result);
       return;
     }

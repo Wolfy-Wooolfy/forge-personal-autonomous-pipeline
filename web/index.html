@@ -189,7 +189,7 @@
   <div class="app">
     <div class="header">
       <h1>Forge AI Workspace</h1>
-      <p>اكتب طلبك بالعربي أو بالإنجليزي. النظام هيجهز Draft للملفات المقترحة، وبعد مراجعتك وموافقتك فقط يتم تنفيذ الكتابة.</p>
+      <p>اكتب طلبك بالعربي أو بالإنجليزي. النظام هيجهز Draft للملفات المقترحة، وبعد مراجعتك وموافقتك يتم إنشاء Decision Packet governed بدل الكتابة المباشرة.</p>
     </div>
 
     <div class="grid">
@@ -218,7 +218,7 @@
         </div>
 
         <div class="actions">
-          <button id="approveBtn" class="primary" disabled>Approve & Write</button>
+          <button id="approveBtn" class="primary" disabled>Approve & Queue Decision</button>
           <button id="rejectBtn" class="danger" disabled>Reject</button>
         </div>
 
@@ -230,7 +230,7 @@
         </div>
 
         <div class="section">
-          <h2>Recent Writes</h2>
+          <h2>Recent Activity</h2>
           <div id="historyBox" class="file-list">
             <div class="file-card empty">No write history yet.</div>
           </div>
@@ -317,14 +317,19 @@
 
         const idEl = document.createElement("div");
         idEl.className = "file-path";
-        idEl.textContent = item.write_id || "Unknown write id";
+        idEl.textContent = item.decision_packet_id || item.write_id || "Unknown activity id";
+
+        const files = Array.isArray(item.queued_files) && item.queued_files.length > 0
+        ? item.queued_files
+        : (Array.isArray(item.written_files) ? item.written_files : []);
 
         const summaryEl = document.createElement("div");
         summaryEl.className = "file-preview";
         summaryEl.textContent =
-          `Time: ${item.logged_at || ""}\n` +
-          `Files: ${(item.written_files || []).join(", ") || "None"}\n` +
-          `Summary: ${item.summary || ""}`;
+        `Type: ${item.entry_type || "UNKNOWN"}\n` +
+        `Time: ${item.logged_at || ""}\n` +
+        `Files: ${files.join(", ") || "None"}\n` +
+        `Summary: ${item.summary || ""}`;
 
         card.appendChild(idEl);
         card.appendChild(summaryEl);
@@ -484,10 +489,10 @@
       approveBtn.disabled = true;
       rejectBtn.disabled = true;
       generateBtn.disabled = true;
-      setStatus("Writing approved draft...");
+      setStatus("Creating governed decision packet...");
 
       try {
-        const res = await fetch("/api/ai/write", {
+        const res = await fetch("/api/ai/decision", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -505,7 +510,7 @@
         }
 
         renderResponse(data);
-        setStatus(`Write completed successfully.\nWrite ID: ${data.write_id}\nFiles written: ${(data.written_files || []).length}`);
+        setStatus(`Decision packet created successfully.\nPacket ID: ${data.decision_packet_id}\nFiles queued: ${(data.queued_files || []).length}`);
         await loadHistory();
         approveBtn.disabled = true;
         rejectBtn.disabled = true;
