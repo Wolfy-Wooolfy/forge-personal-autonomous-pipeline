@@ -234,6 +234,74 @@ function resolveCognitivePriorityHint(row, cognitiveTrace) {
   return null;
 }
 
+function readDecisionPacketBundle() {
+  const packetAbs = path.resolve(ROOT, "artifacts", "decisions", "decision_packet.json");
+
+  if (!fs.existsSync(packetAbs)) {
+    return null;
+  }
+
+  const packet = readJson(packetAbs);
+
+  if (!packet || typeof packet !== "object") {
+    return null;
+  }
+
+  if (String(packet.source || "") !== "EXTERNAL_AI_WORKSPACE") {
+    return null;
+  }
+
+  const proposedFiles = Array.isArray(packet.proposed_files) ? packet.proposed_files : [];
+
+  if (proposedFiles.length === 0) {
+    return null;
+  }
+
+  const executionId = String(packet.execution_id || "").trim();
+
+  if (!executionId) {
+    return null;
+  }
+
+  const responseRel = `artifacts/llm/responses/${executionId}.response.json`;
+  const responseAbs = path.resolve(ROOT, responseRel);
+
+  return {
+    packet,
+    packetAbs,
+    packetText: JSON.stringify(packet, null, 2),
+    responseRel,
+    responseAbs
+  };
+}
+
+function flattenDecisionPacketActions(bundle) {
+  const files = Array.isArray(bundle && bundle.packet && bundle.packet.proposed_files)
+    ? bundle.packet.proposed_files
+    : [];
+
+  return files
+    .map((file, index) => ({
+      gap_id: "WORKSPACE_CHANGE_REQUEST",
+      category: "WORKSPACE_CHANGE_REQUEST",
+      severity: "MEDIUM",
+      affected_entities: [String(file && file.path ? file.path : "")],
+      action_id: `WORKSPACE_ACTION_${index + 1}`,
+      description: `Apply governed workspace draft to ${String(file && file.path ? file.path : "")}`,
+      impact_scope: "CODE_WRITE",
+      requires_decision: false,
+      _gap: {},
+      _action: file,
+      _workspace: {
+        response_path: bundle.responseRel,
+        allow_overwrite: !!(file && file.allow_overwrite === true),
+        expected_sha256: String(file && file.sha256 ? file.sha256 : ""),
+        target_path: String(file && file.path ? file.path : "")
+      }
+    }))
+    .filter((row) => row.affected_entities[0] && row.action_id);
+}
+
 function renderDecisionMd(payload) {
   const lines = [];
 
@@ -314,12 +382,11 @@ function renderDecisionMd(payload) {
 }
 
 function runDecisionGate(context) {
-  const status = context && context.status ? context.status : context;
-
   const explorationMatrixAbs = path.resolve(ROOT, "artifacts", "exploration", "option_matrix.json");
   const intakeContextAbs = path.resolve(ROOT, "artifacts", "intake", "intake_context.json");
+  const workspaceBundle = readDecisionPacketBundle();
 
-  if (!fs.existsSync(explorationMatrixAbs)) {
+  if (!workspaceBundle && !fs.existsSync(explorationMatrixAbs)) {
     return {
       stage_progress_percent: 100,
       blocked: true,
@@ -345,10 +412,21 @@ function runDecisionGate(context) {
     };
   }
 
-  const decision = parseDecisionOverride();
-  const actionsObj = readJson(explorationMatrixAbs);
-  const intakeContext = readJson(intakeContextAbs);
+  if (workspaceBundle && !fs.existsSync(workspaceBundle.responseAbs)) {
+    return {
+      stage_progress_percent: 100,
+      blocked: true,
+      status_patch: {
+        next_step: "",
+        blocking_questions: [
+          `Decision Gate BLOCKED: missing ${workspaceBundle.responseRel}`
+        ]
+      }
+    };
+  }
 
+  const decision = parseDecisionOverride();
+  const intakeContext = readJson(intakeContextAbs);
   const traceCognitivePayload = readTraceCognitivePayload();
 
   const validOperatingMode =
@@ -369,18 +447,87 @@ function runDecisionGate(context) {
     };
   }
 
+  const decisionsDirAbs = path.resolve(ROOT, "artifacts", "decisions");
+  ensureDir(decisionsDirAbs);
+
+  const relDecisionJson = "artifacts/decisions/module_flow_decision_gate.json";
+  const relDecisionMd = "artifacts/decisions/module_flow_decision_gate.md";
+
+  const decisionJsonAbs = path.resolve(ROOT, relDecisionJson);
+  const decisionMdAbs = path.resolve(ROOT, relDecisionMd);
+
+  if (workspaceBundle) {
+    const flatActions = flattenDecisionPacketActions(workspaceBundle);
+    const intakeText = JSON.stringify(intakeContext, null, 2);
+    const stamp = new Date().toISOString();
+
+    const approvedActions = flatActions.map((row) => ({
+      gap_id: row.gap_id,
+      category: row.category,
+      severity: row.severity,
+      affected_entities: row.affected_entities,
+      action_id: row.action_id,
+      description: row.description,
+      impact_scope: row.impact_scope,
+      requires_decision: false,
+      cognitive_priority_hint: resolveCognitivePriorityHint(row, traceCognitivePayload),
+      reason: "governed workspace decision packet approved",
+      workspace_source: "EXTERNAL_AI_WORKSPACE",
+      workspace_response_path: row._workspace.response_path,
+      workspace_allow_overwrite: row._workspace.allow_overwrite,
+      workspace_expected_sha256: row._workspace.expected_sha256,
+      workspace_target_path: row._workspace.target_path
+    }));
+
+    const decisionPayload = {
+      decision_id: "MODULE_FLOW_DECISION_GATE",
+      timestamp: stamp,
+      task: "TASK-052",
+      policy: "AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK",
+      operating_mode: intakeContext.operating_mode,
+      repository_state: intakeContext.repository_state,
+      override_mode: decision.mode,
+      override_source: decision.source,
+      override_raw: decision.raw,
+      source: {
+        source_type: "DECISION_PACKET",
+        decision_packet_path: "artifacts/decisions/decision_packet.json",
+        decision_packet_sha256: sha256Text(workspaceBundle.packetText),
+        workspace_response_path: workspaceBundle.responseRel,
+        intake_context_path: "artifacts/intake/intake_context.json",
+        intake_context_sha256: sha256Text(intakeText)
+      },
+      summary: {
+        total_actions: approvedActions.length,
+        approved_count: approvedActions.length,
+        review_required_count: 0,
+        rejected_count: 0
+      },
+      approved_actions: approvedActions,
+      review_required_actions: [],
+      rejected_actions: [],
+      blocked: false
+    };
+
+    fs.writeFileSync(decisionJsonAbs, JSON.stringify(decisionPayload, null, 2), { encoding: "utf8" });
+    fs.writeFileSync(decisionMdAbs, renderDecisionMd(decisionPayload), { encoding: "utf8" });
+
+    return {
+      stage_progress_percent: 100,
+      artifact: relDecisionMd,
+      outputs: { md: relDecisionMd, json: relDecisionJson },
+      blocked: false,
+      status_patch: {
+        blocking_questions: [],
+        next_step: "MODULE FLOW — Decision Gate COMPLETE. Next=Backfill."
+      }
+    };
+  }
+
+  const actionsObj = readJson(explorationMatrixAbs);
   const flatActions = flattenGapActions(actionsObj);
 
   if (flatActions.length === 0) {
-    const decisionsDirAbs = path.resolve(ROOT, "artifacts", "decisions");
-    ensureDir(decisionsDirAbs);
-
-    const relDecisionJson = "artifacts/decisions/module_flow_decision_gate.json";
-    const relDecisionMd = "artifacts/decisions/module_flow_decision_gate.md";
-
-    const decisionJsonAbs = path.resolve(ROOT, relDecisionJson);
-    const decisionMdAbs = path.resolve(ROOT, relDecisionMd);
-
     const intakeText = JSON.stringify(intakeContext, null, 2);
     const stamp = new Date().toISOString();
 
@@ -470,15 +617,6 @@ function runDecisionGate(context) {
     approvedActions.push(cleanRow);
   }
 
-  const decisionsDirAbs = path.resolve(ROOT, "artifacts", "decisions");
-  ensureDir(decisionsDirAbs);
-
-  const relDecisionJson = "artifacts/decisions/module_flow_decision_gate.json";
-  const relDecisionMd = "artifacts/decisions/module_flow_decision_gate.md";
-
-  const decisionJsonAbs = path.resolve(ROOT, relDecisionJson);
-  const decisionMdAbs = path.resolve(ROOT, relDecisionMd);
-
   const actionsText = JSON.stringify(actionsObj, null, 2);
   const intakeText = JSON.stringify(intakeContext, null, 2);
   const stamp = new Date().toISOString();
@@ -552,7 +690,7 @@ function runDecisionGate(context) {
     outputs: { md: relDecisionMd, json: relDecisionJson },
     status_patch: {
       blocking_questions: [],
-      next_step: "MODULE_FLOW — Decision Gate COMPLETE. Next=Backfill (implement backfillEngine + task bridge)."
+      next_step: "MODULE FLOW — Decision Gate COMPLETE. Next=Backfill (implement backfillEngine + task bridge)."
     }
   };
 }

@@ -20,6 +20,24 @@ function readJsonAbs(absPath) {
   return JSON.parse(raw);
 }
 
+function resolveWorkspaceDraftContent(responseRelPath, targetPath) {
+  const responseAbs = path.resolve(ROOT, String(responseRelPath || ""));
+
+  if (!fs.existsSync(responseAbs)) {
+    return null;
+  }
+
+  const payload = readJsonAbs(responseAbs);
+  const files = Array.isArray(payload && payload.files) ? payload.files : [];
+  const match = files.find((item) => String(item && item.path ? item.path : "") === String(targetPath || ""));
+
+  if (!match) {
+    return null;
+  }
+
+  return typeof match.content === "string" ? match.content : null;
+}
+
 function ensureDir(absDir) {
   fs.mkdirSync(absDir, { recursive: true });
 }
@@ -32,7 +50,8 @@ function isDeterministicBackfillCategory(category) {
     c === "GOVERNANCE_MISMATCH" ||
     c === "ORPHAN_ARTIFACT" ||
     c === "ORPHAN_CODE" ||
-    c === "PARTIAL_COVERAGE"
+    c === "PARTIAL_COVERAGE" ||
+    c === "WORKSPACE_CHANGE_REQUEST"
   );
 }
 
@@ -178,7 +197,7 @@ function runBackfill(context) {
   const items = approved
     .filter((row) => isDeterministicBackfillCategory(row.category))
     .map((row, index) => {
-      const targetPath = deriveTargetPath(row);
+      const targetPath = String(row.workspace_target_path || deriveTargetPath(row) || "");
       return {
         seq: index + 1,
         action_id: String(row.action_id || ""),
@@ -191,7 +210,11 @@ function runBackfill(context) {
         reason: String(row.reason || ""),
         affected_entities: Array.isArray(row.affected_entities) ? row.affected_entities.map((x) => String(x)) : [],
         impact_scope: String(row.impact_scope || ""),
-        requires_decision: Boolean(row.requires_decision)
+        requires_decision: Boolean(row.requires_decision),
+        workspace_response_path: typeof row.workspace_response_path === "string" ? row.workspace_response_path : "",
+        workspace_allow_overwrite: row.workspace_allow_overwrite === true,
+        workspace_expected_sha256: typeof row.workspace_expected_sha256 === "string" ? row.workspace_expected_sha256 : "",
+        workspace_source: typeof row.workspace_source === "string" ? row.workspace_source : ""
       };
     });
 
@@ -229,7 +252,14 @@ function runBackfill(context) {
       .map((item) => {
         const affected = Array.isArray(item.affected_entities) ? item.affected_entities : [];
 
-        let target = affected.find((x) => String(x || "").toLowerCase().startsWith("code/"));
+        let target = String(item.target_path || "").trim();
+
+        if (!target) {
+          target = affected.find((x) => {
+            const value = String(x || "").toLowerCase();
+            return value.startsWith("code/") || value.startsWith("web/");
+          });
+        }
 
         if (!target) {
           const fallback = affected[0] || "UNRESOLVED_TARGET";
@@ -238,12 +268,21 @@ function runBackfill(context) {
             .slice(0, 120)}`;
         }
 
+        const desiredContent = item.workspace_response_path
+          ? resolveWorkspaceDraftContent(item.workspace_response_path, target)
+          : null;
+
         return {
           action_id: item.action_id,
           origin_gap_id: item.origin_gap_id,
           target_file: target,
+          target_path: target,
           action_type: item.action_type,
-          deterministic_template_used: item.deterministic_template_used
+          deterministic_template_used: item.deterministic_template_used,
+          desired_content: desiredContent,
+          allow_overwrite: item.workspace_allow_overwrite === true,
+          expected_sha256: item.workspace_expected_sha256 || null,
+          source_type: item.workspace_source || "FORGE"
         };
       })
       .filter(Boolean)

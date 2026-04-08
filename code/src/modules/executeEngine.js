@@ -17,6 +17,23 @@ function ensureDir(absDir) {
   fs.mkdirSync(absDir, { recursive: true });
 }
 
+function resolveSafeTargetPath(targetPath) {
+  const rel = String(targetPath || "").trim();
+
+  if (!rel) {
+    return null;
+  }
+
+  const abs = path.resolve(ROOT, rel);
+  const normalizedRoot = ROOT.endsWith(path.sep) ? ROOT : `${ROOT}${path.sep}`;
+
+  if (abs !== ROOT && !abs.startsWith(normalizedRoot)) {
+    return null;
+  }
+
+  return abs;
+}
+
 function renderExecuteReport(payload) {
   const lines = [];
 
@@ -114,12 +131,86 @@ function runExecute(context) {
     ? backfillPlan.approved_code_actions
     : [];
 
+  const executedActions = [];
+
+  for (const action of actions) {
+    const targetRel = String(action && (action.target_path || action.target_file) ? (action.target_path || action.target_file) : "").trim();
+    const targetAbs = resolveSafeTargetPath(targetRel);
+
+    if (!targetRel || !targetAbs) {
+      return {
+        stage_progress_percent: 100,
+        blocked: true,
+        status_patch: {
+          next_step: "",
+          blocking_questions: [
+            `Execute BLOCKED: invalid target path for action ${String(action && action.action_id ? action.action_id : "UNKNOWN")}`
+          ]
+        }
+      };
+    }
+
+    const wantsWrite = typeof action.desired_content === "string";
+    const existed = fs.existsSync(targetAbs);
+    const oldContent = existed ? fs.readFileSync(targetAbs, "utf8") : "";
+
+    if (wantsWrite && existed && action.allow_overwrite !== true) {
+      return {
+        stage_progress_percent: 100,
+        blocked: true,
+        status_patch: {
+          next_step: "",
+          blocking_questions: [
+            `Execute BLOCKED: overwrite not allowed for ${targetRel}`
+          ]
+        }
+      };
+    }
+
+    let newContent = oldContent;
+    let wroteContent = false;
+
+    if (wantsWrite) {
+      newContent = String(action.desired_content);
+
+      if (action.expected_sha256 && sha256Text(newContent) !== String(action.expected_sha256)) {
+        return {
+          stage_progress_percent: 100,
+          blocked: true,
+          status_patch: {
+            next_step: "",
+            blocking_questions: [
+              `Execute BLOCKED: sha256 mismatch for ${targetRel}`
+            ]
+          }
+        };
+      }
+
+      ensureDir(path.dirname(targetAbs));
+      fs.writeFileSync(targetAbs, newContent, "utf8");
+      wroteContent = true;
+    }
+
+    executedActions.push({
+      action_id: String(action.action_id || ""),
+      origin_gap_id: String(action.origin_gap_id || ""),
+      action_type: String(action.action_type || ""),
+      target_path: targetRel,
+      target_file: targetRel,
+      source_type: String(action.source_type || "FORGE"),
+      deterministic_template_used: action.deterministic_template_used === true,
+      allow_overwrite: action.allow_overwrite === true,
+      wrote_content: wroteContent,
+      old_sha256: existed ? sha256Text(oldContent) : null,
+      new_sha256: wroteContent ? sha256Text(newContent) : (existed ? sha256Text(oldContent) : null)
+    });
+  }
+
   const executeDir = path.resolve(ROOT, "artifacts/execute");
   ensureDir(executeDir);
 
   const executePlanPath = path.resolve(executeDir, "execute_plan.json");
   const executeReportPath = path.resolve(executeDir, "execute_report.md");
-
   const executeDiffPath = path.resolve(executeDir, "execute_diff.md");
   const executeLogPath = path.resolve(executeDir, "execute_log.md");
 
@@ -128,7 +219,7 @@ function runExecute(context) {
     generated_at: new Date().toISOString(),
     operating_mode: mode,
     repository_state: intake.repository_state,
-    approved_code_actions: actions
+    approved_code_actions: executedActions
   };
 
   const intakeText = JSON.stringify(intake, null, 2);
@@ -144,7 +235,7 @@ function runExecute(context) {
       intake_context_path: "artifacts/intake/intake_context.json",
       intake_sha256: sha256Text(intakeText)
     },
-    actions
+    actions: executedActions
   };
 
   fs.writeFileSync(executePlanPath, JSON.stringify(planPayload, null, 2));
@@ -153,23 +244,29 @@ function runExecute(context) {
   const diffLines = [];
   diffLines.push("# Execute Diff");
   diffLines.push("");
-  if (actions.length === 0) {
+
+  if (executedActions.length === 0) {
     diffLines.push("- No changes applied");
   } else {
-    actions.forEach((a) => {
-      diffLines.push(`- ${a.action_id} → ${a.target_path || "(no target)"}`);
+    executedActions.forEach((a) => {
+      diffLines.push(`- ${a.action_id} → ${a.target_path}`);
+      diffLines.push(`  - wrote_content: ${a.wrote_content ? "true" : "false"}`);
+      diffLines.push(`  - old_sha256: ${a.old_sha256 || "null"}`);
+      diffLines.push(`  - new_sha256: ${a.new_sha256 || "null"}`);
     });
   }
+
   fs.writeFileSync(executeDiffPath, diffLines.join("\n"));
 
   const logLines = [];
   logLines.push("# Execute Log");
   logLines.push("");
   logLines.push(`generated_at: ${planPayload.generated_at}`);
-  logLines.push(`actions_count: ${actions.length}`);
-  actions.forEach((a, i) => {
-    logLines.push(`- [${i + 1}] ${a.action_id} (${a.action_type})`);
+  logLines.push(`actions_count: ${executedActions.length}`);
+  executedActions.forEach((a, i) => {
+    logLines.push(`- [${i + 1}] ${a.action_id} (${a.action_type}) -> ${a.target_path}`);
   });
+
   fs.writeFileSync(executeLogPath, logLines.join("\n"));
 
   return {
