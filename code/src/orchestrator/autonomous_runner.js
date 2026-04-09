@@ -10,6 +10,8 @@ const { runDecisionGate } = require("../modules/decisionGate");
 const { runBackfill } = require("../modules/backfillEngine");
 const { runExecute } = require("../modules/executeEngine");
 
+const { runVerify } = require("../modules/verifyEngine");
+
 const ORCHESTRATION_DIR = path.join(process.cwd(), "artifacts", "orchestration");
 const STATE_PATH = path.join(ORCHESTRATION_DIR, "orchestration_state.json");
 const REPORT_PATH = path.join(ORCHESTRATION_DIR, "orchestration_run_report.md");
@@ -120,7 +122,8 @@ function buildStateBase(entry, runContext) {
   const workspaceModules = [
     "WORKSPACE_DECISION_GATE",
     "WORKSPACE_BACKFILL",
-    "WORKSPACE_EXECUTE"
+    "WORKSPACE_EXECUTE",
+    "WORKSPACE_VERIFY"
   ];
   const isWorkspaceRuntime = normalizeEntryType(entry.entry_type) === "WORKSPACE_RUNTIME";
 
@@ -249,7 +252,8 @@ function finalizeWorkspaceRuntimeComplete(state, executionLog) {
   state.completed_modules = [
     "WORKSPACE_DECISION_GATE",
     "WORKSPACE_BACKFILL",
-    "WORKSPACE_EXECUTE"
+    "WORKSPACE_EXECUTE",
+    "WORKSPACE_VERIFY"
   ];
   state.pending_modules = [];
   state.final_outcome = "WORKSPACE_RUNTIME_COMPLETE";
@@ -304,6 +308,11 @@ async function runAutonomous(runContextInput = {}) {
         module_id: "WORKSPACE_EXECUTE",
         task_name: "WORKSPACE_RUNTIME: EXECUTE",
         runner: runExecute
+      },
+      {
+        module_id: "WORKSPACE_VERIFY",
+        task_name: "WORKSPACE_RUNTIME: VERIFY",
+        runner: runVerify
       }
     ];
 

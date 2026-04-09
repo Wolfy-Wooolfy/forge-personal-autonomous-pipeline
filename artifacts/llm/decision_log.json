@@ -87,5 +87,16 @@
     "queued_files": [
       "code/test_workspace_integration.js"
     ]
+  },
+  {
+    "timestamp": "2026-04-09T13:31:11.500Z",
+    "type": "DECISION_PACKET",
+    "decision_packet_id": "workspace_decision_1775741471468",
+    "workspace_id": "personal",
+    "project_id": "forge-personal-autonomous-pipeline",
+    "request": "Overwrite file code/test_workspace_integration.js with:\nconsole.log(\"Workspace → Forge integration test successful v2\");\nallow_overwrite = true",
+    "queued_files": [
+      "code/test_workspace_integration.js"
+    ]
   }
 ]

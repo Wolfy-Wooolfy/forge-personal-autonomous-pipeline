@@ -1,14 +1,14 @@
 {
   "execution_id": "MODULE_FLOW_BACKFILL_v2",
-  "generated_at": "2026-04-09T12:23:50.378Z",
+  "generated_at": "2026-04-09T13:31:31.072Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "source": {
     "decision_gate_path": "artifacts/decisions/module_flow_decision_gate.json",
-    "decision_gate_sha256": "67b34c919cbded1113786201c7d35422b92e2660b79ef7601670e0df1293a719",
+    "decision_gate_sha256": "ebdac8590a3fdddf102c1c2e2418649514e879bbc45e1ffbfbe25424833f7af2",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84",
-    "workspace_execution_id": "workspace_decision_1775732810861"
+    "workspace_execution_id": "workspace_decision_1775741471468"
   },
   "approved_code_actions": [
     {
@@ -18,10 +18,10 @@
       "target_path": "code/test_workspace_integration.js",
       "action_type": "BACKFILL_RECONCILIATION",
       "deterministic_template_used": true,
-      "desired_content": "console.log(\"Workspace → Forge integration test successful\");",
+      "desired_content": "console.log(\"Workspace → Forge integration test successful v2\");",
       "allow_overwrite": true,
-      "expected_sha256": "bc15947870811f29ede57690f5048086e3f0a39bcb86c6a4e0aa1f25ad4f4d89",
-      "workspace_execution_id": "workspace_decision_1775732810861",
+      "expected_sha256": "33e48e1226ce0776598dda6a0aa840eca9dc2f210e0d3d110d394774732e133f",
+      "workspace_execution_id": "workspace_decision_1775741471468",
       "source_type": "EXTERNAL_AI_WORKSPACE"
     }
   ]

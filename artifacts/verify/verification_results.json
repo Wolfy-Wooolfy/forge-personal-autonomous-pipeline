@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-05T18:48:11.267Z",
+  "generated_at": "2026-04-09T13:31:31.101Z",
   "blocked": false,
   "status": "PASS",
   "outcome": "PASS",
   "final_outcome": "PASS",
   "summary": {
-    "total_checks": 18,
+    "total_checks": 21,
     "failed_checks": 0
   },
   "closure_gate": {
@@ -63,12 +63,27 @@
     {
       "name": "decision_artifact_present",
       "passed": true,
-      "detail": "artifacts/decisions/module_flow_decision_gate.json"
+      "detail": "artifacts/decisions/decision_packet.json, artifacts/decisions/module_flow_decision_gate.json"
     },
     {
       "name": "execute_plan_matches_backfill_plan",
       "passed": true,
-      "detail": "backfill_actions=0; execute_actions=0"
+      "detail": "backfill_actions=1; execute_actions=1"
+    },
+    {
+      "name": "decision_gate_matches_backfill_plan",
+      "passed": true,
+      "detail": "decision_actions=1; backfill_actions=1"
+    },
+    {
+      "name": "workspace_runtime_execution_id_consistent",
+      "passed": true,
+      "detail": "decision=workspace_decision_1775741471468; backfill=workspace_decision_1775741471468; execute=workspace_decision_1775741471468"
+    },
+    {
+      "name": "workspace_runtime_write_applied",
+      "passed": true,
+      "detail": "execute_actions=1; wrote_content_all=true"
     },
     {
       "name": "gap_count_zero",

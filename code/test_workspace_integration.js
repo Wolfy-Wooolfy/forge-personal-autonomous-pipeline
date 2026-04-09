@@ -1,1 +1,1 @@
-console.log("Workspace → Forge integration test successful");
+console.log("Workspace → Forge integration test successful v2");

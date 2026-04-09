@@ -1,14 +1,14 @@
 {
   "backfill_id": "MODULE_FLOW_BACKFILL_v2",
-  "generated_at": "2026-04-09T12:23:50.378Z",
+  "generated_at": "2026-04-09T13:31:31.072Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "source": {
     "decision_gate_path": "artifacts/decisions/module_flow_decision_gate.json",
-    "decision_gate_sha256": "67b34c919cbded1113786201c7d35422b92e2660b79ef7601670e0df1293a719",
+    "decision_gate_sha256": "ebdac8590a3fdddf102c1c2e2418649514e879bbc45e1ffbfbe25424833f7af2",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84",
-    "workspace_execution_id": "workspace_decision_1775732810861"
+    "workspace_execution_id": "workspace_decision_1775741471468"
   },
   "summary": {
     "approved_actions_seen": 1,
