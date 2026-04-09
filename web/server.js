@@ -16,7 +16,8 @@ const llmRoot = path.resolve(root, "artifacts/llm");
 const allowedWriteRoots = [
   path.resolve(root, "artifacts/llm"),
   path.resolve(root, "web"),
-  path.resolve(root, "code/tools")
+  path.resolve(root, "code/tools"),
+  path.resolve(root, "code")
 ];
 
 const decisionsRoot = path.resolve(root, "artifacts/decisions");
