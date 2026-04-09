@@ -206,10 +206,70 @@ function runVerify(context) {
         ? executePlan.plan.actions
         : [];
 
+  const decisionGateRel = "artifacts/decisions/module_flow_decision_gate.json";
+  let decisionGateJson = null;
+
+  try {
+    if (fileExists(decisionGateRel)) {
+      decisionGateJson = readJson(decisionGateRel);
+    }
+  } catch (e) {}
+
+  const decisionApprovedActions = Array.isArray(decisionGateJson && decisionGateJson.approved_actions)
+    ? decisionGateJson.approved_actions
+    : [];
+
+  const workspaceExecutionIdFromDecision =
+    decisionGateJson &&
+    decisionGateJson.source &&
+    typeof decisionGateJson.source.decision_packet_execution_id === "string"
+      ? decisionGateJson.source.decision_packet_execution_id
+      : "";
+
+  const workspaceExecutionIdFromBackfill =
+    backfillPlan &&
+    backfillPlan.source &&
+    typeof backfillPlan.source.workspace_execution_id === "string"
+      ? backfillPlan.source.workspace_execution_id
+      : "";
+
+  const workspaceExecutionIdFromExecute =
+    executePlan &&
+    executePlan.source &&
+    typeof executePlan.source.workspace_execution_id === "string"
+      ? executePlan.source.workspace_execution_id
+      : "";
+
+  const activeWorkspaceExecutionId =
+    workspaceExecutionIdFromExecute ||
+    workspaceExecutionIdFromBackfill ||
+    workspaceExecutionIdFromDecision ||
+    "";
+
   addCheck(
     "execute_plan_matches_backfill_plan",
     backfillPlan !== null && executePlan !== null && backfillActions.length === executeActions.length,
     `backfill_actions=${backfillActions.length}; execute_actions=${executeActions.length}`
+  );
+
+    addCheck(
+    "decision_gate_matches_backfill_plan",
+    decisionGateJson !== null && decisionApprovedActions.length === backfillActions.length,
+    `decision_actions=${decisionApprovedActions.length}; backfill_actions=${backfillActions.length}`
+  );
+
+  addCheck(
+    "workspace_runtime_execution_id_consistent",
+    activeWorkspaceExecutionId !== "" &&
+      workspaceExecutionIdFromBackfill === activeWorkspaceExecutionId &&
+      workspaceExecutionIdFromExecute === activeWorkspaceExecutionId,
+    `decision=${workspaceExecutionIdFromDecision || "NONE"}; backfill=${workspaceExecutionIdFromBackfill || "NONE"}; execute=${workspaceExecutionIdFromExecute || "NONE"}`
+  );
+
+  addCheck(
+    "workspace_runtime_write_applied",
+    executeActions.length === 0 || executeActions.every((action) => action && action.wrote_content === true),
+    `execute_actions=${executeActions.length}; wrote_content_all=${executeActions.length === 0 ? "n/a" : (executeActions.every((action) => action && action.wrote_content === true) ? "true" : "false")}`
   );
 
   const gapMetrics = gapJson ? getGapMetrics(gapJson) : null;
@@ -247,9 +307,10 @@ function runVerify(context) {
   );
 
   results.closure_gate.execute_artifacts_complete =
-    fileExists("artifacts/execute/execute_plan.json") &&
+    fileExists(executePlanRel) &&
     fileExists("artifacts/execute/execute_diff.md") &&
-    fileExists("artifacts/execute/execute_log.md");
+    fileExists("artifacts/execute/execute_log.md") &&
+    backfillActions.length === executeActions.length;
 
   results.closure_gate.decision_artifact_present = decisionArtifactPresent;
 

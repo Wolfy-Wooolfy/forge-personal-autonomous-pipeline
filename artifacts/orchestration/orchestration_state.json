@@ -1,21 +1,30 @@
 {
-  "run_id": "RUN-1775737430315",
-  "run_mode": "WORKSPACE_RUNTIME",
-  "started_at": "2026-04-09T12:23:50.315Z",
-  "last_updated_at": "2026-04-09T12:23:50.404Z",
+  "run_id": "RUN-1775739838235",
+  "run_mode": "COMPLETE",
+  "started_at": "2026-04-09T13:03:58.237Z",
+  "last_updated_at": "2026-04-09T13:03:58.315Z",
   "status": "COMPLETE",
   "blocked": false,
   "blocking_reason": "",
-  "reason": "Pending workspace decision packet detected",
-  "entry_type": "WORKSPACE_RUNTIME",
+  "reason": "PIPELINE COMPLETE",
+  "pipeline_contract_violation": null,
+  "entry_type": "COMPLETE",
   "next_task": null,
   "next_module": null,
   "current_module": null,
   "completed_modules": [
-    "WORKSPACE_DECISION_GATE",
-    "WORKSPACE_BACKFILL",
-    "WORKSPACE_EXECUTE"
+    "INTAKE",
+    "AUDIT",
+    "TRACE",
+    "GAP",
+    "DESIGN_EXPLORATION",
+    "DECISION_GATE",
+    "BACKFILL",
+    "EXECUTE",
+    "VERIFY",
+    "CLOSURE",
+    "VISION_COMPLIANCE"
   ],
   "pending_modules": [],
-  "final_outcome": "WORKSPACE_RUNTIME_COMPLETE"
+  "final_outcome": "COMPLETE"
 }
