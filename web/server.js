@@ -22,6 +22,8 @@ const allowedWriteRoots = [
 
 const decisionsRoot = path.resolve(root, "artifacts/decisions");
 
+const approvalPolicyPath = path.resolve(root, "artifacts/llm/approval_policy.json");
+
 function ensureDir(dirPath) {
   fs.mkdirSync(dirPath, { recursive: true });
 }
@@ -77,8 +79,95 @@ function normalizeDraftFiles(files) {
   });
 }
 
-function createDecisionPacket(draft, userRequest) {
+function uniqueLower(values) {
+  return Array.from(new Set(
+    (Array.isArray(values) ? values : [])
+      .map(value => String(value || "").trim().toLowerCase())
+      .filter(Boolean)
+  ));
+}
+
+function loadApprovalPolicy() {
+  const fallback = {
+    version: "1.0",
+    available_roles: ["cto"],
+    default_required_roles: ["cto"],
+    path_rules: []
+  };
+
+  if (!fs.existsSync(approvalPolicyPath)) {
+    return fallback;
+  }
+
+  try {
+    const parsed = JSON.parse(fs.readFileSync(approvalPolicyPath, "utf-8"));
+
+    return {
+      version: typeof parsed.version === "string" ? parsed.version : "1.0",
+      available_roles: uniqueLower(parsed.available_roles),
+      default_required_roles: uniqueLower(parsed.default_required_roles).length > 0
+        ? uniqueLower(parsed.default_required_roles)
+        : ["cto"],
+      path_rules: Array.isArray(parsed.path_rules)
+        ? parsed.path_rules.map(rule => ({
+            match_prefix: typeof rule.match_prefix === "string" ? rule.match_prefix.trim().replace(/\\/g, "/") : "",
+            required_roles: uniqueLower(rule.required_roles)
+          })).filter(rule => rule.match_prefix && rule.required_roles.length > 0)
+        : []
+    };
+  } catch (err) {
+    return fallback;
+  }
+}
+
+function resolveRequiredRolesForFiles(files) {
+  const policy = loadApprovalPolicy();
+  const matchedRoles = new Set();
+
+  (Array.isArray(files) ? files : []).forEach(file => {
+    const relPath = String(file && file.path ? file.path : "").trim().replace(/\\/g, "/");
+
+    policy.path_rules.forEach(rule => {
+      if (relPath.startsWith(rule.match_prefix)) {
+        rule.required_roles.forEach(role => matchedRoles.add(role));
+      }
+    });
+  });
+
+  const requiredRoles = matchedRoles.size > 0
+    ? Array.from(matchedRoles)
+    : policy.default_required_roles;
+
+  return {
+    policy_version: policy.version,
+    available_roles: policy.available_roles,
+    required_roles: requiredRoles
+  };
+}
+
+function assertApproverRoleAllowed(approverRole, requiredRoles) {
+  const normalizedRole = String(approverRole || "").trim().toLowerCase();
+
+  if (!normalizedRole) {
+    throw new Error("Approver role is required");
+  }
+
+  if (!Array.isArray(requiredRoles) || requiredRoles.length === 0) {
+    throw new Error("Approval policy resolution failed");
+  }
+
+  if (!requiredRoles.includes(normalizedRole)) {
+    throw new Error(`Approval blocked for role: ${normalizedRole}`);
+  }
+
+  return normalizedRole;
+}
+
+function createDecisionPacket(draft, userRequest, approverRole) {
   const normalizedFiles = normalizeDraftFiles(draft.files);
+
+  const approvalPolicy = resolveRequiredRolesForFiles(normalizedFiles);
+  const approvedByRole = assertApproverRoleAllowed(approverRole, approvalPolicy.required_roles);
 
   const diffs = normalizedFiles.map(file => {
     let oldContent = "";
@@ -123,6 +212,12 @@ function createDecisionPacket(draft, userRequest) {
     workspace_id: workspaceId,
     project_id: projectId,
     source: "EXTERNAL_AI_WORKSPACE",
+    approval: {
+      policy_version: approvalPolicy.policy_version,
+      approved_by_role: approvedByRole,
+      required_roles: approvalPolicy.required_roles,
+      approved_at: new Date().toISOString()
+    },
     triggering_gaps: [
       "WORKSPACE_CHANGE_REQUEST"
     ],
@@ -150,6 +245,9 @@ function createDecisionPacket(draft, userRequest) {
 
   fs.writeFileSync(requestPath, JSON.stringify({
     request: userRequest || "",
+    approver_role: approvedByRole,
+    required_roles: approvalPolicy.required_roles,
+    approval_policy_version: approvalPolicy.policy_version,
     approved_at: new Date().toISOString(),
     workspace_id: workspaceId,
     project_id: projectId
@@ -170,6 +268,9 @@ function createDecisionPacket(draft, userRequest) {
     ok: true,
     entry_type: "DECISION_PACKET",
     decision_packet_id: decisionPacketId,
+    approver_role: approvedByRole,
+    required_roles: approvalPolicy.required_roles,
+    approval_policy_version: approvalPolicy.policy_version,
     decision_packet_paths: [
       decisionPacketJsonRel,
       decisionPacketMdRel
@@ -185,6 +286,9 @@ function createDecisionPacket(draft, userRequest) {
     timestamp: new Date().toISOString(),
     type: "DECISION_PACKET",
     decision_packet_id: decisionPacketId,
+    approver_role: approvedByRole,
+    required_roles: approvalPolicy.required_roles,
+    approval_policy_version: approvalPolicy.policy_version,
     workspace_id: workspaceId,
     project_id: projectId,
     request: userRequest || "",
@@ -231,6 +335,9 @@ function getRecentWrites(limit = 10) {
         entry_type: isDecision ? "DECISION_PACKET" : "WRITE",
         write_id: typeof data.write_id === "string" ? data.write_id : "",
         decision_packet_id: typeof data.decision_packet_id === "string" ? data.decision_packet_id : "",
+        approver_role: typeof data.approver_role === "string" ? data.approver_role : "",
+        required_roles: Array.isArray(data.required_roles) ? data.required_roles : [],
+        approval_policy_version: typeof data.approval_policy_version === "string" ? data.approval_policy_version : "",
         written_files: Array.isArray(data.written_files) ? data.written_files : [],
         queued_files: Array.isArray(data.queued_files) ? data.queued_files : [],
         summary: typeof data.summary === "string" ? data.summary : "",
@@ -470,6 +577,12 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
+    if (req.method === "GET" && req.url === "/api/ai/approval-policy") {
+      const policy = loadApprovalPolicy();
+      sendJson(res, 200, policy);
+      return;
+    }
+    
     if (req.method === "POST" && req.url === "/api/ai/draft") {
       if (!process.env.OPENAI_API_KEY) {
         sendJson(res, 500, { error: "OPENAI_API_KEY is not set" });
@@ -518,6 +631,8 @@ const server = http.createServer(async (req, res) => {
 
       const normalizedFiles = normalizeDraftFiles(draft.files);
 
+      const approvalPolicy = resolveRequiredRolesForFiles(normalizedFiles);
+
       const diffs = normalizedFiles.map(file => {
         let oldContent = "";
 
@@ -535,7 +650,12 @@ const server = http.createServer(async (req, res) => {
         };
       });
 
-      sendJson(res, 200, { diffs });
+      sendJson(res, 200, {
+        diffs,
+        approval_policy_version: approvalPolicy.policy_version,
+        available_roles: approvalPolicy.available_roles,
+        required_roles: approvalPolicy.required_roles
+      });
       return;
     }
 
@@ -553,12 +673,14 @@ const server = http.createServer(async (req, res) => {
       const draft = body && typeof body === "object" ? body.draft : null;
       const userRequest = typeof body.request === "string" ? body.request.trim() : "";
 
+      const approverRole = typeof body.approver_role === "string" ? body.approver_role.trim() : "";
+
       if (!draft || typeof draft !== "object") {
         sendJson(res, 400, { error: "Draft payload is required" });
         return;
       }
 
-      const result = createDecisionPacket(draft, userRequest);
+      const result = createDecisionPacket(draft, userRequest, approverRole);
       sendJson(res, 200, result);
       return;
     }

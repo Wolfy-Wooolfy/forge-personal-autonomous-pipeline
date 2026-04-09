@@ -63,10 +63,9 @@
       color: #cbd5e1;
     }
 
-    textarea {
+    textarea,
+    select {
       width: 100%;
-      min-height: 260px;
-      resize: vertical;
       border-radius: 12px;
       border: 1px solid #334155;
       background: #0b1220;
@@ -77,7 +76,13 @@
       outline: none;
     }
 
-    textarea:focus {
+    textarea {
+      min-height: 260px;
+      resize: vertical;
+    }
+
+    textarea:focus,
+    select:focus {
       border-color: #38bdf8;
     }
 
@@ -217,6 +222,15 @@
           <div class="file-card empty">No files proposed yet.</div>
         </div>
 
+        <div class="section">
+          <h2>Approval</h2>
+          <label for="approverRoleSelect">Approver role</label>
+          <select id="approverRoleSelect">
+            <option value="cto">cto</option>
+          </select>
+          <div id="approvalInfoBox" class="output-box empty">Approval policy not loaded yet.</div>
+        </div>
+
         <div class="actions">
           <button id="approveBtn" class="primary" disabled>Approve & Queue Decision</button>
           <button id="rejectBtn" class="danger" disabled>Reject</button>
@@ -245,16 +259,20 @@
     const clearBtn = document.getElementById("clearBtn");
     const approveBtn = document.getElementById("approveBtn");
     const rejectBtn = document.getElementById("rejectBtn");
+    const approverRoleSelect = document.getElementById("approverRoleSelect");
     const statusBox = document.getElementById("statusBox");
     const responseBox = document.getElementById("responseBox");
     const filesBox = document.getElementById("filesBox");
     const historyBox = document.getElementById("historyBox");
     const previewBox = document.getElementById("previewBox");
+    const approvalInfoBox = document.getElementById("approvalInfoBox");
 
     let currentDraft = null;
 
     let currentRequest = "";
     let currentPreview = [];
+    let currentRequiredRoles = [];
+    let currentApprovalPolicyVersion = "";
 
     function setStatus(text) {
       statusBox.textContent = text;
@@ -300,6 +318,36 @@
       });
     }
 
+        function renderApprovalInfo(requiredRoles, policyVersion) {
+      const roles = Array.isArray(requiredRoles) ? requiredRoles : [];
+      const selectedRole = String(approverRoleSelect.value || "").trim();
+
+      approvalInfoBox.textContent =
+        `Policy version: ${policyVersion || "unknown"}\n` +
+        `Required roles: ${roles.join(", ") || "none"}\n` +
+        `Selected role: ${selectedRole || "none"}`;
+
+      approvalInfoBox.classList.remove("empty");
+    }
+
+    function populateApproverRoles(roles) {
+      const normalized = Array.isArray(roles) && roles.length > 0 ? roles : ["cto"];
+      const previousValue = approverRoleSelect.value;
+
+      approverRoleSelect.innerHTML = "";
+
+      normalized.forEach((role) => {
+        const option = document.createElement("option");
+        option.value = role;
+        option.textContent = role;
+        approverRoleSelect.appendChild(option);
+      });
+
+      if (normalized.includes(previousValue)) {
+        approverRoleSelect.value = previousValue;
+      }
+    }
+
     function renderHistory(items) {
       historyBox.innerHTML = "";
 
@@ -328,6 +376,8 @@
         summaryEl.textContent =
         `Type: ${item.entry_type || "UNKNOWN"}\n` +
         `Time: ${item.logged_at || ""}\n` +
+        `Approver role: ${item.approver_role || "n/a"}\n` +
+        `Required roles: ${(item.required_roles || []).join(", ") || "n/a"}\n` +
         `Files: ${files.join(", ") || "None"}\n` +
         `Summary: ${item.summary || ""}`;
 
@@ -397,7 +447,11 @@
       }
 
       currentPreview = Array.isArray(data.diffs) ? data.diffs : [];
+      currentRequiredRoles = Array.isArray(data.required_roles) ? data.required_roles : [];
+      currentApprovalPolicyVersion = typeof data.approval_policy_version === "string" ? data.approval_policy_version : "";
+      populateApproverRoles(Array.isArray(data.available_roles) ? data.available_roles : ["cto"]);
       renderPreview(currentPreview);
+      renderApprovalInfo(currentRequiredRoles, currentApprovalPolicyVersion);
     }
 
     async function loadHistory() {
