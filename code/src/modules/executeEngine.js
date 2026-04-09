@@ -222,6 +222,9 @@ function runExecute(context) {
     actions.find((action) => typeof action.workspace_execution_id === "string" && action.workspace_execution_id.trim() !== "")
       ?.workspace_execution_id || null;
 
+  const intakeText = JSON.stringify(intake, null, 2);
+  const backfillText = JSON.stringify(backfillPlan, null, 2);
+
   const planPayload = {
     execution_id: "MODULE_FLOW_EXECUTE_v1",
     generated_at: new Date().toISOString(),
@@ -236,9 +239,6 @@ function runExecute(context) {
     },
     approved_code_actions: executedActions
   };
-
-  const intakeText = JSON.stringify(intake, null, 2);
-  const backfillText = JSON.stringify(backfillPlan, null, 2);
 
   const reportPayload = {
     generated_at: planPayload.generated_at,
