@@ -11,6 +11,9 @@ const REPOSITORY_HASH_SNAPSHOT_PATH = path.join(process.cwd(), "artifacts", "rel
 const CLOSURE_REPORT_PATH = path.join(process.cwd(), "artifacts", "closure", "closure_report.md");
 const VERIFY_RESULTS_PATH = path.join(process.cwd(), "artifacts", "verify", "verification_results.json");
 
+const DECISION_PACKET_PATH = path.join(process.cwd(), "artifacts", "decisions", "decision_packet.json");
+const EXECUTE_PLAN_PATH = path.join(process.cwd(), "artifacts", "execute", "execute_plan.json");
+
 function safeReadJson(absPath) {
   try {
     if (!fs.existsSync(absPath)) {
@@ -170,6 +173,46 @@ function hasLaterClosureAfterGap(pipeline, closureFiles, contiguousClosedIndex) 
   return false;
 }
 
+function readPendingWorkspaceRuntime() {
+  const packet = safeReadJson(DECISION_PACKET_PATH);
+
+  if (!packet || typeof packet !== "object") {
+    return null;
+  }
+
+  if (String(packet.source || "") !== "EXTERNAL_AI_WORKSPACE") {
+    return null;
+  }
+
+  const executionId = String(packet.execution_id || "").trim();
+
+  if (!executionId) {
+    return null;
+  }
+
+  const proposedFiles = Array.isArray(packet.proposed_files) ? packet.proposed_files : [];
+
+  if (proposedFiles.length === 0) {
+    return null;
+  }
+
+  const executePlan = safeReadJson(EXECUTE_PLAN_PATH);
+  const executedWorkspaceId =
+    executePlan &&
+    executePlan.source &&
+    typeof executePlan.source.workspace_execution_id === "string"
+      ? executePlan.source.workspace_execution_id.trim()
+      : "";
+
+  if (executedWorkspaceId && executedWorkspaceId === executionId) {
+    return null;
+  }
+
+  return {
+    execution_id: executionId
+  };
+}
+
 function resolveEntry() {
   const forgeState = readForgeState();
   const pipeline = getPipeline();
@@ -207,6 +250,19 @@ function resolveEntry() {
   }
 
   if (allClosed) {
+    const pendingWorkspaceRuntime = readPendingWorkspaceRuntime();
+
+    if (pendingWorkspaceRuntime) {
+      return {
+        entry_type: "WORKSPACE_RUNTIME",
+        next_module: "WORKSPACE_RUNTIME",
+        next_task: "WORKSPACE_RUNTIME: APPLY DECISION PACKET",
+        blocked: false,
+        reason: "Pending workspace decision packet detected",
+        workspace_execution_id: pendingWorkspaceRuntime.execution_id
+      };
+    }
+
     return {
       entry_type: "COMPLETE",
       next_module: null,

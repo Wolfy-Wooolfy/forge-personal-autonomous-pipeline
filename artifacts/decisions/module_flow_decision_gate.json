@@ -1,6 +1,6 @@
 {
   "decision_id": "MODULE_FLOW_DECISION_GATE",
-  "timestamp": "2026-04-05T18:48:11.205Z",
+  "timestamp": "2026-04-09T12:17:24.151Z",
   "task": "TASK-052",
   "policy": "AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK",
   "operating_mode": "IMPROVE",
@@ -9,18 +9,42 @@
   "override_source": "NONE",
   "override_raw": "",
   "source": {
-    "exploration_matrix_path": "artifacts/exploration/option_matrix.json",
-    "exploration_matrix_sha256": "4ca97fcec1b4441a6fca7118a80b4f29ba9729aac1e32271e50361a97da17da5",
+    "source_type": "DECISION_PACKET",
+    "decision_packet_path": "artifacts/decisions/decision_packet.json",
+    "decision_packet_execution_id": "workspace_decision_1775732810861",
+    "decision_packet_sha256": "a83197e8d5ff7bcff6dd746212c84d44c85bf0a0a59aa757acfd121c2afcfce8",
+    "workspace_response_path": "artifacts/llm/responses/workspace_decision_1775732810861.response.json",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84"
   },
   "summary": {
-    "total_actions": 0,
-    "approved_count": 0,
+    "total_actions": 1,
+    "approved_count": 1,
     "review_required_count": 0,
     "rejected_count": 0
   },
-  "approved_actions": [],
+  "approved_actions": [
+    {
+      "gap_id": "WORKSPACE_CHANGE_REQUEST",
+      "category": "WORKSPACE_CHANGE_REQUEST",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/test_workspace_integration.js"
+      ],
+      "action_id": "WORKSPACE_ACTION_1",
+      "description": "Apply governed workspace draft to code/test_workspace_integration.js",
+      "impact_scope": "CODE_WRITE",
+      "requires_decision": false,
+      "cognitive_priority_hint": null,
+      "reason": "governed workspace decision packet approved",
+      "workspace_source": "EXTERNAL_AI_WORKSPACE",
+      "workspace_execution_id": "workspace_decision_1775732810861",
+      "workspace_response_path": "artifacts/llm/responses/workspace_decision_1775732810861.response.json",
+      "workspace_allow_overwrite": true,
+      "workspace_expected_sha256": "bc15947870811f29ede57690f5048086e3f0a39bcb86c6a4e0aa1f25ad4f4d89",
+      "workspace_target_path": "code/test_workspace_integration.js"
+    }
+  ],
   "review_required_actions": [],
   "rejected_actions": [],
   "blocked": false

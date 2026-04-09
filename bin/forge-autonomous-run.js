@@ -54,7 +54,7 @@ function writeStatusReflectionFromAuthority({
   });
 }
 
-function syncLiveStatusFromForgeState() {
+function syncLiveStatusFromForgeState(result) {
   if (!fs.existsSync(FORGE_STATE_PATH)) {
     return;
   }
@@ -65,6 +65,33 @@ function syncLiveStatusFromForgeState() {
     String(forgeState.next_allowed_step || "").trim().toUpperCase() === "COMPLETE";
 
   if (!isComplete) {
+    return;
+  }
+
+  const isWorkspaceRuntime =
+    result &&
+    typeof result === "object" &&
+    (
+      String(result.run_mode || "").toUpperCase() === "WORKSPACE_RUNTIME" ||
+      String(result.entry_type || "").toUpperCase() === "WORKSPACE_RUNTIME" ||
+      String(result.final_outcome || "").toUpperCase() === "WORKSPACE_RUNTIME_COMPLETE"
+    );
+
+  if (isWorkspaceRuntime) {
+    const orchestrationState = fs.existsSync(ORCHESTRATION_STATE_PATH)
+      ? JSON.parse(fs.readFileSync(ORCHESTRATION_STATE_PATH, "utf8"))
+      : {};
+
+    writeStatusReflectionFromAuthority({
+      forgeState,
+      orchestrationState,
+      currentTask: "",
+      completed: true,
+      blocked: false,
+      blockingReason: ""
+    });
+
+    console.log(`[FORGE] ${RUN_CONTEXT.run_id}: WORKSPACE RUNTIME COMPLETE`);
     return;
   }
 
@@ -267,7 +294,7 @@ Promise.resolve()
       );
     }
 
-    syncLiveStatusFromForgeState();
+    syncLiveStatusFromForgeState(result);
   })
   .then(() => {
     process.exit(0);

@@ -211,6 +211,7 @@ function runBackfill(context) {
         affected_entities: Array.isArray(row.affected_entities) ? row.affected_entities.map((x) => String(x)) : [],
         impact_scope: String(row.impact_scope || ""),
         requires_decision: Boolean(row.requires_decision),
+        workspace_execution_id: typeof row.workspace_execution_id === "string" ? row.workspace_execution_id : "",
         workspace_response_path: typeof row.workspace_response_path === "string" ? row.workspace_response_path : "",
         workspace_allow_overwrite: row.workspace_allow_overwrite === true,
         workspace_expected_sha256: typeof row.workspace_expected_sha256 === "string" ? row.workspace_expected_sha256 : "",
@@ -246,7 +247,10 @@ function runBackfill(context) {
       decision_gate_path: "artifacts/decisions/module_flow_decision_gate.json",
       decision_gate_sha256: sha256Text(decisionText),
       intake_context_path: "artifacts/intake/intake_context.json",
-      intake_context_sha256: sha256Text(intakeText)
+      intake_context_sha256: sha256Text(intakeText),
+      workspace_execution_id:
+        items.find((item) => typeof item.workspace_execution_id === "string" && item.workspace_execution_id.trim() !== "")
+          ?.workspace_execution_id || null
     },
     approved_code_actions: items
       .map((item) => {
@@ -282,6 +286,7 @@ function runBackfill(context) {
           desired_content: desiredContent,
           allow_overwrite: item.workspace_allow_overwrite === true,
           expected_sha256: item.workspace_expected_sha256 || null,
+          workspace_execution_id: item.workspace_execution_id || null,
           source_type: item.workspace_source || "FORGE"
         };
       })

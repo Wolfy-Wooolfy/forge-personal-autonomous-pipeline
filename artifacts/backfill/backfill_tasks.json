@@ -1,19 +1,38 @@
 {
   "backfill_id": "MODULE_FLOW_BACKFILL_v2",
-  "generated_at": "2026-04-05T18:48:11.212Z",
+  "generated_at": "2026-04-09T12:17:24.167Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "source": {
     "decision_gate_path": "artifacts/decisions/module_flow_decision_gate.json",
-    "decision_gate_sha256": "589ff9f7d096058f45b83ba32c96a5644215a72dc7b3be6b1cdf5a18bd92886d",
+    "decision_gate_sha256": "d04d650fd9cb06af1bf4cb23a66a58a1808542a2dd7b443d5edb04663ae463f7",
     "intake_context_path": "artifacts/intake/intake_context.json",
-    "intake_context_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84"
+    "intake_context_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84",
+    "workspace_execution_id": "workspace_decision_1775732810861"
   },
   "summary": {
-    "approved_actions_seen": 0,
-    "deterministic_backfill_actions": 0,
+    "approved_actions_seen": 1,
+    "deterministic_backfill_actions": 1,
     "excluded_non_backfill_actions": 0,
-    "items_emitted": 0
+    "items_emitted": 1
   },
-  "items": []
+  "items": [
+    {
+      "gap_id": "WORKSPACE_CHANGE_REQUEST",
+      "category": "WORKSPACE_CHANGE_REQUEST",
+      "severity": "MEDIUM",
+      "affected_entities": [
+        "code/test_workspace_integration.js"
+      ],
+      "action": {
+        "action_id": "WORKSPACE_ACTION_1",
+        "description": "governed workspace decision packet approved",
+        "impact_scope": "CODE_WRITE",
+        "requires_decision": false,
+        "target_path": "code/test_workspace_integration.js",
+        "action_type": "BACKFILL_RECONCILIATION",
+        "deterministic_template_used": true
+      }
+    }
+  ]
 }

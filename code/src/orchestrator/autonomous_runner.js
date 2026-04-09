@@ -6,6 +6,10 @@ const { getPipeline } = require("./pipeline_definition");
 const { runTaskByName } = require("./runner");
 const { writeForgeState } = require("../forge/forge_state_writer");
 
+const { runDecisionGate } = require("../modules/decisionGate");
+const { runBackfill } = require("../modules/backfillEngine");
+const { runExecute } = require("../modules/executeEngine");
+
 const ORCHESTRATION_DIR = path.join(process.cwd(), "artifacts", "orchestration");
 const STATE_PATH = path.join(ORCHESTRATION_DIR, "orchestration_state.json");
 const REPORT_PATH = path.join(ORCHESTRATION_DIR, "orchestration_run_report.md");
@@ -27,7 +31,13 @@ function makeRunId() {
 function normalizeEntryType(entryType) {
   const value = String(entryType || "").toUpperCase();
 
-  if (value === "FRESH" || value === "RESUME" || value === "COMPLETE" || value === "BLOCKED") {
+  if (
+    value === "FRESH" ||
+    value === "RESUME" ||
+    value === "COMPLETE" ||
+    value === "BLOCKED" ||
+    value === "WORKSPACE_RUNTIME"
+  ) {
     return value;
   }
 
@@ -83,6 +93,10 @@ function assertForgeGovernanceGate(entry) {
   }
 
   if (nextAllowedStep === "COMPLETE") {
+    if (entryType === "WORKSPACE_RUNTIME") {
+      return;
+    }
+
     throw new Error("FORGE GOVERNANCE BLOCK: forge build state is COMPLETE but autonomous entry is not COMPLETE");
   }
 
@@ -103,6 +117,12 @@ function assertForgeGovernanceGate(entry) {
 
 function buildStateBase(entry, runContext) {
   const pipeline = getPipeline();
+  const workspaceModules = [
+    "WORKSPACE_DECISION_GATE",
+    "WORKSPACE_BACKFILL",
+    "WORKSPACE_EXECUTE"
+  ];
+  const isWorkspaceRuntime = normalizeEntryType(entry.entry_type) === "WORKSPACE_RUNTIME";
 
   return {
     run_id: runContext.run_id,
@@ -118,7 +138,7 @@ function buildStateBase(entry, runContext) {
     next_module: entry.next_module || null,
     current_module: null,
     completed_modules: [],
-    pending_modules: pipeline.map((item) => item.module_id),
+    pending_modules: isWorkspaceRuntime ? workspaceModules : pipeline.map((item) => item.module_id),
     final_outcome: null
   };
 }
@@ -219,6 +239,25 @@ function finalizeComplete(state, executionLog) {
   return state;
 }
 
+function finalizeWorkspaceRuntimeComplete(state, executionLog) {
+  state.status = "COMPLETE";
+  state.blocked = false;
+  state.blocking_reason = "";
+  state.current_module = null;
+  state.next_task = null;
+  state.next_module = null;
+  state.completed_modules = [
+    "WORKSPACE_DECISION_GATE",
+    "WORKSPACE_BACKFILL",
+    "WORKSPACE_EXECUTE"
+  ];
+  state.pending_modules = [];
+  state.final_outcome = "WORKSPACE_RUNTIME_COMPLETE";
+  writeState(state);
+  writeReport(state, executionLog);
+  return state;
+}
+
 async function runAutonomous(runContextInput = {}) {
   const entry = resolveEntry();
 
@@ -247,6 +286,95 @@ async function runAutonomous(runContextInput = {}) {
 
   if (entry.entry_type === "COMPLETE") {
     return finalizeComplete(state, executionLog);
+  }
+
+  if (entry.entry_type === "WORKSPACE_RUNTIME") {
+    const workspaceSteps = [
+      {
+        module_id: "WORKSPACE_DECISION_GATE",
+        task_name: "WORKSPACE_RUNTIME: DECISION_GATE",
+        runner: runDecisionGate
+      },
+      {
+        module_id: "WORKSPACE_BACKFILL",
+        task_name: "WORKSPACE_RUNTIME: BACKFILL",
+        runner: runBackfill
+      },
+      {
+        module_id: "WORKSPACE_EXECUTE",
+        task_name: "WORKSPACE_RUNTIME: EXECUTE",
+        runner: runExecute
+      }
+    ];
+
+    for (let i = 0; i < workspaceSteps.length; i += 1) {
+      const step = workspaceSteps[i];
+
+      state.current_module = step.module_id;
+      state.next_task = step.task_name;
+      state.next_module = step.module_id;
+      writeState(state);
+      writeReport(state, executionLog);
+
+      const taskResult = await step.runner({
+        status: Object.freeze({
+          run_id: runContext.run_id,
+          workspace_execution_id: entry.workspace_execution_id || ""
+        })
+      });
+
+      const taskBlocked =
+        taskResult &&
+        (
+          taskResult.blocked === true ||
+          (
+            taskResult.status_patch &&
+            Array.isArray(taskResult.status_patch.blocking_questions) &&
+            taskResult.status_patch.blocking_questions.length > 0
+          )
+        );
+
+      if (taskBlocked) {
+        executionLog.push({
+          timestamp: nowIso(),
+          module_id: step.module_id,
+          task_name: step.task_name,
+          outcome: "BLOCKED"
+        });
+
+        return finalizeBlocked(
+          state,
+          (
+            taskResult &&
+            taskResult.status_patch &&
+            Array.isArray(taskResult.status_patch.blocking_questions) &&
+            taskResult.status_patch.blocking_questions.length > 0
+          )
+            ? taskResult.status_patch.blocking_questions[0]
+            : `Task blocked: ${step.task_name}`,
+          executionLog
+        );
+      }
+
+      executionLog.push({
+        timestamp: nowIso(),
+        module_id: step.module_id,
+        task_name: step.task_name,
+        outcome: "DONE"
+      });
+
+      markModuleCompleted(state, step.module_id);
+
+      const nextStep = workspaceSteps[i + 1] || null;
+      state.current_module = null;
+      state.next_task = nextStep ? nextStep.task_name : null;
+      state.next_module = nextStep ? nextStep.module_id : null;
+
+      writeState(state);
+      writeReport(state, executionLog);
+    }
+
+    return finalizeWorkspaceRuntimeComplete(state, executionLog);
   }
 
   const pipeline = getPipeline();

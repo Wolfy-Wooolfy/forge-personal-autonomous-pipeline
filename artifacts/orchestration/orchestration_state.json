@@ -1,14 +1,14 @@
 {
-  "run_id": "RUN-1775732901148",
-  "run_mode": "COMPLETE",
-  "started_at": "2026-04-09T11:08:21.148Z",
-  "last_updated_at": "2026-04-09T11:08:21.193Z",
-  "status": "COMPLETE",
-  "blocked": false,
-  "blocking_reason": "",
-  "reason": "PIPELINE COMPLETE",
+  "run_id": "RUN-1775737044098",
+  "run_mode": "BLOCKED",
+  "started_at": "2026-04-09T12:17:24.098Z",
+  "last_updated_at": "2026-04-09T12:17:24.194Z",
+  "status": "BLOCKED",
+  "blocked": true,
+  "blocking_reason": "Cannot access 'backfillText' before initialization",
+  "reason": "Cannot access 'backfillText' before initialization",
   "pipeline_contract_violation": null,
-  "entry_type": "COMPLETE",
+  "entry_type": "BLOCKED",
   "next_task": null,
   "next_module": null,
   "current_module": null,
@@ -26,5 +26,5 @@
     "VISION_COMPLIANCE"
   ],
   "pending_modules": [],
-  "final_outcome": "COMPLETE"
+  "final_outcome": "BLOCKED"
 }

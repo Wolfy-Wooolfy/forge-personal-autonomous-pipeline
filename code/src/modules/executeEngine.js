@@ -198,6 +198,10 @@ function runExecute(context) {
       target_path: targetRel,
       target_file: targetRel,
       source_type: String(action.source_type || "FORGE"),
+      workspace_execution_id:
+        typeof action.workspace_execution_id === "string" && action.workspace_execution_id.trim() !== ""
+          ? action.workspace_execution_id.trim()
+          : null,
       deterministic_template_used: action.deterministic_template_used === true,
       allow_overwrite: action.allow_overwrite === true,
       wrote_content: wroteContent,
@@ -214,11 +218,22 @@ function runExecute(context) {
   const executeDiffPath = path.resolve(executeDir, "execute_diff.md");
   const executeLogPath = path.resolve(executeDir, "execute_log.md");
 
+  const workspaceExecutionId =
+    actions.find((action) => typeof action.workspace_execution_id === "string" && action.workspace_execution_id.trim() !== "")
+      ?.workspace_execution_id || null;
+
   const planPayload = {
     execution_id: "MODULE_FLOW_EXECUTE_v1",
     generated_at: new Date().toISOString(),
     operating_mode: mode,
     repository_state: intake.repository_state,
+    source: {
+      backfill_plan_path: "artifacts/backfill/backfill_plan.json",
+      backfill_sha256: sha256Text(backfillText),
+      intake_context_path: "artifacts/intake/intake_context.json",
+      intake_sha256: sha256Text(intakeText),
+      workspace_execution_id: workspaceExecutionId
+    },
     approved_code_actions: executedActions
   };
 
@@ -233,7 +248,8 @@ function runExecute(context) {
       backfill_plan_path: "artifacts/backfill/backfill_plan.json",
       backfill_sha256: sha256Text(backfillText),
       intake_context_path: "artifacts/intake/intake_context.json",
-      intake_sha256: sha256Text(intakeText)
+      intake_sha256: sha256Text(intakeText),
+      workspace_execution_id: workspaceExecutionId
     },
     actions: executedActions
   };

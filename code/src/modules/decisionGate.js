@@ -473,6 +473,7 @@ function runDecisionGate(context) {
       cognitive_priority_hint: resolveCognitivePriorityHint(row, traceCognitivePayload),
       reason: "governed workspace decision packet approved",
       workspace_source: "EXTERNAL_AI_WORKSPACE",
+      workspace_execution_id: String(workspaceBundle.packet.execution_id || ""),
       workspace_response_path: row._workspace.response_path,
       workspace_allow_overwrite: row._workspace.allow_overwrite,
       workspace_expected_sha256: row._workspace.expected_sha256,
@@ -492,6 +493,7 @@ function runDecisionGate(context) {
       source: {
         source_type: "DECISION_PACKET",
         decision_packet_path: "artifacts/decisions/decision_packet.json",
+        decision_packet_execution_id: String(workspaceBundle.packet.execution_id || ""),
         decision_packet_sha256: sha256Text(workspaceBundle.packetText),
         workspace_response_path: workspaceBundle.responseRel,
         intake_context_path: "artifacts/intake/intake_context.json",
