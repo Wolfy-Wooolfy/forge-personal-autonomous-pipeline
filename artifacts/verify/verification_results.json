@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-10T16:54:39.175Z",
+  "generated_at": "2026-04-10T17:17:18.664Z",
   "blocked": false,
   "status": "PASS",
   "outcome": "PASS",
@@ -68,22 +68,22 @@
     {
       "name": "execute_plan_matches_backfill_plan",
       "passed": true,
-      "detail": "backfill_actions=1; execute_actions=1"
+      "detail": "backfill_actions=2; execute_actions=2"
     },
     {
       "name": "decision_gate_matches_backfill_plan",
       "passed": true,
-      "detail": "decision_actions=1; backfill_actions=1"
+      "detail": "decision_actions=2; backfill_actions=2"
     },
     {
       "name": "workspace_runtime_execution_id_consistent",
       "passed": true,
-      "detail": "decision=workspace_decision_1775839888108; backfill=workspace_decision_1775839888108; execute=workspace_decision_1775839888108"
+      "detail": "decision=workspace_decision_1775841323000; backfill=workspace_decision_1775841323000; execute=workspace_decision_1775841323000"
     },
     {
       "name": "workspace_runtime_write_applied",
       "passed": true,
-      "detail": "execute_actions=1; wrote_content_all=true"
+      "detail": "execute_actions=2; wrote_content_all=true"
     },
     {
       "name": "gap_count_zero",

@@ -1,22 +1,27 @@
 {
-  "execution_id": "workspace_decision_1775839888108",
+  "execution_id": "workspace_decision_1775841323000",
   "workspace_id": "personal",
   "project_id": "forge-personal-autonomous-pipeline",
   "source": "EXTERNAL_AI_WORKSPACE",
+  "operation": {
+    "mode": "MULTI_FILE",
+    "file_count": 2,
+    "total_bytes": 56
+  },
   "approval": {
-    "policy_version": "1.0",
+    "policy_version": "1.1",
     "approved_by_role": "cto",
     "required_roles": [
       "tech_lead",
       "cto"
     ],
-    "approved_at": "2026-04-10T16:51:28.108Z"
+    "approved_at": "2026-04-10T17:15:23.000Z"
   },
   "triggering_gaps": [
     "WORKSPACE_CHANGE_REQUEST"
   ],
   "question": "Approve the queued workspace draft for governed deterministic application?",
-  "context_summary": "Overwrite file code/test_workspace_integration.js with:\nconsole.log(\"Workspace → Forge role-based approval test successful v3\");\nallow_overwrite = true",
+  "context_summary": "Create two new files:\n1) code/test_multi_file_a.js with:\nconsole.log(\"Multi-file A\");\n2) code/test_multi_file_b.js with:\nconsole.log(\"Multi-file B\");\nallow_overwrite = true",
   "options": [
     {
       "option_id": "OPTION-APPROVE-WORKSPACE-DRAFT",
@@ -24,19 +29,38 @@
       "impact_scope": "EXTERNAL_WORKSPACE",
       "risk_level": "MEDIUM",
       "downstream_effects": [
-        "Apply candidate change to code/test_workspace_integration.js"
+        "Apply candidate change to code/test_multi_file_a.js",
+        "Apply candidate change to code/test_multi_file_b.js"
       ],
       "cognitive_priority_hint": null
     }
   ],
-  "recommendation_reference": "artifacts/llm/metadata/workspace_decision_1775839888108.decision.json",
+  "recommendation_reference": "artifacts/llm/metadata/workspace_decision_1775841323000.decision.json",
   "confirmation_required_format": "OPTION-APPROVE-WORKSPACE-DRAFT",
   "proposed_files": [
     {
-      "path": "code/test_workspace_integration.js",
+      "path": "code/test_multi_file_a.js",
       "allow_overwrite": true,
-      "sha256": "a6e207fbea49b35e389cf8643e7660f79d3b22def4bdc62b4c403949795d5f2b",
-      "diff": "- console.log(\"Workspace → Forge integration test successful v2\");\n+ console.log(\"Workspace → Forge role-based approval test successful v3\");"
+      "sha256": "e2e72247c127a102ee38658593e9b16381d7abe19e1217037bb643ed67ae33fa",
+      "diff": "- \n+ console.log(\"Multi-file A\");",
+      "required_roles": [
+        "tech_lead",
+        "cto"
+      ],
+      "file_index": 1,
+      "file_count": 2
+    },
+    {
+      "path": "code/test_multi_file_b.js",
+      "allow_overwrite": true,
+      "sha256": "6358a58fff54f5ec9e8895ce943369c9cf48394d3bcb49440ab688f466f7d17d",
+      "diff": "- \n+ console.log(\"Multi-file B\");",
+      "required_roles": [
+        "tech_lead",
+        "cto"
+      ],
+      "file_index": 2,
+      "file_count": 2
     }
   ]
 }

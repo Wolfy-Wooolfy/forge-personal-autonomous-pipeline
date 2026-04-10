@@ -89,9 +89,11 @@ function uniqueLower(values) {
 
 function loadApprovalPolicy() {
   const fallback = {
-    version: "1.0",
+    version: "1.1",
     available_roles: ["cto"],
     default_required_roles: ["cto"],
+    max_files_per_decision: 10,
+    max_total_bytes_per_decision: 200000,
     path_rules: []
   };
 
@@ -103,11 +105,19 @@ function loadApprovalPolicy() {
     const parsed = JSON.parse(fs.readFileSync(approvalPolicyPath, "utf-8"));
 
     return {
-      version: typeof parsed.version === "string" ? parsed.version : "1.0",
+      version: typeof parsed.version === "string" ? parsed.version : "1.1",
       available_roles: uniqueLower(parsed.available_roles),
       default_required_roles: uniqueLower(parsed.default_required_roles).length > 0
         ? uniqueLower(parsed.default_required_roles)
         : ["cto"],
+      max_files_per_decision:
+        Number.isInteger(parsed.max_files_per_decision) && parsed.max_files_per_decision > 0
+          ? parsed.max_files_per_decision
+          : 10,
+      max_total_bytes_per_decision:
+        Number.isInteger(parsed.max_total_bytes_per_decision) && parsed.max_total_bytes_per_decision > 0
+          ? parsed.max_total_bytes_per_decision
+          : 200000,
       path_rules: Array.isArray(parsed.path_rules)
         ? parsed.path_rules.map(rule => ({
             match_prefix: typeof rule.match_prefix === "string" ? rule.match_prefix.trim().replace(/\\/g, "/") : "",
@@ -163,8 +173,72 @@ function assertApproverRoleAllowed(approverRole, requiredRoles) {
   return normalizedRole;
 }
 
+function resolveFileRoleRequirements(files) {
+  const policy = loadApprovalPolicy();
+
+  return (Array.isArray(files) ? files : []).map(file => {
+    const relPath = String(file && file.path ? file.path : "").trim().replace(/\\/g, "/");
+    const matchedRoles = new Set();
+
+    policy.path_rules.forEach(rule => {
+      if (relPath.startsWith(rule.match_prefix)) {
+        rule.required_roles.forEach(role => matchedRoles.add(role));
+      }
+    });
+
+    const requiredRoles = matchedRoles.size > 0
+      ? Array.from(matchedRoles)
+      : policy.default_required_roles;
+
+    return {
+      path: relPath,
+      required_roles: requiredRoles
+    };
+  });
+}
+
+function buildDecisionBatchStats(files) {
+  const list = Array.isArray(files) ? files : [];
+  const totalBytes = list.reduce((sum, file) => {
+    return sum + Buffer.byteLength(String(file && file.content ? file.content : ""), "utf8");
+  }, 0);
+
+  return {
+    file_count: list.length,
+    total_bytes: totalBytes,
+    operation_mode: list.length > 1 ? "MULTI_FILE" : "SINGLE_FILE"
+  };
+}
+
+function assertDecisionBatchAllowed(files) {
+  const policy = loadApprovalPolicy();
+  const stats = buildDecisionBatchStats(files);
+
+  if (stats.file_count === 0) {
+    throw new Error("Draft contains no files");
+  }
+
+  if (stats.file_count > policy.max_files_per_decision) {
+    throw new Error(`Decision blocked: too many files (${stats.file_count}/${policy.max_files_per_decision})`);
+  }
+
+  if (stats.total_bytes > policy.max_total_bytes_per_decision) {
+    throw new Error(`Decision blocked: payload too large (${stats.total_bytes}/${policy.max_total_bytes_per_decision} bytes)`);
+  }
+
+  return {
+    policy_version: policy.version,
+    max_files_per_decision: policy.max_files_per_decision,
+    max_total_bytes_per_decision: policy.max_total_bytes_per_decision,
+    stats
+  };
+}
+
 function createDecisionPacket(draft, userRequest, approverRole) {
   const normalizedFiles = normalizeDraftFiles(draft.files);
+
+  const batchPolicy = assertDecisionBatchAllowed(normalizedFiles);
+  const fileRoleRequirements = resolveFileRoleRequirements(normalizedFiles);
 
   const approvalPolicy = resolveRequiredRolesForFiles(normalizedFiles);
   const approvedByRole = assertApproverRoleAllowed(approverRole, approvalPolicy.required_roles);
@@ -212,6 +286,11 @@ function createDecisionPacket(draft, userRequest, approverRole) {
     workspace_id: workspaceId,
     project_id: projectId,
     source: "EXTERNAL_AI_WORKSPACE",
+    operation: {
+      mode: batchPolicy.stats.operation_mode,
+      file_count: batchPolicy.stats.file_count,
+      total_bytes: batchPolicy.stats.total_bytes
+    },
     approval: {
       policy_version: approvalPolicy.policy_version,
       approved_by_role: approvedByRole,
@@ -239,7 +318,11 @@ function createDecisionPacket(draft, userRequest, approverRole) {
       path: file.path,
       allow_overwrite: draft.files[index] && draft.files[index].allow_overwrite === true,
       sha256: diffs[index].sha256,
-      diff: diffs[index].diff
+      diff: diffs[index].diff,
+      required_roles:
+        fileRoleRequirements.find(item => item.path === file.path)?.required_roles || approvalPolicy.required_roles,
+      file_index: index + 1,
+      file_count: batchPolicy.stats.file_count
     }))
   };
 
@@ -248,6 +331,9 @@ function createDecisionPacket(draft, userRequest, approverRole) {
     approver_role: approvedByRole,
     required_roles: approvalPolicy.required_roles,
     approval_policy_version: approvalPolicy.policy_version,
+    operation_mode: batchPolicy.stats.operation_mode,
+    file_count: batchPolicy.stats.file_count,
+    total_bytes: batchPolicy.stats.total_bytes,
     approved_at: new Date().toISOString(),
     workspace_id: workspaceId,
     project_id: projectId
@@ -271,6 +357,9 @@ function createDecisionPacket(draft, userRequest, approverRole) {
     approver_role: approvedByRole,
     required_roles: approvalPolicy.required_roles,
     approval_policy_version: approvalPolicy.policy_version,
+    operation_mode: batchPolicy.stats.operation_mode,
+    file_count: batchPolicy.stats.file_count,
+    total_bytes: batchPolicy.stats.total_bytes,
     decision_packet_paths: [
       decisionPacketJsonRel,
       decisionPacketMdRel
@@ -289,6 +378,9 @@ function createDecisionPacket(draft, userRequest, approverRole) {
     approver_role: approvedByRole,
     required_roles: approvalPolicy.required_roles,
     approval_policy_version: approvalPolicy.policy_version,
+    operation_mode: batchPolicy.stats.operation_mode,
+    file_count: batchPolicy.stats.file_count,
+    total_bytes: batchPolicy.stats.total_bytes,
     workspace_id: workspaceId,
     project_id: projectId,
     request: userRequest || "",
@@ -338,6 +430,9 @@ function getRecentWrites(limit = 10) {
         approver_role: typeof data.approver_role === "string" ? data.approver_role : "",
         required_roles: Array.isArray(data.required_roles) ? data.required_roles : [],
         approval_policy_version: typeof data.approval_policy_version === "string" ? data.approval_policy_version : "",
+        operation_mode: typeof data.operation_mode === "string" ? data.operation_mode : "",
+        file_count: Number.isInteger(data.file_count) ? data.file_count : 0,
+        total_bytes: Number.isInteger(data.total_bytes) ? data.total_bytes : 0,
         written_files: Array.isArray(data.written_files) ? data.written_files : [],
         queued_files: Array.isArray(data.queued_files) ? data.queued_files : [],
         summary: typeof data.summary === "string" ? data.summary : "",
@@ -633,6 +728,9 @@ const server = http.createServer(async (req, res) => {
 
       const approvalPolicy = resolveRequiredRolesForFiles(normalizedFiles);
 
+      const batchPolicy = assertDecisionBatchAllowed(normalizedFiles);
+      const fileRoleRequirements = resolveFileRoleRequirements(normalizedFiles);
+
       const diffs = normalizedFiles.map(file => {
         let oldContent = "";
 
@@ -654,7 +752,11 @@ const server = http.createServer(async (req, res) => {
         diffs,
         approval_policy_version: approvalPolicy.policy_version,
         available_roles: approvalPolicy.available_roles,
-        required_roles: approvalPolicy.required_roles
+        required_roles: approvalPolicy.required_roles,
+        operation_mode: batchPolicy.stats.operation_mode,
+        file_count: batchPolicy.stats.file_count,
+        total_bytes: batchPolicy.stats.total_bytes,
+        file_role_requirements: fileRoleRequirements
       });
       return;
     }
