@@ -605,6 +605,32 @@ function createWorkspaceApiServer(options = {}) {
         return;
       }
 
+      if (req.method === "POST" && req.url === "/api/ai/draft") {
+        const body = await readBody(req);
+
+        const requestText = typeof body.request === "string" ? body.request.trim() : "";
+
+        if (!requestText) {
+          sendJson(res, 400, { error: "Request is required" });
+          return;
+        }
+
+        const draft = {
+          files: [
+            {
+              path: "code/test_workspace_integration.js",
+              content: requestText.includes("Overwrite file")
+                ? requestText.split("with:")[1]?.split("allow_overwrite")[0]?.trim() || ""
+                : `console.log("Auto-generated from request");`,
+              allow_overwrite: true
+            }
+          ]
+        };
+
+        sendJson(res, 200, draft);
+        return;
+      }
+      
       if (req.method === "POST" && req.url === "/api/ai/preview") {
         const body = await readBody(req);
         await handlePreview(body, res);
