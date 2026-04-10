@@ -1,1 +1,1 @@
-console.log("Workspace → Forge integration test successful v2");
+console.log("Workspace → Forge role-based approval test successful v3");

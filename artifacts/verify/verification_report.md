@@ -1,6 +1,6 @@
 # Verification Report
 
-generated_at: 2026-04-09T13:31:31.101Z
+generated_at: 2026-04-10T16:54:39.175Z
 status: PASS
 
 ## Closure Gate Readiness
@@ -26,7 +26,7 @@ status: PASS
 - decision_artifact_present: PASS artifacts/decisions/decision_packet.json, artifacts/decisions/module_flow_decision_gate.json
 - execute_plan_matches_backfill_plan: PASS backfill_actions=1; execute_actions=1
 - decision_gate_matches_backfill_plan: PASS decision_actions=1; backfill_actions=1
-- workspace_runtime_execution_id_consistent: PASS decision=workspace_decision_1775741471468; backfill=workspace_decision_1775741471468; execute=workspace_decision_1775741471468
+- workspace_runtime_execution_id_consistent: PASS decision=workspace_decision_1775839888108; backfill=workspace_decision_1775839888108; execute=workspace_decision_1775839888108
 - workspace_runtime_write_applied: PASS execute_actions=1; wrote_content_all=true
 - gap_count_zero: PASS gap_count=0
 - critical_violations_zero: PASS critical_violations=0

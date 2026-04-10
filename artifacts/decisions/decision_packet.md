@@ -1,6 +1,6 @@
 # Decision Packet
 
-- execution_id: workspace_decision_1775741471468
+- execution_id: workspace_decision_1775839888108
 - workspace_id: personal
 - project_id: forge-personal-autonomous-pipeline
 - source: EXTERNAL_AI_WORKSPACE
@@ -10,7 +10,7 @@ Approve the queued workspace draft for governed deterministic application?
 
 ## Context Summary
 Overwrite file code/test_workspace_integration.js with:
-console.log("Workspace → Forge integration test successful v2");
+console.log("Workspace → Forge role-based approval test successful v3");
 allow_overwrite = true
 
 ## Options
@@ -22,7 +22,7 @@ allow_overwrite = true
 ## Proposed Files
 - code/test_workspace_integration.js
   - allow_overwrite: true
-  - sha256: 33e48e1226ce0776598dda6a0aa840eca9dc2f210e0d3d110d394774732e133f
+  - sha256: a6e207fbea49b35e389cf8643e7660f79d3b22def4bdc62b4c403949795d5f2b
 
 ## Confirmation Required Format
 - OPTION-APPROVE-WORKSPACE-DRAFT
