@@ -461,7 +461,7 @@
     }
 
     async function loadPreview(draft) {
-      const res = await fetch("/api/ai/preview", {
+      const res = await fetch("http://localhost:3100/api/ai/preview", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -490,7 +490,7 @@
 
     async function loadApprovalPolicy() {
       try {
-        const res = await fetch("/api/ai/approval-policy");
+        const res = await fetch("http://localhost:3100/api/ai/approval-policy");
         const data = await res.json();
 
         if (!res.ok) {
@@ -517,7 +517,7 @@
 
     async function loadHistory() {
       try {
-        const res = await fetch("/api/ai/history");
+        const res = await fetch("http://localhost:3100/api/ai/history");
         const data = await res.json();
 
         if (!res.ok) {
@@ -564,7 +564,7 @@
       setStatus("Generating draft...");
 
       try {
-        const res = await fetch("/api/ai/draft", {
+        const res = await fetch("http://localhost:3100/api/ai/draft", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -615,7 +615,7 @@
       setStatus("Creating governed decision packet...");
 
       try {
-        const res = await fetch("/api/ai/decision", {
+        const res = await fetch("http://localhost:3100/api/ai/decision", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
