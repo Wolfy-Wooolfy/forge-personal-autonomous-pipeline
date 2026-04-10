@@ -454,6 +454,29 @@
       renderApprovalInfo(currentRequiredRoles, currentApprovalPolicyVersion);
     }
 
+    async function loadApprovalPolicy() {
+      try {
+        const res = await fetch("/api/ai/approval-policy");
+        const data = await res.json();
+
+        if (!res.ok) {
+          throw new Error(data.error || "Failed to load approval policy.");
+        }
+
+        populateApproverRoles(Array.isArray(data.available_roles) ? data.available_roles : ["cto"]);
+
+        if (!currentRequiredRoles || currentRequiredRoles.length === 0) {
+          renderApprovalInfo(
+            Array.isArray(data.default_required_roles) ? data.default_required_roles : [],
+            typeof data.version === "string" ? data.version : ""
+          );
+        }
+      } catch (err) {
+        populateApproverRoles(["cto"]);
+        renderApprovalInfo([], "");
+      }
+    }
+
     async function loadHistory() {
       try {
         const res = await fetch("/api/ai/history");
@@ -473,11 +496,14 @@
       currentDraft = null;
       currentRequest = "";
       currentPreview = [];
+      currentRequiredRoles = [];
+      currentApprovalPolicyVersion = "";
       approveBtn.disabled = true;
       rejectBtn.disabled = true;
       renderResponse(null);
       renderFiles([]);
       renderPreview([]);
+      renderApprovalInfo([], "");
       setStatus("Ready.");
     }
 
@@ -553,7 +579,8 @@
           },
           body: JSON.stringify({
             request: currentRequest,
-            draft: currentDraft
+            draft: currentDraft,
+            approver_role: approverRoleSelect.value
           })
         });
 
@@ -564,7 +591,7 @@
         }
 
         renderResponse(data);
-        setStatus(`Decision packet created successfully.\nPacket ID: ${data.decision_packet_id}\nFiles queued: ${(data.queued_files || []).length}`);
+        setStatus(`Decision packet created successfully.\nPacket ID: ${data.decision_packet_id}\nApprover role: ${data.approver_role || "n/a"}\nFiles queued: ${(data.queued_files || []).length}`);
         await loadHistory();
         approveBtn.disabled = true;
         rejectBtn.disabled = true;
@@ -589,6 +616,11 @@
 
     renderFiles([]);
     renderPreview([]);
+    approverRoleSelect.addEventListener("change", () => {
+      renderApprovalInfo(currentRequiredRoles, currentApprovalPolicyVersion);
+    });
+
+    loadApprovalPolicy();
     loadHistory();
   </script>
 </body>
