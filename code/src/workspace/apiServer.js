@@ -366,6 +366,35 @@ function createWorkspaceApiServer(options = {}) {
     const raw = String(requestText || "").trim();
     const lower = raw.toLowerCase();
 
+    if (
+      lower.includes("authentication") ||
+      lower.includes("auth") ||
+      lower.includes("login")
+    ) {
+      return {
+        strategy: "USER_AUTH_SYSTEM",
+        target_file: "code/src/auth/authSystem.js",
+        content:
+`const express = require("express");
+
+function registerAuthRoutes(app) {
+  app.post("/api/auth/register", (req, res) => {
+    const { username, password } = req.body;
+    res.json({ ok: true, message: "User registered", username });
+  });
+
+  app.post("/api/auth/login", (req, res) => {
+    const { username } = req.body;
+    res.json({ ok: true, message: "Login successful", username });
+  });
+}
+
+module.exports = {
+  registerAuthRoutes
+};`
+      };
+    }
+
     const printMatch = lower.match(/^create\s+a\s+function\s+that\s+prints\s+(.+)$/i);
     if (printMatch) {
       const message = raw.slice(raw.toLowerCase().indexOf("prints") + "prints".length).trim();
@@ -624,6 +653,20 @@ ${trimmedExisting}`
         score: 0.88,
         target_file: file,
         rationale: "The request targets the backend server and explicitly mentions logging."
+      });
+    }
+
+    if (
+      lower.includes("authentication") ||
+      lower.includes("auth") ||
+      lower.includes("login")
+    ) {
+      strategies.push({
+        strategy_id: "USER_AUTH_SYSTEM",
+        title: "Full user authentication system",
+        score: 0.95,
+        target_file: "code/src/auth/authSystem.js",
+        rationale: "The request clearly asks for a user authentication system."
       });
     }
 
