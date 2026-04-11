@@ -477,6 +477,24 @@ function createWorkspaceApiServer(options = {}) {
     };
   }
 
+  function writeDecisionLinkArtifact(proposalId, decisionPacketId) {
+    const linkRoot = path.resolve(root, "artifacts/ai/decision_links");
+    ensureDir(linkRoot);
+
+    const link = {
+      link_id: `ai_decision_link_${Date.now()}`,
+      created_at: new Date().toISOString(),
+      proposal_id: proposalId || "",
+      decision_packet_id: decisionPacketId || "",
+      relationship: "PROPOSAL_TO_DECISION"
+    };
+
+    const rel = `artifacts/ai/decision_links/${link.link_id}.json`;
+    fs.writeFileSync(path.resolve(root, rel), JSON.stringify(link, null, 2));
+
+    return rel;
+  }
+
   function appendDecisionLog(entry) {
     const logPath = path.join(llmRoot, "decision_log.json");
     const current = readJsonSafe(logPath, []);
@@ -772,6 +790,20 @@ function createWorkspaceApiServer(options = {}) {
     }
 
     const result = createDecisionPacket(draft, userRequest, approverRole);
+
+    const proposalId =
+      body && typeof body.proposal_id === "string"
+        ? body.proposal_id
+        : "";
+
+    if (proposalId && result && result.decision_packet_id) {
+      const linkPath = writeDecisionLinkArtifact(
+        proposalId,
+        result.decision_packet_id
+      );
+
+      result.decision_link_artifact = linkPath;
+    }
     sendJson(res, 200, result);
   }
 

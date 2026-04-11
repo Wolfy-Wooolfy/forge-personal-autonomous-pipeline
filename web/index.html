@@ -276,6 +276,7 @@
     let currentDraft = null;
 
     let currentRequest = "";
+    let currentProposalId = "";
     let currentPreview = [];
     let currentRequiredRoles = [];
     let currentApprovalPolicyVersion = "";
@@ -537,6 +538,7 @@
     function resetDraft() {
       currentDraft = null;
       currentRequest = "";
+      currentProposalId = "";
       currentPreview = [];
       currentRequiredRoles = [];
       currentApprovalPolicyVersion = "";
@@ -638,6 +640,8 @@
         if (!res.ok) {
           throw new Error(data.error || "Proposal failed.");
         }
+
+        currentProposalId = data.proposal_id || "";
 
         currentDraft = {
           files: [
@@ -746,7 +750,8 @@
           body: JSON.stringify({
             request: currentRequest,
             draft: currentDraft,
-            approver_role: approverRoleSelect.value
+            approver_role: approverRoleSelect.value,
+            proposal_id: currentProposalId || ""
           })
         });
 
