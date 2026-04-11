@@ -556,6 +556,92 @@ ${trimmedExisting}`
     return available.length > 0 ? available[0].path : "code/test_workspace_integration.js";
   }
 
+  function buildStrategyCandidates(requestText, targetFile) {
+    const raw = String(requestText || "").trim();
+    const lower = raw.toLowerCase();
+    const file = String(targetFile || "").trim();
+
+    const strategies = [];
+
+    if (/^create\s+a\s+function\s+that\s+prints\s+(.+)$/i.test(lower)) {
+      strategies.push({
+        strategy_id: "FUNCTION_PRINT",
+        title: "Generate print function",
+        score: 0.95,
+        target_file: file,
+        rationale: "The request explicitly asks to create a function that prints a message."
+      });
+    }
+
+    if (/^create\s+an?\s+api\s+endpoint\s+called\s+(.+)$/i.test(lower)) {
+      strategies.push({
+        strategy_id: "API_ENDPOINT_CREATE",
+        title: "Generate API endpoint",
+        score: 0.95,
+        target_file: file,
+        rationale: "The request explicitly asks to create an API endpoint with a specific name."
+      });
+    }
+
+    if (/^edit\s+this\s+file\s+to\s+add\s+logging$/i.test(lower)) {
+      strategies.push({
+        strategy_id: "EDIT_ADD_LOGGING_STRUCTURE_AWARE",
+        title: "Inject logging into existing function structure",
+        score: 0.92,
+        target_file: file,
+        rationale: "The request asks to modify the current file by adding logging safely."
+      });
+
+      strategies.push({
+        strategy_id: "EDIT_ADD_LOGGING_FILE_AWARE_FALLBACK",
+        title: "Prepend logging to file",
+        score: 0.55,
+        target_file: file,
+        rationale: "Fallback strategy in case no function structure is available."
+      });
+    }
+
+    if (
+      file === "web/index.html" &&
+      lower.includes("button")
+    ) {
+      strategies.push({
+        strategy_id: "HTML_BUTTON_CREATE",
+        title: "Add HTML button",
+        score: 0.9,
+        target_file: file,
+        rationale: "The request targets the UI and explicitly mentions a button."
+      });
+    }
+
+    if (
+      file === "code/src/workspace/apiServer.js" &&
+      lower.includes("logging")
+    ) {
+      strategies.push({
+        strategy_id: "BACKEND_LOGGING_MIDDLEWARE",
+        title: "Add backend logging middleware",
+        score: 0.88,
+        target_file: file,
+        rationale: "The request targets the backend server and explicitly mentions logging."
+      });
+    }
+
+    if (strategies.length === 0) {
+      strategies.push({
+        strategy_id: "FALLBACK_ECHO",
+        title: "Fallback echo generation",
+        score: 0.4,
+        target_file: file,
+        rationale: "No stronger strategy matched the request."
+      });
+    }
+
+    strategies.sort((a, b) => b.score - a.score);
+
+    return strategies;
+  }
+
   function buildFileTypeAwareProposal(requestText, targetFile) {
     const raw = String(requestText || "").trim();
     const lower = raw.toLowerCase();
@@ -745,6 +831,10 @@ ${trimmedExisting}`
     const finalGenerated = codeAwareEdit || fileTypeAware || generated;
     const generatedContent = finalGenerated.content;
     const targetFile = finalGenerated.target_file || resolvedTargetFile;
+    const strategyCandidates = buildStrategyCandidates(
+      requestText,
+      targetFile
+    );
 
     const proposalArtifact = {
       proposal_id: proposalId,
@@ -756,7 +846,9 @@ ${trimmedExisting}`
       execution_required: true,
       execution_approved: false,
       generation_strategy: finalGenerated.strategy,
-      target_file: targetFile
+      target_file: targetFile,
+      selected_strategy: strategyCandidates[0] || null,
+      strategy_candidates: strategyCandidates
     };
 
     const draftArtifact = {
@@ -786,7 +878,9 @@ ${trimmedExisting}`
       proposal_id: proposalId,
       proposal_path: proposalRel,
       draft_path: draftRel,
-      ready_for_approval: true
+      ready_for_approval: true,
+      selected_strategy: strategyCandidates[0] || null,
+      strategy_candidates: strategyCandidates
     };
   }
 
