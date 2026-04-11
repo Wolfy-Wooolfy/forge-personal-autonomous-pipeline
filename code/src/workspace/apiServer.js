@@ -324,7 +324,10 @@ function createWorkspaceApiServer(options = {}) {
       text.includes("build") ||
       text.includes("function") ||
       text.includes("modify") ||
-      text.includes("edit")
+      text.includes("edit") ||
+      text.includes("implement") ||
+      text.includes("connect") ||
+      text.includes("integrate")
     ) {
       mode = "PROPOSAL";
       intent = "CODE_GENERATION";
@@ -365,6 +368,23 @@ function createWorkspaceApiServer(options = {}) {
   function buildSmartProposalCode(requestText) {
     const raw = String(requestText || "").trim();
     const lower = raw.toLowerCase();
+
+    if (
+      lower.includes("connect") &&
+      (lower.includes("auth") || lower.includes("authentication")) &&
+      lower.includes("server")
+    ) {
+      return {
+        strategy: "CONNECT_AUTH_TO_SERVER",
+        target_file: "code/src/workspace/apiServer.js",
+        content:
+    `const { registerAuthRoutes } = require("../auth/authSystem");
+
+    function integrateAuth(app) {
+      registerAuthRoutes(app);
+    }`
+      };
+    }
 
     if (
       lower.includes("authentication") ||
@@ -653,6 +673,20 @@ ${trimmedExisting}`
         score: 0.88,
         target_file: file,
         rationale: "The request targets the backend server and explicitly mentions logging."
+      });
+    }
+
+    if (
+      lower.includes("connect") &&
+      (lower.includes("auth") || lower.includes("authentication")) &&
+      lower.includes("server")
+    ) {
+      strategies.push({
+        strategy_id: "CONNECT_AUTH_TO_SERVER",
+        title: "Connect auth system to API server",
+        score: 0.97,
+        target_file: "code/src/workspace/apiServer.js",
+        rationale: "The request clearly asks to connect the authentication system to the API server."
       });
     }
 
