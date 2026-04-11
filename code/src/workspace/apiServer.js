@@ -367,7 +367,6 @@ function createWorkspaceApiServer(options = {}) {
     const lower = raw.toLowerCase();
 
     const printMatch = lower.match(/^create\s+a\s+function\s+that\s+prints\s+(.+)$/i);
-
     if (printMatch) {
       const message = raw.slice(raw.toLowerCase().indexOf("prints") + "prints".length).trim();
       const functionName = `print${toPascalCase(message) || "Message"}`;
@@ -375,9 +374,44 @@ function createWorkspaceApiServer(options = {}) {
 
       return {
         strategy: "FUNCTION_PRINT",
+        target_file: "code/test_workspace_integration.js",
         content:
 `function ${functionName}() {
   console.log("${safeMessage}");
+}`
+      };
+    }
+
+    const apiMatch = lower.match(/^create\s+an?\s+api\s+endpoint\s+called\s+(.+)$/i);
+    if (apiMatch) {
+      const endpointNameRaw = raw.slice(raw.toLowerCase().indexOf("called") + "called".length).trim();
+      const endpointName = endpointNameRaw
+        .replace(/[^a-zA-Z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "")
+        .toLowerCase() || "new-endpoint";
+
+      return {
+        strategy: "API_ENDPOINT_CREATE",
+        target_file: "code/test_workspace_integration.js",
+        content:
+`function register${toPascalCase(endpointName)}Endpoint(app) {
+  app.post("/api/${endpointName}", (req, res) => {
+    res.json({ ok: true, endpoint: "${endpointName}" });
+  });
+}`
+      };
+    }
+
+    const loggingMatch = lower.match(/^edit\s+this\s+file\s+to\s+add\s+logging$/i);
+    if (loggingMatch) {
+      return {
+        strategy: "EDIT_ADD_LOGGING",
+        target_file: "code/test_workspace_integration.js",
+        content:
+`console.log("Logging enabled");
+
+function testWorkspaceIntegration() {
+  console.log("testWorkspaceIntegration started");
 }`
       };
     }
@@ -386,6 +420,7 @@ function createWorkspaceApiServer(options = {}) {
 
     return {
       strategy: "FALLBACK_ECHO",
+      target_file: "code/test_workspace_integration.js",
       content:
 `// Generated from request:
 // ${raw}
@@ -542,6 +577,7 @@ console.log("${safeRaw}");`
     };
 
     const generatedContent = generated.content;
+    const targetFile = generated.target_file || "code/test_workspace_integration.js";
 
     const draftArtifact = {
       draft_id: proposalId,
@@ -549,7 +585,7 @@ console.log("${safeRaw}");`
       mode: "PROPOSAL",
       files: [
         {
-          path: "code/test_workspace_integration.js",
+          path: targetFile,
           content: generatedContent,
           allow_overwrite: true
         }
