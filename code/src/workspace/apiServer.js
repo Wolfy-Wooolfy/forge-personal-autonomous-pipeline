@@ -503,6 +503,93 @@ ${trimmedExisting}`
     return null;
   }
 
+  function scanProjectFiles() {
+    const candidates = [
+      "web/index.html",
+      "code/src/workspace/apiServer.js",
+      "code/test_workspace_integration.js"
+    ];
+
+    return candidates
+      .map((relPath) => {
+        const absPath = path.resolve(root, relPath);
+        return {
+          path: relPath,
+          exists: fs.existsSync(absPath),
+          content: readTextSafe(absPath)
+        };
+      })
+      .filter((item) => item.exists);
+  }
+
+  function resolveTargetFileForRequest(requestText, projectFiles) {
+    const text = String(requestText || "").toLowerCase();
+    const available = Array.isArray(projectFiles) ? projectFiles : [];
+
+    const hasFile = (relPath) => available.some((item) => item.path === relPath);
+
+    if (
+      (text.includes("ui") ||
+        text.includes("interface") ||
+        text.includes("frontend") ||
+        text.includes("html") ||
+        text.includes("page")) &&
+      hasFile("web/index.html")
+    ) {
+      return "web/index.html";
+    }
+
+    if (
+      (text.includes("api server") ||
+        text.includes("workspace api") ||
+        text.includes("server") ||
+        text.includes("backend")) &&
+      hasFile("code/src/workspace/apiServer.js")
+    ) {
+      return "code/src/workspace/apiServer.js";
+    }
+
+    if (hasFile("code/test_workspace_integration.js")) {
+      return "code/test_workspace_integration.js";
+    }
+
+    return available.length > 0 ? available[0].path : "code/test_workspace_integration.js";
+  }
+
+  function buildFileTypeAwareProposal(requestText, targetFile) {
+    const raw = String(requestText || "").trim();
+    const lower = raw.toLowerCase();
+    const file = String(targetFile || "").trim();
+
+    if (
+      file === "web/index.html" &&
+      lower.includes("button")
+    ) {
+      return {
+        strategy: "HTML_BUTTON_CREATE",
+        target_file: file,
+        content: `<button id="newButton">Click Me</button>`
+      };
+    }
+
+    if (
+      file === "code/src/workspace/apiServer.js" &&
+      lower.includes("logging")
+    ) {
+      return {
+        strategy: "BACKEND_LOGGING_MIDDLEWARE",
+        target_file: file,
+        content:
+`app.use((req, res, next) => {
+  console.log(\`\${req.method} \${req.url}\`);
+  next();
+});`
+      };
+    }
+
+    return null;
+  }
+
   function buildAiAnalysisArtifacts(requestText) {
     const sessionId = `ai_analysis_${Date.now()}`;
     const createdAt = new Date().toISOString();
@@ -636,20 +723,28 @@ ${trimmedExisting}`
     ensureDir(aiProposalsRoot);
     ensureDir(aiDraftsRoot);
 
-    const generated = buildSmartProposalCode(requestText);
-
-    const targetFile = generated.target_file || "code/test_workspace_integration.js";
-    const targetAbsPath = path.resolve(root, targetFile);
+    const projectFiles = scanProjectFiles();
+    const resolvedTargetFile = resolveTargetFileForRequest(requestText, projectFiles);
+    const targetAbsPath = path.resolve(root, resolvedTargetFile);
     const currentContent = readTextSafe(targetAbsPath);
+
+    const generated = buildSmartProposalCode(requestText);
+    generated.target_file = resolvedTargetFile;
+
+    const fileTypeAware = buildFileTypeAwareProposal(
+      requestText,
+      resolvedTargetFile
+    );
 
     const codeAwareEdit = buildCodeAwareEditProposal(
       requestText,
       currentContent,
-      targetFile
+      resolvedTargetFile
     );
 
-    const finalGenerated = codeAwareEdit || generated;
+    const finalGenerated = codeAwareEdit || fileTypeAware || generated;
     const generatedContent = finalGenerated.content;
+    const targetFile = finalGenerated.target_file || resolvedTargetFile;
 
     const proposalArtifact = {
       proposal_id: proposalId,
