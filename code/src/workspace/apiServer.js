@@ -352,6 +352,48 @@ function createWorkspaceApiServer(options = {}) {
     };
   }
 
+  function toPascalCase(value) {
+    return String(value || "")
+      .replace(/[^a-zA-Z0-9]+/g, " ")
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean)
+      .map((part) => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+      .join("");
+  }
+
+  function buildSmartProposalCode(requestText) {
+    const raw = String(requestText || "").trim();
+    const lower = raw.toLowerCase();
+
+    const printMatch = lower.match(/^create\s+a\s+function\s+that\s+prints\s+(.+)$/i);
+
+    if (printMatch) {
+      const message = raw.slice(raw.toLowerCase().indexOf("prints") + "prints".length).trim();
+      const functionName = `print${toPascalCase(message) || "Message"}`;
+      const safeMessage = message.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+
+      return {
+        strategy: "FUNCTION_PRINT",
+        content:
+`function ${functionName}() {
+  console.log("${safeMessage}");
+}`
+      };
+    }
+
+    const safeRaw = raw.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+
+    return {
+      strategy: "FALLBACK_ECHO",
+      content:
+`// Generated from request:
+// ${raw}
+
+console.log("${safeRaw}");`
+    };
+  }
+
   function buildAiAnalysisArtifacts(requestText) {
     const sessionId = `ai_analysis_${Date.now()}`;
     const createdAt = new Date().toISOString();
@@ -485,6 +527,8 @@ function createWorkspaceApiServer(options = {}) {
     ensureDir(aiProposalsRoot);
     ensureDir(aiDraftsRoot);
 
+    const generated = buildSmartProposalCode(requestText);
+
     const proposalArtifact = {
       proposal_id: proposalId,
       created_at: createdAt,
@@ -493,16 +537,11 @@ function createWorkspaceApiServer(options = {}) {
       description: "Generated proposal based on AI analysis",
       impact: "LOW",
       execution_required: true,
-      execution_approved: false
+      execution_approved: false,
+      generation_strategy: generated.strategy
     };
 
-    let generatedContent = "";
-
-    if (requestText && requestText.length > 0) {
-      generatedContent = `// Generated from request:\n// ${requestText}\n\nconsole.log("${requestText.replace(/"/g, '\\"')}");`;
-    } else {
-      generatedContent = `console.log("Empty request");`;
-    }
+    const generatedContent = generated.content;
 
     const draftArtifact = {
       draft_id: proposalId,
