@@ -446,6 +446,14 @@ function createWorkspaceApiServer(options = {}) {
       execution_approved: false
     };
 
+    let generatedContent = "";
+
+    if (requestText && requestText.length > 0) {
+      generatedContent = `// Generated from request:\n// ${requestText}\n\nconsole.log("${requestText.replace(/"/g, '\\"')}");`;
+    } else {
+      generatedContent = `console.log("Empty request");`;
+    }
+
     const draftArtifact = {
       draft_id: proposalId,
       created_at: createdAt,
@@ -453,7 +461,7 @@ function createWorkspaceApiServer(options = {}) {
       files: [
         {
           path: "code/test_workspace_integration.js",
-          content: "console.log('AI Proposal Draft Execution');",
+          content: generatedContent,
           allow_overwrite: true
         }
       ],
