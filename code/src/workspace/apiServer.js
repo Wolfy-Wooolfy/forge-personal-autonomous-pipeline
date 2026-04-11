@@ -302,6 +302,56 @@ function createWorkspaceApiServer(options = {}) {
     }
   }
 
+  function interpretUserIntent(requestText) {
+    const text = String(requestText || "").toLowerCase();
+
+    let mode = "ANALYSIS";
+    let intent = "GENERAL";
+    let needsClarification = false;
+
+    if (!text || text.trim().length === 0) {
+      return {
+        mode: "BLOCKED",
+        intent: "EMPTY",
+        needs_clarification: true,
+        clarification_question: "What do you want to do?"
+      };
+    }
+
+    if (
+      text.includes("create") ||
+      text.includes("add") ||
+      text.includes("build") ||
+      text.includes("function") ||
+      text.includes("modify") ||
+      text.includes("edit")
+    ) {
+      mode = "PROPOSAL";
+      intent = "CODE_GENERATION";
+    }
+
+    if (
+      text.includes("why") ||
+      text.includes("explain") ||
+      text.includes("what") ||
+      text.includes("analyze")
+    ) {
+      mode = "ANALYSIS";
+      intent = "QUESTION";
+    }
+
+    if (text.length < 5) {
+      needsClarification = true;
+    }
+
+    return {
+      mode,
+      intent,
+      needs_clarification: needsClarification,
+      normalized_request: requestText
+    };
+  }
+
   function buildAiAnalysisArtifacts(requestText) {
     const sessionId = `ai_analysis_${Date.now()}`;
     const createdAt = new Date().toISOString();
@@ -823,7 +873,33 @@ function createWorkspaceApiServer(options = {}) {
 
   async function handlePropose(body, res) {
     const requestText = typeof body.request === "string" ? body.request.trim() : "";
-    const result = buildAiProposalArtifacts(requestText);
+
+    const interpretation = interpretUserIntent(requestText);
+
+    if (interpretation.mode === "BLOCKED") {
+      sendJson(res, 200, {
+        ok: false,
+        mode: "BLOCKED",
+        reason: "INVALID_REQUEST",
+        clarification_question: interpretation.clarification_question
+      });
+      return;
+    }
+
+    if (interpretation.mode !== "PROPOSAL") {
+      sendJson(res, 200, {
+        ok: false,
+        mode: interpretation.mode,
+        message: "This request is not a proposal request. Try Analyze instead.",
+        interpretation
+      });
+      return;
+    }
+
+    const result = buildAiProposalArtifacts(interpretation.normalized_request);
+
+    result.interpretation = interpretation;
+
     sendJson(res, 200, result);
   }
 

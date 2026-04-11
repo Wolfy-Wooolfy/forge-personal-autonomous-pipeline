@@ -661,6 +661,21 @@ const server = http.createServer(async (req, res) => {
       return;
     }
 
+    if (req.method === "GET" && req.url.startsWith("/artifacts/ai/drafts/")) {
+      const relativePath = decodeURIComponent(req.url.slice(1));
+      const draftsRoot = path.resolve(root, "artifacts/ai/drafts");
+      const targetPath = path.resolve(root, relativePath);
+
+      if (!isWithin(draftsRoot, targetPath) || !fs.existsSync(targetPath)) {
+        sendJson(res, 404, { error: "Draft artifact not found" });
+        return;
+      }
+
+      const content = fs.readFileSync(targetPath, "utf-8");
+      sendText(res, 200, content, "application/json; charset=utf-8");
+      return;
+    }
+
     if (req.method === "GET" && req.url === "/health") {
       sendJson(res, 200, { ok: true });
       return;

@@ -641,6 +641,23 @@
           throw new Error(data.error || "Proposal failed.");
         }
 
+        if (!data.ok) {
+          renderResponse(data);
+
+          renderFiles([]);
+          renderPreview([]);
+          renderApprovalInfo([], "");
+          renderOperationInfo("", 0, 0, []);
+
+          setStatus(
+            data.mode === "BLOCKED"
+              ? `Blocked: ${data.clarification_question || "Clarification required"}`
+              : data.message || "Request not eligible for proposal."
+          );
+
+          return;
+        }
+
         currentProposalId = data.proposal_id || "";
 
         currentRequest = request;
