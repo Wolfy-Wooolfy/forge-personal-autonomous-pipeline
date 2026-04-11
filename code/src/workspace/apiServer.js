@@ -432,37 +432,73 @@ console.log("${safeRaw}");`
   function buildCodeAwareEditProposal(requestText, currentContent, targetFile) {
     const raw = String(requestText || "").trim();
     const lower = raw.toLowerCase();
-    const existing = String(currentContent || "").trim();
+    const existing = String(currentContent || "");
 
     if (/^edit\s+this\s+file\s+to\s+add\s+logging$/i.test(lower)) {
-      if (!existing) {
+      const trimmedExisting = existing.trim();
+
+      if (!trimmedExisting) {
         return {
           strategy: "EDIT_ADD_LOGGING_EMPTY_FILE",
           target_file: targetFile,
           content:
-`console.log("Logging enabled");
-
-function testWorkspaceIntegration() {
+`function testWorkspaceIntegration() {
   console.log("testWorkspaceIntegration started");
 }`
         };
       }
 
-      if (existing.includes('console.log("Logging enabled");')) {
+      if (trimmedExisting.includes('console.log("testWorkspaceIntegration started");')) {
         return {
           strategy: "EDIT_ADD_LOGGING_ALREADY_PRESENT",
           target_file: targetFile,
-          content: existing
+          content: trimmedExisting
+        };
+      }
+
+      const functionMatch = existing.match(/function\s+([a-zA-Z0-9_]+)\s*\(\)\s*\{([\s\S]*?)\}/);
+
+      if (functionMatch) {
+        const functionName = functionMatch[1];
+        const fullMatch = functionMatch[0];
+        const bodyContent = functionMatch[2];
+
+        const logLine = `  console.log("${functionName} started");`;
+
+        if (bodyContent.includes(`${functionName} started`)) {
+          return {
+            strategy: "EDIT_ADD_LOGGING_ALREADY_PRESENT",
+            target_file: targetFile,
+            content: trimmedExisting
+          };
+        }
+
+        const normalizedBody = bodyContent.replace(/^\s*\n/, "");
+        const bodyLines = bodyContent
+  .split("\n")
+  .map(line => line.trim())
+  .filter(Boolean);
+
+const updatedFunction =
+`function ${functionName}() {
+${logLine}
+${bodyLines.join("\n")}
+}`;
+
+        return {
+          strategy: "EDIT_ADD_LOGGING_STRUCTURE_AWARE",
+          target_file: targetFile,
+          content: existing.replace(fullMatch, updatedFunction).trim()
         };
       }
 
       return {
-        strategy: "EDIT_ADD_LOGGING_CODE_AWARE",
+        strategy: "EDIT_ADD_LOGGING_FILE_AWARE_FALLBACK",
         target_file: targetFile,
         content:
 `console.log("Logging enabled");
 
-${existing}`
+${trimmedExisting}`
       };
     }
 
