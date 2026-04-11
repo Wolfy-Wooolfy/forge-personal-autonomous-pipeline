@@ -858,7 +858,9 @@ ${trimmedExisting}`
     const currentContent = readTextSafe(targetAbsPath);
 
     const generated = buildSmartProposalCode(requestText);
-    generated.target_file = resolvedTargetFile;
+    if (!generated.target_file) {
+      generated.target_file = resolvedTargetFile;
+    }
 
     const fileTypeAware = buildFileTypeAwareProposal(
       requestText,
