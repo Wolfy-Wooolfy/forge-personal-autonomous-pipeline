@@ -425,6 +425,58 @@ function createWorkspaceApiServer(options = {}) {
     };
   }
 
+  function buildAiProposalArtifacts(requestText) {
+    const proposalId = `ai_proposal_${Date.now()}`;
+    const createdAt = new Date().toISOString();
+
+    const aiProposalsRoot = path.resolve(aiRoot, "proposals");
+    const aiDraftsRoot = path.resolve(aiRoot, "drafts");
+
+    ensureDir(aiProposalsRoot);
+    ensureDir(aiDraftsRoot);
+
+    const proposalArtifact = {
+      proposal_id: proposalId,
+      created_at: createdAt,
+      mode: "PROPOSAL",
+      request: requestText || "General proposal request",
+      description: "Generated proposal based on AI analysis",
+      impact: "LOW",
+      execution_required: true,
+      execution_approved: false
+    };
+
+    const draftArtifact = {
+      draft_id: proposalId,
+      created_at: createdAt,
+      mode: "PROPOSAL",
+      files: [
+        {
+          path: "code/test_workspace_integration.js",
+          content: "console.log('AI Proposal Draft Execution');",
+          allow_overwrite: true
+        }
+      ],
+      approved: false,
+      ready_for_decision: false
+    };
+
+    const proposalRel = `artifacts/ai/proposals/${proposalId}.proposal.json`;
+    const draftRel = `artifacts/ai/drafts/${proposalId}.draft.json`;
+
+    fs.writeFileSync(path.resolve(root, proposalRel), JSON.stringify(proposalArtifact, null, 2));
+    fs.writeFileSync(path.resolve(root, draftRel), JSON.stringify(draftArtifact, null, 2));
+
+    return {
+      ok: true,
+      mode: "PROPOSAL",
+      proposal_id: proposalId,
+      proposal_path: proposalRel,
+      draft_path: draftRel,
+      ready_for_approval: true
+    };
+  }
+
   function appendDecisionLog(entry) {
     const logPath = path.join(llmRoot, "decision_log.json");
     const current = readJsonSafe(logPath, []);
@@ -729,6 +781,12 @@ function createWorkspaceApiServer(options = {}) {
     sendJson(res, 200, result);
   }
 
+  async function handlePropose(body, res) {
+    const requestText = typeof body.request === "string" ? body.request.trim() : "";
+    const result = buildAiProposalArtifacts(requestText);
+    sendJson(res, 200, result);
+  }
+
   const server = http.createServer(async (req, res) => {
     try {
       if (req.method === "OPTIONS") {
@@ -754,6 +812,12 @@ function createWorkspaceApiServer(options = {}) {
       if (req.method === "POST" && req.url === "/api/ai/analyze") {
         const body = await readBody(req);
         await handleAnalyze(body, res);
+        return;
+      }
+
+      if (req.method === "POST" && req.url === "/api/ai/propose") {
+        const body = await readBody(req);
+        await handlePropose(body, res);
         return;
       }
 

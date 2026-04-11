@@ -205,7 +205,8 @@
 
         <div class="actions">
           <button id="analyzeBtn" class="secondary">Analyze Project</button>
-          <button id="generateBtn" class="primary">Generate Draft</button>
+          <button id="proposeBtn" class="primary">Generate Proposal</button>
+          <button id="generateBtn" class="secondary">Generate Draft</button>
           <button id="clearBtn" class="secondary">Clear</button>
         </div>
 
@@ -258,6 +259,7 @@
   <script>
     const requestInput = document.getElementById("requestInput");
     const analyzeBtn = document.getElementById("analyzeBtn");
+    const proposeBtn = document.getElementById("proposeBtn");
     const generateBtn = document.getElementById("generateBtn");
     const clearBtn = document.getElementById("clearBtn");
     const approveBtn = document.getElementById("approveBtn");
@@ -601,6 +603,71 @@
         renderPreview([]);
         setStatus(`Analysis failed: ${err.message}`);
       } finally {
+        analyzeBtn.disabled = false;
+        generateBtn.disabled = false;
+      }
+    });
+
+    proposeBtn.addEventListener("click", async () => {
+      const request = requestInput.value.trim();
+
+      if (!request) {
+        setStatus("Please enter a request first.");
+        return;
+      }
+
+      proposeBtn.disabled = true;
+      analyzeBtn.disabled = true;
+      generateBtn.disabled = true;
+      approveBtn.disabled = true;
+      rejectBtn.disabled = true;
+
+      setStatus("Generating proposal...");
+
+      try {
+        const res = await fetch("http://localhost:3100/api/ai/propose", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ request })
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          throw new Error(data.error || "Proposal failed.");
+        }
+
+        currentDraft = {
+          files: [
+            {
+              path: "code/test_workspace_integration.js",
+              content: "console.log('AI Proposal Draft Execution');",
+              allow_overwrite: true
+            }
+          ]
+        };
+        currentRequest = request;
+
+        renderResponse(data);
+        renderFiles(currentDraft.files || []);
+
+        await loadPreview(currentDraft);
+
+        approveBtn.disabled = false;
+        rejectBtn.disabled = false;
+
+        setStatus(
+          `Proposal ready.\nProposal: ${data.proposal_path}\nDraft: ${data.draft_path}`
+        );
+      } catch (err) {
+        renderResponse({ error: err.message });
+        renderFiles([]);
+        renderPreview([]);
+        setStatus(`Proposal failed: ${err.message}`);
+      } finally {
+        proposeBtn.disabled = false;
         analyzeBtn.disabled = false;
         generateBtn.disabled = false;
       }

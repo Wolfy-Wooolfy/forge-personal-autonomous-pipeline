@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-11T12:09:25.741Z",
+  "generated_at": "2026-04-11T13:59:13.129Z",
   "blocked": false,
   "status": "PASS",
   "outcome": "PASS",
@@ -78,12 +78,12 @@
     {
       "name": "workspace_runtime_execution_id_consistent",
       "passed": true,
-      "detail": "decision=workspace_decision_1775847656703; backfill=workspace_decision_1775847656703; execute=workspace_decision_1775847656703"
+      "detail": "decision=workspace_decision_1775915855601; backfill=workspace_decision_1775915855601; execute=workspace_decision_1775915855601"
     },
     {
       "name": "workspace_runtime_matches_current_decision_packet",
       "passed": true,
-      "detail": "current_decision_packet=workspace_decision_1775847656703; decision_gate=workspace_decision_1775847656703; backfill=workspace_decision_1775847656703; execute=workspace_decision_1775847656703"
+      "detail": "current_decision_packet=workspace_decision_1775915855601; decision_gate=workspace_decision_1775915855601; backfill=workspace_decision_1775915855601; execute=workspace_decision_1775915855601"
     },
     {
       "name": "workspace_runtime_write_applied",
