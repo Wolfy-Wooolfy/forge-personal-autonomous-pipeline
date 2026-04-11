@@ -474,15 +474,13 @@ console.log("${safeRaw}");`
         }
 
         const normalizedBody = bodyContent.replace(/^\s*\n/, "");
-        const bodyLines = bodyContent
-  .split("\n")
-  .map(line => line.trim())
-  .filter(Boolean);
+        const cleanedBody = bodyContent
+  .replace(/^\s*\n/, "")
+  .replace(/\s*$/, "");
 
 const updatedFunction =
 `function ${functionName}() {
-${logLine}
-${bodyLines.join("\n")}
+${logLine}${cleanedBody ? `\n${cleanedBody}` : ""}
 }`;
 
         return {
