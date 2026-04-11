@@ -876,12 +876,17 @@ function createWorkspaceApiServer(options = {}) {
 
     const interpretation = interpretUserIntent(requestText);
 
-    if (interpretation.mode === "BLOCKED") {
+    if (
+      interpretation.mode === "BLOCKED" ||
+      interpretation.needs_clarification === true
+    ) {
       sendJson(res, 200, {
         ok: false,
         mode: "BLOCKED",
-        reason: "INVALID_REQUEST",
-        clarification_question: interpretation.clarification_question
+        reason: "CLARIFICATION_REQUIRED",
+        clarification_question:
+          interpretation.clarification_question || "What do you want to do?",
+        interpretation
       });
       return;
     }
