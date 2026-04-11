@@ -429,6 +429,46 @@ console.log("${safeRaw}");`
     };
   }
 
+  function buildCodeAwareEditProposal(requestText, currentContent, targetFile) {
+    const raw = String(requestText || "").trim();
+    const lower = raw.toLowerCase();
+    const existing = String(currentContent || "").trim();
+
+    if (/^edit\s+this\s+file\s+to\s+add\s+logging$/i.test(lower)) {
+      if (!existing) {
+        return {
+          strategy: "EDIT_ADD_LOGGING_EMPTY_FILE",
+          target_file: targetFile,
+          content:
+`console.log("Logging enabled");
+
+function testWorkspaceIntegration() {
+  console.log("testWorkspaceIntegration started");
+}`
+        };
+      }
+
+      if (existing.includes('console.log("Logging enabled");')) {
+        return {
+          strategy: "EDIT_ADD_LOGGING_ALREADY_PRESENT",
+          target_file: targetFile,
+          content: existing
+        };
+      }
+
+      return {
+        strategy: "EDIT_ADD_LOGGING_CODE_AWARE",
+        target_file: targetFile,
+        content:
+`console.log("Logging enabled");
+
+${existing}`
+      };
+    }
+
+    return null;
+  }
+
   function buildAiAnalysisArtifacts(requestText) {
     const sessionId = `ai_analysis_${Date.now()}`;
     const createdAt = new Date().toISOString();
@@ -564,6 +604,19 @@ console.log("${safeRaw}");`
 
     const generated = buildSmartProposalCode(requestText);
 
+    const targetFile = generated.target_file || "code/test_workspace_integration.js";
+    const targetAbsPath = path.resolve(root, targetFile);
+    const currentContent = readTextSafe(targetAbsPath);
+
+    const codeAwareEdit = buildCodeAwareEditProposal(
+      requestText,
+      currentContent,
+      targetFile
+    );
+
+    const finalGenerated = codeAwareEdit || generated;
+    const generatedContent = finalGenerated.content;
+
     const proposalArtifact = {
       proposal_id: proposalId,
       created_at: createdAt,
@@ -573,11 +626,9 @@ console.log("${safeRaw}");`
       impact: "LOW",
       execution_required: true,
       execution_approved: false,
-      generation_strategy: generated.strategy
+      generation_strategy: finalGenerated.strategy,
+      target_file: targetFile
     };
-
-    const generatedContent = generated.content;
-    const targetFile = generated.target_file || "code/test_workspace_integration.js";
 
     const draftArtifact = {
       draft_id: proposalId,
