@@ -13,6 +13,11 @@ function createWorkspaceApiServer(options = {}) {
   const decisionsRoot = path.resolve(root, "artifacts/decisions");
   const approvalPolicyPath = path.resolve(root, "artifacts/llm/approval_policy.json");
 
+  const aiRoot = path.resolve(root, "artifacts/ai");
+  const aiConversationsRoot = path.resolve(aiRoot, "conversations");
+  const aiContextRoot = path.resolve(aiRoot, "context");
+  const aiAnalysisRoot = path.resolve(aiRoot, "analysis");
+
   const allowedWriteRoots = [
     path.resolve(root, "artifacts/llm"),
     path.resolve(root, "web"),
@@ -283,6 +288,141 @@ function createWorkspaceApiServer(options = {}) {
     } catch (err) {
       return fallback;
     }
+  }
+
+  function readTextSafe(filePath) {
+    if (!fs.existsSync(filePath)) {
+      return "";
+    }
+
+    try {
+      return fs.readFileSync(filePath, "utf-8");
+    } catch (err) {
+      return "";
+    }
+  }
+
+  function buildAiAnalysisArtifacts(requestText) {
+    const sessionId = `ai_analysis_${Date.now()}`;
+    const createdAt = new Date().toISOString();
+
+    ensureDir(aiConversationsRoot);
+    ensureDir(aiContextRoot);
+    ensureDir(aiAnalysisRoot);
+
+    const selectedPaths = [
+      "progress/status.json",
+      "artifacts/forge/forge_state.json",
+      "artifacts/orchestration/orchestration_state.json",
+      "artifacts/verify/verification_results.json",
+      "docs/11_ai_layer/01_AI_LAYER_SCOPE.md",
+      "docs/11_ai_layer/02_AI_LAYER_ARCHITECTURE.md",
+      "docs/11_ai_layer/03_AI_LAYER_GOVERNANCE.md",
+      "docs/11_ai_layer/04_AI_LAYER_ARTIFACTS.md",
+      "docs/11_ai_layer/05_AI_LAYER_RUNTIME_FLOW.md",
+      "code/src/workspace/apiServer.js",
+      "web/index.html"
+    ];
+
+    const selectedFiles = selectedPaths.map((relPath) => {
+      const absPath = path.resolve(root, relPath);
+      const content = readTextSafe(absPath);
+
+      return {
+        path: relPath,
+        exists: fs.existsSync(absPath),
+        size_bytes: Buffer.byteLength(content, "utf8"),
+        sha256: sha256(content),
+        content
+      };
+    });
+
+    const forgeState = readJsonSafe(path.resolve(root, "artifacts/forge/forge_state.json"), {});
+    const orchestrationState = readJsonSafe(path.resolve(root, "artifacts/orchestration/orchestration_state.json"), {});
+    const verificationResults = readJsonSafe(path.resolve(root, "artifacts/verify/verification_results.json"), {});
+    const liveStatus = readJsonSafe(path.resolve(root, "progress/status.json"), {});
+
+    const analysisSummary = {
+      forge_core_complete: forgeState.next_allowed_step === "COMPLETE" && Array.isArray(forgeState.open_tasks) && forgeState.open_tasks.length === 0,
+      verify_pass: verificationResults.status === "PASS" && verificationResults.final_outcome === "PASS",
+      workspace_runtime_complete: orchestrationState.run_mode === "WORKSPACE_RUNTIME" && orchestrationState.final_outcome === "WORKSPACE_RUNTIME_COMPLETE",
+      no_open_gaps: Array.isArray(forgeState.pending_gaps) && forgeState.pending_gaps.length === 0,
+      current_stage: typeof liveStatus.current_stage === "string" ? liveStatus.current_stage : "",
+      last_completed_artifact: typeof forgeState.last_completed_artifact === "string" ? forgeState.last_completed_artifact : "",
+      ai_layer_mode: "ANALYSIS",
+      execution_triggered: false,
+      decision_packet_created: false
+    };
+
+    const conversationArtifact = {
+      session_id: sessionId,
+      created_at: createdAt,
+      mode: "ANALYSIS",
+      messages: [
+        {
+          role: "user",
+          content: requestText || "General AI Layer analysis request"
+        },
+        {
+          role: "assistant",
+          content: "Analysis completed in read-only mode with context and analysis artifacts generated."
+        }
+      ]
+    };
+
+    const contextArtifact = {
+      session_id: sessionId,
+      created_at: createdAt,
+      mode: "ANALYSIS",
+      request: requestText || "General AI Layer analysis request",
+      selected_file_count: selectedFiles.length,
+      selected_files: selectedFiles
+    };
+
+    const analysisArtifact = {
+      analysis_id: sessionId,
+      created_at: createdAt,
+      mode: "ANALYSIS",
+      request: requestText || "General AI Layer analysis request",
+      summary: analysisSummary,
+      findings: [
+        {
+          finding_id: "AI-ANALYSIS-001",
+          title: "Forge core remains complete and verified",
+          status: analysisSummary.forge_core_complete && analysisSummary.verify_pass ? "CONFIRMED" : "NOT_CONFIRMED"
+        },
+        {
+          finding_id: "AI-ANALYSIS-002",
+          title: "Workspace runtime lane is operational",
+          status: analysisSummary.workspace_runtime_complete ? "CONFIRMED" : "NOT_CONFIRMED"
+        },
+        {
+          finding_id: "AI-ANALYSIS-003",
+          title: "AI Layer is running in read-only analysis mode",
+          status: "CONFIRMED"
+        }
+      ]
+    };
+
+    const conversationRel = `artifacts/ai/conversations/${sessionId}.conversation.json`;
+    const contextRel = `artifacts/ai/context/${sessionId}.context.json`;
+    const analysisRel = `artifacts/ai/analysis/${sessionId}.analysis.json`;
+
+    fs.writeFileSync(path.resolve(root, conversationRel), JSON.stringify(conversationArtifact, null, 2));
+    fs.writeFileSync(path.resolve(root, contextRel), JSON.stringify(contextArtifact, null, 2));
+    fs.writeFileSync(path.resolve(root, analysisRel), JSON.stringify(analysisArtifact, null, 2));
+
+    return {
+      ok: true,
+      mode: "ANALYSIS",
+      session_id: sessionId,
+      conversation_artifact_path: conversationRel,
+      context_artifact_path: contextRel,
+      analysis_artifact_path: analysisRel,
+      selected_file_count: selectedFiles.length,
+      summary: analysisSummary,
+      findings: analysisArtifact.findings
+    };
   }
 
   function appendDecisionLog(entry) {
@@ -583,6 +723,12 @@ function createWorkspaceApiServer(options = {}) {
     sendJson(res, 200, result);
   }
 
+  async function handleAnalyze(body, res) {
+    const requestText = typeof body.request === "string" ? body.request.trim() : "";
+    const result = buildAiAnalysisArtifacts(requestText);
+    sendJson(res, 200, result);
+  }
+
   const server = http.createServer(async (req, res) => {
     try {
       if (req.method === "OPTIONS") {
@@ -602,6 +748,12 @@ function createWorkspaceApiServer(options = {}) {
 
       if (req.method === "GET" && req.url === "/api/ai/history") {
         sendJson(res, 200, { items: getRecentWrites(10) });
+        return;
+      }
+
+      if (req.method === "POST" && req.url === "/api/ai/analyze") {
+        const body = await readBody(req);
+        await handleAnalyze(body, res);
         return;
       }
 

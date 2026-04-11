@@ -204,6 +204,7 @@
         <textarea id="requestInput" placeholder="اكتب طلبك هنا...&#10;&#10;مثال: أنشئ ملف نصي يحتوي خطة عملية لبناء أول MVP لمشروع تقليل الهدر في المصانع الصغيرة في مصر."></textarea>
 
         <div class="actions">
+          <button id="analyzeBtn" class="secondary">Analyze Project</button>
           <button id="generateBtn" class="primary">Generate Draft</button>
           <button id="clearBtn" class="secondary">Clear</button>
         </div>
@@ -256,6 +257,7 @@
 
   <script>
     const requestInput = document.getElementById("requestInput");
+    const analyzeBtn = document.getElementById("analyzeBtn");
     const generateBtn = document.getElementById("generateBtn");
     const clearBtn = document.getElementById("clearBtn");
     const approveBtn = document.getElementById("approveBtn");
@@ -549,6 +551,60 @@
       renderOperationInfo("", 0, 0, []);
       setStatus("Ready.");
     }
+
+    analyzeBtn.addEventListener("click", async () => {
+      const request = requestInput.value.trim();
+
+      analyzeBtn.disabled = true;
+      generateBtn.disabled = true;
+      approveBtn.disabled = true;
+      rejectBtn.disabled = true;
+      setStatus("Running analysis...");
+
+      try {
+        const res = await fetch("http://localhost:3100/api/ai/analyze", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ request })
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          throw new Error(data.error || "Analysis failed.");
+        }
+
+        currentDraft = null;
+        currentRequest = request;
+        currentPreview = [];
+        currentRequiredRoles = [];
+        currentApprovalPolicyVersion = "";
+        currentOperationMode = "";
+        currentFileCount = 0;
+        currentTotalBytes = 0;
+        currentFileRoleRequirements = [];
+
+        renderResponse(data);
+        renderFiles([]);
+        renderPreview([]);
+        renderApprovalInfo([], "");
+        renderOperationInfo("", 0, 0, []);
+
+        setStatus(
+          `Analysis complete.\nSession ID: ${data.session_id}\nContext artifact: ${data.context_artifact_path}\nAnalysis artifact: ${data.analysis_artifact_path}`
+        );
+      } catch (err) {
+        renderResponse({ error: err.message });
+        renderFiles([]);
+        renderPreview([]);
+        setStatus(`Analysis failed: ${err.message}`);
+      } finally {
+        analyzeBtn.disabled = false;
+        generateBtn.disabled = false;
+      }
+    });
 
     generateBtn.addEventListener("click", async () => {
       const request = requestInput.value.trim();
