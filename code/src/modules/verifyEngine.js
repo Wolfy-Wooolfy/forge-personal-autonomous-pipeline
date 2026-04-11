@@ -215,6 +215,21 @@ function runVerify(context) {
     }
   } catch (e) {}
 
+  const decisionPacketRel = "artifacts/decisions/decision_packet.json";
+  let decisionPacketJson = null;
+
+  try {
+    if (fileExists(decisionPacketRel)) {
+      decisionPacketJson = readJson(decisionPacketRel);
+    }
+  } catch (e) {}
+
+  const currentDecisionPacketExecutionId =
+    decisionPacketJson &&
+    typeof decisionPacketJson.execution_id === "string"
+      ? decisionPacketJson.execution_id
+      : "";
+
   const decisionApprovedActions = Array.isArray(decisionGateJson && decisionGateJson.approved_actions)
     ? decisionGateJson.approved_actions
     : [];
@@ -264,6 +279,19 @@ function runVerify(context) {
       workspaceExecutionIdFromBackfill === activeWorkspaceExecutionId &&
       workspaceExecutionIdFromExecute === activeWorkspaceExecutionId,
     `decision=${workspaceExecutionIdFromDecision || "NONE"}; backfill=${workspaceExecutionIdFromBackfill || "NONE"}; execute=${workspaceExecutionIdFromExecute || "NONE"}`
+  );
+
+  addCheck(
+    "workspace_runtime_matches_current_decision_packet",
+    currentDecisionPacketExecutionId === "" ||
+      (
+        workspaceExecutionIdFromDecision === currentDecisionPacketExecutionId &&
+        workspaceExecutionIdFromBackfill === currentDecisionPacketExecutionId &&
+        workspaceExecutionIdFromExecute === currentDecisionPacketExecutionId
+      ),
+    currentDecisionPacketExecutionId === ""
+      ? "No current workspace decision_packet.json"
+      : `current_decision_packet=${currentDecisionPacketExecutionId}; decision_gate=${workspaceExecutionIdFromDecision || "NONE"}; backfill=${workspaceExecutionIdFromBackfill || "NONE"}; execute=${workspaceExecutionIdFromExecute || "NONE"}`
   );
 
   addCheck(

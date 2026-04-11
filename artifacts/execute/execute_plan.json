@@ -1,43 +1,29 @@
 {
   "execution_id": "MODULE_FLOW_EXECUTE_v1",
-  "generated_at": "2026-04-10T17:17:18.662Z",
+  "generated_at": "2026-04-11T12:09:25.738Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "source": {
     "backfill_plan_path": "artifacts/backfill/backfill_plan.json",
-    "backfill_sha256": "4ed20fa00e296445f8e6f34554eb884f4023001f4341016706b0bbf107b4fce0",
+    "backfill_sha256": "97c2d4225649c9bce51af27d82d0ba1d7206508ebb3824c88e067d17af133246",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84",
-    "workspace_execution_id": "workspace_decision_1775841323000"
+    "workspace_execution_id": "workspace_decision_1775847656703"
   },
   "approved_code_actions": [
     {
       "action_id": "WORKSPACE_ACTION_1",
       "origin_gap_id": "WORKSPACE_CHANGE_REQUEST",
       "action_type": "BACKFILL_RECONCILIATION",
-      "target_path": "code/test_multi_file_a.js",
-      "target_file": "code/test_multi_file_a.js",
+      "target_path": "code/test_workspace_integration.js",
+      "target_file": "code/test_workspace_integration.js",
       "source_type": "EXTERNAL_AI_WORKSPACE",
-      "workspace_execution_id": "workspace_decision_1775841323000",
+      "workspace_execution_id": "workspace_decision_1775847656703",
       "deterministic_template_used": true,
       "allow_overwrite": true,
       "wrote_content": true,
-      "old_sha256": null,
-      "new_sha256": "e2e72247c127a102ee38658593e9b16381d7abe19e1217037bb643ed67ae33fa"
-    },
-    {
-      "action_id": "WORKSPACE_ACTION_2",
-      "origin_gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "target_path": "code/test_multi_file_b.js",
-      "target_file": "code/test_multi_file_b.js",
-      "source_type": "EXTERNAL_AI_WORKSPACE",
-      "workspace_execution_id": "workspace_decision_1775841323000",
-      "deterministic_template_used": true,
-      "allow_overwrite": true,
-      "wrote_content": true,
-      "old_sha256": null,
-      "new_sha256": "6358a58fff54f5ec9e8895ce943369c9cf48394d3bcb49440ab688f466f7d17d"
+      "old_sha256": "a6e207fbea49b35e389cf8643e7660f79d3b22def4bdc62b4c403949795d5f2b",
+      "new_sha256": "dd3ea4fd8f10adcc053ac6b3de4ecbc55289e090026350c9321ccd8e1bf5f5d2"
     }
   ]
 }

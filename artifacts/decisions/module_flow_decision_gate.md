@@ -1,6 +1,6 @@
 # MODULE FLOW — Decision Gate
 
-- timestamp: 2026-04-10T17:17:18.655Z
+- timestamp: 2026-04-11T12:09:25.732Z
 - policy: AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK
 - operating_mode: IMPROVE
 - repository_state: MIXED
@@ -13,15 +13,13 @@
 - intake_context_sha256: eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84
 
 ## Summary
-- total_actions: 2
-- approved_count: 2
+- total_actions: 1
+- approved_count: 1
 - review_required_count: 0
 - rejected_count: 0
 
 ## Approved Actions
-- WORKSPACE_ACTION_1 [WORKSPACE_CHANGE_REQUEST/MEDIUM] Apply governed workspace draft to code/test_multi_file_a.js
-  - reason: governed workspace decision packet approved
-- WORKSPACE_ACTION_2 [WORKSPACE_CHANGE_REQUEST/MEDIUM] Apply governed workspace draft to code/test_multi_file_b.js
+- WORKSPACE_ACTION_1 [WORKSPACE_CHANGE_REQUEST/MEDIUM] Apply governed workspace draft to code/test_workspace_integration.js
   - reason: governed workspace decision packet approved
 
 ## Review Required
