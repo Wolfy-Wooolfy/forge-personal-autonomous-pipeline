@@ -26,6 +26,27 @@ AI MUST NEVER execute directly.
 
 ## 3. Allowed Actions
 
+### AI Layer CAN write (restricted):
+
+AI Layer is allowed to write ONLY under:
+
+artifacts/ai/*
+
+This includes:
+
+- conversations
+- context snapshots
+- analysis artifacts
+- proposals
+- drafts (non-executed)
+
+Constraints:
+
+- These writes are considered NON-EXECUTIONAL
+- They MUST NOT affect project state
+- They MUST NOT modify code/ or Forge artifacts
+- They are used for traceability and reasoning only
+
 ### AI Layer CAN:
 
 - Read files (read-only)
@@ -38,8 +59,8 @@ AI MUST NEVER execute directly.
 
 ### AI Layer CANNOT:
 
-- Write files directly
-- Modify project state
+- Modify project source code directly
+- Modify Forge artifacts outside artifacts/ai/*
 - Trigger execution without approval
 - Bypass Decision Gate
 
@@ -66,6 +87,7 @@ No exceptions.
 Output:
 - analysis report
 - insights
+- May produce artifacts under artifacts/ai/* as analysis outputs (non-executional)
 
 ---
 
