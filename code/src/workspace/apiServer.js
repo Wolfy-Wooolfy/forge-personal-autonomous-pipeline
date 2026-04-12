@@ -370,6 +370,64 @@ function createWorkspaceApiServer(options = {}) {
     const lower = raw.toLowerCase();
 
     if (
+      (lower.includes("create") || lower.includes("build")) &&
+      (lower.includes("authentication") || lower.includes("auth") || lower.includes("login")) &&
+      lower.includes("connect") &&
+      lower.includes("server")
+    ) {
+      return {
+        strategy: "AUTH_SYSTEM_WITH_SERVER_INTEGRATION",
+        files: [
+          {
+            path: "code/src/auth/authSystem.js",
+            content:
+`const express = require("express");
+
+function registerAuthRoutes(app) {
+  app.post("/api/auth/register", (req, res) => {
+    const { username, password } = req.body;
+    res.json({ ok: true, message: "User registered", username });
+  });
+
+  app.post("/api/auth/login", (req, res) => {
+    const { username } = req.body;
+    res.json({ ok: true, message: "Login successful", username });
+  });
+}
+
+module.exports = {
+  registerAuthRoutes
+};`
+          },
+          {
+            path: "code/src/workspace/apiServer.js",
+            content:
+`const { registerAuthRoutes } = require("../auth/authSystem");
+
+function integrateAuth(app) {
+  registerAuthRoutes(app);
+}`
+          }
+        ]
+      };
+    }
+
+    if (
+      (lower.includes("create") || lower.includes("build")) &&
+      (lower.includes("authentication") || lower.includes("auth") || lower.includes("login")) &&
+      lower.includes("connect") &&
+      lower.includes("server")
+    ) {
+      strategies.push({
+        strategy_id: "AUTH_SYSTEM_WITH_SERVER_INTEGRATION",
+        title: "Create auth system and connect it to API server",
+        score: 0.99,
+        target_file: "MULTI_FILE",
+        rationale: "The request clearly asks to create the auth system and connect it to the API server in one coordinated change."
+      });
+    }
+
+    if (
       lower.includes("connect") &&
       (lower.includes("auth") || lower.includes("authentication")) &&
       lower.includes("server")
@@ -684,7 +742,7 @@ ${trimmedExisting}`
       strategies.push({
         strategy_id: "CONNECT_AUTH_TO_SERVER",
         title: "Connect auth system to API server",
-        score: 0.97,
+        score: 0.90,
         target_file: "code/src/workspace/apiServer.js",
         rationale: "The request clearly asks to connect the authentication system to the API server."
       });
@@ -876,6 +934,25 @@ ${trimmedExisting}`
     };
   }
 
+  function buildExecutionPlanFromDraft(draftArtifact, executionId) {
+    const files = Array.isArray(draftArtifact.files) ? draftArtifact.files : [];
+
+    return {
+      workspace_execution_id: executionId,
+      generated_at: new Date().toISOString(),
+      files: files.map((file) => ({
+        file_path: file.path,
+        operation: "create",
+        changes: [
+          {
+            type: "full_content",
+            content: file.content
+          }
+        ]
+      }))
+    };
+  }
+
   function buildAiProposalArtifacts(requestText) {
     const proposalId = `ai_proposal_${Date.now()}`;
     const createdAt = new Date().toISOString();
@@ -908,8 +985,22 @@ ${trimmedExisting}`
     );
 
     const finalGenerated = codeAwareEdit || fileTypeAware || generated;
-    const generatedContent = finalGenerated.content;
-    const targetFile = finalGenerated.target_file || resolvedTargetFile;
+
+    const generatedFiles = Array.isArray(finalGenerated.files) && finalGenerated.files.length > 0
+      ? finalGenerated.files.map((file) => ({
+          path: normalizeRelativePath(file.path),
+          content: typeof file.content === "string" ? file.content : "",
+          allow_overwrite: file.allow_overwrite === true
+        }))
+      : [
+          {
+            path: finalGenerated.target_file || resolvedTargetFile,
+            content: typeof finalGenerated.content === "string" ? finalGenerated.content : "",
+            allow_overwrite: true
+          }
+        ];
+
+    const targetFile = generatedFiles[0].path;
     const strategyCandidates = buildStrategyCandidates(
       requestText,
       targetFile
@@ -926,6 +1017,8 @@ ${trimmedExisting}`
       execution_approved: false,
       generation_strategy: finalGenerated.strategy,
       target_file: targetFile,
+      target_files: generatedFiles.map((file) => file.path),
+      operation_mode: generatedFiles.length > 1 ? "MULTI_FILE" : "SINGLE_FILE",
       selected_strategy: strategyCandidates[0] || null,
       strategy_candidates: strategyCandidates
     };
@@ -934,16 +1027,29 @@ ${trimmedExisting}`
       draft_id: proposalId,
       created_at: createdAt,
       mode: "PROPOSAL",
-      files: [
-        {
-          path: targetFile,
-          content: generatedContent,
-          allow_overwrite: true
-        }
-      ],
+      files: generatedFiles,
       approved: false,
       ready_for_decision: false
     };
+
+    const executionPlan = buildExecutionPlanFromDraft(
+      draftArtifact,
+      proposalId
+    );
+
+    const executePlanPath = path.join(
+      root,
+      "artifacts",
+      "execute",
+      "execute_plan.json"
+    );
+
+    fs.mkdirSync(path.dirname(executePlanPath), { recursive: true });
+    fs.writeFileSync(
+      executePlanPath,
+      JSON.stringify(executionPlan, null, 2),
+      "utf8"
+    );
 
     const proposalRel = `artifacts/ai/proposals/${proposalId}.proposal.json`;
     const draftRel = `artifacts/ai/drafts/${proposalId}.draft.json`;
