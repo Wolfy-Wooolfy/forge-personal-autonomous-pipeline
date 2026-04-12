@@ -365,6 +365,162 @@ function createWorkspaceApiServer(options = {}) {
       .join("");
   }
 
+  function buildSmartProposalCode(requestText) {
+    const raw = String(requestText || "").trim();
+    const lower = raw.toLowerCase();
+
+    if (
+      (lower.includes("create") || lower.includes("build")) &&
+      (lower.includes("authentication") || lower.includes("auth") || lower.includes("login")) &&
+      lower.includes("connect") &&
+      lower.includes("server")
+    ) {
+      return {
+        strategy: "AUTH_SYSTEM_WITH_SERVER_INTEGRATION",
+        files: [
+          {
+            path: "code/src/auth/authSystem.js",
+            content:
+`const express = require("express");
+
+function registerAuthRoutes(app) {
+  app.post("/api/auth/register", (req, res) => {
+    const { username, password } = req.body;
+    res.json({ ok: true, message: "User registered", username });
+  });
+
+  app.post("/api/auth/login", (req, res) => {
+    const { username } = req.body;
+    res.json({ ok: true, message: "Login successful", username });
+  });
+}
+
+module.exports = {
+  registerAuthRoutes
+};`
+          },
+          {
+            path: "code/src/workspace/apiServer.js",
+            content:
+`const { registerAuthRoutes } = require("../auth/authSystem");
+
+function integrateAuth(app) {
+  registerAuthRoutes(app);
+}`
+          }
+        ]
+      };
+    }
+
+    if (
+      lower.includes("connect") &&
+      (lower.includes("auth") || lower.includes("authentication")) &&
+      lower.includes("server")
+    ) {
+      return {
+        strategy: "CONNECT_AUTH_TO_SERVER",
+        target_file: "code/src/workspace/apiServer.js",
+        content:
+`const { registerAuthRoutes } = require("../auth/authSystem");
+
+function integrateAuth(app) {
+  registerAuthRoutes(app);
+}`
+      };
+    }
+
+    if (
+      lower.includes("authentication") ||
+      lower.includes("auth") ||
+      lower.includes("login")
+    ) {
+      return {
+        strategy: "USER_AUTH_SYSTEM",
+        target_file: "code/src/auth/authSystem.js",
+        content:
+`const express = require("express");
+
+function registerAuthRoutes(app) {
+  app.post("/api/auth/register", (req, res) => {
+    const { username, password } = req.body;
+    res.json({ ok: true, message: "User registered", username });
+  });
+
+  app.post("/api/auth/login", (req, res) => {
+    const { username } = req.body;
+    res.json({ ok: true, message: "Login successful", username });
+  });
+}
+
+module.exports = {
+  registerAuthRoutes
+};`
+      };
+    }
+
+    const printMatch = lower.match(/^create\s+a\s+function\s+that\s+prints\s+(.+)$/i);
+    if (printMatch) {
+      const message = raw.slice(raw.toLowerCase().indexOf("prints") + "prints".length).trim();
+      const functionName = `print${toPascalCase(message) || "Message"}`;
+      const safeMessage = message.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+
+      return {
+        strategy: "FUNCTION_PRINT",
+        target_file: "code/test_workspace_integration.js",
+        content:
+`function ${functionName}() {
+  console.log("${safeMessage}");
+}`
+      };
+    }
+
+    const apiMatch = lower.match(/^create\s+an?\s+api\s+endpoint\s+called\s+(.+)$/i);
+    if (apiMatch) {
+      const endpointNameRaw = raw.slice(raw.toLowerCase().indexOf("called") + "called".length).trim();
+      const endpointName = endpointNameRaw
+        .replace(/[^a-zA-Z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "")
+        .toLowerCase() || "new-endpoint";
+
+      return {
+        strategy: "API_ENDPOINT_CREATE",
+        target_file: "code/test_workspace_integration.js",
+        content:
+`function register${toPascalCase(endpointName)}Endpoint(app) {
+  app.post("/api/${endpointName}", (req, res) => {
+    res.json({ ok: true, endpoint: "${endpointName}" });
+  });
+}`
+      };
+    }
+
+    const loggingMatch = lower.match(/^edit\s+this\s+file\s+to\s+add\s+logging$/i);
+    if (loggingMatch) {
+      return {
+        strategy: "EDIT_ADD_LOGGING",
+        target_file: "code/test_workspace_integration.js",
+        content:
+`console.log("Logging enabled");
+
+function testWorkspaceIntegration() {
+  console.log("testWorkspaceIntegration started");
+}`
+      };
+    }
+
+    const safeRaw = raw.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+
+    return {
+      strategy: "FALLBACK_ECHO",
+      target_file: "code/test_workspace_integration.js",
+      content:
+`// Generated from request:
+// ${raw}
+
+console.log("${safeRaw}");`
+    };
+  }
+
   function buildCodeAwareEditProposal(requestText, currentContent, targetFile) {
     const raw = String(requestText || "").trim();
     const lower = raw.toLowerCase();
@@ -827,7 +983,18 @@ ${trimmedExisting}`
       const content = typeof fullContentChange.content === "string" ? fullContentChange.content : "";
 
       fs.mkdirSync(path.dirname(absolutePath), { recursive: true });
-      fs.writeFileSync(absolutePath, content, "utf8");
+      let finalContent = content;
+
+if (fs.existsSync(absolutePath)) {
+  const existing = fs.readFileSync(absolutePath, "utf8");
+
+  finalContent =
+    existing +
+    "\n\n// ===== AI GENERATED ADDITION =====\n\n" +
+    content;
+}
+
+fs.writeFileSync(absolutePath, finalContent, "utf8");
 
       return {
         file_path: relPath,
