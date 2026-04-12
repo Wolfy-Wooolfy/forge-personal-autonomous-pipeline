@@ -365,177 +365,6 @@ function createWorkspaceApiServer(options = {}) {
       .join("");
   }
 
-  function buildSmartProposalCode(requestText) {
-    const raw = String(requestText || "").trim();
-    const lower = raw.toLowerCase();
-
-    if (
-      (lower.includes("create") || lower.includes("build")) &&
-      (lower.includes("authentication") || lower.includes("auth") || lower.includes("login")) &&
-      lower.includes("connect") &&
-      lower.includes("server")
-    ) {
-      return {
-        strategy: "AUTH_SYSTEM_WITH_SERVER_INTEGRATION",
-        files: [
-          {
-            path: "code/src/auth/authSystem.js",
-            content:
-`const express = require("express");
-
-function registerAuthRoutes(app) {
-  app.post("/api/auth/register", (req, res) => {
-    const { username, password } = req.body;
-    res.json({ ok: true, message: "User registered", username });
-  });
-
-  app.post("/api/auth/login", (req, res) => {
-    const { username } = req.body;
-    res.json({ ok: true, message: "Login successful", username });
-  });
-}
-
-module.exports = {
-  registerAuthRoutes
-};`
-          },
-          {
-            path: "code/src/workspace/apiServer.js",
-            content:
-`const { registerAuthRoutes } = require("../auth/authSystem");
-
-function integrateAuth(app) {
-  registerAuthRoutes(app);
-}`
-          }
-        ]
-      };
-    }
-
-    if (
-      (lower.includes("create") || lower.includes("build")) &&
-      (lower.includes("authentication") || lower.includes("auth") || lower.includes("login")) &&
-      lower.includes("connect") &&
-      lower.includes("server")
-    ) {
-      strategies.push({
-        strategy_id: "AUTH_SYSTEM_WITH_SERVER_INTEGRATION",
-        title: "Create auth system and connect it to API server",
-        score: 0.99,
-        target_file: "MULTI_FILE",
-        rationale: "The request clearly asks to create the auth system and connect it to the API server in one coordinated change."
-      });
-    }
-
-    if (
-      lower.includes("connect") &&
-      (lower.includes("auth") || lower.includes("authentication")) &&
-      lower.includes("server")
-    ) {
-      return {
-        strategy: "CONNECT_AUTH_TO_SERVER",
-        target_file: "code/src/workspace/apiServer.js",
-        content:
-    `const { registerAuthRoutes } = require("../auth/authSystem");
-
-    function integrateAuth(app) {
-      registerAuthRoutes(app);
-    }`
-      };
-    }
-
-    if (
-      lower.includes("authentication") ||
-      lower.includes("auth") ||
-      lower.includes("login")
-    ) {
-      return {
-        strategy: "USER_AUTH_SYSTEM",
-        target_file: "code/src/auth/authSystem.js",
-        content:
-`const express = require("express");
-
-function registerAuthRoutes(app) {
-  app.post("/api/auth/register", (req, res) => {
-    const { username, password } = req.body;
-    res.json({ ok: true, message: "User registered", username });
-  });
-
-  app.post("/api/auth/login", (req, res) => {
-    const { username } = req.body;
-    res.json({ ok: true, message: "Login successful", username });
-  });
-}
-
-module.exports = {
-  registerAuthRoutes
-};`
-      };
-    }
-
-    const printMatch = lower.match(/^create\s+a\s+function\s+that\s+prints\s+(.+)$/i);
-    if (printMatch) {
-      const message = raw.slice(raw.toLowerCase().indexOf("prints") + "prints".length).trim();
-      const functionName = `print${toPascalCase(message) || "Message"}`;
-      const safeMessage = message.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
-
-      return {
-        strategy: "FUNCTION_PRINT",
-        target_file: "code/test_workspace_integration.js",
-        content:
-`function ${functionName}() {
-  console.log("${safeMessage}");
-}`
-      };
-    }
-
-    const apiMatch = lower.match(/^create\s+an?\s+api\s+endpoint\s+called\s+(.+)$/i);
-    if (apiMatch) {
-      const endpointNameRaw = raw.slice(raw.toLowerCase().indexOf("called") + "called".length).trim();
-      const endpointName = endpointNameRaw
-        .replace(/[^a-zA-Z0-9]+/g, "-")
-        .replace(/^-+|-+$/g, "")
-        .toLowerCase() || "new-endpoint";
-
-      return {
-        strategy: "API_ENDPOINT_CREATE",
-        target_file: "code/test_workspace_integration.js",
-        content:
-`function register${toPascalCase(endpointName)}Endpoint(app) {
-  app.post("/api/${endpointName}", (req, res) => {
-    res.json({ ok: true, endpoint: "${endpointName}" });
-  });
-}`
-      };
-    }
-
-    const loggingMatch = lower.match(/^edit\s+this\s+file\s+to\s+add\s+logging$/i);
-    if (loggingMatch) {
-      return {
-        strategy: "EDIT_ADD_LOGGING",
-        target_file: "code/test_workspace_integration.js",
-        content:
-`console.log("Logging enabled");
-
-function testWorkspaceIntegration() {
-  console.log("testWorkspaceIntegration started");
-}`
-      };
-    }
-
-    const safeRaw = raw.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
-
-    return {
-      strategy: "FALLBACK_ECHO",
-      target_file: "code/test_workspace_integration.js",
-      content:
-`// Generated from request:
-// ${raw}
-
-console.log("${safeRaw}");`
-    };
-  }
-
   function buildCodeAwareEditProposal(requestText, currentContent, targetFile) {
     const raw = String(requestText || "").trim();
     const lower = raw.toLowerCase();
@@ -950,6 +779,56 @@ ${trimmedExisting}`
           }
         ]
       }))
+    };
+  }
+
+  function applyExecutionPlan(executionPlan) {
+    const plan = executionPlan && typeof executionPlan === "object" ? executionPlan : {};
+    const files = Array.isArray(plan.files) ? plan.files : [];
+
+    if (files.length === 0) {
+      throw new Error("Execution plan contains no files");
+    }
+
+    const appliedFiles = files.map((file) => {
+      const relPath = normalizeRelativePath(file && file.file_path ? file.file_path : "");
+      const absolutePath = path.resolve(root, relPath);
+
+      if (!relPath) {
+        throw new Error("Execution plan file_path is required");
+      }
+
+      if (!isPathAllowed(absolutePath)) {
+        throw new Error(`Execution blocked for path: ${relPath}`);
+      }
+
+      const changes = Array.isArray(file.changes) ? file.changes : [];
+      const fullContentChange = changes.find((change) => change && change.type === "full_content");
+
+      if (!fullContentChange) {
+        throw new Error(`Execution plan missing full_content change for: ${relPath}`);
+      }
+
+      const content = typeof fullContentChange.content === "string" ? fullContentChange.content : "";
+
+      fs.mkdirSync(path.dirname(absolutePath), { recursive: true });
+      fs.writeFileSync(absolutePath, content, "utf8");
+
+      return {
+        file_path: relPath,
+        operation: file.operation || "create",
+        bytes_written: Buffer.byteLength(content, "utf8")
+      };
+    });
+
+    return {
+      ok: true,
+      workspace_execution_id: typeof plan.workspace_execution_id === "string"
+        ? plan.workspace_execution_id
+        : "",
+      applied_files: appliedFiles,
+      file_count: appliedFiles.length,
+      applied_at: new Date().toISOString()
     };
   }
 
@@ -1442,6 +1321,26 @@ ${trimmedExisting}`
     sendJson(res, 200, result);
   }
 
+  async function handleApplyExecutePlan(body, res) {
+    const executePlanPath = path.join(
+      root,
+      "artifacts",
+      "execute",
+      "execute_plan.json"
+    );
+
+    const executionPlan = readJsonSafe(executePlanPath, null);
+
+    if (!executionPlan) {
+      sendJson(res, 404, { error: "execute_plan.json not found" });
+      return;
+    }
+
+    const result = applyExecutionPlan(executionPlan);
+
+    sendJson(res, 200, result);
+  }
+
   const server = http.createServer(async (req, res) => {
     try {
       if (req.method === "OPTIONS") {
@@ -1473,6 +1372,12 @@ ${trimmedExisting}`
       if (req.method === "POST" && req.url === "/api/ai/propose") {
         const body = await readBody(req);
         await handlePropose(body, res);
+        return;
+      }
+
+      if (req.method === "POST" && req.url === "/api/ai/apply-execute-plan") {
+        const body = await readBody(req);
+        await handleApplyExecutePlan(body, res);
         return;
       }
 
