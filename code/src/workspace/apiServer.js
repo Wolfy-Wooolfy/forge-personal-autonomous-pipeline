@@ -564,6 +564,21 @@ ${trimmedExisting}`
     }
 
     if (
+      (lower.includes("create") || lower.includes("build")) &&
+      (lower.includes("authentication") || lower.includes("auth") || lower.includes("login")) &&
+      lower.includes("connect") &&
+      lower.includes("server")
+    ) {
+      strategies.push({
+        strategy_id: "AUTH_SYSTEM_WITH_SERVER_INTEGRATION",
+        title: "Create auth system and connect it to API server",
+        score: 0.99,
+        target_file: "MULTI_FILE",
+        rationale: "The request clearly asks to create the auth system and connect it to the API server in one coordinated change."
+      });
+    }
+
+    if (
       lower.includes("connect") &&
       (lower.includes("auth") || lower.includes("authentication")) &&
       lower.includes("server")
