@@ -1,14 +1,14 @@
 {
   "execution_id": "MODULE_FLOW_EXECUTE_v1",
-  "generated_at": "2026-04-11T13:59:13.127Z",
+  "generated_at": "2026-04-12T13:22:15.490Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "source": {
     "backfill_plan_path": "artifacts/backfill/backfill_plan.json",
-    "backfill_sha256": "853de53823ddc446564875df3bba60db4be1e5d66b6ae1f5ea7b747a5ee9c04c",
+    "backfill_sha256": "bcc7deff0a38918471fc0674787f58d8149302b3602aa47b7d9cbd4e2d63ba2f",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84",
-    "workspace_execution_id": "workspace_decision_1775915855601"
+    "workspace_execution_id": "workspace_decision_1775925229972"
   },
   "approved_code_actions": [
     {
@@ -18,11 +18,11 @@
       "target_path": "code/test_workspace_integration.js",
       "target_file": "code/test_workspace_integration.js",
       "source_type": "EXTERNAL_AI_WORKSPACE",
-      "workspace_execution_id": "workspace_decision_1775915855601",
+      "workspace_execution_id": "workspace_decision_1775925229972",
       "deterministic_template_used": true,
       "allow_overwrite": true,
       "wrote_content": true,
-      "old_sha256": "dd3ea4fd8f10adcc053ac6b3de4ecbc55289e090026350c9321ccd8e1bf5f5d2",
+      "old_sha256": "56f15fc68034303f782daae76542f0627e545c71bd05108fd54b2493e5ca7bb3",
       "new_sha256": "567aceb77e1c64ca2683b15e9369b46b02146a46194ca152826b78c5ef18bde8"
     }
   ]
