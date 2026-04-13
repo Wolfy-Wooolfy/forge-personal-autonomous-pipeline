@@ -1079,6 +1079,32 @@ ${trimmedExisting}`
     const targetAbsPath = path.resolve(root, resolvedTargetFile);
     const currentContent = readTextSafe(targetAbsPath);
 
+    const recentHistory = getRecentWrites(10);
+    const normalizedRequest = String(requestText || "").trim().toLowerCase();
+
+    const duplicateHistoryEntry = recentHistory.find((entry) => {
+      const requestTextFromHistory = String(
+        entry && entry.request_text ? entry.request_text : ""
+      ).trim().toLowerCase();
+
+      return requestTextFromHistory === normalizedRequest;
+    });
+
+    if (duplicateHistoryEntry) {
+      return {
+        ok: false,
+        mode: "DUPLICATE_HISTORY",
+        reason: "REQUEST_ALREADY_EXECUTED_RECENTLY",
+        message: "This request was already executed recently.",
+        target_file: resolvedTargetFile,
+        recent_entry: {
+          decision_packet_id: duplicateHistoryEntry.decision_packet_id || "",
+          logged_at: duplicateHistoryEntry.logged_at || "",
+          summary: duplicateHistoryEntry.summary || ""
+        }
+      };
+    }
+
     const generated = buildSmartProposalCode(requestText);
     if (!generated.target_file) {
       generated.target_file = resolvedTargetFile;
@@ -1315,6 +1341,7 @@ ${trimmedExisting}`
           written_files: Array.isArray(data.written_files) ? data.written_files : [],
           queued_files: Array.isArray(data.queued_files) ? data.queued_files : [],
           summary: typeof data.summary === "string" ? data.summary : "",
+          request_text: typeof data.request === "string" ? data.request : "",
           ok: !!data.ok,
           logged_at: new Date(item.mtimeMs).toISOString()
         };
@@ -1441,6 +1468,7 @@ ${trimmedExisting}`
       ],
       queued_files: normalizedFiles.map((file) => file.path),
       summary: typeof draft.summary === "string" ? draft.summary : "Decision packet created successfully.",
+      request: userRequest || "",
       diffs
     };
 
