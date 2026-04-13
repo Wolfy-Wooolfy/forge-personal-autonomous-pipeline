@@ -204,11 +204,7 @@
         <textarea id="requestInput" placeholder="اكتب طلبك هنا...&#10;&#10;مثال: أنشئ ملف نصي يحتوي خطة عملية لبناء أول MVP لمشروع تقليل الهدر في المصانع الصغيرة في مصر."></textarea>
 
         <div class="actions">
-          <button id="analyzeBtn" class="secondary">Analyze Project</button>
-          <button id="runBtn" class="primary">Run Direct</button>
-          <button id="proposeBtn" class="primary">Generate Proposal</button>
-          <button id="generateBtn" class="secondary">Generate Draft</button>
-          <button id="clearBtn" class="secondary">Clear</button>
+          <button id="chatSendBtn" class="primary">Send</button>
         </div>
 
         <div id="statusBox" class="status">Ready.</div>
@@ -280,11 +276,7 @@
 
   <script>
     const requestInput = document.getElementById("requestInput");
-    const analyzeBtn = document.getElementById("analyzeBtn");
-    const runBtn = document.getElementById("runBtn");
-    const proposeBtn = document.getElementById("proposeBtn");
-    const generateBtn = document.getElementById("generateBtn");
-    const clearBtn = document.getElementById("clearBtn");
+    const chatSendBtn = document.getElementById("chatSendBtn");
     const approveBtn = document.getElementById("approveBtn");
     const rejectBtn = document.getElementById("rejectBtn");
     const approverRoleSelect = document.getElementById("approverRoleSelect");
@@ -604,195 +596,6 @@
       setStatus("Ready.");
     }
 
-    analyzeBtn.addEventListener("click", async () => {
-      const request = requestInput.value.trim();
-
-      analyzeBtn.disabled = true;
-      generateBtn.disabled = true;
-      approveBtn.disabled = true;
-      rejectBtn.disabled = true;
-      setStatus("Running analysis...");
-
-      try {
-        const res = await fetch("http://localhost:3100/api/ai/analyze", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({ request })
-        });
-
-        const data = await res.json();
-
-        if (!res.ok) {
-          throw new Error(data.error || "Analysis failed.");
-        }
-
-        currentDraft = null;
-        currentRequest = request;
-        currentPreview = [];
-        currentRequiredRoles = [];
-        currentApprovalPolicyVersion = "";
-        currentOperationMode = "";
-        currentFileCount = 0;
-        currentTotalBytes = 0;
-        currentFileRoleRequirements = [];
-
-        renderResponse(data);
-        renderFiles([]);
-        renderPreview([]);
-        renderApprovalInfo([], "");
-        renderOperationInfo("", 0, 0, []);
-
-        setStatus(
-          `Analysis complete.\nSession ID: ${data.session_id}\nContext artifact: ${data.context_artifact_path}\nAnalysis artifact: ${data.analysis_artifact_path}`
-        );
-      } catch (err) {
-        renderResponse({ error: err.message });
-        renderFiles([]);
-        renderPreview([]);
-        setStatus(`Analysis failed: ${err.message}`);
-      } finally {
-        analyzeBtn.disabled = false;
-        generateBtn.disabled = false;
-      }
-    });
-
-    proposeBtn.addEventListener("click", async () => {
-      const request = requestInput.value.trim();
-
-      if (!request) {
-        setStatus("Please enter a request first.");
-        return;
-      }
-
-      proposeBtn.disabled = true;
-      analyzeBtn.disabled = true;
-      generateBtn.disabled = true;
-      approveBtn.disabled = true;
-      rejectBtn.disabled = true;
-
-      setStatus("Generating proposal...");
-
-      try {
-        const res = await fetch("http://localhost:3100/api/ai/propose", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({ request })
-        });
-
-        const data = await res.json();
-
-        if (!res.ok) {
-          throw new Error(data.error || "Proposal failed.");
-        }
-
-        if (!data.ok) {
-          renderResponse(data);
-
-          renderFiles([]);
-          renderPreview([]);
-          renderApprovalInfo([], "");
-          renderOperationInfo("", 0, 0, []);
-
-          setStatus(
-            data.mode === "BLOCKED"
-              ? `Blocked: ${data.clarification_question || "Clarification required"}`
-              : data.message || "Request not eligible for proposal."
-          );
-
-          return;
-        }
-
-        currentProposalId = data.proposal_id || "";
-
-        currentRequest = request;
-        currentProposalId = data.proposal_id || "";
-
-        const draftRes = await fetch(data.draft_path, {
-          method: "GET"
-        });
-
-        if (!draftRes.ok) {
-          throw new Error("Failed to load proposal draft artifact.");
-        }
-
-        const draftData = await draftRes.json();
-        currentDraft = draftData;
-
-        renderResponse(data);
-        renderFiles(currentDraft.files || []);
-
-        await loadPreview(currentDraft);
-
-        approveBtn.disabled = false;
-        rejectBtn.disabled = false;
-
-        setStatus(
-          `Proposal ready.\nProposal: ${data.proposal_path}\nDraft: ${data.draft_path}`
-        );
-      } catch (err) {
-        renderResponse({ error: err.message });
-        renderFiles([]);
-        renderPreview([]);
-        setStatus(`Proposal failed: ${err.message}`);
-      } finally {
-        proposeBtn.disabled = false;
-        analyzeBtn.disabled = false;
-        generateBtn.disabled = false;
-      }
-    });
-
-    generateBtn.addEventListener("click", async () => {
-      const request = requestInput.value.trim();
-
-      if (!request) {
-        setStatus("Please enter a request first.");
-        return;
-      }
-
-      generateBtn.disabled = true;
-      approveBtn.disabled = true;
-      rejectBtn.disabled = true;
-      setStatus("Generating draft...");
-
-      try {
-        const res = await fetch("http://localhost:3100/api/ai/draft", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({ request })
-        });
-
-        const data = await res.json();
-
-        if (!res.ok) {
-          throw new Error(data.error || "Draft generation failed.");
-        }
-
-        currentRequest = request;
-        currentDraft = data;
-        renderResponse(data);
-        renderFiles(data.files || []);
-        await loadPreview(data);
-        approveBtn.disabled = false;
-        rejectBtn.disabled = false;
-        setStatus("Draft ready for review with diff preview.");
-      } catch (err) {
-        currentDraft = null;
-        currentPreview = [];
-        renderResponse({ error: err.message });
-        renderFiles([]);
-        renderPreview([]);
-        setStatus(`Request failed: ${err.message}`);
-      } finally {
-        generateBtn.disabled = false;
-      }
-    });
-
     approveBtn.addEventListener("click", async () => {
       if (!currentDraft) {
         setStatus("No draft available to approve.");
@@ -811,7 +614,6 @@
 
       approveBtn.disabled = true;
       rejectBtn.disabled = true;
-      generateBtn.disabled = true;
       setStatus("Creating governed decision packet...");
 
       try {
@@ -886,20 +688,14 @@
         approveBtn.disabled = false;
         rejectBtn.disabled = false;
       } finally {
-        generateBtn.disabled = false;
       }
     });
 
     rejectBtn.addEventListener("click", () => {
-      resetDraft();
-      setStatus("Draft rejected.");
-    });
-
-    clearBtn.addEventListener("click", () => {
       requestInput.value = "";
       resetDraft();
+      setStatus("Draft cleared.");
     });
-
     function renderAuthResult(data) {
       if (!data) {
         authResultBox.textContent = "No auth response yet.";
@@ -973,69 +769,49 @@
       });
     });
 
-    runBtn.addEventListener("click", async () => {
+    chatSendBtn.addEventListener("click", async () => {
       const request = requestInput.value.trim();
 
       if (!request) {
-        setStatus("Please enter a request first.");
+        setStatus("Please enter a message.");
         return;
       }
 
-      runBtn.disabled = true;
-      setStatus("Running direct execution...");
+      chatSendBtn.disabled = true;
+      setStatus("Thinking...");
 
       try {
         // 1) Analyze
-        await requestAPI("/api/ai/analyze", { request }, "POST");
+        await requestAPI("/api/ai/analyze", { request });
 
         // 2) Proposal
-        const proposal = await requestAPI("/api/ai/propose", { request }, "POST");
+        const proposal = await requestAPI("/api/ai/propose", { request });
 
         if (!proposal.ok) {
           renderResponse(proposal);
-          renderFiles([]);
-          renderPreview([]);
 
-          currentOperationType =
-            proposal.operation_analysis && proposal.operation_analysis.operation_type
-              ? proposal.operation_analysis.operation_type
-              : "UNKNOWN";
-
-          renderOperationAnalysis(
-            currentOperationType,
-            proposal.operation_analysis && proposal.operation_analysis.old_content
-              ? proposal.operation_analysis.old_content
-              : "",
-            proposal.operation_analysis && proposal.operation_analysis.new_content
-              ? proposal.operation_analysis.new_content
-              : ""
-          );
-
-          approveBtn.disabled = true;
-          rejectBtn.disabled = false;
-
-          if (proposal.mode === "DUPLICATE") {
-            setStatus("Duplicate detected by backend. Approval is disabled.");
+          if (proposal.mode === "DUPLICATE_HISTORY") {
+            setStatus("This request was already executed before.");
+          } else if (proposal.mode === "DUPLICATE") {
+            setStatus("This request already exists in the file.");
           } else {
-            setStatus("Proposal blocked or not eligible.");
+            setStatus(proposal.message || "Request blocked.");
           }
 
           return;
         }
 
-        // 3) Load draft artifact
+        // 3) Load draft
         const draftRes = await fetch(proposal.draft_path);
         const draft = await draftRes.json();
 
-        // 4) Sync current state for approval flow
         currentRequest = request;
         currentProposalId = proposal.proposal_id || "";
         currentDraft = draft;
 
-        // 5) Preview
+        renderFiles(draft.files || []);
         await loadPreview(draft);
 
-        // 5.6) Show real diff (old vs new)
         if (draft.files && draft.files.length > 0) {
           const filePath = draft.files[0].path;
 
@@ -1045,18 +821,8 @@
             }, "POST");
 
             let oldContent = existing.content || "";
-
-            // 🔥 Remove duplicated AI blocks (cleanup)
-            oldContent = oldContent.replace(
-              /(\/\/ ==== AI GENERATED ADDITION ====\n[\s\S]*?)(?=\n\/\/ ==== AI GENERATED ADDITION ====|$)/g,
-              (match, block, offset, fullText) => {
-                const firstIndex = fullText.indexOf(block);
-                return offset === firstIndex ? block : "";
-              }
-            );
             const newContent = draft.files[0].content || "";
 
-            // 🔥 Detect operation type
             currentOperationType = "UNKNOWN";
 
             if (!oldContent) {
@@ -1069,45 +835,35 @@
               currentOperationType = "MODIFY";
             }
 
-            console.log("OPERATION TYPE:", currentOperationType);
+            renderOperationAnalysis(currentOperationType, oldContent, newContent);
 
             if (currentOperationType === "DUPLICATE") {
               approveBtn.disabled = true;
               rejectBtn.disabled = false;
               setStatus("Duplicate detected. Approval is disabled.");
             }
-
-            console.log("===== DIFF CHECK =====");
-            console.log("OLD CONTENT:\n", oldContent);
-            console.log("NEW CONTENT:\n", newContent);
-
-            renderOperationAnalysis(currentOperationType, oldContent, newContent);
-
           } catch (err) {
-            console.log("Diff check failed.");
+            currentOperationType = "UNKNOWN";
             renderOperationAnalysis("UNKNOWN", "", "");
           }
         }
 
-        // 6) Render
-        renderResponse(proposal);
-        renderFiles(draft.files || []);
+        renderResponse({
+          message: "Proposal ready. Approve to execute."
+        });
 
-        // 7) Enable approval actions
         if (currentOperationType !== "DUPLICATE") {
           approveBtn.disabled = false;
+          setStatus("Ready for approval.");
         }
 
         rejectBtn.disabled = false;
 
-        if (currentOperationType !== "DUPLICATE") {
-          setStatus("AI pipeline execution completed.");
-        }
       } catch (err) {
         renderResponse({ error: err.message });
-        setStatus(`Execution failed: ${err.message}`);
+        setStatus(`Error: ${err.message}`);
       } finally {
-        runBtn.disabled = false;
+        chatSendBtn.disabled = false;
       }
     });
 
