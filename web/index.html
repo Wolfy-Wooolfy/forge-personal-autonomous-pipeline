@@ -812,7 +812,7 @@
         rejectBtn.disabled = true;
         // Execute Plan immediately after decision
         try {
-          await requestAPI("/api/ai/execute", {
+          await requestAPI("/api/ai/apply-execute-plan", {
             decision_packet_id: data.decision_packet_id
           }, "POST");
 
@@ -951,6 +951,22 @@
 
         // 5) Preview
         await loadPreview(draft);
+
+        // 4.5) Load existing file content (context awareness)
+        if (draft.files && draft.files.length > 0) {
+          try {
+            const filePath = draft.files[0].path;
+
+            const existing = await requestAPI("/api/ai/read-file", {
+              path: filePath
+            }, "POST");
+
+            console.log("Existing file content:", existing);
+
+          } catch (err) {
+            console.log("No existing file or failed to read.");
+          }
+        }
 
         // 6) Render
         renderResponse(proposal);
