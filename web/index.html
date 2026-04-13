@@ -205,6 +205,7 @@
 
         <div class="actions">
           <button id="analyzeBtn" class="secondary">Analyze Project</button>
+          <button id="runBtn" class="primary">Run Direct</button>
           <button id="proposeBtn" class="primary">Generate Proposal</button>
           <button id="generateBtn" class="secondary">Generate Draft</button>
           <button id="clearBtn" class="secondary">Clear</button>
@@ -275,6 +276,7 @@
   <script>
     const requestInput = document.getElementById("requestInput");
     const analyzeBtn = document.getElementById("analyzeBtn");
+    const runBtn = document.getElementById("runBtn");
     const proposeBtn = document.getElementById("proposeBtn");
     const generateBtn = document.getElementById("generateBtn");
     const clearBtn = document.getElementById("clearBtn");
@@ -838,43 +840,48 @@
       authResultBox.classList.remove("empty");
     }
 
-    async function callAPI(endpoint, payload = {}, method = "POST") {
+    async function requestAPI(endpoint, payload = {}, method = "POST") {
       if (!endpoint) {
-        setStatus("API endpoint is required.");
-        return;
+        throw new Error("API endpoint is required.");
       }
 
+      const API_BASE = window.location.origin.replace(":3000", ":3100");
+
+      const requestOptions = {
+        method,
+        headers: {
+          "Content-Type": "application/json"
+        }
+      };
+
+      if (method !== "GET") {
+        requestOptions.body = JSON.stringify(payload);
+      }
+
+      const res = await fetch(`${API_BASE}${endpoint}`, requestOptions);
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Request failed.");
+      }
+
+      return data;
+    }
+
+    async function callAPI(endpoint, payload = {}, method = "POST") {
       authRegisterBtn.disabled = true;
       authLoginBtn.disabled = true;
-      setStatus(`Sending request to ${endpoint} ...`);
+      setStatus(`Sending request to ${method} ${endpoint} ...`);
 
       try {
-        const API_BASE = window.location.origin.replace(":3000", ":3100");
-
-        const requestOptions = {
-          method,
-          headers: {
-            "Content-Type": "application/json"
-          }
-        };
-
-        if (method !== "GET") {
-          requestOptions.body = JSON.stringify(payload);
-        }
-
-        const res = await fetch(`${API_BASE}${endpoint}`, requestOptions);
-
-        const data = await res.json();
-
-        if (!res.ok) {
-          throw new Error(data.error || "Auth request failed.");
-        }
-
+        const data = await requestAPI(endpoint, payload, method);
         renderAuthResult(data);
         setStatus(`Request succeeded: ${method} ${endpoint}`);
+        return data;
       } catch (err) {
         renderAuthResult({ error: err.message });
         setStatus(`Request failed: ${method} ${endpoint} - ${err.message}`);
+        throw err;
       } finally {
         authRegisterBtn.disabled = false;
         authLoginBtn.disabled = false;
@@ -893,6 +900,32 @@
         username: authUsernameInput.value.trim(),
         password: authPasswordInput.value.trim()
       });
+    });
+
+    runBtn.addEventListener("click", async () => {
+      const request = requestInput.value.trim();
+
+      if (!request) {
+        setStatus("Please enter a request first.");
+        return;
+      }
+
+      runBtn.disabled = true;
+      setStatus("Running direct execution...");
+
+      try {
+        const data = await requestAPI("/api/ai/draft", { request }, "POST");
+
+        renderResponse(data);
+        renderFiles(data.files || []);
+
+        setStatus("Direct execution completed.");
+      } catch (err) {
+        renderResponse({ error: err.message });
+        setStatus(`Execution failed: ${err.message}`);
+      } finally {
+        runBtn.disabled = false;
+      }
     });
 
     renderFiles([]);
