@@ -1010,7 +1010,33 @@
 
         if (!proposal.ok) {
           renderResponse(proposal);
-          setStatus("Proposal blocked or not eligible.");
+          renderFiles([]);
+          renderPreview([]);
+
+          currentOperationType =
+            proposal.operation_analysis && proposal.operation_analysis.operation_type
+              ? proposal.operation_analysis.operation_type
+              : "UNKNOWN";
+
+          renderOperationAnalysis(
+            currentOperationType,
+            proposal.operation_analysis && proposal.operation_analysis.old_content
+              ? proposal.operation_analysis.old_content
+              : "",
+            proposal.operation_analysis && proposal.operation_analysis.new_content
+              ? proposal.operation_analysis.new_content
+              : ""
+          );
+
+          approveBtn.disabled = true;
+          rejectBtn.disabled = false;
+
+          if (proposal.mode === "DUPLICATE") {
+            setStatus("Duplicate detected by backend. Approval is disabled.");
+          } else {
+            setStatus("Proposal blocked or not eligible.");
+          }
+
           return;
         }
 

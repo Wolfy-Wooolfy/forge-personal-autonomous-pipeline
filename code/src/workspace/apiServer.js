@@ -279,6 +279,25 @@ function createWorkspaceApiServer(options = {}) {
     return out.join("\n");
   }
 
+  function detectOperationType(oldContent, newContent) {
+    const oldText = String(oldContent || "");
+    const newText = String(newContent || "").trim();
+
+    if (!oldText.trim()) {
+      return "CREATE";
+    }
+
+    if (oldText.includes(newText)) {
+      return "DUPLICATE";
+    }
+
+    if (newText.includes(oldText)) {
+      return "EXPAND";
+    }
+
+    return "MODIFY";
+  }
+
   function readJsonSafe(filePath, fallback) {
     if (!fs.existsSync(filePath)) {
       return fallback;
@@ -1063,6 +1082,26 @@ fs.writeFileSync(absolutePath, finalContent, "utf8");
         ];
 
     const targetFile = generatedFiles[0].path;
+    const targetFileAbs = path.resolve(root, targetFile);
+    const oldContent = readTextSafe(targetFileAbs);
+    const newContent = generatedFiles[0].content || "";
+    const operationType = detectOperationType(oldContent, newContent);
+
+    if (operationType === "DUPLICATE") {
+      return {
+        ok: false,
+        mode: "DUPLICATE",
+        reason: "CONTENT_ALREADY_EXISTS",
+        message: "Request already exists in target file.",
+        target_file: targetFile,
+        operation_analysis: {
+          operation_type: operationType,
+          old_content: oldContent,
+          new_content: newContent
+        }
+      };
+    }
+
     const strategyCandidates = buildStrategyCandidates(
       requestText,
       targetFile
