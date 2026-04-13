@@ -1,6 +1,6 @@
 # Decision Packet
 
-- execution_id: workspace_decision_1776087974091
+- execution_id: workspace_decision_1776102531233
 - workspace_id: personal
 - project_id: forge-personal-autonomous-pipeline
 - source: EXTERNAL_AI_WORKSPACE
@@ -9,7 +9,7 @@
 - policy_version: 1.1
 - approved_by_role: cto
 - required_roles: tech_lead, cto
-- approved_at: 2026-04-13T13:46:14.091Z
+- approved_at: 2026-04-13T17:48:51.233Z
 
 ## Operation
 - mode: SINGLE_FILE
@@ -20,11 +20,11 @@
 Approve the queued workspace draft for governed deterministic application?
 
 ## Context Summary
-create simple test file with message gamma
+create simple test file with message delta
 
 ## Proposed Files
 - code/test_workspace_integration.js
   - allow_overwrite: true
-  - sha256: db0cc5d2f6db74cb763163d253ee4705d33f000d61aa5b0b2c13b568bfe993a9
+  - sha256: 2676a273c6547c15f72258c00f568b85351922b4599cdf55fa3a1c0109ca80b2
   - required_roles: tech_lead, cto
   - file_index: 1/1
