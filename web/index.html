@@ -810,6 +810,20 @@
         await loadHistory();
         approveBtn.disabled = true;
         rejectBtn.disabled = true;
+        // Execute Plan immediately after decision
+        try {
+          await requestAPI("/api/ai/execute", {
+            decision_packet_id: data.decision_packet_id
+          }, "POST");
+
+          setStatus(
+            `Decision + Execution completed.\nPacket ID: ${data.decision_packet_id}`
+          );
+        } catch (execErr) {
+          setStatus(
+            `Decision created but execution failed: ${execErr.message}`
+          );
+        }
       } catch (err) {
         setStatus(`Write failed: ${err.message}`);
         approveBtn.disabled = false;
@@ -914,12 +928,39 @@
       setStatus("Running direct execution...");
 
       try {
-        const data = await requestAPI("/api/ai/draft", { request }, "POST");
+        // 1) Analyze
+        const analysis = await requestAPI("/api/ai/analyze", { request }, "POST");
 
-        renderResponse(data);
-        renderFiles(data.files || []);
+        // 2) Proposal
+        const proposal = await requestAPI("/api/ai/propose", { request }, "POST");
 
-        setStatus("Direct execution completed.");
+        if (!proposal.ok) {
+          renderResponse(proposal);
+          setStatus("Proposal blocked or not eligible.");
+          return;
+        }
+
+        // 3) Load draft artifact
+        const draftRes = await fetch(proposal.draft_path);
+        const draft = await draftRes.json();
+
+        // 4) Sync current state for approval flow
+        currentRequest = request;
+        currentProposalId = proposal.proposal_id || "";
+        currentDraft = draft;
+
+        // 5) Preview
+        await loadPreview(draft);
+
+        // 6) Render
+        renderResponse(proposal);
+        renderFiles(draft.files || []);
+
+        // 7) Enable approval actions
+        approveBtn.disabled = false;
+        rejectBtn.disabled = false;
+
+        setStatus("AI pipeline execution completed.");
       } catch (err) {
         renderResponse({ error: err.message });
         setStatus(`Execution failed: ${err.message}`);
