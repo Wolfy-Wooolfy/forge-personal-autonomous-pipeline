@@ -1,12 +1,12 @@
 {
-  "execution_id": "workspace_decision_1776084450474",
+  "execution_id": "workspace_decision_1776086484965",
   "workspace_id": "personal",
   "project_id": "forge-personal-autonomous-pipeline",
   "source": "EXTERNAL_AI_WORKSPACE",
   "operation": {
     "mode": "SINGLE_FILE",
     "file_count": 1,
-    "total_bytes": 94
+    "total_bytes": 132
   },
   "approval": {
     "policy_version": "1.1",
@@ -15,10 +15,10 @@
       "tech_lead",
       "cto"
     ],
-    "approved_at": "2026-04-13T12:47:30.474Z"
+    "approved_at": "2026-04-13T13:21:24.965Z"
   },
   "question": "Approve the queued workspace draft for governed deterministic application?",
-  "context_summary": "create simple test file",
+  "context_summary": "create simple test file with message alpha",
   "options": [
     {
       "option_id": "OPTION-APPROVE-WORKSPACE-DRAFT",
@@ -31,14 +31,14 @@
       "cognitive_priority_hint": null
     }
   ],
-  "recommendation_reference": "artifacts/llm/metadata/workspace_decision_1776084450474.decision.json",
+  "recommendation_reference": "artifacts/llm/metadata/workspace_decision_1776086484965.decision.json",
   "confirmation_required_format": "OPTION-APPROVE-WORKSPACE-DRAFT",
   "proposed_files": [
     {
       "path": "code/test_workspace_integration.js",
       "allow_overwrite": true,
-      "sha256": "d4c59bedce2cb3c8d42cfbf796b0ecf39d0d44d47e69bfa45c90b052bff9ede2",
-      "diff": "- console.log('AI Proposal Draft Execution');\n+ // Generated from request:\n- \n+ // create simple test file\n- // ===== AI GENERATED ADDITION =====\n+ \n- \n+ console.log(\"create simple test file\");\n- // Generated from request:\n- // create simple test file\n- \n- console.log(\"create simple test file\");\n- \n- // ===== AI GENERATED ADDITION =====\n- \n- // Generated from request:\n- // create simple test file\n- \n- console.log(\"create simple test file\");",
+      "sha256": "af8b633d55f839b8c56f4bb0bad65c8dbcf2d1de9adb272c62aa8d612bd687a0",
+      "diff": "- console.log('AI Proposal Draft Execution');\n+ // Generated from request:\n- \n+ // create simple test file with message alpha\n- // ===== AI GENERATED ADDITION =====\n+ \n- \n+ console.log(\"create simple test file with message alpha\");\n- // Generated from request:\n- // create simple test file\n- \n- console.log(\"create simple test file\");\n- \n- // ===== AI GENERATED ADDITION =====\n- \n- // Generated from request:\n- // create simple test file\n- \n- console.log(\"create simple test file\");",
       "required_roles": [
         "tech_lead",
         "cto"
