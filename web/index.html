@@ -838,9 +838,8 @@
       authResultBox.classList.remove("empty");
     }
 
-    async function submitAuthRequest(endpoint) {
-      const username = authUsernameInput.value.trim();
-      const password = authPasswordInput.value.trim();
+    async function callAPI(endpoint, payload) {
+      const payload = arguments[1] || {};
 
       if (!username) {
         setStatus("Please enter auth username.");
@@ -859,10 +858,7 @@
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify({
-            username,
-            password
-          })
+          body: JSON.stringify(payload)
         });
 
         const data = await res.json();
@@ -883,11 +879,17 @@
     }
 
     authRegisterBtn.addEventListener("click", async () => {
-      await submitAuthRequest("/api/auth/register");
+      await callAPI("/api/auth/register", {
+        username: authUsernameInput.value.trim(),
+        password: authPasswordInput.value.trim()
+      });
     });
 
     authLoginBtn.addEventListener("click", async () => {
-      await submitAuthRequest("/api/auth/login");
+      await callAPI("/api/auth/login", {
+        username: authUsernameInput.value.trim(),
+        password: authPasswordInput.value.trim()
+      });
     });
 
     renderFiles([]);
