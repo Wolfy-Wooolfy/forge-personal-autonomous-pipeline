@@ -213,6 +213,22 @@
         <div id="statusBox" class="status">Ready.</div>
 
         <div class="section">
+          <h2>Auth Test</h2>
+          <label for="authUsernameInput">Username</label>
+          <textarea id="authUsernameInput" style="min-height: 60px;">test</textarea>
+
+          <label for="authPasswordInput">Password</label>
+          <textarea id="authPasswordInput" style="min-height: 60px;">1234</textarea>
+
+          <div class="actions">
+            <button id="authRegisterBtn" class="secondary">Register</button>
+            <button id="authLoginBtn" class="secondary">Login</button>
+          </div>
+
+          <div id="authResultBox" class="output-box empty">No auth response yet.</div>
+        </div>
+
+        <div class="section">
           <h2>AI Response</h2>
           <div id="responseBox" class="output-box empty">No response yet.</div>
         </div>
@@ -272,6 +288,12 @@
     const previewBox = document.getElementById("previewBox");
     const approvalInfoBox = document.getElementById("approvalInfoBox");
     const operationInfoBox = document.getElementById("operationInfoBox");
+
+    const authUsernameInput = document.getElementById("authUsernameInput");
+    const authPasswordInput = document.getElementById("authPasswordInput");
+    const authRegisterBtn = document.getElementById("authRegisterBtn");
+    const authLoginBtn = document.getElementById("authLoginBtn");
+    const authResultBox = document.getElementById("authResultBox");
 
     let currentDraft = null;
 
@@ -803,6 +825,69 @@
     clearBtn.addEventListener("click", () => {
       requestInput.value = "";
       resetDraft();
+    });
+
+    function renderAuthResult(data) {
+      if (!data) {
+        authResultBox.textContent = "No auth response yet.";
+        authResultBox.classList.add("empty");
+        return;
+      }
+
+      authResultBox.textContent = JSON.stringify(data, null, 2);
+      authResultBox.classList.remove("empty");
+    }
+
+    async function submitAuthRequest(endpoint) {
+      const username = authUsernameInput.value.trim();
+      const password = authPasswordInput.value.trim();
+
+      if (!username) {
+        setStatus("Please enter auth username.");
+        return;
+      }
+
+      authRegisterBtn.disabled = true;
+      authLoginBtn.disabled = true;
+      setStatus(`Sending auth request to ${endpoint} ...`);
+
+      try {
+        const API_BASE = window.location.origin.replace(":3000", ":3100");
+
+        const res = await fetch(`${API_BASE}${endpoint}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            username,
+            password
+          })
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          throw new Error(data.error || "Auth request failed.");
+        }
+
+        renderAuthResult(data);
+        setStatus(`Auth request succeeded: ${endpoint}`);
+      } catch (err) {
+        renderAuthResult({ error: err.message });
+        setStatus(`Auth request failed: ${err.message}`);
+      } finally {
+        authRegisterBtn.disabled = false;
+        authLoginBtn.disabled = false;
+      }
+    }
+
+    authRegisterBtn.addEventListener("click", async () => {
+      await submitAuthRequest("/api/auth/register");
+    });
+
+    authLoginBtn.addEventListener("click", async () => {
+      await submitAuthRequest("/api/auth/login");
     });
 
     renderFiles([]);
