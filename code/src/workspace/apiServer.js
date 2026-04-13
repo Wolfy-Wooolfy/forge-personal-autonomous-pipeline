@@ -280,18 +280,24 @@ function createWorkspaceApiServer(options = {}) {
   }
 
   function detectOperationType(oldContent, newContent) {
-    const oldText = String(oldContent || "");
-    const newText = String(newContent || "").trim();
+    const clean = (text) =>
+      String(text || "")
+        .replace(/\/\/ ==== AI GENERATED ADDITION ====[\s\S]*?$/g, "")
+        .replace(/\/\/ ==== AI MERGED ADDITION ====[\s\S]*?$/g, "")
+        .trim();
 
-    if (!oldText.trim()) {
+    const oldText = clean(oldContent);
+    const newText = clean(newContent);
+
+    if (!oldText) {
       return "CREATE";
     }
 
-    if (oldText.includes(newText)) {
+    if (oldText === newText) {
       return "DUPLICATE";
     }
 
-    if (newText.includes(oldText)) {
+    if (oldText && newText && newText.includes(oldText)) {
       return "EXPAND";
     }
 
@@ -1003,18 +1009,42 @@ ${trimmedExisting}`
       const content = typeof fullContentChange.content === "string" ? fullContentChange.content : "";
 
       fs.mkdirSync(path.dirname(absolutePath), { recursive: true });
+
       let finalContent = content;
 
-if (fs.existsSync(absolutePath)) {
-  const existing = fs.readFileSync(absolutePath, "utf8");
+      if (fs.existsSync(absolutePath)) {
+        const existing = fs.readFileSync(absolutePath, "utf8");
 
-  finalContent =
-    existing +
-    "\n\n// ===== AI GENERATED ADDITION =====\n\n" +
-    content;
-}
+        const hasGeneratedRequestBlock =
+          content.includes("// Generated from request:") ||
+          content.includes("// Generated from request:\r\n");
 
-fs.writeFileSync(absolutePath, finalContent, "utf8");
+        if (hasGeneratedRequestBlock) {
+          let baseContent = existing;
+
+          baseContent = baseContent.replace(
+            /\n*\/\/ ==== AI GENERATED ADDITION ====\n[\s\S]*?(?=\n\/\/ ==== AI GENERATED ADDITION ====|\n\/\/ ==== AI MERGED ADDITION ====|$)/g,
+            ""
+          );
+
+          baseContent = baseContent.replace(
+            /\n*\/\/ ==== AI MERGED ADDITION ====\n[\s\S]*?(?=\n\/\/ ==== AI GENERATED ADDITION ====|\n\/\/ ==== AI MERGED ADDITION ====|$)/g,
+            ""
+          );
+
+          baseContent = baseContent.trimEnd();
+
+          finalContent = baseContent
+            ? `${baseContent}\n\n// ==== AI MERGED ADDITION ====\n\n${content}`
+            : content;
+        } else {
+          finalContent = existing
+            ? `${existing}\n\n${content}`
+            : content;
+        }
+      }
+
+      fs.writeFileSync(absolutePath, finalContent, "utf8");
 
       return {
         file_path: relPath,
