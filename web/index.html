@@ -264,6 +264,11 @@
         </div>
 
         <div class="section">
+          <h2>Operation Analysis</h2>
+          <div id="analysisBox" class="output-box empty">No operation analysis yet.</div>
+        </div>
+
+        <div class="section">
           <h2>Recent Activity</h2>
           <div id="historyBox" class="file-list">
             <div class="file-card empty">No write history yet.</div>
@@ -288,6 +293,7 @@
     const filesBox = document.getElementById("filesBox");
     const historyBox = document.getElementById("historyBox");
     const previewBox = document.getElementById("previewBox");
+    const analysisBox = document.getElementById("analysisBox");
     const approvalInfoBox = document.getElementById("approvalInfoBox");
     const operationInfoBox = document.getElementById("operationInfoBox");
 
@@ -490,6 +496,21 @@
       });
     }
 
+    function renderOperationAnalysis(operationType, oldContent, newContent) {
+      if (!operationType && !oldContent && !newContent) {
+        analysisBox.textContent = "No operation analysis yet.";
+        analysisBox.classList.add("empty");
+        return;
+      }
+
+      analysisBox.textContent =
+        `Operation Type: ${operationType || "UNKNOWN"}\n\n` +
+        `OLD CONTENT:\n${oldContent || ""}\n\n` +
+        `NEW CONTENT:\n${newContent || ""}`;
+
+      analysisBox.classList.remove("empty");
+    }
+
     async function loadPreview(draft) {
       const res = await fetch("http://localhost:3100/api/ai/preview", {
         method: "POST",
@@ -571,11 +592,13 @@
       currentFileCount = 0;
       currentTotalBytes = 0;
       currentFileRoleRequirements = [];
+      currentOperationType = "UNKNOWN";
       approveBtn.disabled = true;
       rejectBtn.disabled = true;
       renderResponse(null);
       renderFiles([]);
       renderPreview([]);
+      renderOperationAnalysis("", "", "");
       renderApprovalInfo([], "");
       renderOperationInfo("", 0, 0, []);
       setStatus("Ready.");
@@ -781,6 +804,11 @@
         return;
       }
 
+      if (currentOperationType === "DUPLICATE") {
+        setStatus("Skipped: duplicate request.");
+        return;
+      }
+
       approveBtn.disabled = true;
       rejectBtn.disabled = true;
       generateBtn.disabled = true;
@@ -842,10 +870,6 @@
             console.log("Smart merge applied instead of overwrite.");
           }
 
-          if (currentOperationType === "DUPLICATE") {
-            setStatus("Skipped: duplicate request.");
-            return;
-          }
         } catch (readErr) {
           if (!String(readErr.message || "").includes("File not found")) {
             setStatus(`Decision created but execution pre-check failed: ${readErr.message}`);
@@ -1038,12 +1062,21 @@
 
             console.log("OPERATION TYPE:", currentOperationType);
 
+            if (currentOperationType === "DUPLICATE") {
+              approveBtn.disabled = true;
+              rejectBtn.disabled = false;
+              setStatus("Duplicate detected. Approval is disabled.");
+            }
+
             console.log("===== DIFF CHECK =====");
             console.log("OLD CONTENT:\n", oldContent);
             console.log("NEW CONTENT:\n", newContent);
 
+            renderOperationAnalysis(currentOperationType, oldContent, newContent);
+
           } catch (err) {
             console.log("Diff check failed.");
+            renderOperationAnalysis("UNKNOWN", "", "");
           }
         }
 
@@ -1052,10 +1085,15 @@
         renderFiles(draft.files || []);
 
         // 7) Enable approval actions
-        approveBtn.disabled = false;
+        if (currentOperationType !== "DUPLICATE") {
+          approveBtn.disabled = false;
+        }
+
         rejectBtn.disabled = false;
 
-        setStatus("AI pipeline execution completed.");
+        if (currentOperationType !== "DUPLICATE") {
+          setStatus("AI pipeline execution completed.");
+        }
       } catch (err) {
         renderResponse({ error: err.message });
         setStatus(`Execution failed: ${err.message}`);
