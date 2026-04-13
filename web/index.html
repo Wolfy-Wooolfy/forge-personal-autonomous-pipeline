@@ -849,27 +849,10 @@
           const oldContent = existing.content || "";
           const newContent = currentDraft.files[0].content || "";
 
-          if (currentOperationType === "MODIFY") {
-            // 🔥 Smart merge بدل block
-            let cleanedNew = newContent.trim();
-
-            // ❌ Remove duplicate if already exists in old
-            if (oldContent.includes(cleanedNew)) {
-              setStatus("Execution blocked: content already exists in file.");
-              return;
-            }
-
-            // ✅ Remove duplicate markers
-            cleanedNew = cleanedNew.replace(/\/\/ ==== AI GENERATED ADDITION ====\n?/g, "");
-
-            // ✅ Smart merge without duplication
-            const mergedContent = oldContent + "\n\n// ==== AI MERGED ADDITION ====\n\n" + cleanedNew;
-
-            currentDraft.files[0].content = mergedContent;
-
-            console.log("Smart merge applied instead of overwrite.");
+          if (currentOperationType === "DUPLICATE" || oldContent.includes(newContent.trim())) {
+            setStatus("Execution blocked: content already exists in file.");
+            return;
           }
-
         } catch (readErr) {
           if (!String(readErr.message || "").includes("File not found")) {
             setStatus(`Decision created but execution pre-check failed: ${readErr.message}`);
