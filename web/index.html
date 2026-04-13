@@ -838,28 +838,31 @@
       authResultBox.classList.remove("empty");
     }
 
-    async function callAPI(endpoint, payload) {
-      const payload = arguments[1] || {};
-
-      if (!username) {
-        setStatus("Please enter auth username.");
+    async function callAPI(endpoint, payload = {}, method = "POST") {
+      if (!endpoint) {
+        setStatus("API endpoint is required.");
         return;
       }
 
       authRegisterBtn.disabled = true;
       authLoginBtn.disabled = true;
-      setStatus(`Sending auth request to ${endpoint} ...`);
+      setStatus(`Sending request to ${endpoint} ...`);
 
       try {
         const API_BASE = window.location.origin.replace(":3000", ":3100");
 
-        const res = await fetch(`${API_BASE}${endpoint}`, {
-          method: "POST",
+        const requestOptions = {
+          method,
           headers: {
             "Content-Type": "application/json"
-          },
-          body: JSON.stringify(payload)
-        });
+          }
+        };
+
+        if (method !== "GET") {
+          requestOptions.body = JSON.stringify(payload);
+        }
+
+        const res = await fetch(`${API_BASE}${endpoint}`, requestOptions);
 
         const data = await res.json();
 
@@ -868,10 +871,10 @@
         }
 
         renderAuthResult(data);
-        setStatus(`Auth request succeeded: ${endpoint}`);
+        setStatus(`Request succeeded: ${method} ${endpoint}`);
       } catch (err) {
         renderAuthResult({ error: err.message });
-        setStatus(`Auth request failed: ${err.message}`);
+        setStatus(`Request failed: ${method} ${endpoint} - ${err.message}`);
       } finally {
         authRegisterBtn.disabled = false;
         authLoginBtn.disabled = false;
