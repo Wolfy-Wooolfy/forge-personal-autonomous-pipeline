@@ -1,17 +1,32 @@
-const express = require("express");
+"use strict";
 
-function registerAuthRoutes(app) {
-  app.post("/api/auth/register", (req, res) => {
-    const { username, password } = req.body;
-    res.json({ ok: true, message: "User registered", username });
-  });
+function handleAuthRequest(req, res, body, sendJson) {
+  const payload = body && typeof body === "object" ? body : {};
 
-  app.post("/api/auth/login", (req, res) => {
-    const { username } = req.body;
-    res.json({ ok: true, message: "Login successful", username });
-  });
+  if (req.method === "POST" && req.url === "/api/auth/register") {
+    const { username, password } = payload;
+    sendJson(res, 200, {
+      ok: true,
+      message: "User registered",
+      username: typeof username === "string" ? username : "",
+      has_password: Boolean(password)
+    });
+    return true;
+  }
+
+  if (req.method === "POST" && req.url === "/api/auth/login") {
+    const { username } = payload;
+    sendJson(res, 200, {
+      ok: true,
+      message: "Login successful",
+      username: typeof username === "string" ? username : ""
+    });
+    return true;
+  }
+
+  return false;
 }
 
 module.exports = {
-  registerAuthRoutes
+  handleAuthRequest
 };

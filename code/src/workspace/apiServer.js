@@ -4,6 +4,7 @@ const http = require("http");
 const path = require("path");
 const fs = require("fs");
 const crypto = require("crypto");
+const { handleAuthRequest } = require("../auth/authSystem");
 
 function createWorkspaceApiServer(options = {}) {
   const root = path.resolve(options.root || process.cwd());
@@ -1599,6 +1600,17 @@ fs.writeFileSync(absolutePath, finalContent, "utf8");
         const body = await readBody(req);
         await handleDecision(body, res);
         return;
+      }
+
+      if (
+        (req.method === "POST" && req.url === "/api/auth/register") ||
+        (req.method === "POST" && req.url === "/api/auth/login")
+      ) {
+        const body = await readBody(req);
+
+        if (handleAuthRequest(req, res, body, sendJson)) {
+          return;
+        }
       }
 
       sendJson(res, 404, { error: "Not found" });
