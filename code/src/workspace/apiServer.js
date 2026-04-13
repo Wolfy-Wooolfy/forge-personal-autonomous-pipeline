@@ -1564,6 +1564,37 @@ fs.writeFileSync(absolutePath, finalContent, "utf8");
         return;
       }
 
+      if (req.method === "POST" && req.url === "/api/ai/read-file") {
+        const body = await readBody(req);
+
+        const relPath = normalizeRelativePath(body.path);
+        const absolutePath = path.resolve(root, relPath);
+
+        if (!relPath) {
+          sendJson(res, 400, { error: "File path is required" });
+          return;
+        }
+
+        if (!isPathAllowed(absolutePath)) {
+          sendJson(res, 403, { error: "Access denied for path" });
+          return;
+        }
+
+        if (!fs.existsSync(absolutePath)) {
+          sendJson(res, 404, { error: "File not found" });
+          return;
+        }
+
+        const content = fs.readFileSync(absolutePath, "utf-8");
+
+        sendJson(res, 200, {
+          ok: true,
+          path: relPath,
+          content
+        });
+        return;
+      }
+
       if (req.method === "POST" && req.url === "/api/ai/draft") {
         const body = await readBody(req);
 

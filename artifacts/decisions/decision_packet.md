@@ -1,6 +1,6 @@
 # Decision Packet
 
-- execution_id: workspace_decision_1776082821942
+- execution_id: workspace_decision_1776084450474
 - workspace_id: personal
 - project_id: forge-personal-autonomous-pipeline
 - source: EXTERNAL_AI_WORKSPACE
@@ -9,7 +9,7 @@
 - policy_version: 1.1
 - approved_by_role: cto
 - required_roles: tech_lead, cto
-- approved_at: 2026-04-13T12:20:21.942Z
+- approved_at: 2026-04-13T12:47:30.474Z
 
 ## Operation
 - mode: SINGLE_FILE

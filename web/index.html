@@ -308,6 +308,7 @@
     let currentFileCount = 0;
     let currentTotalBytes = 0;
     let currentFileRoleRequirements = [];
+    let currentOperationType = "UNKNOWN";
 
     function setStatus(text) {
       statusBox.textContent = text;
@@ -810,7 +811,56 @@
         await loadHistory();
         approveBtn.disabled = true;
         rejectBtn.disabled = true;
-        // Execute Plan immediately after decision
+        const filePath = currentDraft.files[0].path;
+
+        try {
+          const existing = await requestAPI("/api/ai/read-file", {
+            path: filePath
+          }, "POST");
+
+          const oldContent = existing.content || "";
+          const newContent = currentDraft.files[0].content || "";
+
+          if (currentOperationType === "MODIFY") {
+            // 🔥 Smart merge بدل block
+            let cleanedNew = newContent.trim();
+
+            // ❌ Remove duplicate if already exists in old
+            if (oldContent.includes(cleanedNew)) {
+              setStatus("Execution blocked: content already exists in file.");
+              return;
+            }
+
+            // ✅ Remove duplicate markers
+            cleanedNew = cleanedNew.replace(/\/\/ ==== AI GENERATED ADDITION ====\n?/g, "");
+
+            // ✅ Smart merge without duplication
+            const mergedContent = oldContent + "\n\n// ==== AI MERGED ADDITION ====\n\n" + cleanedNew;
+
+            currentDraft.files[0].content = mergedContent;
+
+            console.log("Smart merge applied instead of overwrite.");
+          }
+
+          if (currentOperationType === "DUPLICATE") {
+            setStatus("Skipped: duplicate request.");
+            return;
+          }
+        } catch (readErr) {
+          if (!String(readErr.message || "").includes("File not found")) {
+            setStatus(`Decision created but execution pre-check failed: ${readErr.message}`);
+            return;
+          }
+        }
+
+        if (currentOperationType === "CREATE") {
+          console.log("Creating new file...");
+        }
+
+        if (currentOperationType === "EXPAND") {
+          console.log("Expanding existing file...");
+        }
+
         try {
           await requestAPI("/api/ai/apply-execute-plan", {
             decision_packet_id: data.decision_packet_id
@@ -929,7 +979,7 @@
 
       try {
         // 1) Analyze
-        const analysis = await requestAPI("/api/ai/analyze", { request }, "POST");
+        await requestAPI("/api/ai/analyze", { request }, "POST");
 
         // 2) Proposal
         const proposal = await requestAPI("/api/ai/propose", { request }, "POST");
@@ -952,19 +1002,48 @@
         // 5) Preview
         await loadPreview(draft);
 
-        // 4.5) Load existing file content (context awareness)
+        // 5.6) Show real diff (old vs new)
         if (draft.files && draft.files.length > 0) {
-          try {
-            const filePath = draft.files[0].path;
+          const filePath = draft.files[0].path;
 
+          try {
             const existing = await requestAPI("/api/ai/read-file", {
               path: filePath
             }, "POST");
 
-            console.log("Existing file content:", existing);
+            let oldContent = existing.content || "";
+
+            // 🔥 Remove duplicated AI blocks (cleanup)
+            oldContent = oldContent.replace(
+              /(\/\/ ==== AI GENERATED ADDITION ====\n[\s\S]*?)(?=\n\/\/ ==== AI GENERATED ADDITION ====|$)/g,
+              (match, block, offset, fullText) => {
+                const firstIndex = fullText.indexOf(block);
+                return offset === firstIndex ? block : "";
+              }
+            );
+            const newContent = draft.files[0].content || "";
+
+            // 🔥 Detect operation type
+            currentOperationType = "UNKNOWN";
+
+            if (!oldContent) {
+              currentOperationType = "CREATE";
+            } else if (oldContent.includes(newContent.trim())) {
+              currentOperationType = "DUPLICATE";
+            } else if (newContent.includes(oldContent)) {
+              currentOperationType = "EXPAND";
+            } else {
+              currentOperationType = "MODIFY";
+            }
+
+            console.log("OPERATION TYPE:", currentOperationType);
+
+            console.log("===== DIFF CHECK =====");
+            console.log("OLD CONTENT:\n", oldContent);
+            console.log("NEW CONTENT:\n", newContent);
 
           } catch (err) {
-            console.log("No existing file or failed to read.");
+            console.log("Diff check failed.");
           }
         }
 
