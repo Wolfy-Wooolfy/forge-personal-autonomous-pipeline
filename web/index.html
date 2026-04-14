@@ -775,7 +775,7 @@
         return;
       }
 
-      if (currentOperationType === "DUPLICATE") {
+      if (activeTurn.operationType === "DUPLICATE") {
         setStatus("Skipped: duplicate request.");
         return;
       }
