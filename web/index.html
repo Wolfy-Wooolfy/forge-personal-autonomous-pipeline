@@ -468,18 +468,23 @@
       appendMessage(type, title, `<div>${element.innerHTML}</div>`);
     }
 
-    let currentDraft = null;
+    function createEmptyTurnState() {
+      return {
+        draft: null,
+        request: "",
+        proposalId: "",
+        preview: [],
+        requiredRoles: [],
+        approvalPolicyVersion: "",
+        operationMode: "",
+        fileCount: 0,
+        totalBytes: 0,
+        fileRoleRequirements: [],
+        operationType: "UNKNOWN"
+      };
+    }
 
-    let currentRequest = "";
-    let currentProposalId = "";
-    let currentPreview = [];
-    let currentRequiredRoles = [];
-    let currentApprovalPolicyVersion = "";
-    let currentOperationMode = "";
-    let currentFileCount = 0;
-    let currentTotalBytes = 0;
-    let currentFileRoleRequirements = [];
-    let currentOperationType = "UNKNOWN";
+    let activeTurn = createEmptyTurnState();
 
     function setStatus(text) {
       statusBox.textContent = text;
@@ -691,17 +696,17 @@
         throw new Error(data.error || "Preview failed.");
       }
 
-      currentPreview = Array.isArray(data.diffs) ? data.diffs : [];
-      currentRequiredRoles = Array.isArray(data.required_roles) ? data.required_roles : [];
-      currentApprovalPolicyVersion = typeof data.approval_policy_version === "string" ? data.approval_policy_version : "";
-      currentOperationMode = typeof data.operation_mode === "string" ? data.operation_mode : "";
-      currentFileCount = Number.isInteger(data.file_count) ? data.file_count : 0;
-      currentTotalBytes = Number.isInteger(data.total_bytes) ? data.total_bytes : 0;
-      currentFileRoleRequirements = Array.isArray(data.file_role_requirements) ? data.file_role_requirements : [];
+      activeTurn.preview = Array.isArray(data.diffs) ? data.diffs : [];
+      activeTurn.requiredRoles = Array.isArray(data.required_roles) ? data.required_roles : [];
+      activeTurn.approvalPolicyVersion = typeof data.approval_policy_version === "string" ? data.approval_policy_version : "";
+      activeTurn.operationMode = typeof data.operation_mode === "string" ? data.operation_mode : "";
+      activeTurn.fileCount = Number.isInteger(data.file_count) ? data.file_count : 0;
+      activeTurn.totalBytes = Number.isInteger(data.total_bytes) ? data.total_bytes : 0;
+      activeTurn.fileRoleRequirements = Array.isArray(data.file_role_requirements) ? data.file_role_requirements : [];
       populateApproverRoles(Array.isArray(data.available_roles) ? data.available_roles : ["cto"]);
-      renderPreview(currentPreview);
-      renderApprovalInfo(currentRequiredRoles, currentApprovalPolicyVersion);
-      renderOperationInfo(currentOperationMode, currentFileCount, currentTotalBytes, currentFileRoleRequirements);
+      renderPreview(activeTurn.preview);
+      renderApprovalInfo(activeTurn.requiredRoles, activeTurn.approvalPolicyVersion);
+      renderOperationInfo(activeTurn.operationMode, activeTurn.fileCount, activeTurn.totalBytes, activeTurn.fileRoleRequirements);
     }
 
     async function loadApprovalPolicy() {
@@ -715,14 +720,14 @@
 
         populateApproverRoles(Array.isArray(data.available_roles) ? data.available_roles : ["cto"]);
 
-        if (!currentRequiredRoles || currentRequiredRoles.length === 0) {
+        if (!activeTurn.requiredRoles || activeTurn.requiredRoles.length === 0) {
           renderApprovalInfo(
             Array.isArray(data.default_required_roles) ? data.default_required_roles : [],
             typeof data.version === "string" ? data.version : ""
           );
         }
 
-        if (!currentOperationMode) {
+        if (!activeTurn.operationMode) {
           renderOperationInfo("", 0, 0, []);
         }
       } catch (err) {
@@ -747,17 +752,7 @@
     }
 
     function resetDraft() {
-      currentDraft = null;
-      currentRequest = "";
-      currentProposalId = "";
-      currentPreview = [];
-      currentRequiredRoles = [];
-      currentApprovalPolicyVersion = "";
-      currentOperationMode = "";
-      currentFileCount = 0;
-      currentTotalBytes = 0;
-      currentFileRoleRequirements = [];
-      currentOperationType = "UNKNOWN";
+      activeTurn = createEmptyTurnState();
       approveBtn.disabled = true;
       rejectBtn.disabled = true;
       renderResponse(null);
@@ -770,12 +765,12 @@
     }
 
     approveBtn.addEventListener("click", async () => {
-      if (!currentDraft) {
+      if (!activeTurn.draft) {
         setStatus("No draft available to approve.");
         return;
       }
 
-      if (!currentPreview || currentPreview.length === 0) {
+      if (!activeTurn.preview || activeTurn.preview.length === 0) {
         setStatus("You must preview changes before approving.");
         return;
       }
@@ -796,10 +791,10 @@
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            request: currentRequest,
-            draft: currentDraft,
+            request: activeTurn.request,
+            draft: activeTurn.draft,
             approver_role: approverRoleSelect.value,
-            proposal_id: currentProposalId || ""
+            proposal_id: activeTurn.proposalId || ""
           })
         });
 
@@ -814,7 +809,7 @@
         await loadHistory();
         approveBtn.disabled = true;
         rejectBtn.disabled = true;
-        const filePath = currentDraft.files[0].path;
+        const filePath = activeTurn.draft.files[0].path;
 
         try {
           const existing = await requestAPI("/api/ai/read-file", {
@@ -822,9 +817,9 @@
           }, "POST");
 
           const oldContent = existing.content || "";
-          const newContent = currentDraft.files[0].content || "";
+          const newContent = activeTurn.draft.files[0].content || "";
 
-          if (currentOperationType === "DUPLICATE" || oldContent.includes(newContent.trim())) {
+          if (activeTurn.operationType === "DUPLICATE" || oldContent.includes(newContent.trim())) {
             setStatus("Execution blocked: content already exists in file.");
             return;
           }
@@ -835,11 +830,11 @@
           }
         }
 
-        if (currentOperationType === "CREATE") {
+        if (activeTurn.operationType === "CREATE") {
           console.log("Creating new file...");
         }
 
-        if (currentOperationType === "EXPAND") {
+        if (activeTurn.operationType === "EXPAND") {
           console.log("Expanding existing file...");
         }
 
@@ -982,9 +977,10 @@
         const draftRes = await fetch(proposal.draft_path);
         const draft = await draftRes.json();
 
-        currentRequest = request;
-        currentProposalId = proposal.proposal_id || "";
-        currentDraft = draft;
+        activeTurn = createEmptyTurnState();
+        activeTurn.request = request;
+        activeTurn.proposalId = proposal.proposal_id || "";
+        activeTurn.draft = draft;
 
         renderFiles(draft.files || []);
 
@@ -1001,29 +997,29 @@
             let oldContent = existing.content || "";
             const newContent = draft.files[0].content || "";
 
-            currentOperationType = "UNKNOWN";
+            activeTurn.operationType = "UNKNOWN";
 
             if (!oldContent) {
-              currentOperationType = "CREATE";
+              activeTurn.operationType = "CREATE";
             } else if (oldContent.includes(newContent.trim())) {
-              currentOperationType = "DUPLICATE";
+              activeTurn.operationType = "DUPLICATE";
             } else if (newContent.includes(oldContent)) {
-              currentOperationType = "EXPAND";
+              activeTurn.operationType = "EXPAND";
             } else {
-              currentOperationType = "MODIFY";
+              activeTurn.operationType = "MODIFY";
             }
 
-            renderOperationAnalysis(currentOperationType, oldContent, newContent);
+            renderOperationAnalysis(activeTurn.operationType, oldContent, newContent);
 
             appendTextMessage("assistant", "Operation Analysis", analysisBox.textContent);
 
-            if (currentOperationType === "DUPLICATE") {
+            if (activeTurn.operationType === "DUPLICATE") {
               approveBtn.disabled = true;
               rejectBtn.disabled = false;
               setStatus("Duplicate detected. Approval is disabled.");
             }
           } catch (err) {
-            currentOperationType = "UNKNOWN";
+            activeTurn.operationType = "UNKNOWN";
             renderOperationAnalysis("UNKNOWN", "", "");
           }
         }
@@ -1036,7 +1032,7 @@
         appendSnapshotMessage("assistant", "Draft Files", filesBox);
         appendSnapshotMessage("assistant", "Diff Preview", previewBox);
 
-        if (currentOperationType !== "DUPLICATE") {
+        if (activeTurn.operationType !== "DUPLICATE") {
           approveBtn.disabled = false;
           setStatus("Ready for approval.");
         }
@@ -1055,7 +1051,7 @@
     renderFiles([]);
     renderPreview([]);
     approverRoleSelect.addEventListener("change", () => {
-      renderApprovalInfo(currentRequiredRoles, currentApprovalPolicyVersion);
+      renderApprovalInfo(activeTurn.requiredRoles, activeTurn.approvalPolicyVersion);
     });
 
     loadApprovalPolicy();
