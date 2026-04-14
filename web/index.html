@@ -183,6 +183,127 @@
       color: #94a3b8;
     }
 
+    .workspace-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.8fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    .chat-panel {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .chat-stream {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .chat-message {
+      border: 1px solid #1e293b;
+      border-radius: 18px;
+      padding: 16px;
+      background: #0b1220;
+    }
+
+    .chat-message.user {
+      background: #082f49;
+      border-color: #0ea5e9;
+    }
+
+    .chat-message.assistant {
+      background: #111827;
+    }
+
+    .message-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #94a3b8;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .message-title {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+
+    .composer-box {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .composer-box textarea {
+      min-height: 170px;
+    }
+
+    .message-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .inline-status {
+      margin-top: 0;
+      min-height: auto;
+      flex: 1;
+    }
+
+    .assistant-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .workspace-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .sidebar-card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .sidebar-card h2 {
+      margin: 0 0 14px;
+      font-size: 18px;
+    }
+
+    .compact-box {
+      min-height: 120px;
+    }
+
+    .auth-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .auth-fields textarea {
+      min-height: 60px;
+    }
+
+    .approval-actions {
+      margin-top: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .workspace-shell {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 900px) {
       .grid {
         grid-template-columns: 1fr;
@@ -197,78 +318,93 @@
       <p>اكتب طلبك بالعربي أو بالإنجليزي. النظام هيجهز Draft للملفات المقترحة، وبعد مراجعتك وموافقتك يتم إنشاء Decision Packet governed بدل الكتابة المباشرة.</p>
     </div>
 
-    <div class="grid">
-      <div class="panel">
-        <h2>Request</h2>
-        <label for="requestInput">Your request</label>
-        <textarea id="requestInput" placeholder="اكتب طلبك هنا...&#10;&#10;مثال: أنشئ ملف نصي يحتوي خطة عملية لبناء أول MVP لمشروع تقليل الهدر في المصانع الصغيرة في مصر."></textarea>
+    <div class="workspace-shell">
+      <div class="chat-panel">
+        <div class="chat-stream">
+          <div class="chat-message user">
+            <div class="message-label">You</div>
+            <h2 class="message-title">Start a conversation</h2>
 
-        <div class="actions">
-          <button id="chatSendBtn" class="primary">Send</button>
+            <div class="composer-box">
+              <label for="requestInput">Your request</label>
+              <textarea id="requestInput" placeholder="اكتب طلبك هنا...&#10;&#10;مثال: أنشئ ملف نصي يحتوي خطة عملية لبناء أول MVP لمشروع تقليل الهدر في المصانع الصغيرة في مصر."></textarea>
+
+              <div class="message-actions">
+                <button id="chatSendBtn" class="primary">Send</button>
+                <div id="statusBox" class="status inline-status">Ready.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-message assistant">
+            <div class="message-label">AI Workspace</div>
+            <h2 class="message-title">Response</h2>
+            <div id="responseBox" class="output-box empty">No response yet.</div>
+          </div>
+
+          <div class="chat-message assistant">
+            <div class="message-label">AI Workspace</div>
+            <h2 class="message-title">Draft</h2>
+            <div class="assistant-stack">
+              <div id="filesBox" class="file-list">
+                <div class="file-card empty">No files proposed yet.</div>
+              </div>
+
+              <div id="previewBox" class="file-list">
+                <div class="file-card empty">No diff preview yet.</div>
+              </div>
+
+              <div id="analysisBox" class="output-box empty">No operation analysis yet.</div>
+            </div>
+          </div>
+
+          <div class="chat-message assistant">
+            <div class="message-label">Approval</div>
+            <h2 class="message-title">Decision</h2>
+
+            <label for="approverRoleSelect">Approver role</label>
+            <select id="approverRoleSelect">
+              <option value="cto">cto</option>
+            </select>
+
+            <div class="assistant-stack">
+              <div id="approvalInfoBox" class="output-box compact-box empty">Approval policy not loaded yet.</div>
+              <div id="operationInfoBox" class="output-box compact-box empty">Operation summary not loaded yet.</div>
+            </div>
+
+            <div class="actions approval-actions">
+              <button id="approveBtn" class="primary" disabled>Approve & Queue Decision</button>
+              <button id="rejectBtn" class="danger" disabled>Reject</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="workspace-sidebar">
+        <div class="sidebar-card">
+          <h2>Project Activity</h2>
+          <div id="historyBox" class="file-list">
+            <div class="file-card empty">No write history yet.</div>
+          </div>
         </div>
 
-        <div id="statusBox" class="status">Ready.</div>
+        <div class="sidebar-card">
+          <h2>Workspace Access</h2>
 
-        <div class="section">
-          <h2>Auth Test</h2>
-          <label for="authUsernameInput">Username</label>
-          <textarea id="authUsernameInput" style="min-height: 60px;">test</textarea>
+          <div class="auth-fields">
+            <label for="authUsernameInput">Username</label>
+            <textarea id="authUsernameInput">test</textarea>
 
-          <label for="authPasswordInput">Password</label>
-          <textarea id="authPasswordInput" style="min-height: 60px;">1234</textarea>
+            <label for="authPasswordInput">Password</label>
+            <textarea id="authPasswordInput">1234</textarea>
+          </div>
 
           <div class="actions">
             <button id="authRegisterBtn" class="secondary">Register</button>
             <button id="authLoginBtn" class="secondary">Login</button>
           </div>
 
-          <div id="authResultBox" class="output-box empty">No auth response yet.</div>
-        </div>
-
-        <div class="section">
-          <h2>AI Response</h2>
-          <div id="responseBox" class="output-box empty">No response yet.</div>
-        </div>
-      </div>
-
-      <div class="panel">
-        <h2>Proposed Files</h2>
-        <div id="filesBox" class="file-list">
-          <div class="file-card empty">No files proposed yet.</div>
-        </div>
-
-        <div class="section">
-          <h2>Approval</h2>
-          <label for="approverRoleSelect">Approver role</label>
-          <select id="approverRoleSelect">
-            <option value="cto">cto</option>
-          </select>
-          <div id="approvalInfoBox" class="output-box empty">Approval policy not loaded yet.</div>
-          <div id="operationInfoBox" class="output-box empty">Operation summary not loaded yet.</div>
-        </div>
-
-        <div class="actions">
-          <button id="approveBtn" class="primary" disabled>Approve & Queue Decision</button>
-          <button id="rejectBtn" class="danger" disabled>Reject</button>
-        </div>
-
-        <div class="section">
-          <h2>Diff Preview</h2>
-          <div id="previewBox" class="file-list">
-            <div class="file-card empty">No diff preview yet.</div>
-          </div>
-        </div>
-
-        <div class="section">
-          <h2>Operation Analysis</h2>
-          <div id="analysisBox" class="output-box empty">No operation analysis yet.</div>
-        </div>
-
-        <div class="section">
-          <h2>Recent Activity</h2>
-          <div id="historyBox" class="file-list">
-            <div class="file-card empty">No write history yet.</div>
-          </div>
+          <div id="authResultBox" class="output-box compact-box empty">No auth response yet.</div>
         </div>
       </div>
     </div>
@@ -294,6 +430,47 @@
     const authRegisterBtn = document.getElementById("authRegisterBtn");
     const authLoginBtn = document.getElementById("authLoginBtn");
     const authResultBox = document.getElementById("authResultBox");
+
+    const chatStream = document.querySelector(".chat-stream");
+
+    function appendMessage(type, title, contentHtml) {
+      const wrapper = document.createElement("div");
+      wrapper.className = "chat-message " + (type === "user" ? "user" : "assistant");
+
+      wrapper.innerHTML = `
+        <div class="message-label">${type === "user" ? "You" : "AI Workspace"}</div>
+        <h2 class="message-title">${title}</h2>
+        <div>${contentHtml}</div>
+      `;
+
+      chatStream.appendChild(wrapper);
+      wrapper.scrollIntoView({ behavior: "smooth", block: "end" });
+    }
+
+    function escapeHtml(value) {
+      return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function formatMessageText(value) {
+      return escapeHtml(value).replace(/\n/g, "<br>");
+    }
+
+    function appendTextMessage(type, title, value) {
+      appendMessage(
+        type,
+        title,
+        `<div class="file-preview">${formatMessageText(value)}</div>`
+      );
+    }
+
+    function appendSnapshotMessage(type, title, element) {
+      appendMessage(type, title, `<div>${element.innerHTML}</div>`);
+    }
 
     let currentDraft = null;
 
@@ -777,6 +954,9 @@
         return;
       }
 
+      appendTextMessage("user", "Request", request);
+      requestInput.value = "";
+
       chatSendBtn.disabled = true;
       setStatus("Thinking...");
 
@@ -789,6 +969,7 @@
 
         if (!proposal.ok) {
           renderResponse(proposal);
+          appendTextMessage("assistant", "Response", JSON.stringify(proposal, null, 2));
 
           if (proposal.mode === "DUPLICATE_HISTORY") {
             setStatus("This request was already executed before.");
@@ -810,6 +991,7 @@
         currentDraft = draft;
 
         renderFiles(draft.files || []);
+
         await loadPreview(draft);
 
         if (draft.files && draft.files.length > 0) {
@@ -837,6 +1019,8 @@
 
             renderOperationAnalysis(currentOperationType, oldContent, newContent);
 
+            appendTextMessage("assistant", "Operation Analysis", analysisBox.textContent);
+
             if (currentOperationType === "DUPLICATE") {
               approveBtn.disabled = true;
               rejectBtn.disabled = false;
@@ -851,6 +1035,10 @@
         renderResponse({
           message: "Proposal ready. Approve to execute."
         });
+        appendTextMessage("assistant", "Response", responseBox.textContent);
+
+        appendSnapshotMessage("assistant", "Draft Files", filesBox);
+        appendSnapshotMessage("assistant", "Diff Preview", previewBox);
 
         if (currentOperationType !== "DUPLICATE") {
           approveBtn.disabled = false;
@@ -861,6 +1049,7 @@
 
       } catch (err) {
         renderResponse({ error: err.message });
+        appendTextMessage("assistant", "Error", err.message);
         setStatus(`Error: ${err.message}`);
       } finally {
         chatSendBtn.disabled = false;
