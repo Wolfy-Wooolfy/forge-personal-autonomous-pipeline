@@ -298,6 +298,10 @@
       margin-top: 14px;
     }
 
+    .hidden-state {
+      display: none;
+    }
+
     @media (max-width: 900px) {
       .workspace-shell {
         grid-template-columns: 1fr;
@@ -336,26 +340,18 @@
             </div>
           </div>
 
-          <div class="chat-message assistant">
-            <div class="message-label">AI Workspace</div>
-            <h2 class="message-title">Response</h2>
+          <div class="hidden-state" aria-hidden="true">
             <div id="responseBox" class="output-box empty">No response yet.</div>
-          </div>
 
-          <div class="chat-message assistant">
-            <div class="message-label">AI Workspace</div>
-            <h2 class="message-title">Draft</h2>
-            <div class="assistant-stack">
-              <div id="filesBox" class="file-list">
-                <div class="file-card empty">No files proposed yet.</div>
-              </div>
-
-              <div id="previewBox" class="file-list">
-                <div class="file-card empty">No diff preview yet.</div>
-              </div>
-
-              <div id="analysisBox" class="output-box empty">No operation analysis yet.</div>
+            <div id="filesBox" class="file-list">
+              <div class="file-card empty">No files proposed yet.</div>
             </div>
+
+            <div id="previewBox" class="file-list">
+              <div class="file-card empty">No diff preview yet.</div>
+            </div>
+
+            <div id="analysisBox" class="output-box empty">No operation analysis yet.</div>
           </div>
 
           <div class="chat-message assistant">
