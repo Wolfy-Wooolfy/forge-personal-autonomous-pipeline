@@ -1077,10 +1077,48 @@
           return;
         }
 
-        // 2) Analyze
+        // 2) Options
+        const options = await requestAPI("/api/ai/options", { request });
+
+        if (options.ok === false && options.reason === "CLARIFICATION_REQUIRED") {
+          pushMessage(
+            "assistant",
+            "Clarification",
+            `<div class="file-preview">${formatMessageText(
+              options.clarification_question || "What do you want to do?"
+            )}</div>`
+          );
+
+          finalizeActiveTurn({
+            finalStatus: "CLARIFICATION_REQUIRED",
+            clarificationQuestion: options.clarification_question || "What do you want to do?"
+          });
+
+          setStatus("Clarification required.");
+          return;
+        }
+
+        if (options.ok === true && Array.isArray(options.strategy_candidates) && options.strategy_candidates.length > 0) {
+          const optionsText = options.strategy_candidates
+            .map((item, index) =>
+              `${index + 1}. ${item.title} [${item.strategy_id}]` +
+              `\nTarget: ${item.target_file}` +
+              `\nScore: ${item.score}` +
+              `\nWhy: ${item.rationale}`
+            )
+            .join("\n\n");
+
+          pushMessage(
+            "assistant",
+            "Options",
+            `<div class="file-preview">${formatMessageText(optionsText)}</div>`
+          );
+        }
+
+        // 3) Analyze
         await requestAPI("/api/ai/analyze", { request });
 
-        // 3) Proposal
+        // 4) Proposal
         const proposal = await requestAPI("/api/ai/propose", { request });
 
         if (!proposal.ok) {
@@ -1098,7 +1136,7 @@
           return;
         }
 
-        // 4) Load draft
+        // 5) Load draft
         const draftRes = await fetch(proposal.draft_path);
         const draft = await draftRes.json();
 

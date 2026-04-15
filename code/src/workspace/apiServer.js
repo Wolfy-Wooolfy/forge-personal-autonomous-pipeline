@@ -1587,6 +1587,47 @@ ${trimmedExisting}`
     sendJson(res, 200, result);
   }
 
+  async function handleOptions(body, res) {
+    const requestText = typeof body.request === "string" ? body.request.trim() : "";
+    const interpretation = interpretUserIntent(requestText);
+
+    if (
+      interpretation.mode === "BLOCKED" ||
+      interpretation.needs_clarification === true
+    ) {
+      sendJson(res, 200, {
+        ok: false,
+        mode: "BLOCKED",
+        reason: "CLARIFICATION_REQUIRED",
+        clarification_question:
+          interpretation.clarification_question || "What do you want to do?",
+        interpretation
+      });
+      return;
+    }
+
+    const projectFiles = scanProjectFiles();
+    const resolvedTargetFile = resolveTargetFileForRequest(
+      interpretation.normalized_request,
+      projectFiles
+    );
+
+    const strategyCandidates = buildStrategyCandidates(
+      interpretation.normalized_request,
+      resolvedTargetFile
+    );
+
+    sendJson(res, 200, {
+      ok: true,
+      mode: "OPTIONS",
+      request: interpretation.normalized_request,
+      target_file: resolvedTargetFile,
+      selected_strategy: strategyCandidates[0] || null,
+      strategy_candidates: strategyCandidates,
+      interpretation
+    });
+  }
+
   async function handlePropose(body, res) {
     const requestText = typeof body.request === "string" ? body.request.trim() : "";
 
@@ -1675,6 +1716,12 @@ ${trimmedExisting}`
       if (req.method === "POST" && req.url === "/api/ai/analyze") {
         const body = await readBody(req);
         await handleAnalyze(body, res);
+        return;
+      }
+
+      if (req.method === "POST" && req.url === "/api/ai/options") {
+        const body = await readBody(req);
+        await handleOptions(body, res);
         return;
       }
 
