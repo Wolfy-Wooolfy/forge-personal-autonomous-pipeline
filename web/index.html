@@ -486,6 +486,37 @@
 
     let activeTurn = createEmptyTurnState();
 
+    const conversationTurns = [];
+
+    function snapshotTurn(turn) {
+      return {
+        request: turn.request,
+        proposalId: turn.proposalId,
+        draft: turn.draft ? JSON.parse(JSON.stringify(turn.draft)) : null,
+        preview: Array.isArray(turn.preview) ? JSON.parse(JSON.stringify(turn.preview)) : [],
+        requiredRoles: Array.isArray(turn.requiredRoles) ? [...turn.requiredRoles] : [],
+        approvalPolicyVersion: turn.approvalPolicyVersion,
+        operationMode: turn.operationMode,
+        fileCount: turn.fileCount,
+        totalBytes: turn.totalBytes,
+        fileRoleRequirements: Array.isArray(turn.fileRoleRequirements)
+          ? JSON.parse(JSON.stringify(turn.fileRoleRequirements))
+          : [],
+        operationType: turn.operationType
+      };
+    }
+
+    function finalizeActiveTurn(extra = {}) {
+      if (!activeTurn.request) {
+        return;
+      }
+
+      conversationTurns.push({
+        ...snapshotTurn(activeTurn),
+        ...extra
+      });
+    }
+
     function setStatus(text) {
       statusBox.textContent = text;
     }
@@ -820,11 +851,20 @@
           const newContent = activeTurn.draft.files[0].content || "";
 
           if (activeTurn.operationType === "DUPLICATE" || oldContent.includes(newContent.trim())) {
+            finalizeActiveTurn({
+              finalStatus: "EXECUTION_BLOCKED_DUPLICATE_CONTENT",
+              decisionPacketId: data.decision_packet_id
+            });
             setStatus("Execution blocked: content already exists in file.");
             return;
           }
         } catch (readErr) {
           if (!String(readErr.message || "").includes("File not found")) {
+            finalizeActiveTurn({
+              finalStatus: "DECISION_CREATED_PRECHECK_FAILED",
+              decisionPacketId: data.decision_packet_id,
+              precheckError: readErr.message
+            });
             setStatus(`Decision created but execution pre-check failed: ${readErr.message}`);
             return;
           }
@@ -843,10 +883,21 @@
             decision_packet_id: data.decision_packet_id
           }, "POST");
 
+          finalizeActiveTurn({
+            finalStatus: "EXECUTED",
+            decisionPacketId: data.decision_packet_id
+          });
+
           setStatus(
             `Decision + Execution completed.\nPacket ID: ${data.decision_packet_id}`
           );
         } catch (execErr) {
+          finalizeActiveTurn({
+            finalStatus: "DECISION_CREATED_EXECUTION_FAILED",
+            decisionPacketId: data.decision_packet_id,
+            executionError: execErr.message
+          });
+
           setStatus(
             `Decision created but execution failed: ${execErr.message}`
           );
@@ -860,6 +911,9 @@
     });
 
     rejectBtn.addEventListener("click", () => {
+      finalizeActiveTurn({
+        finalStatus: "REJECTED"
+      });
       requestInput.value = "";
       resetDraft();
       setStatus("Draft cleared.");
