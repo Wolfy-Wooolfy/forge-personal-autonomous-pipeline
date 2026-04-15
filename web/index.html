@@ -385,6 +385,13 @@
         </div>
 
         <div class="sidebar-card">
+          <h2>Conversation Memory</h2>
+          <div id="conversationHistoryBox" class="file-list">
+            <div class="file-card empty">No conversation turns yet.</div>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
           <h2>Workspace Access</h2>
 
           <div class="auth-fields">
@@ -416,6 +423,7 @@
     const responseBox = document.getElementById("responseBox");
     const filesBox = document.getElementById("filesBox");
     const historyBox = document.getElementById("historyBox");
+    const conversationHistoryBox = document.getElementById("conversationHistoryBox");
     const previewBox = document.getElementById("previewBox");
     const analysisBox = document.getElementById("analysisBox");
     const approvalInfoBox = document.getElementById("approvalInfoBox");
@@ -514,6 +522,43 @@
       conversationTurns.push({
         ...snapshotTurn(activeTurn),
         ...extra
+      });
+
+      renderConversationTurns(conversationTurns);
+    }
+
+    function renderConversationTurns(items) {
+      conversationHistoryBox.innerHTML = "";
+
+      if (!Array.isArray(items) || items.length === 0) {
+        const empty = document.createElement("div");
+        empty.className = "file-card empty";
+        empty.textContent = "No conversation turns yet.";
+        conversationHistoryBox.appendChild(empty);
+        return;
+      }
+
+      [...items].reverse().forEach((item, index) => {
+        const card = document.createElement("div");
+        card.className = "file-card";
+
+        const titleEl = document.createElement("div");
+        titleEl.className = "file-path";
+        titleEl.textContent = `Turn ${items.length - index}`;
+
+        const summaryEl = document.createElement("div");
+        summaryEl.className = "file-preview";
+        summaryEl.textContent =
+          `Request: ${item.request || ""}\n` +
+          `Proposal ID: ${item.proposalId || "n/a"}\n` +
+          `Operation Type: ${item.operationType || "UNKNOWN"}\n` +
+          `Final Status: ${item.finalStatus || "IN_PROGRESS"}\n` +
+          `Decision Packet ID: ${item.decisionPacketId || "n/a"}\n` +
+          `File Count: ${item.fileCount || 0}`;
+
+        card.appendChild(titleEl);
+        card.appendChild(summaryEl);
+        conversationHistoryBox.appendChild(card);
       });
     }
 
@@ -1104,6 +1149,7 @@
 
     renderFiles([]);
     renderPreview([]);
+    renderConversationTurns(conversationTurns);
     approverRoleSelect.addEventListener("change", () => {
       renderApprovalInfo(activeTurn.requiredRoles, activeTurn.approvalPolicyVersion);
     });
