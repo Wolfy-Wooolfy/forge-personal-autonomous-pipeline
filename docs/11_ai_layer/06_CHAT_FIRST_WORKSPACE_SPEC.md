@@ -1,4 +1,67 @@
 # CHAT-FIRST WORKSPACE SPEC
+
+---
+
+## ⚠️ EXECUTION AUTHORITY CLARIFICATION (CRITICAL)
+
+This document defines the TARGET USER EXPERIENCE (Chat-first interface).
+
+It DOES NOT define execution order.
+
+---
+
+## 🔒 MANDATORY RULE
+
+Chat-first is a UX goal ONLY.
+
+Execution MUST follow:
+
+1. Tool definition
+2. Tool implementation
+3. Tool validation
+4. Tool integration
+5. THEN conversation exposure
+
+NO EXCEPTIONS.
+
+---
+
+## 🔺 PRECEDENCE RULE
+
+In case of ANY conflict:
+
+1. 07_TOOL_VS_CONVERSATION_CONTRACT.md
+2. 08_CONVERSATION_EXECUTION_MODEL.md
+
+OVERRIDE this document.
+
+This document is NON-AUTHORITATIVE for execution order.
+
+---
+
+## 🚫 FORBIDDEN INTERPRETATION
+
+This document MUST NOT be interpreted as:
+
+- Permission to build features inside UI
+- Permission to skip tool layer
+- Permission to implement logic directly in chat
+- Permission to introduce conversation behavior without tool backing
+
+---
+
+## ✅ CORRECT INTERPRETATION
+
+This document ONLY defines:
+
+- Chat-style interface
+- Message-based UX
+- Interaction flow
+
+It MUST be implemented strictly on top of existing tools.
+
+---
+
 ## Forge AI Engineering Layer
 
 ---
@@ -153,6 +216,23 @@ Based on:
 
 ---
 
+### ⚠️ EXECUTION CONSTRAINT
+
+AI execution MUST NOT bypass tools.
+
+AI must:
+
+- Select tool
+- Call tool
+- Receive result
+
+AI must NOT:
+
+- Execute logic directly
+- Modify system state outside tools
+
+---
+
 ## 11. SYSTEM STATE
 
 Each Project must track:
@@ -184,6 +264,20 @@ Is considered:
    - Projects Sidebar
 3. Bind AI to project context
 4. Remove button-driven flow
+
+---
+
+### ⚠️ VALIDATION BEFORE ANY STEP
+
+Before implementing ANY item above:
+
+- Tool must exist
+- Tool must be validated
+- Tool must be integrated
+
+Otherwise:
+
+Implementation is INVALID and must STOP.
 
 ---
 
