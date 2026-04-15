@@ -1056,10 +1056,31 @@
       setStatus("Thinking...");
 
       try {
-        // 1) Analyze
+        // 1) Clarify
+        const clarification = await requestAPI("/api/ai/clarify", { request });
+
+        if (clarification.needs_clarification === true) {
+          pushMessage(
+            "assistant",
+            "Clarification",
+            `<div class="file-preview">${formatMessageText(
+              clarification.clarification_question || "What do you want to do?"
+            )}</div>`
+          );
+
+          finalizeActiveTurn({
+            finalStatus: "CLARIFICATION_REQUIRED",
+            clarificationQuestion: clarification.clarification_question || "What do you want to do?"
+          });
+
+          setStatus("Clarification required.");
+          return;
+        }
+
+        // 2) Analyze
         await requestAPI("/api/ai/analyze", { request });
 
-        // 2) Proposal
+        // 3) Proposal
         const proposal = await requestAPI("/api/ai/propose", { request });
 
         if (!proposal.ok) {
@@ -1077,7 +1098,7 @@
           return;
         }
 
-        // 3) Load draft
+        // 4) Load draft
         const draftRes = await fetch(proposal.draft_path);
         const draft = await draftRes.json();
 

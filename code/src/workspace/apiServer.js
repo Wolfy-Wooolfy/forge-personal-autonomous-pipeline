@@ -371,6 +371,14 @@ function createWorkspaceApiServer(options = {}) {
 
     if (text.length < 5) {
       needsClarification = true;
+      
+      return {
+        mode,
+        intent,
+        needs_clarification: true,
+        clarification_question: "Your request is too short. Can you describe what you want to build or modify?",
+        normalized_request: requestText
+      };
     }
 
     return {
@@ -1558,6 +1566,21 @@ ${trimmedExisting}`
     sendJson(res, 200, result);
   }
 
+  async function handleClarify(body, res) {
+    const requestText = typeof body.request === "string" ? body.request.trim() : "";
+    const interpretation = interpretUserIntent(requestText);
+
+    sendJson(res, 200, {
+      ok: true,
+      request: requestText,
+      needs_clarification: interpretation.needs_clarification === true,
+      clarification_question:
+        interpretation.clarification_question ||
+        (interpretation.needs_clarification === true ? "What do you want to do?" : ""),
+      interpretation
+    });
+  }
+
   async function handleAnalyze(body, res) {
     const requestText = typeof body.request === "string" ? body.request.trim() : "";
     const result = buildAiAnalysisArtifacts(requestText);
@@ -1640,6 +1663,12 @@ ${trimmedExisting}`
 
       if (req.method === "GET" && req.url === "/api/ai/history") {
         sendJson(res, 200, { items: getRecentWrites(10) });
+        return;
+      }
+
+      if (req.method === "POST" && req.url === "/api/ai/clarify") {
+        const body = await readBody(req);
+        await handleClarify(body, res);
         return;
       }
 
