@@ -464,16 +464,14 @@
       return escapeHtml(value).replace(/\n/g, "<br>");
     }
 
-    function appendTextMessage(type, title, value) {
-      appendMessage(
+    function pushMessage(type, title, contentHtml) {
+      activeTurn.messages.push({
         type,
         title,
-        `<div class="file-preview">${formatMessageText(value)}</div>`
-      );
-    }
+        content: contentHtml
+      });
 
-    function appendSnapshotMessage(type, title, element) {
-      appendMessage(type, title, `<div>${element.innerHTML}</div>`);
+      appendMessage(type, title, contentHtml);
     }
 
     function createEmptyTurnState() {
@@ -488,7 +486,8 @@
         fileCount: 0,
         totalBytes: 0,
         fileRoleRequirements: [],
-        operationType: "UNKNOWN"
+        operationType: "UNKNOWN",
+        messages: []
       };
     }
 
@@ -510,7 +509,10 @@
         fileRoleRequirements: Array.isArray(turn.fileRoleRequirements)
           ? JSON.parse(JSON.stringify(turn.fileRoleRequirements))
           : [],
-        operationType: turn.operationType
+        operationType: turn.operationType,
+        messages: Array.isArray(turn.messages)
+          ? JSON.parse(JSON.stringify(turn.messages))
+          : []
       };
     }
 
@@ -1044,7 +1046,10 @@
         return;
       }
 
-      appendTextMessage("user", "Request", request);
+      activeTurn = createEmptyTurnState();
+      activeTurn.request = request;
+
+      pushMessage("user", "Request", `<div class="file-preview">${formatMessageText(request)}</div>`);
       requestInput.value = "";
 
       chatSendBtn.disabled = true;
@@ -1059,7 +1064,7 @@
 
         if (!proposal.ok) {
           renderResponse(proposal);
-          appendTextMessage("assistant", "Response", JSON.stringify(proposal, null, 2));
+          pushMessage("assistant", "Response", `<div class="file-preview">${formatMessageText(JSON.stringify(proposal, null, 2))}</div>`);
 
           if (proposal.mode === "DUPLICATE_HISTORY") {
             setStatus("This request was already executed before.");
@@ -1076,8 +1081,6 @@
         const draftRes = await fetch(proposal.draft_path);
         const draft = await draftRes.json();
 
-        activeTurn = createEmptyTurnState();
-        activeTurn.request = request;
         activeTurn.proposalId = proposal.proposal_id || "";
         activeTurn.draft = draft;
 
@@ -1110,7 +1113,7 @@
 
             renderOperationAnalysis(activeTurn.operationType, oldContent, newContent);
 
-            appendTextMessage("assistant", "Operation Analysis", analysisBox.textContent);
+            pushMessage("assistant", "Operation Analysis", `<div class="file-preview">${formatMessageText(analysisBox.textContent)}</div>`);
 
             if (activeTurn.operationType === "DUPLICATE") {
               approveBtn.disabled = true;
@@ -1126,10 +1129,10 @@
         renderResponse({
           message: "Proposal ready. Approve to execute."
         });
-        appendTextMessage("assistant", "Response", responseBox.textContent);
+        pushMessage("assistant", "Response", `<div class="file-preview">${formatMessageText(responseBox.textContent)}</div>`);
 
-        appendSnapshotMessage("assistant", "Draft Files", filesBox);
-        appendSnapshotMessage("assistant", "Diff Preview", previewBox);
+        pushMessage("assistant", "Draft Files", filesBox.innerHTML);
+        pushMessage("assistant", "Diff Preview", previewBox.innerHTML);
 
         if (activeTurn.operationType !== "DUPLICATE") {
           approveBtn.disabled = false;
@@ -1140,7 +1143,7 @@
 
       } catch (err) {
         renderResponse({ error: err.message });
-        appendTextMessage("assistant", "Error", err.message);
+        pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>`);
         setStatus(`Error: ${err.message}`);
       } finally {
         chatSendBtn.disabled = false;
