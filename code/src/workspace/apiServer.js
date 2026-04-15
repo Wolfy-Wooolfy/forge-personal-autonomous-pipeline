@@ -369,7 +369,7 @@ function createWorkspaceApiServer(options = {}) {
       intent = "QUESTION";
     }
 
-    if (text.length < 5) {
+    if (text.length <= 5) {
       needsClarification = true;
       
       return {
@@ -1628,6 +1628,63 @@ ${trimmedExisting}`
     });
   }
 
+  async function handleSelectStrategy(body, res) {
+    const requestText = typeof body.request === "string" ? body.request.trim() : "";
+    const interpretation = interpretUserIntent(requestText);
+
+    if (
+      interpretation.mode === "BLOCKED" ||
+      interpretation.needs_clarification === true
+    ) {
+      sendJson(res, 200, {
+        ok: false,
+        mode: "BLOCKED",
+        reason: "CLARIFICATION_REQUIRED",
+        clarification_question:
+          interpretation.clarification_question || "What do you want to do?",
+        interpretation
+      });
+      return;
+    }
+
+    const projectFiles = scanProjectFiles();
+    const resolvedTargetFile = resolveTargetFileForRequest(
+      interpretation.normalized_request,
+      projectFiles
+    );
+
+    const strategyCandidates = buildStrategyCandidates(
+      interpretation.normalized_request,
+      resolvedTargetFile
+    );
+
+    if (strategyCandidates.length === 1) {
+      sendJson(res, 200, {
+        ok: true,
+        mode: "STRATEGY_SELECTED",
+        selection_mode: "AUTO",
+        request: interpretation.normalized_request,
+        target_file: resolvedTargetFile,
+        selected_strategy: strategyCandidates[0],
+        strategy_candidates: strategyCandidates,
+        interpretation
+      });
+      return;
+    }
+
+    sendJson(res, 200, {
+      ok: true,
+      mode: "STRATEGY_SELECTION_REQUIRED",
+      selection_mode: "USER_CHOICE_REQUIRED",
+      request: interpretation.normalized_request,
+      target_file: resolvedTargetFile,
+      selected_strategy: null,
+      strategy_candidates: strategyCandidates,
+      selection_question: "Multiple strategies are available. Which one do you want to use?",
+      interpretation
+    });
+  }
+
   async function handlePropose(body, res) {
     const requestText = typeof body.request === "string" ? body.request.trim() : "";
 
@@ -1722,6 +1779,12 @@ ${trimmedExisting}`
       if (req.method === "POST" && req.url === "/api/ai/options") {
         const body = await readBody(req);
         await handleOptions(body, res);
+        return;
+      }
+
+      if (req.method === "POST" && req.url === "/api/ai/select-strategy") {
+        const body = await readBody(req);
+        await handleSelectStrategy(body, res);
         return;
       }
 

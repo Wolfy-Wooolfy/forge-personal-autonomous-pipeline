@@ -1115,10 +1115,74 @@
           );
         }
 
-        // 3) Analyze
+        const strategySelection = await requestAPI("/api/ai/select-strategy", { request });
+
+        if (strategySelection.ok === false && strategySelection.reason === "CLARIFICATION_REQUIRED") {
+          pushMessage(
+            "assistant",
+            "Clarification",
+            `<div class="file-preview">${formatMessageText(
+              strategySelection.clarification_question || "What do you want to do?"
+            )}</div>`
+          );
+
+          finalizeActiveTurn({
+            finalStatus: "CLARIFICATION_REQUIRED",
+            clarificationQuestion: strategySelection.clarification_question || "What do you want to do?"
+          });
+
+          setStatus("Clarification required.");
+          return;
+        }
+
+        if (strategySelection.ok === true && strategySelection.mode === "STRATEGY_SELECTION_REQUIRED") {
+          const selectionText =
+            `${strategySelection.selection_question || "Multiple strategies are available. Which one do you want to use?"}\n\n` +
+            (Array.isArray(strategySelection.strategy_candidates)
+              ? strategySelection.strategy_candidates
+                  .map((item, index) =>
+                    `${index + 1}. ${item.title} [${item.strategy_id}]` +
+                    `\nTarget: ${item.target_file}` +
+                    `\nScore: ${item.score}` +
+                    `\nWhy: ${item.rationale}`
+                  )
+                  .join("\n\n")
+              : "");
+
+          pushMessage(
+            "assistant",
+            "Strategy Choice",
+            `<div class="file-preview">${formatMessageText(selectionText)}</div>`
+          );
+
+          finalizeActiveTurn({
+            finalStatus: "STRATEGY_SELECTION_REQUIRED",
+            selectionQuestion: strategySelection.selection_question || "Multiple strategies are available. Which one do you want to use?"
+          });
+
+          setStatus("Strategy selection required.");
+          return;
+        }
+
+        if (strategySelection.ok === true && strategySelection.mode === "STRATEGY_SELECTED" && strategySelection.selected_strategy) {
+          const selected = strategySelection.selected_strategy;
+          const selectedText =
+            `Selected strategy: ${selected.title} [${selected.strategy_id}]` +
+            `\nTarget: ${selected.target_file}` +
+            `\nScore: ${selected.score}` +
+            `\nWhy: ${selected.rationale}`;
+
+          pushMessage(
+            "assistant",
+            "Strategy Selected",
+            `<div class="file-preview">${formatMessageText(selectedText)}</div>`
+          );
+        }
+
+        // 4) Analyze
         await requestAPI("/api/ai/analyze", { request });
 
-        // 4) Proposal
+        // 5) Proposal
         const proposal = await requestAPI("/api/ai/propose", { request });
 
         if (!proposal.ok) {
@@ -1136,7 +1200,7 @@
           return;
         }
 
-        // 5) Load draft
+        // 6) Load draft
         const draftRes = await fetch(proposal.draft_path);
         const draft = await draftRes.json();
 
