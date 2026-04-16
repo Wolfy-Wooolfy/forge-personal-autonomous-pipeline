@@ -1132,14 +1132,6 @@
             selected_strategy_id: selected.strategy_id
           });
 
-          pushMessage(
-            "assistant",
-            "Debug",
-            `<div class="file-preview">${formatMessageText(
-              `confirm-strategy returned:\n${JSON.stringify(strategyConfirmation, null, 2)}`
-            )}</div>`
-          );
-
           if (!strategyConfirmation.ok || strategyConfirmation.mode !== "STRATEGY_CONFIRMED" || !strategyConfirmation.selected_strategy) {
             throw new Error("Strategy confirmation failed.");
           }
@@ -1162,25 +1154,11 @@
           activeTurn = createEmptyTurnState();
           activeTurn.request = effectiveRequest;
 
-          pushMessage(
-            "assistant",
-            "Debug",
-            `<div class="file-preview">${formatMessageText(
-              `continuing with request:\n${effectiveRequest}`
-            )}</div>`
-          );
+          setStatus("Strategy confirmed. Building proposal...");
 
           await requestAPI("/api/ai/analyze", { request: effectiveRequest });
 
           const proposal = await requestAPI("/api/ai/propose", { request: effectiveRequest });
-
-          pushMessage(
-            "assistant",
-            "Debug",
-            `<div class="file-preview">${formatMessageText(
-              `propose returned:\n${JSON.stringify(proposal, null, 2)}`
-            )}</div>`
-          );
 
           if (!proposal.ok) {
             renderResponse(proposal);
