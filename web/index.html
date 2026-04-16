@@ -302,6 +302,36 @@
       display: none;
     }
 
+    .strategy-choice-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .strategy-choice-btn {
+      width: 100%;
+      text-align: left;
+      background: #0b1220;
+      color: #e2e8f0;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 12px 14px;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .strategy-choice-btn:hover {
+      border-color: #38bdf8;
+      background: #0f172a;
+    }
+
+    .strategy-choice-btn strong {
+      display: block;
+      color: #7dd3fc;
+      margin-bottom: 6px;
+    }
+
     @media (max-width: 900px) {
       .workspace-shell {
         grid-template-columns: 1fr;
@@ -472,6 +502,31 @@
       });
 
       appendMessage(type, title, contentHtml);
+    }
+
+    function buildStrategyChoiceHtml(items) {
+      const list = Array.isArray(items) ? items : [];
+
+      if (list.length === 0) {
+        return `<div class="file-preview">${formatMessageText("No strategies available.")}</div>`;
+      }
+
+      return `
+        <div class="strategy-choice-list">
+          ${list.map((item, index) => `
+            <button
+              type="button"
+              class="strategy-choice-btn"
+              data-strategy-choice="${index + 1}"
+            >
+              <strong>${index + 1}. ${escapeHtml(item.title || "Untitled strategy")} [${escapeHtml(item.strategy_id || "UNKNOWN")}]</strong>
+              <div>Target: ${escapeHtml(item.target_file || "")}</div>
+              <div>Score: ${escapeHtml(item.score ?? "")}</div>
+              <div>Why: ${escapeHtml(item.rationale || "")}</div>
+            </button>
+          `).join("")}
+        </div>
+      `;
     }
 
     function createEmptyTurnState() {
@@ -1320,24 +1375,16 @@
           }));
           currentRequestText = request;
 
-          const selectionText =
-            `${strategySelection.selection_question || "Multiple strategies are available. Which one do you want to use?"}\n\n` +
-            (Array.isArray(strategySelection.strategy_candidates)
-              ? strategySelection.strategy_candidates
-                  .map((item, index) =>
-                    `${index + 1}. ${item.title} [${item.strategy_id}]` +
-                    `\nTarget: ${item.target_file}` +
-                    `\nScore: ${item.score}` +
-                    `\nWhy: ${item.rationale}`
-                  )
-                  .join("\n\n")
-              : "") +
-            `\n\nReply with the option number to continue.`;
+          const selectionTitle =
+            strategySelection.selection_question || "Multiple strategies are available. Which one do you want to use?";
 
           pushMessage(
             "assistant",
             "Strategy Choice",
-            `<div class="file-preview">${formatMessageText(selectionText)}</div>`
+            `
+              <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(selectionTitle)}</div>
+              ${buildStrategyChoiceHtml(currentStrategyCandidates)}
+            `
           );
 
           finalizeActiveTurn({
@@ -1459,6 +1506,30 @@
       } finally {
         chatSendBtn.disabled = false;
       }
+    });
+
+    chatStream.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-strategy-choice]");
+
+      if (!button) {
+        return;
+      }
+
+      const choiceValue = button.getAttribute("data-strategy-choice");
+
+      if (!choiceValue || button.disabled) {
+        return;
+      }
+
+      const allChoiceButtons = chatStream.querySelectorAll("[data-strategy-choice]");
+      allChoiceButtons.forEach((btn) => {
+        btn.disabled = true;
+        btn.style.opacity = "0.6";
+        btn.style.cursor = "not-allowed";
+      });
+
+      requestInput.value = choiceValue;
+      chatSendBtn.click();
     });
 
     requestInput.addEventListener("keydown", (event) => {
