@@ -1055,10 +1055,6 @@
         const selectedIndex = parseInt(request, 10) - 1;
         const selected = currentStrategyCandidates[selectedIndex];
 
-        console.log("SELECTED STRATEGY:", selected);
-
-        alert("Strategy selected: " + (selected ? selected.strategy_id : "INVALID"));
-
         pushMessage("user", "Strategy Selection", `<div class="file-preview">${formatMessageText(request)}</div>`);
         requestInput.value = "";
 
@@ -1073,13 +1069,21 @@
         }
 
         chatSendBtn.disabled = true;
-        setStatus("Confirming strategy...");
+        setStatus(`Confirming strategy: ${selected.strategy_id}`);
 
         try {
           const strategyConfirmation = await requestAPI("/api/ai/confirm-strategy", {
             request: currentRequestText,
             selected_strategy_id: selected.strategy_id
           });
+
+          pushMessage(
+            "assistant",
+            "Debug",
+            `<div class="file-preview">${formatMessageText(
+              `confirm-strategy returned:\n${JSON.stringify(strategyConfirmation, null, 2)}`
+            )}</div>`
+          );
 
           if (!strategyConfirmation.ok || strategyConfirmation.mode !== "STRATEGY_CONFIRMED" || !strategyConfirmation.selected_strategy) {
             throw new Error("Strategy confirmation failed.");
@@ -1103,9 +1107,25 @@
           activeTurn = createEmptyTurnState();
           activeTurn.request = effectiveRequest;
 
+          pushMessage(
+            "assistant",
+            "Debug",
+            `<div class="file-preview">${formatMessageText(
+              `continuing with request:\n${effectiveRequest}`
+            )}</div>`
+          );
+
           await requestAPI("/api/ai/analyze", { request: effectiveRequest });
 
           const proposal = await requestAPI("/api/ai/propose", { request: effectiveRequest });
+
+          pushMessage(
+            "assistant",
+            "Debug",
+            `<div class="file-preview">${formatMessageText(
+              `propose returned:\n${JSON.stringify(proposal, null, 2)}`
+            )}</div>`
+          );
 
           if (!proposal.ok) {
             renderResponse(proposal);
