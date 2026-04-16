@@ -1226,7 +1226,6 @@
           renderResponse({
             message: "Proposal ready. Approve to execute."
           });
-          pushMessage("assistant", "Response", `<div class="file-preview">${formatMessageText(responseBox.textContent)}</div>`);
 
           pushMessage("assistant", "Draft Files", filesBox.innerHTML);
           pushMessage("assistant", "Diff Preview", previewBox.innerHTML);
@@ -1465,7 +1464,6 @@
         renderResponse({
           message: "Proposal ready. Approve to execute."
         });
-        pushMessage("assistant", "Response", `<div class="file-preview">${formatMessageText(responseBox.textContent)}</div>`);
 
         pushMessage("assistant", "Draft Files", filesBox.innerHTML);
         pushMessage("assistant", "Diff Preview", previewBox.innerHTML);
