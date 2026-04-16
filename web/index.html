@@ -1073,7 +1073,7 @@
 
         try {
           const strategyConfirmation = await requestAPI("/api/ai/confirm-strategy", {
-            request: currentRequestText,
+            request: selected.original_request || currentRequestText,
             selected_strategy_id: selected.strategy_id
           });
 
@@ -1310,9 +1310,14 @@
         }
 
         if (strategySelection.ok === true && strategySelection.mode === "STRATEGY_SELECTION_REQUIRED") {
-          currentStrategyCandidates = Array.isArray(strategySelection.strategy_candidates)
-            ? strategySelection.strategy_candidates
-            : [];
+          currentStrategyCandidates = (
+            Array.isArray(strategySelection.strategy_candidates)
+              ? strategySelection.strategy_candidates
+              : []
+          ).map((s) => ({
+            ...s,
+            original_request: request
+          }));
           currentRequestText = request;
 
           const selectionText =
@@ -1453,6 +1458,13 @@
         setStatus(`Error: ${err.message}`);
       } finally {
         chatSendBtn.disabled = false;
+      }
+    });
+
+    requestInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && !event.shiftKey) {
+        event.preventDefault();
+        chatSendBtn.click();
       }
     });
 

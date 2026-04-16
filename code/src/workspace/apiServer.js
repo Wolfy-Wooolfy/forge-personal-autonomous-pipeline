@@ -709,7 +709,7 @@ ${trimmedExisting}`
       });
     }
 
-    if (/^edit\s+this\s+file\s+to\s+add\s+logging$/i.test(lower)) {
+    if (lower.includes("edit") && lower.includes("logging")) {
       strategies.push({
         strategy_id: "EDIT_ADD_LOGGING_STRUCTURE_AWARE",
         title: "Inject logging into existing function structure",
