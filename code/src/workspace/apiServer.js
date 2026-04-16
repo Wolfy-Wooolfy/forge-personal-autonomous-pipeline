@@ -1685,6 +1685,66 @@ ${trimmedExisting}`
     });
   }
 
+  async function handleConfirmStrategy(body, res) {
+    const requestText = typeof body.request === "string" ? body.request.trim() : "";
+    const selectedStrategyId =
+      typeof body.selected_strategy_id === "string" ? body.selected_strategy_id.trim() : "";
+
+    const interpretation = interpretUserIntent(requestText);
+
+    if (
+      interpretation.mode === "BLOCKED" ||
+      interpretation.needs_clarification === true
+    ) {
+      sendJson(res, 200, {
+        ok: false,
+        mode: "BLOCKED",
+        reason: "CLARIFICATION_REQUIRED",
+        clarification_question:
+          interpretation.clarification_question || "What do you want to do?",
+        interpretation
+      });
+      return;
+    }
+
+    const projectFiles = scanProjectFiles();
+    const resolvedTargetFile = resolveTargetFileForRequest(
+      interpretation.normalized_request,
+      projectFiles
+    );
+
+    const strategyCandidates = buildStrategyCandidates(
+      interpretation.normalized_request,
+      resolvedTargetFile
+    );
+
+    const selectedStrategy = strategyCandidates.find(
+      (item) => item.strategy_id === selectedStrategyId
+    );
+
+    if (!selectedStrategy) {
+      sendJson(res, 200, {
+        ok: false,
+        mode: "INVALID_SELECTION",
+        reason: "STRATEGY_NOT_FOUND",
+        message: "Selected strategy is not valid.",
+        strategy_candidates: strategyCandidates,
+        interpretation
+      });
+      return;
+    }
+
+    sendJson(res, 200, {
+      ok: true,
+      mode: "STRATEGY_CONFIRMED",
+      request: interpretation.normalized_request,
+      target_file: resolvedTargetFile,
+      selected_strategy: selectedStrategy,
+      strategy_candidates: strategyCandidates,
+      interpretation
+    });
+  }
+
   async function handlePropose(body, res) {
     const requestText = typeof body.request === "string" ? body.request.trim() : "";
 
@@ -1785,6 +1845,12 @@ ${trimmedExisting}`
       if (req.method === "POST" && req.url === "/api/ai/select-strategy") {
         const body = await readBody(req);
         await handleSelectStrategy(body, res);
+        return;
+      }
+
+      if (req.method === "POST" && req.url === "/api/ai/confirm-strategy") {
+        const body = await readBody(req);
+        await handleConfirmStrategy(body, res);
         return;
       }
 

@@ -495,6 +495,9 @@
 
     const conversationTurns = [];
 
+    let currentStrategyCandidates = [];
+    let currentRequestText = "";
+
     function snapshotTurn(turn) {
       return {
         request: turn.request,
@@ -831,6 +834,8 @@
 
     function resetDraft() {
       activeTurn = createEmptyTurnState();
+      currentStrategyCandidates = [];
+      currentRequestText = "";
       approveBtn.disabled = true;
       rejectBtn.disabled = true;
       renderResponse(null);
@@ -1046,8 +1051,157 @@
         return;
       }
 
+      if (/^\d+$/.test(request) && currentStrategyCandidates && currentStrategyCandidates.length > 0) {
+        const selectedIndex = parseInt(request, 10) - 1;
+        const selected = currentStrategyCandidates[selectedIndex];
+
+        console.log("SELECTED STRATEGY:", selected);
+
+        alert("Strategy selected: " + (selected ? selected.strategy_id : "INVALID"));
+
+        pushMessage("user", "Strategy Selection", `<div class="file-preview">${formatMessageText(request)}</div>`);
+        requestInput.value = "";
+
+        if (!selected) {
+          pushMessage(
+            "assistant",
+            "Invalid Choice",
+            `<div class="file-preview">${formatMessageText("Invalid selection. Please choose a valid option.")}</div>`
+          );
+          setStatus("Invalid strategy selection.");
+          return;
+        }
+
+        chatSendBtn.disabled = true;
+        setStatus("Confirming strategy...");
+
+        try {
+          const strategyConfirmation = await requestAPI("/api/ai/confirm-strategy", {
+            request: currentRequestText,
+            selected_strategy_id: selected.strategy_id
+          });
+
+          if (!strategyConfirmation.ok || strategyConfirmation.mode !== "STRATEGY_CONFIRMED" || !strategyConfirmation.selected_strategy) {
+            throw new Error("Strategy confirmation failed.");
+          }
+
+          const confirmed = strategyConfirmation.selected_strategy;
+          const confirmedText =
+            `Confirmed strategy: ${confirmed.title} [${confirmed.strategy_id}]` +
+            `\nTarget: ${confirmed.target_file}` +
+            `\nScore: ${confirmed.score}` +
+            `\nWhy: ${confirmed.rationale}`;
+
+          pushMessage(
+            "assistant",
+            "Strategy Confirmed",
+            `<div class="file-preview">${formatMessageText(confirmedText)}</div>`
+          );
+
+          const effectiveRequest = currentRequestText;
+
+          activeTurn = createEmptyTurnState();
+          activeTurn.request = effectiveRequest;
+
+          await requestAPI("/api/ai/analyze", { request: effectiveRequest });
+
+          const proposal = await requestAPI("/api/ai/propose", { request: effectiveRequest });
+
+          if (!proposal.ok) {
+            renderResponse(proposal);
+            pushMessage("assistant", "Response", `<div class="file-preview">${formatMessageText(JSON.stringify(proposal, null, 2))}</div>`);
+
+            if (proposal.mode === "DUPLICATE_HISTORY") {
+              setStatus("This request was already executed before.");
+            } else if (proposal.mode === "DUPLICATE") {
+              setStatus("This request already exists in the file.");
+            } else {
+              setStatus(proposal.message || "Request blocked.");
+            }
+
+            return;
+          }
+
+          const draftRes = await fetch(proposal.draft_path);
+          const draft = await draftRes.json();
+
+          activeTurn.proposalId = proposal.proposal_id || "";
+          activeTurn.draft = draft;
+
+          renderFiles(draft.files || []);
+
+          await loadPreview(draft);
+
+          if (draft.files && draft.files.length > 0) {
+            const filePath = draft.files[0].path;
+
+            try {
+              const existing = await requestAPI("/api/ai/read-file", {
+                path: filePath
+              }, "POST");
+
+              let oldContent = existing.content || "";
+              const newContent = draft.files[0].content || "";
+
+              activeTurn.operationType = "UNKNOWN";
+
+              if (!oldContent) {
+                activeTurn.operationType = "CREATE";
+              } else if (oldContent.includes(newContent.trim())) {
+                activeTurn.operationType = "DUPLICATE";
+              } else if (newContent.includes(oldContent)) {
+                activeTurn.operationType = "EXPAND";
+              } else {
+                activeTurn.operationType = "MODIFY";
+              }
+
+              renderOperationAnalysis(activeTurn.operationType, oldContent, newContent);
+
+              pushMessage("assistant", "Operation Analysis", `<div class="file-preview">${formatMessageText(analysisBox.textContent)}</div>`);
+
+              if (activeTurn.operationType === "DUPLICATE") {
+                approveBtn.disabled = true;
+                rejectBtn.disabled = false;
+                setStatus("Duplicate detected. Approval is disabled.");
+              }
+            } catch (err) {
+              activeTurn.operationType = "UNKNOWN";
+              renderOperationAnalysis("UNKNOWN", "", "");
+            }
+          }
+
+          renderResponse({
+            message: "Proposal ready. Approve to execute."
+          });
+          pushMessage("assistant", "Response", `<div class="file-preview">${formatMessageText(responseBox.textContent)}</div>`);
+
+          pushMessage("assistant", "Draft Files", filesBox.innerHTML);
+          pushMessage("assistant", "Diff Preview", previewBox.innerHTML);
+
+          currentStrategyCandidates = [];
+          currentRequestText = "";
+
+          if (activeTurn.operationType !== "DUPLICATE") {
+            approveBtn.disabled = false;
+            setStatus("Ready for approval.");
+          }
+
+          rejectBtn.disabled = false;
+        } catch (err) {
+          renderResponse({ error: err.message });
+          pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>`);
+          setStatus(`Error: ${err.message}`);
+        } finally {
+          chatSendBtn.disabled = false;
+        }
+
+        return;
+      }
+
       activeTurn = createEmptyTurnState();
       activeTurn.request = request;
+      currentStrategyCandidates = [];
+      currentRequestText = "";
 
       pushMessage("user", "Request", `<div class="file-preview">${formatMessageText(request)}</div>`);
       requestInput.value = "";
@@ -1136,6 +1290,11 @@
         }
 
         if (strategySelection.ok === true && strategySelection.mode === "STRATEGY_SELECTION_REQUIRED") {
+          currentStrategyCandidates = Array.isArray(strategySelection.strategy_candidates)
+            ? strategySelection.strategy_candidates
+            : [];
+          currentRequestText = request;
+
           const selectionText =
             `${strategySelection.selection_question || "Multiple strategies are available. Which one do you want to use?"}\n\n` +
             (Array.isArray(strategySelection.strategy_candidates)
@@ -1147,7 +1306,8 @@
                     `\nWhy: ${item.rationale}`
                   )
                   .join("\n\n")
-              : "");
+              : "") +
+            `\n\nReply with the option number to continue.`;
 
           pushMessage(
             "assistant",
@@ -1165,6 +1325,9 @@
         }
 
         if (strategySelection.ok === true && strategySelection.mode === "STRATEGY_SELECTED" && strategySelection.selected_strategy) {
+          currentStrategyCandidates = [];
+          currentRequestText = "";
+
           const selected = strategySelection.selected_strategy;
           const selectedText =
             `Selected strategy: ${selected.title} [${selected.strategy_id}]` +
