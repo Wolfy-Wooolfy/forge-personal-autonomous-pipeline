@@ -1802,6 +1802,10 @@ ${trimmedExisting}`
       metadata: providerResult.metadata || {}
     };
 
+    if (providerResult.status === "SUCCESS" && providerResult.output && providerResult.output.raw_stdout) {
+      result.provider.patch = providerResult.output.raw_stdout;
+    }
+
     sendJson(res, 200, result);
   }
 
