@@ -1223,9 +1223,7 @@
             }
           }
 
-          renderResponse({
-            message: "Proposal ready. Approve to execute."
-          });
+          setStatus("Proposal ready. Review the draft and approve when ready.");
 
           pushMessage("assistant", "Draft Files", filesBox.innerHTML);
           pushMessage("assistant", "Diff Preview", previewBox.innerHTML);
@@ -1461,9 +1459,7 @@
           }
         }
 
-        renderResponse({
-          message: "Proposal ready. Approve to execute."
-        });
+        setStatus("Proposal ready. Review the draft and approve when ready.");
 
         pushMessage("assistant", "Draft Files", filesBox.innerHTML);
         pushMessage("assistant", "Diff Preview", previewBox.innerHTML);
