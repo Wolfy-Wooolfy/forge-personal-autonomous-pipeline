@@ -1226,7 +1226,13 @@
           setStatus("Proposal ready. Review the draft and approve when ready.");
 
           pushMessage("assistant", "Draft Files", filesBox.innerHTML);
-          pushMessage("assistant", "Diff Preview", previewBox.innerHTML);
+          pushMessage(
+            "assistant",
+            "Diff Preview",
+            (proposal.provider && proposal.provider.patch)
+              ? `<div class="file-preview">${escapeHtml(proposal.provider.patch)}</div>`
+              : previewBox.innerHTML
+          );
 
           currentStrategyCandidates = [];
           currentRequestText = "";
@@ -1462,7 +1468,13 @@
         setStatus("Proposal ready. Review the draft and approve when ready.");
 
         pushMessage("assistant", "Draft Files", filesBox.innerHTML);
-        pushMessage("assistant", "Diff Preview", previewBox.innerHTML);
+        pushMessage(
+          "assistant",
+          "Diff Preview",
+          (proposal.provider && proposal.provider.patch)
+            ? `<div class="file-preview">${escapeHtml(proposal.provider.patch)}</div>`
+            : previewBox.innerHTML
+        );
 
         if (activeTurn.operationType !== "DUPLICATE") {
           approveBtn.disabled = false;
