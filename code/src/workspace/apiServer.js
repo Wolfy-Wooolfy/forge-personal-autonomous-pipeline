@@ -6,6 +6,8 @@ const fs = require("fs");
 const crypto = require("crypto");
 const { handleAuthRequest } = require("../auth/authSystem");
 
+const ProviderRouter = require("../providers/providerRouter");
+
 function createWorkspaceApiServer(options = {}) {
   const root = path.resolve(options.root || process.cwd());
   const port = Number(options.port || process.env.FORGE_WORKSPACE_API_PORT || 3100);
@@ -1775,9 +1777,30 @@ ${trimmedExisting}`
       return;
     }
 
+    const providerRouter = new ProviderRouter();
+
+    const providerResult = await providerRouter.execute({
+      task_id: `task_${Date.now()}`,
+      request: interpretation.normalized_request,
+      context: {
+        target_files: [],
+        operation_type: "MODIFY",
+        constraints: []
+      },
+      expected_output: {
+        type: "MULTI_FILE",
+        format: "structured_json"
+      }
+    });
+
     const result = buildAiProposalArtifacts(interpretation.normalized_request);
 
     result.interpretation = interpretation;
+    result.provider = {
+      name: "codex",
+      status: providerResult.status || "UNKNOWN",
+      metadata: providerResult.metadata || {}
+    };
 
     sendJson(res, 200, result);
   }
