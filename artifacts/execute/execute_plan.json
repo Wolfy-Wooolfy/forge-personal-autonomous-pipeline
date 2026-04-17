@@ -1,6 +1,6 @@
 {
-  "workspace_execution_id": "ai_proposal_1776428844994",
-  "generated_at": "2026-04-17T12:27:25.003Z",
+  "workspace_execution_id": "ai_proposal_1776429347986",
+  "generated_at": "2026-04-17T12:35:47.993Z",
   "files": [
     {
       "file_path": "web/index.html",
@@ -8,7 +8,7 @@
       "changes": [
         {
           "type": "full_content",
-          "content": "Add a visible test banner near the top of the page:\n\n<style>\n  .test-banner {\n    margin-bottom: 16px;\n    padding: 12px 16px;\n    border: 1px solid #facc15;\n    border-radius: 8px;\n    background: #422006;\n    color: #fef3c7;\n    font-weight: 700;\n    text-align: center;\n  }\n</style>\n\n<div class=\"test-banner\" role=\"status\">Test banner</div>"
+          "content": "Add this CSS inside the existing <style> block after the .app rule:\n\n.test-banner {\n  margin-bottom: 18px;\n  border: 1px solid #facc15;\n  border-radius: 8px;\n  background: #422006;\n  color: #fef3c7;\n  padding: 12px 14px;\n  font-weight: 700;\n}\n\nAdd this HTML immediately inside <div class=\"app\"> before <div class=\"header\">:\n\n<div class=\"test-banner\" role=\"status\">Test banner active</div>"
         }
       ]
     }

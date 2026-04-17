@@ -1148,7 +1148,9 @@ ${trimmedExisting}`
       resolvedTargetFile
     );
 
-    const finalGenerated = providerGenerated || codeAwareEdit || fileTypeAware || generated;
+    const finalGenerated = providerGenerated
+      ? providerGenerated
+      : (codeAwareEdit || fileTypeAware || generated);
 
     const generatedFiles = Array.isArray(finalGenerated.files) && finalGenerated.files.length > 0
       ? finalGenerated.files.map((file) => ({
@@ -1185,10 +1187,20 @@ ${trimmedExisting}`
       };
     }
 
-    const strategyCandidates = buildStrategyCandidates(
-      requestText,
-      targetFile
-    );
+    const strategyCandidates = providerGenerated
+      ? [
+          {
+            strategy_id: "CODEX_PROVIDER",
+            title: "Codex Generated Patch",
+            score: 1.0,
+            target_file: generatedFiles.length > 1 ? "MULTI_FILE" : targetFile,
+            rationale: "Using Codex provider output directly"
+          }
+        ]
+      : buildStrategyCandidates(
+          requestText,
+          targetFile
+        );
 
     const proposalArtifact = {
       proposal_id: proposalId,
