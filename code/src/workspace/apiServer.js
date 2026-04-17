@@ -1074,7 +1074,7 @@ ${trimmedExisting}`
     };
   }
 
-  function buildAiProposalArtifacts(requestText) {
+  function buildAiProposalArtifacts(requestText, providerOutput = null) {
     const proposalId = `ai_proposal_${Date.now()}`;
     const createdAt = new Date().toISOString();
 
@@ -1115,6 +1115,23 @@ ${trimmedExisting}`
       };
     }
 
+    const providerFiles = providerOutput && Array.isArray(providerOutput.files)
+      ? providerOutput.files
+          .map((file) => ({
+            path: normalizeRelativePath(file && file.path ? file.path : ""),
+            content: typeof (file && file.content) === "string" ? file.content : "",
+            allow_overwrite: true
+          }))
+          .filter((file) => file.path.length > 0)
+      : [];
+
+    const providerGenerated = providerFiles.length > 0
+      ? {
+          strategy: "PROVIDER_CODEX_FILES",
+          files: providerFiles
+        }
+      : null;
+
     const generated = buildSmartProposalCode(requestText);
     if (!generated.target_file) {
       generated.target_file = resolvedTargetFile;
@@ -1131,7 +1148,7 @@ ${trimmedExisting}`
       resolvedTargetFile
     );
 
-    const finalGenerated = codeAwareEdit || fileTypeAware || generated;
+    const finalGenerated = providerGenerated || codeAwareEdit || fileTypeAware || generated;
 
     const generatedFiles = Array.isArray(finalGenerated.files) && finalGenerated.files.length > 0
       ? finalGenerated.files.map((file) => ({
@@ -1777,15 +1794,25 @@ ${trimmedExisting}`
       return;
     }
 
+    const projectFiles = scanProjectFiles();
+    const resolvedTargetFile = resolveTargetFileForRequest(
+      interpretation.normalized_request,
+      projectFiles
+    );
+
     const providerRouter = new ProviderRouter();
 
     const providerResult = await providerRouter.execute({
       task_id: `task_${Date.now()}`,
       request: interpretation.normalized_request,
       context: {
-        target_files: [],
+        target_files: [resolvedTargetFile],
         operation_type: "MODIFY",
-        constraints: []
+        constraints: [
+          "Return valid JSON only",
+          "Do not wrap output in markdown",
+          "Do not execute filesystem changes"
+        ]
       },
       expected_output: {
         type: "MULTI_FILE",
@@ -1793,7 +1820,10 @@ ${trimmedExisting}`
       }
     });
 
-    const result = buildAiProposalArtifacts(interpretation.normalized_request);
+    const result = buildAiProposalArtifacts(
+      interpretation.normalized_request,
+      providerResult.output || null
+    );
 
     result.interpretation = interpretation;
     result.provider = {
