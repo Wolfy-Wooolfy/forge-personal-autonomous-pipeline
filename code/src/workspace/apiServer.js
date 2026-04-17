@@ -405,33 +405,39 @@ function createWorkspaceApiServer(options = {}) {
       }
 
       if (operation.type === "insert_after") {
-        if (!operation.anchor) {
+        const anchor = operation.anchor || operation.find;
+        const content = operation.content || operation.replace;
+
+        if (!anchor) {
           throw new Error(`insert_after missing anchor for: ${filePath}`);
         }
 
-        if (!nextContent.includes(operation.anchor)) {
+        if (!nextContent.includes(anchor)) {
           throw new Error(`insert_after anchor not found for: ${filePath}`);
         }
 
         nextContent = nextContent.replace(
-          operation.anchor,
-          `${operation.anchor}${operation.content}`
+          anchor,
+          `${anchor}${content}`
         );
         return;
       }
 
       if (operation.type === "insert_before") {
-        if (!operation.anchor) {
+        const anchor = operation.anchor || operation.find;
+        const content = operation.content || operation.replace;
+
+        if (!anchor) {
           throw new Error(`insert_before missing anchor for: ${filePath}`);
         }
 
-        if (!nextContent.includes(operation.anchor)) {
+        if (!nextContent.includes(anchor)) {
           throw new Error(`insert_before anchor not found for: ${filePath}`);
         }
 
         nextContent = nextContent.replace(
-          operation.anchor,
-          `${operation.content}${operation.anchor}`
+          anchor,
+          `${content}${anchor}`
         );
         return;
       }
@@ -1282,13 +1288,9 @@ ${trimmedExisting}`
             const absPath = path.resolve(root, relPath);
             const baseContent = readTextSafe(absPath);
             const operations = normalizePatchOperations(file && file.operations);
-            const computedContent = operations.length > 0
-              ? applyPatchOperations(baseContent, operations, relPath)
-              : (typeof (file && file.content) === "string" ? file.content : "");
-
             return {
               path: relPath,
-              content: computedContent,
+              content: typeof (file && file.content) === "string" ? file.content : baseContent,
               operations,
               diff: typeof (file && file.diff) === "string" ? file.diff : "",
               allow_overwrite: true
