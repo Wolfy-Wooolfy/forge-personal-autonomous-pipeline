@@ -1,14 +1,14 @@
 {
-  "workspace_execution_id": "ai_proposal_1776428473374",
-  "generated_at": "2026-04-17T12:21:13.382Z",
+  "workspace_execution_id": "ai_proposal_1776428844994",
+  "generated_at": "2026-04-17T12:27:25.003Z",
   "files": [
     {
-      "file_path": "code/test_workspace_integration.js",
+      "file_path": "web/index.html",
       "operation": "create",
       "changes": [
         {
           "type": "full_content",
-          "content": "// Generated from request:\n// edit web/index.html to add a test banner\n\nconsole.log(\"edit web/index.html to add a test banner\");"
+          "content": "Add a visible test banner near the top of the page:\n\n<style>\n  .test-banner {\n    margin-bottom: 16px;\n    padding: 12px 16px;\n    border: 1px solid #facc15;\n    border-radius: 8px;\n    background: #422006;\n    color: #fef3c7;\n    font-weight: 700;\n    text-align: center;\n  }\n</style>\n\n<div class=\"test-banner\" role=\"status\">Test banner</div>"
         }
       ]
     }
