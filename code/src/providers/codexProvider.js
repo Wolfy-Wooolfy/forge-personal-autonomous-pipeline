@@ -36,50 +36,46 @@ class CodexProvider {
 
   buildPrompt(task) {
     const safeTask = task && typeof task === "object" ? task : {};
+    const safeRequest = String(safeTask.request || "").replace(/"/g, "'").replace(/\r?\n/g, " ");
+    const targetFiles =
+      safeTask.context && Array.isArray(safeTask.context.target_files)
+        ? safeTask.context.target_files.join(", ")
+        : "";
+    const operationType =
+      safeTask.context && typeof safeTask.context.operation_type === "string"
+        ? safeTask.context.operation_type
+        : "";
+    const constraints =
+      safeTask.context && Array.isArray(safeTask.context.constraints)
+        ? safeTask.context.constraints.join(" | ")
+        : "";
+    const expectedType =
+      safeTask.expected_output && typeof safeTask.expected_output.type === "string"
+        ? safeTask.expected_output.type
+        : "";
+    const expectedFormat =
+      safeTask.expected_output && typeof safeTask.expected_output.format === "string"
+        ? safeTask.expected_output.format
+        : "";
 
     return [
-      "You are operating under Forge governance.",
-      "Return ONLY valid JSON.",
-      "Do not wrap the response in markdown fences.",
-      "Do not include explanations.",
-      "Required JSON shape:",
-      JSON.stringify({
-        task_id: safeTask.task_id || "",
-        status: "SUCCESS",
-        output: {
-          files: [
-            {
-              path: "string",
-              content: "string",
-              diff: "string"
-            }
-          ]
-        },
-        metadata: {
-          engine: "codex",
-          confidence: 0.0
-        }
-      }, null, 2),
-      "If you cannot produce a valid structured result, return:",
-      JSON.stringify({
-        task_id: safeTask.task_id || "",
-        status: "FAILED",
-        output: {
-          files: []
-        },
-        metadata: {
-          engine: "codex",
-          confidence: 0.0
-        }
-      }, null, 2),
-      "Task payload:",
-      JSON.stringify({
-        task_id: safeTask.task_id || "",
-        request: safeTask.request || "",
-        context: safeTask.context || {},
-        expected_output: safeTask.expected_output || {}
-      }, null, 2)
-    ].join("\n\n");
+      "Forge governed task.",
+      "Return valid JSON only.",
+      "No markdown fences.",
+      "No explanations.",
+      "Use this exact top-level structure:",
+      "task_id, status, output, metadata",
+      "status must be SUCCESS or FAILED",
+      "output.files must be an array",
+      "Each file item must contain: path, content, diff",
+      `task_id: ${safeTask.task_id || ""}`,
+      `request: ${safeRequest}`,
+      `target_files: ${targetFiles}`,
+      `operation_type: ${operationType}`,
+      `constraints: ${constraints}`,
+      `expected_type: ${expectedType}`,
+      `expected_format: ${expectedFormat}`
+    ].join("\n");
   }
 
   extractJsonText(rawText) {
