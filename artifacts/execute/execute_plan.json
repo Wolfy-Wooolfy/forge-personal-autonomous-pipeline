@@ -1,6 +1,6 @@
 {
-  "workspace_execution_id": "ai_proposal_1776438989869",
-  "generated_at": "2026-04-17T15:16:29.877Z",
+  "workspace_execution_id": "ai_proposal_1776439729743",
+  "generated_at": "2026-04-17T15:28:49.751Z",
   "files": [
     {
       "file_path": "web/index.html",
@@ -10,9 +10,9 @@
           "type": "targeted_patch",
           "operations": [
             {
-              "type": "insert_before",
-              "find": "<!DOCTYPE html>",
-              "replace": "<!-- Forge AI Workspace entry page -->\n",
+              "type": "insert_after",
+              "find": "<!DOCTYPE html>\r\n",
+              "replace": "<!-- Forge AI Workspace entry point. -->\r\n",
               "anchor": "",
               "content": ""
             }

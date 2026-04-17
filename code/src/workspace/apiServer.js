@@ -350,6 +350,87 @@ function createWorkspaceApiServer(options = {}) {
     ].join("\n");
   }
 
+  function buildRequestAwareFileContext(fileContent, requestText) {
+    const text = String(fileContent || "");
+    const request = String(requestText || "").toLowerCase().trim();
+
+    if (!text) {
+      return "";
+    }
+
+    const maxChars = 4000;
+    const exactNeedles = [];
+    const broadNeedles = [];
+
+    if (request.includes("top of") || request.includes("at the top") || request.includes("header")) {
+      exactNeedles.push("<!DOCTYPE html>", "<html", "<head", "\"use strict\";");
+    }
+
+    if (request.includes("bottom of") || request.includes("at the bottom") || request.includes("footer")) {
+      exactNeedles.push("</body>", "</html>", "module.exports");
+    }
+
+    if (request.includes("comment")) {
+      broadNeedles.push("<!--", "<!DOCTYPE html>", "\"use strict\";");
+    }
+
+    if (request.includes("button")) {
+      broadNeedles.push("<button", "</button>", "<body", "</body>");
+    }
+
+    if (request.includes("script")) {
+      broadNeedles.push("<script", "</script>");
+    }
+
+    if (request.includes("api") || request.includes("endpoint") || request.includes("route")) {
+      broadNeedles.push('req.url === "', 'req.method === "', "sendJson(", "http.createServer");
+    }
+
+    if (request.includes("auth") || request.includes("login") || request.includes("register")) {
+      broadNeedles.push("/api/auth/register", "/api/auth/login", "handleAuthRequest");
+    }
+
+    const allNeedles = [...exactNeedles, ...broadNeedles].filter(Boolean);
+
+    for (const needle of allNeedles) {
+      const idx = text.indexOf(needle);
+
+      if (idx >= 0) {
+        const isTopRequest =
+          request.includes("top of") ||
+          request.includes("at the top") ||
+          request.includes("header");
+
+        if (isTopRequest && (needle === "<!DOCTYPE html>" || needle === "<html" || needle === "<head")) {
+          const end = Math.min(text.length, idx + 2200);
+          const slice = text.slice(idx, end);
+
+          if (slice.length <= maxChars) {
+            return slice;
+          }
+
+          return slice.slice(0, maxChars);
+        }
+
+        const start = Math.max(0, idx - 1200);
+        const end = Math.min(text.length, idx + Math.max(needle.length, 1) + 1200);
+        const slice = text.slice(start, end);
+
+        if (slice.length <= maxChars) {
+          return slice;
+        }
+
+        return slice.slice(0, maxChars);
+      }
+    }
+
+    if (text.length <= maxChars) {
+      return text;
+    }
+
+    return text.slice(0, maxChars);
+  }
+
   function normalizePatchOperations(operations) {
     if (!Array.isArray(operations)) {
       return [];
@@ -2003,7 +2084,10 @@ ${trimmedExisting}`
         target_files: [resolvedTargetFile],
         operation_type: fileExists ? "MODIFY" : "CREATE",
         file_exists: fileExists,
-        current_file_context: buildFocusedFileContext(currentTargetFileContent),
+        current_file_context: buildRequestAwareFileContext(
+          currentTargetFileContent,
+          interpretation.normalized_request
+        ),
         constraints: [
           "Return valid JSON only",
           "Do not wrap output in markdown",
