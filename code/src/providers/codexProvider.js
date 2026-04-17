@@ -75,10 +75,14 @@ class CodexProvider {
       safeTask.context && typeof safeTask.context.operation_type === "string"
         ? safeTask.context.operation_type
         : "";
-    const currentFileContent =
-      safeTask.context && typeof safeTask.context.current_file_content === "string"
-        ? safeTask.context.current_file_content
+    const currentFileContext =
+      safeTask.context && typeof safeTask.context.current_file_context === "string"
+        ? safeTask.context.current_file_context
         : "";
+    const fileExists =
+      safeTask.context && typeof safeTask.context.file_exists === "boolean"
+        ? safeTask.context.file_exists
+        : false;
     const expectedType =
       safeTask.expected_output && typeof safeTask.expected_output.type === "string"
         ? safeTask.expected_output.type
@@ -93,21 +97,25 @@ class CodexProvider {
       "Return valid JSON only.",
       "No markdown fences.",
       "No explanations.",
-      "You must modify the target file content and return the FULL FINAL FILE CONTENT in output.files[0].content.",
-      "Do not return instructions, summaries, or prose inside content.",
-      "diff must be a unified diff.",
+      "Return targeted patch operations only.",
+      "Do not return instructions, summaries, or prose inside JSON fields.",
+      "diff must be a unified diff preview.",
+      "For existing files, prefer exact anchored patch operations.",
+      "Allowed operation types: replace_once, insert_after, insert_before, delete_once.",
+      "If the target file does not exist, return one write_full_file operation with content.",
       "Use this exact JSON shape:",
-      '{"task_id":"string","status":"SUCCESS","output":{"files":[{"path":"string","content":"full final file content","diff":"unified diff"}]},"metadata":{"engine":"codex"}}',
+      '{"task_id":"string","status":"SUCCESS","output":{"files":[{"path":"string","operations":[{"type":"replace_once","find":"exact old text","replace":"new text"}],"diff":"unified diff"}]},"metadata":{"engine":"codex"}}',
       `task_id: ${safeTask.task_id || ""}`,
       `request: ${safeRequest}`,
       `target_files: ${targetFiles}`,
       `operation_type: ${operationType}`,
+      `file_exists: ${fileExists ? "true" : "false"}`,
       `expected_type: ${expectedType}`,
       `expected_format: ${expectedFormat}`,
-      "Current file content starts below.",
-      "----- CURRENT FILE CONTENT START -----",
-      currentFileContent,
-      "----- CURRENT FILE CONTENT END -----"
+      "Current file context starts below.",
+      "----- CURRENT FILE CONTEXT START -----",
+      currentFileContext,
+      "----- CURRENT FILE CONTEXT END -----"
     ].join("\n\n");
   }
 
@@ -162,7 +170,28 @@ class CodexProvider {
       .map((file) => ({
         path: typeof file.path === "string" ? file.path.trim() : "",
         content: typeof file.content === "string" ? file.content : "",
-        diff: typeof file.diff === "string" ? file.diff : ""
+        diff: typeof file.diff === "string" ? file.diff : "",
+        operations: Array.isArray(file.operations)
+          ? file.operations
+              .map((operation) => ({
+                type: typeof (operation && operation.type) === "string"
+                  ? operation.type.trim()
+                  : "",
+                find: typeof (operation && operation.find) === "string"
+                  ? operation.find
+                  : "",
+                replace: typeof (operation && operation.replace) === "string"
+                  ? operation.replace
+                  : "",
+                anchor: typeof (operation && operation.anchor) === "string"
+                  ? operation.anchor
+                  : "",
+                content: typeof (operation && operation.content) === "string"
+                  ? operation.content
+                  : ""
+              }))
+              .filter((operation) => operation.type.length > 0)
+          : []
       }))
       .filter((file) => file.path.length > 0);
   }

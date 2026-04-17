@@ -330,6 +330,131 @@ function createWorkspaceApiServer(options = {}) {
     }
   }
 
+  function buildFocusedFileContext(fileContent) {
+    const text = String(fileContent || "");
+    const maxChars = 12000;
+
+    if (text.length <= maxChars) {
+      return text;
+    }
+
+    const head = text.slice(0, 7000);
+    const tail = text.slice(-4000);
+
+    return [
+      head,
+      "",
+      "/* ... FILE CONTEXT TRUNCATED FOR PATCH GENERATION ... */",
+      "",
+      tail
+    ].join("\n");
+  }
+
+  function normalizePatchOperations(operations) {
+    if (!Array.isArray(operations)) {
+      return [];
+    }
+
+    return operations
+      .map((operation) => ({
+        type: typeof (operation && operation.type) === "string"
+          ? operation.type.trim()
+          : "",
+        find: typeof (operation && operation.find) === "string"
+          ? operation.find
+          : "",
+        replace: typeof (operation && operation.replace) === "string"
+          ? operation.replace
+          : "",
+        anchor: typeof (operation && operation.anchor) === "string"
+          ? operation.anchor
+          : "",
+        content: typeof (operation && operation.content) === "string"
+          ? operation.content
+          : ""
+      }))
+      .filter((operation) => operation.type.length > 0);
+  }
+
+  function applyPatchOperations(baseContent, operations, filePath = "") {
+    const normalizedOperations = normalizePatchOperations(operations);
+
+    if (normalizedOperations.length === 0) {
+      throw new Error(`Patch operations are required for: ${filePath || "unknown file"}`);
+    }
+
+    let nextContent = String(baseContent || "");
+
+    normalizedOperations.forEach((operation) => {
+      if (operation.type === "write_full_file") {
+        nextContent = operation.content;
+        return;
+      }
+
+      if (operation.type === "replace_once") {
+        if (!operation.find) {
+          throw new Error(`replace_once missing find for: ${filePath}`);
+        }
+
+        if (!nextContent.includes(operation.find)) {
+          throw new Error(`replace_once anchor not found for: ${filePath}`);
+        }
+
+        nextContent = nextContent.replace(operation.find, operation.replace);
+        return;
+      }
+
+      if (operation.type === "insert_after") {
+        if (!operation.anchor) {
+          throw new Error(`insert_after missing anchor for: ${filePath}`);
+        }
+
+        if (!nextContent.includes(operation.anchor)) {
+          throw new Error(`insert_after anchor not found for: ${filePath}`);
+        }
+
+        nextContent = nextContent.replace(
+          operation.anchor,
+          `${operation.anchor}${operation.content}`
+        );
+        return;
+      }
+
+      if (operation.type === "insert_before") {
+        if (!operation.anchor) {
+          throw new Error(`insert_before missing anchor for: ${filePath}`);
+        }
+
+        if (!nextContent.includes(operation.anchor)) {
+          throw new Error(`insert_before anchor not found for: ${filePath}`);
+        }
+
+        nextContent = nextContent.replace(
+          operation.anchor,
+          `${operation.content}${operation.anchor}`
+        );
+        return;
+      }
+
+      if (operation.type === "delete_once") {
+        if (!operation.find) {
+          throw new Error(`delete_once missing find for: ${filePath}`);
+        }
+
+        if (!nextContent.includes(operation.find)) {
+          throw new Error(`delete_once target not found for: ${filePath}`);
+        }
+
+        nextContent = nextContent.replace(operation.find, "");
+        return;
+      }
+
+      throw new Error(`Unsupported patch operation type: ${operation.type}`);
+    });
+
+    return nextContent;
+  }
+
   function interpretUserIntent(requestText) {
     const text = String(requestText || "").toLowerCase();
 
@@ -976,16 +1101,33 @@ ${trimmedExisting}`
     return {
       workspace_execution_id: executionId,
       generated_at: new Date().toISOString(),
-      files: files.map((file) => ({
-        file_path: file.path,
-        operation: "create",
-        changes: [
-          {
-            type: "full_content",
-            content: file.content
-          }
-        ]
-      }))
+      files: files.map((file) => {
+        const operations = normalizePatchOperations(file.operations);
+
+        if (operations.length > 0) {
+          return {
+            file_path: file.path,
+            operation: "modify",
+            changes: [
+              {
+                type: "targeted_patch",
+                operations
+              }
+            ]
+          };
+        }
+
+        return {
+          file_path: file.path,
+          operation: "create",
+          changes: [
+            {
+              type: "full_content",
+              content: file.content
+            }
+          ]
+        };
+      })
     };
   }
 
@@ -1010,48 +1152,66 @@ ${trimmedExisting}`
       }
 
       const changes = Array.isArray(file.changes) ? file.changes : [];
+      const patchChange = changes.find((change) => change && change.type === "targeted_patch");
       const fullContentChange = changes.find((change) => change && change.type === "full_content");
-
-      if (!fullContentChange) {
-        throw new Error(`Execution plan missing full_content change for: ${relPath}`);
-      }
-
-      const content = typeof fullContentChange.content === "string" ? fullContentChange.content : "";
 
       fs.mkdirSync(path.dirname(absolutePath), { recursive: true });
 
-      let finalContent = content;
+      let finalContent = "";
+      let bytesWritten = 0;
 
-      if (fs.existsSync(absolutePath)) {
-        const existing = fs.readFileSync(absolutePath, "utf8");
+      if (patchChange) {
+        const existing = fs.existsSync(absolutePath)
+          ? fs.readFileSync(absolutePath, "utf8")
+          : "";
 
-        const hasGeneratedRequestBlock =
-          content.includes("// Generated from request:") ||
-          content.includes("// Generated from request:\r\n");
+        finalContent = applyPatchOperations(
+          existing,
+          patchChange.operations,
+          relPath
+        );
 
-        if (hasGeneratedRequestBlock) {
-          let baseContent = existing;
+        bytesWritten = Buffer.byteLength(finalContent, "utf8");
+      } else if (fullContentChange) {
+        const content = typeof fullContentChange.content === "string" ? fullContentChange.content : "";
 
-          baseContent = baseContent.replace(
-            /\n*\/\/ ==== AI GENERATED ADDITION ====\n[\s\S]*?(?=\n\/\/ ==== AI GENERATED ADDITION ====|\n\/\/ ==== AI MERGED ADDITION ====|$)/g,
-            ""
-          );
+        finalContent = content;
 
-          baseContent = baseContent.replace(
-            /\n*\/\/ ==== AI MERGED ADDITION ====\n[\s\S]*?(?=\n\/\/ ==== AI GENERATED ADDITION ====|\n\/\/ ==== AI MERGED ADDITION ====|$)/g,
-            ""
-          );
+        if (fs.existsSync(absolutePath)) {
+          const existing = fs.readFileSync(absolutePath, "utf8");
 
-          baseContent = baseContent.trimEnd();
+          const hasGeneratedRequestBlock =
+            content.includes("// Generated from request:") ||
+            content.includes("// Generated from request:\r\n");
 
-          finalContent = baseContent
-            ? `${baseContent}\n\n// ==== AI MERGED ADDITION ====\n\n${content}`
-            : content;
-        } else {
-          finalContent = existing
-            ? `${existing}\n\n${content}`
-            : content;
+          if (hasGeneratedRequestBlock) {
+            let baseContent = existing;
+
+            baseContent = baseContent.replace(
+              /\n*\/\/ ==== AI GENERATED ADDITION ====\n[\s\S]*?(?=\n\/\/ ==== AI GENERATED ADDITION ====|\n\/\/ ==== AI MERGED ADDITION ====|$)/g,
+              ""
+            );
+
+            baseContent = baseContent.replace(
+              /\n*\/\/ ==== AI MERGED ADDITION ====\n[\s\S]*?(?=\n\/\/ ==== AI GENERATED ADDITION ====|\n\/\/ ==== AI MERGED ADDITION ====|$)/g,
+              ""
+            );
+
+            baseContent = baseContent.trimEnd();
+
+            finalContent = baseContent
+              ? `${baseContent}\n\n// ==== AI MERGED ADDITION ====\n\n${content}`
+              : content;
+          } else {
+            finalContent = existing
+              ? `${existing}\n\n${content}`
+              : content;
+          }
         }
+
+        bytesWritten = Buffer.byteLength(content, "utf8");
+      } else {
+        throw new Error(`Execution plan missing supported change for: ${relPath}`);
       }
 
       fs.writeFileSync(absolutePath, finalContent, "utf8");
@@ -1059,7 +1219,7 @@ ${trimmedExisting}`
       return {
         file_path: relPath,
         operation: file.operation || "create",
-        bytes_written: Buffer.byteLength(content, "utf8")
+        bytes_written: bytesWritten
       };
     });
 
@@ -1117,11 +1277,23 @@ ${trimmedExisting}`
 
     const providerFiles = providerOutput && Array.isArray(providerOutput.files)
       ? providerOutput.files
-          .map((file) => ({
-            path: normalizeRelativePath(file && file.path ? file.path : ""),
-            content: typeof (file && file.content) === "string" ? file.content : "",
-            allow_overwrite: true
-          }))
+          .map((file) => {
+            const relPath = normalizeRelativePath(file && file.path ? file.path : "");
+            const absPath = path.resolve(root, relPath);
+            const baseContent = readTextSafe(absPath);
+            const operations = normalizePatchOperations(file && file.operations);
+            const computedContent = operations.length > 0
+              ? applyPatchOperations(baseContent, operations, relPath)
+              : (typeof (file && file.content) === "string" ? file.content : "");
+
+            return {
+              path: relPath,
+              content: computedContent,
+              operations,
+              diff: typeof (file && file.diff) === "string" ? file.diff : "",
+              allow_overwrite: true
+            };
+          })
           .filter((file) => file.path.length > 0)
       : [];
 
@@ -1156,12 +1328,16 @@ ${trimmedExisting}`
       ? finalGenerated.files.map((file) => ({
           path: normalizeRelativePath(file.path),
           content: typeof file.content === "string" ? file.content : "",
+          operations: normalizePatchOperations(file.operations),
+          diff: typeof file.diff === "string" ? file.diff : "",
           allow_overwrite: file.allow_overwrite === true
         }))
       : [
           {
             path: finalGenerated.target_file || resolvedTargetFile,
             content: typeof finalGenerated.content === "string" ? finalGenerated.content : "",
+            operations: [],
+            diff: "",
             allow_overwrite: true
           }
         ];
@@ -1814,27 +1990,29 @@ ${trimmedExisting}`
 
     const providerRouter = new ProviderRouter();
 
-    const currentTargetFileContent = readTextSafe(
-      path.resolve(root, resolvedTargetFile)
-    );
+    const targetAbsolutePath = path.resolve(root, resolvedTargetFile);
+    const currentTargetFileContent = readTextSafe(targetAbsolutePath);
+    const fileExists = fs.existsSync(targetAbsolutePath);
 
     const providerResult = await providerRouter.execute({
       task_id: `task_${Date.now()}`,
       request: interpretation.normalized_request,
       context: {
         target_files: [resolvedTargetFile],
-        operation_type: "MODIFY",
-        current_file_content: currentTargetFileContent,
+        operation_type: fileExists ? "MODIFY" : "CREATE",
+        file_exists: fileExists,
+        current_file_context: buildFocusedFileContext(currentTargetFileContent),
         constraints: [
           "Return valid JSON only",
           "Do not wrap output in markdown",
           "Do not execute filesystem changes",
-          "content must be the full final file content",
-          "do not return human instructions inside content"
+          "return targeted patch operations only for existing files",
+          "use write_full_file only when the file does not already exist",
+          "do not return human instructions inside JSON"
         ]
       },
       expected_output: {
-        type: "MULTI_FILE",
+        type: "PATCH_OPERATIONS",
         format: "structured_json"
       }
     });
