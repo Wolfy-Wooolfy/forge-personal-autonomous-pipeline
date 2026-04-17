@@ -66,7 +66,7 @@ class CodexProvider {
 
   buildPrompt(task) {
     const safeTask = task && typeof task === "object" ? task : {};
-    const safeRequest = String(safeTask.request || "").replace(/"/g, "'").replace(/\r?\n/g, " ");
+    const safeRequest = String(safeTask.request || "").trim();
     const targetFiles =
       safeTask.context && Array.isArray(safeTask.context.target_files)
         ? safeTask.context.target_files.join(", ")
@@ -75,9 +75,9 @@ class CodexProvider {
       safeTask.context && typeof safeTask.context.operation_type === "string"
         ? safeTask.context.operation_type
         : "";
-    const constraints =
-      safeTask.context && Array.isArray(safeTask.context.constraints)
-        ? safeTask.context.constraints.join(" | ")
+    const currentFileContent =
+      safeTask.context && typeof safeTask.context.current_file_content === "string"
+        ? safeTask.context.current_file_content
         : "";
     const expectedType =
       safeTask.expected_output && typeof safeTask.expected_output.type === "string"
@@ -93,19 +93,22 @@ class CodexProvider {
       "Return valid JSON only.",
       "No markdown fences.",
       "No explanations.",
-      "Use this exact top-level structure:",
-      "task_id, status, output, metadata",
-      "status must be SUCCESS or FAILED",
-      "output.files must be an array",
-      "Each file item must contain: path, content, diff",
+      "You must modify the target file content and return the FULL FINAL FILE CONTENT in output.files[0].content.",
+      "Do not return instructions, summaries, or prose inside content.",
+      "diff must be a unified diff.",
+      "Use this exact JSON shape:",
+      '{"task_id":"string","status":"SUCCESS","output":{"files":[{"path":"string","content":"full final file content","diff":"unified diff"}]},"metadata":{"engine":"codex"}}',
       `task_id: ${safeTask.task_id || ""}`,
       `request: ${safeRequest}`,
       `target_files: ${targetFiles}`,
       `operation_type: ${operationType}`,
-      `constraints: ${constraints}`,
       `expected_type: ${expectedType}`,
-      `expected_format: ${expectedFormat}`
-    ].join("\n");
+      `expected_format: ${expectedFormat}`,
+      "Current file content starts below.",
+      "----- CURRENT FILE CONTENT START -----",
+      currentFileContent,
+      "----- CURRENT FILE CONTENT END -----"
+    ].join("\n\n");
   }
 
   extractJsonText(rawText) {

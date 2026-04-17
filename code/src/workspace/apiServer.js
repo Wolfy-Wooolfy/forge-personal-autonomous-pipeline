@@ -1814,16 +1814,23 @@ ${trimmedExisting}`
 
     const providerRouter = new ProviderRouter();
 
+    const currentTargetFileContent = readTextSafe(
+      path.resolve(root, resolvedTargetFile)
+    );
+
     const providerResult = await providerRouter.execute({
       task_id: `task_${Date.now()}`,
       request: interpretation.normalized_request,
       context: {
         target_files: [resolvedTargetFile],
         operation_type: "MODIFY",
+        current_file_content: currentTargetFileContent,
         constraints: [
           "Return valid JSON only",
           "Do not wrap output in markdown",
-          "Do not execute filesystem changes"
+          "Do not execute filesystem changes",
+          "content must be the full final file content",
+          "do not return human instructions inside content"
         ]
       },
       expected_output: {
