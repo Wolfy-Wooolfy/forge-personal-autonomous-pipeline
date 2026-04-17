@@ -1,4 +1,4 @@
-const { execFile, exec } = require("child_process");
+const { execFile, exec, spawn } = require("child_process");
 const { promisify } = require("util");
 
 const execFileAsync = promisify(execFile);
@@ -13,8 +13,38 @@ class CodexProvider {
     this.args = Array.isArray(config.args) ? config.args : [];
   }
 
-  quoteForWindowsCmd(value) {
-    return `"${String(value || "").replace(/"/g, '""').replace(/\r?\n/g, " ")}"`;
+  executeWithStdin(prompt) {
+    return new Promise((resolve, reject) => {
+      const child = spawn(this.command, ["exec"], {
+        windowsHide: true,
+        shell: process.platform === "win32"
+      });
+
+      let stdout = "";
+      let stderr = "";
+
+      child.stdout.on("data", (chunk) => {
+        stdout += String(chunk || "");
+      });
+
+      child.stderr.on("data", (chunk) => {
+        stderr += String(chunk || "");
+      });
+
+      child.on("error", reject);
+
+      child.on("close", (code) => {
+        if (code === 0) {
+          resolve({ stdout, stderr });
+          return;
+        }
+
+        reject(new Error(stderr || stdout || `Codex exited with code ${code}`));
+      });
+
+      child.stdin.write(String(prompt || ""));
+      child.stdin.end();
+    });
   }
 
   async isAvailable() {
@@ -194,31 +224,9 @@ class CodexProvider {
     try {
       const prompt = this.buildPrompt(task);
 
-      let stdout = "";
-      let stderr = "";
-
-      if (process.platform === "win32") {
-        const result = await execAsync(
-          `"${this.command}" exec ${this.quoteForWindowsCmd(prompt)}`,
-          {
-            timeout: 120000,
-            maxBuffer: 1024 * 1024 * 10,
-            windowsHide: true
-          }
-        );
-
-        stdout = result.stdout || "";
-        stderr = result.stderr || "";
-      } else {
-        const result = await execFileAsync(
-          this.command,
-          [...this.args, "exec", prompt],
-          { timeout: 120000, maxBuffer: 1024 * 1024 * 10 }
-        );
-
-        stdout = result.stdout || "";
-        stderr = result.stderr || "";
-      }
+      const result = await this.executeWithStdin(prompt);
+      const stdout = result.stdout || "";
+      const stderr = result.stderr || "";
 
       const parsed = this.parseStructuredOutput(stdout, task.task_id || "");
 
