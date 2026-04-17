@@ -1218,6 +1218,31 @@ ${trimmedExisting}`
     };
   }
 
+  function materializeDraftFilesForApproval(draftArtifact) {
+    const files = Array.isArray(draftArtifact && draftArtifact.files)
+      ? draftArtifact.files
+      : [];
+
+    return files.map((file) => {
+      const relPath = normalizeRelativePath(file && file.path ? file.path : "");
+      const absolutePath = path.resolve(root, relPath);
+      const baseContent = fs.existsSync(absolutePath)
+        ? fs.readFileSync(absolutePath, "utf8")
+        : "";
+      const operations = normalizePatchOperations(file && file.operations);
+
+      const content = operations.length > 0
+        ? applyPatchOperations(baseContent, operations, relPath)
+        : (typeof (file && file.content) === "string" ? file.content : "");
+
+      return {
+        path: relPath,
+        content,
+        allow_overwrite: file && file.allow_overwrite === true
+      };
+    });
+  }
+
   function applyExecutionPlan(executionPlan) {
     const plan = executionPlan && typeof executionPlan === "object" ? executionPlan : {};
     const files = Array.isArray(plan.files) ? plan.files : [];
@@ -2122,6 +2147,79 @@ ${trimmedExisting}`
     sendJson(res, 200, result);
   }
 
+  async function handleApprove(body, res) {
+    const proposalId = typeof body.proposal_id === "string" ? body.proposal_id.trim() : "";
+    const approverRole = typeof body.approver_role === "string" && body.approver_role.trim()
+      ? body.approver_role.trim()
+      : "cto";
+
+    if (!proposalId) {
+      sendJson(res, 400, { error: "proposal_id is required" });
+      return;
+    }
+
+    const draftPath = path.resolve(root, "artifacts/ai/drafts", `${proposalId}.draft.json`);
+    const proposalPath = path.resolve(root, "artifacts/ai/proposals", `${proposalId}.proposal.json`);
+
+    if (!fs.existsSync(draftPath)) {
+      sendJson(res, 404, { error: "Draft not found" });
+      return;
+    }
+
+    const draftArtifact = readJsonSafe(draftPath, null);
+    const proposalArtifact = readJsonSafe(proposalPath, null);
+
+    if (!draftArtifact || !Array.isArray(draftArtifact.files)) {
+      sendJson(res, 400, { error: "Invalid draft artifact" });
+      return;
+    }
+
+    const materializedFiles = materializeDraftFilesForApproval(draftArtifact);
+
+    const decisionResult = createDecisionPacket(
+      {
+        ...draftArtifact,
+        files: materializedFiles,
+        summary: proposalArtifact && typeof proposalArtifact.description === "string"
+          ? proposalArtifact.description
+          : "Proposal approved for execution."
+      },
+      proposalArtifact && typeof proposalArtifact.request === "string"
+        ? proposalArtifact.request
+        : "",
+      approverRole
+    );
+
+    draftArtifact.approved = true;
+    draftArtifact.ready_for_decision = true;
+    draftArtifact.approved_at = new Date().toISOString();
+    draftArtifact.approved_by_role = approverRole;
+
+    if (proposalArtifact && typeof proposalArtifact === "object") {
+      proposalArtifact.execution_approved = true;
+      proposalArtifact.execution_approved_at = new Date().toISOString();
+      proposalArtifact.execution_approved_by_role = approverRole;
+      fs.writeFileSync(proposalPath, JSON.stringify(proposalArtifact, null, 2), "utf8");
+    }
+
+    fs.writeFileSync(draftPath, JSON.stringify(draftArtifact, null, 2), "utf8");
+
+    if (decisionResult && decisionResult.decision_packet_id) {
+      decisionResult.decision_link_artifact = writeDecisionLinkArtifact(
+        proposalId,
+        decisionResult.decision_packet_id
+      );
+    }
+
+    sendJson(res, 200, {
+      ok: true,
+      mode: "APPROVED",
+      proposal_id: proposalId,
+      approver_role: approverRole,
+      decision: decisionResult
+    });
+  }
+
   async function handleApplyExecutePlan(body, res) {
     const executePlanPath = path.join(
       root,
@@ -2197,6 +2295,12 @@ ${trimmedExisting}`
       if (req.method === "POST" && req.url === "/api/ai/propose") {
         const body = await readBody(req);
         await handlePropose(body, res);
+        return;
+      }
+
+      if (req.method === "POST" && req.url === "/api/ai/approve") {
+        const body = await readBody(req);
+        await handleApprove(body, res);
         return;
       }
 
