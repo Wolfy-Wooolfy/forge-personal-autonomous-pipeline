@@ -23,6 +23,21 @@ Execution must be:
 
 ---
 
+### AI OS Companion Trigger Alignment
+
+Execution must not be triggered from conversation alone.
+
+Before execution begins, all of the following must exist:
+
+- approved documentation state
+- approved execution package
+- explicit user approval
+- clearly identified project context
+
+If any of the above is missing, execution must remain blocked.
+
+---
+
 ## Execution Modes
 
 ### 1. Manual Execution Mode

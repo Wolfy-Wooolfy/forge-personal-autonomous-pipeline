@@ -127,6 +127,26 @@ This contract ensures:
 ## STATUS
 
 * Contract defined
-* No runtime integration yet
+* Runtime integration may exist as technical support
+* Codex acts as proposal / draft / patch generator only
+* Codex does not own execution authority
+
+## AUTHORITY POSITION
+
+Codex is a technical generation assistant.
+
+It may help generate:
+
+- code drafts
+- patches
+- structural suggestions
+
+It may not:
+
+- decide execution scope
+- approve execution
+- execute directly
+- bypass Forge
+- replace Companion AI reasoning
 
 ---

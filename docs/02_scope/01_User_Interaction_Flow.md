@@ -4,29 +4,24 @@
 
 ## Overview
 
-Forge must operate as a conversational system that allows non-technical users to:
+The expected user interaction flow is:
 
-- describe ideas
-- ask questions
-- explore possibilities
-- make decisions
-- trigger full execution
+1. user opens or selects a project
+2. system loads project context
+3. conversation begins in the active project context
+4. system clarifies and refines the idea or review request
+5. system performs business reasoning and research if needed
+6. system presents options and recommendations
+7. user accepts, rejects, or adjusts direction
+8. system builds and refines documentation
+9. user approves documentation
+10. system prepares execution package
+11. user explicitly approves execution
+12. Forge executes
+13. Forge verifies
+14. system delivers result and run instructions if needed
 
-All through natural language conversation.
-
----
-
-## Core Principle
-
-The user does NOT interact with:
-
-- code
-- files
-- system internals
-
-The user interacts ONLY with:
-
-→ Conversation
+This flow must remain understandable to a non-technical user.
 
 ---
 

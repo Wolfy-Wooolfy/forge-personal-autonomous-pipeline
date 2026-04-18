@@ -1,178 +1,41 @@
-# Conversation → Pipeline Bridge Layer
+## 11. Conversation to Pipeline Bridge
 
----
+Conversation is not execution.
 
-## Overview
+The bridge between conversation and pipeline must be explicit.
 
-This layer connects user conversation with Forge execution pipeline.
+### 11.1 Allowed Conversation Outputs
 
-It translates natural language into structured pipeline execution.
+Conversation may produce:
 
----
+* clarified idea
+* approved decisions
+* documentation drafts
+* review findings
+* execution package draft
+* approved execution package
 
-## Core Responsibility
+### 11.2 Forbidden Direct Transition
 
-Convert:
+Conversation must not directly modify code or trigger unguided execution.
 
-→ User Intent (Conversation)
+### 11.3 Bridge Condition
 
-Into:
+Pipeline execution may begin only when:
 
-→ Pipeline Execution Tasks
+* documentation is approved
+* execution package is complete
+* user explicitly approves execution
+* target project is clearly identified
 
----
+### 11.4 Build Mode Bridge
 
-## Flow Mapping
+In build mode, the bridge goes:
 
-### Step 1: User Input
+conversation → ideation → business reasoning → documentation → execution package → Forge execution
 
-User sends natural language message.
+### 11.5 Review Mode Bridge
 
-Example:
-"I want to build a mining game"
+In review mode, the bridge goes:
 
----
-
-### Step 2: Intent Interpretation
-
-System must detect:
-
-- intent type
-- scope
-- required action
-
-Types:
-
-- IDEA
-- QUESTION
-- DECISION
-- EXECUTION_REQUEST
-- REVIEW_REQUEST
-
----
-
-### Step 3: Mode Selection
-
-Based on intent:
-
-| Intent | Mode |
-|------|------|
-| IDEA | DISCUSSION |
-| QUESTION | ANALYSIS |
-| DECISION | DECISION_SUPPORT |
-| EXECUTION_REQUEST | EXECUTION |
-| REVIEW_REQUEST | AUDIT |
-
----
-
-### Step 4: Context Update
-
-System must:
-
-- update project context
-- store conversation state
-- maintain history
-
----
-
-### Step 5: Pipeline Trigger
-
-Depending on mode:
-
-#### DISCUSSION
-- no pipeline execution
-- only cognitive layer
-
-#### ANALYSIS
-- optional lightweight pipeline
-- no file execution
-
-#### DECISION_SUPPORT
-- prepare structured options
-- no execution
-
-#### EXECUTION
-→ FULL PIPELINE START
-
-Pipeline flow:
-
-1. INTAKE
-2. TRACE
-3. GAP
-4. DECISION_GATE
-5. BACKFILL
-6. EXECUTE
-7. VERIFY
-8. CLOSURE
-
-#### AUDIT
-→ AUDIT PIPELINE ONLY
-
----
-
-## Execution Guard
-
-Pipeline must NOT start unless:
-
-- user explicitly approves
-OR
-- system reaches autonomous execution threshold
-
----
-
-## Decision Loop
-
-If during execution:
-
-- multiple strategies appear
-
-System must:
-
-- pause execution
-- return options to user
-- wait for decision
-
----
-
-## State Management
-
-Each conversation must map to:
-
-- project_id
-- execution_state
-- pipeline_state
-
----
-
-## Error Handling
-
-If failure occurs:
-
-- stop execution
-- explain issue
-- propose fix
-- retry if approved
-
----
-
-## Output Mapping
-
-Pipeline outputs must be translated back to:
-
-→ Human readable responses
-
-NOT raw system data
-
----
-
-## Key Rule
-
-User NEVER sees:
-
-- pipeline internals
-- raw artifacts
-- execution complexity
-
-User sees ONLY:
-
-→ Results + explanations
+conversation → project reading → findings → options → approved fixes/improvements → execution package update → Forge execution if approved

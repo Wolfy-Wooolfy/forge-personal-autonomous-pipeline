@@ -1,132 +1,33 @@
-# Search & External Research Capability
+## 19. Search and External Research Capability
 
----
+The operating system must handle research with explicit transparency about certainty and uncertainty.
 
-## Overview
+### 19.1 Research Usage Rule
 
-Forge must be able to:
+Research must be triggered when:
 
-- search external sources
-- gather information
-- validate findings
-- integrate insights into decision-making
+* the user asks for validation
+* profitability, market, price, trend, or competition matters
+* the system lacks confidence
+* external conditions materially affect the answer
 
----
+### 19.2 Research Output Form
 
-## Core Principle
+Research output must distinguish between:
 
-Forge must NOT rely only on internal knowledge.
+* known knowledge
+* estimated reasoning
+* uncertain or missing information
 
-It must be able to:
+### 19.3 Reliability Rule
 
-→ actively acquire missing information
+The system must not present guesses as facts and must clearly state uncertainty when certainty is not available.
 
----
+### 19.4 Recommendation Rule
 
-## When to Trigger Search
+After research, the system must provide:
 
-Search must be triggered when:
-
-- missing information is detected
-- user asks a factual question
-- market or financial estimation is required
-- external validation is needed
-- comparing real-world options
-
----
-
-## Search Sources
-
-Forge may use:
-
-- web search APIs
-- public datasets
-- APIs (market, crypto, finance, etc.)
-- documentation sources
-- user-provided links
-
----
-
-## Search Process
-
-1. Define search objective
-2. Identify key queries
-3. retrieve results
-4. filter irrelevant data
-5. extract key insights
-6. validate credibility
-7. integrate into context
-
----
-
-## Multi-Source Validation
-
-Forge must:
-
-- compare multiple sources
-- detect inconsistencies
-- prioritize reliable data
-
----
-
-## Reliability Rules
-
-Forge must:
-
-- prioritize verified sources
-- avoid low credibility sources
-- detect outdated information
-
----
-
-## Data Integration
-
-Search results must be:
-
-- summarized
-- structured
-- connected to user context
-
-NOT:
-
-- dumped as raw data
-
----
-
-## Decision Support Integration
-
-Search results must support:
-
-- business decisions
-- technical decisions
-- feature planning
-- monetization models
-
----
-
-## Continuous Update
-
-Forge must:
-
-- refresh outdated data
-- re-search when needed
-- adapt to new information
-
----
-
-## User Transparency
-
-Forge must:
-
-- explain what it searched
-- explain why it searched
-- explain what it found
-
----
-
-## Strict Rule
-
-Search must NEVER:
-
-- override logic without validation
-- introduce unverified data into execution
+* findings
+* comparison
+* recommendation
+* explanation of why that recommendation is preferred

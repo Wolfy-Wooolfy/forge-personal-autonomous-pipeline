@@ -15,33 +15,22 @@ This layer MUST NOT break or bypass Forge governance.
 
 ## 2. Scope of This Phase
 
-### Included
+The AI Layer is the reasoning and conversational layer above Forge.
 
-1. Conversation Layer (Chat Interface)
-   - Accept user input (initially English)
-   - Maintain session-level context
+Its scope includes:
 
-2. Analysis Mode
-   - Read project files (read-only)
-   - Generate summaries
-   - Detect gaps and improvement opportunities
+- understanding user intent
+- maintaining conversation context
+- clarifying vague inputs
+- developing ideas
+- performing business-aware reasoning
+- handling research and uncertainty transparently
+- building and refining documentation
+- preparing execution packages
+- explaining Forge execution and results to the user
 
-3. Proposal Mode
-   - Convert ideas into structured proposals
-   - Prepare potential execution drafts (NOT applied automatically)
-
-4. Context Builder
-   - Aggregate relevant project files
-   - Prepare context for AI reasoning
-
----
-
-### Excluded
-
-- Direct execution without approval
-- Automatic modification of files
-- Any bypass of Decision Gate or approval system
-- Full autonomy (system must remain human-approved)
+The AI Layer is NOT a direct execution layer.
+All execution must remain governed by Forge.
 
 ---
 

@@ -1,145 +1,22 @@
-# CONVERSATION EXECUTION MODEL
+## 8. Conversation Execution Model
 
-## 1. Objective
+Conversation is a governed planning and interaction runtime, not an execution engine.
 
-Transform the system from:
+The conversation layer may:
 
-Tool-driven UI
+* clarify user intent
+* refine project direction
+* run ideation loops
+* run business reasoning
+* build docs
+* prepare execution package
+* explain execution progress and results
 
-to:
+The conversation layer may not:
 
-AI Conversation-driven Workspace
+* directly change code
+* directly trigger unguided execution
+* bypass Forge
+* bypass user approval
 
-WITHOUT breaking tool integrity.
-
----
-
-## 2. Conversation is NOT free text
-
-Conversation is a structured execution loop:
-
-1. Understand intent
-2. Detect ambiguity
-3. Ask clarification (if needed)
-4. Select tool
-5. Execute tool
-6. Present result
-7. Wait for user decision (approve/reject/modify)
-
----
-
-## 3. Conversation Loop Model
-
-Each user interaction becomes:
-
-MESSAGE → INTERPRETATION → TOOL → RESULT → NEXT STEP
-
----
-
-## 4. Message Types
-
-System must support:
-
-- USER_REQUEST
-- AI_RESPONSE
-- AI_QUESTION
-- TOOL_RESULT
-- DRAFT_PROPOSAL
-- DIFF_PREVIEW
-- OPERATION_ANALYSIS
-- APPROVAL_REQUEST
-- EXECUTION_RESULT
-- ERROR
-
----
-
-## 5. State Model (IMPORTANT)
-
-System MUST move from:
-
-GLOBAL STATE
-
-to:
-
-MESSAGE-BOUND STATE
-
-Each message should carry:
-
-- request
-- proposal_id
-- draft
-- preview
-- operation_type
-- required_roles
-
-No hidden global state dependency.
-
----
-
-## 6. Tool Invocation Model
-
-Conversation layer MUST NOT:
-
-execute logic directly.
-
-Instead:
-
-- Map intent → tool
-- Call tool
-- Receive result
-- Render result
-
----
-
-## 7. UI Behavior Rule
-
-UI must:
-
-- Append messages only (no overwrite)
-- Preserve history
-- Reflect execution steps clearly
-
-UI must NOT:
-
-- hide execution steps
-- merge states silently
-- override previous outputs
-
----
-
-## 8. Approval Model
-
-Approval is a conversation step:
-
-AI → "Ready for approval"
-User → Approve / Reject
-
-Approval triggers:
-
-- decision tool
-- execution tool
-
----
-
-## 9. Future Extensions
-
-This model enables:
-
-- Multi-step reasoning
-- Multi-tool orchestration
-- Project-based conversations
-- Persistent context per project
-
----
-
-## 10. Enforcement
-
-Any UI or feature that:
-
-- bypasses tools
-- hides execution steps
-- uses implicit state
-
-is INVALID.
-
-This document defines how conversation MUST operate.
+Execution begins only after approved handoff to Forge.

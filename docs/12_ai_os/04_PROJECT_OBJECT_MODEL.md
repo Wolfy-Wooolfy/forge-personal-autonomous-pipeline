@@ -4,8 +4,6 @@ Every project must be represented as a structured project object.
 
 Minimum required fields:
 
-Minimum required fields:
-
 * `project_id`
 * `project_name`
 * `project_type`

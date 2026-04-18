@@ -18,6 +18,30 @@ The system exists to eliminate:
 - Execution stalls caused by continuous human approval
 - Loss of progress visibility
 
+### Companion vs Forge Operating Boundary
+
+The system operates through two distinct but connected layers:
+
+1. Companion AI OS Layer
+   - user-facing conversation
+   - idea development
+   - business reasoning
+   - documentation building
+   - research and recommendation
+   - execution package preparation
+
+2. Forge Core Layer
+   - deterministic execution
+   - governed implementation
+   - verification
+   - closure and delivery readiness validation
+
+The Companion layer must not execute directly.
+Forge must not replace the companion conversation and reasoning role.
+
+This boundary is governed behaviorally by:
+`docs/12_ai_os/19_AI_OS_RUNTIME_BEHAVIOR_CONTRACT.md`
+
 Forge is **not a decision assistant**, **not a reasoning authority**, and **not a conversational agent**.
 
 It does NOT:
