@@ -252,8 +252,8 @@ function createWorkspaceApiServer(options = {}) {
   }
 
   function buildSimpleDiff(oldContent, newContent) {
-    const oldText = String(oldContent || "");
-    const newText = String(newContent || "");
+    const oldText = String(oldContent || "").replace(/\r\n/g, "\n");
+    const newText = String(newContent || "").replace(/\r\n/g, "\n");
 
     if (oldText === newText) {
       return "No changes";
