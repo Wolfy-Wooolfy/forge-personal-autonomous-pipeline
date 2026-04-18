@@ -10,6 +10,7 @@ The discussion loop is the layer that makes the system feel like a real project 
 * technical constraints
 * target users
 * geography or market focus if relevant
+* user reactions to prior suggestions
 
 ### 11.2 Outputs from the Loop
 
@@ -19,6 +20,9 @@ The discussion loop is the layer that makes the system feel like a real project 
 * risk summary
 * recommendation set
 * candidate approaches
+* accepted paths
+* rejected paths
+* open questions
 
 ### 11.3 Mandatory Behaviors
 
@@ -31,6 +35,7 @@ The system must be able to:
 * propose improvements
 * compare multiple directions
 * incorporate user rejection or acceptance into the next draft
+* continue refinement until the user confirms readiness
 
 ### 11.4 Acceptance and Rejection Handling
 
@@ -43,4 +48,10 @@ The system must maintain explicit records of:
 
 No rejected idea may silently reappear in a later final plan unless the system explicitly asks to revisit it.
 
----
+### 11.5 Completion Rule
+
+The ideation loop must not hand off to documentation until:
+
+* the idea is structurally complete
+* major ambiguity is removed
+* the user explicitly confirms readiness

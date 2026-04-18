@@ -9,7 +9,8 @@ Execution handoff is the boundary between the AI Operating System Layer and Forg
 * required decisions resolved
 * documentation approved
 * execution scope defined
-* target files or outputs identified
+* execution package completed
+* user explicitly approves execution
 
 ### 14.2 Handoff Object Requirements
 
@@ -24,6 +25,9 @@ The handoff to Forge must include at minimum:
 * dependency assumptions
 * risk notes if relevant
 * execution approval reference
+* finalized documentation set
+* execution plan
+* business and scope decisions required for implementation
 
 ### 14.3 Forge Responsibility After Handoff
 
@@ -33,6 +37,7 @@ Once handed off, Forge becomes responsible for:
 * execution artifacts
 * verification artifacts
 * closure artifacts
+* implementing only the approved execution package
 
 ### 14.4 AI Operating System Responsibility After Handoff
 
@@ -42,5 +47,4 @@ After handoff, the operating system remains responsible for:
 * interpreting execution results
 * triggering next decision if needed
 * delivery preparation
-
----
+* fix-and-rerun escalation when execution reveals issues

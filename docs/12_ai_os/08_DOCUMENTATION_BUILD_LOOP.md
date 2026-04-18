@@ -26,14 +26,18 @@ Depending on project type, the system may generate:
 4. ambiguity detection
 5. user review
 6. revision
-7. final approval
+7. recommendation on unresolved gaps
+8. final approval
 
 ### 13.3 Stop Rule
 
 No execution may begin until documentation enters `DOCS_APPROVED`.
 
-### 13.4 Infinite Revision Principle
+### 13.4 Iteration Rule
 
-The system must support repeated review cycles without arbitrary limit until documentation is sufficiently approved.
+The system must support repeated review cycles without arbitrary limit until:
 
----
+* the documents are clear
+* no critical ambiguity remains
+* internal review finds no critical issue
+* the user confirms completion

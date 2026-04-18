@@ -4,6 +4,8 @@ Every project must be represented as a structured project object.
 
 Minimum required fields:
 
+Minimum required fields:
+
 * `project_id`
 * `project_name`
 * `project_type`
@@ -14,6 +16,7 @@ Minimum required fields:
 * `business_goal`
 * `technical_goal`
 * `current_phase`
+* `active_runtime_state`
 * `workspace_path`
 * `source_of_truth`
 * `selected_strategy`
@@ -21,6 +24,7 @@ Minimum required fields:
 * `rejected_options`
 * `open_questions`
 * `documentation_state`
+* `execution_package_state`
 * `execution_state`
 * `verification_state`
 * `delivery_state`
@@ -29,6 +33,9 @@ Minimum required fields:
 * `artifact_registry`
 * `review_cycles_count`
 * `pending_decisions`
+* `memory_state`
+* `version_registry`
+* `active_project_flag`
 * `last_updated_at`
 
 ### 8.1 Project Type Values
@@ -53,5 +60,37 @@ Examples:
 * `REVIEW_EXISTING`
 * `EXTEND_EXISTING`
 * `REPAIR`
+
+---
+
+### 8.3 Runtime State Values
+
+Examples:
+
+* `IDEA_DEVELOPMENT`
+* `BUSINESS_ANALYSIS`
+* `DOCUMENTATION`
+* `EXECUTION_PREPARATION`
+* `EXECUTION_FORGE`
+* `REVIEW`
+
+### 8.4 Execution Package State Values
+
+Examples:
+
+* `NOT_READY`
+* `DRAFTING`
+* `READY_FOR_APPROVAL`
+* `APPROVED`
+* `HANDED_OFF`
+
+### 8.5 Memory State Values
+
+Examples:
+
+* `EMPTY`
+* `ACTIVE`
+* `RESTORED`
+* `ARCHIVED`
 
 ---

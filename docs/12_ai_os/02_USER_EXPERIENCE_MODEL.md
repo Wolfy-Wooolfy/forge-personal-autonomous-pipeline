@@ -1,5 +1,7 @@
 ## 3. User Promise
 
+This user experience model is governed by `19_AI_OS_RUNTIME_BEHAVIOR_CONTRACT.md`.
+
 From the perspective of a normal user, the system should behave like a smart project partner.
 
 A user should be able to:
@@ -71,14 +73,18 @@ System behavior:
 
 ## 21. Non-Technical User Experience Requirements
 
-Because the target user may not know coding, the system must be optimized for simplicity.
+The system must be comfortably usable by a non-technical user.
 
-The system must:
+It must:
 
-* explain technical choices in plain language
-* show recommendations before asking for decisions
-* hide unnecessary technical complexity by default
-* give exact next actions when the user must do something manually
-* avoid assuming the user understands files, branches, environments, or pipelines unless the user demonstrates that knowledge
+* speak in the user's language
+* avoid unnecessary technical terminology
+* ask clarification questions when needed
+* summarize progress before moving phases
+* explain options simply
+* provide recommendations clearly
+* preserve project memory across sessions
+* avoid forcing the user to repeat context
+* respect user override when the user wants to stop refining or move forward
 
 ---

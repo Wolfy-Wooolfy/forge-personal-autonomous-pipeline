@@ -1,30 +1,34 @@
 ## 25. Initial Provider Positioning
 
-For the first full version of this operating-system layer, the AI provider may be an OpenAI API integration.
+Providers are support mechanisms for reasoning and technical generation.
 
-At this stage, local edge inference is optional and not required by the core design.
+Provider use does not change the core authority model:
 
-That means:
-
-* the conversation, planning, ideation, and document-generation intelligence may be powered by an OpenAI API provider
-* Forge remains the execution authority
-* any future edge or on-device inference remains an optional extension, not a foundational requirement for the first architecture
+* Companion AI governs discussion, reasoning, and structured decision flow
+* Forge governs execution
+* providers such as Codex may assist with technical generation only
+* no provider may bypass Forge or become an execution authority
 
 ---
 
 ## Provider Responsibilities (Explicit)
 
-The AI provider (e.g. OpenAI API) is responsible for:
+The AI provider is responsible for:
+
 - natural language understanding
 - conversation continuity
 - idea generation
 - proposal generation
 - structured output generation
+- technical candidate generation when requested
 
 The AI provider is NOT responsible for:
+
 - execution
 - file system modification
 - pipeline control
 - verification authority
+- decision ownership
+- autonomous workflow control
 
 All execution authority remains strictly within Forge Core.

@@ -22,6 +22,19 @@ This layer does not replace Forge. It surrounds Forge and governs how users reac
 
 ---
 
+### Runtime Behavior Authority
+
+`docs/12_ai_os/19_AI_OS_RUNTIME_BEHAVIOR_CONTRACT.md` is the binding runtime behavior authority for the AI Operating System Layer.
+
+This master specification defines the architecture, capability map, and overall operating model.
+
+If any behavior ambiguity exists between this document and runtime user interaction, project flow, loop control, execution handoff, Codex positioning, research handling, memory behavior, or failure handling:
+
+- `19_AI_OS_RUNTIME_BEHAVIOR_CONTRACT.md` overrides
+- this document must be interpreted in alignment with that runtime contract
+
+---
+
 ## 2. Primary System Principle
 
 The overall system is composed of three major layers:
@@ -412,44 +425,52 @@ The system must not move into `EXECUTION_READY` unless documentation and require
 
 ## 10. Conversation Contract
 
-The conversation layer must convert casual user language into structured operating-system actions.
+Conversation is governed by the runtime behavior contract.
 
-Each conversation turn must record:
+This means the system MUST:
 
-* raw user message
-* interpreted intent
-* target project
-* confidence level
-* unresolved ambiguity
-* extracted assumptions
-* proposed next action
-* whether execution was requested
-* whether decisions are pending
-* referenced documents or artifacts
+- behave as a human-like companion first
+- adapt to the user's language
+- preserve project context
+- ask clarification questions when needed
+- summarize current understanding before structured progression
+- avoid silent progression between phases
+- respect explicit user confirmation before moving forward
 
 ### 10.1 Tone and Language Rules
 
-The system must:
+The system MUST:
 
-* reply naturally in the user’s language
-* avoid unnecessary technical jargon for non-technical users
-* remain friendly but precise
-* clearly distinguish between suggestions and decisions
-* clearly state when user approval is required
+- speak in the user's language
+- remain simple and human-friendly
+- avoid unnecessary technical jargon for non-technical users
+- distinguish clearly between suggestions, recommendations, and decisions
 
 ### 10.2 Clarification Rule
 
-If the user’s message is too ambiguous to safely move planning forward, the system must ask one or more focused clarification questions before progressing.
+If the user's request is incomplete, vague, or too short to safely advance the project:
+
+- the system MUST ask a focused follow-up question
+- the system MUST avoid hidden assumptions
 
 ### 10.3 Decision Escalation Rule
 
-When multiple valid high-impact paths exist, the system must stop and ask the user to choose after showing differences and recommendation.
+When multiple valid high-impact paths exist:
+
+- the system MUST present the options
+- explain the differences
+- recommend one path
+- wait for user decision
+
+### 10.4 Runtime State Awareness
+
+The system MUST always know the active runtime state and communicate state transitions explicitly to the user.
 
 ---
 
 ## 11. Discussion and Ideation Loop
 
-The discussion loop is the layer that makes the system feel like a real project partner.
+The ideation loop is governed by the runtime behavior contract and is iterative by default.
 
 ### 11.1 Inputs to the Loop
 
@@ -459,6 +480,7 @@ The discussion loop is the layer that makes the system feel like a real project 
 * technical constraints
 * target users
 * geography or market focus if relevant
+* user reactions to prior suggestions
 
 ### 11.2 Outputs from the Loop
 
@@ -468,10 +490,13 @@ The discussion loop is the layer that makes the system feel like a real project 
 * risk summary
 * recommendation set
 * candidate approaches
+* accepted paths
+* rejected paths
+* open questions
 
 ### 11.3 Mandatory Behaviors
 
-The system must be able to:
+The system MUST be able to:
 
 * answer “can this be built?”
 * answer “how can this be built?”
@@ -480,10 +505,11 @@ The system must be able to:
 * propose improvements
 * compare multiple directions
 * incorporate user rejection or acceptance into the next draft
+* continue refinement until the user confirms readiness
 
 ### 11.4 Acceptance and Rejection Handling
 
-The system must maintain explicit records of:
+The system MUST maintain explicit records of:
 
 * accepted proposals
 * rejected proposals
@@ -491,6 +517,14 @@ The system must maintain explicit records of:
 * forced constraints given by the user
 
 No rejected idea may silently reappear in a later final plan unless the system explicitly asks to revisit it.
+
+### 11.5 Completion Rule
+
+The ideation loop MUST NOT hand off to documentation until:
+
+* the idea is structurally complete
+* major ambiguity is removed
+* the user explicitly confirms readiness
 
 ---
 
@@ -532,7 +566,7 @@ Examples:
 ## 13. Documentation Build Loop
 
 The system must not jump directly from idea to code.
-Documentation must be built and reviewed in a controlled loop.
+Documentation must be built, reviewed, challenged, refined, and approved in a controlled loop.
 
 ### 13.1 Documentation Types
 
@@ -557,15 +591,21 @@ Depending on project type, the system may generate:
 4. ambiguity detection
 5. user review
 6. revision
-7. final approval
+7. recommendation on unresolved gaps
+8. final approval
 
 ### 13.3 Stop Rule
 
 No execution may begin until documentation enters `DOCS_APPROVED`.
 
-### 13.4 Infinite Revision Principle
+### 13.4 Iteration Rule
 
-The system must support repeated review cycles without arbitrary limit until documentation is sufficiently approved.
+The system must support repeated review cycles without arbitrary limit until:
+
+* the documents are clear
+* no critical ambiguity remains
+* internal review finds no critical issue
+* the user confirms completion
 
 ---
 
@@ -580,7 +620,8 @@ Execution handoff is the boundary between the AI Operating System Layer and Forg
 * required decisions resolved
 * documentation approved
 * execution scope defined
-* target files or outputs identified
+* execution package completed
+* user explicitly approves execution
 
 ### 14.2 Handoff Object Requirements
 
@@ -595,6 +636,9 @@ The handoff to Forge must include at minimum:
 * dependency assumptions
 * risk notes if relevant
 * execution approval reference
+* finalized documentation set
+* execution plan
+* business and scope decisions required for implementation
 
 ### 14.3 Forge Responsibility After Handoff
 
@@ -604,6 +648,7 @@ Once handed off, Forge becomes responsible for:
 * execution artifacts
 * verification artifacts
 * closure artifacts
+* implementing only the approved execution package
 
 ### 14.4 AI Operating System Responsibility After Handoff
 
@@ -613,6 +658,7 @@ After handoff, the operating system remains responsible for:
 * interpreting execution results
 * triggering next decision if needed
 * delivery preparation
+* fix-and-rerun escalation when execution reveals issues
 
 ---
 
@@ -712,7 +758,7 @@ It must first be converted into user-visible options or approved tasks.
 
 ## 18. Multi-Project Orchestration
 
-The system must support multiple independent projects.
+The system must support multiple independent projects with explicit project activation.
 
 ### 18.1 Isolation Principle
 
@@ -724,6 +770,8 @@ Each project must maintain independent:
 * decisions
 * artifacts
 * execution history
+* memory
+* version history
 
 No project may leak context into another project without explicit user request.
 
@@ -735,6 +783,7 @@ The interface must allow the user to:
 * open an existing project
 * switch among projects
 * see status for each project
+* explicitly activate one project as the current working context
 
 ### 18.3 Parallel Handling
 
@@ -745,39 +794,51 @@ If multiple projects are active, each must show:
 * pending decisions
 * whether blocked
 * latest update
+* last known approved state
 
 ### 18.4 Group Operations
 
 The system may support grouped review or grouped reporting across projects, but not mixed execution contexts unless explicitly designed.
 
+### 18.5 Active Context Rule
+
+When a project is selected, all conversation and decisions must apply only to that active project until the user switches context again.
+
 ---
 
 ## 19. Search and External Research Capability
 
-For many user requests, the system must be able to analyze external information before refining the project.
-
-Examples:
-
-* market viability
-* competitor signals
-* implementation constraints
-* monetization models
-* current trends
+The operating system must handle research with explicit transparency about certainty and uncertainty.
 
 ### 19.1 Research Usage Rule
 
-Research should be used during discussion and planning when the user asks for feasibility, value, competitive analysis, or current conditions.
+Research must be triggered when:
+
+* the user asks for validation
+* profitability, market, price, trend, or competition matters
+* the system lacks confidence
+* external conditions materially affect the answer
 
 ### 19.2 Research Output Form
 
-Research results should be converted into:
+Research output must distinguish between:
 
-* concise summaries
-* risks
-* implications for the project
-* recommendation adjustments
+* known knowledge
+* estimated reasoning
+* uncertain or missing information
 
-Research must inform planning but must not silently rewrite user goals.
+### 19.3 Reliability Rule
+
+The system must not present guesses as facts and must clearly state uncertainty when certainty is not available.
+
+### 19.4 Recommendation Rule
+
+After research, the system must provide:
+
+* findings
+* comparison
+* recommendation
+* explanation of why that recommendation is preferred
 
 ---
 
@@ -808,40 +869,39 @@ Examples:
 
 ## 21. Non-Technical User Experience Requirements
 
-Because the target user may not know coding, the system must be optimized for simplicity.
+The AI Operating System must feel usable by a non-technical user with no coding background.
 
-The system must:
+It must:
 
-* explain technical choices in plain language
-* show recommendations before asking for decisions
-* hide unnecessary technical complexity by default
-* give exact next actions when the user must do something manually
-* avoid assuming the user understands files, branches, environments, or pipelines unless the user demonstrates that knowledge
+* speak simply
+* avoid technical burden
+* translate complexity into choices
+* explain progress in human terms
+* preserve context so the user does not need to repeat project details
+* ask for approval only when a real decision is needed
+* respect user override when the user wants to stop refining or move forward
 
 ---
 
 ## 22. Interface Requirements
 
-The user-facing system should eventually expose at least the following areas:
+The interface layer must support the runtime behavior contract.
 
-* Project List
-* Active Project View
-* Chat Panel
-* Project Summary Panel
-* Pending Decisions Panel
-* Documentation Panel
-* Execution Status Panel
-* Verification Panel
-* Artifact / History Panel
+It must provide visibility for:
 
-The user should always understand:
+* active project
+* current runtime state
+* pending decisions
+* documentation status
+* execution status
+* review findings
+* failure status when relevant
 
-* which project is active
-* what phase the project is in
-* what the system is currently doing
-* whether a decision is required
-* whether execution has started
-* what remains before delivery
+It must also provide a clear project selection mechanism, such as:
+
+* sidebar
+* project list
+* equivalent project switcher
 
 ---
 
@@ -880,15 +940,14 @@ The following new documents are recommended as the formal spec set for this oper
 
 ## 25. Initial Provider Positioning
 
-For the first full version of this operating-system layer, the AI provider may be an OpenAI API integration.
+Providers are support mechanisms for reasoning and technical generation.
 
-At this stage, local edge inference is optional and not required by the core design.
+Provider use does not change the core authority model:
 
-That means:
-
-* the conversation, planning, ideation, and document-generation intelligence may be powered by an OpenAI API provider
-* Forge remains the execution authority
-* any future edge or on-device inference remains an optional extension, not a foundational requirement for the first architecture
+* Companion AI governs discussion, reasoning, and structured decision flow
+* Forge governs execution
+* providers such as Codex may assist with technical generation only
+* no provider may bypass Forge or become an execution authority
 
 ---
 
