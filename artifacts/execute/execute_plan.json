@@ -1,6 +1,6 @@
 {
-  "workspace_execution_id": "ai_proposal_1776511598775",
-  "generated_at": "2026-04-18T11:26:38.786Z",
+  "workspace_execution_id": "ai_proposal_1776511911597",
+  "generated_at": "2026-04-18T11:31:51.610Z",
   "files": [
     {
       "file_path": "web/index.html",
@@ -11,8 +11,8 @@
           "operations": [
             {
               "type": "insert_before",
-              "find": "</body>\n</html>\n<html lang=\"en\">",
-              "replace": "",
+              "find": "</body>",
+              "replace": "<!-- Workspace footer marker -->\n",
               "anchor": "",
               "content": ""
             }
