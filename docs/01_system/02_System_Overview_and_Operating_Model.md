@@ -903,4 +903,75 @@ Adding or replacing a shell MUST NOT require any change to:
 
 ---
 
+## AI Operating System Layer (Above Forge Core)
+
+A new layer called "AI Operating System Layer" is introduced above Forge Core.
+
+### Purpose
+
+This layer enables:
+- natural language interaction with users
+- idea discussion and refinement
+- project planning and structuring
+- documentation creation and iteration
+- decision management and escalation
+
+### Position in Architecture
+
+The system is now composed of:
+
+1. Human Interaction Layer (UI / Chat Interface)
+2. AI Operating System Layer (Planning + Reasoning)
+3. Forge Core (Execution + Verification)
+
+### Responsibilities
+
+The AI Operating System Layer is responsible for:
+- understanding user intent
+- managing conversation flow
+- generating proposals and plans
+- structuring documentation
+- preparing execution-ready tasks
+
+### AI Provider
+
+This layer is powered by an external AI provider (e.g. OpenAI API).
+
+The AI provider handles:
+- natural language understanding
+- reasoning and analysis
+- proposal generation
+
+### Strict Separation of Responsibility
+
+The AI layer may:
+- analyze
+- propose
+- plan
+- structure
+
+The AI layer may NOT:
+- execute
+- modify code directly
+- bypass Forge pipeline
+
+### Execution Authority
+
+All execution authority remains strictly within Forge Core.
+
+All execution must pass through:
+- pipeline_definition
+- decision gates
+- artifact generation
+- verification steps
+
+### Design Principle
+
+AI = Thinking System  
+Forge = Execution System
+
+They must remain strictly separated.
+
+---
+
 **End of Document**

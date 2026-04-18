@@ -184,4 +184,72 @@ This contract is satisfied when:
 
 ---
 
+## Supported AI Providers (Execution Drivers)
+
+The system must support multiple AI providers through a unified driver interface.
+
+### Primary Provider: OpenAI
+
+- Role: Core reasoning and generation engine
+- Usage:
+  - natural language understanding
+  - idea discussion
+  - document generation
+  - structured outputs (JSON / plans)
+- Integration:
+  - via official API
+  - authenticated using API keys
+- Model examples:
+  - GPT-based models (chat + reasoning)
+
+### Secondary Provider: Codex (Local / CLI)
+
+- Role: Code generation and patch creation engine
+- Usage:
+  - generating code diffs
+  - applying structured modifications
+  - handling file-level operations
+- Integration:
+  - local CLI execution
+  - invoked via system command (e.g., codex.cmd)
+- Output:
+  - structured patch JSON
+  - file operations (insert / replace / modify)
+
+### Provider Selection Strategy
+
+The system must dynamically select the provider based on task type:
+
+| Task Type | Provider |
+|----------|--------|
+| Conversation / Idea Discussion | OpenAI |
+| Documentation Generation | OpenAI |
+| Decision Explanation | OpenAI |
+| Code Modification | Codex |
+| File Operations | Codex |
+
+### Provider Abstraction Rule
+
+All providers must be accessed through a unified interface.
+
+The system MUST NOT:
+- call providers directly from UI
+- embed provider-specific logic in business flow
+
+Instead:
+- use provider drivers
+- route requests through Cognitive Layer
+
+### Future Expansion
+
+The system must allow adding providers such as:
+
+- Google AI (Gemini)
+- Local LLMs
+- Specialized AI engines
+
+Without changing core system logic.
+
+---
+
 **END OF DOCUMENT**

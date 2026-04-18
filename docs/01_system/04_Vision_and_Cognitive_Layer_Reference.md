@@ -173,4 +173,64 @@ The system is considered aligned with this vision when:
 
 ---
 
+## AI Operating System Layer Integration
+
+The AI Operating System Layer extends the Cognitive Layer into a full project-facing operating system.
+
+### Relationship to Cognitive Layer
+
+The Cognitive Layer is responsible for:
+- reasoning primitives
+- prompt construction
+- provider interaction
+- structured thinking
+
+The AI Operating System Layer builds on top of this and adds:
+
+- conversation management
+- project lifecycle management
+- idea discussion loops
+- option handling and decision escalation
+- documentation orchestration
+- execution handoff preparation
+
+### Role Expansion
+
+Cognitive Layer → Thinking Engine  
+AI Operating System Layer → Project Operating System
+
+### Functional Mapping
+
+| Capability | Cognitive Layer | AI OS Layer |
+|----------|----------------|------------|
+| Prompt Construction | ✔ | uses it |
+| Provider Calls | ✔ | uses it |
+| Reasoning | ✔ | extends it |
+| Conversation | ✖ | ✔ |
+| Project Management | ✖ | ✔ |
+| Decision Handling | ✖ | ✔ |
+| Documentation Flow | ✖ | ✔ |
+| Execution Handoff | ✖ | ✔ |
+
+### Execution Boundary
+
+The AI OS Layer must NOT directly execute tasks.
+
+Instead, it must:
+1. prepare structured outputs
+2. convert them into execution-ready instructions
+3. pass them into Forge Core pipeline
+
+### Design Rule
+
+The Cognitive Layer provides intelligence.
+
+The AI Operating System Layer provides structure and control over that intelligence.
+
+Forge Core provides execution authority.
+
+All three must remain clearly separated.
+
+---
+
 **End of Document**
