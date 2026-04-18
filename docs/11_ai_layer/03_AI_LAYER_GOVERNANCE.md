@@ -28,6 +28,9 @@ AI MUST NEVER execute directly.
 
 ### AI Layer CAN write (restricted):
 
+AI Layer write permissions are split into two modes:
+
+#### Advisory Mode
 AI Layer is allowed to write ONLY under:
 
 artifacts/ai/*
@@ -46,6 +49,26 @@ Constraints:
 - They MUST NOT affect project state
 - They MUST NOT modify code/ or Forge artifacts
 - They are used for traceability and reasoning only
+
+#### Workspace Runtime Mode
+Workspace Runtime is allowed to write to governed execution targets, including:
+
+- code/*
+- web/*
+- code/tools/*
+- artifacts/llm/*
+- artifacts/decisions/*
+- artifacts/backfill/*
+- artifacts/execute/*
+- artifacts/verify/*
+- artifacts/ai/*
+
+Constraints:
+
+- Requires explicit approval
+- Requires decision creation before execution
+- Is governed as Workspace Runtime execution
+- Is NOT the same as Forge Core pipeline execution
 
 ### AI Layer CAN:
 
@@ -68,11 +91,12 @@ Constraints:
 
 ## 4. Execution Rule
 
-ALL execution MUST go through:
+Execution may proceed through one of two governed paths:
 
-Decision Packet → Forge Pipeline
+1. Decision Packet → Forge Pipeline
+2. Approved Workspace Runtime flow → Workspace Execute → Workspace Verify
 
-No exceptions.
+No unapproved execution is allowed.
 
 ---
 
@@ -105,8 +129,10 @@ Output:
 ### 5.3 Execution Mode
 
 - Requires explicit user approval
-- Must generate Decision Packet
-- Must pass Forge pipeline
+- Must generate governed execution intent
+- May execute through:
+  - Forge pipeline
+  - Workspace Runtime lane
 
 ---
 
@@ -153,10 +179,10 @@ System must FAIL-CLOSED.
 
 ## 10. Authority Hierarchy
 
-1. Forge Core (highest authority)
-2. Decision Gate
-3. Approval system
-4. AI Layer (advisory only)
+1. Forge Core execution contracts
+2. Workspace Runtime governed execution
+3. Decision Gate / approval system
+4. AI advisory behavior
 
 ---
 
