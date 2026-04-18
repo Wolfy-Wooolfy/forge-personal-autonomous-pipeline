@@ -252,33 +252,50 @@ function createWorkspaceApiServer(options = {}) {
   }
 
   function buildSimpleDiff(oldContent, newContent) {
-    if (String(oldContent || "") === String(newContent || "")) {
+    const oldText = String(oldContent || "");
+    const newText = String(newContent || "");
+
+    if (oldText === newText) {
       return "No changes";
     }
 
-    const oldLines = String(oldContent || "").split("\n");
-    const newLines = String(newContent || "").split("\n");
-    const max = Math.max(oldLines.length, newLines.length);
-    const out = [];
+    const oldLines = oldText.split("\n");
+    const newLines = newText.split("\n");
 
-    for (let i = 0; i < max; i += 1) {
-      const a = oldLines[i];
-      const b = newLines[i];
-
-      if (a === b) {
-        continue;
-      }
-
-      if (typeof a !== "undefined") {
-        out.push(`- ${a}`);
-      }
-
-      if (typeof b !== "undefined") {
-        out.push(`+ ${b}`);
-      }
+    let prefix = 0;
+    while (
+      prefix < oldLines.length &&
+      prefix < newLines.length &&
+      oldLines[prefix] === newLines[prefix]
+    ) {
+      prefix += 1;
     }
 
-    return out.join("\n");
+    let oldSuffix = oldLines.length - 1;
+    let newSuffix = newLines.length - 1;
+    while (
+      oldSuffix >= prefix &&
+      newSuffix >= prefix &&
+      oldLines[oldSuffix] === newLines[newSuffix]
+    ) {
+      oldSuffix -= 1;
+      newSuffix -= 1;
+    }
+
+    const removed = oldLines.slice(prefix, oldSuffix + 1);
+    const added = newLines.slice(prefix, newSuffix + 1);
+
+    const out = [];
+
+    removed.forEach((line) => {
+      out.push(`- ${line}`);
+    });
+
+    added.forEach((line) => {
+      out.push(`+ ${line}`);
+    });
+
+    return out.length > 0 ? out.join("\n") : "No changes";
   }
 
   function detectOperationType(oldContent, newContent) {
@@ -452,7 +469,9 @@ function createWorkspaceApiServer(options = {}) {
           : "",
         content: typeof (operation && operation.content) === "string"
           ? operation.content
-          : ""
+          : (typeof (operation && operation.insert) === "string"
+              ? operation.insert
+              : "")
       }))
       .filter((operation) => operation.type.length > 0);
   }
@@ -477,11 +496,20 @@ function createWorkspaceApiServer(options = {}) {
           throw new Error(`replace_once missing find for: ${filePath}`);
         }
 
-        if (!nextContent.includes(operation.find)) {
+        if (nextContent.includes(operation.find)) {
+          nextContent = nextContent.replace(operation.find, operation.replace);
+          return;
+        }
+
+        const normalizedCurrent = nextContent.replace(/\r\n/g, "\n");
+        const normalizedFind = operation.find.replace(/\r\n/g, "\n");
+        const normalizedReplace = operation.replace.replace(/\r\n/g, "\n");
+
+        if (!normalizedCurrent.includes(normalizedFind)) {
           throw new Error(`replace_once anchor not found for: ${filePath}`);
         }
 
-        nextContent = nextContent.replace(operation.find, operation.replace);
+        nextContent = normalizedCurrent.replace(normalizedFind, normalizedReplace);
         return;
       }
 

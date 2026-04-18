@@ -476,5 +476,45 @@
     "queued_files": [
       "web/index.html"
     ]
+  },
+  {
+    "timestamp": "2026-04-18T11:08:32.044Z",
+    "type": "DECISION_PACKET",
+    "decision_packet_id": "workspace_decision_1776510512040",
+    "approver_role": "cto",
+    "required_roles": [
+      "tech_lead",
+      "cto"
+    ],
+    "approval_policy_version": "1.1",
+    "operation_mode": "SINGLE_FILE",
+    "file_count": 1,
+    "total_bytes": 49480,
+    "workspace_id": "personal",
+    "project_id": "forge-personal-autonomous-pipeline",
+    "request": "add a different small comment at the top of web/index.html saying Main web app shell",
+    "queued_files": [
+      "web/index.html"
+    ]
+  },
+  {
+    "timestamp": "2026-04-18T11:09:05.385Z",
+    "type": "DECISION_PACKET",
+    "decision_packet_id": "workspace_decision_1776510545382",
+    "approver_role": "cto",
+    "required_roles": [
+      "tech_lead",
+      "cto"
+    ],
+    "approval_policy_version": "1.1",
+    "operation_mode": "SINGLE_FILE",
+    "file_count": 1,
+    "total_bytes": 49480,
+    "workspace_id": "personal",
+    "project_id": "forge-personal-autonomous-pipeline",
+    "request": "add a different small comment at the top of web/index.html saying Main web app shell",
+    "queued_files": [
+      "web/index.html"
+    ]
   }
 ]
