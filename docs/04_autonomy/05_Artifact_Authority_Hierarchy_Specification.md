@@ -18,7 +18,7 @@ Its purpose is to:
 - Prevent derived-authority violations
 - Define conflict resolution rules
 - Guarantee deterministic governance
-- Bind Cognitive Layer and governed runtime execution to explicit authority sources
+- Bind Cognitive Layer execution to Stage authority
 
 No execution may proceed under ambiguous authority.
 
@@ -88,14 +88,13 @@ NOT governance authorities.
 Carries authoritative Forge self-build continuity, next allowed step, closed-task lineage, and execution integrity.
 
 #### Layer 3B — `artifacts/orchestration/orchestration_state.json`
-Carries authoritative current-run orchestration status for governed runtime execution, including Workspace Runtime execution where implemented.
+Carries authoritative current-run orchestration status for governed runtime execution.
 
 #### Layer 3C — `progress/status.json`
 Carries human-visible status reflection for target-project progress/reporting only.
 
 `progress/status.json` MUST NOT grant execution authority,
 resume authority,
-runtime-lane authority,
 or module-selection authority.
 
 ---
@@ -123,9 +122,8 @@ If two layers conflict:
 
 1. Stage Contracts override everything.
 2. Artifact Schema overrides Cognitive Layer outputs.
-3. Forge authority artifacts override status.json declarations.
-4. Orchestration authority governs runtime-lane execution state where implemented.
-5. Vision cannot override execution contracts.
+3. Artifacts override status.json declarations.
+4. Vision cannot override execution contracts.
 
 If ambiguity remains:
 → Execution MUST enter BLOCKED state
@@ -173,7 +171,7 @@ A Derived Authority Violation occurs when:
 - A task redefines stage behavior
 - A task advances stage without required artifacts
 - status.json declares completion without artifact proof
-- A document contradicts higher authority or implemented governed runtime without escalation
+- A document contradicts higher authority without escalation
 
 If detected:
 → Execution MUST abort.

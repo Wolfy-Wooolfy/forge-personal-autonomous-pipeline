@@ -9,7 +9,7 @@ It introduces:
 - project analysis
 - conversational interaction
 
-While delegating governed execution to Forge Core and, where implemented, to Workspace Runtime.
+While delegating execution strictly to Forge.
 
 ---
 
@@ -35,20 +35,6 @@ AI Layer (NEW)
 * Verify
 
 ```
-
----
-
-## 2.1 Workspace Runtime Extension
-
-A parallel execution layer exists in the implemented system:
-
-- Workspace Runtime
-- Interaction-driven
-- Approval-based
-- File-writing capable
-- Verified through workspace runtime flow
-
-This layer operates alongside Forge Core, but does not replace Forge Core pipeline authority.
 
 ---
 
@@ -143,9 +129,11 @@ User → Chat → Context → Analysis → Proposal Engine → Proposal Output
 
 ### Execution Flow
 
-User Approval → Governed Execution Interface → Either:
-A) Forge Core → Execute → Verify
-B) Workspace Runtime → Execute → Verify
+```
+
+User Approval → Decision Interface → Forge → Execute → Verify
+
+```
 
 ---
 
@@ -158,25 +146,19 @@ B) Workspace Runtime → Execute → Verify
 
 ### Execution Mode
 - requires approval
-- uses governed execution only
-- may use Forge Core or Workspace Runtime depending on runtime path
+- uses Forge only
 
 ---
 
 ## 6. Boundaries
 
 AI Layer:
-- cannot perform ungoverned execution
-- cannot bypass Decision Gate or approval logic
+- cannot write files directly
+- cannot bypass Decision Gate
 
-Forge Core:
+Forge:
 - does not perform reasoning
-- executes approved pipeline-bound actions
-
-Workspace Runtime:
-- executes approved interaction-bound actions
-- must remain traceable and governed
-- must not override Forge Core contracts
+- executes only approved actions
 
 ---
 
@@ -201,11 +183,9 @@ Future extensions may include:
 
 ## 9. Integration Rule
 
-AI Layer MUST integrate with governed execution via:
+AI Layer MUST integrate with Forge via:
 
-- Forge Core execution flow
-- or Workspace Runtime execution flow
-
-No ungoverned file operations are allowed.
+- Decision Packet only
+- No direct file operations allowed
 
 ---

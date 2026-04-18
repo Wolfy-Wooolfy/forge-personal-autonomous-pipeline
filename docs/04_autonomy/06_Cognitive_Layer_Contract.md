@@ -265,30 +265,4 @@ regarding the origin of generative reasoning.
 
 ---
 
-## 12. Workspace Runtime Exception
-
-A governed parallel runtime exists outside the stage-bound Forge pipeline.
-
-This runtime is:
-
-- interaction-driven
-- approval-gated
-- traceable through runtime artifacts
-- separate from stage progression
-
-Its modules may include:
-
-- WORKSPACE_DECISION_GATE
-- WORKSPACE_BACKFILL
-- WORKSPACE_EXECUTE
-- WORKSPACE_VERIFY
-
-This exception:
-
-- does NOT replace Forge Core stage authority
-- does NOT grant unrestricted execution
-- must not interfere with stage-bound pipeline closure
-
----
-
 **END OF DOCUMENT**

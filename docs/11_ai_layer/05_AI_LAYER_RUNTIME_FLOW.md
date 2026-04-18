@@ -29,10 +29,11 @@ User Approval
 ↓
 Decision Interface
 ↓
-Either:
-
-Forge Pipeline → Execute → Verify
-Workspace Runtime → Execute → Verify
+Forge Pipeline
+↓
+Execute
+↓
+Verify
 
 ```
 
@@ -129,22 +130,13 @@ Output:
 
 ---
 
-### Step 9: Governed Execution
+### Step 9: Forge Execution
 
-Execution may proceed through one of the following governed paths:
-
-#### Path A: Forge Execution
 Forge:
 - Decision Gate
 - Backfill
 - Execute
 - Verify
-
-#### Path B: Workspace Runtime Execution
-Workspace Runtime:
-- approval confirmed
-- execution plan applied
-- runtime verification completed
 
 ---
 
@@ -178,7 +170,7 @@ If any step fails:
 - Invalid analysis → STOP
 - Proposal unclear → ASK
 - No approval → BLOCK
-- Verification fails → FAIL
+- Verify fails → FAIL
 
 ---
 
