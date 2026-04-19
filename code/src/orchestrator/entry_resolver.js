@@ -12,6 +12,7 @@ const CLOSURE_REPORT_PATH = path.join(process.cwd(), "artifacts", "closure", "cl
 const VERIFY_RESULTS_PATH = path.join(process.cwd(), "artifacts", "verify", "verification_results.json");
 
 const DECISION_PACKET_PATH = path.join(process.cwd(), "artifacts", "decisions", "decision_packet.json");
+const EXECUTION_PACKAGE_PATH = path.join(process.cwd(), "artifacts", "execute", "execution_package.json");
 const EXECUTE_PLAN_PATH = path.join(process.cwd(), "artifacts", "execute", "execute_plan.json");
 
 function safeReadJson(absPath) {
@@ -174,23 +175,32 @@ function hasLaterClosureAfterGap(pipeline, closureFiles, contiguousClosedIndex) 
 }
 
 function readPendingWorkspaceRuntime() {
-  const packet = safeReadJson(DECISION_PACKET_PATH);
+  const executionPackage = safeReadJson(EXECUTION_PACKAGE_PATH);
 
-  if (!packet || typeof packet !== "object") {
+  if (!executionPackage || typeof executionPackage !== "object") {
     return null;
   }
 
-  if (String(packet.source || "") !== "EXTERNAL_AI_WORKSPACE") {
+  if (String(executionPackage.source || "") !== "EXTERNAL_AI_WORKSPACE") {
     return null;
   }
 
-  const executionId = String(packet.execution_id || "").trim();
+  if (String(executionPackage.handoff_status || "").trim() !== "APPROVED_PENDING_FORGE") {
+    return null;
+  }
+
+  const executionId = String(executionPackage.execution_id || "").trim();
 
   if (!executionId) {
     return null;
   }
 
-  const proposedFiles = Array.isArray(packet.proposed_files) ? packet.proposed_files : [];
+  const proposedFiles =
+    executionPackage &&
+    executionPackage.execution_plan &&
+    Array.isArray(executionPackage.execution_plan.proposed_files)
+      ? executionPackage.execution_plan.proposed_files
+      : [];
 
   if (proposedFiles.length === 0) {
     return null;
@@ -209,7 +219,8 @@ function readPendingWorkspaceRuntime() {
   }
 
   return {
-    execution_id: executionId
+    execution_id: executionId,
+    package_id: String(executionPackage.package_id || "").trim()
   };
 }
 
@@ -256,10 +267,11 @@ function resolveEntry() {
       return {
         entry_type: "WORKSPACE_RUNTIME",
         next_module: "WORKSPACE_RUNTIME",
-        next_task: "WORKSPACE_RUNTIME: APPLY DECISION PACKET",
+        next_task: "WORKSPACE_RUNTIME: APPLY EXECUTION PACKAGE",
         blocked: false,
-        reason: "Pending workspace decision packet detected",
-        workspace_execution_id: pendingWorkspaceRuntime.execution_id
+        reason: "Pending workspace execution package detected",
+        workspace_execution_id: pendingWorkspaceRuntime.execution_id,
+        execution_package_id: pendingWorkspaceRuntime.package_id
       };
     }
 
