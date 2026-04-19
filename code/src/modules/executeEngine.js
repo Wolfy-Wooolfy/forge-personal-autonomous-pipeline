@@ -202,6 +202,14 @@ function runExecute(context) {
         typeof action.workspace_execution_id === "string" && action.workspace_execution_id.trim() !== ""
           ? action.workspace_execution_id.trim()
           : null,
+      workspace_execution_package_id:
+        typeof action.workspace_execution_package_id === "string" && action.workspace_execution_package_id.trim() !== ""
+          ? action.workspace_execution_package_id.trim()
+          : null,
+      workspace_execution_package_path:
+        typeof action.workspace_execution_package_path === "string" && action.workspace_execution_package_path.trim() !== ""
+          ? action.workspace_execution_package_path.trim()
+          : null,
       deterministic_template_used: action.deterministic_template_used === true,
       allow_overwrite: action.allow_overwrite === true,
       wrote_content: wroteContent,
@@ -222,6 +230,14 @@ function runExecute(context) {
     actions.find((action) => typeof action.workspace_execution_id === "string" && action.workspace_execution_id.trim() !== "")
       ?.workspace_execution_id || null;
 
+  const workspaceExecutionPackageId =
+    actions.find((action) => typeof action.workspace_execution_package_id === "string" && action.workspace_execution_package_id.trim() !== "")
+      ?.workspace_execution_package_id || null;
+
+  const workspaceExecutionPackagePath =
+    actions.find((action) => typeof action.workspace_execution_package_path === "string" && action.workspace_execution_package_path.trim() !== "")
+      ?.workspace_execution_package_path || null;
+
   const intakeText = JSON.stringify(intake, null, 2);
   const backfillText = JSON.stringify(backfillPlan, null, 2);
 
@@ -235,7 +251,9 @@ function runExecute(context) {
       backfill_sha256: sha256Text(backfillText),
       intake_context_path: "artifacts/intake/intake_context.json",
       intake_sha256: sha256Text(intakeText),
-      workspace_execution_id: workspaceExecutionId
+      workspace_execution_id: workspaceExecutionId,
+      workspace_execution_package_id: workspaceExecutionPackageId,
+      workspace_execution_package_path: workspaceExecutionPackagePath
     },
     approved_code_actions: executedActions
   };
@@ -249,7 +267,9 @@ function runExecute(context) {
       backfill_sha256: sha256Text(backfillText),
       intake_context_path: "artifacts/intake/intake_context.json",
       intake_sha256: sha256Text(intakeText),
-      workspace_execution_id: workspaceExecutionId
+      workspace_execution_id: workspaceExecutionId,
+      workspace_execution_package_id: workspaceExecutionPackageId,
+      workspace_execution_package_path: workspaceExecutionPackagePath
     },
     actions: executedActions
   };
