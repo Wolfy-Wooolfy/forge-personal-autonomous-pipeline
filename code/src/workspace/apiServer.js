@@ -1378,16 +1378,16 @@ ${trimmedExisting}`
     const proposalId = `ai_proposal_${Date.now()}`;
     const createdAt = new Date().toISOString();
 
+    const projectId =
+      typeof projectIdInput === "string" && projectIdInput.trim() !== ""
+        ? projectIdInput.trim()
+        : "default_project";
+
     const aiProposalsRoot = path.resolve(root, "artifacts", "projects", projectId, "ai", "proposals");
     const aiDraftsRoot = path.resolve(root, "artifacts", "projects", projectId, "ai", "drafts");
 
     ensureDir(aiProposalsRoot);
     ensureDir(aiDraftsRoot);
-
-    const projectId =
-      typeof projectIdInput === "string" && projectIdInput.trim() !== ""
-        ? projectIdInput.trim()
-        : "default_project";
 
     const projectFiles = scanProjectFiles();
     const resolvedTargetFile = resolveTargetFileForRequest(requestText, projectFiles);
@@ -1785,7 +1785,6 @@ function buildExecutionPackage(packet) {
     ensureDir(path.join(llmRoot, "requests"));
     ensureDir(path.join(llmRoot, "responses"));
     ensureDir(path.join(llmRoot, "metadata"));
-    ensureDir(projectDecisionsRoot);
 
     const decisionPacketId = `workspace_decision_${Date.now()}`;
     const workspaceId = "personal";
@@ -1795,6 +1794,9 @@ function buildExecutionPackage(packet) {
         : "default_project";
 
     const projectDecisionsRoot = path.resolve(root, "artifacts", "projects", projectId, "decisions");
+    ensureDir(projectDecisionsRoot);
+
+
 
     const requestPath = path.join(llmRoot, "requests", `${decisionPacketId}.request.json`);
     const responsePath = path.join(llmRoot, "responses", `${decisionPacketId}.response.json`);
