@@ -17,6 +17,35 @@ function ensureDir(absDir) {
   fs.mkdirSync(absDir, { recursive: true });
 }
 
+function markExecutionPackageExecuted(workspaceExecutionPackagePath, executePlanRel) {
+  const relPath = String(workspaceExecutionPackagePath || "").trim();
+
+  if (!relPath) {
+    return;
+  }
+
+  const absPath = path.resolve(ROOT, relPath);
+
+  if (!fs.existsSync(absPath)) {
+    return;
+  }
+
+  const executionPackage = readJson(absPath);
+
+  if (!executionPackage || typeof executionPackage !== "object") {
+    return;
+  }
+
+  executionPackage.handoff_status = "EXECUTED";
+  executionPackage.executed_at = new Date().toISOString();
+  executionPackage.execution_result = {
+    status: "EXECUTED",
+    execute_plan_path: executePlanRel
+  };
+
+  fs.writeFileSync(absPath, JSON.stringify(executionPackage, null, 2), "utf8");
+}
+
 function resolveSafeTargetPath(targetPath) {
   const rel = String(targetPath || "").trim();
 
