@@ -242,9 +242,17 @@ function runVerify(context) {
 
   const workspaceExecutionIdFromDecision =
     decisionGateJson &&
-    decisionGateJson.source &&
-    typeof decisionGateJson.source.decision_packet_execution_id === "string"
-      ? decisionGateJson.source.decision_packet_execution_id
+    Array.isArray(decisionGateJson.approved_actions) &&
+    decisionGateJson.approved_actions.find(
+      (action) =>
+        typeof action.workspace_execution_id === "string" &&
+        action.workspace_execution_id.trim() !== ""
+    )?.workspace_execution_id
+      ? decisionGateJson.approved_actions.find(
+          (action) =>
+            typeof action.workspace_execution_id === "string" &&
+            action.workspace_execution_id.trim() !== ""
+        ).workspace_execution_id
       : "";
 
   const workspaceExecutionIdFromBackfill =
