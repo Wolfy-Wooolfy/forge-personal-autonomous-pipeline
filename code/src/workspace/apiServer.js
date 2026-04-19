@@ -1782,7 +1782,10 @@ function buildExecutionPackage(packet) {
 
     const decisionPacketId = `workspace_decision_${Date.now()}`;
     const workspaceId = "personal";
-    const projectId = path.basename(root);
+    const projectId =
+      typeof draft.project_id === "string" && draft.project_id.trim() !== ""
+        ? draft.project_id.trim()
+        : "default_project";
 
     const requestPath = path.join(llmRoot, "requests", `${decisionPacketId}.request.json`);
     const responsePath = path.join(llmRoot, "responses", `${decisionPacketId}.response.json`);
