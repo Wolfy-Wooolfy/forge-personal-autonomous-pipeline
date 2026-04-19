@@ -978,68 +978,15 @@
         await loadHistory();
         approveBtn.disabled = true;
         rejectBtn.disabled = true;
-        const filePath = activeTurn.draft.files[0].path;
 
-        try {
-          const existing = await requestAPI("/api/ai/read-file", {
-            path: filePath
-          }, "POST");
+        finalizeActiveTurn({
+          finalStatus: "DECISION_CREATED_PENDING_FORGE",
+          decisionPacketId: data.decision_packet_id
+        });
 
-          const oldContent = existing.content || "";
-          const newContent = activeTurn.draft.files[0].content || "";
-
-          if (activeTurn.operationType === "DUPLICATE" || oldContent.includes(newContent.trim())) {
-            finalizeActiveTurn({
-              finalStatus: "EXECUTION_BLOCKED_DUPLICATE_CONTENT",
-              decisionPacketId: data.decision_packet_id
-            });
-            setStatus("Execution blocked: content already exists in file.");
-            return;
-          }
-        } catch (readErr) {
-          if (!String(readErr.message || "").includes("File not found")) {
-            finalizeActiveTurn({
-              finalStatus: "DECISION_CREATED_PRECHECK_FAILED",
-              decisionPacketId: data.decision_packet_id,
-              precheckError: readErr.message
-            });
-            setStatus(`Decision created but execution pre-check failed: ${readErr.message}`);
-            return;
-          }
-        }
-
-        if (activeTurn.operationType === "CREATE") {
-          console.log("Creating new file...");
-        }
-
-        if (activeTurn.operationType === "EXPAND") {
-          console.log("Expanding existing file...");
-        }
-
-        try {
-          await requestAPI("/api/ai/apply-execute-plan", {
-            decision_packet_id: data.decision_packet_id
-          }, "POST");
-
-          finalizeActiveTurn({
-            finalStatus: "EXECUTED",
-            decisionPacketId: data.decision_packet_id
-          });
-
-          setStatus(
-            `Decision + Execution completed.\nPacket ID: ${data.decision_packet_id}`
-          );
-        } catch (execErr) {
-          finalizeActiveTurn({
-            finalStatus: "DECISION_CREATED_EXECUTION_FAILED",
-            decisionPacketId: data.decision_packet_id,
-            executionError: execErr.message
-          });
-
-          setStatus(
-            `Decision created but execution failed: ${execErr.message}`
-          );
-        }
+        setStatus(
+          `Decision packet created successfully.\nPacket ID: ${data.decision_packet_id}\nExecution handoff to Forge is required before any file changes are applied.`
+        );
       } catch (err) {
         setStatus(`Write failed: ${err.message}`);
         approveBtn.disabled = false;

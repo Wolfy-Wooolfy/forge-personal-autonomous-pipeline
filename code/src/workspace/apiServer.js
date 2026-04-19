@@ -2249,23 +2249,11 @@ ${trimmedExisting}`
   }
 
   async function handleApplyExecutePlan(body, res) {
-    const executePlanPath = path.join(
-      root,
-      "artifacts",
-      "execute",
-      "execute_plan.json"
-    );
-
-    const executionPlan = readJsonSafe(executePlanPath, null);
-
-    if (!executionPlan) {
-      sendJson(res, 404, { error: "execute_plan.json not found" });
-      return;
-    }
-
-    const result = applyExecutionPlan(executionPlan);
-
-    sendJson(res, 200, result);
+    sendJson(res, 409, {
+      ok: false,
+      error: "CONVERSATION_EXECUTION_BLOCKED",
+      message: "Direct execution from conversation/workspace is blocked. Approved execution must be handed off to Forge through an approved execution package."
+    });
   }
 
   const server = http.createServer(async (req, res) => {
