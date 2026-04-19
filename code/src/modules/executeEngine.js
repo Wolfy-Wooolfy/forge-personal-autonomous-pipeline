@@ -334,6 +334,11 @@ function runExecute(context) {
 
   fs.writeFileSync(executeLogPath, logLines.join("\n"));
 
+    markExecutionPackageExecuted(
+    workspaceExecutionPackagePath,
+    "artifacts/execute/execute_plan.json"
+  );
+
   return {
     stage_progress_percent: 100,
     blocked: false,

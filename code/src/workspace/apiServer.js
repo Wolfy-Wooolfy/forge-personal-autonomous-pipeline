@@ -1638,7 +1638,7 @@ function buildExecutionPackage(packet) {
     created_at: new Date().toISOString(),
     source: "EXTERNAL_AI_WORKSPACE",
     handoff_status: "APPROVED_PENDING_FORGE",
-    project_id: String(packet && packet.project_id ? packet.project_id : ""),
+    project_id: String(packet && packet.project_id ? packet.project_id : "default_project"),
     execution_id: String(packet && packet.execution_id ? packet.execution_id : ""),
     approved_scope: {
       summary: String(packet && packet.context_summary ? packet.context_summary : ""),
