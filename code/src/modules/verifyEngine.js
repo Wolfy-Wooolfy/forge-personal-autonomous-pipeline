@@ -215,19 +215,25 @@ function runVerify(context) {
     }
   } catch (e) {}
 
-  const decisionPacketRel = "artifacts/decisions/decision_packet.json";
-  let decisionPacketJson = null;
+  const executionPackageRel = "artifacts/execute/execution_package.json";
+  let executionPackageJson = null;
 
   try {
-    if (fileExists(decisionPacketRel)) {
-      decisionPacketJson = readJson(decisionPacketRel);
+    if (fileExists(executionPackageRel)) {
+      executionPackageJson = readJson(executionPackageRel);
     }
   } catch (e) {}
 
-  const currentDecisionPacketExecutionId =
-    decisionPacketJson &&
-    typeof decisionPacketJson.execution_id === "string"
-      ? decisionPacketJson.execution_id
+  const currentExecutionPackageId =
+    executionPackageJson &&
+    typeof executionPackageJson.package_id === "string"
+      ? executionPackageJson.package_id
+      : "";
+
+  const currentExecutionPackageExecutionId =
+    executionPackageJson &&
+    typeof executionPackageJson.execution_id === "string"
+      ? executionPackageJson.execution_id
       : "";
 
   const decisionApprovedActions = Array.isArray(decisionGateJson && decisionGateJson.approved_actions)
@@ -255,10 +261,64 @@ function runVerify(context) {
       ? executePlan.source.workspace_execution_id
       : "";
 
+  const workspaceExecutionPackageIdFromDecision =
+    decisionGateJson &&
+    decisionGateJson.source &&
+    typeof decisionGateJson.source.execution_package_id === "string"
+      ? decisionGateJson.source.execution_package_id
+      : "";
+
+  const workspaceExecutionPackagePathFromDecision =
+    decisionGateJson &&
+    decisionGateJson.source &&
+    typeof decisionGateJson.source.execution_package_path === "string"
+      ? decisionGateJson.source.execution_package_path
+      : "";
+
+  const workspaceExecutionPackageIdFromBackfill =
+    backfillPlan &&
+    backfillPlan.source &&
+    typeof backfillPlan.source.workspace_execution_package_id === "string"
+      ? backfillPlan.source.workspace_execution_package_id
+      : "";
+
+  const workspaceExecutionPackagePathFromBackfill =
+    backfillPlan &&
+    backfillPlan.source &&
+    typeof backfillPlan.source.workspace_execution_package_path === "string"
+      ? backfillPlan.source.workspace_execution_package_path
+      : "";
+
+  const workspaceExecutionPackageIdFromExecute =
+    executePlan &&
+    executePlan.source &&
+    typeof executePlan.source.workspace_execution_package_id === "string"
+      ? executePlan.source.workspace_execution_package_id
+      : "";
+
+  const workspaceExecutionPackagePathFromExecute =
+    executePlan &&
+    executePlan.source &&
+    typeof executePlan.source.workspace_execution_package_path === "string"
+      ? executePlan.source.workspace_execution_package_path
+      : "";
+
   const activeWorkspaceExecutionId =
     workspaceExecutionIdFromExecute ||
     workspaceExecutionIdFromBackfill ||
     workspaceExecutionIdFromDecision ||
+    "";
+
+  const activeWorkspaceExecutionPackageId =
+    workspaceExecutionPackageIdFromExecute ||
+    workspaceExecutionPackageIdFromBackfill ||
+    workspaceExecutionPackageIdFromDecision ||
+    "";
+
+  const activeWorkspaceExecutionPackagePath =
+    workspaceExecutionPackagePathFromExecute ||
+    workspaceExecutionPackagePathFromBackfill ||
+    workspaceExecutionPackagePathFromDecision ||
     "";
 
   addCheck(
@@ -282,16 +342,45 @@ function runVerify(context) {
   );
 
   addCheck(
-    "workspace_runtime_matches_current_decision_packet",
-    currentDecisionPacketExecutionId === "" ||
+    "workspace_runtime_matches_current_execution_package",
+    currentExecutionPackageExecutionId === "" ||
       (
-        workspaceExecutionIdFromDecision === currentDecisionPacketExecutionId &&
-        workspaceExecutionIdFromBackfill === currentDecisionPacketExecutionId &&
-        workspaceExecutionIdFromExecute === currentDecisionPacketExecutionId
+        workspaceExecutionIdFromDecision === currentExecutionPackageExecutionId &&
+        workspaceExecutionIdFromBackfill === currentExecutionPackageExecutionId &&
+        workspaceExecutionIdFromExecute === currentExecutionPackageExecutionId
       ),
-    currentDecisionPacketExecutionId === ""
-      ? "No current workspace decision_packet.json"
-      : `current_decision_packet=${currentDecisionPacketExecutionId}; decision_gate=${workspaceExecutionIdFromDecision || "NONE"}; backfill=${workspaceExecutionIdFromBackfill || "NONE"}; execute=${workspaceExecutionIdFromExecute || "NONE"}`
+    currentExecutionPackageExecutionId === ""
+      ? "No current workspace execution_package.json"
+      : `current_execution_package_execution_id=${currentExecutionPackageExecutionId}; decision_gate=${workspaceExecutionIdFromDecision || "NONE"}; backfill=${workspaceExecutionIdFromBackfill || "NONE"}; execute=${workspaceExecutionIdFromExecute || "NONE"}`
+  );
+
+  addCheck(
+    "workspace_execution_package_identity_consistent",
+    activeWorkspaceExecutionPackageId !== "" &&
+      activeWorkspaceExecutionPackagePath !== "" &&
+      workspaceExecutionPackageIdFromDecision === activeWorkspaceExecutionPackageId &&
+      workspaceExecutionPackageIdFromBackfill === activeWorkspaceExecutionPackageId &&
+      workspaceExecutionPackageIdFromExecute === activeWorkspaceExecutionPackageId &&
+      workspaceExecutionPackagePathFromDecision === activeWorkspaceExecutionPackagePath &&
+      workspaceExecutionPackagePathFromBackfill === activeWorkspaceExecutionPackagePath &&
+      workspaceExecutionPackagePathFromExecute === activeWorkspaceExecutionPackagePath,
+    `decision_package_id=${workspaceExecutionPackageIdFromDecision || "NONE"}; backfill_package_id=${workspaceExecutionPackageIdFromBackfill || "NONE"}; execute_package_id=${workspaceExecutionPackageIdFromExecute || "NONE"}; decision_package_path=${workspaceExecutionPackagePathFromDecision || "NONE"}; backfill_package_path=${workspaceExecutionPackagePathFromBackfill || "NONE"}; execute_package_path=${workspaceExecutionPackagePathFromExecute || "NONE"}`
+  );
+
+  addCheck(
+    "workspace_execution_package_matches_current_artifact",
+    currentExecutionPackageId === "" ||
+      (
+        workspaceExecutionPackageIdFromDecision === currentExecutionPackageId &&
+        workspaceExecutionPackageIdFromBackfill === currentExecutionPackageId &&
+        workspaceExecutionPackageIdFromExecute === currentExecutionPackageId &&
+        workspaceExecutionPackagePathFromDecision === executionPackageRel &&
+        workspaceExecutionPackagePathFromBackfill === executionPackageRel &&
+        workspaceExecutionPackagePathFromExecute === executionPackageRel
+      ),
+    currentExecutionPackageId === ""
+      ? "No current workspace execution_package.json"
+      : `current_execution_package_id=${currentExecutionPackageId}; decision_gate=${workspaceExecutionPackageIdFromDecision || "NONE"}; backfill=${workspaceExecutionPackageIdFromBackfill || "NONE"}; execute=${workspaceExecutionPackageIdFromExecute || "NONE"}`
   );
 
   addCheck(
