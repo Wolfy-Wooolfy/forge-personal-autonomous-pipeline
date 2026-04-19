@@ -1378,8 +1378,8 @@ ${trimmedExisting}`
     const proposalId = `ai_proposal_${Date.now()}`;
     const createdAt = new Date().toISOString();
 
-    const aiProposalsRoot = path.resolve(aiRoot, "proposals");
-    const aiDraftsRoot = path.resolve(aiRoot, "drafts");
+    const aiProposalsRoot = path.resolve(root, "artifacts", "projects", projectId, "ai", "proposals");
+    const aiDraftsRoot = path.resolve(root, "artifacts", "projects", projectId, "ai", "drafts");
 
     ensureDir(aiProposalsRoot);
     ensureDir(aiDraftsRoot);
@@ -1547,8 +1547,8 @@ ${trimmedExisting}`
       ready_for_decision: false
     };
 
-    const proposalRel = `artifacts/ai/proposals/${proposalId}.proposal.json`;
-    const draftRel = `artifacts/ai/drafts/${proposalId}.draft.json`;
+    const proposalRel = `artifacts/projects/${projectId}/ai/proposals/${proposalId}.proposal.json`;
+    const draftRel = `artifacts/projects/${projectId}/ai/drafts/${proposalId}.draft.json`;
 
     fs.writeFileSync(path.resolve(root, proposalRel), JSON.stringify(proposalArtifact, null, 2));
     fs.writeFileSync(path.resolve(root, draftRel), JSON.stringify(draftArtifact, null, 2));
