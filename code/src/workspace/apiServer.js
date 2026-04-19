@@ -1374,7 +1374,7 @@ ${trimmedExisting}`
     };
   }
 
-  function buildAiProposalArtifacts(requestText, providerOutput = null) {
+  function buildAiProposalArtifacts(requestText, providerOutput = null, projectIdInput = "") {
     const proposalId = `ai_proposal_${Date.now()}`;
     const createdAt = new Date().toISOString();
 
@@ -1384,7 +1384,10 @@ ${trimmedExisting}`
     ensureDir(aiProposalsRoot);
     ensureDir(aiDraftsRoot);
 
-    const projectId = "default_project";
+    const projectId =
+      typeof projectIdInput === "string" && projectIdInput.trim() !== ""
+        ? projectIdInput.trim()
+        : "default_project";
 
     const projectFiles = scanProjectFiles();
     const resolvedTargetFile = resolveTargetFileForRequest(requestText, projectFiles);
@@ -2160,6 +2163,9 @@ function buildExecutionPackage(packet) {
   async function handlePropose(body, res) {
     const requestText = typeof body.request === "string" ? body.request.trim() : "";
 
+    const projectId =
+      typeof body.project_id === "string" ? body.project_id.trim() : "";
+
     const interpretation = interpretUserIntent(requestText);
 
     if (
@@ -2227,7 +2233,8 @@ function buildExecutionPackage(packet) {
 
     const result = buildAiProposalArtifacts(
       interpretation.normalized_request,
-      providerResult.output || null
+      providerResult.output || null,
+      projectId
     );
 
     result.interpretation = interpretation;
