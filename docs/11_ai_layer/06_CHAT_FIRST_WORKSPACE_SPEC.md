@@ -156,7 +156,7 @@ AI controls:
   - Analyze
   - Draft
   - Proposal
-  - Execute
+  - Execution Preparation
 
 - Flow management:
   - No dependency on UI buttons
@@ -176,7 +176,7 @@ The following are considered LEGACY:
 
 They must be replaced by:
 
-- AI-driven execution flow
+- AI-driven conversation and execution handoff flow
 
 ---
 
