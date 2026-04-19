@@ -88,9 +88,9 @@ Instead:
 
 - User writes request
 - AI understands intent
-- AI decides next step
+- AI proposes next step
 - AI asks when blocked
-- AI executes or proposes
+- AI prepares execution candidates or proposals
 
 ---
 
@@ -144,7 +144,7 @@ AI must:
 - Explain actions
 - Ask when ambiguous
 - Provide choices when needed
-- Propose or execute actions
+- Propose actions or prepare execution candidates
 
 ---
 
@@ -207,30 +207,21 @@ If user writes English:
 AI must:
 
 - Propose (Proposal)
-OR
-- Execute directly (Auto Execution)
-
-Based on:
-
-- Risk level
-- Approval policy
-
----
-
-### ⚠️ EXECUTION CONSTRAINT
-
-AI execution MUST NOT bypass tools.
-
-AI must:
-
-- Select tool
-- Call tool
-- Receive result
+- Prepare execution candidates
+- Prepare execution package inputs
 
 AI must NOT:
 
-- Execute logic directly
-- Modify system state outside tools
+- execute directly
+- perform auto execution
+- bypass user approval
+- bypass Forge
+
+Execution may only happen when:
+
+- user explicitly approves
+- execution package is complete
+- handoff is sent to Forge
 
 ---
 
@@ -279,6 +270,19 @@ Before implementing ANY item above:
 Otherwise:
 
 Implementation is INVALID and must STOP.
+
+---
+
+## Runtime Behavior Alignment
+
+This document is governed by:
+
+docs/12_ai_os/19_AI_OS_RUNTIME_BEHAVIOR_CONTRACT.md
+
+If any behavior here conflicts with runtime behavior rules:
+
+- Runtime contract MUST override
+- This document must be interpreted as UX-only
 
 ---
 

@@ -162,13 +162,41 @@ Forge:
 
 ---
 
-## 7. Extension Points
+## 7. Core Capabilities (Not Extensions)
 
-Future extensions may include:
-- multi-agent reasoning
-- advanced LLM integration
-- project memory system
-- long-term context storage
+The following are core parts of the AI Layer and not optional extensions:
+
+### 7.1 Project Memory System
+
+The system must:
+
+- persist project state across sessions
+- maintain decisions, docs, and execution status
+- restore context when a project is reopened
+
+### 7.2 Long-Term Context Handling
+
+The system must:
+
+- maintain structured context per project
+- prevent context loss between sessions
+- support version tracking and rollback
+
+### 7.3 Multi-Project Awareness
+
+The system must:
+
+- isolate memory per project
+- allow switching between projects
+- maintain active project context at all times
+
+### 7.4 Behavioral Consistency
+
+All AI Layer behavior must align with:
+
+docs/12_ai_os/19_AI_OS_RUNTIME_BEHAVIOR_CONTRACT.md
+
+No capability may violate that contract.
 
 ---
 
