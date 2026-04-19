@@ -212,6 +212,8 @@ function runBackfill(context) {
         impact_scope: String(row.impact_scope || ""),
         requires_decision: Boolean(row.requires_decision),
         workspace_execution_id: typeof row.workspace_execution_id === "string" ? row.workspace_execution_id : "",
+        workspace_execution_package_id: typeof row.workspace_execution_package_id === "string" ? row.workspace_execution_package_id : "",
+        workspace_execution_package_path: typeof row.workspace_execution_package_path === "string" ? row.workspace_execution_package_path : "",
         workspace_response_path: typeof row.workspace_response_path === "string" ? row.workspace_response_path : "",
         workspace_allow_overwrite: row.workspace_allow_overwrite === true,
         workspace_expected_sha256: typeof row.workspace_expected_sha256 === "string" ? row.workspace_expected_sha256 : "",
@@ -250,7 +252,13 @@ function runBackfill(context) {
       intake_context_sha256: sha256Text(intakeText),
       workspace_execution_id:
         items.find((item) => typeof item.workspace_execution_id === "string" && item.workspace_execution_id.trim() !== "")
-          ?.workspace_execution_id || null
+          ?.workspace_execution_id || null,
+      workspace_execution_package_id:
+        items.find((item) => typeof item.workspace_execution_package_id === "string" && item.workspace_execution_package_id.trim() !== "")
+          ?.workspace_execution_package_id || null,
+      workspace_execution_package_path:
+        items.find((item) => typeof item.workspace_execution_package_path === "string" && item.workspace_execution_package_path.trim() !== "")
+          ?.workspace_execution_package_path || null
     },
     approved_code_actions: items
       .map((item) => {
@@ -287,6 +295,8 @@ function runBackfill(context) {
           allow_overwrite: item.workspace_allow_overwrite === true,
           expected_sha256: item.workspace_expected_sha256 || null,
           workspace_execution_id: item.workspace_execution_id || null,
+          workspace_execution_package_id: item.workspace_execution_package_id || null,
+          workspace_execution_package_path: item.workspace_execution_package_path || null,
           source_type: item.workspace_source || "FORGE"
         };
       })
