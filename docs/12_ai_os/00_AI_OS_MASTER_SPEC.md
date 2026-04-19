@@ -752,7 +752,7 @@ When a user asks to review a project, the operating system must enter review mod
 ### 17.3 Review-to-Execution Bridge
 
 The review output must not directly trigger execution.
-It must first be converted into user-visible options or approved tasks.
+It must first be converted into user-visible options, approved tasks, or approved execution package updates.
 
 ---
 

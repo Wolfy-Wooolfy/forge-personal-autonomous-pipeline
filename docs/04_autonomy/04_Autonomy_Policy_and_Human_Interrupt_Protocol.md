@@ -34,8 +34,6 @@ while guaranteeing:
 
 Autonomy in this system means **execution independence ONLY**.
 
-Autonomy grants the system the ability to:
-
 This autonomy applies to Forge execution only.
 
 It does NOT grant autonomy to:
@@ -46,6 +44,8 @@ It does NOT grant autonomy to:
 - execution approval
 
 All of the above remain subject to explicit user confirmation and the runtime behavior contract.
+
+Autonomy grants the system the ability to:
 
 - Execute already-approved steps
 - Apply deterministic rules
