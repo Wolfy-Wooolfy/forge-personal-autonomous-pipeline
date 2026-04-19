@@ -1540,25 +1540,6 @@ ${trimmedExisting}`
       ready_for_decision: false
     };
 
-    const executionPlan = buildExecutionPlanFromDraft(
-      draftArtifact,
-      proposalId
-    );
-
-    const executePlanPath = path.join(
-      root,
-      "artifacts",
-      "execute",
-      "execute_plan.json"
-    );
-
-    fs.mkdirSync(path.dirname(executePlanPath), { recursive: true });
-    fs.writeFileSync(
-      executePlanPath,
-      JSON.stringify(executionPlan, null, 2),
-      "utf8"
-    );
-
     const proposalRel = `artifacts/ai/proposals/${proposalId}.proposal.json`;
     const draftRel = `artifacts/ai/drafts/${proposalId}.draft.json`;
 
