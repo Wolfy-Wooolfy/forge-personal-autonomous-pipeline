@@ -556,5 +556,25 @@
     "queued_files": [
       "web/index.html"
     ]
+  },
+  {
+    "timestamp": "2026-04-19T19:06:09.189Z",
+    "type": "DECISION_PACKET",
+    "decision_packet_id": "workspace_decision_1776625569174",
+    "approver_role": "cto",
+    "required_roles": [
+      "tech_lead",
+      "cto"
+    ],
+    "approval_policy_version": "1.1",
+    "operation_mode": "SINGLE_FILE",
+    "file_count": 1,
+    "total_bytes": 46873,
+    "workspace_id": "personal",
+    "project_id": "default_project",
+    "request": "edit this file to add logging",
+    "queued_files": [
+      "web/index.html"
+    ]
   }
 ]

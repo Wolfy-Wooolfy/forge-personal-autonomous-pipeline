@@ -2266,8 +2266,29 @@ function buildExecutionPackage(packet) {
       return;
     }
 
-    const draftPath = path.resolve(root, "artifacts/ai/drafts", `${proposalId}.draft.json`);
-    const proposalPath = path.resolve(root, "artifacts/ai/proposals", `${proposalId}.proposal.json`);
+    const projectId =
+      typeof body.project_id === "string" && body.project_id.trim() !== ""
+        ? body.project_id.trim()
+        : "default_project";
+
+    const draftPath = path.resolve(
+      root,
+      "artifacts",
+      "projects",
+      projectId,
+      "ai",
+      "drafts",
+      `${proposalId}.draft.json`
+    );
+    const proposalPath = path.resolve(
+      root,
+      "artifacts",
+      "projects",
+      projectId,
+      "ai",
+      "proposals",
+      `${proposalId}.proposal.json`
+    );
 
     if (!fs.existsSync(draftPath)) {
       sendJson(res, 404, { error: "Draft not found" });
