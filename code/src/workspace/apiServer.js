@@ -1384,6 +1384,8 @@ ${trimmedExisting}`
     ensureDir(aiProposalsRoot);
     ensureDir(aiDraftsRoot);
 
+    const projectId = "default_project";
+
     const projectFiles = scanProjectFiles();
     const resolvedTargetFile = resolveTargetFileForRequest(requestText, projectFiles);
     const targetAbsPath = path.resolve(root, resolvedTargetFile);
@@ -1516,6 +1518,7 @@ ${trimmedExisting}`
 
     const proposalArtifact = {
       proposal_id: proposalId,
+      project_id: projectId,
       created_at: createdAt,
       mode: "PROPOSAL",
       request: requestText || "General proposal request",
@@ -1533,6 +1536,7 @@ ${trimmedExisting}`
 
     const draftArtifact = {
       draft_id: proposalId,
+      project_id: projectId,
       created_at: createdAt,
       mode: "PROPOSAL",
       files: generatedFiles,
