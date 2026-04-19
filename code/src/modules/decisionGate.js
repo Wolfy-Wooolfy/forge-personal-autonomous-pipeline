@@ -234,30 +234,39 @@ function resolveCognitivePriorityHint(row, cognitiveTrace) {
   return null;
 }
 
-function readDecisionPacketBundle() {
-  const packetAbs = path.resolve(ROOT, "artifacts", "decisions", "decision_packet.json");
+function readExecutionPackageBundle() {
+  const packageAbs = path.resolve(ROOT, "artifacts", "execute", "execution_package.json");
 
-  if (!fs.existsSync(packetAbs)) {
+  if (!fs.existsSync(packageAbs)) {
     return null;
   }
 
-  const packet = readJson(packetAbs);
+  const executionPackage = readJson(packageAbs);
 
-  if (!packet || typeof packet !== "object") {
+  if (!executionPackage || typeof executionPackage !== "object") {
     return null;
   }
 
-  if (String(packet.source || "") !== "EXTERNAL_AI_WORKSPACE") {
+  if (String(executionPackage.source || "") !== "EXTERNAL_AI_WORKSPACE") {
     return null;
   }
 
-  const proposedFiles = Array.isArray(packet.proposed_files) ? packet.proposed_files : [];
+  if (String(executionPackage.handoff_status || "").trim() !== "APPROVED_PENDING_FORGE") {
+    return null;
+  }
+
+  const proposedFiles =
+    executionPackage &&
+    executionPackage.execution_plan &&
+    Array.isArray(executionPackage.execution_plan.proposed_files)
+      ? executionPackage.execution_plan.proposed_files
+      : [];
 
   if (proposedFiles.length === 0) {
     return null;
   }
 
-  const executionId = String(packet.execution_id || "").trim();
+  const executionId = String(executionPackage.execution_id || "").trim();
 
   if (!executionId) {
     return null;
@@ -267,18 +276,22 @@ function readDecisionPacketBundle() {
   const responseAbs = path.resolve(ROOT, responseRel);
 
   return {
-    packet,
-    packetAbs,
-    packetText: JSON.stringify(packet, null, 2),
+    executionPackage,
+    packageAbs,
+    packageText: JSON.stringify(executionPackage, null, 2),
     responseRel,
     responseAbs
   };
 }
 
-function flattenDecisionPacketActions(bundle) {
-  const files = Array.isArray(bundle && bundle.packet && bundle.packet.proposed_files)
-    ? bundle.packet.proposed_files
-    : [];
+function flattenExecutionPackageActions(bundle) {
+  const files =
+    bundle &&
+    bundle.executionPackage &&
+    bundle.executionPackage.execution_plan &&
+    Array.isArray(bundle.executionPackage.execution_plan.proposed_files)
+      ? bundle.executionPackage.execution_plan.proposed_files
+      : [];
 
   return files
     .map((file, index) => ({
@@ -287,7 +300,7 @@ function flattenDecisionPacketActions(bundle) {
       severity: "MEDIUM",
       affected_entities: [String(file && file.path ? file.path : "")],
       action_id: `WORKSPACE_ACTION_${index + 1}`,
-      description: `Apply governed workspace draft to ${String(file && file.path ? file.path : "")}`,
+      description: `Apply governed workspace execution package to ${String(file && file.path ? file.path : "")}`,
       impact_scope: "CODE_WRITE",
       requires_decision: false,
       _gap: {},
@@ -384,7 +397,7 @@ function renderDecisionMd(payload) {
 function runDecisionGate(context) {
   const explorationMatrixAbs = path.resolve(ROOT, "artifacts", "exploration", "option_matrix.json");
   const intakeContextAbs = path.resolve(ROOT, "artifacts", "intake", "intake_context.json");
-  const workspaceBundle = readDecisionPacketBundle();
+  const workspaceBundle = readExecutionPackageBundle();
 
   if (!workspaceBundle && !fs.existsSync(explorationMatrixAbs)) {
     return {
@@ -457,7 +470,7 @@ function runDecisionGate(context) {
   const decisionMdAbs = path.resolve(ROOT, relDecisionMd);
 
   if (workspaceBundle) {
-    const flatActions = flattenDecisionPacketActions(workspaceBundle);
+    const flatActions = flattenExecutionPackageActions(workspaceBundle);
     const intakeText = JSON.stringify(intakeContext, null, 2);
     const stamp = new Date().toISOString();
 
@@ -473,7 +486,7 @@ function runDecisionGate(context) {
       cognitive_priority_hint: resolveCognitivePriorityHint(row, traceCognitivePayload),
       reason: "governed workspace decision packet approved",
       workspace_source: "EXTERNAL_AI_WORKSPACE",
-      workspace_execution_id: String(workspaceBundle.packet.execution_id || ""),
+      workspace_execution_id: String(workspaceBundle.executionPackage.execution_id || ""),
       workspace_response_path: row._workspace.response_path,
       workspace_allow_overwrite: row._workspace.allow_overwrite,
       workspace_expected_sha256: row._workspace.expected_sha256,
@@ -491,10 +504,11 @@ function runDecisionGate(context) {
       override_source: decision.source,
       override_raw: decision.raw,
       source: {
-        source_type: "DECISION_PACKET",
-        decision_packet_path: "artifacts/decisions/decision_packet.json",
-        decision_packet_execution_id: String(workspaceBundle.packet.execution_id || ""),
-        decision_packet_sha256: sha256Text(workspaceBundle.packetText),
+        source_type: "EXECUTION_PACKAGE",
+        execution_package_path: "artifacts/execute/execution_package.json",
+        execution_package_id: String(workspaceBundle.executionPackage.package_id || ""),
+        execution_package_execution_id: String(workspaceBundle.executionPackage.execution_id || ""),
+        execution_package_sha256: sha256Text(workspaceBundle.packageText),
         workspace_response_path: workspaceBundle.responseRel,
         intake_context_path: "artifacts/intake/intake_context.json",
         intake_context_sha256: sha256Text(intakeText)
