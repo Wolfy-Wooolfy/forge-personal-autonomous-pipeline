@@ -1628,6 +1628,78 @@ ${trimmedExisting}`
     return lines.join("\n");
   }
 
+function buildExecutionPackage(packet) {
+  const proposedFiles = Array.isArray(packet && packet.proposed_files)
+    ? packet.proposed_files
+    : [];
+
+  return {
+    package_id: `execution_package_${Date.now()}`,
+    created_at: new Date().toISOString(),
+    source: "EXTERNAL_AI_WORKSPACE",
+    handoff_status: "APPROVED_PENDING_FORGE",
+    project_id: String(packet && packet.project_id ? packet.project_id : ""),
+    execution_id: String(packet && packet.execution_id ? packet.execution_id : ""),
+    approved_scope: {
+      summary: String(packet && packet.context_summary ? packet.context_summary : ""),
+      operation_mode:
+        packet && packet.operation && typeof packet.operation.mode === "string"
+          ? packet.operation.mode
+          : "",
+      file_count:
+        packet && packet.operation && Number.isInteger(packet.operation.file_count)
+          ? packet.operation.file_count
+          : proposedFiles.length
+    },
+    target_project_path: root,
+    requested_outputs: proposedFiles.map((file) => `Apply approved change to ${String(file && file.path ? file.path : "")}`),
+    file_or_artifact_targets: proposedFiles.map((file) => String(file && file.path ? file.path : "")),
+    dependency_assumptions: [],
+    risk_notes: proposedFiles.length > 1 ? ["MULTI_FILE_CHANGESET"] : [],
+    execution_approval_reference: {
+      decision_packet_json: "artifacts/decisions/decision_packet.json",
+      decision_packet_md: "artifacts/decisions/decision_packet.md",
+      approved_by_role:
+        packet && packet.approval && typeof packet.approval.approved_by_role === "string"
+          ? packet.approval.approved_by_role
+          : "",
+      approved_at:
+        packet && packet.approval && typeof packet.approval.approved_at === "string"
+          ? packet.approval.approved_at
+          : ""
+    },
+    finalized_documentation_set: [
+      "artifacts/decisions/decision_packet.json",
+      "artifacts/decisions/decision_packet.md"
+    ],
+    execution_plan: {
+      mode:
+        packet && packet.operation && typeof packet.operation.mode === "string"
+          ? packet.operation.mode
+          : "",
+      file_count:
+        packet && packet.operation && Number.isInteger(packet.operation.file_count)
+          ? packet.operation.file_count
+          : proposedFiles.length,
+      proposed_files: proposedFiles.map((file) => ({
+        path: String(file && file.path ? file.path : ""),
+        allow_overwrite: !!(file && file.allow_overwrite === true),
+        sha256: String(file && file.sha256 ? file.sha256 : ""),
+        required_roles: Array.isArray(file && file.required_roles) ? file.required_roles : [],
+        diff: String(file && file.diff ? file.diff : "")
+      }))
+    },
+    business_and_scope_decisions: {
+      confirmation_required_format:
+        typeof (packet && packet.confirmation_required_format) === "string"
+          ? packet.confirmation_required_format
+          : "",
+      context_summary: String(packet && packet.context_summary ? packet.context_summary : ""),
+      options: Array.isArray(packet && packet.options) ? packet.options : []
+    }
+  };
+}
+
   function getRecentWrites(limit = 10) {
     const metadataDir = path.join(llmRoot, "metadata");
 
@@ -1784,6 +1856,12 @@ ${trimmedExisting}`
     fs.writeFileSync(decisionPacketJsonAbs, JSON.stringify(packet, null, 2));
     fs.writeFileSync(decisionPacketMdAbs, renderDecisionPacketMd(packet));
 
+    const executionPackageAbs = path.resolve(root, "artifacts", "execute", "execution_package.json");
+    const executionPackage = buildExecutionPackage(packet);
+
+    fs.mkdirSync(path.dirname(executionPackageAbs), { recursive: true });
+    fs.writeFileSync(executionPackageAbs, JSON.stringify(executionPackage, null, 2));
+
     const result = {
       ok: true,
       entry_type: "DECISION_PACKET",
@@ -1797,6 +1875,9 @@ ${trimmedExisting}`
       decision_packet_paths: [
         "artifacts/decisions/decision_packet.json",
         "artifacts/decisions/decision_packet.md"
+      ],
+      execution_package_paths: [
+        "artifacts/execute/execution_package.json"
       ],
       queued_files: normalizedFiles.map((file) => file.path),
       summary: typeof draft.summary === "string" ? draft.summary : "Decision packet created successfully.",
