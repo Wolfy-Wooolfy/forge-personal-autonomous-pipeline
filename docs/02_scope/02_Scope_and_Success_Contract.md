@@ -15,10 +15,10 @@ for the Forge.
 
 Its purpose is to:
 - Prevent scope creep
-- Eliminate ambiguity during autonomous execution
+- Eliminate ambiguity during governed execution
 - Define what “done” actually means
-- Protect the user from unnecessary interruptions
-- Enable long-running autonomous work without supervision
+- Protect the user from unnecessary execution drift
+- Enable long-running Forge execution after approval and scope lock
 
 This contract is **binding** on all pipeline stages and agents.
 

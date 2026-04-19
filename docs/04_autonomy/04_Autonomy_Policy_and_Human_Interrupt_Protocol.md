@@ -36,6 +36,17 @@ Autonomy in this system means **execution independence ONLY**.
 
 Autonomy grants the system the ability to:
 
+This autonomy applies to Forge execution only.
+
+It does NOT grant autonomy to:
+- the Companion AI OS conversation layer
+- ideation
+- business reasoning
+- documentation approval
+- execution approval
+
+All of the above remain subject to explicit user confirmation and the runtime behavior contract.
+
 - Execute already-approved steps
 - Apply deterministic rules
 - Produce artifacts

@@ -4,18 +4,20 @@
 **Status:** Authoritative – v1  
 **Scope:** Personal / Non-Commercial  
 **Owner:** Khaled Elmasry  
-**Execution Model:** Autonomous-first, Human-on-demand  
+**Execution Model:** Companion-guided, Forge-executed  
 
 ---
 
 ## 1. Purpose of This System
 
-Forge is a **self-operating execution system** designed to transform any task into a **fully completed, verified, and traceable outcome** with minimal human intervention.
+Forge is a **governed execution system** designed to transform approved execution packages into **fully completed, verified, and traceable outcomes**.
+
+Human interaction happens primarily through the Companion AI OS layer, while Forge remains responsible for deterministic execution, verification, and closure.
 
 The system exists to eliminate:
 - Fragmentation between ideas, documents, code, and verification
-- Repetitive clarification cycles
-- Execution stalls caused by continuous human approval
+- Unstructured clarification cycles
+- Execution drift caused by unclear approval boundaries
 - Loss of progress visibility
 
 ### Companion vs Forge Operating Boundary
