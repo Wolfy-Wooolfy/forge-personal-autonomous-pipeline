@@ -1664,8 +1664,8 @@ function buildExecutionPackage(packet) {
     dependency_assumptions: [],
     risk_notes: proposedFiles.length > 1 ? ["MULTI_FILE_CHANGESET"] : [],
     execution_approval_reference: {
-      decision_packet_json: "artifacts/decisions/decision_packet.json",
-      decision_packet_md: "artifacts/decisions/decision_packet.md",
+      decision_packet_json: `artifacts/projects/${String(packet && packet.project_id ? packet.project_id : "default_project")}/decisions/decision_packet.json`,
+      decision_packet_md: `artifacts/projects/${String(packet && packet.project_id ? packet.project_id : "default_project")}/decisions/decision_packet.md`,
       approved_by_role:
         packet && packet.approval && typeof packet.approval.approved_by_role === "string"
           ? packet.approval.approved_by_role
@@ -1676,8 +1676,8 @@ function buildExecutionPackage(packet) {
           : ""
     },
     finalized_documentation_set: [
-      "artifacts/decisions/decision_packet.json",
-      "artifacts/decisions/decision_packet.md"
+      `artifacts/projects/${String(packet && packet.project_id ? packet.project_id : "default_project")}/decisions/decision_packet.json`,
+      `artifacts/projects/${String(packet && packet.project_id ? packet.project_id : "default_project")}/decisions/decision_packet.md`
     ],
     execution_plan: {
       mode:
@@ -1785,7 +1785,7 @@ function buildExecutionPackage(packet) {
     ensureDir(path.join(llmRoot, "requests"));
     ensureDir(path.join(llmRoot, "responses"));
     ensureDir(path.join(llmRoot, "metadata"));
-    ensureDir(decisionsRoot);
+    ensureDir(projectDecisionsRoot);
 
     const decisionPacketId = `workspace_decision_${Date.now()}`;
     const workspaceId = "personal";
@@ -1794,11 +1794,13 @@ function buildExecutionPackage(packet) {
         ? draft.project_id.trim()
         : "default_project";
 
+    const projectDecisionsRoot = path.resolve(root, "artifacts", "projects", projectId, "decisions");
+
     const requestPath = path.join(llmRoot, "requests", `${decisionPacketId}.request.json`);
     const responsePath = path.join(llmRoot, "responses", `${decisionPacketId}.response.json`);
     const metadataPath = path.join(llmRoot, "metadata", `${decisionPacketId}.decision.json`);
-    const decisionPacketJsonAbs = path.join(decisionsRoot, "decision_packet.json");
-    const decisionPacketMdAbs = path.join(decisionsRoot, "decision_packet.md");
+    const decisionPacketJsonAbs = path.join(projectDecisionsRoot, "decision_packet.json");
+    const decisionPacketMdAbs = path.join(projectDecisionsRoot, "decision_packet.md");
 
     const packet = {
       execution_id: decisionPacketId,
@@ -1883,8 +1885,8 @@ function buildExecutionPackage(packet) {
       file_count: batchPolicy.stats.file_count,
       total_bytes: batchPolicy.stats.total_bytes,
       decision_packet_paths: [
-        "artifacts/decisions/decision_packet.json",
-        "artifacts/decisions/decision_packet.md"
+        `artifacts/projects/${projectId}/decisions/decision_packet.json`,
+        `artifacts/projects/${projectId}/decisions/decision_packet.md`
       ],
       execution_package_paths: [
         "artifacts/execute/execution_package.json"
