@@ -388,6 +388,8 @@
 
             <div class="composer-box">
               <label for="requestInput">Your request</label>
+              <label for="projectIdInput">Project ID</label>
+              <textarea id="projectIdInput">default_project</textarea>
               <textarea id="requestInput" placeholder="اكتب طلبك هنا...&#10;&#10;مثال: أنشئ ملف نصي يحتوي خطة عملية لبناء أول MVP لمشروع تقليل الهدر في المصانع الصغيرة في مصر."></textarea>
 
               <div class="message-actions">
@@ -476,6 +478,7 @@
 
   <script>
     const requestInput = document.getElementById("requestInput");
+    const projectIdInput = document.getElementById("projectIdInput");
     const chatSendBtn = document.getElementById("chatSendBtn");
     const approveBtn = document.getElementById("approveBtn");
     const rejectBtn = document.getElementById("rejectBtn");
@@ -564,6 +567,7 @@
       return {
         draft: null,
         request: "",
+        projectId: "default_project",
         proposalId: "",
         preview: [],
         requiredRoles: [],
@@ -587,6 +591,7 @@
     function snapshotTurn(turn) {
       return {
         request: turn.request,
+        projectId: turn.projectId,
         proposalId: turn.proposalId,
         draft: turn.draft ? JSON.parse(JSON.stringify(turn.draft)) : null,
         preview: Array.isArray(turn.preview) ? JSON.parse(JSON.stringify(turn.preview)) : [],
@@ -1132,11 +1137,16 @@
           activeTurn = createEmptyTurnState();
           activeTurn.request = effectiveRequest;
 
+          activeTurn.projectId = projectIdInput.value.trim() || "default_project";
+
           setStatus("Strategy confirmed. Building proposal...");
 
           await requestAPI("/api/ai/analyze", { request: effectiveRequest });
 
-          const proposal = await requestAPI("/api/ai/propose", { request: effectiveRequest });
+          const proposal = await requestAPI("/api/ai/propose", {
+            request: effectiveRequest,
+            project_id: activeTurn.projectId
+          });
 
           if (!proposal.ok) {
             renderResponse(proposal);
@@ -1157,7 +1167,10 @@
           const draft = await draftRes.json();
 
           activeTurn.proposalId = proposal.proposal_id || "";
-          activeTurn.draft = draft;
+          activeTurn.draft = {
+            ...draft,
+            project_id: activeTurn.projectId
+          };
 
           renderFiles(draft.files || []);
 
@@ -1234,6 +1247,7 @@
 
       activeTurn = createEmptyTurnState();
       activeTurn.request = request;
+      activeTurn.projectId = projectIdInput.value.trim() || "default_project";
       currentStrategyCandidates = [];
       currentRequestText = "";
 
@@ -1377,7 +1391,10 @@
         await requestAPI("/api/ai/analyze", { request });
 
         // 5) Proposal
-        const proposal = await requestAPI("/api/ai/propose", { request });
+        const proposal = await requestAPI("/api/ai/propose", {
+          request,
+          project_id: activeTurn.projectId
+        });
 
         if (!proposal.ok) {
           renderResponse(proposal);
@@ -1399,7 +1416,10 @@
         const draft = await draftRes.json();
 
         activeTurn.proposalId = proposal.proposal_id || "";
-        activeTurn.draft = draft;
+        activeTurn.draft = {
+          ...draft,
+          project_id: activeTurn.projectId
+        };
 
         renderFiles(draft.files || []);
 
