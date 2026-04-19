@@ -3,12 +3,12 @@
 ## PURPOSE
 
 Define a strict contract between Forge (governance system)
-and external code execution engines (e.g. Codex).
+and external technical generation providers (e.g. Codex).
 
 This contract ensures:
 
 - Forge remains the decision authority
-- External engines act as execution workers only
+- External providers act as technical generation assistants only
 - No direct code mutation happens without Forge approval
 
 ---
