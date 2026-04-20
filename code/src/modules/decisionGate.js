@@ -344,10 +344,22 @@ function renderDecisionMd(payload) {
   lines.push(`- blocked: ${payload.blocked ? "true" : "false"}`);
   lines.push("");
   lines.push("## Source");
-  lines.push(`- exploration_matrix_path: ${payload.source.exploration_matrix_path}`);
-  lines.push(`- exploration_matrix_sha256: ${payload.source.exploration_matrix_sha256}`);
-  lines.push(`- intake_context_path: ${payload.source.intake_context_path}`);
-  lines.push(`- intake_context_sha256: ${payload.source.intake_context_sha256}`);
+
+  if (payload.source && payload.source.source_type === "EXECUTION_PACKAGE") {
+    lines.push(`- source_type: EXECUTION_PACKAGE`);
+    lines.push(`- execution_package_path: ${payload.source.execution_package_path}`);
+    lines.push(`- execution_package_id: ${payload.source.execution_package_id}`);
+    lines.push(`- execution_package_execution_id: ${payload.source.execution_package_execution_id}`);
+    lines.push(`- execution_package_sha256: ${payload.source.execution_package_sha256}`);
+    lines.push(`- workspace_response_path: ${payload.source.workspace_response_path}`);
+    lines.push(`- intake_context_path: ${payload.source.intake_context_path}`);
+    lines.push(`- intake_context_sha256: ${payload.source.intake_context_sha256}`);
+  } else {
+    lines.push(`- exploration_matrix_path: ${payload.source.exploration_matrix_path}`);
+    lines.push(`- exploration_matrix_sha256: ${payload.source.exploration_matrix_sha256}`);
+    lines.push(`- intake_context_path: ${payload.source.intake_context_path}`);
+    lines.push(`- intake_context_sha256: ${payload.source.intake_context_sha256}`);
+  }
   lines.push("");
   lines.push("## Summary");
   lines.push(`- total_actions: ${payload.summary.total_actions}`);
