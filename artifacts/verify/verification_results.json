@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-12T13:22:15.492Z",
-  "blocked": false,
-  "status": "PASS",
-  "outcome": "PASS",
-  "final_outcome": "PASS",
+  "generated_at": "2026-04-20T14:50:19.525Z",
+  "blocked": true,
+  "status": "FAIL",
+  "outcome": "FAIL",
+  "final_outcome": "FAIL",
   "summary": {
-    "total_checks": 22,
-    "failed_checks": 0
+    "total_checks": 24,
+    "failed_checks": 2
   },
   "closure_gate": {
     "gap_count": 0,
@@ -68,27 +68,37 @@
     {
       "name": "execute_plan_matches_backfill_plan",
       "passed": true,
-      "detail": "backfill_actions=1; execute_actions=1"
+      "detail": "backfill_actions=0; execute_actions=0"
     },
     {
       "name": "decision_gate_matches_backfill_plan",
       "passed": true,
-      "detail": "decision_actions=1; backfill_actions=1"
+      "detail": "decision_actions=0; backfill_actions=0"
     },
     {
       "name": "workspace_runtime_execution_id_consistent",
-      "passed": true,
-      "detail": "decision=workspace_decision_1775925229972; backfill=workspace_decision_1775925229972; execute=workspace_decision_1775925229972"
+      "passed": false,
+      "detail": "decision=NONE; backfill=NONE; execute=NONE"
     },
     {
-      "name": "workspace_runtime_matches_current_decision_packet",
+      "name": "workspace_runtime_matches_current_execution_package",
       "passed": true,
-      "detail": "current_decision_packet=workspace_decision_1775925229972; decision_gate=workspace_decision_1775925229972; backfill=workspace_decision_1775925229972; execute=workspace_decision_1775925229972"
+      "detail": "No current workspace execution_package.json"
+    },
+    {
+      "name": "workspace_execution_package_identity_consistent",
+      "passed": false,
+      "detail": "decision_package_id=NONE; backfill_package_id=NONE; execute_package_id=NONE; decision_package_path=NONE; backfill_package_path=NONE; execute_package_path=NONE"
+    },
+    {
+      "name": "workspace_execution_package_matches_current_artifact",
+      "passed": true,
+      "detail": "No current workspace execution_package.json"
     },
     {
       "name": "workspace_runtime_write_applied",
       "passed": true,
-      "detail": "execute_actions=1; wrote_content_all=true"
+      "detail": "execute_actions=0; wrote_content_all=n/a"
     },
     {
       "name": "gap_count_zero",

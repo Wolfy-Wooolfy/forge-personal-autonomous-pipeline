@@ -1,28 +1,16 @@
 {
   "execution_id": "MODULE_FLOW_BACKFILL_v2",
-  "generated_at": "2026-04-12T13:22:15.485Z",
+  "generated_at": "2026-04-20T14:50:19.500Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "source": {
     "decision_gate_path": "artifacts/decisions/module_flow_decision_gate.json",
-    "decision_gate_sha256": "364a6dd39528f1a71f125ff4892fbc73612cf82bc22c0c87d9b1237878660844",
+    "decision_gate_sha256": "ae8f91dfd0e9ad4662c9e9260dd1d1aea0f9179e70997d8b87c3de798abbe0f1",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84",
-    "workspace_execution_id": "workspace_decision_1775925229972"
+    "workspace_execution_id": null,
+    "workspace_execution_package_id": null,
+    "workspace_execution_package_path": null
   },
-  "approved_code_actions": [
-    {
-      "action_id": "WORKSPACE_ACTION_1",
-      "origin_gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "target_file": "code/test_workspace_integration.js",
-      "target_path": "code/test_workspace_integration.js",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "deterministic_template_used": true,
-      "desired_content": "console.log('AI Proposal Draft Execution');",
-      "allow_overwrite": true,
-      "expected_sha256": "567aceb77e1c64ca2683b15e9369b46b02146a46194ca152826b78c5ef18bde8",
-      "workspace_execution_id": "workspace_decision_1775925229972",
-      "source_type": "EXTERNAL_AI_WORKSPACE"
-    }
-  ]
+  "approved_code_actions": []
 }

@@ -1,24 +1,16 @@
 {
-  "workspace_execution_id": "ai_proposal_1776511911597",
-  "generated_at": "2026-04-18T11:31:51.610Z",
-  "files": [
-    {
-      "file_path": "web/index.html",
-      "operation": "modify",
-      "changes": [
-        {
-          "type": "targeted_patch",
-          "operations": [
-            {
-              "type": "insert_before",
-              "find": "</body>",
-              "replace": "<!-- Workspace footer marker -->\n",
-              "anchor": "",
-              "content": ""
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  "execution_id": "MODULE_FLOW_EXECUTE_v1",
+  "generated_at": "2026-04-20T14:50:19.514Z",
+  "operating_mode": "IMPROVE",
+  "repository_state": "MIXED",
+  "source": {
+    "backfill_plan_path": "artifacts/backfill/backfill_plan.json",
+    "backfill_sha256": "cbaec4dfb58e97d7b603688a914189f3d6215b360fc4eaede17a8a22e9855d79",
+    "intake_context_path": "artifacts/intake/intake_context.json",
+    "intake_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84",
+    "workspace_execution_id": null,
+    "workspace_execution_package_id": null,
+    "workspace_execution_package_path": null
+  },
+  "approved_code_actions": []
 }
