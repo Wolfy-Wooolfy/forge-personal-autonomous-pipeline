@@ -228,16 +228,8 @@ function runVerify(context) {
   const projectId = normalizeProjectId(
     context && typeof context.project_id === "string" ? context.project_id : ""
   );
-  const executionPackageRel =
-    activeWorkspaceExecutionPackagePath || getProjectExecutionPackageRel(projectId);
 
   let executionPackageJson = null;
-
-  try {
-    if (fileExists(executionPackageRel)) {
-      executionPackageJson = readJson(executionPackageRel);
-    }
-  } catch (e) {}
 
   const currentExecutionPackageId =
     executionPackageJson &&
@@ -343,6 +335,15 @@ function runVerify(context) {
     workspaceExecutionPackagePathFromBackfill ||
     workspaceExecutionPackagePathFromDecision ||
     "";
+
+  const executionPackageRel =
+    activeWorkspaceExecutionPackagePath || getProjectExecutionPackageRel(projectId);
+
+  try {
+    if (fileExists(executionPackageRel)) {
+      executionPackageJson = readJson(executionPackageRel);
+    }
+  } catch (e) {}
 
   addCheck(
     "execute_plan_matches_backfill_plan",
