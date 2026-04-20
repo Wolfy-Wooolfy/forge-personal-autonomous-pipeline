@@ -18,6 +18,16 @@ function readJson(rel) {
   return JSON.parse(raw);
 }
 
+function normalizeProjectId(projectIdInput) {
+  return typeof projectIdInput === "string" && projectIdInput.trim() !== ""
+    ? projectIdInput.trim()
+    : "default_project";
+}
+
+function getProjectExecutionPackageRel(projectIdInput) {
+  return `artifacts/projects/${normalizeProjectId(projectIdInput)}/execute/execution_package.json`;
+}
+
 function getGapMetrics(gapJson) {
   const gaps = Array.isArray(gapJson && gapJson.gaps) ? gapJson.gaps : [];
 
@@ -215,7 +225,12 @@ function runVerify(context) {
     }
   } catch (e) {}
 
-  const executionPackageRel = "artifacts/execute/execution_package.json";
+  const projectId = normalizeProjectId(
+    context && typeof context.project_id === "string" ? context.project_id : ""
+  );
+  const executionPackageRel =
+    activeWorkspaceExecutionPackagePath || getProjectExecutionPackageRel(projectId);
+
   let executionPackageJson = null;
 
   try {
