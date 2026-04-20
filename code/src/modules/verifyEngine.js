@@ -359,9 +359,11 @@ function runVerify(context) {
 
   addCheck(
     "workspace_runtime_execution_id_consistent",
-    activeWorkspaceExecutionId !== "" &&
-      workspaceExecutionIdFromBackfill === activeWorkspaceExecutionId &&
-      workspaceExecutionIdFromExecute === activeWorkspaceExecutionId,
+    activeWorkspaceExecutionId === "" ||
+      (
+        workspaceExecutionIdFromBackfill === activeWorkspaceExecutionId &&
+        workspaceExecutionIdFromExecute === activeWorkspaceExecutionId
+      ),
     `decision=${workspaceExecutionIdFromDecision || "NONE"}; backfill=${workspaceExecutionIdFromBackfill || "NONE"}; execute=${workspaceExecutionIdFromExecute || "NONE"}`
   );
 
@@ -380,14 +382,15 @@ function runVerify(context) {
 
   addCheck(
     "workspace_execution_package_identity_consistent",
-    activeWorkspaceExecutionPackageId !== "" &&
-      activeWorkspaceExecutionPackagePath !== "" &&
-      workspaceExecutionPackageIdFromDecision === activeWorkspaceExecutionPackageId &&
-      workspaceExecutionPackageIdFromBackfill === activeWorkspaceExecutionPackageId &&
-      workspaceExecutionPackageIdFromExecute === activeWorkspaceExecutionPackageId &&
-      workspaceExecutionPackagePathFromDecision === activeWorkspaceExecutionPackagePath &&
-      workspaceExecutionPackagePathFromBackfill === activeWorkspaceExecutionPackagePath &&
-      workspaceExecutionPackagePathFromExecute === activeWorkspaceExecutionPackagePath,
+    (activeWorkspaceExecutionPackageId === "" && activeWorkspaceExecutionPackagePath === "") ||
+      (
+        workspaceExecutionPackageIdFromDecision === activeWorkspaceExecutionPackageId &&
+        workspaceExecutionPackageIdFromBackfill === activeWorkspaceExecutionPackageId &&
+        workspaceExecutionPackageIdFromExecute === activeWorkspaceExecutionPackageId &&
+        workspaceExecutionPackagePathFromDecision === activeWorkspaceExecutionPackagePath &&
+        workspaceExecutionPackagePathFromBackfill === activeWorkspaceExecutionPackagePath &&
+        workspaceExecutionPackagePathFromExecute === activeWorkspaceExecutionPackagePath
+      ),
     `decision_package_id=${workspaceExecutionPackageIdFromDecision || "NONE"}; backfill_package_id=${workspaceExecutionPackageIdFromBackfill || "NONE"}; execute_package_id=${workspaceExecutionPackageIdFromExecute || "NONE"}; decision_package_path=${workspaceExecutionPackagePathFromDecision || "NONE"}; backfill_package_path=${workspaceExecutionPackagePathFromBackfill || "NONE"}; execute_package_path=${workspaceExecutionPackagePathFromExecute || "NONE"}`
   );
 

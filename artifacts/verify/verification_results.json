@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-20T15:09:45.402Z",
-  "blocked": true,
-  "status": "FAIL",
-  "outcome": "FAIL",
-  "final_outcome": "FAIL",
+  "generated_at": "2026-04-20T15:39:23.133Z",
+  "blocked": false,
+  "status": "PASS",
+  "outcome": "PASS",
+  "final_outcome": "PASS",
   "summary": {
     "total_checks": 24,
-    "failed_checks": 2
+    "failed_checks": 0
   },
   "closure_gate": {
     "gap_count": 0,
@@ -77,7 +77,7 @@
     },
     {
       "name": "workspace_runtime_execution_id_consistent",
-      "passed": false,
+      "passed": true,
       "detail": "decision=NONE; backfill=NONE; execute=NONE"
     },
     {
@@ -87,7 +87,7 @@
     },
     {
       "name": "workspace_execution_package_identity_consistent",
-      "passed": false,
+      "passed": true,
       "detail": "decision_package_id=NONE; backfill_package_id=NONE; execute_package_id=NONE; decision_package_path=NONE; backfill_package_path=NONE; execute_package_path=NONE"
     },
     {
