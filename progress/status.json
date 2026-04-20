@@ -7,7 +7,7 @@
   "current_task": "TASK-061: MODULE FLOW — Verify",
   "issues": [],
   "blocking_questions": [
-    "Closed task found after open task: TASK-067"
+    "Verification failed — review artifacts/verify/verification_report.md"
   ],
   "next_step": ""
 }
