@@ -234,8 +234,24 @@ function resolveCognitivePriorityHint(row, cognitiveTrace) {
   return null;
 }
 
-function readExecutionPackageBundle() {
-  const packageAbs = path.resolve(ROOT, "artifacts", "execute", "execution_package.json");
+function normalizeProjectId(projectIdInput) {
+  return typeof projectIdInput === "string" && projectIdInput.trim() !== ""
+    ? projectIdInput.trim()
+    : "default_project";
+}
+
+function getProjectExecutionPackageRel(projectIdInput) {
+  return `artifacts/projects/${normalizeProjectId(projectIdInput)}/execute/execution_package.json`;
+}
+
+function getProjectExecutionPackageAbs(projectIdInput) {
+  return path.resolve(ROOT, getProjectExecutionPackageRel(projectIdInput));
+}
+
+function readExecutionPackageBundle(projectIdInput) {
+  const projectId = normalizeProjectId(projectIdInput);
+  const packageRel = getProjectExecutionPackageRel(projectId);
+  const packageAbs = getProjectExecutionPackageAbs(projectId);
 
   if (!fs.existsSync(packageAbs)) {
     return null;
@@ -277,6 +293,7 @@ function readExecutionPackageBundle() {
 
   return {
     executionPackage,
+    packageRel,
     packageAbs,
     packageText: JSON.stringify(executionPackage, null, 2),
     responseRel,
@@ -397,7 +414,10 @@ function renderDecisionMd(payload) {
 function runDecisionGate(context) {
   const explorationMatrixAbs = path.resolve(ROOT, "artifacts", "exploration", "option_matrix.json");
   const intakeContextAbs = path.resolve(ROOT, "artifacts", "intake", "intake_context.json");
-  const workspaceBundle = readExecutionPackageBundle();
+  const projectId = normalizeProjectId(
+    context && typeof context.project_id === "string" ? context.project_id : ""
+  );
+  const workspaceBundle = readExecutionPackageBundle(projectId);
 
   if (!workspaceBundle && !fs.existsSync(explorationMatrixAbs)) {
     return {
@@ -505,7 +525,7 @@ function runDecisionGate(context) {
       override_raw: decision.raw,
       source: {
         source_type: "EXECUTION_PACKAGE",
-        execution_package_path: "artifacts/execute/execution_package.json",
+        execution_package_path: workspaceBundle.packageRel,
         execution_package_id: String(workspaceBundle.executionPackage.package_id || ""),
         execution_package_execution_id: String(workspaceBundle.executionPackage.execution_id || ""),
         execution_package_sha256: sha256Text(workspaceBundle.packageText),

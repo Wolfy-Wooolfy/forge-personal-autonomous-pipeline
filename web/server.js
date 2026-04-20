@@ -20,8 +20,6 @@ const allowedWriteRoots = [
   path.resolve(root, "code")
 ];
 
-const decisionsRoot = path.resolve(root, "artifacts/decisions");
-
 const approvalPolicyPath = path.resolve(root, "artifacts/llm/approval_policy.json");
 
 function ensureDir(dirPath) {
@@ -266,20 +264,24 @@ function createDecisionPacket(draft, userRequest, approverRole) {
   ensureDir(path.join(llmRoot, "requests"));
   ensureDir(path.join(llmRoot, "responses"));
   ensureDir(path.join(llmRoot, "metadata"));
-  ensureDir(decisionsRoot);
+  const projectId = normalizeProjectId(
+    draft && typeof draft.project_id === "string" ? draft.project_id : ""
+  );
+  const projectDecisionsRoot = getProjectDecisionsRoot(projectId);
+
+  ensureDir(projectDecisionsRoot);
 
   const decisionPacketId = `workspace_decision_${Date.now()}`;
   const workspaceId = "personal";
-  const projectId = path.basename(root);
 
   const requestPath = path.join(llmRoot, "requests", `${decisionPacketId}.request.json`);
   const responsePath = path.join(llmRoot, "responses", `${decisionPacketId}.response.json`);
   const metadataPath = path.join(llmRoot, "metadata", `${decisionPacketId}.decision.json`);
 
-  const decisionPacketJsonRel = "artifacts/decisions/decision_packet.json";
-  const decisionPacketMdRel = "artifacts/decisions/decision_packet.md";
-  const decisionPacketJsonAbs = path.join(decisionsRoot, "decision_packet.json");
-  const decisionPacketMdAbs = path.join(decisionsRoot, "decision_packet.md");
+  const decisionPacketJsonRel = getProjectDecisionPacketJsonRel(projectId);
+  const decisionPacketMdRel = getProjectDecisionPacketMdRel(projectId);
+  const decisionPacketJsonAbs = path.join(projectDecisionsRoot, "decision_packet.json");
+  const decisionPacketMdAbs = path.join(projectDecisionsRoot, "decision_packet.md");
 
   const packet = {
     execution_id: decisionPacketId,
@@ -354,6 +356,7 @@ function createDecisionPacket(draft, userRequest, approverRole) {
     ok: true,
     entry_type: "DECISION_PACKET",
     decision_packet_id: decisionPacketId,
+    project_id: projectId,
     approver_role: approvedByRole,
     required_roles: approvalPolicy.required_roles,
     approval_policy_version: approvalPolicy.policy_version,
@@ -475,6 +478,30 @@ function buildSimpleDiff(oldContent, newContent) {
   }
 
   return diffLines.join("\n");
+}
+
+function normalizeProjectId(projectIdInput) {
+  return typeof projectIdInput === "string" && projectIdInput.trim() !== ""
+    ? projectIdInput.trim()
+    : "default_project";
+}
+
+function getProjectDecisionsRoot(projectIdInput) {
+  return path.resolve(
+    root,
+    "artifacts",
+    "projects",
+    normalizeProjectId(projectIdInput),
+    "decisions"
+  );
+}
+
+function getProjectDecisionPacketJsonRel(projectIdInput) {
+  return `artifacts/projects/${normalizeProjectId(projectIdInput)}/decisions/decision_packet.json`;
+}
+
+function getProjectDecisionPacketMdRel(projectIdInput) {
+  return `artifacts/projects/${normalizeProjectId(projectIdInput)}/decisions/decision_packet.md`;
 }
 
 function readJsonSafe(filePath, fallback) {
