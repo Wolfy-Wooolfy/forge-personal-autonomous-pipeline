@@ -1565,8 +1565,35 @@ ${trimmedExisting}`
     };
   }
 
-  function writeDecisionLinkArtifact(proposalId, decisionPacketId) {
-    const linkRoot = path.resolve(root, "artifacts/ai/decision_links");
+  function normalizeProjectId(projectIdInput) {
+    return typeof projectIdInput === "string" && projectIdInput.trim() !== ""
+      ? projectIdInput.trim()
+      : "default_project";
+  }
+
+  function getProjectArtifactsRoot(projectIdInput) {
+    return path.resolve(root, "artifacts", "projects", normalizeProjectId(projectIdInput));
+  }
+
+  function getProjectDecisionLinksRoot(projectIdInput) {
+    return path.join(getProjectArtifactsRoot(projectIdInput), "ai", "decision_links");
+  }
+
+  function getProjectDecisionLinksRel(projectIdInput, linkId) {
+    return `artifacts/projects/${normalizeProjectId(projectIdInput)}/ai/decision_links/${linkId}.json`;
+  }
+
+  function getProjectExecutionPackageRel(projectIdInput) {
+    return `artifacts/projects/${normalizeProjectId(projectIdInput)}/execute/execution_package.json`;
+  }
+
+  function getProjectExecutionPackageAbs(projectIdInput) {
+    return path.resolve(root, getProjectExecutionPackageRel(projectIdInput));
+  }
+
+  function writeDecisionLinkArtifact(proposalId, decisionPacketId, projectIdInput = "") {
+    const projectId = normalizeProjectId(projectIdInput);
+    const linkRoot = getProjectDecisionLinksRoot(projectId);
     ensureDir(linkRoot);
 
     const link = {
@@ -1574,10 +1601,11 @@ ${trimmedExisting}`
       created_at: new Date().toISOString(),
       proposal_id: proposalId || "",
       decision_packet_id: decisionPacketId || "",
+      project_id: projectId,
       relationship: "PROPOSAL_TO_DECISION"
     };
 
-    const rel = `artifacts/ai/decision_links/${link.link_id}.json`;
+    const rel = getProjectDecisionLinksRel(projectId, link.link_id);
     fs.writeFileSync(path.resolve(root, rel), JSON.stringify(link, null, 2));
 
     return rel;
@@ -1640,13 +1668,16 @@ function buildExecutionPackage(packet) {
     ? packet.proposed_files
     : [];
 
+  const projectId = normalizeProjectId(packet && packet.project_id ? packet.project_id : "");
+
   return {
     package_id: `execution_package_${Date.now()}`,
     created_at: new Date().toISOString(),
     source: "EXTERNAL_AI_WORKSPACE",
     handoff_status: "APPROVED_PENDING_FORGE",
-    project_id: String(packet && packet.project_id ? packet.project_id : "default_project"),
+    project_id: projectId,
     execution_id: String(packet && packet.execution_id ? packet.execution_id : ""),
+    artifact_path: getProjectExecutionPackageRel(projectId),
     approved_scope: {
       summary: String(packet && packet.context_summary ? packet.context_summary : ""),
       operation_mode:
@@ -1664,8 +1695,8 @@ function buildExecutionPackage(packet) {
     dependency_assumptions: [],
     risk_notes: proposedFiles.length > 1 ? ["MULTI_FILE_CHANGESET"] : [],
     execution_approval_reference: {
-      decision_packet_json: `artifacts/projects/${String(packet && packet.project_id ? packet.project_id : "default_project")}/decisions/decision_packet.json`,
-      decision_packet_md: `artifacts/projects/${String(packet && packet.project_id ? packet.project_id : "default_project")}/decisions/decision_packet.md`,
+      decision_packet_json: `artifacts/projects/${projectId}/decisions/decision_packet.json`,
+      decision_packet_md: `artifacts/projects/${projectId}/decisions/decision_packet.md`,
       approved_by_role:
         packet && packet.approval && typeof packet.approval.approved_by_role === "string"
           ? packet.approval.approved_by_role
@@ -1676,8 +1707,8 @@ function buildExecutionPackage(packet) {
           : ""
     },
     finalized_documentation_set: [
-      `artifacts/projects/${String(packet && packet.project_id ? packet.project_id : "default_project")}/decisions/decision_packet.json`,
-      `artifacts/projects/${String(packet && packet.project_id ? packet.project_id : "default_project")}/decisions/decision_packet.md`
+      `artifacts/projects/${projectId}/decisions/decision_packet.json`,
+      `artifacts/projects/${projectId}/decisions/decision_packet.md`
     ],
     execution_plan: {
       mode:
@@ -1788,10 +1819,7 @@ function buildExecutionPackage(packet) {
 
     const decisionPacketId = `workspace_decision_${Date.now()}`;
     const workspaceId = "personal";
-    const projectId =
-      typeof draft.project_id === "string" && draft.project_id.trim() !== ""
-        ? draft.project_id.trim()
-        : "default_project";
+    const projectId = normalizeProjectId(draft.project_id);
 
     const projectDecisionsRoot = path.resolve(root, "artifacts", "projects", projectId, "decisions");
     ensureDir(projectDecisionsRoot);
@@ -1870,7 +1898,7 @@ function buildExecutionPackage(packet) {
     fs.writeFileSync(decisionPacketJsonAbs, JSON.stringify(packet, null, 2));
     fs.writeFileSync(decisionPacketMdAbs, renderDecisionPacketMd(packet));
 
-    const executionPackageAbs = path.resolve(root, "artifacts", "execute", "execution_package.json");
+    const executionPackageAbs = getProjectExecutionPackageAbs(projectId);
     const executionPackage = buildExecutionPackage(packet);
 
     fs.mkdirSync(path.dirname(executionPackageAbs), { recursive: true });
@@ -1880,6 +1908,7 @@ function buildExecutionPackage(packet) {
       ok: true,
       entry_type: "DECISION_PACKET",
       decision_packet_id: decisionPacketId,
+      project_id: projectId,
       approver_role: approvedByRole,
       required_roles: approvalPolicy.required_roles,
       approval_policy_version: approvalPolicy.policy_version,
@@ -1891,7 +1920,7 @@ function buildExecutionPackage(packet) {
         `artifacts/projects/${projectId}/decisions/decision_packet.md`
       ],
       execution_package_paths: [
-        "artifacts/execute/execution_package.json"
+        getProjectExecutionPackageRel(projectId)
       ],
       queued_files: normalizedFiles.map((file) => file.path),
       summary: typeof draft.summary === "string" ? draft.summary : "Decision packet created successfully.",
@@ -1977,7 +2006,8 @@ function buildExecutionPackage(packet) {
     if (proposalId && result && result.decision_packet_id) {
       const linkPath = writeDecisionLinkArtifact(
         proposalId,
-        result.decision_packet_id
+        result.decision_packet_id,
+        result.project_id
       );
 
       result.decision_link_artifact = linkPath;
@@ -2336,7 +2366,8 @@ function buildExecutionPackage(packet) {
     if (decisionResult && decisionResult.decision_packet_id) {
       decisionResult.decision_link_artifact = writeDecisionLinkArtifact(
         proposalId,
-        decisionResult.decision_packet_id
+        decisionResult.decision_packet_id,
+        decisionResult.project_id
       );
     }
 
