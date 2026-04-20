@@ -519,6 +519,8 @@ function runDecisionGate(context) {
       reason: "governed workspace decision packet approved",
       workspace_source: "EXTERNAL_AI_WORKSPACE",
       workspace_execution_id: String(workspaceBundle.executionPackage.execution_id || ""),
+      workspace_execution_package_id: String(workspaceBundle.executionPackage.package_id || ""),
+      workspace_execution_package_path: workspaceBundle.packageRel,
       workspace_response_path: row._workspace.response_path,
       workspace_allow_overwrite: row._workspace.allow_overwrite,
       workspace_expected_sha256: row._workspace.expected_sha256,
