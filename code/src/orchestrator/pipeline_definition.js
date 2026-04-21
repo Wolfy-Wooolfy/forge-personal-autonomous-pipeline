@@ -74,6 +74,13 @@ const pipeline = [
     task_name: "TASK-067: ENFORCE FULL VISION RUNTIME",
     ordinal_position: 11,
     required_previous_module: "CLOSURE",
+    terminal_flag: false
+  },
+  {
+    module_id: "AI_SYSTEM_ALIGNMENT",
+    task_name: "TASK-068: FULL SYSTEM ALIGNMENT WITH AI OS AND AI LAYER CONTRACTS",
+    ordinal_position: 12,
+    required_previous_module: "VISION_COMPLIANCE",
     terminal_flag: true
   }
 ];
