@@ -5,6 +5,7 @@ const { getPipeline } = require("./pipeline_definition");
 const TASKS_DIR = path.join(process.cwd(), "artifacts", "tasks");
 
 const PROJECTS_DIR = path.join(process.cwd(), "artifacts", "projects");
+const ACTIVE_PROJECT_PATH = path.join(PROJECTS_DIR, "active_project.json");
 
 const FORGE_STATE_PATH = path.join(process.cwd(), "artifacts", "forge", "forge_state.json");
 
@@ -40,6 +41,27 @@ function getProjectExecutionPackagePaths() {
       path.join(PROJECTS_DIR, entry.name, "execute", "execution_package.json")
     )
     .filter((absPath) => fs.existsSync(absPath));
+}
+
+function getActiveProjectExecutionPackagePath() {
+  const activeProject = safeReadJson(ACTIVE_PROJECT_PATH);
+
+  if (!activeProject || typeof activeProject !== "object") {
+    return null;
+  }
+
+  const projectId =
+    typeof activeProject.project_id === "string" && activeProject.project_id.trim() !== ""
+      ? activeProject.project_id.trim()
+      : "";
+
+  if (!projectId) {
+    return null;
+  }
+
+  const absPath = path.join(PROJECTS_DIR, projectId, "execute", "execution_package.json");
+
+  return fs.existsSync(absPath) ? absPath : null;
 }
 
 function isAuthoritativeClosureArtifact(fileName) {
@@ -191,10 +213,13 @@ function hasLaterClosureAfterGap(pipeline, closureFiles, contiguousClosedIndex) 
 }
 
 function readPendingWorkspaceRuntime() {
+  const activeProjectExecutionPackagePath = getActiveProjectExecutionPackagePath();
+
   const candidatePaths = [
+    activeProjectExecutionPackagePath,
     EXECUTION_PACKAGE_PATH,
     ...getProjectExecutionPackagePaths()
-  ];
+  ].filter((value, index, array) => value && array.indexOf(value) === index);
 
   for (const packagePath of candidatePaths) {
     const executionPackage = safeReadJson(packagePath);
