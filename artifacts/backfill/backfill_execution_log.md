@@ -1,24 +1,27 @@
 # MODULE FLOW — Backfill Execution Log
 
-- generated_at: 2026-04-20T14:50:19.500Z
+- generated_at: 2026-04-21T15:26:53.341Z
 - operating_mode: IMPROVE
 - repository_state: MIXED
 - blocked: false
 
 ## Source
 - decision_gate_path: artifacts/decisions/module_flow_decision_gate.json
-- decision_gate_sha256: ae8f91dfd0e9ad4662c9e9260dd1d1aea0f9179e70997d8b87c3de798abbe0f1
+- decision_gate_sha256: 05cc8d9374111b2f9177589947823da755714145cf8c7d8d2b01d346e1abb7b1
 - intake_context_path: artifacts/intake/intake_context.json
 - intake_context_sha256: eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84
 
 ## Summary
-- approved_actions_seen: 0
-- deterministic_backfill_actions: 0
+- approved_actions_seen: 1
+- deterministic_backfill_actions: 1
 - excluded_non_backfill_actions: 0
-- items_emitted: 0
+- items_emitted: 1
 
 ## Approved Backfill Actions
-- None
+- WORKSPACE_ACTION_1 [WORKSPACE_CHANGE_REQUEST/MEDIUM] governed workspace decision packet approved
+  - target_path: web/index.html
+  - action_type: BACKFILL_RECONCILIATION
+  - deterministic_template_used: true
 
 ## Next
 - next_step: MODULE_FLOW — Backfill COMPLETE. Next=Execute (implement executeEngine + task bridge).

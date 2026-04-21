@@ -4,6 +4,8 @@ const { getPipeline } = require("./pipeline_definition");
 
 const TASKS_DIR = path.join(process.cwd(), "artifacts", "tasks");
 
+const PROJECTS_DIR = path.join(process.cwd(), "artifacts", "projects");
+
 const FORGE_STATE_PATH = path.join(process.cwd(), "artifacts", "forge", "forge_state.json");
 
 const RELEASE_MANIFEST_PATH = path.join(process.cwd(), "artifacts", "release", "RELEASE_MANIFEST_v1.json");
@@ -24,6 +26,20 @@ function safeReadJson(absPath) {
   } catch (error) {
     return null;
   }
+}
+
+function getProjectExecutionPackagePaths() {
+  if (!fs.existsSync(PROJECTS_DIR)) {
+    return [];
+  }
+
+  return fs
+    .readdirSync(PROJECTS_DIR, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) =>
+      path.join(PROJECTS_DIR, entry.name, "execute", "execution_package.json")
+    )
+    .filter((absPath) => fs.existsSync(absPath));
 }
 
 function isAuthoritativeClosureArtifact(fileName) {
@@ -175,53 +191,64 @@ function hasLaterClosureAfterGap(pipeline, closureFiles, contiguousClosedIndex) 
 }
 
 function readPendingWorkspaceRuntime() {
-  const executionPackage = safeReadJson(EXECUTION_PACKAGE_PATH);
+  const candidatePaths = [
+    EXECUTION_PACKAGE_PATH,
+    ...getProjectExecutionPackagePaths()
+  ];
 
-  if (!executionPackage || typeof executionPackage !== "object") {
-    return null;
+  for (const packagePath of candidatePaths) {
+    const executionPackage = safeReadJson(packagePath);
+
+    if (!executionPackage || typeof executionPackage !== "object") {
+      continue;
+    }
+
+    if (String(executionPackage.source || "") !== "EXTERNAL_AI_WORKSPACE") {
+      continue;
+    }
+
+    if (String(executionPackage.handoff_status || "").trim() !== "APPROVED_PENDING_FORGE") {
+      continue;
+    }
+
+    const executionId = String(executionPackage.execution_id || "").trim();
+
+    if (!executionId) {
+      continue;
+    }
+
+    const proposedFiles =
+      executionPackage &&
+      executionPackage.execution_plan &&
+      Array.isArray(executionPackage.execution_plan.proposed_files)
+        ? executionPackage.execution_plan.proposed_files
+        : [];
+
+    if (proposedFiles.length === 0) {
+      continue;
+    }
+
+    const executePlan = safeReadJson(EXECUTE_PLAN_PATH);
+    const executedWorkspaceId =
+      executePlan &&
+      executePlan.source &&
+      typeof executePlan.source.workspace_execution_id === "string"
+        ? executePlan.source.workspace_execution_id.trim()
+        : "";
+
+    if (executedWorkspaceId && executedWorkspaceId === executionId) {
+      continue;
+    }
+
+    return {
+      execution_id: executionId,
+      package_id: String(executionPackage.package_id || "").trim(),
+      package_path: packagePath,
+      project_id: String(executionPackage.project_id || "").trim()
+    };
   }
 
-  if (String(executionPackage.source || "") !== "EXTERNAL_AI_WORKSPACE") {
-    return null;
-  }
-
-  if (String(executionPackage.handoff_status || "").trim() !== "APPROVED_PENDING_FORGE") {
-    return null;
-  }
-
-  const executionId = String(executionPackage.execution_id || "").trim();
-
-  if (!executionId) {
-    return null;
-  }
-
-  const proposedFiles =
-    executionPackage &&
-    executionPackage.execution_plan &&
-    Array.isArray(executionPackage.execution_plan.proposed_files)
-      ? executionPackage.execution_plan.proposed_files
-      : [];
-
-  if (proposedFiles.length === 0) {
-    return null;
-  }
-
-  const executePlan = safeReadJson(EXECUTE_PLAN_PATH);
-  const executedWorkspaceId =
-    executePlan &&
-    executePlan.source &&
-    typeof executePlan.source.workspace_execution_id === "string"
-      ? executePlan.source.workspace_execution_id.trim()
-      : "";
-
-  if (executedWorkspaceId && executedWorkspaceId === executionId) {
-    return null;
-  }
-
-  return {
-    execution_id: executionId,
-    package_id: String(executionPackage.package_id || "").trim()
-  };
+  return null;
 }
 
 function resolveEntry() {
@@ -271,7 +298,9 @@ function resolveEntry() {
         blocked: false,
         reason: "Pending workspace execution package detected",
         workspace_execution_id: pendingWorkspaceRuntime.execution_id,
-        execution_package_id: pendingWorkspaceRuntime.package_id
+        execution_package_id: pendingWorkspaceRuntime.package_id,
+        execution_package_path: pendingWorkspaceRuntime.package_path,
+        project_id: pendingWorkspaceRuntime.project_id
       };
     }
 
