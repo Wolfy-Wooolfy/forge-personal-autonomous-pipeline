@@ -20,6 +20,8 @@
       "allow_overwrite": false
     }
   ],
-  "approved": false,
-  "ready_for_decision": false
+  "approved": true,
+  "ready_for_decision": true,
+  "approved_at": "2026-04-21T12:44:00.415Z",
+  "approved_by_role": "cto"
 }
