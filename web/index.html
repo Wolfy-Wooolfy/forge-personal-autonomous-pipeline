@@ -388,8 +388,11 @@
 
             <div class="composer-box">
               <label for="requestInput">Your request</label>
-              <label for="projectIdInput">Project ID</label>
-              <textarea id="projectIdInput">default_project</textarea>
+              <label for="projectSelect">Active project</label>
+              <select id="projectSelect"></select>
+
+              <div id="projectStateBox" class="status">Loading project state...</div>
+
               <textarea id="requestInput" placeholder="اكتب طلبك هنا...&#10;&#10;مثال: أنشئ ملف نصي يحتوي خطة عملية لبناء أول MVP لمشروع تقليل الهدر في المصانع الصغيرة في مصر."></textarea>
 
               <div class="message-actions">
@@ -478,7 +481,8 @@
 
   <script>
     const requestInput = document.getElementById("requestInput");
-    const projectIdInput = document.getElementById("projectIdInput");
+    const projectSelect = document.getElementById("projectSelect");
+    const projectStateBox = document.getElementById("projectStateBox");
     const chatSendBtn = document.getElementById("chatSendBtn");
     const approveBtn = document.getElementById("approveBtn");
     const rejectBtn = document.getElementById("rejectBtn");
@@ -794,6 +798,79 @@
       });
     }
 
+    function getActiveProjectId() {
+      return projectSelect.value && projectSelect.value.trim() !== ""
+        ? projectSelect.value.trim()
+        : "default_project";
+    }
+
+    function renderProjectState(project) {
+      if (!project || typeof project !== "object") {
+        projectStateBox.textContent = "No project state loaded.";
+        return;
+      }
+
+      const pending = Array.isArray(project.pending_decisions) ? project.pending_decisions : [];
+
+      projectStateBox.textContent =
+        `Project: ${project.project_name || project.project_id || "Unknown"}\n` +
+        `Runtime: ${project.active_runtime_state || "UNKNOWN"}\n` +
+        `Phase: ${project.current_phase || "UNKNOWN"}\n` +
+        `Docs: ${project.documentation_state || "UNKNOWN"}\n` +
+        `Execution package: ${project.execution_package_state || "UNKNOWN"}\n` +
+        `Execution: ${project.execution_state || "UNKNOWN"}\n` +
+        `Pending decisions: ${pending.join(", ") || "None"}`;
+    }
+
+    async function loadProjects(preferredProjectId = "") {
+      const data = await requestAPI("/api/projects", {}, "GET");
+      const items = Array.isArray(data.items) ? data.items : [];
+      const activeProjectId =
+        preferredProjectId && preferredProjectId.trim() !== ""
+          ? preferredProjectId.trim()
+          : (typeof data.active_project_id === "string" && data.active_project_id.trim() !== ""
+              ? data.active_project_id.trim()
+              : "default_project");
+
+      projectSelect.innerHTML = "";
+
+      items.forEach((project) => {
+        const option = document.createElement("option");
+        option.value = project.project_id || "default_project";
+        option.textContent = project.project_name || project.project_id || "default_project";
+        projectSelect.appendChild(option);
+      });
+
+      if (projectSelect.options.length === 0) {
+        const option = document.createElement("option");
+        option.value = "default_project";
+        option.textContent = "default_project";
+        projectSelect.appendChild(option);
+      }
+
+      projectSelect.value = activeProjectId;
+
+      const activeProject =
+        items.find((item) => item.project_id === projectSelect.value) ||
+        items[0] ||
+        null;
+
+      renderProjectState(activeProject);
+      await loadHistory();
+    }
+
+    async function activateProject(projectId) {
+      const data = await requestAPI("/api/projects/activate", {
+        project_id: projectId
+      });
+
+      if (data && data.project) {
+        renderProjectState(data.project);
+      }
+
+      await loadProjects(projectId);
+    }
+
     function renderPreview(items) {
       previewBox.innerHTML = "";
 
@@ -910,7 +987,9 @@
 
     async function loadHistory() {
       try {
-        const res = await fetch("http://localhost:3100/api/ai/history");
+        const projectId = getActiveProjectId();
+        const apiBase = window.location.origin.replace(":3000", ":3100");
+        const res = await fetch(`${apiBase}/api/ai/history?project_id=${encodeURIComponent(projectId)}`);
         const data = await res.json();
 
         if (!res.ok) {
@@ -1137,7 +1216,7 @@
           activeTurn = createEmptyTurnState();
           activeTurn.request = effectiveRequest;
 
-          activeTurn.projectId = projectIdInput.value.trim() || "default_project";
+          activeTurn.projectId = getActiveProjectId();
 
           setStatus("Strategy confirmed. Building proposal...");
 
@@ -1247,7 +1326,7 @@
 
       activeTurn = createEmptyTurnState();
       activeTurn.request = request;
-      activeTurn.projectId = projectIdInput.value.trim() || "default_project";
+      activeTurn.projectId = getActiveProjectId();
       currentStrategyCandidates = [];
       currentRequestText = "";
 
@@ -1528,8 +1607,12 @@
       renderApprovalInfo(activeTurn.requiredRoles, activeTurn.approvalPolicyVersion);
     });
 
+    projectSelect.addEventListener("change", async () => {
+      await activateProject(projectSelect.value);
+    });
+
     loadApprovalPolicy();
-    loadHistory();
+    loadProjects();
   </script>
 <!-- Workspace footer marker -->
 </body>

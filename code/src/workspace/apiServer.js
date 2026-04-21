@@ -21,6 +21,10 @@ function createWorkspaceApiServer(options = {}) {
   const aiContextRoot = path.resolve(aiRoot, "context");
   const aiAnalysisRoot = path.resolve(aiRoot, "analysis");
 
+  const projectsRoot = path.resolve(root, "artifacts/projects");
+  const activeProjectPath = path.resolve(projectsRoot, "active_project.json");
+  const projectRegistryPath = path.resolve(projectsRoot, "project_registry.json");
+
   const allowedWriteRoots = [
     path.resolve(root, "artifacts/llm"),
     path.resolve(root, "web"),
@@ -1553,6 +1557,21 @@ ${trimmedExisting}`
     fs.writeFileSync(path.resolve(root, proposalRel), JSON.stringify(proposalArtifact, null, 2));
     fs.writeFileSync(path.resolve(root, draftRel), JSON.stringify(draftArtifact, null, 2));
 
+    writeActiveProject(projectId);
+    persistProjectState(projectId, {
+      user_goal: requestText,
+      technical_goal: requestText,
+      current_phase: "DOCS_DRAFTING",
+      active_runtime_state: "DOCUMENTATION",
+      documentation_state: "DRAFTING",
+      execution_package_state: "DRAFTING",
+      execution_state: "NOT_STARTED",
+      selected_strategy:
+        strategyCandidates[0] && typeof strategyCandidates[0].strategy_id === "string"
+          ? strategyCandidates[0].strategy_id
+          : ""
+    });
+
     return {
       ok: true,
       mode: "PROPOSAL",
@@ -1569,6 +1588,217 @@ ${trimmedExisting}`
     return typeof projectIdInput === "string" && projectIdInput.trim() !== ""
       ? projectIdInput.trim()
       : "default_project";
+  }
+
+  function getProjectStateRel(projectIdInput) {
+    return `artifacts/projects/${normalizeProjectId(projectIdInput)}/project_state.json`;
+  }
+
+  function getProjectStateAbs(projectIdInput) {
+    return path.resolve(root, getProjectStateRel(projectIdInput));
+  }
+
+  function readActiveProjectId() {
+    const payload = readJsonSafe(activeProjectPath, null);
+
+    if (payload && typeof payload.project_id === "string" && payload.project_id.trim() !== "") {
+      return payload.project_id.trim();
+    }
+
+    return "default_project";
+  }
+
+  function writeActiveProject(projectIdInput) {
+    const projectId = normalizeProjectId(projectIdInput);
+    ensureDir(projectsRoot);
+    fs.writeFileSync(activeProjectPath, JSON.stringify({
+      project_id: projectId,
+      updated_at: new Date().toISOString()
+    }, null, 2));
+    return projectId;
+  }
+
+  function listKnownProjectIds() {
+    ensureDir(projectsRoot);
+
+    const ids = fs.readdirSync(projectsRoot, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => entry.name)
+      .filter(Boolean);
+
+    if (!ids.includes("default_project")) {
+      ids.unshift("default_project");
+    }
+
+    return Array.from(new Set(ids));
+  }
+
+  function buildProjectState(projectIdInput, overrides = {}) {
+    const projectId = normalizeProjectId(projectIdInput);
+    const projectRoot = getProjectArtifactsRoot(projectId);
+
+    ensureDir(projectRoot);
+
+    const existing = readJsonSafe(getProjectStateAbs(projectId), {});
+    const proposalRoot = path.join(projectRoot, "ai", "proposals");
+    const draftRoot = path.join(projectRoot, "ai", "drafts");
+    const decisionRoot = path.join(projectRoot, "decisions");
+    const executionPackageAbs = getProjectExecutionPackageAbs(projectId);
+    const decisionPacketAbs = path.join(decisionRoot, "decision_packet.json");
+
+    const proposalCount = fs.existsSync(proposalRoot)
+      ? fs.readdirSync(proposalRoot).filter((name) => name.endsWith(".proposal.json")).length
+      : 0;
+
+    const draftCount = fs.existsSync(draftRoot)
+      ? fs.readdirSync(draftRoot).filter((name) => name.endsWith(".draft.json")).length
+      : 0;
+
+    const decisionPacket = readJsonSafe(decisionPacketAbs, null);
+    const executionPackage = readJsonSafe(executionPackageAbs, null);
+
+    const hasDecisionPacket = !!decisionPacket;
+    const hasExecutionPackage = !!executionPackage;
+
+    const activeRuntimeState =
+      overrides.active_runtime_state ||
+      (hasExecutionPackage ? "EXECUTION_PREPARATION" : proposalCount > 0 ? "DOCUMENTATION" : "DISCUSSION");
+
+    const currentPhase =
+      overrides.current_phase ||
+      (hasExecutionPackage ? "EXECUTION_READY" : proposalCount > 0 ? "DOCS_DRAFTING" : "DISCOVERY");
+
+    const documentationState =
+      overrides.documentation_state ||
+      (hasDecisionPacket ? "APPROVED" : proposalCount > 0 ? "DRAFTING" : "EMPTY");
+
+    const executionPackageState =
+      overrides.execution_package_state ||
+      (hasExecutionPackage
+        ? String(executionPackage.handoff_status || "").trim() === "APPROVED_PENDING_FORGE"
+          ? "APPROVED"
+          : "DRAFTING"
+        : "NOT_READY");
+
+    const executionState =
+      overrides.execution_state ||
+      (hasExecutionPackage ? "PENDING_FORGE" : "NOT_STARTED");
+
+    const verificationState = overrides.verification_state || "NOT_READY";
+    const deliveryState = overrides.delivery_state || "NOT_READY";
+
+    const state = {
+      project_id: projectId,
+      project_name: typeof overrides.project_name === "string" && overrides.project_name.trim() !== ""
+        ? overrides.project_name.trim()
+        : typeof existing.project_name === "string" && existing.project_name.trim() !== ""
+          ? existing.project_name.trim()
+          : projectId,
+      project_type: overrides.project_type || existing.project_type || "REVIEW",
+      project_mode: overrides.project_mode || existing.project_mode || "EXTEND_EXISTING",
+      project_status: overrides.project_status || existing.project_status || "ACTIVE",
+      primary_language: overrides.primary_language || existing.primary_language || "MIXED",
+      user_goal: overrides.user_goal || existing.user_goal || "",
+      business_goal: overrides.business_goal || existing.business_goal || "",
+      technical_goal: overrides.technical_goal || existing.technical_goal || "",
+      current_phase: currentPhase,
+      active_runtime_state: activeRuntimeState,
+      workspace_path: root,
+      source_of_truth: "ZIP_SNAPSHOT",
+      selected_strategy:
+        typeof overrides.selected_strategy === "string"
+          ? overrides.selected_strategy
+          : existing.selected_strategy || "",
+      accepted_options: Array.isArray(overrides.accepted_options)
+        ? overrides.accepted_options
+        : Array.isArray(existing.accepted_options)
+          ? existing.accepted_options
+          : [],
+      rejected_options: Array.isArray(overrides.rejected_options)
+        ? overrides.rejected_options
+        : Array.isArray(existing.rejected_options)
+          ? existing.rejected_options
+          : [],
+      open_questions: Array.isArray(overrides.open_questions)
+        ? overrides.open_questions
+        : Array.isArray(existing.open_questions)
+          ? existing.open_questions
+          : [],
+      documentation_state: documentationState,
+      execution_package_state: executionPackageState,
+      execution_state: executionState,
+      verification_state: verificationState,
+      delivery_state: deliveryState,
+      conversation_history: {
+        proposal_count: proposalCount,
+        draft_count: draftCount
+      },
+      decision_history: {
+        has_decision_packet: hasDecisionPacket
+      },
+      artifact_registry: {
+        project_root: `artifacts/projects/${projectId}`,
+        project_state: getProjectStateRel(projectId),
+        decision_packet: hasDecisionPacket ? `artifacts/projects/${projectId}/decisions/decision_packet.json` : "",
+        execution_package: hasExecutionPackage ? getProjectExecutionPackageRel(projectId) : ""
+      },
+      review_cycles_count: Number.isInteger(existing.review_cycles_count) ? existing.review_cycles_count : 0,
+      pending_decisions: hasExecutionPackage ? ["EXECUTION_PACKAGE_PENDING_FORGE"] : [],
+      memory_state: proposalCount > 0 || hasDecisionPacket ? "ACTIVE" : "EMPTY",
+      version_registry: Array.isArray(existing.version_registry) ? existing.version_registry : [],
+      active_project_flag: readActiveProjectId() === projectId,
+      last_updated_at: new Date().toISOString()
+    };
+
+    return state;
+  }
+
+  function persistProjectState(projectIdInput, overrides = {}) {
+    const projectId = normalizeProjectId(projectIdInput);
+    const state = buildProjectState(projectId, overrides);
+    const projectStateAbs = getProjectStateAbs(projectId);
+
+    ensureDir(path.dirname(projectStateAbs));
+    fs.writeFileSync(projectStateAbs, JSON.stringify(state, null, 2));
+
+    ensureDir(projectsRoot);
+
+    const registry = {
+      active_project_id: readActiveProjectId(),
+      updated_at: new Date().toISOString(),
+      projects: listKnownProjectIds().map((id) => {
+        const item = id === projectId ? state : buildProjectState(id);
+        return {
+          project_id: item.project_id,
+          project_name: item.project_name,
+          project_status: item.project_status,
+          current_phase: item.current_phase,
+          active_runtime_state: item.active_runtime_state,
+          pending_decisions: item.pending_decisions,
+          active_project_flag: item.active_project_flag,
+          last_updated_at: item.last_updated_at
+        };
+      })
+    };
+
+    fs.writeFileSync(projectRegistryPath, JSON.stringify(registry, null, 2));
+
+    return state;
+  }
+
+  function listProjects() {
+    ensureDir(projectsRoot);
+
+    if (!fs.existsSync(activeProjectPath)) {
+      writeActiveProject("default_project");
+    }
+
+    const items = listKnownProjectIds().map((projectId) => persistProjectState(projectId));
+
+    return {
+      active_project_id: readActiveProjectId(),
+      items
+    };
   }
 
   function getProjectArtifactsRoot(projectIdInput) {
@@ -1738,8 +1968,9 @@ function buildExecutionPackage(packet) {
   };
 }
 
-  function getRecentWrites(limit = 10) {
+  function getRecentWrites(projectIdInput = "", limit = 10) {
     const metadataDir = path.join(llmRoot, "metadata");
+    const targetProjectId = normalizeProjectId(projectIdInput || readActiveProjectId());
 
     if (!fs.existsSync(metadataDir)) {
       return [];
@@ -1764,6 +1995,15 @@ function buildExecutionPackage(packet) {
           data: parsed
         };
       })
+      .filter((item) => {
+        const data = item.data && typeof item.data === "object" ? item.data : {};
+        const itemProjectId =
+          typeof data.project_id === "string" && data.project_id.trim() !== ""
+            ? data.project_id.trim()
+            : "default_project";
+
+        return itemProjectId === targetProjectId;
+      })
       .sort((a, b) => b.mtimeMs - a.mtimeMs)
       .slice(0, limit)
       .map((item) => {
@@ -1772,20 +2012,22 @@ function buildExecutionPackage(packet) {
 
         return {
           entry_type: isDecision ? "DECISION_PACKET" : "WRITE",
-          write_id: typeof data.write_id === "string" ? data.write_id : "",
-          decision_packet_id: typeof data.decision_packet_id === "string" ? data.decision_packet_id : "",
-          approver_role: typeof data.approver_role === "string" ? data.approver_role : "",
+          project_id:
+            typeof data.project_id === "string" && data.project_id.trim() !== ""
+              ? data.project_id.trim()
+              : "default_project",
+          decision_packet_id: data.decision_packet_id || "",
+          write_id: data.write_id || "",
+          approver_role: data.approver_role || "",
           required_roles: Array.isArray(data.required_roles) ? data.required_roles : [],
-          approval_policy_version: typeof data.approval_policy_version === "string" ? data.approval_policy_version : "",
-          operation_mode: typeof data.operation_mode === "string" ? data.operation_mode : "",
+          approval_policy_version: data.approval_policy_version || "",
+          operation_mode: data.operation_mode || "",
           file_count: Number.isInteger(data.file_count) ? data.file_count : 0,
           total_bytes: Number.isInteger(data.total_bytes) ? data.total_bytes : 0,
-          written_files: Array.isArray(data.written_files) ? data.written_files : [],
+          logged_at: data.approved_at || data.timestamp || "",
           queued_files: Array.isArray(data.queued_files) ? data.queued_files : [],
-          summary: typeof data.summary === "string" ? data.summary : "",
-          request_text: typeof data.request === "string" ? data.request : "",
-          ok: !!data.ok,
-          logged_at: new Date(item.mtimeMs).toISOString()
+          written_files: Array.isArray(data.written_files) ? data.written_files : [],
+          summary: data.summary || data.request || ""
         };
       });
   }
@@ -1929,6 +2171,16 @@ function buildExecutionPackage(packet) {
     };
 
     fs.writeFileSync(metadataPath, JSON.stringify(result, null, 2));
+
+    writeActiveProject(projectId);
+    persistProjectState(projectId, {
+      current_phase: "EXECUTION_READY",
+      active_runtime_state: "EXECUTION_PREPARATION",
+      documentation_state: "APPROVED",
+      execution_package_state: "APPROVED",
+      execution_state: "PENDING_FORGE",
+      accepted_options: ["OPTION-APPROVE-WORKSPACE-DRAFT"]
+    });
 
     appendDecisionLog({
       timestamp: new Date().toISOString(),
@@ -2390,23 +2642,48 @@ function buildExecutionPackage(packet) {
 
   const server = http.createServer(async (req, res) => {
     try {
+      const requestUrl = new URL(req.url, "http://localhost");
+      const pathname = requestUrl.pathname;
       if (req.method === "OPTIONS") {
         sendJson(res, 200, { ok: true });
         return;
       }
 
-      if (req.method === "GET" && req.url === "/health") {
+      if (req.method === "GET" && pathname === "/health") {
         sendJson(res, 200, { ok: true, service: "forge-workspace-api" });
         return;
       }
 
-      if (req.method === "GET" && req.url === "/api/ai/approval-policy") {
+      if (req.method === "GET" && pathname === "/api/ai/approval-policy") {
         sendJson(res, 200, loadApprovalPolicy());
         return;
       }
 
-      if (req.method === "GET" && req.url === "/api/ai/history") {
-        sendJson(res, 200, { items: getRecentWrites(10) });
+      if (req.method === "GET" && pathname === "/api/projects") {
+        sendJson(res, 200, listProjects());
+        return;
+      }
+
+      if (req.method === "POST" && pathname === "/api/projects/activate") {
+        const body = await readBody(req);
+        const projectId = writeActiveProject(
+          typeof body.project_id === "string" ? body.project_id.trim() : ""
+        );
+        const state = persistProjectState(projectId);
+        sendJson(res, 200, {
+          ok: true,
+          active_project_id: projectId,
+          project: state
+        });
+        return;
+      }
+
+      if (req.method === "GET" && pathname === "/api/ai/history") {
+        const projectId =
+          typeof requestUrl.searchParams.get("project_id") === "string"
+            ? requestUrl.searchParams.get("project_id")
+            : "";
+        sendJson(res, 200, { items: getRecentWrites(projectId, 10) });
         return;
       }
 
