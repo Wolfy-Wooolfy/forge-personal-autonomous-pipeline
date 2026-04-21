@@ -1069,7 +1069,14 @@ ${trimmedExisting}`
       return {
         strategy: "HTML_BUTTON_CREATE",
         target_file: file,
-        content: `<button id="newButton">Click Me</button>`
+        content: "",
+        operations: [
+          {
+            type: "insert_before",
+            anchor: "</body>",
+            content: `  <button id="newButton">Click Me</button>\n`
+          }
+        ]
       };
     }
 
@@ -1481,9 +1488,9 @@ ${trimmedExisting}`
           {
             path: finalGenerated.target_file || resolvedTargetFile,
             content: typeof finalGenerated.content === "string" ? finalGenerated.content : "",
-            operations: [],
-            diff: "",
-            allow_overwrite: true
+            operations: normalizePatchOperations(finalGenerated.operations),
+            diff: typeof finalGenerated.diff === "string" ? finalGenerated.diff : "",
+            allow_overwrite: finalGenerated.allow_overwrite === true
           }
         ];
 
