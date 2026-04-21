@@ -1,44 +1,18 @@
 {
   "status_type": "FORGE_BUILD_STATE",
-  "current_stage": "AI_SYSTEM_ALIGNMENT",
-  "current_task": "TASK-068: FULL SYSTEM ALIGNMENT WITH AI OS AND AI LAYER CONTRACTS",
-  "last_completed_artifact": "artifacts/tasks/TASK-067.execution.closure.md",
-  "closed_tasks": [
-    "TASK-047",
-    "TASK-048",
-    "TASK-050",
-    "TASK-051",
-    "TASK-066",
-    "TASK-052",
-    "TASK-053",
-    "TASK-054",
-    "TASK-061",
-    "TASK-055",
-    "TASK-067"
-  ],
-  "open_tasks": [
-    "TASK-068"
-  ],
+  "current_stage": null,
+  "current_task": "",
+  "last_completed_artifact": "",
+  "closed_tasks": [],
+  "open_tasks": [],
   "pending_gaps": [],
-  "build_progress_percent": 92,
-  "execution_integrity": "CONSISTENT",
-  "next_allowed_step": "TASK-068: FULL SYSTEM ALIGNMENT WITH AI OS AND AI LAYER CONTRACTS",
+  "build_progress_percent": 0,
+  "execution_integrity": "BLOCKED",
+  "next_allowed_step": "",
+  "reason": "PIPELINE TASK NOT FOUND IN REGISTRY: TASK-068",
   "derived_from": {
     "registry": "code/src/execution/task_registry.js",
-    "task_artifacts_directory": "artifacts/tasks",
-    "closure_artifacts": [
-      "artifacts/tasks/TASK-047.execution.closure.md",
-      "artifacts/tasks/TASK-048.execution.closure.md",
-      "artifacts/tasks/TASK-050.execution.closure.md",
-      "artifacts/tasks/TASK-051.execution.closure.md",
-      "artifacts/tasks/TASK-052.execution.closure.md",
-      "artifacts/tasks/TASK-053.execution.closure.md",
-      "artifacts/tasks/TASK-054.execution.closure.md",
-      "artifacts/tasks/TASK-055.execution.closure.md",
-      "artifacts/tasks/TASK-061.execution.closure.md",
-      "artifacts/tasks/TASK-066.execution.closure.md",
-      "artifacts/tasks/TASK-067.execution.closure.md"
-    ]
+    "task_artifacts_directory": "artifacts/tasks"
   },
-  "derived_at": "2026-04-21T09:03:55.052Z"
+  "derived_at": "2026-04-21T09:18:36.084Z"
 }

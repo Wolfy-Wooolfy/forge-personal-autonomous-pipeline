@@ -2229,6 +2229,157 @@ Execution Closed
     };
   },
 
+  "TASK-068: FULL SYSTEM ALIGNMENT WITH AI OS AND AI LAYER CONTRACTS": (context) => {
+    const stageAArtifacts = [
+      "artifacts/tasks/TASK-068.stageA.idea-evaluation.md",
+      "artifacts/tasks/TASK-068.stageA.final-spec.md",
+      "artifacts/tasks/TASK-068.stageA.approval.md",
+      "artifacts/tasks/TASK-068.stageA.closure.md"
+    ];
+
+    const missingStageA = stageAArtifacts.filter((rel) => {
+      const abs = path.resolve(__dirname, "../../..", rel);
+      return !fs.existsSync(abs);
+    });
+
+    if (missingStageA.length > 0) {
+      return {
+        stage_progress_percent: 10,
+        clear_current_task: false,
+        status_patch: {
+          current_stage: "A",
+          current_task: "TASK-068: FULL SYSTEM ALIGNMENT WITH AI OS AND AI LAYER CONTRACTS",
+          next_step: "Complete Stage A task-bound artifacts",
+          blocking_questions: [],
+          issues: missingStageA.map((rel) => `Missing Stage A artifact: ${rel}`)
+        },
+        blocked: true
+      };
+    }
+
+    const stageBDocumentationRel = "artifacts/tasks/TASK-068.stageB.documentation-validation.md";
+    const stageBDocumentationAbs = path.resolve(__dirname, "../../..", stageBDocumentationRel);
+
+    if (!fs.existsSync(stageBDocumentationAbs)) {
+      return {
+        stage_progress_percent: 25,
+        clear_current_task: false,
+        status_patch: {
+          current_stage: "B",
+          current_task: "TASK-068: FULL SYSTEM ALIGNMENT WITH AI OS AND AI LAYER CONTRACTS",
+          next_step: `Create ${stageBDocumentationRel}`,
+          blocking_questions: [],
+          issues: [
+            `TASK-068 is in Stage B but no Stage B task-bound artifact exists yet: ${stageBDocumentationRel}`
+          ]
+        },
+        blocked: true
+      };
+    }
+
+    const stageBClosureRel = "artifacts/tasks/TASK-068.stageB.closure.md";
+    const stageBClosureAbs = path.resolve(__dirname, "../../..", stageBClosureRel);
+
+    if (!fs.existsSync(stageBClosureAbs)) {
+      return {
+        stage_progress_percent: 50,
+        clear_current_task: false,
+        status_patch: {
+          current_stage: "B",
+          current_task: "TASK-068: FULL SYSTEM ALIGNMENT WITH AI OS AND AI LAYER CONTRACTS",
+          next_step: `Create ${stageBClosureRel}`,
+          blocking_questions: [],
+          issues: [
+            `Stage B documentation validation exists but Stage B is not formally closed yet: ${stageBClosureRel}`
+          ]
+        },
+        blocked: true
+      };
+    }
+
+    const stageCClosureRel = "artifacts/tasks/TASK-068.stageC.closure.md";
+    const stageCClosureAbs = path.resolve(__dirname, "../../..", stageCClosureRel);
+
+    if (!fs.existsSync(stageCClosureAbs)) {
+      return {
+        stage_progress_percent: 75,
+        clear_current_task: false,
+        status_patch: {
+          current_stage: "C",
+          current_task: "TASK-068: FULL SYSTEM ALIGNMENT WITH AI OS AND AI LAYER CONTRACTS",
+          next_step: `Create ${stageCClosureRel}`,
+          blocking_questions: [],
+          issues: [
+            `Stage B is closed but Stage C is not formally closed yet: ${stageCClosureRel}`
+          ]
+        },
+        blocked: true
+      };
+    }
+
+    const stageDClosureRel = "artifacts/tasks/TASK-068.stageD.closure.md";
+    const stageDClosureAbs = path.resolve(__dirname, "../../..", stageDClosureRel);
+
+    if (!fs.existsSync(stageDClosureAbs)) {
+      return {
+        stage_progress_percent: 90,
+        clear_current_task: false,
+        status_patch: {
+          current_stage: "D",
+          current_task: "TASK-068: FULL SYSTEM ALIGNMENT WITH AI OS AND AI LAYER CONTRACTS",
+          next_step: `Create ${stageDClosureRel}`,
+          blocking_questions: [],
+          issues: [
+            `Stage C is closed but Stage D is not formally closed yet: ${stageDClosureRel}`
+          ]
+        },
+        blocked: true
+      };
+    }
+
+    const relTaskClosure = "artifacts/tasks/TASK-068.execution.closure.md";
+    const taskClosureAbs = path.resolve(__dirname, "../../..", relTaskClosure);
+
+    if (fs.existsSync(taskClosureAbs)) {
+      throw new Error("Idempotency violation: closure artifact already exists for TASK-068");
+    }
+
+    fs.mkdirSync(path.dirname(taskClosureAbs), { recursive: true });
+
+    fs.writeFileSync(
+      taskClosureAbs,
+      `# TASK-068 — Execution Closure
+
+## Task
+- Task ID: TASK-068
+- Stage Binding: AI_SYSTEM_ALIGNMENT
+- Closure Type: EXECUTION
+
+## Status
+- stage_progress_percent: 100
+- closure_artifact: true
+
+## Generated Artifacts
+- artifacts/tasks/TASK-068.stageA.idea-evaluation.md
+- artifacts/tasks/TASK-068.stageA.final-spec.md
+- artifacts/tasks/TASK-068.stageA.approval.md
+- artifacts/tasks/TASK-068.stageA.closure.md
+- artifacts/tasks/TASK-068.stageB.documentation-validation.md
+- artifacts/tasks/TASK-068.stageB.closure.md
+- artifacts/tasks/TASK-068.stageC.closure.md
+- artifacts/tasks/TASK-068.stageD.closure.md
+`,
+      "utf-8"
+    );
+
+    return {
+      stage_progress_percent: 100,
+      closure_artifact: true,
+      artifact: relTaskClosure,
+      clear_current_task: true
+    };
+  },
+
   "TASK-064": (context) => {
     const relTaskClosure = "artifacts/tasks/TASK-064.execution.closure.md";
     const taskClosureAbs = path.resolve(__dirname, "../../..", relTaskClosure);
