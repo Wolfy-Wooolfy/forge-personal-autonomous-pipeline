@@ -1,6 +1,6 @@
 {
   "status_type": "FORGE_BUILD_STATE",
-  "current_stage": null,
+  "current_stage": "B",
   "current_task": "TASK-068",
   "last_completed_artifact": "artifacts/tasks/TASK-067.execution.closure.md",
   "closed_tasks": [
@@ -20,11 +20,11 @@
     "TASK-068"
   ],
   "pending_gaps": [
-    "TASK-068: MISSING_STAGE_ARTIFACTS_AND_CLOSURE"
+    "TASK-068: OPEN_WITHOUT_EXECUTION_CLOSURE"
   ],
   "build_progress_percent": 92,
   "execution_integrity": "CONSISTENT",
-  "next_allowed_step": "artifacts/tasks/TASK-068.stageA.*",
+  "next_allowed_step": "artifacts/tasks/TASK-068.stageB.*",
   "derived_from": {
     "registry": "code/src/execution/task_registry.js",
     "task_artifacts_directory": "artifacts/tasks",
@@ -42,5 +42,5 @@
       "artifacts/tasks/TASK-067.execution.closure.md"
     ]
   },
-  "derived_at": "2026-04-21T09:29:11.901Z"
+  "derived_at": "2026-04-21T09:36:18.411Z"
 }
