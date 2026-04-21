@@ -3,16 +3,12 @@
 - Run Mode: BLOCKED
 - Status: BLOCKED
 - Entry Type: BLOCKED
-- Blocking Reason: PIPELINE TASK NOT FOUND IN REGISTRY: TASK-068
-- Current Module: N/A
-- Next Task: N/A
+- Blocking Reason: Task blocked: TASK-068: FULL SYSTEM ALIGNMENT WITH AI OS AND AI LAYER CONTRACTS
+- Current Module: AI_SYSTEM_ALIGNMENT
+- Next Task: TASK-068: FULL SYSTEM ALIGNMENT WITH AI OS AND AI LAYER CONTRACTS
 - Final Outcome: BLOCKED
 
 ## Completed Modules
-
-- None
-
-## Pending Modules
 
 - INTAKE
 - AUDIT
@@ -25,4 +21,7 @@
 - VERIFY
 - CLOSURE
 - VISION_COMPLIANCE
+
+## Pending Modules
+
 - AI_SYSTEM_ALIGNMENT

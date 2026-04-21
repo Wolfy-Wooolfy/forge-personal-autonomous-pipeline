@@ -1,19 +1,18 @@
 {
-  "run_id": "RUN-1776763116061",
+  "run_id": "RUN-1776763751808",
   "run_mode": "BLOCKED",
-  "started_at": "2026-04-21T09:18:36.061Z",
-  "last_updated_at": "2026-04-21T09:18:36.088Z",
+  "started_at": "2026-04-21T09:29:11.808Z",
+  "last_updated_at": "2026-04-21T09:29:11.905Z",
   "status": "BLOCKED",
   "blocked": true,
-  "blocking_reason": "PIPELINE TASK NOT FOUND IN REGISTRY: TASK-068",
-  "reason": "PIPELINE TASK NOT FOUND IN REGISTRY: TASK-068",
+  "blocking_reason": "Task blocked: TASK-068: FULL SYSTEM ALIGNMENT WITH AI OS AND AI LAYER CONTRACTS",
+  "reason": "Task blocked: TASK-068: FULL SYSTEM ALIGNMENT WITH AI OS AND AI LAYER CONTRACTS",
   "pipeline_contract_violation": null,
   "entry_type": "BLOCKED",
-  "next_task": null,
-  "next_module": null,
-  "current_module": null,
-  "completed_modules": [],
-  "pending_modules": [
+  "next_task": "TASK-068: FULL SYSTEM ALIGNMENT WITH AI OS AND AI LAYER CONTRACTS",
+  "next_module": "AI_SYSTEM_ALIGNMENT",
+  "current_module": "AI_SYSTEM_ALIGNMENT",
+  "completed_modules": [
     "INTAKE",
     "AUDIT",
     "TRACE",
@@ -24,7 +23,9 @@
     "EXECUTE",
     "VERIFY",
     "CLOSURE",
-    "VISION_COMPLIANCE",
+    "VISION_COMPLIANCE"
+  ],
+  "pending_modules": [
     "AI_SYSTEM_ALIGNMENT"
   ],
   "final_outcome": "BLOCKED"
