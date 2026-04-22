@@ -1597,6 +1597,23 @@ ${trimmedExisting}`
       : "default_project";
   }
 
+  function normalizeProjectName(projectNameInput) {
+    return typeof projectNameInput === "string" && projectNameInput.trim() !== ""
+      ? projectNameInput.trim()
+      : "New Project";
+  }
+
+  function buildProjectId(projectIdInput, projectNameInput) {
+    const directValue = typeof projectIdInput === "string" ? projectIdInput.trim().toLowerCase() : "";
+    const fallbackValue = normalizeProjectName(projectNameInput).toLowerCase();
+
+    const normalized = (directValue || fallbackValue)
+      .replace(/[^a-z0-9]+/g, "_")
+      .replace(/^_+|_+$/g, "");
+
+    return normalized || `project_${Date.now()}`;
+  }
+
   function getProjectStateRel(projectIdInput) {
     return `artifacts/projects/${normalizeProjectId(projectIdInput)}/project_state.json`;
   }
@@ -1805,6 +1822,33 @@ ${trimmedExisting}`
     return {
       active_project_id: readActiveProjectId(),
       items
+    };
+  }
+
+  function createProject(body = {}) {
+    const projectName = normalizeProjectName(body.project_name);
+    const baseProjectId = buildProjectId(body.project_id, projectName);
+
+    let projectId = baseProjectId;
+    let suffix = 1;
+
+    while (fs.existsSync(getProjectArtifactsRoot(projectId))) {
+      projectId = `${baseProjectId}_${suffix}`;
+      suffix += 1;
+    }
+
+    writeActiveProject(projectId);
+
+    const state = persistProjectState(projectId, {
+      project_name: projectName,
+      project_status: "ACTIVE"
+    });
+
+    return {
+      ok: true,
+      created: true,
+      active_project_id: projectId,
+      project: state
     };
   }
 
@@ -2668,6 +2712,13 @@ function buildExecutionPackage(packet) {
 
       if (req.method === "GET" && pathname === "/api/projects") {
         sendJson(res, 200, listProjects());
+        return;
+      }
+
+      if (req.method === "POST" && pathname === "/api/projects/create") {
+        const body = await readBody(req);
+        const result = createProject(body);
+        sendJson(res, 200, result);
         return;
       }
 

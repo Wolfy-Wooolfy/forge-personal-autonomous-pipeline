@@ -388,7 +388,10 @@
 
             <div class="composer-box">
               <label for="requestInput">Your request</label>
-              <label for="projectSelect">Active project</label>
+              <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px;">
+                <label for="projectSelect" style="margin-bottom:0;">Active project</label>
+                <button id="newProjectBtn" type="button" class="secondary">New Project</button>
+              </div>
               <select id="projectSelect"></select>
 
               <div id="projectStateBox" class="status">Loading project state...</div>
@@ -482,6 +485,7 @@
   <script>
     const requestInput = document.getElementById("requestInput");
     const projectSelect = document.getElementById("projectSelect");
+    const newProjectBtn = document.getElementById("newProjectBtn");
     const projectStateBox = document.getElementById("projectStateBox");
     const chatSendBtn = document.getElementById("chatSendBtn");
     const approveBtn = document.getElementById("approveBtn");
@@ -587,10 +591,23 @@
 
     let activeTurn = createEmptyTurnState();
 
-    const conversationTurns = [];
+    const conversationTurnsByProject = new Map();
+
+    function getConversationStore(projectIdInput = "") {
+      const projectId = projectIdInput && projectIdInput.trim() !== ""
+        ? projectIdInput.trim()
+        : getActiveProjectId();
+
+      if (!conversationTurnsByProject.has(projectId)) {
+        conversationTurnsByProject.set(projectId, []);
+      }
+
+      return conversationTurnsByProject.get(projectId);
+    }
 
     let currentStrategyCandidates = [];
     let currentRequestText = "";
+    let pendingConversationCheckpoint = null;
 
     function snapshotTurn(turn) {
       return {
@@ -618,6 +635,8 @@
       if (!activeTurn.request) {
         return;
       }
+
+      const conversationTurns = getConversationStore(activeTurn.projectId || getActiveProjectId());
 
       conversationTurns.push({
         ...snapshotTurn(activeTurn),
@@ -856,6 +875,7 @@
         null;
 
       renderProjectState(activeProject);
+      renderConversationTurns(getConversationStore(projectSelect.value));
       await loadHistory();
     }
 
@@ -1017,6 +1037,182 @@
       setStatus("Ready.");
     }
 
+    function isPositiveConfirmation(value) {
+      const normalized = String(value || "").trim().toLowerCase();
+
+      return [
+        "yes",
+        "y",
+        "ok",
+        "okay",
+        "confirm",
+        "confirmed",
+        "approve",
+        "approved",
+        "continue",
+        "proceed",
+        "go ahead",
+        "نعم",
+        "ايوه",
+        "أيوه",
+        "تمام",
+        "موافق",
+        "موافقة",
+        "استمر",
+        "كمل",
+        "كمّل"
+      ].includes(normalized);
+    }
+
+    function isNegativeConfirmation(value) {
+      const normalized = String(value || "").trim().toLowerCase();
+
+      return [
+        "no",
+        "n",
+        "cancel",
+        "stop",
+        "reject",
+        "رفض",
+        "لا",
+        "مش",
+        "إلغاء",
+        "الغاء",
+        "وقف"
+      ].includes(normalized);
+    }
+
+    function askConversationCheckpoint(stageLabel, requestText, summaryLines = []) {
+      pendingConversationCheckpoint = {
+        stage: stageLabel,
+        request: requestText,
+        projectId: getActiveProjectId()
+      };
+
+      const lines = [
+        `Active runtime state: ${stageLabel}`,
+        `Project: ${pendingConversationCheckpoint.projectId}`,
+        `Request summary: ${requestText}`
+      ];
+
+      if (Array.isArray(summaryLines) && summaryLines.length > 0) {
+        lines.push("");
+        lines.push(...summaryLines);
+      }
+
+      lines.push("");
+      lines.push("Explicit confirmation required before moving to the next state.");
+      lines.push("Reply with: نعم / yes to continue, or لا / no to stop.");
+
+      pushMessage(
+        "assistant",
+        "Checkpoint",
+        `<div class="file-preview">${formatMessageText(lines.join("\n"))}</div>`
+      );
+
+      setStatus("Explicit confirmation required before progression.");
+    }
+
+    async function prepareDraftFromConfirmedRequest(request, projectId) {
+      activeTurn = createEmptyTurnState();
+      activeTurn.request = request;
+      activeTurn.projectId = projectId;
+
+      approveBtn.disabled = true;
+      rejectBtn.disabled = true;
+
+      setStatus("Preparing governed draft...");
+
+      await requestAPI("/api/ai/analyze", { request });
+
+      const proposal = await requestAPI("/api/ai/propose", {
+        request,
+        project_id: activeTurn.projectId
+      });
+
+      if (!proposal.ok) {
+        renderResponse(proposal);
+        pushMessage("assistant", "Response", `<div class="file-preview">${formatMessageText(JSON.stringify(proposal, null, 2))}</div>`);
+
+        if (proposal.mode === "DUPLICATE_HISTORY") {
+          setStatus("This request was already executed before.");
+        } else if (proposal.mode === "DUPLICATE") {
+          setStatus("This request already exists in the file.");
+        } else {
+          setStatus(proposal.message || "Request blocked.");
+        }
+
+        return;
+      }
+
+      const draftRes = await fetch(proposal.draft_path);
+      const draft = await draftRes.json();
+
+      activeTurn.proposalId = proposal.proposal_id || "";
+      activeTurn.draft = {
+        ...draft,
+        project_id: activeTurn.projectId
+      };
+
+      renderFiles(draft.files || []);
+
+      await loadPreview(draft);
+
+      if (draft.files && draft.files.length > 0) {
+        const filePath = draft.files[0].path;
+
+        try {
+          const existing = await requestAPI("/api/ai/read-file", {
+            path: filePath
+          }, "POST");
+
+          const oldContent = existing.content || "";
+          const newContent = draft.files[0].content || "";
+
+          activeTurn.operationType = "UNKNOWN";
+
+          if (!oldContent) {
+            activeTurn.operationType = "CREATE";
+          } else if (oldContent.includes(newContent.trim())) {
+            activeTurn.operationType = "DUPLICATE";
+          } else if (newContent.includes(oldContent)) {
+            activeTurn.operationType = "EXPAND";
+          } else {
+            activeTurn.operationType = "MODIFY";
+          }
+
+          renderOperationAnalysis(activeTurn.operationType, oldContent, newContent);
+
+          pushMessage("assistant", "Operation Analysis", `<div class="file-preview">${formatMessageText(analysisBox.textContent)}</div>`);
+
+          if (activeTurn.operationType === "DUPLICATE") {
+            approveBtn.disabled = true;
+            rejectBtn.disabled = false;
+            setStatus("Duplicate detected. Approval is disabled.");
+          }
+        } catch (err) {
+          activeTurn.operationType = "UNKNOWN";
+          renderOperationAnalysis("UNKNOWN", "", "");
+        }
+      }
+
+      pushMessage("assistant", "Draft Files", filesBox.innerHTML);
+      pushMessage(
+        "assistant",
+        "Diff Preview",
+        (proposal.provider && proposal.provider.patch)
+          ? `<div class="file-preview">${escapeHtml(proposal.provider.patch)}</div>`
+          : previewBox.innerHTML
+      );
+
+      if (activeTurn.operationType !== "DUPLICATE") {
+        approveBtn.disabled = false;
+        setStatus("Draft ready for approval.");
+      }
+
+      rejectBtn.disabled = false;
+    }
+
     approveBtn.addEventListener("click", async () => {
       if (!activeTurn.draft) {
         setStatus("No draft available to approve.");
@@ -1160,11 +1356,100 @@
       });
     });
 
+    newProjectBtn.addEventListener("click", async () => {
+      const projectName = window.prompt("Enter project name");
+
+      if (!projectName || projectName.trim() === "") {
+        setStatus("Project creation cancelled.");
+        return;
+      }
+
+      try {
+        const data = await requestAPI("/api/projects/create", {
+          project_name: projectName.trim()
+        });
+
+        resetDraft();
+        currentStrategyCandidates = [];
+        currentRequestText = "";
+        pendingConversationCheckpoint = null;
+
+        await loadProjects(data.active_project_id);
+
+        pushMessage(
+          "assistant",
+          "Project Created",
+          `<div class="file-preview">${formatMessageText(
+            `Project created successfully.\nProject: ${data.project.project_name}\nProject ID: ${data.project.project_id}`
+          )}</div>`
+        );
+
+        setStatus(`Project created: ${data.project.project_name}`);
+      } catch (err) {
+        setStatus(`Project creation failed: ${err.message}`);
+      }
+    });
+
     chatSendBtn.addEventListener("click", async () => {
       const request = requestInput.value.trim();
 
       if (!request) {
         setStatus("Please enter a message.");
+        return;
+      }
+
+      if (pendingConversationCheckpoint) {
+        pushMessage("user", "Confirmation", `<div class="file-preview">${formatMessageText(request)}</div>`);
+        requestInput.value = "";
+
+        if (isPositiveConfirmation(request)) {
+          const checkpoint = { ...pendingConversationCheckpoint };
+          pendingConversationCheckpoint = null;
+
+          chatSendBtn.disabled = true;
+          setStatus("Checkpoint confirmed. Moving to draft preparation...");
+
+          try {
+            await prepareDraftFromConfirmedRequest(checkpoint.request, checkpoint.projectId);
+          } catch (err) {
+            renderResponse({ error: err.message });
+            pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>`);
+            setStatus(`Error: ${err.message}`);
+          } finally {
+            chatSendBtn.disabled = false;
+          }
+
+          return;
+        }
+
+        if (isNegativeConfirmation(request)) {
+          pendingConversationCheckpoint = null;
+
+          finalizeActiveTurn({
+            finalStatus: "CHECKPOINT_DECLINED"
+          });
+
+          pushMessage(
+            "assistant",
+            "Stayed in Current State",
+            `<div class="file-preview">${formatMessageText(
+              "Progression stopped. The request remains in discussion and no draft was prepared."
+            )}</div>`
+          );
+
+          setStatus("Progression stopped by user.");
+          return;
+        }
+
+        pushMessage(
+          "assistant",
+          "Confirmation Needed",
+          `<div class="file-preview">${formatMessageText(
+            "Please reply with نعم / yes to continue, or لا / no to stop."
+          )}</div>`
+        );
+
+        setStatus("Waiting for explicit confirmation.");
         return;
       }
 
@@ -1211,108 +1496,25 @@
             `<div class="file-preview">${formatMessageText(confirmedText)}</div>`
           );
 
-          const effectiveRequest = currentRequestText;
+          const effectiveRequest = selected.original_request || currentRequestText || activeTurn.request || "";
 
           activeTurn = createEmptyTurnState();
           activeTurn.request = effectiveRequest;
-
           activeTurn.projectId = getActiveProjectId();
-
-          setStatus("Strategy confirmed. Building proposal...");
-
-          await requestAPI("/api/ai/analyze", { request: effectiveRequest });
-
-          const proposal = await requestAPI("/api/ai/propose", {
-            request: effectiveRequest,
-            project_id: activeTurn.projectId
-          });
-
-          if (!proposal.ok) {
-            renderResponse(proposal);
-            pushMessage("assistant", "Response", `<div class="file-preview">${formatMessageText(JSON.stringify(proposal, null, 2))}</div>`);
-
-            if (proposal.mode === "DUPLICATE_HISTORY") {
-              setStatus("This request was already executed before.");
-            } else if (proposal.mode === "DUPLICATE") {
-              setStatus("This request already exists in the file.");
-            } else {
-              setStatus(proposal.message || "Request blocked.");
-            }
-
-            return;
-          }
-
-          const draftRes = await fetch(proposal.draft_path);
-          const draft = await draftRes.json();
-
-          activeTurn.proposalId = proposal.proposal_id || "";
-          activeTurn.draft = {
-            ...draft,
-            project_id: activeTurn.projectId
-          };
-
-          renderFiles(draft.files || []);
-
-          await loadPreview(draft);
-
-          if (draft.files && draft.files.length > 0) {
-            const filePath = draft.files[0].path;
-
-            try {
-              const existing = await requestAPI("/api/ai/read-file", {
-                path: filePath
-              }, "POST");
-
-              let oldContent = existing.content || "";
-              const newContent = draft.files[0].content || "";
-
-              activeTurn.operationType = "UNKNOWN";
-
-              if (!oldContent) {
-                activeTurn.operationType = "CREATE";
-              } else if (oldContent.includes(newContent.trim())) {
-                activeTurn.operationType = "DUPLICATE";
-              } else if (newContent.includes(oldContent)) {
-                activeTurn.operationType = "EXPAND";
-              } else {
-                activeTurn.operationType = "MODIFY";
-              }
-
-              renderOperationAnalysis(activeTurn.operationType, oldContent, newContent);
-
-              pushMessage("assistant", "Operation Analysis", `<div class="file-preview">${formatMessageText(analysisBox.textContent)}</div>`);
-
-              if (activeTurn.operationType === "DUPLICATE") {
-                approveBtn.disabled = true;
-                rejectBtn.disabled = false;
-                setStatus("Duplicate detected. Approval is disabled.");
-              }
-            } catch (err) {
-              activeTurn.operationType = "UNKNOWN";
-              renderOperationAnalysis("UNKNOWN", "", "");
-            }
-          }
-
-          setStatus("Proposal ready. Review the draft and approve when ready.");
-
-          pushMessage("assistant", "Draft Files", filesBox.innerHTML);
-          pushMessage(
-            "assistant",
-            "Diff Preview",
-            (proposal.provider && proposal.provider.patch)
-              ? `<div class="file-preview">${escapeHtml(proposal.provider.patch)}</div>`
-              : previewBox.innerHTML
-          );
 
           currentStrategyCandidates = [];
           currentRequestText = "";
 
-          if (activeTurn.operationType !== "DUPLICATE") {
-            approveBtn.disabled = false;
-            setStatus("Ready for approval.");
-          }
-
-          rejectBtn.disabled = false;
+          askConversationCheckpoint(
+            "DISCUSSION_READY_FOR_DOCUMENTATION",
+            effectiveRequest,
+            [
+              confirmedText,
+              "",
+              "The next step will prepare a governed draft and diff preview.",
+              "No execution will happen."
+            ]
+          );
         } catch (err) {
           renderResponse({ error: err.message });
           pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>`);
@@ -1337,7 +1539,6 @@
       setStatus("Thinking...");
 
       try {
-        // 1) Clarify
         const clarification = await requestAPI("/api/ai/clarify", { request });
 
         if (clarification.needs_clarification === true) {
@@ -1358,7 +1559,6 @@
           return;
         }
 
-        // 2) Options
         const options = await requestAPI("/api/ai/options", { request });
 
         if (options.ok === false && options.reason === "CLARIFICATION_REQUIRED") {
@@ -1449,9 +1649,6 @@
         }
 
         if (strategySelection.ok === true && strategySelection.mode === "STRATEGY_SELECTED" && strategySelection.selected_strategy) {
-          currentStrategyCandidates = [];
-          currentRequestText = "";
-
           const selected = strategySelection.selected_strategy;
           const selectedText =
             `Selected strategy: ${selected.title} [${selected.strategy_id}]` +
@@ -1464,102 +1661,32 @@
             "Strategy Selected",
             `<div class="file-preview">${formatMessageText(selectedText)}</div>`
           );
-        }
 
-        // 4) Analyze
-        await requestAPI("/api/ai/analyze", { request });
+          askConversationCheckpoint(
+            "DISCUSSION_READY_FOR_DOCUMENTATION",
+            request,
+            [
+              selectedText,
+              "",
+              "The next step will prepare a governed draft and diff preview.",
+              "No execution will happen."
+            ]
+          );
 
-        // 5) Proposal
-        const proposal = await requestAPI("/api/ai/propose", {
-          request,
-          project_id: activeTurn.projectId
-        });
-
-        if (!proposal.ok) {
-          renderResponse(proposal);
-          pushMessage("assistant", "Response", `<div class="file-preview">${formatMessageText(JSON.stringify(proposal, null, 2))}</div>`);
-
-          if (proposal.mode === "DUPLICATE_HISTORY") {
-            setStatus("This request was already executed before.");
-          } else if (proposal.mode === "DUPLICATE") {
-            setStatus("This request already exists in the file.");
-          } else {
-            setStatus(proposal.message || "Request blocked.");
-          }
-
+          setStatus("Waiting for explicit confirmation before draft preparation.");
           return;
         }
 
-        // 6) Load draft
-        const draftRes = await fetch(proposal.draft_path);
-        const draft = await draftRes.json();
-
-        activeTurn.proposalId = proposal.proposal_id || "";
-        activeTurn.draft = {
-          ...draft,
-          project_id: activeTurn.projectId
-        };
-
-        renderFiles(draft.files || []);
-
-        await loadPreview(draft);
-
-        if (draft.files && draft.files.length > 0) {
-          const filePath = draft.files[0].path;
-
-          try {
-            const existing = await requestAPI("/api/ai/read-file", {
-              path: filePath
-            }, "POST");
-
-            let oldContent = existing.content || "";
-            const newContent = draft.files[0].content || "";
-
-            activeTurn.operationType = "UNKNOWN";
-
-            if (!oldContent) {
-              activeTurn.operationType = "CREATE";
-            } else if (oldContent.includes(newContent.trim())) {
-              activeTurn.operationType = "DUPLICATE";
-            } else if (newContent.includes(oldContent)) {
-              activeTurn.operationType = "EXPAND";
-            } else {
-              activeTurn.operationType = "MODIFY";
-            }
-
-            renderOperationAnalysis(activeTurn.operationType, oldContent, newContent);
-
-            pushMessage("assistant", "Operation Analysis", `<div class="file-preview">${formatMessageText(analysisBox.textContent)}</div>`);
-
-            if (activeTurn.operationType === "DUPLICATE") {
-              approveBtn.disabled = true;
-              rejectBtn.disabled = false;
-              setStatus("Duplicate detected. Approval is disabled.");
-            }
-          } catch (err) {
-            activeTurn.operationType = "UNKNOWN";
-            renderOperationAnalysis("UNKNOWN", "", "");
-          }
-        }
-
-        setStatus("Proposal ready. Review the draft and approve when ready.");
-
-        pushMessage("assistant", "Draft Files", filesBox.innerHTML);
-        pushMessage(
-          "assistant",
-          "Diff Preview",
-          (proposal.provider && proposal.provider.patch)
-            ? `<div class="file-preview">${escapeHtml(proposal.provider.patch)}</div>`
-            : previewBox.innerHTML
+        askConversationCheckpoint(
+          "DISCUSSION_READY_FOR_DOCUMENTATION",
+          request,
+          [
+            "The next step will prepare a governed draft and diff preview.",
+            "No execution will happen."
+          ]
         );
 
-        if (activeTurn.operationType !== "DUPLICATE") {
-          approveBtn.disabled = false;
-          setStatus("Ready for approval.");
-        }
-
-        rejectBtn.disabled = false;
-
+        setStatus("Waiting for explicit confirmation before draft preparation.");
       } catch (err) {
         renderResponse({ error: err.message });
         pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>`);
@@ -1602,19 +1729,23 @@
 
     renderFiles([]);
     renderPreview([]);
-    renderConversationTurns(conversationTurns);
+    renderConversationTurns(getConversationStore("default_project"));
     approverRoleSelect.addEventListener("change", () => {
       renderApprovalInfo(activeTurn.requiredRoles, activeTurn.approvalPolicyVersion);
     });
 
     projectSelect.addEventListener("change", async () => {
       await activateProject(projectSelect.value);
+      resetDraft();
+      currentStrategyCandidates = [];
+      currentRequestText = "";
+      pendingConversationCheckpoint = null;
+      renderConversationTurns(getConversationStore(projectSelect.value));
     });
 
     loadApprovalPolicy();
     loadProjects();
   </script>
 <!-- Workspace footer marker -->
-  <button id="newButton">Click Me</button>
 </body>
 </html>
