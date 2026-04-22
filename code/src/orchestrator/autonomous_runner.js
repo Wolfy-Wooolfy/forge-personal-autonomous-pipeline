@@ -326,9 +326,15 @@ async function runAutonomous(runContextInput = {}) {
       writeReport(state, executionLog);
 
       const taskResult = await step.runner({
+        project_id: entry.project_id || "",
+        execution_package_path: entry.execution_package_path || "",
+        execution_package_id: entry.execution_package_id || "",
         status: Object.freeze({
           run_id: runContext.run_id,
-          workspace_execution_id: entry.workspace_execution_id || ""
+          workspace_execution_id: entry.workspace_execution_id || "",
+          workspace_execution_package_id: entry.execution_package_id || "",
+          workspace_execution_package_path: entry.execution_package_path || "",
+          project_id: entry.project_id || ""
         })
       });
 
