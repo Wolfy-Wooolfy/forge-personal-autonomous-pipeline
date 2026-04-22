@@ -509,6 +509,8 @@
 
     const chatStream = document.querySelector(".chat-stream");
 
+    let currentProjectState = null;
+
     function appendMessage(type, title, contentHtml) {
       const wrapper = document.createElement("div");
       wrapper.className = "chat-message " + (type === "user" ? "user" : "assistant");
@@ -536,6 +538,153 @@
       return escapeHtml(value).replace(/\n/g, "<br>");
     }
 
+    function detectUserLanguage(value) {
+      return /[\u0600-\u06FF]/.test(String(value || "")) ? "ar" : "en";
+    }
+
+    function getRuntimeStateLabel(stateValue, lang) {
+      const state = String(stateValue || "").trim().toUpperCase();
+
+      const labels = {
+        DISCUSSION: {
+          ar: "نناقش الفكرة ونفهم المطلوب",
+          en: "We are discussing the idea and understanding the request"
+        },
+        DOCUMENTATION: {
+          ar: "نجهز تصور منظم للمطلوب",
+          en: "We are preparing a structured draft"
+        },
+        EXECUTION_PREPARATION: {
+          ar: "المطلوب جاهز كتسليم منظم للتنفيذ عبر Forge",
+          en: "The work is prepared for governed handoff to Forge"
+        }
+      };
+
+      if (labels[state] && labels[state][lang]) {
+        return labels[state][lang];
+      }
+
+      return lang === "ar"
+        ? "هناك خطوة حالية نشطة في المشروع"
+        : "There is an active runtime step in this project";
+    }
+
+    function buildCompanionCheckpointMessage(stageLabel, requestText, summaryLines = []) {
+      const lang = detectUserLanguage(requestText);
+      const projectName =
+        currentProjectState && (currentProjectState.project_name || currentProjectState.project_id)
+          ? (currentProjectState.project_name || currentProjectState.project_id)
+          : getActiveProjectId();
+
+      const runtimeLabel = getRuntimeStateLabel(
+        currentProjectState && currentProjectState.active_runtime_state
+          ? currentProjectState.active_runtime_state
+          : stageLabel,
+        lang
+      );
+
+      if (lang === "ar") {
+        const lines = [
+          `أنا فهمت طلبك الحالي كالتالي: ${requestText}`,
+          `المشروع الحالي: ${projectName}`,
+          `الحالة الحالية: ${runtimeLabel}`
+        ];
+
+        if (Array.isArray(summaryLines) && summaryLines.length > 0) {
+          lines.push("");
+          lines.push(...summaryLines);
+        }
+
+        lines.push("");
+        lines.push("الخطوة التالية لو وافقت: سأجهز لك مسودة منظمة ومراجعة للتغييرات فقط، بدون أي تنفيذ مباشر.");
+        lines.push("لو تريدني أكمل في نفس الطلب اكتب: كمل");
+        lines.push("ولو تريد إيقاف الطلب الحالي أو تغييره اكتب: وقف");
+
+        return lines.join("\n");
+      }
+
+      const lines = [
+        `Here is my understanding of your current request: ${requestText}`,
+        `Current project: ${projectName}`,
+        `Current state: ${runtimeLabel}`
+      ];
+
+      if (Array.isArray(summaryLines) && summaryLines.length > 0) {
+        lines.push("");
+        lines.push(...summaryLines);
+      }
+
+      lines.push("");
+      lines.push("If you want me to continue, I will prepare a governed draft and change review only, with no direct execution.");
+      lines.push("Reply with: continue");
+      lines.push("Or reply with: stop");
+
+      return lines.join("\n");
+    }
+
+    function buildCheckpointReminderMessage(requestText) {
+      const lang = detectUserLanguage(requestText);
+
+      if (lang === "ar") {
+        return [
+          "ما زال عندنا طلب مفتوح لم يتم حسمه بعد.",
+          "أحتاج أولاً تأكيدًا منك قبل أن أفتح اتجاهًا جديدًا.",
+          "اكتب: كمل",
+          "أو اكتب: وقف"
+        ].join("\n");
+      }
+
+      return [
+        "There is still an open request waiting for your decision.",
+        "I need your confirmation first before opening a new direction.",
+        "Reply with: continue",
+        "Or reply with: stop"
+      ].join("\n");
+    }
+
+    function buildFriendlyOptionsMessage(items, requestText) {
+      const lang = detectUserLanguage(requestText);
+      const list = Array.isArray(items) ? items : [];
+
+      if (lang === "ar") {
+        const lines = ["وجدت أكثر من مسار ممكن لتنفيذ طلبك."];
+        list.forEach((item, index) => {
+          lines.push("");
+          lines.push(`الخيار ${index + 1}: ${item.title || "مسار مقترح"}`);
+          lines.push(`${item.rationale || "هذا مسار مناسب لطلبك."}`);
+        });
+        lines.push("");
+        lines.push("اختر المسار الأنسب لك.");
+        return lines.join("\n");
+      }
+
+      const lines = ["I found more than one reasonable path for your request."];
+      list.forEach((item, index) => {
+        lines.push("");
+        lines.push(`Option ${index + 1}: ${item.title || "Suggested path"}`);
+        lines.push(`${item.rationale || "This is a possible path for your request."}`);
+      });
+      lines.push("");
+      lines.push("Choose the path that fits you best.");
+      return lines.join("\n");
+    }
+
+    function buildFriendlySelectedStrategyMessage(selected, requestText) {
+      const lang = detectUserLanguage(requestText);
+
+      if (lang === "ar") {
+        return [
+          `أقرب مسار مناسب لطلبك هو: ${selected.title || "مسار مقترح"}`,
+          `${selected.rationale || "هذا هو المسار الأنسب بناءً على طلبك الحالي."}`
+        ].join("\n");
+      }
+
+      return [
+        `The best fit for your request is: ${selected.title || "Suggested path"}`,
+        `${selected.rationale || "This is the most suitable path based on your current request."}`
+      ].join("\n");
+    }
+
     function pushMessage(type, title, contentHtml) {
       activeTurn.messages.push({
         type,
@@ -550,7 +699,7 @@
       const list = Array.isArray(items) ? items : [];
 
       if (list.length === 0) {
-        return `<div class="file-preview">${formatMessageText("No strategies available.")}</div>`;
+        return `<div class="file-preview">${formatMessageText("No options available.")}</div>`;
       }
 
       return `
@@ -561,10 +710,8 @@
               class="strategy-choice-btn"
               data-strategy-choice="${index + 1}"
             >
-              <strong>${index + 1}. ${escapeHtml(item.title || "Untitled strategy")} [${escapeHtml(item.strategy_id || "UNKNOWN")}]</strong>
-              <div>Target: ${escapeHtml(item.target_file || "")}</div>
-              <div>Score: ${escapeHtml(item.score ?? "")}</div>
-              <div>Why: ${escapeHtml(item.rationale || "")}</div>
+              <strong>Option ${index + 1}: ${escapeHtml(item.title || "Suggested path")}</strong>
+              <div>${escapeHtml(item.rationale || "This is a possible path for your request.")}</div>
             </button>
           `).join("")}
         </div>
@@ -829,6 +976,8 @@
         return;
       }
 
+      currentProjectState = project;
+
       const pending = Array.isArray(project.pending_decisions) ? project.pending_decisions : [];
 
       projectStateBox.textContent =
@@ -1089,28 +1238,19 @@
         projectId: getActiveProjectId()
       };
 
-      const lines = [
-        `Active runtime state: ${stageLabel}`,
-        `Project: ${pendingConversationCheckpoint.projectId}`,
-        `Request summary: ${requestText}`
-      ];
-
-      if (Array.isArray(summaryLines) && summaryLines.length > 0) {
-        lines.push("");
-        lines.push(...summaryLines);
-      }
-
-      lines.push("");
-      lines.push("Explicit confirmation required before moving to the next state.");
-      lines.push("Reply with: نعم / yes to continue, or لا / no to stop.");
-
       pushMessage(
         "assistant",
-        "Checkpoint",
-        `<div class="file-preview">${formatMessageText(lines.join("\n"))}</div>`
+        detectUserLanguage(requestText) === "ar" ? "تأكيد قبل الانتقال" : "Confirmation Before Progression",
+        `<div class="file-preview">${formatMessageText(
+          buildCompanionCheckpointMessage(stageLabel, requestText, summaryLines)
+        )}</div>`
       );
 
-      setStatus("Explicit confirmation required before progression.");
+      setStatus(
+        detectUserLanguage(requestText) === "ar"
+          ? "بانتظار قرارك على الطلب الحالي."
+          : "Waiting for your decision on the current request."
+      );
     }
 
     async function prepareDraftFromConfirmedRequest(request, projectId) {
@@ -1121,7 +1261,11 @@
       approveBtn.disabled = true;
       rejectBtn.disabled = true;
 
-      setStatus("Preparing governed draft...");
+      setStatus(
+        detectUserLanguage(request) === "ar"
+          ? "أجهز الآن مسودة منظمة ومراجعة للتغييرات."
+          : "Preparing a governed draft and change review."
+      );
 
       await requestAPI("/api/ai/analyze", { request });
 
@@ -1207,7 +1351,11 @@
 
       if (activeTurn.operationType !== "DUPLICATE") {
         approveBtn.disabled = false;
-        setStatus("Draft ready for approval.");
+        setStatus(
+          detectUserLanguage(request) === "ar"
+            ? "المسودة أصبحت جاهزة للمراجعة واتخاذ القرار."
+            : "The draft is ready for review and decision."
+        );
       }
 
       rejectBtn.disabled = false;
@@ -1443,13 +1591,19 @@
 
         pushMessage(
           "assistant",
-          "Confirmation Needed",
+          detectUserLanguage(pendingConversationCheckpoint.request) === "ar"
+            ? "ما زلت أنتظر قرارك"
+            : "Still Waiting For Your Decision",
           `<div class="file-preview">${formatMessageText(
-            "Please reply with نعم / yes to continue, or لا / no to stop."
+            buildCheckpointReminderMessage(pendingConversationCheckpoint.request)
           )}</div>`
         );
 
-        setStatus("Waiting for explicit confirmation.");
+        setStatus(
+          detectUserLanguage(pendingConversationCheckpoint.request) === "ar"
+            ? "لا يمكن فتح طلب جديد قبل حسم الطلب الحالي."
+            : "A new request cannot start before the current one is resolved."
+        );
         return;
       }
 
@@ -1484,15 +1638,16 @@
           }
 
           const confirmed = strategyConfirmation.selected_strategy;
-          const confirmedText =
-            `Confirmed strategy: ${confirmed.title} [${confirmed.strategy_id}]` +
-            `\nTarget: ${confirmed.target_file}` +
-            `\nScore: ${confirmed.score}` +
-            `\nWhy: ${confirmed.rationale}`;
+          const confirmedText = buildFriendlySelectedStrategyMessage(
+            confirmed,
+            selected.original_request || currentRequestText || activeTurn.request || ""
+          );
 
           pushMessage(
             "assistant",
-            "Strategy Confirmed",
+            detectUserLanguage(selected.original_request || currentRequestText || activeTurn.request || "") === "ar"
+              ? "تم تحديد المسار المناسب"
+              : "Path Confirmed",
             `<div class="file-preview">${formatMessageText(confirmedText)}</div>`
           );
 
@@ -1580,18 +1735,11 @@
         }
 
         if (options.ok === true && Array.isArray(options.strategy_candidates) && options.strategy_candidates.length > 0) {
-          const optionsText = options.strategy_candidates
-            .map((item, index) =>
-              `${index + 1}. ${item.title} [${item.strategy_id}]` +
-              `\nTarget: ${item.target_file}` +
-              `\nScore: ${item.score}` +
-              `\nWhy: ${item.rationale}`
-            )
-            .join("\n\n");
+          const optionsText = buildFriendlyOptionsMessage(options.strategy_candidates, request);
 
           pushMessage(
             "assistant",
-            "Options",
+            detectUserLanguage(request) === "ar" ? "فهم أولي للمسارات" : "Initial Paths",
             `<div class="file-preview">${formatMessageText(optionsText)}</div>`
           );
         }
@@ -1627,12 +1775,11 @@
           }));
           currentRequestText = request;
 
-          const selectionTitle =
-            strategySelection.selection_question || "Multiple strategies are available. Which one do you want to use?";
+          const selectionTitle = buildFriendlyOptionsMessage(currentStrategyCandidates, request);
 
           pushMessage(
             "assistant",
-            "Strategy Choice",
+            detectUserLanguage(request) === "ar" ? "اختيار المسار" : "Choose a Path",
             `
               <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(selectionTitle)}</div>
               ${buildStrategyChoiceHtml(currentStrategyCandidates)}
@@ -1650,15 +1797,11 @@
 
         if (strategySelection.ok === true && strategySelection.mode === "STRATEGY_SELECTED" && strategySelection.selected_strategy) {
           const selected = strategySelection.selected_strategy;
-          const selectedText =
-            `Selected strategy: ${selected.title} [${selected.strategy_id}]` +
-            `\nTarget: ${selected.target_file}` +
-            `\nScore: ${selected.score}` +
-            `\nWhy: ${selected.rationale}`;
+          const selectedText = buildFriendlySelectedStrategyMessage(selected, request);
 
           pushMessage(
             "assistant",
-            "Strategy Selected",
+            detectUserLanguage(request) === "ar" ? "فهمت أنسب مسار" : "Best Path Identified",
             `<div class="file-preview">${formatMessageText(selectedText)}</div>`
           );
 
