@@ -17,7 +17,7 @@
   "rejected_options": [],
   "open_questions": [],
   "documentation_state": "DRAFTING",
-  "execution_package_state": "DRAFTING",
+  "execution_package_state": "NOT_READY",
   "execution_state": "NOT_STARTED",
   "verification_state": "NOT_READY",
   "delivery_state": "NOT_READY",
@@ -38,6 +38,6 @@
   "pending_decisions": [],
   "memory_state": "ACTIVE",
   "version_registry": [],
-  "active_project_flag": true,
-  "last_updated_at": "2026-04-21T12:35:01.939Z"
+  "active_project_flag": false,
+  "last_updated_at": "2026-04-22T11:22:07.084Z"
 }
