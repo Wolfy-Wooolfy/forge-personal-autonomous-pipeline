@@ -1,6 +1,6 @@
 {
   "active_project_id": "test_project",
-  "updated_at": "2026-04-22T12:03:10.899Z",
+  "updated_at": "2026-04-22T12:40:08.738Z",
   "projects": [
     {
       "project_id": "default_project",
@@ -12,7 +12,7 @@
         "EXECUTION_PACKAGE_PENDING_FORGE"
       ],
       "active_project_flag": false,
-      "last_updated_at": "2026-04-22T12:03:10.905Z"
+      "last_updated_at": "2026-04-22T12:40:08.744Z"
     },
     {
       "project_id": "test_project",
@@ -24,7 +24,7 @@
         "EXECUTION_PACKAGE_PENDING_FORGE"
       ],
       "active_project_flag": true,
-      "last_updated_at": "2026-04-22T12:03:10.909Z"
+      "last_updated_at": "2026-04-22T12:40:08.748Z"
     },
     {
       "project_id": "test_project_2",
@@ -34,7 +34,7 @@
       "active_runtime_state": "DOCUMENTATION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-04-22T12:03:10.910Z"
+      "last_updated_at": "2026-04-22T12:40:08.750Z"
     },
     {
       "project_id": "test_project_3",
@@ -46,7 +46,7 @@
         "EXECUTION_PACKAGE_PENDING_FORGE"
       ],
       "active_project_flag": false,
-      "last_updated_at": "2026-04-22T12:03:10.897Z"
+      "last_updated_at": "2026-04-22T12:40:08.736Z"
     }
   ]
 }

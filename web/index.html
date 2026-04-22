@@ -642,6 +642,18 @@
       ].join("\n");
     }
 
+    function getCheckpointUserMessageTitle(userText, sourceRequestText) {
+      if (isPositiveConfirmation(userText)) {
+        return detectUserLanguage(sourceRequestText) === "ar" ? "تأكيد المتابعة" : "Continue Confirmation";
+      }
+
+      if (isNegativeConfirmation(userText)) {
+        return detectUserLanguage(sourceRequestText) === "ar" ? "إيقاف الطلب الحالي" : "Stop Current Request";
+      }
+
+      return detectUserLanguage(userText) === "ar" ? "رسالة جديدة" : "New Message";
+    }
+
     function buildFriendlyOptionsMessage(items, requestText) {
       const lang = detectUserLanguage(requestText);
       const list = Array.isArray(items) ? items : [];
@@ -1188,22 +1200,12 @@
 
     function isPositiveConfirmation(value) {
       const normalized = String(value || "").trim().toLowerCase();
-
-      return (
-        normalized === "yes" ||
-        normalized === "continue" ||
-        normalized === "كمل"
-      );
+      return normalized === "yes" || normalized === "continue" || normalized === "كمل";
     }
 
     function isNegativeConfirmation(value) {
       const normalized = String(value || "").trim().toLowerCase();
-
-      return (
-        normalized === "no" ||
-        normalized === "stop" ||
-        normalized === "وقف"
-      );
+      return normalized === "no" || normalized === "stop" || normalized === "وقف";
     }
 
     function askConversationCheckpoint(stageLabel, requestText, summaryLines = []) {
@@ -1522,15 +1524,25 @@
       }
 
       if (pendingConversationCheckpoint) {
-        pushMessage("user", "Confirmation", `<div class="file-preview">${formatMessageText(request)}</div>`);
-        requestInput.value = "";
+        const checkpointRequest = pendingConversationCheckpoint.request;
 
-        if (isPositiveConfirmation(request) && request.length <= 10) {
+        if (isPositiveConfirmation(request)) {
+          pushMessage(
+            "user",
+            getCheckpointUserMessageTitle(request, checkpointRequest),
+            `<div class="file-preview">${formatMessageText(request)}</div>`
+          );
+          requestInput.value = "";
+
           const checkpoint = { ...pendingConversationCheckpoint };
           pendingConversationCheckpoint = null;
 
           chatSendBtn.disabled = true;
-          setStatus("Checkpoint confirmed. Moving to draft preparation...");
+          setStatus(
+            detectUserLanguage(checkpoint.request) === "ar"
+              ? "تم تأكيد المتابعة. أجهز الآن المسودة المنظمة."
+              : "Continuation confirmed. Preparing the governed draft."
+          );
 
           try {
             await prepareDraftFromConfirmedRequest(checkpoint.request, checkpoint.projectId);
@@ -1545,7 +1557,14 @@
           return;
         }
 
-        if (isNegativeConfirmation(request) && request.length <= 10) {
+        if (isNegativeConfirmation(request)) {
+          pushMessage(
+            "user",
+            getCheckpointUserMessageTitle(request, checkpointRequest),
+            `<div class="file-preview">${formatMessageText(request)}</div>`
+          );
+          requestInput.value = "";
+
           pendingConversationCheckpoint = null;
 
           finalizeActiveTurn({
@@ -1554,30 +1573,43 @@
 
           pushMessage(
             "assistant",
-            "Stayed in Current State",
+            detectUserLanguage(checkpointRequest) === "ar" ? "تم إيقاف الطلب الحالي" : "Current Request Stopped",
             `<div class="file-preview">${formatMessageText(
-              "Progression stopped. The request remains in discussion and no draft was prepared."
+              detectUserLanguage(checkpointRequest) === "ar"
+                ? "تم إيقاف الطلب الحالي. لن أجهز مسودة لهذا الطلب."
+                : "The current request was stopped. No draft will be prepared for it."
             )}</div>`
           );
 
-          setStatus("Progression stopped by user.");
+          setStatus(
+            detectUserLanguage(checkpointRequest) === "ar"
+              ? "تم إيقاف الطلب الحالي."
+              : "The current request was stopped."
+          );
           return;
         }
 
         pushMessage(
+          "user",
+          getCheckpointUserMessageTitle(request, checkpointRequest),
+          `<div class="file-preview">${formatMessageText(request)}</div>`
+        );
+        requestInput.value = "";
+
+        pushMessage(
           "assistant",
-          detectUserLanguage(pendingConversationCheckpoint.request) === "ar"
-            ? "ما زلت أنتظر قرارك"
-            : "Still Waiting For Your Decision",
+          detectUserLanguage(checkpointRequest) === "ar"
+            ? "لا يمكن بدء طلب جديد الآن"
+            : "Cannot Start a New Request Now",
           `<div class="file-preview">${formatMessageText(
-            buildCheckpointReminderMessage(pendingConversationCheckpoint.request)
+            buildCheckpointReminderMessage(checkpointRequest)
           )}</div>`
         );
 
         setStatus(
-          detectUserLanguage(pendingConversationCheckpoint.request) === "ar"
-            ? "لا يمكن فتح طلب جديد قبل حسم الطلب الحالي."
-            : "A new request cannot start before the current one is resolved."
+          detectUserLanguage(checkpointRequest) === "ar"
+            ? "يجب حسم الطلب الحالي أولاً."
+            : "You must resolve the current request first."
         );
         return;
       }
