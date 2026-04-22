@@ -183,7 +183,12 @@ function runExecute(context) {
     const existed = fs.existsSync(targetAbs);
     const oldContent = existed ? fs.readFileSync(targetAbs, "utf8") : "";
 
-    if (wantsWrite && existed && action.allow_overwrite !== true) {
+    const isApprovedWorkspacePatch =
+      String(action && action.source_type ? action.source_type : "").trim() === "EXTERNAL_AI_WORKSPACE" &&
+      typeof action.expected_sha256 === "string" &&
+      action.expected_sha256.trim() !== "";
+
+    if (wantsWrite && existed && action.allow_overwrite !== true && !isApprovedWorkspacePatch) {
       return {
         stage_progress_percent: 100,
         blocked: true,

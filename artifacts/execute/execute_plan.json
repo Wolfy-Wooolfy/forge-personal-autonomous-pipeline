@@ -1,16 +1,33 @@
 {
   "execution_id": "MODULE_FLOW_EXECUTE_v1",
-  "generated_at": "2026-04-21T15:41:41.777Z",
+  "generated_at": "2026-04-22T09:31:01.956Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "source": {
     "backfill_plan_path": "artifacts/backfill/backfill_plan.json",
-    "backfill_sha256": "b6484034d0a9691cf7e069118ea3e5a09842700caea53c6219c4b29c8a243dca",
+    "backfill_sha256": "5943b1e1eaecf4784f7b6a58b963e01051599e6a3412edc0e879d9741e2258e2",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84",
-    "workspace_execution_id": null,
-    "workspace_execution_package_id": null,
-    "workspace_execution_package_path": null
+    "workspace_execution_id": "workspace_decision_1776775440375",
+    "workspace_execution_package_id": "execution_package_1776775440387",
+    "workspace_execution_package_path": "artifacts/projects/test_project_3/execute/execution_package.json"
   },
-  "approved_code_actions": []
+  "approved_code_actions": [
+    {
+      "action_id": "WORKSPACE_ACTION_1",
+      "origin_gap_id": "WORKSPACE_CHANGE_REQUEST",
+      "action_type": "BACKFILL_RECONCILIATION",
+      "target_path": "web/index.html",
+      "target_file": "web/index.html",
+      "source_type": "EXTERNAL_AI_WORKSPACE",
+      "workspace_execution_id": "workspace_decision_1776775440375",
+      "workspace_execution_package_id": "execution_package_1776775440387",
+      "workspace_execution_package_path": "artifacts/projects/test_project_3/execute/execution_package.json",
+      "deterministic_template_used": true,
+      "allow_overwrite": false,
+      "wrote_content": true,
+      "old_sha256": "eaa5eade39dac7a9e7120b9a5c10d0393aba1c67e08c55d20833e7556673beb8",
+      "new_sha256": "821e477d898d6f0e4987040620ee6b4ddeeb09fd467af66241f72ab4155e3faf"
+    }
+  ]
 }
