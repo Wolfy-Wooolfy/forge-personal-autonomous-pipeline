@@ -382,28 +382,6 @@
     <div class="workspace-shell">
       <div class="chat-panel">
         <div class="chat-stream">
-          <div class="chat-message user">
-            <div class="message-label">You</div>
-            <h2 class="message-title">Start a conversation</h2>
-
-            <div class="composer-box">
-              <label for="requestInput">Your request</label>
-              <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px;">
-                <label for="projectSelect" style="margin-bottom:0;">Active project</label>
-                <button id="newProjectBtn" type="button" class="secondary">New Project</button>
-              </div>
-              <select id="projectSelect"></select>
-
-              <div id="projectStateBox" class="status">Loading project state...</div>
-
-              <textarea id="requestInput" placeholder="اكتب طلبك هنا...&#10;&#10;مثال: أنشئ ملف نصي يحتوي خطة عملية لبناء أول MVP لمشروع تقليل الهدر في المصانع الصغيرة في مصر."></textarea>
-
-              <div class="message-actions">
-                <button id="chatSendBtn" class="primary">Send</button>
-                <div id="statusBox" class="status inline-status">Ready.</div>
-              </div>
-            </div>
-          </div>
 
           <div class="hidden-state" aria-hidden="true">
             <div id="responseBox" class="output-box empty">No response yet.</div>
@@ -436,6 +414,28 @@
             <div class="actions approval-actions">
               <button id="approveBtn" class="primary" disabled>Approve & Queue Decision</button>
               <button id="rejectBtn" class="danger" disabled>Reject</button>
+            </div>
+          </div>
+          <div class="chat-message user">
+            <div class="message-label">You</div>
+            <h2 class="message-title">Write your message</h2>
+
+            <div class="composer-box">
+              <label for="requestInput">Your request</label>
+              <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px;">
+                <label for="projectSelect" style="margin-bottom:0;">Active project</label>
+                <button id="newProjectBtn" type="button" class="secondary">New Project</button>
+              </div>
+              <select id="projectSelect"></select>
+
+              <div id="projectStateBox" class="status">Loading project state...</div>
+
+              <textarea id="requestInput" placeholder="اكتب طلبك هنا..."></textarea>
+
+              <div class="message-actions">
+                <button id="chatSendBtn" class="primary">Send</button>
+                <div id="statusBox" class="status inline-status">Ready.</div>
+              </div>
             </div>
           </div>
         </div>
@@ -509,6 +509,8 @@
 
     const chatStream = document.querySelector(".chat-stream");
 
+    const composerMessage = requestInput.closest(".chat-message");
+
     let currentProjectState = null;
 
     function appendMessage(type, title, contentHtml) {
@@ -521,8 +523,8 @@
         <div>${contentHtml}</div>
       `;
 
-      chatStream.appendChild(wrapper);
-      wrapper.scrollIntoView({ behavior: "smooth", block: "end" });
+      chatStream.insertBefore(wrapper, composerMessage);
+      composerMessage.scrollIntoView({ behavior: "smooth", block: "end" });
     }
 
     function escapeHtml(value) {
