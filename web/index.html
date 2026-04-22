@@ -1189,46 +1189,21 @@
     function isPositiveConfirmation(value) {
       const normalized = String(value || "").trim().toLowerCase();
 
-      return [
-        "yes",
-        "y",
-        "ok",
-        "okay",
-        "confirm",
-        "confirmed",
-        "approve",
-        "approved",
-        "continue",
-        "proceed",
-        "go ahead",
-        "نعم",
-        "ايوه",
-        "أيوه",
-        "تمام",
-        "موافق",
-        "موافقة",
-        "استمر",
-        "كمل",
-        "كمّل"
-      ].includes(normalized);
+      return (
+        normalized === "yes" ||
+        normalized === "continue" ||
+        normalized === "كمل"
+      );
     }
 
     function isNegativeConfirmation(value) {
       const normalized = String(value || "").trim().toLowerCase();
 
-      return [
-        "no",
-        "n",
-        "cancel",
-        "stop",
-        "reject",
-        "رفض",
-        "لا",
-        "مش",
-        "إلغاء",
-        "الغاء",
-        "وقف"
-      ].includes(normalized);
+      return (
+        normalized === "no" ||
+        normalized === "stop" ||
+        normalized === "وقف"
+      );
     }
 
     function askConversationCheckpoint(stageLabel, requestText, summaryLines = []) {
@@ -1550,7 +1525,7 @@
         pushMessage("user", "Confirmation", `<div class="file-preview">${formatMessageText(request)}</div>`);
         requestInput.value = "";
 
-        if (isPositiveConfirmation(request)) {
+        if (isPositiveConfirmation(request) && request.length <= 10) {
           const checkpoint = { ...pendingConversationCheckpoint };
           pendingConversationCheckpoint = null;
 
@@ -1570,7 +1545,7 @@
           return;
         }
 
-        if (isNegativeConfirmation(request)) {
+        if (isNegativeConfirmation(request) && request.length <= 10) {
           pendingConversationCheckpoint = null;
 
           finalizeActiveTurn({
