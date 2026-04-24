@@ -238,8 +238,18 @@
       padding: 16px 18px;
       background: #0b1220;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
-      max-width: 700px;
       width: 100%;
+      max-width: none;
+    }
+
+    .chat-message[dir="rtl"] {
+      direction: rtl;
+      text-align: right;
+    }
+
+    .chat-message[dir="ltr"] {
+      direction: ltr;
+      text-align: left;
     }
 
     .chat-message.user {
@@ -565,6 +575,7 @@
     function appendMessage(type, title, contentHtml) {
       const wrapper = document.createElement("div");
       wrapper.className = "chat-message " + (type === "user" ? "user" : "assistant");
+      wrapper.setAttribute("dir", detectUserLanguage(contentHtml || "") === "ar" ? "rtl" : "ltr");
 
       wrapper.innerHTML = `
         <div class="message-label">${type === "user" ? "You" : "AI Workspace"}</div>
@@ -586,7 +597,15 @@
     }
 
     function formatMessageText(value) {
-      return escapeHtml(value).replace(/\n/g, "<br>");
+      let text = String(value || "");
+
+      text = text.replace(/Fallback echo generation/gi, "");
+      text = text.replace(/No stronger strategy matched the request\.?/gi, "");
+      text = text.replace(/The next step will prepare a governed draft and diff preview\.?/gi, "");
+      text = text.replace(/No execution will happen\.?/gi, "");
+      text = text.replace(/\n{3,}/g, "\n\n").trim();
+
+      return escapeHtml(text).replace(/\n/g, "<br>");
     }
 
     function detectUserLanguage(value) {
