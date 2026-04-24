@@ -227,6 +227,7 @@
       flex-direction: column;
       gap: 14px;
       flex: 1;
+      min-height: 0;
       overflow-y: auto;
       padding: 20px;
       scroll-behavior: smooth;
@@ -239,13 +240,44 @@
       background: #0b1220;
     }
 
+    .chat-message {
+      max-width: 78%;
+    }
+
     .chat-message.user {
-      background: #082f49;
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .chat-message.assistant {
+      margin-right: auto;
+    }
+
+    .chat-message.user {
+      background: linear-gradient(180deg, #0a3550 0%, #082f49 100%);
       border-color: #0ea5e9;
+      align-self: flex-end;
     }
 
     .chat-message.assistant {
       background: #111827;
+      align-self: flex-start;
+    }
+
+    .chat-message.composer-message {
+      border-top: 1px solid #1f2937;
+      border-radius: 0;
+      position: static;
+      z-index: 5;
+      margin-top: 0;
+      background: #0f172a;
+      border: 1px solid #334155;
+      box-shadow: 0 -10px 24px rgba(15, 23, 42, 0.8);
+    }
+
+    .chat-message.composer-message .message-title {
+      font-size: 16px;
+      margin-bottom: 10px;
     }
 
     .message-label {
@@ -396,7 +428,6 @@
 </head>
 <body>
   <div class="app">
-    <div class="test-banner">Test banner</div>
 
     <div class="header">
       <h1>Forge AI Workspace</h1>
@@ -420,19 +451,13 @@
 
             <div id="analysisBox" class="output-box empty">No operation analysis yet.</div>
           </div>
+        </div>
           <div class="chat-message user composer-message">
             <div class="message-label">You</div>
             <h2 class="message-title">Continue the conversation</h2>
 
             <div class="composer-box">
-              <label for="requestInput">Your request</label>
-              <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:8px;">
-                <label for="projectSelect" style="margin-bottom:0;">Active project</label>
-                <button id="newProjectBtn" type="button" class="secondary">New Project</button>
-              </div>
-              <select id="projectSelect"></select>
-
-              <div id="projectStateBox" class="status">Loading project state...</div>
+              <label for="requestInput">Message</label>
 
               <textarea id="requestInput" placeholder="اكتب رسالتك هنا بشكل طبيعي..."></textarea>
 
@@ -442,10 +467,21 @@
               </div>
             </div>
           </div>
-        </div>
       </div>
 
       <div class="workspace-sidebar">
+        <div class="sidebar-card">
+          <h2>Project Context</h2>
+
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px;">
+            <label for="projectSelect" style="margin-bottom:0;">Active project</label>
+            <button id="newProjectBtn" type="button" class="secondary">New Project</button>
+          </div>
+
+          <select id="projectSelect"></select>
+
+          <div id="projectStateBox" class="status">Loading project state...</div>
+        </div>
         <div class="sidebar-card">
           <h2>Decision Control</h2>
 
