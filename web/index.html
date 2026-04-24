@@ -191,8 +191,6 @@
       color: #cbd5e1;
       white-space: pre-wrap;
       word-break: break-word;
-      max-height: 180px;
-      overflow: auto;
       line-height: 1.6;
     }
 
@@ -225,23 +223,23 @@
     .chat-stream {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 10px;
       flex: 1;
       min-height: 0;
       overflow-y: auto;
-      padding: 20px;
+      padding: 20px 40px;
       scroll-behavior: smooth;
+      align-items: center;
     }
 
     .chat-message {
       border: 1px solid #1e293b;
-      border-radius: 18px;
-      padding: 16px;
+      border-radius: 20px;
+      padding: 16px 18px;
       background: #0b1220;
-    }
-
-    .chat-message {
-      max-width: 78%;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+      max-width: 700px;
+      width: 100%;
     }
 
     .chat-message.user {
@@ -264,22 +262,6 @@
       align-self: flex-start;
     }
 
-    .chat-message.composer-message {
-      border-top: 1px solid #1f2937;
-      border-radius: 0;
-      position: static;
-      z-index: 5;
-      margin-top: 0;
-      background: #0f172a;
-      border: 1px solid #334155;
-      box-shadow: 0 -10px 24px rgba(15, 23, 42, 0.8);
-    }
-
-    .chat-message.composer-message .message-title {
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
     .message-label {
       font-size: 12px;
       text-transform: uppercase;
@@ -294,29 +276,46 @@
       font-size: 18px;
     }
 
-    .composer-box {
+    .composer-message {
+      border-top: 1px solid #1f2937;
+      background: #0f172a;
+      padding: 10px 14px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 6px;
     }
 
-    .composer-box textarea {
-      min-height: 96px;
-      max-height: 180px;
-      resize: vertical;
-    }
-
-    .message-actions {
+    .composer-input-row {
       display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      align-items: center;
+      align-items: flex-end;
+      gap: 10px;
     }
 
-    .inline-status {
-      margin-top: 0;
-      min-height: auto;
+    .composer-message textarea {
+      min-height: 44px;
+      max-height: 120px;
+      resize: none;
+      border-radius: 18px;
+      padding: 12px 14px;
+      font-size: 14px;
       flex: 1;
+    }
+
+    .send-icon-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      padding: 0;
+      font-size: 20px;
+      line-height: 1;
+      background: #38bdf8;
+      color: #082f49;
+    }
+
+    .status-inline {
+      font-size: 12px;
+      color: #64748b;
+      padding-left: 4px;
     }
 
     .assistant-stack {
@@ -452,20 +451,12 @@
             <div id="analysisBox" class="output-box empty">No operation analysis yet.</div>
           </div>
         </div>
-          <div class="chat-message user composer-message">
-            <div class="message-label">You</div>
-            <h2 class="message-title">Continue the conversation</h2>
-
-            <div class="composer-box">
-              <label for="requestInput">Message</label>
-
-              <textarea id="requestInput" placeholder="اكتب رسالتك هنا بشكل طبيعي..."></textarea>
-
-              <div class="message-actions">
-                <button id="chatSendBtn" class="primary">Send</button>
-                <div id="statusBox" class="status inline-status">Ready.</div>
-              </div>
+          <div class="composer-message">
+            <div class="composer-input-row">
+              <textarea id="requestInput" placeholder="اكتب رسالتك هنا..."></textarea>
+              <button id="chatSendBtn" class="send-icon-btn" title="Send">➜</button>
             </div>
+            <div id="statusBox" class="status-inline">Ready.</div>
           </div>
       </div>
 
@@ -1711,14 +1702,6 @@
             selected.original_request || currentRequestText || activeTurn.request || ""
           );
 
-          pushMessage(
-            "assistant",
-            detectUserLanguage(selected.original_request || currentRequestText || activeTurn.request || "") === "ar"
-              ? "تم تحديد المسار المناسب"
-              : "Path Confirmed",
-            `<div class="file-preview">${formatMessageText(confirmedText)}</div>`
-          );
-
           const effectiveRequest = selected.original_request || currentRequestText || activeTurn.request || "";
 
           activeTurn = createEmptyTurnState();
@@ -1802,16 +1785,6 @@
           return;
         }
 
-        if (options.ok === true && Array.isArray(options.strategy_candidates) && options.strategy_candidates.length > 0) {
-          const optionsText = buildFriendlyOptionsMessage(options.strategy_candidates, request);
-
-          pushMessage(
-            "assistant",
-            detectUserLanguage(request) === "ar" ? "فهم أولي للمسارات" : "Initial Paths",
-            `<div class="file-preview">${formatMessageText(optionsText)}</div>`
-          );
-        }
-
         const strategySelection = await requestAPI("/api/ai/select-strategy", { request });
 
         if (strategySelection.ok === false && strategySelection.reason === "CLARIFICATION_REQUIRED") {
@@ -1866,12 +1839,6 @@
         if (strategySelection.ok === true && strategySelection.mode === "STRATEGY_SELECTED" && strategySelection.selected_strategy) {
           const selected = strategySelection.selected_strategy;
           const selectedText = buildFriendlySelectedStrategyMessage(selected, request);
-
-          pushMessage(
-            "assistant",
-            detectUserLanguage(request) === "ar" ? "فهمت أنسب مسار" : "Best Path Identified",
-            `<div class="file-preview">${formatMessageText(selectedText)}</div>`
-          );
 
           askConversationCheckpoint(
             "DISCUSSION_READY_FOR_DOCUMENTATION",
