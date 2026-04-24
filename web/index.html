@@ -581,7 +581,7 @@
         <div>${contentHtml}</div>
       `;
 
-      chatStream.insertBefore(wrapper, composerMessage);
+      chatStream.appendChild(wrapper);
       chatStream.scrollTop = chatStream.scrollHeight;
     }
 
