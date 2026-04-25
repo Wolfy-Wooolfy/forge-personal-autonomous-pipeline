@@ -5,10 +5,11 @@ const path = require("path");
 const fs = require("fs");
 const crypto = require("crypto");
 const { handleAuthRequest } = require("../auth/authSystem");
+const { createAiOsRuntime } = require("../ai_os/projectRuntime");
 
 const ProviderRouter = require("../providers/providerRouter");
 
-function createWorkspaceApiServer(options = {}) {
+function createWorkspaceApiServer(options = {}) {ب
   const root = path.resolve(options.root || process.cwd());
   const port = Number(options.port || process.env.FORGE_WORKSPACE_API_PORT || 3100);
 
@@ -24,6 +25,8 @@ function createWorkspaceApiServer(options = {}) {
   const projectsRoot = path.resolve(root, "artifacts/projects");
   const activeProjectPath = path.resolve(projectsRoot, "active_project.json");
   const projectRegistryPath = path.resolve(projectsRoot, "project_registry.json");
+
+  const aiOsRuntime = createAiOsRuntime({ root });
 
   const allowedWriteRoots = [
     path.resolve(root, "artifacts/llm"),
@@ -2707,6 +2710,43 @@ function buildExecutionPackage(packet) {
 
       if (req.method === "GET" && pathname === "/api/ai/approval-policy") {
         sendJson(res, 200, loadApprovalPolicy());
+        return;
+      }
+
+      if (req.method === "POST" && pathname === "/api/ai-os/intake") {
+        const body = await readBody(req);
+        sendJson(res, 200, aiOsRuntime.intakeProject(body));
+        return;
+      }
+
+      if (req.method === "POST" && pathname === "/api/ai-os/options") {
+        const body = await readBody(req);
+        sendJson(res, 200, aiOsRuntime.registerOptions(body));
+        return;
+      }
+
+      if (req.method === "POST" && pathname === "/api/ai-os/decision") {
+        const body = await readBody(req);
+        sendJson(res, 200, aiOsRuntime.decideOption(body));
+        return;
+      }
+
+      if (req.method === "POST" && pathname === "/api/ai-os/documentation/draft") {
+        const body = await readBody(req);
+        sendJson(res, 200, aiOsRuntime.saveDocumentationDraft(body));
+        return;
+      }
+
+      if (req.method === "POST" && pathname === "/api/ai-os/documentation/approve") {
+        const body = await readBody(req);
+        sendJson(res, 200, aiOsRuntime.approveDocumentation(body));
+        return;
+      }
+
+      if (req.method === "GET" && pathname === "/api/ai-os/project") {
+        sendJson(res, 200, aiOsRuntime.getProject({
+          project_id: requestUrl.searchParams.get("project_id") || ""
+        }));
         return;
       }
 
