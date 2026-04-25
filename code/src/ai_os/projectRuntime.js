@@ -486,8 +486,153 @@ function generateOptionsFromAnswers(answers = {}) {
     return optionsEntries[optionsEntries.length - 1].options;
   }
 
+function buildRequirementProfile(state, selectedOption = {}) {
+  const answers = state.clarification_answers || {};
+  const text = [
+    answers.game_type,
+    answers.reference_game,
+    answers.progression,
+    answers.mode,
+    selectedOption.title,
+    selectedOption.description
+  ].join(" ").toLowerCase();
+
+  const isRunner = text.includes("runner") || text.includes("subway");
+  const isMatch3 = text.includes("match-3") || text.includes("match 3") || text.includes("candy") || text.includes("puzzle");
+
+  if (isRunner) {
+    return {
+      archetype: "ENDLESS_RUNNER",
+      files: ["index.html", "style.css", "game.js"],
+      mechanics: [
+        "Player controls a runner character on a forward-moving track.",
+        "Player jumps to avoid incoming obstacles.",
+        "Obstacles spawn over time and move toward the player.",
+        "Game speed increases as score increases.",
+        "Collision ends the run."
+      ],
+      gameLoop: [
+        "1. Start run",
+        "2. Spawn player on ground lane",
+        "3. Spawn obstacles over time",
+        "4. Player jumps to avoid obstacles",
+        "5. Update obstacle movement and speed",
+        "6. Detect collisions",
+        "7. Increase score over time",
+        "8. End run on collision or continue"
+      ],
+      playerActions: [
+        "- Tap, click, or press Space to jump",
+        "- Restart run after game over"
+      ],
+      winLose: [
+        "- Win: MVP has no hard win state; success is measured by survival score",
+        "- Lose: Player collides with an obstacle"
+      ],
+      ui: [
+        "- Game Screen with canvas",
+        "- Score display",
+        "- Speed display",
+        "- Status message",
+        "- Restart button"
+      ],
+      technical: [
+        "- Frontend: HTML5 Canvas",
+        "- Game Logic: JavaScript animation loop",
+        "- State Management: In-memory runtime state",
+        "- Storage: None for MVP"
+      ]
+    };
+  }
+
+  if (isMatch3) {
+    return {
+      archetype: "MATCH_3_PUZZLE",
+      files: ["index.html", "style.css", "game.js"],
+      mechanics: [
+        "Player interacts with a match-3 style grid.",
+        "Player swaps adjacent tiles to form matches.",
+        "Matching 3+ tiles removes them from the board.",
+        "New tiles fall dynamically from the top.",
+        "Chain reactions increase score multiplier."
+      ],
+      gameLoop: [
+        "1. Load puzzle grid with random tiles",
+        "2. Player swaps two adjacent tiles",
+        "3. System checks for valid match (3+)",
+        "4. Matched tiles are removed",
+        "5. Tiles above fall down to fill gaps",
+        "6. New tiles spawn from top",
+        "7. Combo chains are evaluated",
+        "8. Score is updated",
+        "9. Check win/lose condition",
+        "10. Continue level or end"
+      ],
+      playerActions: [
+        "- Tap or click tiles to select",
+        "- Swap adjacent tiles",
+        "- Restart level"
+      ],
+      winLose: [
+        "- Win: Player reaches target score before running out of moves",
+        "- Lose: Player runs out of moves before achieving target",
+        "- Lose: No possible matches remain"
+      ],
+      ui: [
+        "- Main Menu",
+        "- Game Screen with grid",
+        "- Score, moves, and target display",
+        "- Result/status area",
+        "- Restart button"
+      ],
+      technical: [
+        "- Frontend: HTML/CSS/JavaScript",
+        "- Game Logic: JavaScript board loop",
+        "- State Management: In-memory board state",
+        "- Storage: None for MVP"
+      ]
+    };
+  }
+
+  return {
+    archetype: "GENERIC_INTERACTIVE_GAME",
+    files: ["index.html", "style.css", "game.js"],
+    mechanics: [
+      "Core mechanics are derived from the approved requirements.",
+      "Player performs actions that update game state.",
+      "System evaluates progress and feedback."
+    ],
+    gameLoop: [
+      "1. Start game",
+      "2. Player performs action",
+      "3. System updates state",
+      "4. System evaluates outcome",
+      "5. Continue or end game"
+    ],
+    playerActions: [
+      "- Perform primary game action",
+      "- Restart session"
+    ],
+    winLose: [
+      "- Win: Player achieves defined objective",
+      "- Lose: Player fails objective or reaches fail condition"
+    ],
+    ui: [
+      "- Game Screen",
+      "- Score/status display",
+      "- Restart control"
+    ],
+    technical: [
+      "- Frontend: HTML/CSS/JavaScript",
+      "- Game Logic: JavaScript runtime loop",
+      "- State Management: In-memory state"
+    ]
+  };
+}
+
 function generateExecutionFilesFromDesign(projectId, state) {
   const answers = state.clarification_answers || {};
+  const profile = buildRequirementProfile(state, selectedOption);
   const outputBase = `artifacts/projects/${projectId}/output`;
 
   if (answers.game_type === "Action") {
@@ -902,89 +1047,31 @@ function generateDocumentationDraftContent(state, selectedOption) {
     `- Description: ${selectedOption.description || "Not specified"}`,
     "",
     "## Core Gameplay Mechanics",
-    ...(answers.game_type === "Casual Puzzle"
-      ? [
-          "- Player interacts with a match-3 style grid.",
-          "- Player swaps adjacent tiles to form matches.",
-          "- Matching 3+ tiles removes them from the board.",
-          "- New tiles fall dynamically from the top.",
-          "- Chain reactions (combos) increase score multiplier."
-        ]
-      : [
-          "- Core gameplay mechanics will be defined based on selected game type."
-        ]),
+    ...profile.mechanics,
     "",
     "## Game Loop",
-    ...(answers.game_type === "Casual Puzzle"
-      ? [
-          "1. Load puzzle grid with random tiles",
-          "2. Player swaps two adjacent tiles",
-          "3. System checks for valid match (3+)",
-          "4. Matched tiles are removed",
-          "5. Tiles above fall down to fill gaps",
-          "6. New tiles spawn from top",
-          "7. Combo chains are evaluated",
-          "8. Score is updated with multiplier",
-          "9. Check win/lose condition",
-          "10. Continue level or end"
-        ]
-      : [
-          "1. Start level",
-          "2. Player performs action",
-          "3. System processes logic",
-          "4. Update state",
-          "5. Check completion condition",
-          "6. Continue or end level"
-        ]),
+    ...profile.gameLoop,
     "",
     "## Player Actions",
-    "- Tap or swipe to swap elements",
-    "- Retry level",
-    "- Navigate between levels",
+    ...profile.playerActions,
     "",
     "## Win / Lose Conditions",
-    ...(answers.game_type === "Casual Puzzle"
-      ? [
-          "- Win: Player reaches target score before running out of moves",
-          "- Win: Player completes level objective (e.g. clear tiles or reach score)",
-          "- Lose: Player runs out of moves before achieving target",
-          "- Lose: No possible matches remain (dead board scenario)"
-        ]
-      : [
-          "- Win: Player achieves defined objective",
-          "- Lose: Player fails to meet objective conditions"
-        ]),
+    ...profile.winLose,
     "",
     "## UI Structure",
-    "- Main Menu",
-    "- Level Selection Screen",
-    "- Game Screen (Grid + Score + Moves)",
-    "- Result Screen (Win / Lose)",
+    ...profile.ui,
     "",
     "## Technical Structure (MVP)",
-    "- Frontend: HTML5 Canvas or simple game engine",
-    "- Game Logic: JavaScript-based loop",
-    "- State Management: In-memory (no backend)",
-    "- Storage: Local (optional)",
+    ...profile.technical,
     "",
     "## MVP Scope",
     "- Single gameplay mode",
-    "- Limited levels",
+    "- Limited levels or controlled MVP session",
     "- Basic UI",
     "- Ads integration placeholder",
     "",
     "## Files To Generate",
-    ...(answers.game_type === "Casual Puzzle"
-      ? [
-          "- index.html (Game container and UI layout)",
-          "- style.css (Basic styling for game UI)",
-          "- game.js (Core match-3 game logic and loop)",
-          "- assets/ (Optional images or sounds for tiles)"
-        ]
-      : [
-          "- index.html",
-          "- main.js"
-        ]),
+    ...profile.files.map((file) => `- ${file}`),
     "",
     "## Execution Boundary",
     "No direct execution is allowed from AI OS. Execution must be handed off to Forge Core only."
