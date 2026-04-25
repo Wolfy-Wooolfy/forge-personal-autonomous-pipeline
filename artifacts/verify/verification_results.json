@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T09:31:01.972Z",
+  "generated_at": "2026-04-25T13:48:25.305Z",
   "blocked": false,
   "status": "PASS",
   "outcome": "PASS",
@@ -78,7 +78,7 @@
     {
       "name": "workspace_runtime_execution_id_consistent",
       "passed": true,
-      "detail": "decision=workspace_decision_1776775440375; backfill=workspace_decision_1776775440375; execute=workspace_decision_1776775440375"
+      "detail": "decision=ai_os_execution_1777124853854; backfill=ai_os_execution_1777124853854; execute=ai_os_execution_1777124853854"
     },
     {
       "name": "workspace_runtime_matches_current_execution_package",
@@ -88,7 +88,7 @@
     {
       "name": "workspace_execution_package_identity_consistent",
       "passed": true,
-      "detail": "decision_package_id=execution_package_1776775440387; backfill_package_id=execution_package_1776775440387; execute_package_id=execution_package_1776775440387; decision_package_path=artifacts/projects/test_project_3/execute/execution_package.json; backfill_package_path=artifacts/projects/test_project_3/execute/execution_package.json; execute_package_path=artifacts/projects/test_project_3/execute/execution_package.json"
+      "detail": "decision_package_id=ai_os_package_1777124853854; backfill_package_id=ai_os_package_1777124853854; execute_package_id=ai_os_package_1777124853854; decision_package_path=artifacts/projects/mobile_game/execute/execution_package.json; backfill_package_path=artifacts/projects/mobile_game/execute/execution_package.json; execute_package_path=artifacts/projects/mobile_game/execute/execution_package.json"
     },
     {
       "name": "workspace_execution_package_matches_current_artifact",

@@ -1,13 +1,13 @@
 # MODULE FLOW — Backfill Execution Log
 
-- generated_at: 2026-04-22T09:31:01.934Z
+- generated_at: 2026-04-25T13:48:25.278Z
 - operating_mode: IMPROVE
 - repository_state: MIXED
 - blocked: false
 
 ## Source
 - decision_gate_path: artifacts/decisions/module_flow_decision_gate.json
-- decision_gate_sha256: 1ed94ccb5e0b0e733921320b54df76013b7ff1c54b9397942cee712751989d43
+- decision_gate_sha256: 4892d98ace7169e9fda4b1ce034729e6d9ec97db1effcda7cd9f60d49dfded91
 - intake_context_path: artifacts/intake/intake_context.json
 - intake_context_sha256: eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84
 
@@ -19,7 +19,7 @@
 
 ## Approved Backfill Actions
 - WORKSPACE_ACTION_1 [WORKSPACE_CHANGE_REQUEST/MEDIUM] governed workspace decision packet approved
-  - target_path: web/index.html
+  - target_path: artifacts/projects/mobile_game/output/index.html
   - action_type: BACKFILL_RECONCILIATION
   - deterministic_template_used: true
 

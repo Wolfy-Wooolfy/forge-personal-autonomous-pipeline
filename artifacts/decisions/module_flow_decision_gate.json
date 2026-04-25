@@ -1,6 +1,6 @@
 {
   "decision_id": "MODULE_FLOW_DECISION_GATE",
-  "timestamp": "2026-04-22T09:31:01.921Z",
+  "timestamp": "2026-04-25T13:48:25.263Z",
   "task": "TASK-052",
   "policy": "AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK",
   "operating_mode": "IMPROVE",
@@ -10,11 +10,11 @@
   "override_raw": "",
   "source": {
     "source_type": "EXECUTION_PACKAGE",
-    "execution_package_path": "artifacts/projects/test_project_3/execute/execution_package.json",
-    "execution_package_id": "execution_package_1776775440387",
-    "execution_package_execution_id": "workspace_decision_1776775440375",
-    "execution_package_sha256": "2e5d9f2e0f2bb1dee53bdeff652da61761d0c8f9c96c2bda6d236ea60ed98d7f",
-    "workspace_response_path": "artifacts/llm/responses/workspace_decision_1776775440375.response.json",
+    "execution_package_path": "artifacts/projects/mobile_game/execute/execution_package.json",
+    "execution_package_id": "ai_os_package_1777124853854",
+    "execution_package_execution_id": "ai_os_execution_1777124853854",
+    "execution_package_sha256": "1c2a611a28257571b1a21e4c7ccf540896c814bdc0f458fcd6af528d8a95b102",
+    "workspace_response_path": "artifacts/llm/responses/ai_os_execution_1777124853854.response.json",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84"
   },
@@ -30,22 +30,22 @@
       "category": "WORKSPACE_CHANGE_REQUEST",
       "severity": "MEDIUM",
       "affected_entities": [
-        "web/index.html"
+        "artifacts/projects/mobile_game/output/index.html"
       ],
       "action_id": "WORKSPACE_ACTION_1",
-      "description": "Apply governed workspace execution package to web/index.html",
+      "description": "Apply governed workspace execution package to artifacts/projects/mobile_game/output/index.html",
       "impact_scope": "CODE_WRITE",
       "requires_decision": false,
       "cognitive_priority_hint": null,
       "reason": "governed workspace decision packet approved",
       "workspace_source": "EXTERNAL_AI_WORKSPACE",
-      "workspace_execution_id": "workspace_decision_1776775440375",
-      "workspace_execution_package_id": "execution_package_1776775440387",
-      "workspace_execution_package_path": "artifacts/projects/test_project_3/execute/execution_package.json",
-      "workspace_response_path": "artifacts/llm/responses/workspace_decision_1776775440375.response.json",
+      "workspace_execution_id": "ai_os_execution_1777124853854",
+      "workspace_execution_package_id": "ai_os_package_1777124853854",
+      "workspace_execution_package_path": "artifacts/projects/mobile_game/execute/execution_package.json",
+      "workspace_response_path": "artifacts/llm/responses/ai_os_execution_1777124853854.response.json",
       "workspace_allow_overwrite": false,
-      "workspace_expected_sha256": "821e477d898d6f0e4987040620ee6b4ddeeb09fd467af66241f72ab4155e3faf",
-      "workspace_target_path": "web/index.html"
+      "workspace_expected_sha256": "e51cd77173fcd6be0f1582327d10c93100fc62e0d0741b99d6d53c2b0f1b87e2",
+      "workspace_target_path": "artifacts/projects/mobile_game/output/index.html"
     }
   ],
   "review_required_actions": [],

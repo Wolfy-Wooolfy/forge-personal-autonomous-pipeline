@@ -1,6 +1,6 @@
 # Execute Diff
 
-- WORKSPACE_ACTION_1 → web/index.html
+- WORKSPACE_ACTION_1 → artifacts/projects/mobile_game/output/index.html
   - wrote_content: true
-  - old_sha256: eaa5eade39dac7a9e7120b9a5c10d0393aba1c67e08c55d20833e7556673beb8
-  - new_sha256: 821e477d898d6f0e4987040620ee6b4ddeeb09fd467af66241f72ab4155e3faf
+  - old_sha256: null
+  - new_sha256: e51cd77173fcd6be0f1582327d10c93100fc62e0d0741b99d6d53c2b0f1b87e2
