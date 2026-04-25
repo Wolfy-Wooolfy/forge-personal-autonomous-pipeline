@@ -28,13 +28,16 @@
 - Chain reactions (combos) increase score multiplier.
 
 ## Game Loop
-1. Start level
-2. Player makes move
-3. System evaluates match
-4. Update board
-5. Update score
-6. Check win/lose condition
-7. Continue or end level
+1. Load puzzle grid with random tiles
+2. Player swaps two adjacent tiles
+3. System checks for valid match (3+)
+4. Matched tiles are removed
+5. Tiles above fall down to fill gaps
+6. New tiles spawn from top
+7. Combo chains are evaluated
+8. Score is updated with multiplier
+9. Check win/lose condition
+10. Continue level or end
 
 ## Player Actions
 - Tap or swipe to swap elements
@@ -42,8 +45,10 @@
 - Navigate between levels
 
 ## Win / Lose Conditions
-- Win: Reach target score within allowed moves
-- Lose: Moves reach zero before target
+- Win: Player reaches target score before running out of moves
+- Win: Player completes level objective (e.g. clear tiles or reach score)
+- Lose: Player runs out of moves before achieving target
+- Lose: No possible matches remain (dead board scenario)
 
 ## UI Structure
 - Main Menu
@@ -62,6 +67,12 @@
 - Limited levels
 - Basic UI
 - Ads integration placeholder
+
+## Files To Generate
+- index.html (Game container and UI layout)
+- style.css (Basic styling for game UI)
+- game.js (Core match-3 game logic and loop)
+- assets/ (Optional images or sounds for tiles)
 
 ## Execution Boundary
 No direct execution is allowed from AI OS. Execution must be handed off to Forge Core only.

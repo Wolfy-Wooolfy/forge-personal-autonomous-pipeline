@@ -554,8 +554,17 @@ function generateDocumentationDraftContent(state, selectedOption) {
     "- Navigate between levels",
     "",
     "## Win / Lose Conditions",
-    "- Win: Reach target score within allowed moves",
-    "- Lose: Moves reach zero before target",
+    ...(answers.game_type === "Casual Puzzle"
+      ? [
+          "- Win: Player reaches target score before running out of moves",
+          "- Win: Player completes level objective (e.g. clear tiles or reach score)",
+          "- Lose: Player runs out of moves before achieving target",
+          "- Lose: No possible matches remain (dead board scenario)"
+        ]
+      : [
+          "- Win: Player achieves defined objective",
+          "- Lose: Player fails to meet objective conditions"
+        ]),
     "",
     "## UI Structure",
     "- Main Menu",
@@ -574,6 +583,19 @@ function generateDocumentationDraftContent(state, selectedOption) {
     "- Limited levels",
     "- Basic UI",
     "- Ads integration placeholder",
+    "",
+    "## Files To Generate",
+    ...(answers.game_type === "Casual Puzzle"
+      ? [
+          "- index.html (Game container and UI layout)",
+          "- style.css (Basic styling for game UI)",
+          "- game.js (Core match-3 game logic and loop)",
+          "- assets/ (Optional images or sounds for tiles)"
+        ]
+      : [
+          "- index.html",
+          "- main.js"
+        ]),
     "",
     "## Execution Boundary",
     "No direct execution is allowed from AI OS. Execution must be handed off to Forge Core only."
