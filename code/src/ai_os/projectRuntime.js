@@ -190,15 +190,35 @@ function createAiOsRuntime(options = {}) {
     return /[\u0600-\u06FF]/.test(String(text || "")) ? "AR" : "EN";
   }
 
-  function buildClarificationQuestion(text) {
-    const value = String(text || "").trim();
+function buildClarificationQuestions(text) {
+  const value = String(text || "").toLowerCase();
 
-    if (value.length < 20) {
-      return "محتاج أعرف الفكرة الأساسية للمشروع: هو تطبيق، موقع، لعبة، ولا نظام داخلي؟";
-    }
-
-    return "";
+  // لو الطلب واضح ومحدد نعدّي
+  if (value.length > 40 && !value.includes("game") && !value.includes("لعبة")) {
+    return [];
   }
+
+  // لو لعبة → نحتاج Discovery كامل
+  if (value.includes("game") || value.includes("لعبة")) {
+    return [
+      "نوع اللعبة؟ (Puzzle / Action / Strategy / Casual / RPG)",
+      "الفئة المستهدفة؟ (أطفال / شباب / عام)",
+      "هتكون Offline ولا Online؟",
+      "هل فيها مراحل ولا Endless؟",
+      "هل فيها نظام نقاط (Score)؟",
+      "هل فيها تسجيل دخول؟",
+      "هتشتغل على Android بس ولا Android و iOS؟",
+      "هتكسب منها ازاي؟ (Ads / In-App Purchases / Subscription)",
+      "هل في لعبة مشابهة في بالك؟",
+      "عايز تبدأ بـ MVP بسيط ولا لعبة كاملة؟"
+    ];
+  }
+
+  // Default fallback
+  return [
+    "محتاج توضيح تفاصيل أكتر عن المشروع عشان أقدر أبدأ التخطيط."
+  ];
+}
 
   function intakeProject(body = {}) {
     const message = String(body.message || body.request || "").trim();
@@ -215,7 +235,7 @@ function createAiOsRuntime(options = {}) {
     }
 
     const state = loadProjectState(projectId, projectName);
-    const clarificationQuestion = buildClarificationQuestion(message);
+    const clarificationQuestions = buildClarificationQuestions(message);
 
     const updatedState = saveProjectState({
       ...state,
@@ -224,11 +244,11 @@ function createAiOsRuntime(options = {}) {
       primary_language: detectPrimaryLanguage(message),
       user_goal: message,
       current_phase: "DISCOVERY",
-      active_runtime_state: clarificationQuestion ? "DISCUSSION" : "IDEATION",
+      active_runtime_state: clarificationQuestions.length > 0 ? "DISCOVERY_REQUIRED" : "IDEATION",
       documentation_state: "EMPTY",
       execution_package_state: "NOT_READY",
       execution_state: "NOT_STARTED",
-      open_questions: clarificationQuestion ? [clarificationQuestion] : []
+      open_questions: clarificationQuestions
     });
 
     appendArrayJson(path.join(aiOsRoot(projectId), "conversation_log.json"), {
@@ -241,16 +261,16 @@ function createAiOsRuntime(options = {}) {
       entry_type: "IDEATION_INTAKE",
       message,
       inferred_project_type: updatedState.project_type,
-      needs_clarification: Boolean(clarificationQuestion),
-      clarification_question: clarificationQuestion,
+      needs_clarification: clarificationQuestions.length > 0,
+      clarification_questions: clarificationQuestions,
       created_at: nowIso()
     });
 
     return {
       ok: true,
-      mode: clarificationQuestion ? "CLARIFICATION_REQUIRED" : "IDEATION_READY",
+      mode: clarificationQuestions.length > 0 ? "CLARIFICATION_REQUIRED" : "IDEATION_READY",
       project: updatedState,
-      blocking_question: clarificationQuestion
+      blocking_questions: clarificationQuestions
     };
   }
 
