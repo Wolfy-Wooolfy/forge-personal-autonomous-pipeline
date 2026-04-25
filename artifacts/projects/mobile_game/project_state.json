@@ -1,0 +1,35 @@
+{
+  "project_id": "mobile_game",
+  "project_name": "Mobile Game",
+  "project_type": "SOFTWARE_APP",
+  "project_mode": "BUILD_NEW",
+  "project_status": "ACTIVE",
+  "primary_language": "AR",
+  "current_phase": "DOCS_REVIEW",
+  "active_runtime_state": "DOCUMENTATION_REVIEW",
+  "documentation_state": "DRAFT_READY",
+  "execution_package_state": "NOT_READY",
+  "execution_state": "NOT_STARTED",
+  "verification_state": "NOT_READY",
+  "delivery_state": "NOT_READY",
+  "memory_state": "ACTIVE",
+  "accepted_options": [
+    "OPTION-1"
+  ],
+  "rejected_options": [],
+  "open_questions": [],
+  "pending_decisions": [],
+  "review_cycles_count": 1,
+  "artifact_registry": {
+    "project_root": "artifacts/projects/mobile_game",
+    "project_state": "artifacts/projects/mobile_game/project_state.json",
+    "ai_os_conversation_log": "artifacts/projects/mobile_game/ai_os/conversation_log.json",
+    "ai_os_ideation_log": "artifacts/projects/mobile_game/ai_os/ideation_log.json",
+    "ai_os_options_log": "artifacts/projects/mobile_game/ai_os/options_log.json",
+    "ai_os_decisions_log": "artifacts/projects/mobile_game/ai_os/decisions_log.json",
+    "ai_os_documentation_draft": "artifacts/projects/mobile_game/ai_os/documentation/draft.md"
+  },
+  "active_project_flag": true,
+  "last_updated_at": "2026-04-25T13:17:40.047Z",
+  "user_goal": "عايز أبني Mobile Game"
+}

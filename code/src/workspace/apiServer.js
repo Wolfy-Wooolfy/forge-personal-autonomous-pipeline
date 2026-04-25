@@ -9,7 +9,7 @@ const { createAiOsRuntime } = require("../ai_os/projectRuntime");
 
 const ProviderRouter = require("../providers/providerRouter");
 
-function createWorkspaceApiServer(options = {}) {ب
+function createWorkspaceApiServer(options = {}) {
   const root = path.resolve(options.root || process.cwd());
   const port = Number(options.port || process.env.FORGE_WORKSPACE_API_PORT || 3100);
 

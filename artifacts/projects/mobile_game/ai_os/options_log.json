@@ -1,0 +1,23 @@
+[
+  {
+    "entry_type": "OPTIONS_PRESENTED",
+    "options": [
+      {
+        "option_id": "OPTION-1",
+        "title": "Simple MVP Mobile Game",
+        "description": "Start with a simple playable mobile game MVP.",
+        "impact_level": "HIGH",
+        "risk_level": "LOW"
+      },
+      {
+        "option_id": "OPTION-2",
+        "title": "Full Advanced Mobile Game",
+        "description": "Start directly with a complete advanced game system.",
+        "impact_level": "HIGH",
+        "risk_level": "HIGH"
+      }
+    ],
+    "recommendation": "Start with OPTION-1 to reduce risk and validate faster.",
+    "created_at": "2026-04-25T13:13:16.844Z"
+  }
+]
