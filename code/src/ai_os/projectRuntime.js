@@ -355,13 +355,6 @@ function generateOptionsFromAnswers(answers = {}) {
     const projectId = normalizeProjectId(body.project_id);
     const state = loadProjectState(projectId, body.project_name);
 
-    let options = Array.isArray(body.options) ? body.options : [];
-
-    if (options.length === 0) {
-    const answers = state.clarification_answers || {};
-    options = generateOptionsFromAnswers(answers);
-    }
-
     if (Array.isArray(state.open_questions) && state.open_questions.length > 0) {
       return {
         ok: false,
@@ -369,6 +362,27 @@ function generateOptionsFromAnswers(answers = {}) {
         reason: "DISCOVERY_NOT_COMPLETE",
         blocking_questions: state.open_questions
       };
+    }
+
+    const hasAcceptedOptions =
+      Array.isArray(state.accepted_options) && state.accepted_options.length > 0;
+
+    const reopenDecision = body.reopen_decision === true;
+
+    if (hasAcceptedOptions && !reopenDecision) {
+      return {
+        ok: false,
+        mode: "BLOCKED",
+        reason: "DECISION_ALREADY_ACCEPTED",
+        blocking_question: "يوجد Option معتمد بالفعل. لا يمكن إعادة توليد أو تسجيل Options جديدة إلا بإرسال reopen_decision=true."
+      };
+    }
+
+    let options = Array.isArray(body.options) ? body.options : [];
+
+    if (options.length === 0) {
+      const answers = state.clarification_answers || {};
+      options = generateOptionsFromAnswers(answers);
     }
 
     if (options.length === 0) {
@@ -392,11 +406,15 @@ function generateOptionsFromAnswers(answers = {}) {
       ...state,
       current_phase: "PLANNING",
       active_runtime_state: "OPTION_DECISION",
+      documentation_state: "EMPTY",
+      execution_package_state: "NOT_READY",
+      execution_state: "NOT_STARTED",
+      accepted_options: reopenDecision ? [] : state.accepted_options,
       pending_decisions: normalizedOptions.map((option) => option.option_id)
     });
 
     appendArrayJson(path.join(aiOsRoot(projectId), "options_log.json"), {
-      entry_type: "OPTIONS_PRESENTED",
+      entry_type: reopenDecision ? "OPTIONS_REOPENED" : "OPTIONS_PRESENTED",
       options: normalizedOptions,
       recommendation: String(body.recommendation || ""),
       created_at: nowIso()
@@ -404,7 +422,7 @@ function generateOptionsFromAnswers(answers = {}) {
 
     return {
       ok: true,
-      mode: "OPTIONS_REGISTERED",
+      mode: reopenDecision ? "DECISION_REOPENED_OPTIONS_REGISTERED" : "OPTIONS_REGISTERED",
       project: updatedState,
       options: normalizedOptions
     };
