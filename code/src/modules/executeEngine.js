@@ -207,6 +207,48 @@ function runExecute(context) {
     if (wantsWrite) {
       newContent = String(action.desired_content);
 
+      if (
+        String(action.source_type || "").trim() === "EXTERNAL_AI_WORKSPACE" &&
+        existed
+      ) {
+        const oldSize = Buffer.byteLength(oldContent, "utf8");
+        const newSize = Buffer.byteLength(newContent, "utf8");
+        const expectedCurrentSha256 =
+          typeof action.expected_current_sha256 === "string"
+            ? action.expected_current_sha256.trim()
+            : "";
+
+        if (expectedCurrentSha256 && expectedCurrentSha256 !== sha256Text(oldContent)) {
+          return {
+            stage_progress_percent: 100,
+            blocked: true,
+            status_patch: {
+              next_step: "",
+              blocking_questions: [
+                `Execute BLOCKED: current file sha256 mismatch for ${targetRel}`
+              ]
+            }
+          };
+        }
+
+        if (
+          oldSize >= 1024 &&
+          newSize < Math.floor(oldSize * 0.5) &&
+          action.explicit_destructive_overwrite !== true
+        ) {
+          return {
+            stage_progress_percent: 100,
+            blocked: true,
+            status_patch: {
+              next_step: "",
+              blocking_questions: [
+                `Execute BLOCKED: destructive workspace replacement detected for ${targetRel}`
+              ]
+            }
+          };
+        }
+      }
+
       if (action.expected_sha256 && sha256Text(newContent) !== String(action.expected_sha256)) {
         return {
           stage_progress_percent: 100,
