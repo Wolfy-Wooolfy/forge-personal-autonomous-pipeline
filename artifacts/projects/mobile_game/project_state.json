@@ -18,10 +18,7 @@
   ],
   "rejected_options": [],
   "open_questions": [],
-  "pending_decisions": [
-    "OPTION-1",
-    "OPTION-2"
-  ],
+  "pending_decisions": [],
   "review_cycles_count": 3,
   "artifact_registry": {
     "project_root": "artifacts/projects/mobile_game",
