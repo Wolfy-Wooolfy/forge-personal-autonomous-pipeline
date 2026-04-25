@@ -1,6 +1,6 @@
 # Verification Report
 
-generated_at: 2026-04-25T18:23:38.720Z
+generated_at: 2026-04-25T19:45:38.610Z
 status: PASS
 
 ## Closure Gate Readiness
@@ -26,9 +26,9 @@ status: PASS
 - decision_artifact_present: PASS artifacts/decisions/decision_packet.json, artifacts/decisions/module_flow_decision_gate.json
 - execute_plan_matches_backfill_plan: PASS backfill_actions=3; execute_actions=3
 - decision_gate_matches_backfill_plan: PASS decision_actions=3; backfill_actions=3
-- workspace_runtime_execution_id_consistent: PASS decision=ai_os_execution_1777141396503; backfill=ai_os_execution_1777141396503; execute=ai_os_execution_1777141396503
+- workspace_runtime_execution_id_consistent: PASS decision=ai_os_execution_1777146184959; backfill=ai_os_execution_1777146184959; execute=ai_os_execution_1777146184959
 - workspace_runtime_matches_current_execution_package: PASS No current workspace execution_package.json
-- workspace_execution_package_identity_consistent: PASS decision_package_id=ai_os_package_1777141396503; backfill_package_id=ai_os_package_1777141396503; execute_package_id=ai_os_package_1777141396503; decision_package_path=artifacts/projects/mobile_game/execute/execution_package.json; backfill_package_path=artifacts/projects/mobile_game/execute/execution_package.json; execute_package_path=artifacts/projects/mobile_game/execute/execution_package.json
+- workspace_execution_package_identity_consistent: PASS decision_package_id=ai_os_package_1777146184959; backfill_package_id=ai_os_package_1777146184959; execute_package_id=ai_os_package_1777146184959; decision_package_path=artifacts/projects/action_game/execute/execution_package.json; backfill_package_path=artifacts/projects/action_game/execute/execution_package.json; execute_package_path=artifacts/projects/action_game/execute/execution_package.json
 - workspace_execution_package_matches_current_artifact: PASS No current workspace execution_package.json
 - workspace_runtime_write_applied: PASS execute_actions=3; wrote_content_all=true
 - gap_count_zero: PASS gap_count=0

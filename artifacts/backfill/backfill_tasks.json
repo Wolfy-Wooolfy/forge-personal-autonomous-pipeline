@@ -1,16 +1,16 @@
 {
   "backfill_id": "MODULE_FLOW_BACKFILL_v2",
-  "generated_at": "2026-04-25T18:23:38.712Z",
+  "generated_at": "2026-04-25T19:45:38.601Z",
   "operating_mode": "IMPROVE",
   "repository_state": "MIXED",
   "source": {
     "decision_gate_path": "artifacts/decisions/module_flow_decision_gate.json",
-    "decision_gate_sha256": "f1624259d5ce88e604916bb269191605a6501fee24f4b18412dde721079f219e",
+    "decision_gate_sha256": "7def4d37713acc40f16f3b0b29c39e997ff35c0cac4584ff4ab530647b3d56b7",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84",
-    "workspace_execution_id": "ai_os_execution_1777141396503",
-    "workspace_execution_package_id": "ai_os_package_1777141396503",
-    "workspace_execution_package_path": "artifacts/projects/mobile_game/execute/execution_package.json"
+    "workspace_execution_id": "ai_os_execution_1777146184959",
+    "workspace_execution_package_id": "ai_os_package_1777146184959",
+    "workspace_execution_package_path": "artifacts/projects/action_game/execute/execution_package.json"
   },
   "summary": {
     "approved_actions_seen": 3,
@@ -24,14 +24,14 @@
       "category": "WORKSPACE_CHANGE_REQUEST",
       "severity": "MEDIUM",
       "affected_entities": [
-        "artifacts/projects/mobile_game/output/index.html"
+        "artifacts/projects/action_game/output/index.html"
       ],
       "action": {
         "action_id": "WORKSPACE_ACTION_1",
         "description": "governed workspace decision packet approved",
         "impact_scope": "CODE_WRITE",
         "requires_decision": false,
-        "target_path": "artifacts/projects/mobile_game/output/index.html",
+        "target_path": "artifacts/projects/action_game/output/index.html",
         "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
@@ -41,14 +41,14 @@
       "category": "WORKSPACE_CHANGE_REQUEST",
       "severity": "MEDIUM",
       "affected_entities": [
-        "artifacts/projects/mobile_game/output/style.css"
+        "artifacts/projects/action_game/output/style.css"
       ],
       "action": {
         "action_id": "WORKSPACE_ACTION_2",
         "description": "governed workspace decision packet approved",
         "impact_scope": "CODE_WRITE",
         "requires_decision": false,
-        "target_path": "artifacts/projects/mobile_game/output/style.css",
+        "target_path": "artifacts/projects/action_game/output/style.css",
         "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
@@ -58,14 +58,14 @@
       "category": "WORKSPACE_CHANGE_REQUEST",
       "severity": "MEDIUM",
       "affected_entities": [
-        "artifacts/projects/mobile_game/output/game.js"
+        "artifacts/projects/action_game/output/game.js"
       ],
       "action": {
         "action_id": "WORKSPACE_ACTION_3",
         "description": "governed workspace decision packet approved",
         "impact_scope": "CODE_WRITE",
         "requires_decision": false,
-        "target_path": "artifacts/projects/mobile_game/output/game.js",
+        "target_path": "artifacts/projects/action_game/output/game.js",
         "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }
