@@ -454,20 +454,84 @@ function generateOptionsFromAnswers(answers = {}) {
     };
   }
 
-  function saveDocumentationDraft(body = {}) {
-    const projectId = normalizeProjectId(body.project_id);
-    const content = String(body.content || "").trim();
+  function getLatestOptions(projectId) {
+    const optionsLogPath = path.join(aiOsRoot(projectId), "options_log.json");
+    const entries = readJsonSafe(optionsLogPath, []);
+    const optionsEntries = Array.isArray(entries)
+      ? entries.filter((entry) => Array.isArray(entry.options))
+      : [];
 
-    if (!content) {
-      return {
-        ok: false,
-        mode: "BLOCKED",
-        reason: "EMPTY_DOCUMENTATION",
-        blocking_question: "محتوى الوثيقة مطلوب قبل حفظ Draft."
-      };
+    if (optionsEntries.length === 0) {
+      return [];
     }
 
+    return optionsEntries[optionsEntries.length - 1].options;
+  }
+
+  function generateDocumentationDraftContent(state, selectedOption) {
+    const answers = state.clarification_answers || {};
+
+    return [
+      `# ${state.project_name || "Project"} Documentation Draft`,
+      "",
+      "## Overview",
+      String(state.user_goal || ""),
+      "",
+      "## Discovery Summary",
+      `- Game Type: ${answers.game_type || "Not specified"}`,
+      `- Target Audience: ${answers.target_audience || "Not specified"}`,
+      `- Mode: ${answers.mode || "Not specified"}`,
+      `- Progression: ${answers.progression || "Not specified"}`,
+      `- Score System: ${answers.score_system || "Not specified"}`,
+      `- Login: ${answers.login || "Not specified"}`,
+      `- Platform: ${answers.platform || "Not specified"}`,
+      `- Monetization: ${answers.monetization || "Not specified"}`,
+      `- Reference Game: ${answers.reference_game || "Not specified"}`,
+      `- Scope: ${answers.scope || "Not specified"}`,
+      "",
+      "## Selected Option",
+      `- Option ID: ${selectedOption.option_id || "Not specified"}`,
+      `- Title: ${selectedOption.title || "Not specified"}`,
+      `- Description: ${selectedOption.description || "Not specified"}`,
+      `- Impact Level: ${selectedOption.impact_level || "Not specified"}`,
+      `- Risk Level: ${selectedOption.risk_level || "Not specified"}`,
+      "",
+      "## MVP Scope",
+      "- Build the selected concept as a controlled MVP.",
+      "- Keep execution limited to the approved scope.",
+      "- Avoid advanced features until MVP validation is complete.",
+      "",
+      "## Execution Boundary",
+      "No direct execution is allowed from AI OS. Execution must be handed off to Forge Core only."
+    ].join("\n");
+  }
+
+  function saveDocumentationDraft(body = {}) {
+    const projectId = normalizeProjectId(body.project_id);
     const state = loadProjectState(projectId, body.project_name);
+    let content = String(body.content || "").trim();
+
+    if (!content) {
+      const latestOptions = getLatestOptions(projectId);
+      const selectedOptionId = Array.isArray(state.accepted_options)
+        ? state.accepted_options[state.accepted_options.length - 1]
+        : "";
+
+      const selectedOption = latestOptions.find((option) => {
+        return String(option.option_id || "") === String(selectedOptionId || "");
+      });
+
+      if (!selectedOption) {
+        return {
+          ok: false,
+          mode: "BLOCKED",
+          reason: "NO_SELECTED_OPTION_FOR_DOCUMENTATION",
+          blocking_question: "لازم يتم اختيار Option قبل توليد وثيقة تلقائية."
+        };
+      }
+
+      content = generateDocumentationDraftContent(state, selectedOption);
+    }
     const docsDir = path.join(aiOsRoot(projectId), "documentation");
     const draftPath = path.join(docsDir, "draft.md");
 
