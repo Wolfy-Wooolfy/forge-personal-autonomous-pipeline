@@ -164,6 +164,41 @@ function runExecute(context) {
 
   for (const action of actions) {
     const targetRel = String(action && (action.target_path || action.target_file) ? (action.target_path || action.target_file) : "").trim();
+
+    const normalizedTargetRel = targetRel.replace(/\\/g, "/");
+
+    const isForgeCorePath =
+      normalizedTargetRel.startsWith("code/") ||
+      normalizedTargetRel.startsWith("bin/") ||
+      normalizedTargetRel.startsWith("docs/") ||
+      normalizedTargetRel.startsWith("artifacts/forge/") ||
+      normalizedTargetRel.startsWith("artifacts/tasks/") ||
+      normalizedTargetRel.startsWith("artifacts/orchestration/") ||
+      normalizedTargetRel.startsWith("artifacts/verify/") ||
+      normalizedTargetRel.startsWith("artifacts/closure/") ||
+      normalizedTargetRel.startsWith("web/");
+
+    const isSystemTask =
+      action &&
+      (
+        action.system_task === true ||
+        String(action.task_type || "").toLowerCase() === "system_maintenance" ||
+        String(action.task_type || "").toLowerCase() === "forge_build"
+      );
+
+    if (isForgeCorePath && !isSystemTask) {
+      return {
+        stage_progress_percent: 100,
+        blocked: true,
+        status_patch: {
+          next_step: "",
+          blocking_questions: [
+            `Execute BLOCKED: attempt to modify protected Forge path ${targetRel} without system task authorization`
+          ]
+        }
+      };
+    }
+
     const targetAbs = resolveSafeTargetPath(targetRel);
 
     if (!targetRel || !targetAbs) {
