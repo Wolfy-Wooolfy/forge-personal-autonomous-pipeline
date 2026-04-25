@@ -5,9 +5,9 @@
   "project_mode": "BUILD_NEW",
   "project_status": "ACTIVE",
   "primary_language": "AR",
-  "current_phase": "DOCS_DRAFTING",
-  "active_runtime_state": "DOCUMENTATION",
-  "documentation_state": "DRAFTING",
+  "current_phase": "DOCS_REVIEW",
+  "active_runtime_state": "DOCUMENTATION_REVIEW",
+  "documentation_state": "DRAFT_READY",
   "execution_package_state": "NOT_READY",
   "execution_state": "NOT_STARTED",
   "verification_state": "NOT_READY",
@@ -19,7 +19,7 @@
   "rejected_options": [],
   "open_questions": [],
   "pending_decisions": [],
-  "review_cycles_count": 0,
+  "review_cycles_count": 1,
   "artifact_registry": {
     "project_root": "artifacts/projects/action_game",
     "project_state": "artifacts/projects/action_game/project_state.json",
@@ -30,7 +30,7 @@
     "ai_os_documentation_draft": "artifacts/projects/action_game/ai_os/documentation/draft.md"
   },
   "active_project_flag": true,
-  "last_updated_at": "2026-04-25T18:44:40.470Z",
+  "last_updated_at": "2026-04-25T18:57:19.386Z",
   "user_goal": "عايز أبني لعبة Action",
   "clarification_answers": {
     "game_type": "Action",
