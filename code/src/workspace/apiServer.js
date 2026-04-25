@@ -2719,6 +2719,12 @@ function buildExecutionPackage(packet) {
         return;
       }
 
+      if (req.method === "POST" && pathname === "/api/ai-os/clarification/answer") {
+        const body = await readBody(req);
+        sendJson(res, 200, aiOsRuntime.answerClarification(body));
+        return;
+      }
+
       if (req.method === "POST" && pathname === "/api/ai-os/options") {
         const body = await readBody(req);
         sendJson(res, 200, aiOsRuntime.registerOptions(body));

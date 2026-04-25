@@ -274,11 +274,72 @@ function buildClarificationQuestions(text) {
     };
   }
 
+  function answerClarification(body = {}) {
+    const projectId = normalizeProjectId(body.project_id);
+    const answers = body.answers;
+
+    if (!answers || typeof answers !== "object" || Array.isArray(answers)) {
+      return {
+        ok: false,
+        mode: "BLOCKED",
+        reason: "INVALID_CLARIFICATION_ANSWERS",
+        blocking_question: "لازم تبعت answers object يحتوي على إجابات الأسئلة المطلوبة."
+      };
+    }
+
+    const state = loadProjectState(projectId, body.project_name);
+
+    if (!Array.isArray(state.open_questions) || state.open_questions.length === 0) {
+      return {
+        ok: false,
+        mode: "BLOCKED",
+        reason: "NO_OPEN_CLARIFICATION_QUESTIONS",
+        blocking_question: "لا توجد أسئلة مفتوحة تحتاج إجابات."
+      };
+    }
+
+    appendArrayJson(path.join(aiOsRoot(projectId), "conversation_log.json"), {
+      entry_type: "CLARIFICATION_ANSWERS",
+      answers,
+      created_at: nowIso()
+    });
+
+    appendArrayJson(path.join(aiOsRoot(projectId), "ideation_log.json"), {
+      entry_type: "DISCOVERY_COMPLETED",
+      open_questions_answered: state.open_questions,
+      answers,
+      created_at: nowIso()
+    });
+
+    const updatedState = saveProjectState({
+      ...state,
+      current_phase: "DISCOVERY_COMPLETE",
+      active_runtime_state: "IDEATION",
+      open_questions: [],
+      clarification_answers: answers
+    });
+
+    return {
+      ok: true,
+      mode: "IDEATION_READY",
+      project: updatedState
+    };
+  }
+
   function registerOptions(body = {}) {
     const projectId = normalizeProjectId(body.project_id);
     const state = loadProjectState(projectId, body.project_name);
 
     const options = Array.isArray(body.options) ? body.options : [];
+
+    if (Array.isArray(state.open_questions) && state.open_questions.length > 0) {
+      return {
+        ok: false,
+        mode: "BLOCKED",
+        reason: "DISCOVERY_NOT_COMPLETE",
+        blocking_questions: state.open_questions
+      };
+    }
 
     if (options.length === 0) {
       return {
@@ -594,6 +655,7 @@ function buildClarificationQuestions(text) {
 
   return {
     intakeProject,
+    answerClarification,
     registerOptions,
     decideOption,
     saveDocumentationDraft,
