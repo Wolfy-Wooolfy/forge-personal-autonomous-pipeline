@@ -2743,6 +2743,12 @@ function buildExecutionPackage(packet) {
         return;
       }
 
+      if (req.method === "POST" && pathname === "/api/ai-os/handoff") {
+        const body = await readBody(req);
+        sendJson(res, 200, aiOsRuntime.createExecutionHandoff(body));
+        return;
+      }
+
       if (req.method === "GET" && pathname === "/api/ai-os/project") {
         sendJson(res, 200, aiOsRuntime.getProject({
           project_id: requestUrl.searchParams.get("project_id") || ""

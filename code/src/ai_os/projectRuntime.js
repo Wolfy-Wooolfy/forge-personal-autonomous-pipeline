@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 
 function createAiOsRuntime(options = {}) {
   const root = path.resolve(options.root || process.cwd());
@@ -56,6 +57,44 @@ function createAiOsRuntime(options = {}) {
 
   function nowIso() {
     return new Date().toISOString();
+  }
+
+  function sha256Text(text) {
+    return crypto.createHash("sha256").update(String(text), "utf8").digest("hex");
+  }
+
+  function toArtifactRelPath(absPath) {
+    return path.relative(root, absPath).replace(/\\/g, "/");
+  }
+
+  function renderExecutionHandoffMd(payload) {
+    const lines = [];
+
+    lines.push("# AI OS Execution Handoff");
+    lines.push("");
+    lines.push(`- handoff_id: ${payload.handoff_id}`);
+    lines.push(`- execution_id: ${payload.execution_id}`);
+    lines.push(`- package_id: ${payload.package_id}`);
+    lines.push(`- project_id: ${payload.project_id}`);
+    lines.push(`- created_at: ${payload.created_at}`);
+    lines.push(`- handoff_status: ${payload.handoff_status}`);
+    lines.push("");
+    lines.push("## Approved Scope");
+    lines.push(payload.approved_scope.summary || "");
+    lines.push("");
+    lines.push("## Targets");
+
+    payload.execution_plan.proposed_files.forEach((file) => {
+      lines.push(`- ${file.path}`);
+      lines.push(`  - allow_overwrite: ${file.allow_overwrite ? "true" : "false"}`);
+      lines.push(`  - sha256: ${file.sha256}`);
+    });
+
+    lines.push("");
+    lines.push("## Boundary");
+    lines.push("Execution is allowed only through Forge Core.");
+
+    return lines.join("\n");
   }
 
   function appendArrayJson(filePath, entry) {
@@ -372,6 +411,159 @@ function createAiOsRuntime(options = {}) {
     };
   }
 
+  function createExecutionHandoff(body = {}) {
+    const projectId = normalizeProjectId(body.project_id);
+    const state = loadProjectState(projectId, body.project_name);
+
+    const docsApproved =
+      state.current_phase === "EXECUTION_PREPARATION" &&
+      state.active_runtime_state === "EXECUTION_HANDOFF_READY" &&
+      state.documentation_state === "DOCS_APPROVED" &&
+      state.execution_package_state === "READY_FOR_HANDOFF";
+
+    if (!docsApproved) {
+      return {
+        ok: false,
+        mode: "BLOCKED",
+        reason: "DOCUMENTATION_NOT_APPROVED_FOR_HANDOFF",
+        blocking_question: "لازم تكون الوثائق معتمدة والحالة EXECUTION_HANDOFF_READY قبل إنشاء handoff إلى Forge."
+      };
+    }
+
+    const files = Array.isArray(body.files) ? body.files : [];
+
+    if (files.length === 0) {
+      return {
+        ok: false,
+        mode: "BLOCKED",
+        reason: "NO_EXECUTION_FILES",
+        blocking_question: "لازم يتم تحديد ملف واحد على الأقل داخل files قبل إنشاء execution package."
+      };
+    }
+
+    const normalizedFiles = files.map((file, index) => {
+      const relPath = String(file && file.path ? file.path : "").trim().replace(/\\/g, "/");
+      const content = typeof (file && file.content) === "string" ? file.content : "";
+
+      if (!relPath) {
+        throw new Error(`AI OS handoff blocked: file path missing at index ${index}`);
+      }
+
+      return {
+        path: relPath,
+        content,
+        allow_overwrite: file && file.allow_overwrite === true,
+        sha256: sha256Text(content)
+      };
+    });
+
+    const createdAt = nowIso();
+    const executionId = `ai_os_execution_${Date.now()}`;
+    const packageId = `ai_os_package_${Date.now()}`;
+    const handoffId = `ai_os_handoff_${Date.now()}`;
+
+    const responseAbs = path.resolve(root, "artifacts", "llm", "responses", `${executionId}.response.json`);
+    const packageAbs = path.join(projectRoot(projectId), "execute", "execution_package.json");
+    const handoffAbs = path.join(aiOsRoot(projectId), "handoff", "execution_handoff.json");
+    const handoffMdAbs = path.join(aiOsRoot(projectId), "handoff", "execution_handoff.md");
+
+    const responsePayload = {
+      execution_id: executionId,
+      source: "AI_OPERATING_SYSTEM",
+      project_id: projectId,
+      created_at: createdAt,
+      summary: String(body.summary || "AI OS execution handoff response artifact."),
+      files: normalizedFiles.map((file) => ({
+        path: file.path,
+        content: file.content
+      }))
+    };
+
+    writeJson(responseAbs, responsePayload);
+
+    const executionPackage = {
+      package_id: packageId,
+      handoff_id: handoffId,
+      created_at: createdAt,
+      source: "EXTERNAL_AI_WORKSPACE",
+      source_layer: "AI_OPERATING_SYSTEM",
+      handoff_status: "APPROVED_PENDING_FORGE",
+      project_id: projectId,
+      execution_id: executionId,
+      artifact_path: toArtifactRelPath(packageAbs),
+      approved_scope: {
+        summary: String(body.approved_scope || body.summary || "AI OS approved execution scope."),
+        operation_mode: normalizedFiles.length > 1 ? "MULTI_FILE" : "SINGLE_FILE",
+        file_count: normalizedFiles.length
+      },
+      target_project_path: String(body.target_project_path || `artifacts/projects/${projectId}`),
+      requested_outputs: Array.isArray(body.requested_outputs)
+        ? body.requested_outputs.map((item) => String(item))
+        : normalizedFiles.map((file) => `Apply approved AI OS change to ${file.path}`),
+      file_or_artifact_targets: normalizedFiles.map((file) => file.path),
+      dependency_assumptions: Array.isArray(body.dependency_assumptions)
+        ? body.dependency_assumptions.map((item) => String(item))
+        : [],
+      risk_notes: Array.isArray(body.risk_notes)
+        ? body.risk_notes.map((item) => String(item))
+        : [],
+      execution_approval_reference: {
+        approved_by_role: String(body.approved_by_role || "CTO"),
+        approved_at: createdAt,
+        documentation_state: state.documentation_state,
+        project_state_path: `artifacts/projects/${projectId}/project_state.json`
+      },
+      finalized_documentation_set: [
+        `artifacts/projects/${projectId}/project_state.json`,
+        `artifacts/projects/${projectId}/ai_os/documentation/draft.md`
+      ],
+      execution_plan: {
+        mode: normalizedFiles.length > 1 ? "MULTI_FILE" : "SINGLE_FILE",
+        file_count: normalizedFiles.length,
+        proposed_files: normalizedFiles.map((file) => ({
+          path: file.path,
+          allow_overwrite: file.allow_overwrite,
+          sha256: file.sha256,
+          required_roles: ["cto"],
+          diff: ""
+        }))
+      },
+      business_and_scope_decisions: {
+        accepted_options: Array.isArray(state.accepted_options) ? state.accepted_options : [],
+        user_goal: String(state.user_goal || ""),
+        documentation_state: state.documentation_state
+      }
+    };
+
+    writeJson(packageAbs, executionPackage);
+    writeJson(handoffAbs, executionPackage);
+    fs.writeFileSync(handoffMdAbs, renderExecutionHandoffMd(executionPackage), "utf8");
+
+    const updatedState = saveProjectState({
+      ...state,
+      current_phase: "EXECUTION_READY",
+      active_runtime_state: "EXECUTION_HANDOFF_CREATED",
+      execution_package_state: "APPROVED_PENDING_FORGE",
+      execution_state: "PENDING_FORGE",
+      verification_state: "NOT_READY"
+    });
+
+    return {
+      ok: true,
+      mode: "EXECUTION_HANDOFF_CREATED",
+      project: updatedState,
+      handoff: {
+        handoff_id: handoffId,
+        execution_id: executionId,
+        package_id: packageId,
+        execution_package_path: toArtifactRelPath(packageAbs),
+        response_artifact_path: toArtifactRelPath(responseAbs),
+        handoff_artifact_path: toArtifactRelPath(handoffAbs),
+        handoff_report_path: toArtifactRelPath(handoffMdAbs)
+      }
+    };
+  }
+
   function getProject(body = {}) {
     const projectId = normalizeProjectId(body.project_id);
     return {
@@ -386,6 +578,7 @@ function createAiOsRuntime(options = {}) {
     decideOption,
     saveDocumentationDraft,
     approveDocumentation,
+    createExecutionHandoff,
     getProject
   };
 }
