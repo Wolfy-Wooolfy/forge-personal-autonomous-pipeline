@@ -632,7 +632,7 @@ function buildRequirementProfile(state, selectedOption = {}) {
 
 function generateExecutionFilesFromDesign(projectId, state) {
   const answers = state.clarification_answers || {};
-  const profile = buildRequirementProfile(state, selectedOption);
+  const profile = buildRequirementProfile(state);
   const outputBase = `artifacts/projects/${projectId}/output`;
 
   if (answers.game_type === "Action") {
@@ -1022,6 +1022,7 @@ function generateExecutionFilesFromDesign(projectId, state) {
 
 function generateDocumentationDraftContent(state, selectedOption) {
   const answers = state.clarification_answers || {};
+  const profile = buildRequirementProfile(state, selectedOption);
 
   return [
     `# ${state.project_name || "Project"} Documentation Draft`,
