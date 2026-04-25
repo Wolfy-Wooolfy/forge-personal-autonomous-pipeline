@@ -21,11 +21,11 @@
 - Description: Offline Android Casual Puzzle with Ads monetization based on user requirements.
 
 ## Core Gameplay Mechanics
-- Player interacts with a puzzle grid.
-- Player swaps adjacent elements.
-- Matching elements triggers removal.
-- New elements fall to fill gaps.
-- Score increases based on matches.
+- Player interacts with a match-3 style grid.
+- Player swaps adjacent tiles to form matches.
+- Matching 3+ tiles removes them from the board.
+- New tiles fall dynamically from the top.
+- Chain reactions (combos) increase score multiplier.
 
 ## Game Loop
 1. Start level

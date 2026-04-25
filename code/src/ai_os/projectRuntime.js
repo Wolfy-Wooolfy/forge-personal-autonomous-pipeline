@@ -513,20 +513,40 @@ function generateDocumentationDraftContent(state, selectedOption) {
     `- Description: ${selectedOption.description || "Not specified"}`,
     "",
     "## Core Gameplay Mechanics",
-    "- Player interacts with a puzzle grid.",
-    "- Player swaps adjacent elements.",
-    "- Matching elements triggers removal.",
-    "- New elements fall to fill gaps.",
-    "- Score increases based on matches.",
+    ...(answers.game_type === "Casual Puzzle"
+      ? [
+          "- Player interacts with a match-3 style grid.",
+          "- Player swaps adjacent tiles to form matches.",
+          "- Matching 3+ tiles removes them from the board.",
+          "- New tiles fall dynamically from the top.",
+          "- Chain reactions (combos) increase score multiplier."
+        ]
+      : [
+          "- Core gameplay mechanics will be defined based on selected game type."
+        ]),
     "",
     "## Game Loop",
-    "1. Start level",
-    "2. Player makes move",
-    "3. System evaluates match",
-    "4. Update board",
-    "5. Update score",
-    "6. Check win/lose condition",
-    "7. Continue or end level",
+    ...(answers.game_type === "Casual Puzzle"
+      ? [
+          "1. Load puzzle grid with random tiles",
+          "2. Player swaps two adjacent tiles",
+          "3. System checks for valid match (3+)",
+          "4. Matched tiles are removed",
+          "5. Tiles above fall down to fill gaps",
+          "6. New tiles spawn from top",
+          "7. Combo chains are evaluated",
+          "8. Score is updated with multiplier",
+          "9. Check win/lose condition",
+          "10. Continue level or end"
+        ]
+      : [
+          "1. Start level",
+          "2. Player performs action",
+          "3. System processes logic",
+          "4. Update state",
+          "5. Check completion condition",
+          "6. Continue or end level"
+        ]),
     "",
     "## Player Actions",
     "- Tap or swipe to swap elements",
