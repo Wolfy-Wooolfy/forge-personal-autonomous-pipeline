@@ -359,7 +359,7 @@ function createAiOsRuntime(options = {}) {
       ...state,
       current_phase: "EXECUTION_PREPARATION",
       active_runtime_state: "EXECUTION_HANDOFF_READY",
-      documentation_state: "APPROVED",
+      documentation_state: "DOCS_APPROVED",
       execution_package_state: "READY_FOR_HANDOFF",
       execution_state: "NOT_STARTED"
     });
