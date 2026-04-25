@@ -326,11 +326,41 @@ function buildClarificationQuestions(text) {
     };
   }
 
+function generateOptionsFromAnswers(answers = {}) {
+  const gameType = answers.game_type || "Game";
+  const platform = answers.platform || "Mobile";
+  const mode = answers.mode || "Offline";
+  const monetization = answers.monetization || "Ads";
+  const scope = answers.scope || "MVP";
+
+  return [
+    {
+      option_id: "OPTION-1",
+      title: `${gameType} ${scope}`,
+      description: `${mode} ${platform} ${gameType} with ${monetization} monetization based on user requirements.`,
+      impact_level: "HIGH",
+      risk_level: "LOW"
+    },
+    {
+      option_id: "OPTION-2",
+      title: `Advanced ${gameType}`,
+      description: `Extended version with scalable features, future online support, and advanced monetization options.`,
+      impact_level: "HIGH",
+      risk_level: "MEDIUM"
+    }
+  ];
+}
+
   function registerOptions(body = {}) {
     const projectId = normalizeProjectId(body.project_id);
     const state = loadProjectState(projectId, body.project_name);
 
-    const options = Array.isArray(body.options) ? body.options : [];
+    let options = Array.isArray(body.options) ? body.options : [];
+
+    if (options.length === 0) {
+    const answers = state.clarification_answers || {};
+    options = generateOptionsFromAnswers(answers);
+    }
 
     if (Array.isArray(state.open_questions) && state.open_questions.length > 0) {
       return {

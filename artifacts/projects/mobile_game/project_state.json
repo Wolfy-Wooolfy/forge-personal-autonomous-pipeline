@@ -5,8 +5,8 @@
   "project_mode": "BUILD_NEW",
   "project_status": "ACTIVE",
   "primary_language": "AR",
-  "current_phase": "DISCOVERY",
-  "active_runtime_state": "DISCOVERY_REQUIRED",
+  "current_phase": "PLANNING",
+  "active_runtime_state": "OPTION_DECISION",
   "documentation_state": "EMPTY",
   "execution_package_state": "NOT_READY",
   "execution_state": "NOT_STARTED",
@@ -17,19 +17,11 @@
     "OPTION-1"
   ],
   "rejected_options": [],
-  "open_questions": [
-    "نوع اللعبة؟ (Puzzle / Action / Strategy / Casual / RPG)",
-    "الفئة المستهدفة؟ (أطفال / شباب / عام)",
-    "هتكون Offline ولا Online؟",
-    "هل فيها مراحل ولا Endless؟",
-    "هل فيها نظام نقاط (Score)؟",
-    "هل فيها تسجيل دخول؟",
-    "هتشتغل على Android بس ولا Android و iOS؟",
-    "هتكسب منها ازاي؟ (Ads / In-App Purchases / Subscription)",
-    "هل في لعبة مشابهة في بالك؟",
-    "عايز تبدأ بـ MVP بسيط ولا لعبة كاملة؟"
+  "open_questions": [],
+  "pending_decisions": [
+    "OPTION-1",
+    "OPTION-2"
   ],
-  "pending_decisions": [],
   "review_cycles_count": 1,
   "artifact_registry": {
     "project_root": "artifacts/projects/mobile_game",
@@ -41,6 +33,18 @@
     "ai_os_documentation_draft": "artifacts/projects/mobile_game/ai_os/documentation/draft.md"
   },
   "active_project_flag": true,
-  "last_updated_at": "2026-04-25T14:10:06.636Z",
-  "user_goal": "عايز أبني Mobile Game"
+  "last_updated_at": "2026-04-25T14:36:14.315Z",
+  "user_goal": "عايز أبني Mobile Game",
+  "clarification_answers": {
+    "game_type": "Casual Puzzle",
+    "target_audience": "General",
+    "mode": "Offline",
+    "progression": "Levels",
+    "score_system": "Yes",
+    "login": "No",
+    "platform": "Android",
+    "monetization": "Ads",
+    "reference_game": "Candy Crush",
+    "scope": "MVP"
+  }
 }
