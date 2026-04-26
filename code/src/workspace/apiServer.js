@@ -1751,6 +1751,21 @@ ${trimmedExisting}`
         : Array.isArray(existing.open_questions)
           ? existing.open_questions
           : [],
+
+      clarification_answers:
+        overrides.clarification_answers && typeof overrides.clarification_answers === "object"
+          ? overrides.clarification_answers
+          : existing.clarification_answers && typeof existing.clarification_answers === "object"
+            ? existing.clarification_answers
+            : {},
+      requirement_domain: overrides.requirement_domain || existing.requirement_domain || "",
+      requirement_completeness:
+        typeof overrides.requirement_completeness === "boolean"
+          ? overrides.requirement_completeness
+          : typeof existing.requirement_completeness === "boolean"
+            ? existing.requirement_completeness
+            : false,
+        
       documentation_state: documentationState,
       execution_package_state: executionPackageState,
       execution_state: executionState,
@@ -1811,6 +1826,33 @@ ${trimmedExisting}`
     fs.writeFileSync(projectRegistryPath, JSON.stringify(registry, null, 2));
 
     return state;
+  }
+
+  function assertWorkspaceDiscoveryComplete(body = {}) {
+    const projectId =
+      typeof body.project_id === "string" && body.project_id.trim() !== ""
+        ? body.project_id.trim()
+        : "default_project";
+
+    const state = buildProjectState(projectId);
+    const openQuestions = Array.isArray(state.open_questions) ? state.open_questions : [];
+
+    if (state.requirement_completeness !== true || openQuestions.length > 0) {
+      return {
+        ok: false,
+        mode: "BLOCKED",
+        reason: "DISCOVERY_NOT_COMPLETE",
+        project_id: projectId,
+        requirement_domain: state.requirement_domain || "",
+        requirement_completeness: state.requirement_completeness === true,
+        blocking_questions: openQuestions
+      };
+    }
+
+    return {
+      ok: true,
+      project_id: projectId
+    };
   }
 
   function listProjects() {
@@ -2258,6 +2300,13 @@ function buildExecutionPackage(packet) {
   async function handlePreview(body, res) {
     const draft = body && body.draft ? body.draft : null;
 
+    const discoveryGate = assertWorkspaceDiscoveryComplete(body);
+
+    if (!discoveryGate.ok) {
+      sendJson(res, 409, discoveryGate);
+      return;
+    }
+
     if (!draft || !Array.isArray(draft.files)) {
       sendJson(res, 400, { error: "Draft is required" });
       return;
@@ -2294,6 +2343,12 @@ function buildExecutionPackage(packet) {
 
   async function handleDecision(body, res) {
     const userRequest = typeof body.request === "string" ? body.request.trim() : "";
+    const discoveryGate = assertWorkspaceDiscoveryComplete(body);
+
+    if (!discoveryGate.ok) {
+      sendJson(res, 409, discoveryGate);
+      return;
+    }
     const approverRole = typeof body.approver_role === "string" ? body.approver_role.trim() : "";
     const draft = body && body.draft ? body.draft : null;
 
@@ -2344,6 +2399,12 @@ function buildExecutionPackage(packet) {
 
   async function handleOptions(body, res) {
     const requestText = typeof body.request === "string" ? body.request.trim() : "";
+    const discoveryGate = assertWorkspaceDiscoveryComplete(body);
+
+    if (!discoveryGate.ok) {
+      sendJson(res, 409, discoveryGate);
+      return;
+    }
     const interpretation = interpretUserIntent(requestText);
 
     if (
@@ -2385,6 +2446,12 @@ function buildExecutionPackage(packet) {
 
   async function handleSelectStrategy(body, res) {
     const requestText = typeof body.request === "string" ? body.request.trim() : "";
+    const discoveryGate = assertWorkspaceDiscoveryComplete(body);
+
+    if (!discoveryGate.ok) {
+      sendJson(res, 409, discoveryGate);
+      return;
+    }
     const interpretation = interpretUserIntent(requestText);
 
     if (
@@ -2444,6 +2511,13 @@ function buildExecutionPackage(packet) {
     const requestText = typeof body.request === "string" ? body.request.trim() : "";
     const selectedStrategyId =
       typeof body.selected_strategy_id === "string" ? body.selected_strategy_id.trim() : "";
+
+    const discoveryGate = assertWorkspaceDiscoveryComplete(body);
+
+    if (!discoveryGate.ok) {
+      sendJson(res, 409, discoveryGate);
+      return;
+    }
 
     const interpretation = interpretUserIntent(requestText);
 
@@ -2505,6 +2579,13 @@ function buildExecutionPackage(packet) {
 
     const projectId =
       typeof body.project_id === "string" ? body.project_id.trim() : "";
+
+    const discoveryGate = assertWorkspaceDiscoveryComplete(body);
+
+    if (!discoveryGate.ok) {
+      sendJson(res, 409, discoveryGate);
+      return;
+    }
 
     const interpretation = interpretUserIntent(requestText);
 
@@ -2596,6 +2677,13 @@ function buildExecutionPackage(packet) {
     const approverRole = typeof body.approver_role === "string" && body.approver_role.trim()
       ? body.approver_role.trim()
       : "cto";
+
+    const discoveryGate = assertWorkspaceDiscoveryComplete(body);
+
+    if (!discoveryGate.ok) {
+      sendJson(res, 409, discoveryGate);
+      return;
+    }
 
     if (!proposalId) {
       sendJson(res, 400, { error: "proposal_id is required" });
@@ -2878,6 +2966,13 @@ function buildExecutionPackage(packet) {
 
       if (req.method === "POST" && req.url === "/api/ai/draft") {
         const body = await readBody(req);
+
+        const discoveryGate = assertWorkspaceDiscoveryComplete(body);
+
+        if (!discoveryGate.ok) {
+          sendJson(res, 409, discoveryGate);
+          return;
+        }
 
         const requestText = typeof body.request === "string" ? body.request.trim() : "";
 
