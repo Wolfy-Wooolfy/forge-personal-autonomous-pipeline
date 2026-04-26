@@ -277,6 +277,23 @@ function createAiOsRuntime(options = {}) {
     return buildRequirementDiscovery(text, answers).open_questions;
   }
 
+  function assertRequirementDiscoveryComplete(state) {
+    const openQuestions = Array.isArray(state.open_questions) ? state.open_questions : [];
+
+    if (state.requirement_completeness !== true || openQuestions.length > 0) {
+      return {
+        ok: false,
+        mode: "BLOCKED",
+        reason: "DISCOVERY_NOT_COMPLETE",
+        blocking_questions: openQuestions
+      };
+    }
+
+    return {
+      ok: true
+    };
+  }
+
   function intakeProject(body = {}) {
     const message = String(body.message || body.request || "").trim();
     const projectName = normalizeProjectName(body.project_name || "New Project");
@@ -292,7 +309,8 @@ function createAiOsRuntime(options = {}) {
     }
 
     const state = loadProjectState(projectId, projectName);
-    const clarificationQuestions = buildClarificationQuestions(message);
+    const discovery = buildRequirementDiscovery(message);
+    const clarificationQuestions = discovery.open_questions;
 
     const updatedState = saveProjectState({
       ...state,
@@ -305,7 +323,10 @@ function createAiOsRuntime(options = {}) {
       documentation_state: "EMPTY",
       execution_package_state: "NOT_READY",
       execution_state: "NOT_STARTED",
-      open_questions: clarificationQuestions
+      open_questions: clarificationQuestions,
+      clarification_answers: {},
+      requirement_domain: discovery.domain,
+      requirement_completeness: discovery.completeness
     });
 
     appendArrayJson(path.join(aiOsRoot(projectId), "conversation_log.json"), {
@@ -426,13 +447,10 @@ function generateOptionsFromAnswers(answers = {}) {
     const projectId = normalizeProjectId(body.project_id);
     const state = loadProjectState(projectId, body.project_name);
 
-    if (Array.isArray(state.open_questions) && state.open_questions.length > 0) {
-      return {
-        ok: false,
-        mode: "BLOCKED",
-        reason: "DISCOVERY_NOT_COMPLETE",
-        blocking_questions: state.open_questions
-      };
+    const discoveryGate = assertRequirementDiscoveryComplete(state);
+
+    if (!discoveryGate.ok) {
+      return discoveryGate;
     }
 
     const hasAcceptedOptions =
@@ -513,6 +531,12 @@ function generateOptionsFromAnswers(answers = {}) {
     }
 
     const state = loadProjectState(projectId, body.project_name);
+
+    const discoveryGate = assertRequirementDiscoveryComplete(state);
+
+    if (!discoveryGate.ok) {
+      return discoveryGate;
+    }
 
     const acceptedOptions = Array.from(new Set([
       ...(Array.isArray(state.accepted_options) ? state.accepted_options : []),
@@ -1153,6 +1177,11 @@ function generateDocumentationDraftContent(state, selectedOption) {
   function saveDocumentationDraft(body = {}) {
     const projectId = normalizeProjectId(body.project_id);
     const state = loadProjectState(projectId, body.project_name);
+    const discoveryGate = assertRequirementDiscoveryComplete(state);
+
+    if (!discoveryGate.ok) {
+      return discoveryGate;
+    }
     let content = String(body.content || "").trim();
 
     if (!content) {
@@ -1213,6 +1242,12 @@ function generateDocumentationDraftContent(state, selectedOption) {
 
     const state = loadProjectState(projectId, body.project_name);
 
+    const discoveryGate = assertRequirementDiscoveryComplete(state);
+
+    if (!discoveryGate.ok) {
+      return discoveryGate;
+    }
+
     const updatedState = saveProjectState({
       ...state,
       current_phase: "EXECUTION_PREPARATION",
@@ -1233,6 +1268,12 @@ function generateDocumentationDraftContent(state, selectedOption) {
   function createExecutionHandoff(body = {}) {
     const projectId = normalizeProjectId(body.project_id);
     const state = loadProjectState(projectId, body.project_name);
+
+    const discoveryGate = assertRequirementDiscoveryComplete(state);
+
+    if (!discoveryGate.ok) {
+      return discoveryGate;
+    }
 
     const docsApproved =
       state.current_phase === "EXECUTION_PREPARATION" &&
