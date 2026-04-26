@@ -361,25 +361,39 @@ function createAiOsRuntime(options = {}) {
       created_at: nowIso()
     });
 
+    const mergedAnswers = {
+      ...(state.clarification_answers && typeof state.clarification_answers === "object" ? state.clarification_answers : {}),
+      ...answers
+    };
+
+    const discovery = buildRequirementDiscovery(state.user_goal || "", mergedAnswers);
+
     appendArrayJson(path.join(aiOsRoot(projectId), "ideation_log.json"), {
-      entry_type: "DISCOVERY_COMPLETED",
+      entry_type: discovery.completeness ? "DISCOVERY_COMPLETED" : "DISCOVERY_ITERATION_REQUIRED",
       open_questions_answered: state.open_questions,
       answers,
+      merged_answers: mergedAnswers,
+      requirement_domain: discovery.domain,
+      completeness: discovery.completeness,
+      next_open_questions: discovery.open_questions,
       created_at: nowIso()
     });
 
     const updatedState = saveProjectState({
       ...state,
-      current_phase: "DISCOVERY_COMPLETE",
-      active_runtime_state: "IDEATION",
-      open_questions: [],
-      clarification_answers: answers
+      current_phase: discovery.completeness ? "DISCOVERY_COMPLETE" : "DISCOVERY",
+      active_runtime_state: discovery.completeness ? "IDEATION" : "DISCOVERY_REQUIRED",
+      open_questions: discovery.open_questions,
+      clarification_answers: mergedAnswers,
+      requirement_domain: discovery.domain,
+      requirement_completeness: discovery.completeness
     });
 
     return {
       ok: true,
-      mode: "IDEATION_READY",
-      project: updatedState
+      mode: discovery.completeness ? "IDEATION_READY" : "CLARIFICATION_REQUIRED",
+      project: updatedState,
+      blocking_questions: discovery.open_questions
     };
   }
 
