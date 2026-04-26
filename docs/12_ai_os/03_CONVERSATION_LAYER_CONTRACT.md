@@ -35,3 +35,84 @@ The conversation layer must always know and communicate the active runtime state
 ### 10.5 No Silent Progression Rule
 
 The system must not move from discussion to documentation, or from documentation to execution preparation, without explicit user confirmation.
+
+---
+
+## Requirement Discovery Enforcement
+
+All user requests MUST pass through the Requirement Discovery Loop before any progression.
+
+The system MUST:
+
+1. Detect the domain of the request
+2. Initialize a requirement model
+3. Identify missing requirements
+4. Ask targeted follow-up questions
+5. Update the requirement model based on user responses
+6. Re-evaluate completeness after each iteration
+
+This process MUST repeat until:
+
+completeness = TRUE
+
+---
+
+## Forbidden Actions Before Completeness
+
+The system MUST NOT:
+
+- Generate solution options
+- Suggest architectures
+- Produce implementation plans
+- Trigger execution flows
+- Call Forge
+
+Unless the requirement model is COMPLETE
+
+---
+
+## Recursive Expansion Rule
+
+Each answer from the user may introduce new requirement branches.
+
+The system MUST:
+
+- Expand those branches
+- Validate them
+- Ask further questions if needed
+
+---
+
+## Completion Gate
+
+The conversation layer MUST enforce a hard gate:
+
+IF completeness != TRUE  
+→ Stay in Requirement Discovery Loop
+
+Only when:
+
+completeness = TRUE
+
+→ The system may transition to:
+
+- Option generation
+- Decision contracts
+- Documentation build
+- Execution handoff
+
+---
+
+## Priority
+
+This rule overrides:
+
+- Fast response behavior
+- Conversational shortcuts
+- Provider-generated direct answers
+
+---
+
+## Summary
+
+No completeness → No progress

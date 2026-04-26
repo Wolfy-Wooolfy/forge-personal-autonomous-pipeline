@@ -190,35 +190,92 @@ function createAiOsRuntime(options = {}) {
     return /[\u0600-\u06FF]/.test(String(text || "")) ? "AR" : "EN";
   }
 
-function buildClarificationQuestions(text) {
-  const value = String(text || "").toLowerCase();
+  function inferRequirementDomain(text) {
+    const value = String(text || "").toLowerCase();
 
-  // لو الطلب واضح ومحدد نعدّي
-  if (value.length > 40 && !value.includes("game") && !value.includes("لعبة")) {
-    return [];
+    if (value.includes("hr") || value.includes("human resources") || value.includes("موظفين") || value.includes("حضور") || value.includes("رواتب")) {
+      return "HR_SYSTEM";
+    }
+
+    if (value.includes("game") || value.includes("لعبة")) {
+      return "GAME";
+    }
+
+    if (value.includes("website") || value.includes("web") || value.includes("موقع")) {
+      return "WEBSITE";
+    }
+
+    if (value.includes("mobile") || value.includes("app") || value.includes("تطبيق")) {
+      return "MOBILE_APP";
+    }
+
+    if (value.includes("ai") || value.includes("ذكاء") || value.includes("agent")) {
+      return "AI_SYSTEM";
+    }
+
+    if (value.includes("system") || value.includes("سيستم") || value.includes("برنامج")) {
+      return "SOFTWARE_SYSTEM";
+    }
+
+    return "GENERAL_PROJECT";
   }
 
-  // لو لعبة → نحتاج Discovery كامل
-  if (value.includes("game") || value.includes("لعبة")) {
-    return [
-      "نوع اللعبة؟ (Puzzle / Action / Strategy / Casual / RPG)",
-      "الفئة المستهدفة؟ (أطفال / شباب / عام)",
-      "هتكون Offline ولا Online؟",
-      "هل فيها مراحل ولا Endless؟",
-      "هل فيها نظام نقاط (Score)؟",
-      "هل فيها تسجيل دخول؟",
-      "هتشتغل على Android بس ولا Android و iOS؟",
-      "هتكسب منها ازاي؟ (Ads / In-App Purchases / Subscription)",
-      "هل في لعبة مشابهة في بالك؟",
-      "عايز تبدأ بـ MVP بسيط ولا لعبة كاملة؟"
-    ];
+  function hasAnswer(answers, key) {
+    return Boolean(
+      answers &&
+      Object.prototype.hasOwnProperty.call(answers, key) &&
+      String(answers[key] || "").trim()
+    );
   }
 
-  // Default fallback
-  return [
-    "محتاج توضيح تفاصيل أكتر عن المشروع عشان أقدر أبدأ التخطيط."
-  ];
-}
+  function buildRequirementDiscovery(text, answers = {}) {
+    const domain = inferRequirementDomain(text);
+    const questions = [];
+
+    if (domain === "HR_SYSTEM") {
+      if (!hasAnswer(answers, "employee_management")) questions.push("هل السيستم محتاج إدارة بيانات الموظفين؟");
+      if (!hasAnswer(answers, "attendance")) questions.push("هل محتاج حضور وانصراف وربط ببصمة أو تسجيل يدوي؟");
+      if (!hasAnswer(answers, "leaves")) questions.push("هل محتاج نظام إجازات وموافقات؟");
+      if (!hasAnswer(answers, "payroll")) questions.push("هل الرواتب داخل النطاق؟");
+      if (!hasAnswer(answers, "permissions")) questions.push("ما هي مستويات الصلاحيات المطلوبة؟");
+      if (!hasAnswer(answers, "reports")) questions.push("ما أهم التقارير المطلوبة؟");
+
+      if (hasAnswer(answers, "payroll")) {
+        if (!hasAnswer(answers, "taxes")) questions.push("بالنسبة للرواتب: هل يوجد ضرائب؟");
+        if (!hasAnswer(answers, "insurance")) questions.push("بالنسبة للرواتب: هل يوجد تأمينات؟");
+        if (!hasAnswer(answers, "allowances")) questions.push("بالنسبة للرواتب: هل يوجد بدلات؟");
+        if (!hasAnswer(answers, "deductions")) questions.push("بالنسبة للرواتب: هل يوجد خصومات؟");
+        if (!hasAnswer(answers, "payroll_approvals")) questions.push("بالنسبة للرواتب: هل يوجد مسار موافقات؟");
+      }
+    } else if (domain === "GAME") {
+      if (!hasAnswer(answers, "game_type")) questions.push("نوع اللعبة؟");
+      if (!hasAnswer(answers, "target_users")) questions.push("الفئة المستهدفة؟");
+      if (!hasAnswer(answers, "platform")) questions.push("هتشتغل على أي منصة؟");
+      if (!hasAnswer(answers, "mode")) questions.push("Offline ولا Online؟");
+      if (!hasAnswer(answers, "progression")) questions.push("هل فيها مراحل ولا Endless؟");
+      if (!hasAnswer(answers, "monetization")) questions.push("هتكسب منها إزاي؟");
+      if (!hasAnswer(answers, "scope")) questions.push("MVP بسيط ولا نسخة كاملة؟");
+    } else {
+      if (!hasAnswer(answers, "purpose")) questions.push("ما الهدف الأساسي من المشروع؟");
+      if (!hasAnswer(answers, "users")) questions.push("مين المستخدمين الأساسيين؟");
+      if (!hasAnswer(answers, "core_features")) questions.push("ما أهم الوظائف المطلوبة؟");
+      if (!hasAnswer(answers, "platform")) questions.push("هيشتغل على Web ولا Mobile ولا Desktop؟");
+      if (!hasAnswer(answers, "permissions")) questions.push("هل يوجد صلاحيات أو أنواع مستخدمين؟");
+      if (!hasAnswer(answers, "reports")) questions.push("هل مطلوب تقارير أو Dashboard؟");
+      if (!hasAnswer(answers, "integrations")) questions.push("هل مطلوب تكامل مع أنظمة خارجية؟");
+    }
+
+    return {
+      domain,
+      completeness: questions.length === 0,
+      open_questions: questions,
+      answered_keys: Object.keys(answers || {})
+    };
+  }
+
+  function buildClarificationQuestions(text, answers = {}) {
+    return buildRequirementDiscovery(text, answers).open_questions;
+  }
 
   function intakeProject(body = {}) {
     const message = String(body.message || body.request || "").trim();
