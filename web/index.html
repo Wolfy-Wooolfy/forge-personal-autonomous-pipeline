@@ -1512,7 +1512,13 @@
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || "Request failed.");
+        throw new Error(
+          data.error ||
+          data.reason ||
+          data.message ||
+          (Array.isArray(data.blocking_questions) ? data.blocking_questions.join("\n") : "") ||
+          "Request failed."
+        );
       }
 
       return data;
@@ -1766,25 +1772,42 @@
       try {
         const clarification = await requestAPI("/api/ai/clarify", { request });
 
-        if (clarification.needs_clarification === true) {
+        const intake = await requestAPI("/api/ai-os/intake", {
+          message: request,
+          project_id: activeTurn.projectId,
+          project_name: currentProjectState && currentProjectState.project_name
+            ? currentProjectState.project_name
+            : activeTurn.projectId
+        });
+
+        if (intake.project) {
+          renderProjectState(intake.project);
+        }
+
+        if (intake.mode === "CLARIFICATION_REQUIRED") {
+          const questions = Array.isArray(intake.blocking_questions)
+            ? intake.blocking_questions
+            : [];
+
           pushMessage(
             "assistant",
-            "Clarification",
-            `<div class="file-preview">${formatMessageText(
-              clarification.clarification_question || "What do you want to do?"
-            )}</div>`
+            detectUserLanguage(request) === "ar" ? "أسئلة مطلوبة" : "Required Questions",
+            `<div class="file-preview">${formatMessageText(questions.join("\n"))}</div>`
           );
 
           finalizeActiveTurn({
             finalStatus: "CLARIFICATION_REQUIRED",
-            clarificationQuestion: clarification.clarification_question || "What do you want to do?"
+            clarificationQuestion: questions.join("\n")
           });
 
           setStatus("Clarification required.");
           return;
         }
 
-        const options = await requestAPI("/api/ai/options", { request });
+        const options = await requestAPI("/api/ai/options", {
+          request,
+          project_id: activeTurn.projectId
+        });
 
         if (options.ok === false && options.reason === "CLARIFICATION_REQUIRED") {
           pushMessage(
@@ -1804,7 +1827,10 @@
           return;
         }
 
-        const strategySelection = await requestAPI("/api/ai/select-strategy", { request });
+        const strategySelection = await requestAPI("/api/ai/select-strategy", {
+          request,
+          project_id: activeTurn.projectId
+        });
 
         if (strategySelection.ok === false && strategySelection.reason === "CLARIFICATION_REQUIRED") {
           pushMessage(
