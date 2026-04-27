@@ -57,6 +57,71 @@ completeness = TRUE
 
 ---
 
+## Provider Enforcement
+
+All requirement discovery MUST be fully provider-driven.
+
+The AI Provider is the ONLY component allowed to:
+
+- understand user intent
+- detect domain
+- build the requirement model
+- identify missing requirements
+- generate follow-up questions
+- evaluate completeness
+
+---
+
+## Source of Truth Rule
+
+The provider output MUST be treated as the single source of truth for:
+
+- requirement_model
+- open_questions
+- completeness
+
+The conversation layer MUST NOT:
+
+- modify the requirement model
+- generate its own requirement structure
+- infer missing requirements manually
+- rely on keyword-based logic
+- perform any domain-specific reasoning
+
+---
+
+## Strict Delegation Rule
+
+The conversation layer MUST act only as:
+
+- a mediator between user and provider
+- a presenter of provider output
+- a loop controller
+
+It MUST NOT act as:
+
+- a reasoning engine
+- a requirement builder
+- a fallback logic layer
+
+---
+
+## Hard Prohibition
+
+Any implementation where the system:
+
+- interprets user input using static logic
+- maps text to fields manually
+- builds requirement structures without provider
+
+is STRICTLY FORBIDDEN.
+
+This is considered:
+
+INVALID_ARCHITECTURE
+
+---
+
 ## Forbidden Actions Before Completeness
 
 The system MUST NOT:

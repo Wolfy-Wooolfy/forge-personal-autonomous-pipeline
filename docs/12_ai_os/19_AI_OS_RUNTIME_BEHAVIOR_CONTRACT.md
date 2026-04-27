@@ -946,6 +946,103 @@ No layer is allowed to violate these rules.
 
 ---
 
+### 13.7 Provider-Driven Requirement Discovery Enforcement (CRITICAL)
+
+Requirement Discovery MUST be performed exclusively by an AI Provider (LLM).
+
+The system MUST NOT perform requirement discovery using:
+
+- keyword matching
+- string parsing
+- rule-based inference
+- domain-specific hardcoded logic (e.g. HR, Game, Website)
+- manual mapping between text and requirement fields
+
+---
+
+### 13.7.1 Role Separation (STRICT)
+
+AI Provider is responsible for:
+
+- understanding user intent
+- detecting domain
+- building requirement model
+- identifying missing requirements
+- generating follow-up questions
+- evaluating completeness
+
+AI OS Runtime is ONLY responsible for:
+
+- managing project state
+- storing requirement model
+- enforcing completeness gate
+- controlling loop flow
+- blocking progression until completeness = TRUE
+
+---
+
+### 13.7.2 Structured Output Requirement
+
+The AI Provider MUST return structured output in the following format:
+
+{
+  "domain": "string",
+  "requirement_model": {},
+  "completeness": boolean,
+  "open_questions": [],
+  "reasoning_summary": "string"
+}
+
+This output is the ONLY source of truth for requirement discovery.
+
+---
+
+### 13.7.3 Hard Prohibition
+
+ANY implementation that includes:
+
+- if (text.includes(...))
+- keyword detection logic
+- static domain templates
+- hardcoded requirement flows
+
+is STRICTLY FORBIDDEN.
+
+Such implementations are considered:
+
+INVALID_ARCHITECTURE
+
+---
+
+### 13.7.4 Enforcement Rule
+
+If any non-provider-based discovery logic is detected:
+
+- execution MUST be BLOCKED
+- system MUST enter INVALID_ARCHITECTURE state
+- no progression is allowed until corrected
+
+---
+
+### 13.7.5 Priority
+
+This rule OVERRIDES:
+
+- performance optimizations
+- shortcut implementations
+- temporary logic
+- legacy behavior
+
+---
+
+### 13.7.6 Summary
+
+No Provider → No Discovery  
+No Discovery → No Progress  
+No Progress → No System Execution
+
+---
+
 ## 14. Codex Role Contract
 
 Codex is a technical generation assistant inside the system.

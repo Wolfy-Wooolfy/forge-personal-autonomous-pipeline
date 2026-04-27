@@ -1,6 +1,6 @@
 {
   "active_project_id": "test_project_2",
-  "updated_at": "2026-04-26T20:14:55.362Z",
+  "updated_at": "2026-04-27T12:54:54.978Z",
   "projects": [
     {
       "project_id": "action_game",
@@ -12,7 +12,7 @@
         "EXECUTION_PACKAGE_PENDING_FORGE"
       ],
       "active_project_flag": false,
-      "last_updated_at": "2026-04-26T20:14:55.362Z"
+      "last_updated_at": "2026-04-27T12:54:54.980Z"
     },
     {
       "project_id": "default_project",
@@ -24,7 +24,7 @@
         "EXECUTION_PACKAGE_PENDING_FORGE"
       ],
       "active_project_flag": false,
-      "last_updated_at": "2026-04-26T20:14:55.363Z"
+      "last_updated_at": "2026-04-27T12:54:54.983Z"
     },
     {
       "project_id": "mobile_game",
@@ -36,7 +36,7 @@
         "EXECUTION_PACKAGE_PENDING_FORGE"
       ],
       "active_project_flag": false,
-      "last_updated_at": "2026-04-26T20:14:55.363Z"
+      "last_updated_at": "2026-04-27T12:54:54.984Z"
     },
     {
       "project_id": "test_project",
@@ -48,7 +48,7 @@
         "EXECUTION_PACKAGE_PENDING_FORGE"
       ],
       "active_project_flag": false,
-      "last_updated_at": "2026-04-26T20:14:55.365Z"
+      "last_updated_at": "2026-04-27T12:54:54.990Z"
     },
     {
       "project_id": "test_project_2",
@@ -58,7 +58,7 @@
       "active_runtime_state": "DOCUMENTATION",
       "pending_decisions": [],
       "active_project_flag": true,
-      "last_updated_at": "2026-04-26T20:14:55.365Z"
+      "last_updated_at": "2026-04-27T12:54:54.993Z"
     },
     {
       "project_id": "test_project_3",
@@ -70,7 +70,7 @@
         "EXECUTION_PACKAGE_PENDING_FORGE"
       ],
       "active_project_flag": false,
-      "last_updated_at": "2026-04-26T20:14:55.362Z"
+      "last_updated_at": "2026-04-27T12:54:54.976Z"
     }
   ]
 }

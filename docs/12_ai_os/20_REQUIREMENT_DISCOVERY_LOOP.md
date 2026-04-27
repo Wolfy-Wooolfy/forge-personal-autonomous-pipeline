@@ -144,6 +144,176 @@ This layer sits BEFORE:
 
 ---
 
+## Provider-Driven Discovery Rule (MANDATORY)
+
+Requirement Discovery MUST be performed by an AI Provider (LLM).
+
+The system MUST NOT:
+
+- Use keyword matching
+- Use rule-based parsing
+- Use domain-specific hardcoded logic (e.g. HR, Game, Website)
+- Infer requirements using static conditions
+
+---
+
+## Role Separation
+
+AI Provider (LLM) is responsible for:
+
+- Understanding user intent
+- Detecting domain
+- Building requirement model
+- Identifying missing requirements
+- Generating follow-up questions
+- Re-evaluating completeness
+
+---
+
+AI OS Runtime is ONLY responsible for:
+
+- Managing state
+- Storing requirement model
+- Enforcing completeness gate
+- Controlling loop flow
+- Blocking progression until completeness = TRUE
+
+---
+
+## Structured Output Requirement
+
+The AI Provider MUST return a structured JSON response:
+
+{
+  "domain": "string",
+  "requirement_model": {},
+  "completeness": boolean,
+  "open_questions": [],
+  "reasoning_summary": "string"
+}
+
+
+---
+
+## Provider Output Authority (CRITICAL)
+
+The output of the AI Provider is the single source of truth for:
+
+- requirement_model
+- open_questions
+- completeness
+- domain classification
+
+---
+
+The system MUST:
+
+- store provider output as-is
+- use it directly without modification
+- rely on it for all loop decisions
+
+---
+
+The system MUST NOT:
+
+- modify provider output
+- enrich it using local logic
+- merge it with inferred data
+- override completeness evaluation
+
+---
+
+## No Post-Processing Rule
+
+No component is allowed to:
+
+- reinterpret provider output
+- transform it into alternative structures
+- apply additional inference logic
+
+Provider output MUST be used directly.
+
+---
+
+## Hard Prohibition
+
+ANY implementation that includes:
+
+- if (text.includes(...))
+- keyword detection
+- manual mapping between text and requirements
+
+is STRICTLY FORBIDDEN.
+
+This is considered a violation of AI OS architecture.
+
+---
+
+## Enforcement
+
+If any non-provider-based discovery logic is detected:
+
+→ Execution MUST be BLOCKED  
+→ System enters INVALID_ARCHITECTURE state  
+
+---
+
+## Provider Availability Rule (MANDATORY)
+
+Requirement Discovery MUST NOT proceed without AI Provider.
+
+If the provider is:
+
+- unavailable
+- failing
+- returning invalid output
+
+The system MUST:
+
+- BLOCK the discovery loop
+- inform the user clearly
+- request retry
+
+---
+
+The system MUST NOT:
+
+- fall back to local logic
+- generate questions manually
+- partially infer requirements
+- continue with incomplete discovery
+
+---
+
+## Enforcement Priority
+
+This rule overrides:
+
+- performance optimizations
+- fallback implementations
+- legacy discovery logic
+
+---
+
+No Provider → No Discovery  
+No Discovery → No Progress  
+No Progress → No Execution
+
+---
+
+## Summary (Updated)
+
+Requirement Discovery is:
+- Universal
+- Iterative
+- Provider-driven
+- Strictly enforced
+
+No Provider → No Discovery  
+No Discovery → No System Progress
+
+---
+
 ## Summary
 
 No requirement completeness → No system progress
