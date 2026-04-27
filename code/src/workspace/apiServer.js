@@ -1765,6 +1765,21 @@ ${trimmedExisting}`
           : typeof existing.requirement_completeness === "boolean"
             ? existing.requirement_completeness
             : false,
+
+      requirement_model:
+        overrides.requirement_model && typeof overrides.requirement_model === "object"
+          ? overrides.requirement_model
+          : existing.requirement_model && typeof existing.requirement_model === "object"
+            ? existing.requirement_model
+            : {},
+      requirement_reasoning_summary:
+        typeof overrides.requirement_reasoning_summary === "string"
+          ? overrides.requirement_reasoning_summary
+          : existing.requirement_reasoning_summary || "",
+      provider_error:
+        typeof overrides.provider_error === "string"
+          ? overrides.provider_error
+          : existing.provider_error || "",
         
       documentation_state: documentationState,
       execution_package_state: executionPackageState,
@@ -2803,13 +2818,13 @@ function buildExecutionPackage(packet) {
 
       if (req.method === "POST" && pathname === "/api/ai-os/intake") {
         const body = await readBody(req);
-        sendJson(res, 200, aiOsRuntime.intakeProject(body));
+        sendJson(res, 200, await aiOsRuntime.intakeProject(body));
         return;
       }
 
       if (req.method === "POST" && pathname === "/api/ai-os/clarification/answer") {
         const body = await readBody(req);
-        sendJson(res, 200, aiOsRuntime.answerClarification(body));
+        sendJson(res, 200, await aiOsRuntime.answerClarification(body));
         return;
       }
 

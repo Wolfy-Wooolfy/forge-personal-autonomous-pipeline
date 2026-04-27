@@ -3,6 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+const ProviderRouter = require("../providers/providerRouter");
 
 function createAiOsRuntime(options = {}) {
   const root = path.resolve(options.root || process.cwd());
@@ -190,91 +191,80 @@ function createAiOsRuntime(options = {}) {
     return /[\u0600-\u06FF]/.test(String(text || "")) ? "AR" : "EN";
   }
 
-  function inferRequirementDomain(text) {
-    const value = String(text || "").toLowerCase();
+  async function buildRequirementDiscoveryViaProvider(userInput, previousModel = null) {
+    const providerRouter = new ProviderRouter();
 
-    if (value.includes("hr") || value.includes("human resources") || value.includes("موظفين") || value.includes("حضور") || value.includes("رواتب")) {
-      return "HR_SYSTEM";
-    }
-
-    if (value.includes("game") || value.includes("لعبة")) {
-      return "GAME";
-    }
-
-    if (value.includes("website") || value.includes("web") || value.includes("موقع")) {
-      return "WEBSITE";
-    }
-
-    if (value.includes("mobile") || value.includes("app") || value.includes("تطبيق")) {
-      return "MOBILE_APP";
-    }
-
-    if (value.includes("ai") || value.includes("ذكاء") || value.includes("agent")) {
-      return "AI_SYSTEM";
-    }
-
-    if (value.includes("system") || value.includes("سيستم") || value.includes("برنامج")) {
-      return "SOFTWARE_SYSTEM";
-    }
-
-    return "GENERAL_PROJECT";
-  }
-
-  function hasAnswer(answers, key) {
-    return Boolean(
-      answers &&
-      Object.prototype.hasOwnProperty.call(answers, key) &&
-      String(answers[key] || "").trim()
-    );
-  }
-
-  function buildRequirementDiscovery(text, answers = {}) {
-    const domain = inferRequirementDomain(text);
-    const questions = [];
-
-    if (domain === "HR_SYSTEM") {
-      if (!hasAnswer(answers, "employee_management")) questions.push("هل السيستم محتاج إدارة بيانات الموظفين؟");
-      if (!hasAnswer(answers, "attendance")) questions.push("هل محتاج حضور وانصراف وربط ببصمة أو تسجيل يدوي؟");
-      if (!hasAnswer(answers, "leaves")) questions.push("هل محتاج نظام إجازات وموافقات؟");
-      if (!hasAnswer(answers, "payroll")) questions.push("هل الرواتب داخل النطاق؟");
-      if (!hasAnswer(answers, "permissions")) questions.push("ما هي مستويات الصلاحيات المطلوبة؟");
-      if (!hasAnswer(answers, "reports")) questions.push("ما أهم التقارير المطلوبة؟");
-
-      if (hasAnswer(answers, "payroll")) {
-        if (!hasAnswer(answers, "taxes")) questions.push("بالنسبة للرواتب: هل يوجد ضرائب؟");
-        if (!hasAnswer(answers, "insurance")) questions.push("بالنسبة للرواتب: هل يوجد تأمينات؟");
-        if (!hasAnswer(answers, "allowances")) questions.push("بالنسبة للرواتب: هل يوجد بدلات؟");
-        if (!hasAnswer(answers, "deductions")) questions.push("بالنسبة للرواتب: هل يوجد خصومات؟");
-        if (!hasAnswer(answers, "payroll_approvals")) questions.push("بالنسبة للرواتب: هل يوجد مسار موافقات؟");
+    const providerResult = await providerRouter.execute({
+      task_id: `requirement_discovery_${Date.now()}`,
+      request: String(userInput || ""),
+      context: {
+        previous_requirement_model: previousModel || null,
+        contract: "docs/12_ai_os/20_REQUIREMENT_DISCOVERY_LOOP.md",
+        constraints: [
+          "Requirement discovery must be provider-driven",
+          "Do not use keyword matching",
+          "Do not assume missing requirements",
+          "Return valid JSON only",
+          "Do not wrap output in markdown"
+        ]
+      },
+      expected_output: {
+        type: "REQUIREMENT_DISCOVERY_JSON",
+        format: "structured_json",
+        schema: {
+          domain: "string",
+          requirement_model: "object",
+          completeness: "boolean",
+          open_questions: "array",
+          reasoning_summary: "string"
+        }
       }
-    } else if (domain === "GAME") {
-      if (!hasAnswer(answers, "game_type")) questions.push("نوع اللعبة؟");
-      if (!hasAnswer(answers, "target_users")) questions.push("الفئة المستهدفة؟");
-      if (!hasAnswer(answers, "platform")) questions.push("هتشتغل على أي منصة؟");
-      if (!hasAnswer(answers, "mode")) questions.push("Offline ولا Online؟");
-      if (!hasAnswer(answers, "progression")) questions.push("هل فيها مراحل ولا Endless؟");
-      if (!hasAnswer(answers, "monetization")) questions.push("هتكسب منها إزاي؟");
-      if (!hasAnswer(answers, "scope")) questions.push("MVP بسيط ولا نسخة كاملة؟");
-    } else {
-      if (!hasAnswer(answers, "purpose")) questions.push("ما الهدف الأساسي من المشروع؟");
-      if (!hasAnswer(answers, "users")) questions.push("مين المستخدمين الأساسيين؟");
-      if (!hasAnswer(answers, "core_features")) questions.push("ما أهم الوظائف المطلوبة؟");
-      if (!hasAnswer(answers, "platform")) questions.push("هيشتغل على Web ولا Mobile ولا Desktop؟");
-      if (!hasAnswer(answers, "permissions")) questions.push("هل يوجد صلاحيات أو أنواع مستخدمين؟");
-      if (!hasAnswer(answers, "reports")) questions.push("هل مطلوب تقارير أو Dashboard؟");
-      if (!hasAnswer(answers, "integrations")) questions.push("هل مطلوب تكامل مع أنظمة خارجية؟");
+    });
+
+    if (
+      providerResult.status !== "SUCCESS" ||
+      !providerResult.output ||
+      typeof providerResult.output !== "object"
+    ) {
+      return {
+        ok: false,
+        mode: "BLOCKED",
+        reason: "PROVIDER_NOT_AVAILABLE",
+        requirement_model: previousModel || {},
+        completeness: false,
+        open_questions: [],
+        reasoning_summary: ""
+      };
+    }
+
+    const output = providerResult.output;
+
+    if (
+      typeof output.domain !== "string" ||
+      !output.requirement_model ||
+      typeof output.requirement_model !== "object" ||
+      typeof output.completeness !== "boolean" ||
+      !Array.isArray(output.open_questions)
+    ) {
+      return {
+        ok: false,
+        mode: "BLOCKED",
+        reason: "INVALID_PROVIDER_OUTPUT",
+        requirement_model: previousModel || {},
+        completeness: false,
+        open_questions: [],
+        reasoning_summary: ""
+      };
     }
 
     return {
-      domain,
-      completeness: questions.length === 0,
-      open_questions: questions,
-      answered_keys: Object.keys(answers || {})
+      ok: true,
+      domain: output.domain,
+      requirement_model: output.requirement_model,
+      completeness: output.completeness,
+      open_questions: output.open_questions,
+      reasoning_summary: typeof output.reasoning_summary === "string" ? output.reasoning_summary : ""
     };
-  }
-
-  function buildClarificationQuestions(text, answers = {}) {
-    return buildRequirementDiscovery(text, answers).open_questions;
   }
 
   function assertRequirementDiscoveryComplete(state) {
@@ -294,7 +284,7 @@ function createAiOsRuntime(options = {}) {
     };
   }
 
-  function intakeProject(body = {}) {
+  async function intakeProject(body = {}) {
     const message = String(body.message || body.request || "").trim();
     const projectName = normalizeProjectName(body.project_name || "New Project");
     const projectId = normalizeProjectId(body.project_id || projectName);
@@ -309,7 +299,36 @@ function createAiOsRuntime(options = {}) {
     }
 
     const state = loadProjectState(projectId, projectName);
-    const discovery = buildRequirementDiscovery(message);
+    const discovery = await buildRequirementDiscoveryViaProvider(message);
+
+    if (!discovery.ok) {
+      const blockedState = saveProjectState({
+        ...state,
+        project_name: projectName,
+        project_type: inferProjectType(message),
+        primary_language: detectPrimaryLanguage(message),
+        user_goal: message,
+        current_phase: "DISCOVERY",
+        active_runtime_state: "INVALID_ARCHITECTURE",
+        documentation_state: "EMPTY",
+        execution_package_state: "NOT_READY",
+        execution_state: "NOT_STARTED",
+        open_questions: [],
+        clarification_answers: {},
+        requirement_model: {},
+        requirement_domain: "",
+        requirement_completeness: false,
+        provider_error: discovery.reason
+      });
+
+      return {
+        ok: false,
+        mode: "BLOCKED",
+        reason: discovery.reason,
+        project: blockedState
+      };
+    }
+
     const clarificationQuestions = discovery.open_questions;
 
     const updatedState = saveProjectState({
@@ -325,8 +344,10 @@ function createAiOsRuntime(options = {}) {
       execution_state: "NOT_STARTED",
       open_questions: clarificationQuestions,
       clarification_answers: {},
+      requirement_model: discovery.requirement_model,
       requirement_domain: discovery.domain,
-      requirement_completeness: discovery.completeness
+      requirement_completeness: discovery.completeness,
+      requirement_reasoning_summary: discovery.reasoning_summary
     });
 
     appendArrayJson(path.join(aiOsRoot(projectId), "conversation_log.json"), {
@@ -341,6 +362,10 @@ function createAiOsRuntime(options = {}) {
       inferred_project_type: updatedState.project_type,
       needs_clarification: clarificationQuestions.length > 0,
       clarification_questions: clarificationQuestions,
+      requirement_model: discovery.requirement_model,
+      requirement_domain: discovery.domain,
+      requirement_completeness: discovery.completeness,
+      requirement_reasoning_summary: discovery.reasoning_summary,
       created_at: nowIso()
     });
 
@@ -352,7 +377,7 @@ function createAiOsRuntime(options = {}) {
     };
   }
 
-  function answerClarification(body = {}) {
+  async function answerClarification(body = {}) {
     const projectId = normalizeProjectId(body.project_id);
     const answers = body.answers;
 
@@ -387,7 +412,36 @@ function createAiOsRuntime(options = {}) {
       ...answers
     };
 
-    const discovery = buildRequirementDiscovery(state.user_goal || "", mergedAnswers);
+    const discovery = await buildRequirementDiscoveryViaProvider(
+      JSON.stringify({
+        user_goal: state.user_goal || "",
+        new_answers: answers,
+        all_answers: mergedAnswers
+      }),
+      state.requirement_model && typeof state.requirement_model === "object"
+        ? state.requirement_model
+        : {}
+    );
+
+    if (!discovery.ok) {
+      const blockedState = saveProjectState({
+        ...state,
+        current_phase: "DISCOVERY",
+        active_runtime_state: "INVALID_ARCHITECTURE",
+        open_questions: Array.isArray(state.open_questions) ? state.open_questions : [],
+        clarification_answers: mergedAnswers,
+        requirement_model: state.requirement_model || {},
+        requirement_completeness: false,
+        provider_error: discovery.reason
+      });
+
+      return {
+        ok: false,
+        mode: "BLOCKED",
+        reason: discovery.reason,
+        project: blockedState
+      };
+    }
 
     appendArrayJson(path.join(aiOsRoot(projectId), "ideation_log.json"), {
       entry_type: discovery.completeness ? "DISCOVERY_COMPLETED" : "DISCOVERY_ITERATION_REQUIRED",
@@ -395,8 +449,10 @@ function createAiOsRuntime(options = {}) {
       answers,
       merged_answers: mergedAnswers,
       requirement_domain: discovery.domain,
+      requirement_model: discovery.requirement_model,
       completeness: discovery.completeness,
       next_open_questions: discovery.open_questions,
+      requirement_reasoning_summary: discovery.reasoning_summary,
       created_at: nowIso()
     });
 
@@ -406,8 +462,10 @@ function createAiOsRuntime(options = {}) {
       active_runtime_state: discovery.completeness ? "IDEATION" : "DISCOVERY_REQUIRED",
       open_questions: discovery.open_questions,
       clarification_answers: mergedAnswers,
+      requirement_model: discovery.requirement_model,
       requirement_domain: discovery.domain,
-      requirement_completeness: discovery.completeness
+      requirement_completeness: discovery.completeness,
+      requirement_reasoning_summary: discovery.reasoning_summary
     });
 
     return {
