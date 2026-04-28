@@ -712,6 +712,13 @@
       ].join("\n");
     }
 
+    function buildAiOsClarificationAnswersPayload(answerText, discoveryState) {
+      return {
+        raw_answer: String(answerText || "").trim(),
+        answered_questions: Array.isArray(discoveryState.questions) ? discoveryState.questions : []
+      };
+    }
+
     function getCheckpointUserMessageTitle(userText, sourceRequestText) {
       if (isPositiveConfirmation(userText)) {
         return detectUserLanguage(sourceRequestText) === "ar" ? "تأكيد المتابعة" : "Continue Confirmation";
@@ -837,6 +844,7 @@
     let currentStrategyCandidates = [];
     let currentRequestText = "";
     let pendingConversationCheckpoint = null;
+    let pendingAiOsDiscovery = null;
 
     function snapshotTurn(turn) {
       return {
@@ -1600,6 +1608,81 @@
         return;
       }
 
+      if (pendingAiOsDiscovery) {
+        const discoveryState = { ...pendingAiOsDiscovery };
+
+        pushMessage("user", "Discovery Answer", `<div class="file-preview">${formatMessageText(request)}</div>`);
+        requestInput.value = "";
+        chatSendBtn.disabled = true;
+        setStatus("Continuing AI OS discovery...");
+
+        try {
+          const answerResult = await requestAPI("/api/ai-os/clarification/answer", {
+            project_id: discoveryState.projectId,
+            project_name: discoveryState.projectName,
+            answers: buildAiOsClarificationAnswersPayload(request, discoveryState)
+          });
+
+          if (answerResult.project) {
+            renderProjectState(answerResult.project);
+          }
+
+          if (answerResult.mode === "CLARIFICATION_REQUIRED") {
+            const questions = Array.isArray(answerResult.blocking_questions)
+              ? answerResult.blocking_questions
+              : [];
+
+            pendingAiOsDiscovery = {
+              projectId: discoveryState.projectId,
+              projectName: discoveryState.projectName,
+              originalRequest: discoveryState.originalRequest,
+              questions
+            };
+
+            pushMessage(
+              "assistant",
+              detectUserLanguage(request) === "ar" ? "استكمال التحليل" : "Discovery Follow-up",
+              `<div class="file-preview">${formatMessageText(questions.join("\n"))}</div>`
+            );
+
+            setStatus("AI OS discovery requires more information.");
+            return;
+          }
+
+          if (answerResult.mode === "IDEATION_READY") {
+            pendingAiOsDiscovery = null;
+
+            pushMessage(
+              "assistant",
+              detectUserLanguage(request) === "ar" ? "اكتمل التحليل" : "Discovery Complete",
+              `<div class="file-preview">${formatMessageText("Discovery is complete. The project is ready for the next governed step.")}</div>`
+            );
+
+            askConversationCheckpoint(
+              "DISCUSSION_READY_FOR_DOCUMENTATION",
+              discoveryState.originalRequest || activeTurn.request || request,
+              []
+            );
+
+            setStatus("AI OS discovery completed.");
+            return;
+          }
+
+          pendingAiOsDiscovery = null;
+          renderResponse(answerResult);
+          pushMessage("assistant", "AI OS Response", `<div class="file-preview">${formatMessageText(JSON.stringify(answerResult, null, 2))}</div>`);
+          setStatus("AI OS discovery returned a non-standard state.");
+        } catch (err) {
+          renderResponse({ error: err.message });
+          pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>`);
+          setStatus(`Error: ${err.message}`);
+        } finally {
+          chatSendBtn.disabled = false;
+        }
+
+        return;
+      }
+
       if (pendingConversationCheckpoint) {
         const checkpointRequest = pendingConversationCheckpoint.request;
 
@@ -1789,18 +1872,22 @@
             ? intake.blocking_questions
             : [];
 
+          pendingAiOsDiscovery = {
+            projectId: activeTurn.projectId,
+            projectName: currentProjectState && currentProjectState.project_name
+              ? currentProjectState.project_name
+              : activeTurn.projectId,
+            originalRequest: request,
+            questions
+          };
+
           pushMessage(
             "assistant",
-            detectUserLanguage(request) === "ar" ? "أسئلة مطلوبة" : "Required Questions",
+            detectUserLanguage(request) === "ar" ? "أسئلة التحليل" : "Discovery Questions",
             `<div class="file-preview">${formatMessageText(questions.join("\n"))}</div>`
           );
 
-          finalizeActiveTurn({
-            finalStatus: "CLARIFICATION_REQUIRED",
-            clarificationQuestion: questions.join("\n")
-          });
-
-          setStatus("Clarification required.");
+          setStatus("AI OS discovery is waiting for your answers.");
           return;
         }
 
