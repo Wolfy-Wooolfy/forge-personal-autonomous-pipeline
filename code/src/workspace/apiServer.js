@@ -1852,7 +1852,10 @@ ${trimmedExisting}`
     const state = buildProjectState(projectId);
     const openQuestions = Array.isArray(state.open_questions) ? state.open_questions : [];
 
-    if (state.requirement_completeness !== true || openQuestions.length > 0) {
+    if (
+      state.requirement_completeness !== true &&
+      state.active_runtime_state !== "IDEATION"
+    ) {
       return {
         ok: false,
         mode: "BLOCKED",

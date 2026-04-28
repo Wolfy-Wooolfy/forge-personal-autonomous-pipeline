@@ -67,6 +67,8 @@ class OpenAiRequirementDiscoveryProvider {
       "Your task is to perform universal, domain-agnostic requirement discovery.",
       "",
       "Rules:",
+      "- Always detect the language of the user's input and respond in the same language.",
+      "- Do not change the language unless explicitly requested by the user.",
       "- Understand the user's intent from natural language.",
       "- Detect the project domain.",
       "- Build or update a structured requirement_model.",
