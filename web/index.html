@@ -1891,6 +1891,29 @@
           return;
         }
 
+        if (intake.ok === false) {
+          pendingAiOsDiscovery = null;
+          renderResponse(intake);
+          pushMessage(
+            "assistant",
+            "AI OS Blocked",
+            `<div class="file-preview">${formatMessageText(intake.reason || intake.error || "AI OS intake blocked.")}</div>`
+          );
+          setStatus(intake.reason || intake.error || "AI OS intake blocked.");
+          return;
+        }
+
+        if (intake.mode === "IDEATION_READY") {
+          pushMessage(
+            "assistant",
+            detectUserLanguage(request) === "ar" ? "اكتمل التحليل" : "Discovery Complete",
+            `<div class="file-preview">${formatMessageText("Discovery is complete. The project is ready for the next governed step.")}</div>`
+          );
+
+          setStatus("AI OS discovery completed.");
+          return;
+        }
+
         const options = await requestAPI("/api/ai/options", {
           request,
           project_id: activeTurn.projectId
