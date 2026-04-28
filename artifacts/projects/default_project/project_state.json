@@ -19,6 +19,9 @@
   "clarification_answers": {},
   "requirement_domain": "",
   "requirement_completeness": false,
+  "requirement_model": {},
+  "requirement_reasoning_summary": "",
+  "provider_error": "",
   "documentation_state": "APPROVED",
   "execution_package_state": "DRAFTING",
   "execution_state": "PENDING_FORGE",
@@ -44,5 +47,5 @@
   "memory_state": "ACTIVE",
   "version_registry": [],
   "active_project_flag": false,
-  "last_updated_at": "2026-04-27T12:54:54.891Z"
+  "last_updated_at": "2026-04-28T08:53:51.439Z"
 }

@@ -6,7 +6,7 @@
   "project_status": "ACTIVE",
   "primary_language": "AR",
   "current_phase": "DISCOVERY",
-  "active_runtime_state": "DISCOVERY_REQUIRED",
+  "active_runtime_state": "INVALID_ARCHITECTURE",
   "documentation_state": "EMPTY",
   "execution_package_state": "NOT_READY",
   "execution_state": "NOT_STARTED",
@@ -15,14 +15,7 @@
   "memory_state": "ACTIVE",
   "accepted_options": [],
   "rejected_options": [],
-  "open_questions": [
-    "هل السيستم محتاج إدارة بيانات الموظفين؟",
-    "هل محتاج حضور وانصراف وربط ببصمة أو تسجيل يدوي؟",
-    "هل محتاج نظام إجازات وموافقات؟",
-    "هل الرواتب داخل النطاق؟",
-    "ما هي مستويات الصلاحيات المطلوبة؟",
-    "ما أهم التقارير المطلوبة؟"
-  ],
+  "open_questions": [],
   "pending_decisions": [],
   "review_cycles_count": 0,
   "artifact_registry": {
@@ -32,16 +25,19 @@
     "execution_package": ""
   },
   "active_project_flag": true,
-  "last_updated_at": "2026-04-27T12:56:23.885Z",
-  "user_goal": "ايوه محتاج إدارة بيانات موظفين\nايوه حضور وانصراف ببصمة\nايوه نظام اجازات\nايوه الرواتب داخل النطاق\nالصلاحيات: HR + Admin\nتقارير: attendance + payroll",
+  "last_updated_at": "2026-04-28T08:53:58.429Z",
+  "user_goal": "عايز اعمل سيستم HR",
   "business_goal": "",
   "technical_goal": "add a button to the UI",
   "workspace_path": "D:\\S\\Halo\\Tech\\forge-personal-autonomous-pipeline",
   "source_of_truth": "ZIP_SNAPSHOT",
   "selected_strategy": "HTML_BUTTON_CREATE",
   "clarification_answers": {},
-  "requirement_domain": "HR_SYSTEM",
+  "requirement_domain": "",
   "requirement_completeness": false,
+  "requirement_model": {},
+  "requirement_reasoning_summary": "",
+  "provider_error": "PROVIDER_NOT_AVAILABLE",
   "conversation_history": {
     "proposal_count": 1,
     "draft_count": 1
