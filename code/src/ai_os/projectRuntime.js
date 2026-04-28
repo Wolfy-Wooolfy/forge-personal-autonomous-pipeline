@@ -3,7 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
-const ProviderRouter = require("../providers/providerRouter");
+const OpenAiRequirementDiscoveryProvider = require("../providers/openAiRequirementDiscoveryProvider");
 
 function createAiOsRuntime(options = {}) {
   const root = path.resolve(options.root || process.cwd());
@@ -192,9 +192,9 @@ function createAiOsRuntime(options = {}) {
   }
 
   async function buildRequirementDiscoveryViaProvider(userInput, previousModel = null) {
-    const providerRouter = new ProviderRouter();
+    const provider = new OpenAiRequirementDiscoveryProvider();
 
-    const providerResult = await providerRouter.execute({
+    const providerResult = await provider.executeTask({
       task_id: `requirement_discovery_${Date.now()}`,
       request: String(userInput || ""),
       context: {
