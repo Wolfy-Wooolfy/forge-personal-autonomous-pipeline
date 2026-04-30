@@ -67,6 +67,17 @@ Implements:
 - Handler result validation
 - Contract enforcement for execution results
 
+## 4.3 VISION_COMPLIANCE Module Handler
+
+Path: code/src/execution/task_registry.js (TASK-067 handler)
+
+Covered by:
+- pipeline_definition.js (module_id: VISION_COMPLIANCE, ordinal: 11, terminal_flag: true)
+
+Implements:
+- Final vision runtime enforcement (Stage A → D flow)
+- Release acceptance gate
+
 ## 5) Coverage Map — Tooling
 
 ### 5.1 tools/pre_run_check.js
@@ -96,6 +107,7 @@ Implements:
 
 1) Verify outputs specified under docs/09_verify/* that do not have producing code under verify/** remain pending as documentation-to-code gaps.
 2) Memory Engine implementation is specified conceptually but no corresponding code module exists in current code state.
+3) verify/unit/retry_attempts/ — Retry artifact logging path defined in docs/09_verify/09_Build_and_Verify_Playbook_Local.md has no producing implementation. No code writes RETRY-*.json files under this path. Declared as open documentation-to-code gap.
 
 ## 8) Non-authority Clause
 
