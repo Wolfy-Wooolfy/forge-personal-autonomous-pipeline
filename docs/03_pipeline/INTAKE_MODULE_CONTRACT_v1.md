@@ -105,8 +105,9 @@ No inference beyond structural presence.
 Intake MUST generate:
 
 1) artifacts/intake/intake_snapshot.json  
-2) artifacts/intake/entrypoint_classification.md  
-3) artifacts/intake/repository_inventory.json  
+2) artifacts/intake/intake_context.json  
+3) artifacts/intake/intake_report.md  
+4) artifacts/intake/repository_inventory.json  
 
 ---
 
@@ -141,7 +142,7 @@ Array MUST be sorted lexicographically by path.
 
 ---
 
-# 8. entrypoint_classification.md Content
+# 8. intake_report.md Content
 
 Must include:
 
