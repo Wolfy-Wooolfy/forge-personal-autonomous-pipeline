@@ -215,6 +215,9 @@ Forge runtime MUST:
 
 - Prevent Audit from starting before Intake success
 - Validate existence of intake_snapshot.json
+- Validate existence of intake_context.json
+- Validate existence of intake_report.md
+- Validate existence of repository_inventory.json
 - Validate locked_snapshot_flag == true
 
 Failure results in execution halt.
@@ -225,7 +228,7 @@ Failure results in execution halt.
 
 Intake is considered COMPLETE only when:
 
-- All three mandatory artifacts exist
+- All four mandatory artifacts exist
 - No fail-closed condition triggered
 - Snapshot is locked
 - Classification is valid

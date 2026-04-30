@@ -106,8 +106,12 @@ Implements:
 ## 7) Open Gaps (Declared)
 
 1) Verify outputs specified under docs/09_verify/* that do not have producing code under verify/** remain pending as documentation-to-code gaps.
-2) Memory Engine implementation is specified conceptually but no corresponding code module exists in current code state.
-3) verify/unit/retry_attempts/ — Retry artifact logging path defined in docs/09_verify/09_Build_and_Verify_Playbook_Local.md has no producing implementation. No code writes RETRY-*.json files under this path. Declared as open documentation-to-code gap.
+
+2) Memory Engine implementation is specified conceptually but no corresponding code module exists in current code state. No formal execution-bound contract exists under docs/** for Memory Engine.
+
+3) AI Layer Project Isolation (per docs/11_ai_layer/06_CHAT_FIRST_WORKSPACE_SPEC.md Section 3) — project_id scoping, per-project conversation_history, and sidebar project list are not implemented in code/src/workspace/apiServer.js. Declared as open documentation-to-code gap.
+
+4) verify/unit/retry_attempts/ — Retry artifact logging path defined in docs/09_verify/09_Build_and_Verify_Playbook_Local.md has no producing implementation. No code writes RETRY-*.json files under this path. Declared as open documentation-to-code gap.
 
 ## 8) Non-authority Clause
 
