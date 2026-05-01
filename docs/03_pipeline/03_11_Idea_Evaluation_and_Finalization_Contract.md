@@ -13,14 +13,14 @@ All artifact naming, formats, and closure definitions in newer specifications ov
 
 This document remains valid for process logic and conceptual flow only.
 
-> **Precondition Notice:**  
+> **Precondition Notice:**
 > This contract operates only after a valid Admission-Ready Project Definition
 > has been produced per DOC-01 (Idea Structuring & Admission Layer Contract).
 >
 > This contract does not replace the Admission Layer
 > and must not be used as an entry point into the pipeline.
 
-**Document ID:** HALO-DOC-11
+**Document ID:** DOC-41
 **Status:** BINDING — EXECUTION CONTRACT
 **Applies To:** Stage A — Idea Engine
 **Enforcement Level:** Fail-Closed

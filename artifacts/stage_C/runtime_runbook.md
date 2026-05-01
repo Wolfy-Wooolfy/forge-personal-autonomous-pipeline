@@ -1,14 +1,14 @@
-# HALO Pipeline — Runtime Runbook (Stage C)
+# FORGE Pipeline — Runtime Runbook (Stage C)
 
-**Stage:** C  
-**Scope:** Core Orchestrator Runtime (Non-Autonomous)  
-**Status:** FINAL — EXECUTION-BOUND  
+**Stage:** C
+**Scope:** Core Orchestrator Runtime (Non-Autonomous)
+**Status:** FINAL — EXECUTION-BOUND
 
 ---
 
 ## 1. Purpose
 
-This runbook defines how to operate and verify the HALO
+This runbook defines how to operate and verify the FORGE
 Personal Autonomous Pipeline **Core Runtime Skeleton**.
 
 It applies ONLY to:
@@ -23,13 +23,13 @@ It applies ONLY to:
 
 Implemented runtime components:
 
-- Stage transition validator  
+- Stage transition validator
   `code/src/orchestrator/stage_transitions.js`
 
-- Status writer  
+- Status writer
   `code/src/orchestrator/status_writer.js`
 
-- Orchestrator runner (minimal)  
+- Orchestrator runner (minimal)
   `code/src/orchestrator/runner.js`
 
 ---
@@ -105,7 +105,7 @@ Any of the following REQUIRE a new explicit directive:
 A minimal CLI entrypoint is provided for deterministic execution.
 
 From project root:
-- `node bin/halo-run.js`
+- `node bin/forge-run.js`
 
 
 Behavior is identical to invoking the runner directly.
@@ -129,7 +129,7 @@ Any mismatch MUST be treated as a release invalidation.
 ## Dry-Run Mode
 
 Run the pipeline without writing any state:
-- `HALO_DRY_RUN=true node bin/halo-run.js`
+- `FORGE_DRY_RUN=true node bin/forge-run.js`
 
 This validates transitions and logs intent only.
 

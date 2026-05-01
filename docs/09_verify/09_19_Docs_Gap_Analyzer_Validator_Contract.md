@@ -1,10 +1,10 @@
 # Documentation Gap Analyzer Validator Contract
 
-**Document ID:** HALO-DOC-30  
-**Stage:** B  
-**Status:** MANDATORY – ENFORCEMENT CONTRACT  
-**Scope:** Stage A → Stage B Specification Integrity  
-**Enforcement:** Fail-Closed  
+**Document ID:** DOC-60
+**Stage:** B
+**Status:** MANDATORY – ENFORCEMENT CONTRACT
+**Scope:** Stage A → Stage B Specification Integrity
+**Enforcement:** Fail-Closed
 
 ---
 
@@ -91,7 +91,7 @@ If behavior exists without:
 - Deterministic outcome definition
 - Explicit constraint definition
 
-→ CLASSIFY AS UNDERSPECIFIED  
+→ CLASSIFY AS UNDERSPECIFIED
 → FAIL CLOSED
 
 ---
@@ -107,7 +107,7 @@ Gap Analyzer MUST detect:
 
 If contradiction detected:
 
-→ CLASSIFY AS CONTRADICTION  
+→ CLASSIFY AS CONTRADICTION
 → FAIL CLOSED
 
 No prioritization allowed.
@@ -127,7 +127,7 @@ Stage B MUST NOT introduce:
 If any documentation section cannot be traced
 back to Stage A artifacts:
 
-→ CLASSIFY AS SCOPE_EXPANSION  
+→ CLASSIFY AS SCOPE_EXPANSION
 → FAIL CLOSED
 
 ---
@@ -220,8 +220,8 @@ Stage B MUST NOT:
 
 If deterministic resolution impossible:
 
-→ RETURN TO STAGE A  
-OR  
+→ RETURN TO STAGE A
+OR
 → HUMAN INTERRUPT (if selectable fork exists)
 
 ---
@@ -251,9 +251,9 @@ If Gap Analyzer:
 - Encounters missing coverage matrix
 - Detects structural inconsistency
 
-→ FAIL CLOSED  
-→ Stage B MUST halt  
-→ No downstream transition allowed  
+→ FAIL CLOSED
+→ Stage B MUST halt
+→ No downstream transition allowed
 
 ---
 

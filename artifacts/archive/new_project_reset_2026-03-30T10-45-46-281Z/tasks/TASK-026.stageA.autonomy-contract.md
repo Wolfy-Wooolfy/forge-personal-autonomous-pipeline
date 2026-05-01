@@ -29,7 +29,7 @@ AT MOST ONE deterministic pipeline advancement per invocation.
 - Any state mutation outside progress/status.json
 
 ## Start Conditions (ALL REQUIRED)
-- HALO_AUTONOMY=1
+- FORGE_AUTONOMY=1
 - Explicit CLI invocation
 - next_step starts with "Stage"
 - No blocking_questions present

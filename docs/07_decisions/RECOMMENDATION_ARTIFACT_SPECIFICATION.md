@@ -1,10 +1,10 @@
 # Design Exploration Protocol
 
-**Document ID:** HALO-DOC-23  
-**Status:** BINDING – DESIGN EXPLORATION EXECUTION PROTOCOL  
-**Scope:** Exploration of Alternatives Prior to Option Evaluation  
-**Applies To:** Stage A, Stage B, Stage C  
-**Enforcement:** Fail-Closed  
+**Document ID:** DOC-53
+**Status:** BINDING – DESIGN EXPLORATION EXECUTION PROTOCOL
+**Scope:** Exploration of Alternatives Prior to Option Evaluation
+**Applies To:** Stage A, Stage B, Stage C
+**Enforcement:** Fail-Closed
 
 ---
 

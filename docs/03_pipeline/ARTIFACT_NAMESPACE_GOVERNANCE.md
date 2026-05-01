@@ -1,9 +1,9 @@
 # Artifact Namespace Governance
 
-**Document ID:** HALO-DOC-24  
-**Status:** BINDING – ARTIFACT NAMESPACE GOVERNANCE  
-**Scope:** Artifact Storage and Namespace Enforcement  
-**Applies To:** Entire Forge Autonomous Pipeline  
+**Document ID:** DOC-54
+**Status:** BINDING - ARTIFACT NAMESPACE GOVERNANCE
+**Scope:** Artifact Storage and Namespace Enforcement
+**Applies To:** Entire Forge Autonomous Pipeline
 **Enforcement:** HARD (Fail-Closed)
 
 ---
@@ -32,9 +32,7 @@ constitutes a governance violation.
 All pipeline artifacts MUST reside under:
 
 ```
-
 artifacts/
-
 ```
 
 No module may write artifacts outside this root.
@@ -42,13 +40,11 @@ No module may write artifacts outside this root.
 Forbidden examples:
 
 ```
-
 tmp/
 output/
 generated/
 misc/
 logs/
-
 ```
 
 outside the artifacts root.
@@ -57,25 +53,36 @@ outside the artifacts root.
 
 # 3. Authorized Namespaces
 
-The following namespaces are the ONLY permitted
-write locations for runtime modules.
+The authorized namespaces fall into THREE classes, defined in
+MODULE_ORCHESTRATION_GOVERNANCE_v1 (DOC-38) Section 11, which prevails
+over this section in case of conflict.
 
-```
+## 3.1 Module-Owned Namespaces (writable by modules)
 
 artifacts/intake/
 artifacts/audit/
 artifacts/trace/
 artifacts/gap/
-artifacts/analysis/
+artifacts/exploration/
 artifacts/decisions/
 artifacts/backfill/
 artifacts/execute/
 artifacts/closure/
-artifacts/exploration/
 
-```
+## 3.2 System-Governed Namespaces (writable ONLY by their owning component)
 
-Each module is restricted to its designated namespace.
+artifacts/forge/         - forge_state_resolver only
+artifacts/orchestration/ - orchestrator only
+artifacts/cognitive/     - cognitive_adapter only
+artifacts/llm/           - cognitive_adapter only
+artifacts/ai/            - AI Layer modules only
+artifacts/coverage/      - Vision Compliance module only
+artifacts/verify/        - Boundary Audit layer only
+artifacts/archive/       - forge-reset-new-project.js only
+artifacts/projects/      - AI OS project workspace components; Backfill/Execute only for approved execution-package project deliverables
+artifacts/admission/     - Idea Structuring Layer only
+
+Each module/component is restricted to its designated namespace.
 
 ---
 
@@ -86,18 +93,23 @@ to its assigned namespace.
 
 | Module | Namespace |
 |------|------|
-Intake | artifacts/intake |
-Audit | artifacts/audit |
-Trace | artifacts/trace |
-Gap | artifacts/gap |
-Design Exploration | artifacts/exploration |
-Option Evaluation | artifacts/analysis |
-Decision Gate | artifacts/decisions |
-Backfill | artifacts/backfill |
-Execute | artifacts/execute |
-Closure | artifacts/closure |
+| Intake | artifacts/intake |
+| Audit | artifacts/audit |
+| Trace | artifacts/trace |
+| Gap | artifacts/gap |
+| Design Exploration | artifacts/exploration |
+| Decision Gate | artifacts/decisions |
+| Backfill | artifacts/backfill |
+| Execute | artifacts/execute |
+| Closure | artifacts/closure |
 
 Modules MUST NOT write outside their namespace.
+
+System-governed namespaces (artifacts/forge, artifacts/orchestration,
+artifacts/cognitive, artifacts/llm, artifacts/ai, artifacts/coverage,
+artifacts/verify, artifacts/archive, artifacts/projects,
+artifacts/admission) follow ownership rules defined in
+DOC-38 Section 11 and are NOT module namespaces.
 
 ---
 
@@ -116,36 +128,29 @@ Artifacts are immutable once consumed.
 
 ---
 
-# 6. Legacy Artifact Namespaces
+# 6. Legacy Artifact Namespaces (IMMUTABLE-LEGACY)
 
-The following namespaces may exist for historical purposes:
+The following namespaces are GRANDFATHERED for historical evidence only:
 
-```
-
+artifacts/tasks/
 artifacts/stage_A/
 artifacts/stage_B/
 artifacts/stage_C/
 artifacts/stage_D/
 artifacts/reports/
 artifacts/release/
-artifacts/archive/
 
-```
-
-
-These namespaces are (including archived reset outputs):
+These namespaces are:
 
 - read-only
 - immutable
-- not permitted for new artifact generation.
+- not permitted for new artifact generation by runtime modules.
 
-Exception:
+Per DOC-38 Section 11, any attempt to write into IMMUTABLE-LEGACY
+is a CRITICAL violation and MUST halt execution.
 
-artifacts/archive/ is permitted ONLY for system-level reset operations
-(e.g. forge-reset-new-project.js).
-
-It is NOT considered a runtime module namespace
-and MUST NOT be written to by pipeline modules.
+Note: artifacts/archive/ is governed under Section 3.2 above
+(System-Governed) and is permitted ONLY for forge-reset-new-project.js.
 
 ---
 
@@ -171,11 +176,9 @@ Artifacts MUST follow deterministic naming.
 Allowed naming patterns:
 
 ```
-
 <artifact_name>.json
 <artifact_name>.md
 <artifact_name>.log
-
 ```
 
 Randomized names are forbidden.
@@ -197,7 +200,7 @@ If a module attempts to:
 
 Then:
 
-→ Execution MUST halt immediately.
+Execution MUST halt immediately.
 
 A governance violation MUST be recorded.
 
@@ -228,7 +231,7 @@ Artifact layout is deterministic when:
 
 If deterministic layout cannot be guaranteed:
 
-→ Execution MUST FAIL CLOSED.
+Execution MUST FAIL CLOSED.
 
 ---
 
@@ -238,9 +241,7 @@ This document enforces the storage layer
 for artifacts produced by modules defined in:
 
 ```
-
 MODULE_ORCHESTRATION_GOVERNANCE_v1
-
 ```
 
 Module ordering remains governed by that document.

@@ -1,10 +1,10 @@
 # Documentation Gap Detection & Refinement Loop Contract
 
-**Document ID:** HALO-DOC-12  
-**Stage:** B  
-**Status:** BINDING – EXECUTION CONTRACT  
-**Applies To:** Stage B – Documentation Engine  
-**Enforcement:** Fail-Closed  
+**Document ID:** DOC-42
+**Stage:** B
+**Status:** BINDING – EXECUTION CONTRACT
+**Applies To:** Stage B – Documentation Engine
+**Enforcement:** Fail-Closed
 
 ---
 

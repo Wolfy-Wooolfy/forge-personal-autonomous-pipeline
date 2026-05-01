@@ -1,9 +1,9 @@
 # Candidate Transformation & Authority Separation Contract
 
-**Document ID:** HALO-DOC-21  
-**Applies To:** All Cognitive Outputs  
-**Status:** HARD ENFORCEMENT  
-**Enforcement:** Fail-Closed  
+**Document ID:** DOC-51
+**Applies To:** All Cognitive Outputs
+**Status:** HARD ENFORCEMENT
+**Enforcement:** Fail-Closed
 
 ---
 
@@ -136,15 +136,15 @@ Validators have absolute authority over Candidates.
 
 If:
 
-Candidate says PASS  
-Validator says FAIL  
+Candidate says PASS
+Validator says FAIL
 
 → FAIL
 
 If:
 
-Candidate proposes resolution  
-Validator cannot verify  
+Candidate proposes resolution
+Validator cannot verify
 
 → FAIL CLOSED
 
@@ -156,12 +156,12 @@ No AI proposal overrides deterministic validation.
 
 A Candidate lifecycle is:
 
-LLM Output  
-→ Classification  
-→ Structural Transformation  
-→ Deterministic Validation  
-→ Boundary Audit  
-→ Artifact Closure OR Rejection  
+LLM Output
+→ Classification
+→ Structural Transformation
+→ Deterministic Validation
+→ Boundary Audit
+→ Artifact Closure OR Rejection
 
 No shortcuts permitted.
 
@@ -203,11 +203,11 @@ No interpretation permitted.
 
 The authority chain is:
 
-Human (Approval Gate)  
-→ Deterministic Contracts  
-→ Validators  
-→ Boundary Audit  
-→ Pipeline Orchestrator  
+Human (Approval Gate)
+→ Deterministic Contracts
+→ Validators
+→ Boundary Audit
+→ Pipeline Orchestrator
 
 AI is NOT in the authority chain.
 

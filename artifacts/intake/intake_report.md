@@ -1,7 +1,7 @@
 # intake_report
 
 ## Operating Mode
-- result: IMPROVE
+- result: FULL_PIPELINE_STATE
 
 ## Repository State
 - result: MIXED
@@ -13,7 +13,7 @@
 - existing code or docs detected
 
 ## Rules Triggered
-- docs/code mixed repository state detected
+- docs/code/artifacts governed runtime state detected
 
 ## Observed Components
 - docs/

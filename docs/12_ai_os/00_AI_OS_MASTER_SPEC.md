@@ -372,6 +372,11 @@ Minimum required fields:
 * `artifact_registry`
 * `review_cycles_count`
 * `pending_decisions`
+* `active_runtime_state`
+* `execution_package_state`
+* `memory_state`
+* `version_registry`
+* `active_project_flag`
 * `last_updated_at`
 
 ### 8.1 Project Type Values

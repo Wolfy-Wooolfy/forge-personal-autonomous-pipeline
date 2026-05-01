@@ -1,7 +1,7 @@
 # MODULE FLOW — Backfill Report
 
 - generated_at: 2026-04-25T19:45:38.601Z
-- operating_mode: IMPROVE
+- operating_mode: FULL_PIPELINE_STATE
 - repository_state: MIXED
 - approved_actions_seen: 3
 - deterministic_backfill_actions: 3

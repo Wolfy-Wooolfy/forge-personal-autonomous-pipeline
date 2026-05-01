@@ -10,7 +10,7 @@
   "technical_goal": "add a button to the UI",
   "current_phase": "EXECUTION_READY",
   "active_runtime_state": "EXECUTION_PREPARATION",
-  "workspace_path": "D:\\S\\Halo\\Tech\\forge-personal-autonomous-pipeline",
+  "workspace_path": "D:\\S\\Forge\\Tech\\forge-personal-autonomous-pipeline",
   "source_of_truth": "ZIP_SNAPSHOT",
   "selected_strategy": "HTML_BUTTON_CREATE",
   "accepted_options": [

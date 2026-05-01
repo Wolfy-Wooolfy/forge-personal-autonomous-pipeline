@@ -1,8 +1,8 @@
 # 📄 Document ID Normalization and Mapping Rule
-**Document ID:** DOC-20  
-**Status:** EXECUTION-BOUND  
-**Scope:** Document Identity Governance  
-**Applies To:** Entire Documentation Pack  
+**Document ID:** DOC-20
+**Status:** EXECUTION-BOUND
+**Scope:** Document Identity Governance
+**Applies To:** Entire Documentation Pack
 **Enforcement Level:** HARD (Fail-Closed)
 
 ---
@@ -13,8 +13,8 @@ This document defines the canonical Document ID system.
 
 It resolves ambiguity between:
 
-- Legacy IDs (example: HALO-DOC-XX)
-- New IDs (DOC-XX)
+- Retired pre-Forge legacy IDs
+- Canonical IDs (DOC-XX)
 - Unkeyed documents (no explicit ID header)
 
 Without this rule:
@@ -44,16 +44,11 @@ SCHEMA-XX
 
 ## 3. Legacy ID Handling Rule
 
-If a document contains:
+If a document previously contained a retired pre-Forge legacy identifier,
+that identifier is considered non-canonical.
 
-HALO-DOC-XX
-
-It is considered:
-
-Legacy ID (non-canonical)
-
-It remains binding if listed in DOC-19,
-but must not be referenced using HALO-DOC format in new documents.
+It remains binding only through its file path and its assigned canonical
+DOC-XX identifier in DOC-19.
 
 All new references MUST use:
 
@@ -108,8 +103,8 @@ Schema IDs must:
 
 This normalization rule does NOT:
 
-- Require rewriting legacy files immediately
-- Require renaming HALO-DOC IDs inside old files
+- Require rewriting immutable legacy artifacts immediately
+- Require changing historical release evidence
 
 It only governs forward consistency.
 

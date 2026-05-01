@@ -1,8 +1,8 @@
 # Orchestrator Runner — Dry-Run Mode Specification
 
-**Stage:** B (Specification)  
-**Release:** 1.1.0  
-**Status:** FINAL — EXECUTION-BOUND  
+**Stage:** B (Specification)
+**Release:** 1.1.0
+**Status:** FINAL — EXECUTION-BOUND
 
 ---
 
@@ -18,7 +18,7 @@ WITHOUT writing any state to disk.
 ## 2. Activation (Hard)
 
 Dry-Run mode is activated ONLY when:
-- Environment variable `HALO_DRY_RUN=true`
+- Environment variable `FORGE_DRY_RUN=true`
 
 Any other value or absence = normal mode.
 

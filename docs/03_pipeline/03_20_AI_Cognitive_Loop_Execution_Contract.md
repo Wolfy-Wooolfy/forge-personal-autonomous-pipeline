@@ -1,16 +1,16 @@
 # AI Cognitive Loop Execution Contract
 
-**Document ID:** HALO-DOC-20  
-**Applies To:** Stages A, B, C  
-**Status:** CORE – NON-NEGOTIABLE  
-**Enforcement:** Fail-Closed  
+**Document ID:** DOC-50
+**Applies To:** Stages A, B, C
+**Status:** CORE – NON-NEGOTIABLE
+**Enforcement:** Fail-Closed
 
 ---
 
 ## 1. Purpose
 
 This contract defines the deterministic execution model
-for the HALO Cognitive Layer.
+for the Forge Cognitive Layer.
 
 It formalizes the three mandatory intelligence loops:
 
@@ -132,8 +132,8 @@ Loop terminates ONLY if:
 
 If resolution cannot be achieved deterministically:
 
-→ Return to Stage A  
-OR  
+→ Return to Stage A
+OR
 → Human Interrupt (if selectable fork exists)
 
 ---
@@ -180,8 +180,8 @@ Otherwise:
 
 If a loop cannot converge deterministically:
 
-Stage C → return to Stage B  
-Stage B → return to Stage A  
+Stage C → return to Stage B
+Stage B → return to Stage A
 
 Escalation upward is mandatory.
 Downward patching is forbidden.

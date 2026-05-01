@@ -113,7 +113,7 @@ It only hardens execution safety.
 
 After TASK-032 implementation:
 
-HALO execution becomes:
+FORGE execution becomes:
 
 * Idempotent
 * Monotonic

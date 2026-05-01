@@ -1,9 +1,9 @@
 # Cognitive Adapter Layer — Architecture Contract
 
-**Document ID:** DOC-01-ADAPTER  
-**Status:** EXECUTION-BOUND  
-**Scope:** Defines the Cognitive Adapter Layer as a core system component and its mandatory boundaries  
-**Applies To:** Forge Runtime + Cognitive Layer + Any External Cognitive Engine  
+**Document ID:** DOC-61
+**Status:** EXECUTION-BOUND
+**Scope:** Defines the Cognitive Adapter Layer as a core system component and its mandatory boundaries
+**Applies To:** Forge Runtime + Cognitive Layer + Any External Cognitive Engine
 **Enforcement Level:** HARD (Fail-Closed)
 
 ---
@@ -87,7 +87,7 @@ The adapter MUST:
 
 2) Route Deterministically
 - Select provider/model_id ONLY according to:
-  DOC-10-CE-SEL — Cognitive Engine Selection & Routing Policy.
+  DOC-64 — Cognitive Engine Selection & Routing Policy.
 
 3) Execute Provider IO
 - Call a provider driver.
@@ -198,7 +198,7 @@ If secrets are detected in persisted artifacts:
 This document is satisfied only when:
 
 - All cognitive calls are made ONLY via the adapter.
-- Routing strictly follows DOC-10-CE-SEL.
+- Routing strictly follows DOC-64.
 - Prompts/responses/metadata are persisted deterministically.
 - Failures are classified deterministically and handled fail-closed.
 - No external engine output is treated as authoritative without stage validation.

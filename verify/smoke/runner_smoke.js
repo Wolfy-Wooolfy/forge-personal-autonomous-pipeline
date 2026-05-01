@@ -5,7 +5,7 @@ const { run } = require(path.resolve(__dirname, "../../code/src/orchestrator/run
 
 const STATUS_PATH = path.resolve(__dirname, "../../progress/status.json");
 
-function runSmoke() {
+async function runSmoke() {
   const original = fs.readFileSync(STATUS_PATH, { encoding: "utf8" });
 
   try {
@@ -23,16 +23,19 @@ function runSmoke() {
 
     fs.writeFileSync(STATUS_PATH, JSON.stringify(payload, null, 2));
 
-    run();
+    await run();
 
-    const updated = JSON.parse(fs.readFileSync(STATUS_PATH, { encoding: "utf8" }));
+    const after = fs.readFileSync(STATUS_PATH, { encoding: "utf8" });
 
-    if (updated.current_stage !== "C") {
-      throw new Error("Runner Smoke FAIL: stage did not transition to C");
+    if (after !== JSON.stringify(payload, null, 2)) {
+      throw new Error("Runner Smoke FAIL: status reflection changed without authoritative next task");
     }
   } finally {
     fs.writeFileSync(STATUS_PATH, original, { encoding: "utf8" });
   }
 }
 
-runSmoke();
+runSmoke().catch((err) => {
+  console.error(err && err.message ? err.message : String(err));
+  process.exit(1);
+});

@@ -1,10 +1,10 @@
 # Code-to-Spec Trace Validator Contract
 
-**Document ID:** HALO-DOC-29  
-**Stage:** C  
-**Status:** MANDATORY – ENFORCEMENT CONTRACT  
-**Scope:** Specification ↔ Code Compliance  
-**Enforcement:** Fail-Closed  
+**Document ID:** DOC-59
+**Stage:** C
+**Status:** MANDATORY – ENFORCEMENT CONTRACT
+**Scope:** Specification ↔ Code Compliance
+**Enforcement:** Fail-Closed
 
 ---
 
@@ -56,8 +56,8 @@ Every code artifact MUST:
 - Map to at least one explicit requirement
 - Not introduce undocumented behavior
 
-Unmapped code → FAIL CLOSED  
-Unmapped requirement → FAIL CLOSED  
+Unmapped code → FAIL CLOSED
+Unmapped requirement → FAIL CLOSED
 
 No exceptions.
 
@@ -194,9 +194,9 @@ If trace validation:
 - Encounters missing clause IDs
 - Detects dynamic behavior not spec-bound
 
-→ TRACE FAIL  
-→ Stage C MUST halt  
-→ No downstream transition allowed  
+→ TRACE FAIL
+→ Stage C MUST halt
+→ No downstream transition allowed
 
 ---
 

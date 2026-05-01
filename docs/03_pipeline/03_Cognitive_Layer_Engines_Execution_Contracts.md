@@ -1,9 +1,9 @@
 # 📄 Document 11 — Cognitive Layer Engines Execution Contracts (v1)
 
-**Project:** Forge  
-**Version:** 1.0  
-**Status:** BINDING – NON-NEGOTIABLE  
-**Applies To:** Stage A, Stage B, Stage C execution loops and their validators  
+**Project:** Forge
+**Version:** 1.0
+**Status:** BINDING – NON-NEGOTIABLE
+**Applies To:** Stage A, Stage B, Stage C execution loops and their validators
 **Enforcement Level:** HARD (Fail-Closed)
 
 ---
@@ -14,15 +14,15 @@ This document defines the authoritative, execution-grade contracts for the Cogni
 
 The Cognitive Layer is composed of three deterministic engines:
 
-1) **Idea Engine** (Stage A)  
-2) **Documentation Refinement Engine** (Stage B)  
+1) **Idea Engine** (Stage A)
+2) **Documentation Refinement Engine** (Stage B)
 3) **Code↔Docs Consistency & Verification Engine** (Stage C + Stage D verification alignment)
 
 These engines MUST operate under:
 - Pipeline Stages Specification (Doc-03)
 - Progress Tracking & Status Report Contract (Doc-06)
 - Autonomy Policy & Human Interrupt Protocol (Doc-04)
-- HALO Boundary Audit Rules (Doc-08)
+- Forge Boundary Audit Rules (DOC-08)
 - Build & Verify Playbook (Local) (Doc-09)
 - Artifact Schema & Repository Layout Standard (Doc-05)
 
@@ -89,7 +89,7 @@ Transform raw intent into:
 
 ### 3.3 Outputs (Required Artifacts)
 
-Stage A MUST produce closed artifacts as defined by Doc-03 Stage A outputs.  
+Stage A MUST produce closed artifacts as defined by Doc-03 Stage A outputs.
 This document additionally binds the execution behavior:
 
 - If multiple equally valid interpretations exist:

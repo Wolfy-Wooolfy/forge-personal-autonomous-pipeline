@@ -1,13 +1,13 @@
 {
   "execution_id": "MODULE_FLOW_EXECUTE_v1",
   "generated_at": "2026-04-25T19:45:38.607Z",
-  "operating_mode": "IMPROVE",
+  "operating_mode": "FULL_PIPELINE_STATE",
   "repository_state": "MIXED",
   "source": {
     "backfill_plan_path": "artifacts/backfill/backfill_plan.json",
-    "backfill_sha256": "6f6374f05261863a2cade8eb1165df48f88854a42d533e1efc76e7132d021054",
+    "backfill_sha256": "9290db374d13dffa5ea501402a6fd3945c26ff43bf6c470e12b6c7b7c3d84449",
     "intake_context_path": "artifacts/intake/intake_context.json",
-    "intake_sha256": "eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84",
+    "intake_sha256": "f40ec234cf5a934d54762b1007cd357199a8e0146a2b6610ba7d3fff3979d7bd",
     "workspace_execution_id": "ai_os_execution_1777146184959",
     "workspace_execution_package_id": "ai_os_package_1777146184959",
     "workspace_execution_package_path": "artifacts/projects/action_game/execute/execution_package.json"
@@ -15,8 +15,9 @@
   "approved_code_actions": [
     {
       "action_id": "WORKSPACE_ACTION_1",
-      "origin_gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "action_type": "BACKFILL_RECONCILIATION",
+      "linked_gap_id": "WORKSPACE_CHANGE_REQUEST",
+      "modification_type": "BACKFILL_RECONCILIATION",
+      "reason": "External AI workspace approved change request - deterministic file materialization",
       "target_path": "artifacts/projects/action_game/output/index.html",
       "target_file": "artifacts/projects/action_game/output/index.html",
       "source_type": "EXTERNAL_AI_WORKSPACE",
@@ -31,8 +32,9 @@
     },
     {
       "action_id": "WORKSPACE_ACTION_2",
-      "origin_gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "action_type": "BACKFILL_RECONCILIATION",
+      "linked_gap_id": "WORKSPACE_CHANGE_REQUEST",
+      "modification_type": "BACKFILL_RECONCILIATION",
+      "reason": "External AI workspace approved change request - deterministic file materialization",
       "target_path": "artifacts/projects/action_game/output/style.css",
       "target_file": "artifacts/projects/action_game/output/style.css",
       "source_type": "EXTERNAL_AI_WORKSPACE",
@@ -47,8 +49,9 @@
     },
     {
       "action_id": "WORKSPACE_ACTION_3",
-      "origin_gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "action_type": "BACKFILL_RECONCILIATION",
+      "linked_gap_id": "WORKSPACE_CHANGE_REQUEST",
+      "modification_type": "BACKFILL_RECONCILIATION",
+      "reason": "External AI workspace approved change request - deterministic file materialization",
       "target_path": "artifacts/projects/action_game/output/game.js",
       "target_file": "artifacts/projects/action_game/output/game.js",
       "source_type": "EXTERNAL_AI_WORKSPACE",

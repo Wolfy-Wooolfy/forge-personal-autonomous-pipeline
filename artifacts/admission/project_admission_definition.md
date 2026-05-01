@@ -56,7 +56,7 @@
         "risk_id": "RISK-005",
         "description": "Cognitive engine provider changes mid-execution create non-reproducible trace artifacts.",
         "severity": "MEDIUM",
-        "mitigation": "DOC-10-CE-SEL enforces provider/model_id recording in artifacts/llm/metadata/ per task"
+        "mitigation": "DOC-64 enforces provider/model_id recording in artifacts/llm/metadata/ per task"
       }
     ]
   }

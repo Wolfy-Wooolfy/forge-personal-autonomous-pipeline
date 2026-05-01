@@ -1,10 +1,10 @@
 # EXECUTE_MODULE_CONTRACT_v1
 
-Document ID: DOC-36  
-Status: EXECUTION-BOUND  
-Authority Level: HARD (Fail-Closed)  
-Applies To: SELF_BUILDING_SYSTEM  
-Governed By: MODULE_ORCHESTRATION_GOVERNANCE_v1  
+Document ID: DOC-36
+Status: EXECUTION-BOUND
+Authority Level: HARD (Fail-Closed)
+Applies To: SELF_BUILDING_SYSTEM
+Governed By: MODULE_ORCHESTRATION_GOVERNANCE_v1
 
 ---
 
@@ -51,10 +51,10 @@ If any condition fails → halt immediately.
 
 Before modifying any file, Execute MUST:
 
-1) Read the current authoritative version of the file  
-2) Read all directly dependent or related files  
-3) Confirm file paths explicitly  
-4) Verify no concurrent modification occurred  
+1) Read the current authoritative version of the file
+2) Read all directly dependent or related files
+3) Confirm file paths explicitly
+4) Verify no concurrent modification occurred
 
 Execute MUST explicitly log:
 
@@ -80,6 +80,14 @@ Execute MUST NOT:
 - Modify stage contracts
 - Modify governance documents
 
+Exception (per DOC-38 Section 11 System-Governed namespace `artifacts/projects/`):
+Execute MAY write to `artifacts/projects/<project_id>/output/` and
+`artifacts/projects/<project_id>/execute/` when fulfilling an approved
+EXECUTION_PACKAGE originating from the AI OS workspace runtime
+(`docs/12_ai_os/09_EXECUTION_HANDOFF_TO_FORGE.md`).
+This exception applies ONLY to workspace-bound project deliverables
+and MUST NOT extend to any other `artifacts/` subpath.
+
 ---
 
 # 5. Deterministic Modification Rules
@@ -101,10 +109,10 @@ If replacing code, replacement MUST be complete and reproducible.
 
 Execute MUST generate:
 
-1) artifacts/execute/execute_plan.json  
-2) artifacts/execute/execute_report.md  
-3) artifacts/execute/execute_diff.md  
-4) artifacts/execute/execute_log.md  
+1) artifacts/execute/execute_plan.json
+2) artifacts/execute/execute_report.md
+3) artifacts/execute/execute_diff.md
+4) artifacts/execute/execute_log.md
 
 ---
 
@@ -116,7 +124,7 @@ Execute MUST generate:
     {
       "action_id": "",
       "target_file": "",
-      "modification_type": "ADD | REPLACE | DELETE",
+      "modification_type": "ADD | REPLACE | DELETE | BACKFILL_RECONCILIATION",
       "reason": "",
       "linked_gap_id": ""
     }

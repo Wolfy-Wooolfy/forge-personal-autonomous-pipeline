@@ -1,17 +1,25 @@
 # Decision Artifact Schema
 
-**Document ID:** HALO-DOC-22  
-**Status:** EXECUTION-BOUND  
-**Scope:** Defines the structure of Decision Artifacts generated after Design Exploration  
-**Applies To:** Forge Decision Lifecycle  
+**Document ID:** DOC-52
+**Status:** EXECUTION-BOUND
+**Scope:** Defines the structure of Decision Artifacts generated after Design Exploration
+**Applies To:** Forge Decision Lifecycle
 **Enforcement:** Fail-Closed
 
 ---
 
 # 1. Purpose
 
-This document defines the mandatory schema
-for decision artifacts in Forge.
+> **SUPERSESSION NOTICE (2026-04-30):**
+> Where this document conflicts with
+> `docs/07_decisions/07_Decision_Logging_and_Change_Traceability_Specification.md`
+> (the canonical Decision Logging contract), the latter PREVAILS.
+> Specifically: file naming follows `DEC-YYYYMMDD-XXX.md` (per Section 5 of DOC-07),
+> and the Decision file schema follows Section 6 of DOC-07 (minimal schema).
+> This document remains valid as a reference for fork-detection workflow
+> but does NOT override the binding minimal schema.
+
+This document defines the original decision artifact framework for Forge.
 
 Decision artifacts record the final resolution
 of an execution fork after design exploration.
@@ -43,10 +51,10 @@ DECISION-001.execution-architecture.md
 
 A decision artifact is generated after:
 
-1. Execution Fork Detection  
-2. Design Exploration  
-3. Option Evaluation  
-4. Human Authority Selection  
+1. Execution Fork Detection
+2. Design Exploration
+3. Option Evaluation
+4. Human Authority Selection
 
 Only then may the decision artifact be created.
 
@@ -85,8 +93,8 @@ The pipeline stage where the decision occurred.
 
 Example:
 
-Stage A  
-Stage B  
+Stage A
+Stage B
 Stage C
 
 ---
@@ -114,7 +122,7 @@ Each option must include:
 
 Example:
 
-Option A – Modular layered architecture  
+Option A – Modular layered architecture
 Option B – Flat module architecture
 
 ---
@@ -164,7 +172,7 @@ Identity of the decision maker.
 
 Example:
 
-System Architect  
+System Architect
 Project Owner
 
 ---
@@ -256,7 +264,7 @@ Fork Description:
 Multiple module boundary structures possible.
 
 Options Evaluated:
-Option A – Dedicated module per pipeline phase  
+Option A – Dedicated module per pipeline phase
 Option B – Combined modules
 
 Evaluation Summary:

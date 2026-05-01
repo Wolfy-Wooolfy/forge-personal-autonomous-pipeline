@@ -11,7 +11,7 @@
     "operation_mode": "SINGLE_FILE",
     "file_count": 1
   },
-  "target_project_path": "D:\\S\\Halo\\Tech\\forge-personal-autonomous-pipeline",
+  "target_project_path": "D:\\S\\Forge\\Tech\\forge-personal-autonomous-pipeline",
   "requested_outputs": [
     "Apply approved change to web/index.html"
   ],

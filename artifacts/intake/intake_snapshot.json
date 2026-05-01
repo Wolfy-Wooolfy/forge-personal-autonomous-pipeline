@@ -1,10 +1,9 @@
 {
-  "module": "INTAKE",
-  "generated_at": "2026-04-05T18:40:09.805Z",
+  "execution_id": "INTAKE-2026-04-05T18:40:09.805Z",
+  "snapshot_timestamp": "2026-04-05T18:40:09.805Z",
   "total_files": 468,
   "total_directories": 96,
-  "classification": "IMPROVE",
-  "repository_state": "MIXED",
+  "classification": "FULL_PIPELINE_STATE",
   "repository_root_hash": "613b0d7acb331c26697bebaa04901cf47fef464f6a0c028bc8d2f4322c5ca0c7",
   "locked_snapshot_flag": true
 }

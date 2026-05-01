@@ -3,6 +3,7 @@
   "workspace_id": "personal",
   "project_id": "forge-personal-autonomous-pipeline",
   "source": "EXTERNAL_AI_WORKSPACE",
+  "triggering_gaps": [],
   "operation": {
     "mode": "SINGLE_FILE",
     "file_count": 1,

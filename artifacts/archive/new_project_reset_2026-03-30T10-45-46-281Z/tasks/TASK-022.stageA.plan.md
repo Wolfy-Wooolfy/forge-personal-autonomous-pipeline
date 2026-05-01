@@ -2,7 +2,7 @@
 
 ## Task Objective
 Introduce controlled autonomy and bootstrap Stage D verification
-into the HALO Personal Autonomous Pipeline without breaking Release 1.1.0 guarantees.
+into the FORGE Personal Autonomous Pipeline without breaking Release 1.1.0 guarantees.
 
 ## Scope (Explicit)
 This task SHALL:

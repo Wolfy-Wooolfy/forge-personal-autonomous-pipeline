@@ -132,8 +132,8 @@ function main() {
 
   const likelyUndocumentedCode = [];
   const coreCodeCandidates = [
-    "bin/halo-autonomy-step.js",
-    "bin/halo-run.js",
+    "bin/forge-autonomy-step.js",
+    "bin/forge-run.js",
     "tools/pre_run_check.js",
     "tools/integrity.js",
     "code/src/orchestrator/runner.js",

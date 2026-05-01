@@ -1,9 +1,9 @@
 # Cognitive Lifecycle Orchestration Specification
 
-**Document ID:** HALO-DOC-15  
-**Status:** BINDING – EXECUTION ORCHESTRATION  
-**Scope:** Full Lifecycle (Stage A → Stage D)  
-**Enforcement:** Fail-Closed  
+**Document ID:** DOC-45
+**Status:** BINDING – EXECUTION ORCHESTRATION
+**Scope:** Full Lifecycle (Stage A → Stage D)
+**Enforcement:** Fail-Closed
 
 ---
 
@@ -32,10 +32,10 @@ It defines stage interaction authority.
 
 The lifecycle consists of exactly four stages:
 
-A — Idea Evaluation & Finalization  
-B — Documentation Generation & Refinement  
-C — Code Implementation & Verification  
-D — Final Acceptance & Release Gate  
+A — Idea Evaluation & Finalization
+B — Documentation Generation & Refinement
+C — Code Implementation & Verification
+D — Final Acceptance & Release Gate
 
 No additional lifecycle stages are permitted.
 

@@ -218,12 +218,7 @@ async function writeStatusAndRun(taskName, runContext = {}) {
 }
 
 function isDryRun() {
-  const v =
-    process.env.FORGE_DRY_RUN !== undefined
-      ? process.env.FORGE_DRY_RUN
-      : process.env.HALO_DRY_RUN;
-
-  return String(v || "").toLowerCase() === "true";
+  return String(process.env.FORGE_DRY_RUN || "").toLowerCase() === "true";
 }
 
 function allowPostStageCompletion(status) {

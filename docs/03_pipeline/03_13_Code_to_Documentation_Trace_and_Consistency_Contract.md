@@ -1,10 +1,10 @@
 # Code to Documentation Trace & Consistency Contract
 
-**Document ID:** HALO-DOC-13  
-**Stage:** C  
-**Status:** BINDING – EXECUTION CONTRACT  
-**Applies To:** Stage C – Code Generation & Implementation  
-**Enforcement:** Fail-Closed  
+**Document ID:** DOC-43
+**Stage:** C
+**Status:** BINDING – EXECUTION CONTRACT
+**Applies To:** Stage C – Code Generation & Implementation
+**Enforcement:** Fail-Closed
 
 ---
 

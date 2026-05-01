@@ -326,7 +326,7 @@ If `COGNITIVE_ENGINE_MODE=MANUAL`:
 
 If `COGNITIVE_ENGINE_MODE=AUTO`:
 - `COGNITIVE_ENGINE_SCOPE` MUST NOT be used.
-- Routing MUST follow DOC-10-CE-SEL.
+- Routing MUST follow DOC-64.
 - Ambiguous routing MUST enter BLOCKED state.
 
 Any ambiguity in selection configuration:
@@ -371,7 +371,7 @@ If `COGNITIVE_ENGINE_MODE=MANUAL`:
 
 If `COGNITIVE_ENGINE_MODE=AUTO`:
 - `COGNITIVE_ENGINE_SCOPE` MUST be absent OR empty (treated as not provided).
-- AUTO routing rules MUST follow: DOC-10-CE-SEL.
+- AUTO routing rules MUST follow: DOC-64.
 
 Any violation MUST:
 - FAIL runtime readiness

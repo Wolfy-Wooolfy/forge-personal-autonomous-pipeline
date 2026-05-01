@@ -16,7 +16,7 @@
   "preconditions": [
     "Valid status.json state",
     "Task handler registered",
-    "Execution invoked via halo-autonomy-step"
+    "Execution invoked via forge-autonomy-step"
   ],
   "stop_conditions": [
     "Abort on invalid handler resolution",

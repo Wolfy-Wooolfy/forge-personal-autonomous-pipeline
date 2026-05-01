@@ -1,10 +1,10 @@
 # BACKFILL_PROTOCOL_v1
 
-Document ID: DOC-35  
-Status: EXECUTION-BOUND  
-Authority Level: HARD (Fail-Closed)  
-Applies To: SELF_BUILDING_SYSTEM  
-Governed By: MODULE_ORCHESTRATION_GOVERNANCE_v1  
+Document ID: DOC-35
+Status: EXECUTION-BOUND
+Authority Level: HARD (Fail-Closed)
+Applies To: SELF_BUILDING_SYSTEM
+Governed By: MODULE_ORCHESTRATION_GOVERNANCE_v1
 
 ---
 
@@ -64,17 +64,28 @@ Backfill MUST NOT act on:
 
 Those belong to Execute Module.
 
+Exception (per DOC-38 Section 11 System-Governed namespace `artifacts/projects/`):
+Backfill MAY materialize approved EXECUTION_PACKAGE deliverables
+into `artifacts/projects/<project_id>/output/` when:
+- The deliverables are pre-defined inside an approved execution package
+- A Decision Gate approval exists for the package
+- The action_type is `BACKFILL_RECONCILIATION` (deterministic file write
+  from approved package content)
+
+This exception applies ONLY to workspace-bound project deliverables
+and MUST NOT extend to any code/, docs/, or non-projects artifacts/ paths.
+
 ---
 
 # 4. Authorized Backfill Actions
 
 Backfill may:
 
-1) Create missing governance documents  
-2) Create missing artifact directories  
-3) Generate placeholder contract templates  
-4) Generate missing schema files  
-5) Generate deterministic stub documentation  
+1) Create missing governance documents
+2) Create missing artifact directories
+3) Generate placeholder contract templates
+4) Generate missing schema files
+5) Generate deterministic stub documentation
 6) Normalize naming inconsistencies (if explicitly authorized)
 7) Create newly approved governance documents that extend system capability.
 
@@ -112,12 +123,12 @@ All file content must be reproducible.
 
 Backfill MUST generate:
 
-1) artifacts/backfill/backfill_plan.json  
-2) artifacts/backfill/backfill_execution_log.md  
+1) artifacts/backfill/backfill_plan.json
+2) artifacts/backfill/backfill_execution_log.md
 
 If files created:
 
-3) artifacts/backfill/backfill_created_files.json  
+3) artifacts/backfill/backfill_created_files.json
 
 ---
 

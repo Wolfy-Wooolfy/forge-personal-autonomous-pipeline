@@ -35,8 +35,8 @@ function main() {
     script: "verify/smoke/local_command_logger.js",
     argv,
     env: {
-      HALO_AUTONOMY: safeString(process.env.HALO_AUTONOMY),
-      HALO_MAX_STEPS: safeString(process.env.HALO_MAX_STEPS),
+      FORGE_AUTONOMY: safeString(process.env.FORGE_AUTONOMY),
+      FORGE_MAX_STEPS: safeString(process.env.FORGE_MAX_STEPS),
     },
   };
 

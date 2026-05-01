@@ -2,7 +2,7 @@
 
 - timestamp: 2026-04-25T19:45:38.597Z
 - policy: AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK
-- operating_mode: IMPROVE
+- operating_mode: FULL_PIPELINE_STATE
 - repository_state: MIXED
 - blocked: false
 
@@ -14,7 +14,7 @@
 - execution_package_sha256: c548555366600ca78dfcaf80377158d100b8868e1004c4446ffee9db35fd76b8
 - workspace_response_path: artifacts/llm/responses/ai_os_execution_1777146184959.response.json
 - intake_context_path: artifacts/intake/intake_context.json
-- intake_context_sha256: eb7d916b8d4f116e100ab3b98461c00b9ac7e178fa844804e887416356b2bf84
+- intake_context_sha256: f40ec234cf5a934d54762b1007cd357199a8e0146a2b6610ba7d3fff3979d7bd
 
 ## Summary
 - total_actions: 3

@@ -170,14 +170,16 @@ AI artifacts:
 - must NOT replace Forge artifacts
 - must complement them
 
-Execution artifacts remain:
-```
+Execution artifacts remain governed by
+MODULE_ORCHESTRATION_GOVERNANCE_v1 (DOC-38) Section 11
+and reside in their owning module namespaces:
 
-artifacts/execute/
-artifacts/verify/
-artifacts/decisions/
+artifacts/execute/    - Execute module
+artifacts/decisions/  - Decision Gate module
+artifacts/verify/     - Boundary Audit layer (system-governed)
 
-```
+AI Layer namespace (artifacts/ai/) is system-governed
+per DOC-38 Section 11 and may be written ONLY by AI Layer modules.
 
 ---
 

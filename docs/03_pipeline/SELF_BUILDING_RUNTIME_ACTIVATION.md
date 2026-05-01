@@ -1,10 +1,10 @@
 # Self-Building Runtime Activation Protocol
 
-**Document ID:** HALO-DOC-25  
-**Status:** BINDING – RUNTIME ACTIVATION AUTHORITY  
-**Scope:** Forge Self-Building System Runtime  
-**Applies To:** Entire Autonomous Pipeline  
-**Enforcement:** Fail-Closed  
+**Document ID:** DOC-55
+**Status:** BINDING – RUNTIME ACTIVATION AUTHORITY
+**Scope:** Forge Self-Building System Runtime
+**Applies To:** Entire Autonomous Pipeline
+**Enforcement:** Fail-Closed
 
 ---
 
@@ -77,10 +77,10 @@ If any required directory is missing:
 Once activation conditions are satisfied,
 Forge MUST perform the following steps.
 
-Step 1 — Repository Snapshot Lock  
+Step 1 — Repository Snapshot Lock
 The repository state MUST be frozen for deterministic analysis.
 
-Step 2 — Runtime State Initialization  
+Step 2 — Runtime State Initialization
 Forge MUST read governed runtime authority artifacts and determine:
 
 - current governed runtime position
@@ -89,19 +89,19 @@ Forge MUST read governed runtime authority artifacts and determine:
 - blocking/abort semantics
 - deterministic continuation eligibility
 
-Step 3 — Artifact Integrity Verification  
+Step 3 — Artifact Integrity Verification
 All artifacts referenced by status.json MUST exist.
 
 If any artifact is missing:
 
 → Execution MUST halt.
 
-Step 4 — Module Selection  
+Step 4 — Module Selection
 Forge determines the next module using:
 
 MODULE_ORCHESTRATION_GOVERNANCE_v1.
 
-Step 5 — Execution Start  
+Step 5 — Execution Start
 Selected module begins execution.
 
 ---

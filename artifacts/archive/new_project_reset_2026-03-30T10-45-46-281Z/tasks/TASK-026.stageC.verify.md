@@ -12,7 +12,7 @@ and cannot run autonomously beyond explicit manual invocation.
 - No retries
 
 2) Manual Trigger Enforcement
-- HALO_AUTONOMY=1 is mandatory
+- FORGE_AUTONOMY=1 is mandatory
 - CLI invocation required
 - No auto-run paths
 

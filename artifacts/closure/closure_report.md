@@ -1,10 +1,10 @@
-# MODULE FLOW — Closure Report
+# MODULE FLOW ? Closure Report
 
-- release_timestamp: 2026-04-05T18:48:11.259Z
-- execution_id: MODULE_FLOW_CLOSURE_015e6fc441c6
-- operating_mode: IMPROVE
+- release_timestamp: 2026-04-25T19:45:38.607Z
+- execution_id: MODULE_FLOW_CLOSURE_2d3774cd5c6a
+- operating_mode: FULL_PIPELINE_STATE
 - repository_state: MIXED
-- final_outcome: READY — Module Flow Closure COMPLETE
+- final_outcome: READY ? Module Flow Closure COMPLETE
 
 ## Verified Modules
 - Audit: OK
@@ -30,7 +30,7 @@
 - decision_artifact_valid: true
 - verify_contract_ready: true
 - deterministic_confirmation: true
-- snapshot_hash: 7606b5e0136fab33657400aa9b8caf26d584d87d32c53a10edafff9e01f8b73e
+- snapshot_hash: b09980556ddcb57aec66c165f3ca38b2c30a24d12a6562275e0dabf89a742353
 
 ## Release Artifacts
 - artifacts/closure/closure_report.md

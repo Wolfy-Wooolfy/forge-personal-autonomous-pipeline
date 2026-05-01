@@ -32,8 +32,8 @@ Expected behavior:
 
 #### B) Legacy status-driven wrappers
 Paths:
-- bin/halo-run.js
-- bin/halo-autonomy-step.js
+- bin/forge.js run
+- bin/forge.js step
 - bin/forge.js
 - bin/forge-build-state.js
 

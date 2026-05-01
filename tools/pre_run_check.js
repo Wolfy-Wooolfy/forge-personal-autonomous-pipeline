@@ -6,7 +6,7 @@ function run(cmd) {
 }
 
 function main() {
-  console.log("== HALO Pre-Run Check ==");
+  console.log("== FORGE Pre-Run Check ==");
 
   run("node verify/smoke/stage_transitions_smoke.js");
   run("node verify/smoke/status_writer_smoke.js");

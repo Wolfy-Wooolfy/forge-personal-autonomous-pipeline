@@ -528,7 +528,7 @@ function runAudit(context) {
 
   const deprecatedPatterns = [
     { id: "DEPRECATED_NAME_001", re: /Personal\s+Autonomous\s+Pipeline/i, label: "Deprecated system name pattern (001)" },
-    { id: "DEPRECATED_NAME_002", re: /HALO\s+Personal\s+Autonomous\s+Pipeline/i, label: "Deprecated system name pattern (002)" },
+    { id: "DEPRECATED_NAME_002", re: /FORGE\s+Personal\s+Autonomous\s+Pipeline/i, label: "Deprecated system name pattern (002)" },
     { id: "DEPRECATED_NAME_003", re: /\bPAPH\b/i, label: "Deprecated system name token (003)" }
   ];
 

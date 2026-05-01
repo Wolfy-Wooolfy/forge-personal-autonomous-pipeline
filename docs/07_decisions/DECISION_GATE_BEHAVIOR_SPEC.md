@@ -1,9 +1,9 @@
 # Decision Gate Behavior Specification
 
-**Document ID:** HALO-DOC-26  
-**Status:** EXECUTION-BOUND  
-**Scope:** Behavioral Specification for Decision Gate Module  
-**Applies To:** Forge Cognitive Layer  
+**Document ID:** DOC-56
+**Status:** EXECUTION-BOUND
+**Scope:** Behavioral Specification for Decision Gate Module
+**Applies To:** Forge Cognitive Layer
 **Enforcement:** Fail-Closed
 
 ---
@@ -35,22 +35,22 @@ between artifact processing stages.
 
 Typical flow:
 
-Artifact Produced  
-↓  
-Decision Gate Validation  
-↓  
+Artifact Produced
+↓
+Decision Gate Validation
+↓
 Execution Continues
 
 or
 
-Artifact Produced  
-↓  
-Decision Gate Detects Fork  
-↓  
-Design Exploration Protocol  
-↓  
-Human Decision  
-↓  
+Artifact Produced
+↓
+Decision Gate Detects Fork
+↓
+Design Exploration Protocol
+↓
+Human Decision
+↓
 Execution Continues
 
 ---
@@ -59,10 +59,10 @@ Execution Continues
 
 Decision Gate has five core responsibilities.
 
-1. Detect Execution Forks  
-2. Trigger Design Exploration  
-3. Enforce Decision Governance  
-4. Block Unauthorized Decisions  
+1. Detect Execution Forks
+2. Trigger Design Exploration
+3. Enforce Decision Governance
+4. Block Unauthorized Decisions
 5. Resume Deterministic Execution after Decision
 
 ---
@@ -229,11 +229,11 @@ with uncertainty at decision boundaries.
 
 Decision Gate interacts with:
 
-Intake Engine  
-Audit Engine  
-Trace Engine  
-Gap Engine  
-Backfill Engine  
+Intake Engine
+Audit Engine
+Trace Engine
+Gap Engine
+Backfill Engine
 Execute Engine
 
 However it does not modify artifacts.
@@ -265,8 +265,8 @@ Decision Gate ensures that Forge:
 
 It transforms Forge into a system that is:
 
-deterministic in execution  
-structured in exploration  
+deterministic in execution
+structured in exploration
 controlled in decision making.
 
 ---

@@ -1,6 +1,6 @@
 # Forge — Quickstart
 
-**Release:** 1.0.0  
+**Release:** 1.2.1
 **Mode:** Deterministic (Non-Autonomous)
 
 ---
@@ -19,7 +19,8 @@ Autonomy is optional (disabled by default). No decisions. No background loops.
 
 ## Requirements
 
-- Node.js 18+
+- Node.js v20.x (per DOC-10 Section 3.2)
+- npm v10+
 - Project root as working directory
 
 ---
@@ -36,7 +37,7 @@ Set `next_step` to include a target stage label, e.g.:
 
 
 3) Run the pipeline:
-- `node bin/halo-run.js`
+- `node bin/forge.js run` (legacy script name; functionally Forge runtime per DOC-00)
 
 
 4) Verify:

@@ -1,22 +1,22 @@
-# HALO Boundary Audit Rules (Fail-Closed Pack)
+# Forge Boundary Audit Rules (Fail-Closed Pack)
 
-**Document ID:** HALO-DOC-08  
-**Status:** BINDING – NON-NEGOTIABLE  
-**Applies To:** All Pipeline Stages, Agents, Tools, and Outputs  
+**Document ID:** DOC-08
+**Status:** BINDING – NON-NEGOTIABLE
+**Applies To:** All Pipeline Stages, Agents, Tools, and Outputs
 **Enforcement Level:** System-Wide (Fail-Closed)
 
 ---
 
 ## 1. Purpose
 
-This document defines the **mandatory Boundary Audit Rules** governing HALO’s autonomous pipeline.
+This document defines the **mandatory Boundary Audit Rules** governing Forge's autonomous pipeline.
 
 Its purpose is to ensure that:
 - No unsafe, unauthorized, or boundary-breaking output is ever finalized
-- All execution remains aligned with HALO’s core principles
+- All execution remains aligned with Forge's core principles
 - Any ambiguity, leakage, or policy violation results in an immediate **Fail-Closed halt**
 
-This is not a quality check.  
+This is not a quality check.
 This is a **safety and authority gate**.
 
 ---
@@ -74,7 +74,7 @@ a Boundary Audit outcome.
 
 ## 2. Core Principle: Fail-Closed by Default
 
-HALO operates under a **Fail-Closed** philosophy.
+Forge operates under a **Fail-Closed** philosophy.
 
 If the system is unsure whether an action is allowed:
 - The action is **blocked**
@@ -292,47 +292,47 @@ If scope ambiguity exists → **Fail-Closed**
 
 The system MUST ensure that:
 
-- No raw user text is exposed as-is  
-- No LLM-generated free text is treated as truth  
-- No unstructured narrative is persisted, propagated, or relied upon  
+- No raw user text is exposed as-is
+- No LLM-generated free text is treated as truth
+- No unstructured narrative is persisted, propagated, or relied upon
 
 Raw text includes ANY content that:
-- Preserves original phrasing  
-- Preserves semantic structure  
-- Preserves narrative flow  
-- Can be reverse-inferred to the original wording  
+- Preserves original phrasing
+- Preserves semantic structure
+- Preserves narrative flow
+- Can be reverse-inferred to the original wording
 
 This audit applies ONLY to:
-- Artifacts with execution authority, OR  
-- Any output that can influence live execution state  
+- Artifacts with execution authority, OR
+- Any output that can influence live execution state
 
 Non-authoritative archives (e.g., `progress/history/`) may contain human-readable narrative for audit purposes ONLY, and MUST remain non-authoritative and non-executable by contract.
 
-Governance documents under `docs/` are permitted to contain structured prose  
+Governance documents under `docs/` are permitted to contain structured prose
 as long as they do NOT:
-- Get treated as live execution state  
-- Get parsed as executable instructions outside their declared authority scope  
-- Bypass schema-bound authoritative artifacts (e.g., `progress/status.json`)  
+- Get treated as live execution state
+- Get parsed as executable instructions outside their declared authority scope
+- Bypass schema-bound authoritative artifacts (e.g., `progress/status.json`)
 
 The following do NOT remove raw text classification:
-- Rephrasing  
-- Summarization  
-- Translation  
-- Tone adjustment  
-- Light restructuring  
-- Semantic compression  
+- Rephrasing
+- Summarization
+- Translation
+- Tone adjustment
+- Light restructuring
+- Semantic compression
 
 An output is considered NON-RAW ONLY if it is:
-- Fully reconstructed  
-- Schema-bound  
-- Field-addressable  
-- Deterministically interpretable  
-- Free of narrative continuity  
+- Fully reconstructed
+- Schema-bound
+- Field-addressable
+- Deterministically interpretable
+- Free of narrative continuity
 
-If there is uncertainty whether content is still raw text:  
+If there is uncertainty whether content is still raw text:
 → The audit MUST FAIL CLOSED.
 
-Semantic transformation does NOT grant authority.  
+Semantic transformation does NOT grant authority.
 Only structural reconstruction does.
 
 ---
@@ -351,7 +351,7 @@ Missing or inferred consent → **Fail-Closed**
 
 ### 3.4 Client Vault Integrity Audit
 
-HALO MUST verify that:
+Forge MUST verify that:
 
 - All personal memory remains in the Client Vault
 - No sensitive data is copied, mirrored, or inferred server-side

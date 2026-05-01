@@ -30,8 +30,7 @@ function readGovernedStatusRaw() {
 }
 
 function isAutonomyEnabled() {
-  const v = process.env.FORGE_AUTONOMY !== undefined ? process.env.FORGE_AUTONOMY : process.env.HALO_AUTONOMY;
-  return String(v) === "1";
+  return String(process.env.FORGE_AUTONOMY || "") === "1";
 }
 
 function parseMaxStepsArg(argv) {
@@ -74,21 +73,21 @@ function main() {
   }
 
   if (cmd === "run") {
-    runScript("bin/halo-run.js", argv.slice(1), envPatch);
+    runScript("bin/forge-run.js", argv.slice(1), envPatch);
   }
 
   if (cmd === "step") {
-    runScript("bin/halo-autonomy-step.js", argv.slice(1), envPatch);
+    runScript("bin/forge-autonomy-step.js", argv.slice(1), envPatch);
   }
 
   if (cmd === "") {
     if (isAutonomyEnabled()) {
-      runScript("bin/halo-autonomy-step.js", argv, envPatch);
+      runScript("bin/forge-autonomy-step.js", argv, envPatch);
     }
-    runScript("bin/halo-run.js", argv, envPatch);
+    runScript("bin/forge-run.js", argv, envPatch);
   }
 
-  runScript(isAutonomyEnabled() ? "bin/halo-autonomy-step.js" : "bin/halo-run.js", argv, envPatch);
+  runScript(isAutonomyEnabled() ? "bin/forge-autonomy-step.js" : "bin/forge-run.js", argv, envPatch);
 }
 
 main();

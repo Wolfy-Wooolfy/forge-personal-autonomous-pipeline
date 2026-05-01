@@ -1,8 +1,8 @@
-# HALO Personal Autonomous Pipeline — Release Manifest
+# FORGE Personal Autonomous Pipeline — Release Manifest
 
-**Release:** 1.1.0  
-**Type:** DRY-RUN EXTENSION (NON-AUTONOMOUS)  
-**Status:** FINAL — EXECUTION-BOUND  
+**Release:** 1.1.0
+**Type:** DRY-RUN EXTENSION (NON-AUTONOMOUS)
+**Status:** FINAL — EXECUTION-BOUND
 
 ---
 
@@ -23,7 +23,7 @@ No autonomy. No decisions. No background loops.
 - `code/src/orchestrator/stage_transitions.js`
 - `code/src/orchestrator/status_writer.js`
 - `code/src/orchestrator/runner.js`
-- `bin/halo-run.js`
+- `bin/forge-run.js`
 
 ### Verification
 - `verify/smoke/stage_transitions_smoke.js`

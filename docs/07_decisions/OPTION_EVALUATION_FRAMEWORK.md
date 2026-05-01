@@ -1,10 +1,10 @@
 # Option Evaluation Framework
 
-**Document ID:** HALO-DOC-19  
-**Status:** BINDING – DETERMINISTIC OPTION EVALUATION  
-**Scope:** Alternative Evaluation During Design Exploration  
-**Applies To:** Stage A, Stage B, Stage C  
-**Enforcement:** Fail-Closed  
+**Document ID:** DOC-49
+**Status:** BINDING – DETERMINISTIC OPTION EVALUATION
+**Scope:** Alternative Evaluation During Design Exploration
+**Applies To:** Stage A, Stage B, Stage C
+**Enforcement:** Fail-Closed
 
 ---
 

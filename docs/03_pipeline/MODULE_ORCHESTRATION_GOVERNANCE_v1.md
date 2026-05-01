@@ -1,9 +1,9 @@
 # MODULE_ORCHESTRATION_GOVERNANCE_v1
-Document ID: DOC-38  
-Status: EXECUTION-BOUND  
-Authority Level: HARD (Fail-Closed)  
-Applies To: SELF_BUILDING_SYSTEM_BLUEPRINT_v1  
-System: Forge  
+Document ID: DOC-38
+Status: EXECUTION-BOUND
+Authority Level: HARD (Fail-Closed)
+Applies To: SELF_BUILDING_SYSTEM_BLUEPRINT_v1
+System: Forge
 
 ---
 
@@ -365,7 +365,6 @@ artifacts/decisions/
 artifacts/backfill/
 artifacts/execute/
 artifacts/closure/
-artifacts/exploration/
 
 In addition, the following namespaces are permitted as IMMUTABLE-LEGACY
 (GRANDFATHERED) for historical evidence only:
@@ -396,13 +395,13 @@ ONLY by their designated system component:
 |---|---|---|
 | artifacts/forge/ | forge_state_resolver only | DOC-31, SCHEMA-07 |
 | artifacts/orchestration/ | orchestrator only | docs/10_runtime/10_Tech_Assumptions_and_Local_Runtime_Setup.md |
-| artifacts/cognitive/ | cognitive_adapter only | HALO-DOC-16, DOC-05 §4.6 |
-| artifacts/llm/ | cognitive_adapter only | DOC-10-CE-SEL §5 |
+| artifacts/cognitive/ | cognitive_adapter only | DOC-46, DOC-05 §4.6 |
+| artifacts/llm/ | cognitive_adapter only | DOC-64 §5 |
 | artifacts/ai/ | AI Layer modules only | docs/11_ai_layer/04_AI_LAYER_ARTIFACTS.md |
 | artifacts/coverage/ | Vision Compliance module only | DOC-15, DOC-16 |
-| artifacts/verify/ | Boundary Audit layer only | HALO-DOC-08 §2.2.1, §2.2.2 |
-| artifacts/archive/ | forge-reset-new-project.js only | HALO-DOC-24 §6 |
-| artifacts/projects/ | intake module only | docs/03_pipeline/INTAKE_MODULE_CONTRACT_v1.md |
+| artifacts/verify/ | Boundary Audit layer only | DOC-08 §2.2.1, §2.2.2 |
+| artifacts/archive/ | forge-reset-new-project.js only | DOC-54 §6 |
+| artifacts/projects/ | AI OS project workspace components, plus Backfill/Execute ONLY for approved execution-package project deliverables | docs/12_ai_os/09_EXECUTION_HANDOFF_TO_FORGE.md, DOC-35, DOC-36 |
 | artifacts/admission/ | Idea Structuring Layer only | DOC-01 §5 |
 
 No other component may write to SYSTEM-GOVERNED namespaces.

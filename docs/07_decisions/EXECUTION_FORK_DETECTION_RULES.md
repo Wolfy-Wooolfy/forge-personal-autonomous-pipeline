@@ -1,9 +1,9 @@
 # Execution Fork Detection Rules
 
-**Document ID:** HALO-DOC-28  
-**Status:** BINDING – EXECUTION CONTROL  
-**Scope:** Detection of Decision Forks During Execution  
-**Applies To:** Stage A, Stage B, Stage C  
+**Document ID:** DOC-58
+**Status:** BINDING – EXECUTION CONTROL
+**Scope:** Detection of Decision Forks During Execution
+**Applies To:** Stage A, Stage B, Stage C
 **Enforcement:** Fail-Closed
 
 ---
@@ -290,8 +290,8 @@ Execution Fork Detection guarantees that:
 
 Forge therefore remains:
 
-deterministic in execution  
-analytical in exploration  
+deterministic in execution
+analytical in exploration
 governed in decision making.
 
 ---

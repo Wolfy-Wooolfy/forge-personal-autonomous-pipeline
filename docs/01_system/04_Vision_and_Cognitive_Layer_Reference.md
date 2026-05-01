@@ -1,8 +1,8 @@
 # Vision & Cognitive Layer Reference (v1)
 
-**Status:** REFERENCE — NON-EXECUTABLE (Vision Baseline)  
-**Applies To:** Forge (Forge)  
-**Owner:** Human Authority (Khaled)  
+**Status:** REFERENCE — NON-EXECUTABLE (Vision Baseline)
+**Applies To:** Forge (Forge)
+**Owner:** Human Authority (Khaled)
 **Enforcement:** None (This document is NOT an execution contract)
 
 ---
@@ -25,7 +25,7 @@ If any behavior is desired, it must be expressed explicitly in:
 - Artifact Schema & Repository Layout Standard (Doc-05)
 - Progress Tracking & Status Report Contract (Doc-06)
 - Decision Logging & Change Traceability Spec (Doc-07)
-- HALO Boundary Audit Rules (Doc-08)
+- Forge Boundary Audit Rules (DOC-08)
 - Build & Verify Playbook (Doc-09)
 - Runtime Setup & Assumptions (Doc-10)
 
@@ -39,13 +39,13 @@ The target system is a **strict, fail-closed, contract-driven autonomous pipelin
 
 The system must reliably transform:
 
-1) An idea / request  
+1) An idea / request
 → into a validated and approval-bound final spec
 
-2) A final spec  
+2) A final spec
 → into a complete deterministic documentation pack (with gap detection and refinement loops)
 
-3) A documentation pack  
+3) A documentation pack
 → into compliant code and verification evidence (with traceability and mismatch enforcement)
 
 ---
@@ -196,7 +196,7 @@ The AI Operating System Layer builds on top of this and adds:
 
 ### Role Expansion
 
-Cognitive Layer → Thinking Engine  
+Cognitive Layer → Thinking Engine
 AI Operating System Layer → Project Operating System
 
 ### Functional Mapping

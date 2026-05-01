@@ -1,9 +1,9 @@
 # Cognitive Prompt Construction Contract
 
-**Document ID:** DOC-01-PROMPT  
-**Status:** EXECUTION-BOUND  
-**Scope:** Defines deterministic prompt construction rules for all cognitive calls  
-**Applies To:** Cognitive Layer + Cognitive Adapter Layer  
+**Document ID:** DOC-63
+**Status:** EXECUTION-BOUND
+**Scope:** Defines deterministic prompt construction rules for all cognitive calls
+**Applies To:** Cognitive Layer + Cognitive Adapter Layer
 **Enforcement Level:** HARD (Fail-Closed)
 
 ---

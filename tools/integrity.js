@@ -8,7 +8,7 @@ const FILES = [
   "code/src/orchestrator/stage_transitions.js",
   "code/src/orchestrator/status_writer.js",
   "code/src/orchestrator/runner.js",
-  "bin/halo-run.js",
+  "bin/forge-run.js",
   "verify/smoke/stage_transitions_smoke.js",
   "verify/smoke/status_writer_smoke.js",
   "verify/smoke/runner_smoke.js",

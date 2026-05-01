@@ -1,9 +1,9 @@
 # Cognitive Engine Selection & Routing Policy
 
-**Document ID:** DOC-10-CE-SEL  
-**Status:** EXECUTION-BOUND  
-**Scope:** How Forge selects which Cognitive Engine configuration to use per run/stage/task  
-**Applies To:** Forge Runtime + Cognitive Layer  
+**Document ID:** DOC-64
+**Status:** EXECUTION-BOUND
+**Scope:** How Forge selects which Cognitive Engine configuration to use per run/stage/task
+**Applies To:** Forge Runtime + Cognitive Layer
 **Enforcement Level:** HARD (Fail-Closed)
 
 ---
@@ -23,7 +23,7 @@ in a deterministic, auditable, and fail-closed manner.
 
 Forge supports exactly TWO selection modes:
 
-A) MANUAL  
+A) MANUAL
 B) AUTO
 
 Mode MUST be declared explicitly at runtime.

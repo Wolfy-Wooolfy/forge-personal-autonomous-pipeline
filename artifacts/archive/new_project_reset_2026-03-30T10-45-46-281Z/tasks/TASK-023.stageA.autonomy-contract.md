@@ -1,7 +1,7 @@
 # TASK-023 — Stage A Autonomy Contract (Controlled)
 
 ## Objective
-Enable a strictly controlled autonomy loop that can execute HALO pipeline
+Enable a strictly controlled autonomy loop that can execute FORGE pipeline
 steps without continuous human intervention, while preserving fail-closed guarantees.
 
 ## Autonomy Nature

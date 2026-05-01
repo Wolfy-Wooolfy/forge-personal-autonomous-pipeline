@@ -1,8 +1,8 @@
 # 📄 Document 3 — Pipeline Stages Specification (A → D)
 
-**Project:** Forge  
-**Version:** 1.1  
-**Status:** CORE – NON-NEGOTIABLE  
+**Project:** Forge
+**Version:** 1.1
+**Status:** CORE – NON-NEGOTIABLE
 **Audience:** Autonomous Agents, Orchestrator, Human Owner (Khaled)
 
 ---
@@ -78,7 +78,7 @@ This applies to:
 
 Audit invocation is mandatory and non-optional.
 It MUST occur at the contract-defined audit points
-as specified by the HALO Boundary Audit Rules.
+as specified by the Forge Boundary Audit Rules (DOC-08).
 
 Deferred, implicit, bypassed,
 or inferred audits are strictly forbidden.
@@ -307,7 +307,7 @@ No implicit approval is allowed.
 
 ### 3.1 Objective
 
-> **Admission Gate Notice:**  
+> **Admission Gate Notice:**
 > Stage A may only initialize after a valid Admission-Ready Project Definition exists
 > per the Idea Structuring & Admission Layer Contract (DOC-01).
 >
@@ -324,7 +324,7 @@ No coding, no documents, no assumptions beyond what is explicitly inferable.
 ### 3.2 Inputs
 
 - User intent (free text or command)
-- Existing HALO documents (if referenced)
+- Existing Forge documents (if referenced)
 - Known constraints and rules
 - Project context (if any)
 
@@ -438,7 +438,7 @@ Stage B includes a deterministic refinement loop to eliminate specification gaps
 ### 4.2 Inputs
 
 - All Stage A artifacts (especially `idea_final_spec.md`)
-- HALO governance rules
+- Forge governance rules
 - Existing standards and templates (if allowed)
 
 ---

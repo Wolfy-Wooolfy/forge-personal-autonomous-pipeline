@@ -1,13 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 
-process.env.HALO_DRY_RUN = "true";
+process.env.FORGE_DRY_RUN = "true";
 
 const { run } = require(path.resolve(__dirname, "../../code/src/orchestrator/runner"));
 
 const STATUS_PATH = path.resolve(__dirname, "../../progress/status.json");
 
-function runSmoke() {
+async function runSmoke() {
   const original = fs.readFileSync(STATUS_PATH, { encoding: "utf8" });
 
   try {
@@ -25,7 +25,7 @@ function runSmoke() {
 
     fs.writeFileSync(STATUS_PATH, JSON.stringify(payload, null, 2));
 
-    run();
+    await run();
 
     const after = fs.readFileSync(STATUS_PATH, { encoding: "utf8" });
 
@@ -34,8 +34,11 @@ function runSmoke() {
     }
   } finally {
     fs.writeFileSync(STATUS_PATH, original, { encoding: "utf8" });
-    delete process.env.HALO_DRY_RUN;
+    delete process.env.FORGE_DRY_RUN;
   }
 }
 
-runSmoke();
+runSmoke().catch((err) => {
+  console.error(err && err.message ? err.message : String(err));
+  process.exit(1);
+});
