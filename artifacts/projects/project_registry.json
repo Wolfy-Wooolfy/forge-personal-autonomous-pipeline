@@ -1,6 +1,6 @@
 {
   "active_project_id": "memory_test_1777676557976",
-  "updated_at": "2026-05-02T16:10:28.617Z",
+  "updated_at": "2026-05-02T16:30:09.422Z",
   "projects": [
     {
       "project_id": "action_game",
@@ -8,11 +8,9 @@
       "project_status": "ACTIVE",
       "current_phase": "EXECUTION_READY",
       "active_runtime_state": "EXECUTION_PREPARATION",
-      "pending_decisions": [
-        "EXECUTION_PACKAGE_PENDING_FORGE"
-      ],
+      "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-02T16:10:28.618Z"
+      "last_updated_at": "2026-05-02T16:30:09.423Z"
     },
     {
       "project_id": "codex_test_project",
@@ -22,7 +20,7 @@
       "active_runtime_state": "DISCUSSION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-02T16:10:28.618Z"
+      "last_updated_at": "2026-05-02T16:30:09.423Z"
     },
     {
       "project_id": "default_project",
@@ -30,11 +28,9 @@
       "project_status": "ACTIVE",
       "current_phase": "EXECUTION_READY",
       "active_runtime_state": "EXECUTION_PREPARATION",
-      "pending_decisions": [
-        "EXECUTION_PACKAGE_PENDING_FORGE"
-      ],
+      "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-02T16:10:28.619Z"
+      "last_updated_at": "2026-05-02T16:30:09.424Z"
     },
     {
       "project_id": "memory_test_1777676534218",
@@ -44,19 +40,17 @@
       "active_runtime_state": "DISCUSSION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-02T16:10:28.619Z"
+      "last_updated_at": "2026-05-02T16:30:09.425Z"
     },
     {
       "project_id": "memory_test_1777676557976",
-      "project_name": "Memory Test",
+      "project_name": "سيستم crm",
       "project_status": "ACTIVE",
-      "current_phase": "EXECUTION_READY",
-      "active_runtime_state": "EXECUTION_PREPARATION",
-      "pending_decisions": [
-        "EXECUTION_PACKAGE_PENDING_FORGE"
-      ],
+      "current_phase": "DELIVERY_READY",
+      "active_runtime_state": "EXECUTION_COMPLETE",
+      "pending_decisions": [],
       "active_project_flag": true,
-      "last_updated_at": "2026-05-02T16:10:28.620Z"
+      "last_updated_at": "2026-05-02T16:30:09.421Z"
     },
     {
       "project_id": "mobile_game",
@@ -64,11 +58,9 @@
       "project_status": "ACTIVE",
       "current_phase": "EXECUTION_READY",
       "active_runtime_state": "EXECUTION_PREPARATION",
-      "pending_decisions": [
-        "EXECUTION_PACKAGE_PENDING_FORGE"
-      ],
+      "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-02T16:10:28.620Z"
+      "last_updated_at": "2026-05-02T16:30:09.425Z"
     },
     {
       "project_id": "test_project",
@@ -80,7 +72,7 @@
         "EXECUTION_PACKAGE_PENDING_FORGE"
       ],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-02T16:10:28.622Z"
+      "last_updated_at": "2026-05-02T16:30:09.427Z"
     },
     {
       "project_id": "test_project_2",
@@ -90,7 +82,7 @@
       "active_runtime_state": "DOCUMENTATION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-02T16:10:28.622Z"
+      "last_updated_at": "2026-05-02T16:30:09.427Z"
     },
     {
       "project_id": "test_project_3",
@@ -98,11 +90,9 @@
       "project_status": "ACTIVE",
       "current_phase": "EXECUTION_READY",
       "active_runtime_state": "EXECUTION_PREPARATION",
-      "pending_decisions": [
-        "EXECUTION_PACKAGE_PENDING_FORGE"
-      ],
+      "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-02T16:10:28.616Z"
+      "last_updated_at": "2026-05-02T16:30:09.428Z"
     }
   ]
 }

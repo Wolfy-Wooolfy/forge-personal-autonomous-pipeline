@@ -25,10 +25,10 @@
   "requirement_reasoning_summary": "",
   "provider_error": "",
   "documentation_state": "APPROVED",
-  "execution_package_state": "DRAFTING",
-  "execution_state": "PENDING_FORGE",
-  "verification_state": "NOT_READY",
-  "delivery_state": "NOT_READY",
+  "execution_package_state": "EXECUTED",
+  "execution_state": "EXECUTED",
+  "verification_state": "PASS",
+  "delivery_state": "READY",
   "conversation_history": {
     "proposal_count": 1,
     "draft_count": 1,
@@ -46,9 +46,7 @@
     "execution_package": "artifacts/projects/test_project_3/execute/execution_package.json"
   },
   "review_cycles_count": 0,
-  "pending_decisions": [
-    "EXECUTION_PACKAGE_PENDING_FORGE"
-  ],
+  "pending_decisions": [],
   "memory_state": "ACTIVE",
   "version_registry": [
     {
@@ -71,8 +69,27 @@
           "EXECUTION_PACKAGE_PENDING_FORGE"
         ]
       }
+    },
+    {
+      "version_id": "state_0002",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-02T16:28:09.214Z",
+      "state_hash": "20f152af0209e7df6f533534e9643470da8d63f75cf8aba19ccae0d4a43f44cd",
+      "summary": {
+        "project_id": "test_project_3",
+        "project_name": "test_project_3",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "READY",
+        "pending_decisions": []
+      }
     }
   ],
   "active_project_flag": false,
-  "last_updated_at": "2026-05-02T16:10:28.616Z"
+  "last_updated_at": "2026-05-02T16:28:09.214Z"
 }

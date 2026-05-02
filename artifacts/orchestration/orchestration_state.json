@@ -1,31 +1,22 @@
 {
-  "run_id": "RUN-1777676574726",
-  "run_mode": "COMPLETE",
-  "started_at": "2026-05-01T23:02:54.726Z",
-  "last_updated_at": "2026-05-01T23:02:54.743Z",
+  "run_id": "WORKSPACE-RUN-1777739408462",
+  "run_mode": "WORKSPACE_RUNTIME",
+  "started_at": "2026-05-02T16:30:08.462Z",
+  "last_updated_at": "2026-05-02T16:30:09.420Z",
   "status": "COMPLETE",
   "blocked": false,
   "blocking_reason": "",
-  "reason": "PIPELINE COMPLETE",
-  "pipeline_contract_violation": null,
-  "entry_type": "COMPLETE",
+  "reason": "Pending workspace execution package detected",
+  "entry_type": "WORKSPACE_RUNTIME",
   "next_task": null,
   "next_module": null,
   "current_module": null,
   "completed_modules": [
-    "INTAKE",
-    "AUDIT",
-    "TRACE",
-    "GAP",
-    "DESIGN_EXPLORATION",
-    "DECISION_GATE",
-    "BACKFILL",
-    "EXECUTE",
-    "VERIFY",
-    "CLOSURE",
-    "VISION_COMPLIANCE",
-    "AI_SYSTEM_ALIGNMENT"
+    "WORKSPACE_DECISION_GATE",
+    "WORKSPACE_BACKFILL",
+    "WORKSPACE_EXECUTE",
+    "WORKSPACE_VERIFY"
   ],
   "pending_modules": [],
-  "final_outcome": "COMPLETE"
+  "final_outcome": "WORKSPACE_RUNTIME_COMPLETE"
 }

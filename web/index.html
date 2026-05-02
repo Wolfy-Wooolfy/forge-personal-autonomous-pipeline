@@ -1020,7 +1020,7 @@
         normalized === "اعتمد الوثيقة" ||
         normalized === "وافق على الوثيقة" ||
         normalized === "موافق على الوثيقة" ||
-        normalized === "اعتمد" ||
+        normalized === "\u0627\u0639\u062a\u0645\u062f" ||
         normalized === "وافق" ||
         normalized === "موافق";
     }
@@ -1197,7 +1197,7 @@
       if (documentationState && documentationState !== "EMPTY") {
         choices.push({
           label: "اعرض الوثائق",
-          value: "اعرض الوثائق",
+          value: "\u0627\u0639\u0631\u0636 \u0627\u0644\u0648\u062b\u0627\u0626\u0642",
           description: "عرض مسودة الوثائق أو آخر وثيقة للمشروع."
         });
       }
@@ -1224,20 +1224,20 @@
       ) {
         choices.push({
           label: "نفذ",
-          value: "نفذ",
+          value: "\u0646\u0641\u0630",
           description: "تجهيز تسليم Forge بعد اعتماد الوثائق."
         });
       }
 
       choices.push({
         label: "اتوقف",
-        value: "اتوقف",
+        value: "\u0627\u062a\u0648\u0642\u0641",
         description: "إيقاف الطلب المفتوح داخل المشروع الحالي."
       });
 
       choices.push({
         label: "ابدأ من جديد",
-        value: "ابدأ من جديد",
+        value: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f",
         description: "إغلاق التدفق الحالي وانتظار فكرة مشروع جديدة."
       });
 
@@ -1342,6 +1342,94 @@
       setStatus(lang === "ar" ? "\u062c\u0627\u0647\u0632 \u0644\u0641\u0643\u0631\u0629 \u0645\u0634\u0631\u0648\u0639 \u062c\u062f\u064a\u062f\u0629." : "Ready for a new project idea.");
     }
 
+    async function runForgeWorkspaceRuntimeForCurrentProject(request) {
+      const projectId = getActiveProjectId();
+      const projectName = currentProjectState && currentProjectState.project_name
+        ? currentProjectState.project_name
+        : projectId;
+      const lang = detectUserLanguage(request);
+
+      pushMessage(
+        "assistant",
+        lang === "ar" ? "بدء تنفيذ Forge" : "Starting Forge Execution",
+        `<div class="file-preview">${formatMessageText(
+          lang === "ar"
+            ? "هنبدأ الآن مرحلة Forge الفعلية: Decision Gate ثم Backfill ثم Execute ثم Verify."
+            : "Forge will now run the governed runtime: Decision Gate, Backfill, Execute, then Verify."
+        )}</div>`
+      );
+
+      setStatus("Running Forge workspace runtime...");
+
+      const runResult = await requestAPI("/api/forge/workspace-runtime/run", {
+        project_id: projectId,
+        project_name: projectName
+      });
+
+      if (runResult.project) {
+        renderProjectState(runResult.project);
+      }
+
+      if (!runResult.ok) {
+        renderResponse(runResult);
+        const choices = buildCurrentProjectActionChoices();
+
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "توقف تنفيذ Forge" : "Forge Execution Blocked",
+          `
+            <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
+              lang === "ar"
+                ? [
+                    "توقف تنفيذ Forge أثناء المرحلة المحكومة.",
+                    `السبب: ${runResult.blocking_reason || "لم يتم تحديد سبب واضح."}`,
+                    "",
+                    "اختار الخطوة المناسبة من الأزرار التالية."
+                  ].join("\n")
+                : [
+                    "Forge execution stopped during the governed runtime.",
+                    `Reason: ${runResult.blocking_reason || "No clear reason was provided."}`,
+                    "",
+                    "Choose the appropriate next step from the buttons below."
+                  ].join("\n")
+            )}</div>
+            ${buildCurrentProjectActionChoiceHtml(choices)}
+          `
+        );
+
+        setStatus(runResult.blocking_reason || "Forge workspace runtime blocked.");
+        return false;
+      }
+
+      const artifacts = runResult.artifacts || {};
+      const lines = lang === "ar"
+        ? [
+            "تم تنفيذ مرحلة Forge بنجاح.",
+            "اكتملت المراحل: Decision Gate → Backfill → Execute → Verify.",
+            artifacts.execute_plan ? `خطة التنفيذ: ${artifacts.execute_plan}` : "",
+            artifacts.execute_report ? `تقرير التنفيذ: ${artifacts.execute_report}` : "",
+            artifacts.verification_report ? `تقرير التحقق: ${artifacts.verification_report}` : "",
+            artifacts.orchestration_report ? `تقرير التشغيل: ${artifacts.orchestration_report}` : ""
+          ]
+        : [
+            "Forge runtime completed successfully.",
+            "Completed stages: Decision Gate → Backfill → Execute → Verify.",
+            artifacts.execute_plan ? `Execution plan: ${artifacts.execute_plan}` : "",
+            artifacts.execute_report ? `Execution report: ${artifacts.execute_report}` : "",
+            artifacts.verification_report ? `Verification report: ${artifacts.verification_report}` : "",
+            artifacts.orchestration_report ? `Orchestration report: ${artifacts.orchestration_report}` : ""
+          ];
+
+      pushMessage(
+        "assistant",
+        lang === "ar" ? "اكتمل تنفيذ Forge" : "Forge Execution Complete",
+        `<div class="file-preview">${formatMessageText(lines.filter(Boolean).join("\n"))}</div>`
+      );
+
+      setStatus("Forge workspace runtime completed successfully.");
+      return true;
+    }
+
     async function createAiOsExecutionHandoffFromCurrentProject(request) {
       const projectId = getActiveProjectId();
       const projectName = currentProjectState && currentProjectState.project_name
@@ -1408,17 +1496,21 @@
         const lines = lang === "ar"
           ? [
               alreadyCreated
-                ? "\u062d\u0632\u0645\u0629 \u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062a\u0646\u0641\u064a\u0630 \u0645\u0648\u062c\u0648\u062f\u0629 \u0628\u0627\u0644\u0641\u0639\u0644 \u0648\u062c\u0627\u0647\u0632\u0629 \u0644\u0640 Forge."
-                : "\u062a\u0645 \u0627\u0639\u062a\u0645\u0627\u062f \u0627\u0644\u0648\u062b\u064a\u0642\u0629 \u0648\u0625\u0646\u0634\u0627\u0621 \u062d\u0632\u0645\u0629 \u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062a\u0646\u0641\u064a\u0630 \u0644\u0640 Forge.",
-              handoff.execution_package_path ? `\u062d\u0632\u0645\u0629 \u0627\u0644\u062a\u0646\u0641\u064a\u0630: ${handoff.execution_package_path}` : "",
-              handoff.handoff_report_path ? `\u062a\u0642\u0631\u064a\u0631 \u0627\u0644\u062a\u0633\u0644\u064a\u0645: ${handoff.handoff_report_path}` : ""
+                ? "حزمة تسليم التنفيذ موجودة بالفعل وجاهزة لـ Forge."
+                : "تم اعتماد الوثيقة وإنشاء حزمة تسليم التنفيذ لـ Forge.",
+              handoff.execution_package_path ? `حزمة التنفيذ: ${handoff.execution_package_path}` : "",
+              handoff.handoff_report_path ? `تقرير التسليم: ${handoff.handoff_report_path}` : "",
+              "",
+              "الخطوة التالية بدأت تلقائيًا: تشغيل Forge Runtime."
             ]
           : [
               alreadyCreated
                 ? "The Forge execution handoff package already exists and is ready."
                 : "Documentation was approved and the Forge execution handoff package was created.",
               handoff.execution_package_path ? `Execution package: ${handoff.execution_package_path}` : "",
-              handoff.handoff_report_path ? `Handoff report: ${handoff.handoff_report_path}` : ""
+              handoff.handoff_report_path ? `Handoff report: ${handoff.handoff_report_path}` : "",
+              "",
+              "Next step started automatically: running the Forge Runtime."
             ];
 
         pushMessage(
@@ -1427,7 +1519,8 @@
           `<div class="file-preview">${formatMessageText(lines.filter(Boolean).join("\n"))}</div>`
         );
 
-        setStatus("AI OS execution handoff package created.");
+        setStatus("AI OS execution handoff package created. Starting Forge runtime...");
+        await runForgeWorkspaceRuntimeForCurrentProject(request);
       } catch (err) {
         renderResponse({ error: err.message });
         pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>`);
@@ -2266,12 +2359,12 @@
         normalized === "ok" ||
         normalized === "okay" ||
         normalized === "approve" ||
-        normalized === "كمل" ||
+        normalized === "\u0643\u0645\u0644" ||
         normalized === "اكمل" ||
         normalized === "تابع" ||
         normalized === "موافق" ||
         normalized === "تمام" ||
-        normalized === "اعتمد";
+        normalized === "\u0627\u0639\u062a\u0645\u062f";
     }
 
     function isNegativeConfirmation(value) {

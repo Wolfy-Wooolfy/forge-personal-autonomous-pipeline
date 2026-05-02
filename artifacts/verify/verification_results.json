@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T11:05:43.996Z",
+  "generated_at": "2026-05-02T16:30:08.643Z",
   "blocked": false,
   "status": "PASS",
   "outcome": "PASS",
@@ -68,17 +68,17 @@
     {
       "name": "execute_plan_matches_backfill_plan",
       "passed": true,
-      "detail": "backfill_actions=0; execute_actions=0"
+      "detail": "backfill_actions=1; execute_actions=1"
     },
     {
       "name": "decision_gate_matches_backfill_plan",
       "passed": true,
-      "detail": "decision_actions=0; backfill_actions=0"
+      "detail": "decision_actions=1; backfill_actions=1"
     },
     {
       "name": "workspace_runtime_execution_id_consistent",
       "passed": true,
-      "detail": "decision=NONE; backfill=NONE; execute=NONE"
+      "detail": "decision=ai_os_execution_1777739408451; backfill=ai_os_execution_1777739408451; execute=ai_os_execution_1777739408451"
     },
     {
       "name": "workspace_runtime_matches_current_execution_package",
@@ -88,7 +88,7 @@
     {
       "name": "workspace_execution_package_identity_consistent",
       "passed": true,
-      "detail": "decision_package_id=NONE; backfill_package_id=NONE; execute_package_id=NONE; decision_package_path=NONE; backfill_package_path=NONE; execute_package_path=NONE"
+      "detail": "decision_package_id=ai_os_package_1777739408451; backfill_package_id=ai_os_package_1777739408451; execute_package_id=ai_os_package_1777739408451; decision_package_path=artifacts/projects/memory_test_1777676557976/execute/execution_package.json; backfill_package_path=artifacts/projects/memory_test_1777676557976/execute/execution_package.json; execute_package_path=artifacts/projects/memory_test_1777676557976/execute/execution_package.json"
     },
     {
       "name": "workspace_execution_package_matches_current_artifact",
@@ -98,7 +98,7 @@
     {
       "name": "workspace_runtime_write_applied",
       "passed": true,
-      "detail": "execute_actions=0; wrote_content_all=n/a"
+      "detail": "execute_actions=1; wrote_content_all=true"
     },
     {
       "name": "gap_count_zero",

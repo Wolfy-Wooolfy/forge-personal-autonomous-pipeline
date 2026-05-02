@@ -1,0 +1,13 @@
+{
+  "execution_id": "ai_os_execution_1777739408451",
+  "source": "AI_OPERATING_SYSTEM",
+  "project_id": "memory_test_1777676557976",
+  "created_at": "2026-05-02T16:30:08.451Z",
+  "summary": "User approved execution from workspace conversation.",
+  "files": [
+    {
+      "path": "artifacts/projects/memory_test_1777676557976/output/سيستم_crm_execution_package.json",
+      "content": "{\n  \"project_name\": \"سيستم crm\",\n  \"user_goal\": \"عايز سيستم HR\",\n  \"requirement_domain\": \"نظام إدارة الموارد البشرية\",\n  \"requirement_model\": {\n    \"system_type\": \"HR System\",\n    \"features\": [\n      \"إدارة الموظفين\",\n      \"الرواتب\",\n      \"الحضور\",\n      \"التوظيف\",\n      \"التدريب\",\n      \"تقييم الأداء\"\n    ],\n    \"user_roles\": [\n      \"موظفون\",\n      \"مدراء\",\n      \"قسم الموارد البشرية\"\n    ],\n    \"integration_requirements\": [\n      \"تكامل مع أنظمة أخرى حسب الحاجة\"\n    ],\n    \"data_security\": \"متطلبات أمنية وخصوصية محددة يجب الالتزام بها\",\n    \"deployment_environment\": \"نظام يعمل على السحابة أو الخوادم المحلية حسب التفضيل\",\n    \"assumptions\": [\n      \"تم اختيار الوظائف الأساسية الشائعة في أنظمة الموارد البشرية\",\n      \"تم تحديد الأدوار الأساسية للمستخدمين\",\n      \"تم تضمين متطلبات التكامل والأمن والخصوصية بشكل عام\",\n      \"تم السماح باختيار بيئة النشر بين السحابة والخوادم المحلية\"\n    ],\n    \"recommended_scenario\": \"نظام موارد بشرية متكامل يشمل الوظائف الأساسية مع دعم أدوار المستخدمين المتنوعة، متوافق مع متطلبات الأمان والتكامل، ويعمل على بيئة نشر مختارة من قبل المستخدم\"\n  },\n  \"accepted_options\": [\n    \"opt2\"\n  ],\n  \"documentation_state\": \"DOCS_APPROVED\"\n}\n"
+    }
+  ]
+}

@@ -7,6 +7,7 @@ const crypto = require("crypto");
 const { handleAuthRequest } = require("../auth/authSystem");
 const { createAiOsRuntime } = require("../ai_os/projectRuntime");
 const { createProjectMemoryStore } = require("../memoryEngine");
+const { runAutonomous } = require("../orchestrator/autonomous_runner");
 
 const ProviderRouter = require("../providers/providerRouter");
 
@@ -1740,20 +1741,30 @@ ${trimmedExisting}`
       overrides.documentation_state ||
       (hasDecisionPacket ? "APPROVED" : proposalCount > 0 ? "DRAFTING" : "EMPTY");
 
+    const executionPackageStatus = hasExecutionPackage
+      ? String(executionPackage.handoff_status || "").trim().toUpperCase()
+      : "";
+
     const executionPackageState =
       overrides.execution_package_state ||
       (hasExecutionPackage
-        ? String(executionPackage.handoff_status || "").trim() === "APPROVED_PENDING_FORGE"
-          ? "APPROVED"
-          : "DRAFTING"
+        ? executionPackageStatus === "APPROVED_PENDING_FORGE"
+          ? "APPROVED_PENDING_FORGE"
+          : executionPackageStatus === "EXECUTED"
+            ? "EXECUTED"
+            : "DRAFTING"
         : "NOT_READY");
 
     const executionState =
       overrides.execution_state ||
-      (hasExecutionPackage ? "PENDING_FORGE" : "NOT_STARTED");
+      (hasExecutionPackage
+        ? executionPackageStatus === "EXECUTED"
+          ? "EXECUTED"
+          : "PENDING_FORGE"
+        : "NOT_STARTED");
 
-    const verificationState = overrides.verification_state || "NOT_READY";
-    const deliveryState = overrides.delivery_state || "NOT_READY";
+    const verificationState = overrides.verification_state || (executionPackageStatus === "EXECUTED" ? "PASS" : "NOT_READY");
+    const deliveryState = overrides.delivery_state || (executionPackageStatus === "EXECUTED" ? "READY" : "NOT_READY");
 
     const state = {
       project_id: projectId,
@@ -1846,7 +1857,7 @@ ${trimmedExisting}`
         execution_package: hasExecutionPackage ? getProjectExecutionPackageRel(projectId) : ""
       },
       review_cycles_count: Number.isInteger(existing.review_cycles_count) ? existing.review_cycles_count : 0,
-      pending_decisions: hasExecutionPackage ? ["EXECUTION_PACKAGE_PENDING_FORGE"] : [],
+      pending_decisions: hasExecutionPackage && executionPackageState !== "EXECUTED" ? ["EXECUTION_PACKAGE_PENDING_FORGE"] : [],
       memory_state:
         projectMemory.memory_state && projectMemory.memory_state !== "EMPTY"
           ? projectMemory.memory_state
@@ -1928,6 +1939,68 @@ ${trimmedExisting}`
       ok: true,
       project_id: projectId
     };
+  }
+
+  async function runForgeWorkspaceRuntime(body = {}) {
+    const projectId = normalizeProjectId(body.project_id || readActiveProjectId());
+    writeActiveProject(projectId);
+
+    const previousCwd = process.cwd();
+
+    try {
+      if (previousCwd !== root) {
+        process.chdir(root);
+      }
+
+      const result = await runAutonomous({
+        run_id: `WORKSPACE-RUN-${Date.now()}`,
+        started_at: new Date().toISOString()
+      });
+
+      const orchestrationState = readJsonSafe(
+        path.resolve(root, "artifacts", "orchestration", "orchestration_state.json"),
+        {}
+      );
+
+      const finalOutcome = String(
+        orchestrationState.final_outcome || result.final_outcome || ""
+      ).toUpperCase();
+      const blocked = orchestrationState.blocked === true || result.blocked === true;
+      const ok = blocked !== true && finalOutcome === "WORKSPACE_RUNTIME_COMPLETE";
+      const blockingReason = String(
+        orchestrationState.blocking_reason || result.blocking_reason || result.reason || ""
+      ).trim();
+
+      const project = persistProjectState(projectId, {
+        current_phase: ok ? "DELIVERY_READY" : "EXECUTION_BLOCKED",
+        active_runtime_state: ok ? "EXECUTION_COMPLETE" : "EXECUTION_BLOCKED",
+        execution_package_state: ok ? "EXECUTED" : "APPROVED_PENDING_FORGE",
+        execution_state: ok ? "EXECUTED" : "BLOCKED",
+        verification_state: ok ? "PASS" : "BLOCKED",
+        delivery_state: ok ? "READY" : "NOT_READY"
+      });
+
+      return {
+        ok,
+        mode: ok ? "FORGE_WORKSPACE_RUNTIME_COMPLETE" : "FORGE_WORKSPACE_RUNTIME_BLOCKED",
+        project_id: projectId,
+        project,
+        result,
+        orchestration_state: orchestrationState,
+        blocking_reason: blockingReason,
+        artifacts: {
+          orchestration_state: "artifacts/orchestration/orchestration_state.json",
+          orchestration_report: "artifacts/orchestration/orchestration_run_report.md",
+          execute_plan: "artifacts/execute/execute_plan.json",
+          execute_report: "artifacts/execute/execute_report.md",
+          verification_report: "artifacts/verify/verification_report.md"
+        }
+      };
+    } finally {
+      if (process.cwd() !== previousCwd) {
+        process.chdir(previousCwd);
+      }
+    }
   }
 
   function listProjects() {
@@ -2958,6 +3031,12 @@ function buildExecutionPackage(packet) {
         sendJson(res, 200, aiOsRuntime.getProject({
           project_id: requestUrl.searchParams.get("project_id") || ""
         }));
+        return;
+      }
+
+      if (req.method === "POST" && pathname === "/api/forge/workspace-runtime/run") {
+        const body = await readBody(req);
+        sendJson(res, 200, await runForgeWorkspaceRuntime(body));
         return;
       }
 

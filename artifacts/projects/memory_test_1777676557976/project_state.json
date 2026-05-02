@@ -1,85 +1,70 @@
 {
   "project_id": "memory_test_1777676557976",
   "project_name": "سيستم crm",
-  "project_type": "CUSTOMER_RELATIONSHIP_MANAGEMENT_CRM",
+  "project_type": "HUMAN_RESOURCES",
   "project_mode": "EXTEND_EXISTING",
   "project_status": "ACTIVE",
   "primary_language": "AR",
-  "current_phase": "EXECUTION_READY",
-  "active_runtime_state": "EXECUTION_HANDOFF_CREATED",
-  "documentation_state": "DOCS_APPROVED",
-  "execution_package_state": "APPROVED_PENDING_FORGE",
-  "execution_state": "PENDING_FORGE",
-  "verification_state": "NOT_READY",
-  "delivery_state": "NOT_READY",
-  "memory_state": "ACTIVE",
+  "user_goal": "عايز سيستم HR",
+  "business_goal": "",
+  "technical_goal": "",
+  "current_phase": "DELIVERY_READY",
+  "active_runtime_state": "EXECUTION_COMPLETE",
+  "workspace_path": "D:\\S\\Halo\\Tech\\forge-personal-autonomous-pipeline",
+  "source_of_truth": "ZIP_SNAPSHOT",
+  "selected_strategy": "",
   "accepted_options": [
     "opt2"
   ],
   "rejected_options": [],
   "open_questions": [],
-  "pending_decisions": [],
-  "review_cycles_count": 1,
-  "artifact_registry": {
-    "project_root": "artifacts/projects/memory_test_1777676557976",
-    "project_state": "artifacts/projects/memory_test_1777676557976/project_state.json",
-    "decision_packet": "",
-    "execution_package": "artifacts/projects/memory_test_1777676557976/execute/execution_package.json"
-  },
-  "active_project_flag": true,
-  "last_updated_at": "2026-05-02T16:12:50.461Z",
-  "user_goal": "عايز سيستم crm",
-  "business_goal": "",
-  "technical_goal": "",
-  "workspace_path": "D:\\S\\Halo\\Tech\\forge-personal-autonomous-pipeline",
-  "source_of_truth": "ZIP_SNAPSHOT",
-  "selected_strategy": "",
   "clarification_answers": {
     "raw_answer": "اعمل مقترح واعرضه عليا",
     "answered_questions": [
-      "ما هي الوظائف الأساسية التي تريدها في نظام الـ CRM؟ (مثل إدارة العملاء، تتبع المبيعات، دعم العملاء، التسويق، إلخ)",
-      "من هم المستخدمون المستهدفون للنظام؟ (مثل فريق المبيعات، الدعم الفني، الإدارة)",
-      "هل هناك أنظمة أخرى يجب أن يتكامل معها نظام الـ CRM؟",
-      "هل لديك متطلبات خاصة بالأمان أو الخصوصية؟",
-      "هل تفضل أن يكون النظام مستضافًا على السحابة أم على خوادم محلية؟",
-      "هل هناك متطلبات خاصة بإدارة البيانات مثل نوع البيانات التي سيتم تخزينها أو قواعد الحفظ؟"
+      "ما هي الوظائف الأساسية التي تريدها في نظام الموارد البشرية؟ (مثل إدارة الموظفين، الرواتب، الحضور، التوظيف، التدريب، تقييم الأداء، إلخ)",
+      "ما هي أنواع المستخدمين أو الأدوار التي ستستخدم النظام؟ (مثل موظفون، مدراء، قسم الموارد البشرية، إلخ)",
+      "هل هناك متطلبات خاصة بالتكامل مع أنظمة أخرى؟",
+      "هل هناك متطلبات أمنية أو خصوصية محددة يجب الالتزام بها؟",
+      "هل تفضل نظاماً يعمل على السحابة أم على الخوادم المحلية؟"
     ]
   },
-  "requirement_domain": "Customer Relationship Management (CRM)",
+  "requirement_domain": "نظام إدارة الموارد البشرية",
   "requirement_completeness": true,
   "requirement_model": {
-    "system_type": "CRM",
+    "system_type": "HR System",
     "features": [
-      "إدارة العملاء",
-      "تتبع المبيعات",
-      "دعم العملاء",
-      "التسويق"
+      "إدارة الموظفين",
+      "الرواتب",
+      "الحضور",
+      "التوظيف",
+      "التدريب",
+      "تقييم الأداء"
     ],
-    "users": [
-      "فريق المبيعات",
-      "الدعم الفني",
-      "الإدارة"
+    "user_roles": [
+      "موظفون",
+      "مدراء",
+      "قسم الموارد البشرية"
     ],
     "integration_requirements": [
-      "تكامل مع أنظمة أخرى محتملة"
+      "تكامل مع أنظمة أخرى حسب الحاجة"
     ],
-    "data_management": {
-      "نوع البيانات": "بيانات العملاء، بيانات المبيعات، بيانات الدعم، بيانات التسويق",
-      "قواعد الحفظ": "حسب السياسات الداخلية"
-    },
-    "security_requirements": {
-      "متطلبات الأمان": "حماية البيانات والخصوصية"
-    },
-    "deployment_preferences": {
-      "الاستضافة": "سحابة أو خوادم محلية حسب التفضيل"
-    },
-    "assumptions": {},
-    "recommended_scenario": {
-      "مقترح": "نظام CRM متكامل يشمل الوظائف الأساسية المذكورة، موجه لفريق المبيعات والدعم والإدارة، مع إمكانية التكامل مع أنظمة أخرى، مع تأمين البيانات وحفظها حسب السياسات، ونشره على السحابة أو خوادم محلية حسب الحاجة."
-    }
+    "data_security": "متطلبات أمنية وخصوصية محددة يجب الالتزام بها",
+    "deployment_environment": "نظام يعمل على السحابة أو الخوادم المحلية حسب التفضيل",
+    "assumptions": [
+      "تم اختيار الوظائف الأساسية الشائعة في أنظمة الموارد البشرية",
+      "تم تحديد الأدوار الأساسية للمستخدمين",
+      "تم تضمين متطلبات التكامل والأمن والخصوصية بشكل عام",
+      "تم السماح باختيار بيئة النشر بين السحابة والخوادم المحلية"
+    ],
+    "recommended_scenario": "نظام موارد بشرية متكامل يشمل الوظائف الأساسية مع دعم أدوار المستخدمين المتنوعة، متوافق مع متطلبات الأمان والتكامل، ويعمل على بيئة نشر مختارة من قبل المستخدم"
   },
-  "requirement_reasoning_summary": "المستخدم طلب اقتراحًا كاملاً لنظام CRM دون تقديم تفاصيل إضافية، وتم تفويض النظام باقتراح سيناريو متكامل يشمل الوظائف الأساسية، المستخدمين، التكامل، الأمان، إدارة البيانات، ونشر النظام، مما يجعل المتطلبات كاملة بدون أسئلة مفتوحة.",
+  "requirement_reasoning_summary": "المستخدم طلب اقتراحاً كاملاً لنظام الموارد البشرية مع عرض المقترح عليه. بناءً على تفويضه، تم اختيار الوظائف الأساسية والأدوار ومتطلبات التكامل والأمن وبيئة النشر بشكل معقول وشامل، مما يجعل المتطلبات كاملة ولا توجد أسئلة مفتوحة.",
   "provider_error": "PROVIDER_NOT_AVAILABLE",
+  "documentation_state": "EMPTY",
+  "execution_package_state": "EXECUTED",
+  "execution_state": "EXECUTED",
+  "verification_state": "PASS",
+  "delivery_state": "READY",
   "conversation_history": {
     "proposal_count": 0,
     "draft_count": 0,
@@ -90,6 +75,15 @@
   "decision_history": {
     "has_decision_packet": false
   },
+  "artifact_registry": {
+    "project_root": "artifacts/projects/memory_test_1777676557976",
+    "project_state": "artifacts/projects/memory_test_1777676557976/project_state.json",
+    "decision_packet": "",
+    "execution_package": "artifacts/projects/memory_test_1777676557976/execute/execution_package.json"
+  },
+  "review_cycles_count": 1,
+  "pending_decisions": [],
+  "memory_state": "ACTIVE",
   "version_registry": [
     {
       "version_id": "state_0001",
@@ -130,7 +124,48 @@
           "EXECUTION_PACKAGE_PENDING_FORGE"
         ]
       }
+    },
+    {
+      "version_id": "state_0003",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-02T16:28:09.185Z",
+      "state_hash": "1419492d2b40ed14cdfa51b9e1e81fc836bfd2f93e871c9f1d63555363229def",
+      "summary": {
+        "project_id": "memory_test_1777676557976",
+        "project_name": "سيستم crm",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "EMPTY",
+        "execution_package_state": "APPROVED_PENDING_FORGE",
+        "execution_state": "PENDING_FORGE",
+        "verification_state": "NOT_READY",
+        "delivery_state": "NOT_READY",
+        "pending_decisions": [
+          "EXECUTION_PACKAGE_PENDING_FORGE"
+        ]
+      }
+    },
+    {
+      "version_id": "state_0004",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-02T16:30:09.422Z",
+      "state_hash": "e9dd4d28dcf6a25cc0fbdda6d6dce0d169870b6b3389be2f501aa4e38a347194",
+      "summary": {
+        "project_id": "memory_test_1777676557976",
+        "project_name": "سيستم crm",
+        "project_status": "ACTIVE",
+        "current_phase": "DELIVERY_READY",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "EMPTY",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "READY",
+        "pending_decisions": []
+      }
     }
   ],
-  "documentation_sha256": "6ebeab608d23efed9aa0aa87ede8d94538fd3b66634207c1da29d3aeeab7bf29"
+  "active_project_flag": true,
+  "last_updated_at": "2026-05-02T16:30:09.421Z"
 }
