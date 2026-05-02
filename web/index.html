@@ -983,6 +983,33 @@
         normalized === "\u0648\u0627\u0641\u0642 \u0648\u0646\u0641\u0630";
     }
 
+    function isBuildRunnableFromRequirementsRequest(value) {
+      const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+
+      return normalized === "build the runnable application from these requirements" ||
+        normalized === "build the application from these requirements" ||
+        normalized === "\u0627\u0628\u0646\u064a \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644 \u0645\u0646 \u0647\u0630\u0647 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" ||
+        normalized === "\u0627\u0628\u0646\u064a \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0645\u0646 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" ||
+        normalized === "\u062d\u0648\u0644 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a \u0644\u062a\u0637\u0628\u064a\u0642";
+    }
+
+    function isCreateLocalPrototypeFromRequirementsRequest(value) {
+      const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+
+      return normalized === "create a simple local html prototype from these requirements" ||
+        normalized === "\u0625\u0646\u0634\u0627\u0621 \u0642\u0627\u0644\u0628 html \u0645\u062d\u0644\u064a \u0628\u0633\u064a\u0637 \u0645\u0646 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" ||
+        normalized === "\u0627\u0646\u0634\u0627\u0621 \u0642\u0627\u0644\u0628 html \u0645\u062d\u0644\u064a \u0628\u0633\u064a\u0637 \u0645\u0646 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a";
+    }
+
+    function isShowRequirementFilesRequest(value) {
+      const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+
+      return normalized === "show requirement files" ||
+        normalized === "show output files" ||
+        normalized === "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" ||
+        normalized === "\u0627\u0639\u0631\u0636 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a";
+    }
+
     function isContinueCurrentProjectRequest(value) {
       const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
 
@@ -1436,6 +1463,66 @@
     function buildDeliveryFollowupChoices(deliverySummary, lang) {
       const deliveryType = deliverySummary && deliverySummary.delivery_type ? deliverySummary.delivery_type : "";
 
+      if (deliveryType === "REQUIREMENTS_PACKAGE") {
+        if (lang === "ar") {
+          return [
+            {
+              label: "\u0627\u0628\u0646\u064a \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644 \u0645\u0646 \u0647\u0630\u0647 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a",
+              value: "\u0627\u0628\u0646\u064a \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644 \u0645\u0646 \u0647\u0630\u0647 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a",
+              description: "\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0646\u0627\u0621 \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644 \u0645\u0646 \u062d\u0632\u0645\u0629 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a \u0627\u0644\u062d\u0627\u0644\u064a\u0629."
+            },
+            {
+              label: "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a",
+              value: "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a",
+              description: "\u0639\u0631\u0636 \u0623\u0633\u0645\u0627\u0621 \u0648\u0645\u0633\u0627\u0631\u0627\u062a \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a."
+            },
+            {
+              label: "\u0639\u062f\u0651\u0644 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a",
+              value: "\u0639\u062f\u0644 \u0627\u0644\u0648\u062b\u064a\u0642\u0629",
+              description: "\u062a\u0639\u062f\u064a\u0644 \u062d\u0632\u0645\u0629 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a \u0642\u0628\u0644 \u0628\u0646\u0627\u0621 \u062a\u0637\u0628\u064a\u0642."
+            },
+            {
+              label: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f",
+              value: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f",
+              description: "\u0625\u063a\u0644\u0627\u0642 \u0627\u0644\u062a\u062f\u0641\u0642 \u0627\u0644\u062d\u0627\u0644\u064a."
+            },
+            {
+              label: "\u0627\u062a\u0648\u0642\u0641",
+              value: "\u0627\u062a\u0648\u0642\u0641",
+              description: "\u0625\u064a\u0642\u0627\u0641 \u0627\u0644\u0637\u0644\u0628 \u0627\u0644\u062d\u0627\u0644\u064a."
+            }
+          ];
+        }
+
+        return [
+          {
+            label: "Build runnable app",
+            value: "Build the runnable application from these requirements",
+            description: "Attempt to build a runnable application from the current requirements package."
+          },
+          {
+            label: "Show requirement files",
+            value: "Show requirement files",
+            description: "Show the current requirements output files."
+          },
+          {
+            label: "Revise requirements",
+            value: "revise documentation",
+            description: "Revise the current requirements before building."
+          },
+          {
+            label: "Start over",
+            value: "start over",
+            description: "Close this flow and start a new request."
+          },
+          {
+            label: "Stop",
+            value: "stop",
+            description: "Stop the current project flow."
+          }
+        ];
+      }
+
       if (deliveryType !== "DOCUMENT_DELIVERY") {
         return [];
       }
@@ -1495,6 +1582,56 @@
           label: "Stop",
           value: "stop",
           description: "Stop the current project flow."
+        }
+      ];
+    }
+
+    function buildProviderUnavailableRequirementChoices(lang) {
+      if (lang === "ar") {
+        return [
+          {
+            label: "\u0625\u0646\u0634\u0627\u0621 \u0642\u0627\u0644\u0628 HTML \u0645\u062d\u0644\u064a \u0628\u0633\u064a\u0637 \u0645\u0646 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a",
+            value: "\u0625\u0646\u0634\u0627\u0621 \u0642\u0627\u0644\u0628 HTML \u0645\u062d\u0644\u064a \u0628\u0633\u064a\u0637 \u0645\u0646 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a",
+            description: "\u0625\u0646\u0634\u0627\u0621 prototype \u062b\u0627\u0628\u062a \u0645\u062d\u0643\u0648\u0645 \u0639\u0628\u0631 Forge\u060c \u0648\u0644\u064a\u0633 \u0646\u0638\u0627\u0645 production."
+          },
+          {
+            label: "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a",
+            value: "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a",
+            description: "\u0639\u0631\u0636 \u0645\u0633\u0627\u0631\u0627\u062a \u0627\u0644\u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062d\u0627\u0644\u064a\u0629."
+          },
+          {
+            label: "\u0627\u062a\u0648\u0642\u0641",
+            value: "\u0627\u062a\u0648\u0642\u0641",
+            description: "\u0625\u064a\u0642\u0627\u0641 \u0627\u0644\u0637\u0644\u0628 \u0627\u0644\u062d\u0627\u0644\u064a."
+          },
+          {
+            label: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f",
+            value: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f",
+            description: "\u0625\u063a\u0644\u0627\u0642 \u0627\u0644\u062a\u062f\u0641\u0642 \u0627\u0644\u062d\u0627\u0644\u064a."
+          }
+        ];
+      }
+
+      return [
+        {
+          label: "Create local HTML prototype",
+          value: "Create a simple local HTML prototype from these requirements",
+          description: "Create a governed static prototype, not a production system."
+        },
+        {
+          label: "Show requirement files",
+          value: "Show requirement files",
+          description: "Show the current requirements files."
+        },
+        {
+          label: "Stop",
+          value: "stop",
+          description: "Stop the current project flow."
+        },
+        {
+          label: "Start over",
+          value: "start over",
+          description: "Close this flow and start a new request."
         }
       ];
     }
@@ -1602,6 +1739,118 @@
             : "Forge workspace runtime completed; no runnable application was detected."
       );
       return true;
+    }
+
+    function showRequirementFilesForCurrentProject(request) {
+      const lang = detectUserLanguage(request);
+      const summary = currentProjectState && currentProjectState.delivery_summary
+        ? currentProjectState.delivery_summary
+        : {};
+      const outputPath = summary.output_path || "";
+      const files = Array.isArray(summary.output_files) ? summary.output_files : [];
+      const requirementFiles = files.filter((file) => /requirements|execution_plan|security_guidelines/i.test(String(file || "")));
+      const lines = requirementFiles.length > 0
+        ? requirementFiles.map((file) => `${outputPath}/${file}`)
+        : [lang === "ar" ? "\u0644\u0645 \u0623\u062c\u062f \u0645\u0644\u0641\u0627\u062a \u0645\u062a\u0637\u0644\u0628\u0627\u062a \u0641\u064a \u0645\u0644\u062e\u0635 \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062d\u0627\u0644\u064a." : "No requirement files were found in the current delivery summary."];
+
+      pushMessage(
+        "user",
+        lang === "ar" ? "\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" : "Show Requirement Files",
+        `<div class="file-preview">${formatMessageText(request)}</div>`
+      );
+      requestInput.value = "";
+
+      pushMessage(
+        "assistant",
+        lang === "ar" ? "\u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" : "Requirement Files",
+        `<div class="file-preview">${formatMessageText(lines.join("\n"))}</div>`
+      );
+      setStatus(lang === "ar" ? "\u062a\u0645 \u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a." : "Requirement files shown.");
+    }
+
+    async function buildRunnableFromRequirementsForCurrentProject(request, useLocalFallback = false) {
+      const projectId = getActiveProjectId();
+      const lang = detectUserLanguage(request);
+      const summary = currentProjectState && currentProjectState.delivery_summary
+        ? currentProjectState.delivery_summary
+        : {};
+
+      pushMessage(
+        "user",
+        useLocalFallback
+          ? (lang === "ar" ? "\u0625\u0646\u0634\u0627\u0621 Prototype \u0645\u062d\u0644\u064a" : "Create Local Prototype")
+          : (lang === "ar" ? "\u0628\u0646\u0627\u0621 \u062a\u0637\u0628\u064a\u0642 \u0645\u0646 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" : "Build Runnable From Requirements"),
+        `<div class="file-preview">${formatMessageText(request)}</div>`
+      );
+      requestInput.value = "";
+      chatSendBtn.disabled = true;
+
+      setStatus(useLocalFallback ? "Creating local prototype through Forge governance..." : "Attempting runnable build from requirements...");
+
+      try {
+        const result = await requestAPI("/api/ai-os/build-runnable-from-requirements", {
+          project_id: projectId,
+          source_execution_id: summary.execution_id || "",
+          package_id: summary.package_id || "",
+          action: useLocalFallback ? "LOCAL_STATIC_PROTOTYPE" : "BUILD_RUNNABLE_FROM_REQUIREMENTS"
+        });
+
+        if (result.project) {
+          renderProjectState(result.project);
+        }
+
+        const deliverySummary = result.delivery_summary || (result.project && result.project.delivery_summary) || summary || {};
+        const lines = buildDeliverySummaryLines(deliverySummary, lang);
+
+        if (result.mode === "BUILD_RUNNABLE_PROVIDER_UNAVAILABLE") {
+          const message = lang === "ar"
+            ? [
+                "\u0628\u0646\u0627\u0621 \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644 \u064a\u062d\u062a\u0627\u062c \u0645\u0648\u0644\u0651\u062f \u0643\u0648\u062f/Provider \u063a\u064a\u0631 \u0645\u062a\u0627\u062d \u062d\u0627\u0644\u064a\u064b\u0627.",
+                "",
+                ...lines
+              ].join("\n")
+            : [
+                "Building a runnable application requires a code generator/provider that is not available right now.",
+                "",
+                ...lines
+              ].join("\n");
+
+          pushMessage(
+            "assistant",
+            lang === "ar" ? "\u0645\u0633\u0627\u0631 \u0627\u0644\u0628\u0646\u0627\u0621" : "Build Path",
+            `
+              <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(message)}</div>
+              ${buildCurrentProjectActionChoiceHtml(buildProviderUnavailableRequirementChoices(lang))}
+            `
+          );
+          setStatus("Provider unavailable for runnable build; fallback choices shown.");
+          return true;
+        }
+
+        const followupChoices = buildDeliveryFollowupChoices(deliverySummary, lang);
+        const followupHtml = followupChoices.length > 0
+          ? `<div style="margin-top:12px;">${buildCurrentProjectActionChoiceHtml(followupChoices)}</div>`
+          : "";
+
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "\u0645\u0644\u062e\u0635 \u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u0628\u0646\u0627\u0621" : "Build Delivery Summary",
+          `<div class="file-preview">${formatMessageText(lines.join("\n"))}</div>${followupHtml}`
+        );
+        setStatus(
+          deliverySummary.runnable_application_created
+            ? "Runnable application output detected."
+            : "Runnable build completed without runnable output."
+        );
+        return true;
+      } catch (err) {
+        renderResponse({ error: err.message });
+        pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>`);
+        setStatus(`Error: ${err.message}`);
+        return true;
+      } finally {
+        chatSendBtn.disabled = false;
+      }
     }
 
     async function createAiOsExecutionHandoffFromCurrentProject(request) {
@@ -1821,6 +2070,24 @@
     }
 
     async function handleCurrentProjectStateCommand(request) {
+      if (isBuildRunnableFromRequirementsRequest(request)) {
+        clearPendingDiscoveryForProjectCommand();
+        await buildRunnableFromRequirementsForCurrentProject(request, false);
+        return true;
+      }
+
+      if (isCreateLocalPrototypeFromRequirementsRequest(request)) {
+        clearPendingDiscoveryForProjectCommand();
+        await buildRunnableFromRequirementsForCurrentProject(request, true);
+        return true;
+      }
+
+      if (isShowRequirementFilesRequest(request)) {
+        clearPendingDiscoveryForProjectCommand();
+        showRequirementFilesForCurrentProject(request);
+        return true;
+      }
+
       if (isStopCurrentProjectRequest(request)) {
         stopCurrentProjectFlow(request);
         return true;

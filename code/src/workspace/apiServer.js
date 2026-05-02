@@ -8,6 +8,7 @@ const { handleAuthRequest } = require("../auth/authSystem");
 const { createAiOsRuntime } = require("../ai_os/projectRuntime");
 const { createProjectMemoryStore } = require("../memoryEngine");
 const { runAutonomous } = require("../orchestrator/autonomous_runner");
+const OpenAiStructuredJsonProvider = require("../providers/openAiStructuredJsonProvider");
 
 const ProviderRouter = require("../providers/providerRouter");
 
@@ -1834,6 +1835,18 @@ ${trimmedExisting}`
         typeof overrides.provider_error === "string"
           ? overrides.provider_error
           : existing.provider_error || "",
+      original_user_goal:
+        typeof overrides.original_user_goal === "string"
+          ? overrides.original_user_goal
+          : existing.original_user_goal || "",
+      latest_requested_action:
+        typeof overrides.latest_requested_action === "string"
+          ? overrides.latest_requested_action
+          : existing.latest_requested_action || "",
+      active_followup_action:
+        typeof overrides.active_followup_action === "string"
+          ? overrides.active_followup_action
+          : existing.active_followup_action || "",
         
       documentation_state: documentationState,
       execution_package_state: executionPackageState,
@@ -2380,6 +2393,445 @@ ${trimmedExisting}`
                 "Review output files",
                 "Clarify the requested delivery"
               ]
+    };
+  }
+
+  function normalizeProviderRunnableFiles(projectIdInput, providerFiles) {
+    const projectId = normalizeProjectId(projectIdInput);
+    const outputBase = `artifacts/projects/${projectId}/output/app`;
+    const list = Array.isArray(providerFiles) ? providerFiles : [];
+
+    return list
+      .map((file, index) => {
+        const rawPath = String(file && file.path ? file.path : "").trim().replace(/\\/g, "/");
+        const content = typeof (file && file.content) === "string" ? file.content : "";
+        const basename = path.posix.basename(rawPath || `file_${index + 1}.txt`);
+        const scopedPath = rawPath.startsWith(`${outputBase}/`)
+          ? rawPath
+          : rawPath.startsWith("app/")
+            ? `artifacts/projects/${projectId}/output/${rawPath}`
+            : `${outputBase}/${basename}`;
+
+        return {
+          path: scopedPath,
+          content,
+          allow_overwrite: true
+        };
+      })
+      .filter((file) => file.path && typeof file.content === "string");
+  }
+
+  function filesContainRunnableIndicator(files) {
+    const normalized = (Array.isArray(files) ? files : [])
+      .map((file) => String(file && file.path ? file.path : "").trim().toLowerCase().replace(/\\/g, "/"));
+
+    return normalized.some((filePath) =>
+      filePath.endsWith("/index.html") ||
+      filePath.endsWith("/package.json") ||
+      filePath.endsWith("/server.js") ||
+      filePath.endsWith("/app.js") ||
+      filePath.includes("/src/")
+    );
+  }
+
+  function readCurrentRequirementOutputFiles(projectIdInput, deliverySummary) {
+    const projectId = normalizeProjectId(projectIdInput);
+    const outputAbs = getProjectOutputAbs(projectId);
+    const outputRel = getProjectOutputRel(projectId);
+    const files = Array.isArray(deliverySummary && deliverySummary.output_files)
+      ? deliverySummary.output_files
+      : [];
+
+    return files
+      .filter((file) => /(_requirements\.json|requirements\.json|_execution_plan\.md|execution_plan\.md|_security_guidelines\.md|security_guidelines\.md)$/i.test(String(file || "")))
+      .map((file) => {
+        const rel = String(file || "").replace(/\\/g, "/");
+        const abs = path.resolve(outputAbs, rel);
+        return {
+          path: `${outputRel}/${rel}`,
+          name: rel,
+          content: readTextSafe(abs)
+        };
+      })
+      .filter((file) => file.content !== "");
+  }
+
+  function escapeHtmlText(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function buildLocalPrototypeFiles(projectIdInput, requirementFiles) {
+    const projectId = normalizeProjectId(projectIdInput);
+    const projectState = readJsonSafe(getProjectStateAbs(projectId), {});
+    const executionPackage = readJsonSafe(getProjectExecutionPackageAbs(projectId), {});
+    const projectName =
+      String(projectState.original_user_goal || "").trim() ||
+      String(executionPackage && executionPackage.business_and_scope_decisions && executionPackage.business_and_scope_decisions.user_goal || "").trim() ||
+      String(projectState.project_name || projectId).trim();
+    const requirementText = (Array.isArray(requirementFiles) ? requirementFiles : [])
+      .map((file) => `Source: ${file.path}\n${file.content}`)
+      .join("\n\n---\n\n")
+      .slice(0, 30000);
+    const safeTitle = escapeHtmlText(projectName || "Runnable Prototype");
+    const safeRequirementText = escapeHtmlText(requirementText || "No requirement text was available.");
+    const indexHtml = `<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${safeTitle} - Prototype</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f8fafc; color: #111827; }
+    header { background: #0f172a; color: #f8fafc; padding: 28px; }
+    main { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    section { background: #ffffff; border: 1px solid #d1d5db; border-radius: 8px; padding: 18px; margin-bottom: 16px; }
+    h1, h2 { margin-top: 0; }
+    .notice { border-color: #f59e0b; background: #fffbeb; }
+    pre { white-space: pre-wrap; direction: ltr; text-align: left; background: #f1f5f9; padding: 14px; border-radius: 8px; overflow: auto; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+    .card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px; background: #f9fafb; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>${safeTitle}</h1>
+    <p>Static runnable prototype generated from the approved requirements package.</p>
+  </header>
+  <main>
+    <section class="notice">
+      <h2>تنبيه</h2>
+      <p>هذا Prototype ثابت مبني من المتطلبات، وليس نظام production كامل.</p>
+    </section>
+    <section>
+      <h2>لوحة تشغيل أولية</h2>
+      <div class="grid">
+        <div class="card"><strong>Tickets</strong><br />عرض وتتبع طلبات العملاء.</div>
+        <div class="card"><strong>Knowledge Base</strong><br />مساحة محتوى مساعدة أولية.</div>
+        <div class="card"><strong>Reports</strong><br />مؤشرات أداء تجريبية.</div>
+      </div>
+    </section>
+    <section>
+      <h2>Requirements Source</h2>
+      <pre>${safeRequirementText}</pre>
+    </section>
+  </main>
+</body>
+</html>
+`;
+    const readme = [
+      "# Static Runnable Prototype",
+      "",
+      "This is a static prototype generated from the approved requirements package.",
+      "It is not a production-ready system.",
+      "",
+      "## Run",
+      "",
+      "Open `index.html` in a browser.",
+      ""
+    ].join("\n");
+
+    return [
+      {
+        path: `artifacts/projects/${projectId}/output/app/index.html`,
+        content: indexHtml,
+        allow_overwrite: true
+      },
+      {
+        path: `artifacts/projects/${projectId}/output/app/README.md`,
+        content: readme,
+        allow_overwrite: true
+      }
+    ];
+  }
+
+  function writeRunnableExecutionPackage(projectIdInput, files, action) {
+    const projectId = normalizeProjectId(projectIdInput);
+    const normalizedFiles = normalizeProviderRunnableFiles(projectId, files);
+    const createdAt = new Date().toISOString();
+    const executionId = `ai_os_runnable_execution_${Date.now()}`;
+    const packageId = `ai_os_runnable_package_${Date.now()}`;
+    const handoffId = `ai_os_runnable_handoff_${Date.now()}`;
+    const packageAbs = getProjectExecutionPackageAbs(projectId);
+    const responseAbs = path.resolve(root, "artifacts", "llm", "responses", `${executionId}.response.json`);
+    const previousPackage = readJsonSafe(packageAbs, {});
+    const previousScope = previousPackage && previousPackage.business_and_scope_decisions
+      ? previousPackage.business_and_scope_decisions
+      : {};
+
+    ensureDir(path.dirname(packageAbs));
+    ensureDir(path.dirname(responseAbs));
+
+    const responsePayload = {
+      execution_id: executionId,
+      source: "AI_OPERATING_SYSTEM",
+      project_id: projectId,
+      package_id: packageId,
+      created_at: createdAt,
+      summary: "Build runnable application from requirements package.",
+      files: normalizedFiles.map((file) => ({
+        path: file.path,
+        content: file.content,
+        execution_id: executionId,
+        package_id: packageId
+      }))
+    };
+
+    const executionPackage = {
+      package_id: packageId,
+      handoff_id: handoffId,
+      created_at: createdAt,
+      source: "EXTERNAL_AI_WORKSPACE",
+      source_layer: "AI_OPERATING_SYSTEM",
+      handoff_status: "APPROVED_PENDING_FORGE",
+      project_id: projectId,
+      execution_id: executionId,
+      artifact_path: getProjectExecutionPackageRel(projectId),
+      approved_scope: {
+        summary: "Build runnable application from the approved requirements package.",
+        operation_mode: normalizedFiles.length > 1 ? "MULTI_FILE" : "SINGLE_FILE",
+        file_count: normalizedFiles.length
+      },
+      target_project_path: `artifacts/projects/${projectId}`,
+      output_path: `artifacts/projects/${projectId}/output`,
+      requested_outputs: normalizedFiles.map((file) => `Create runnable artifact ${file.path}`),
+      file_or_artifact_targets: normalizedFiles.map((file) => file.path),
+      dependency_assumptions: [],
+      risk_notes: [
+        action === "LOCAL_STATIC_PROTOTYPE"
+          ? "Local fallback creates a static prototype only, not a production-ready system."
+          : "Provider output must create runnable application indicators."
+      ],
+      execution_approval_reference: {
+        approved_by_role: "CTO",
+        approved_at: createdAt,
+        documentation_state: "DOCS_APPROVED",
+        source_execution_id: String(previousPackage.execution_id || ""),
+        source_package_id: String(previousPackage.package_id || ""),
+        project_state_path: getProjectStateRel(projectId)
+      },
+      finalized_documentation_set: [
+        getProjectStateRel(projectId)
+      ],
+      execution_plan: {
+        mode: normalizedFiles.length > 1 ? "MULTI_FILE" : "SINGLE_FILE",
+        file_count: normalizedFiles.length,
+        proposed_files: normalizedFiles.map((file) => ({
+          path: file.path,
+          allow_overwrite: file.allow_overwrite === true,
+          sha256: sha256(file.content),
+          required_roles: ["cto"],
+          diff: ""
+        }))
+      },
+      business_and_scope_decisions: {
+        ...previousScope,
+        user_goal: String(previousScope.user_goal || ""),
+        followup_action: action
+      }
+    };
+
+    fs.writeFileSync(responseAbs, JSON.stringify(responsePayload, null, 2), "utf8");
+    fs.writeFileSync(packageAbs, JSON.stringify(executionPackage, null, 2), "utf8");
+
+    return {
+      execution_id: executionId,
+      package_id: packageId,
+      package_path: getProjectExecutionPackageRel(projectId),
+      response_path: path.relative(root, responseAbs).replace(/\\/g, "/")
+    };
+  }
+
+  async function generateRunnableFilesViaProvider(projectIdInput, requirementFiles) {
+    const projectId = normalizeProjectId(projectIdInput);
+    const provider = new OpenAiStructuredJsonProvider();
+    const result = await provider.executeTask({
+      system: "Generate a small runnable application from approved requirements. Return files only. Do not claim production readiness.",
+      request: "Create a runnable application artifact under the provided output app folder.",
+      context: {
+        output_base: `artifacts/projects/${projectId}/output/app`,
+        requirement_files: requirementFiles,
+        constraints: [
+          "Write all files under output_base",
+          "Include index.html or package.json or server.js or src/",
+          "If static, include app/index.html and app/README.md",
+          "README must include run/open instructions",
+          "State clearly when the result is a prototype"
+        ]
+      },
+      expected_output: {
+        files: [
+          {
+            path: "string under output_base",
+            content: "string",
+            allow_overwrite: true
+          }
+        ]
+      }
+    });
+
+    if (result.status !== "SUCCESS" || !result.output || !Array.isArray(result.output.files)) {
+      return {
+        ok: false,
+        reason: "PROVIDER_NOT_AVAILABLE",
+        provider_metadata: result.metadata || {}
+      };
+    }
+
+    const files = normalizeProviderRunnableFiles(projectId, result.output.files);
+
+    if (!filesContainRunnableIndicator(files)) {
+      return {
+        ok: false,
+        reason: "PROVIDER_DID_NOT_CREATE_RUNNABLE_FILES",
+        provider_metadata: result.metadata || {}
+      };
+    }
+
+    return {
+      ok: true,
+      files,
+      provider_metadata: result.metadata || {}
+    };
+  }
+
+  async function buildRunnableFromRequirements(body = {}) {
+    const projectId = normalizeProjectId(body.project_id || readActiveProjectId());
+    const sourceExecutionId = String(body.source_execution_id || "").trim();
+    const sourcePackageId = String(body.package_id || body.source_package_id || "").trim();
+    const action = String(body.action || "").trim().toUpperCase();
+    const deliverySummary = buildDeliverySummary(projectId);
+    const executionPackage = readJsonSafe(getProjectExecutionPackageAbs(projectId), {});
+
+    if (deliverySummary.delivery_type !== "REQUIREMENTS_PACKAGE") {
+      return {
+        ok: false,
+        mode: "BUILD_RUNNABLE_FROM_REQUIREMENTS_BLOCKED",
+        reason: "CURRENT_DELIVERY_IS_NOT_REQUIREMENTS_PACKAGE",
+        delivery_summary: deliverySummary
+      };
+    }
+
+    if (sourceExecutionId && sourceExecutionId !== deliverySummary.execution_id) {
+      return {
+        ok: false,
+        mode: "BUILD_RUNNABLE_FROM_REQUIREMENTS_BLOCKED",
+        reason: "SOURCE_EXECUTION_ID_MISMATCH",
+        delivery_summary: deliverySummary
+      };
+    }
+
+    if (sourcePackageId && sourcePackageId !== deliverySummary.package_id) {
+      return {
+        ok: false,
+        mode: "BUILD_RUNNABLE_FROM_REQUIREMENTS_BLOCKED",
+        reason: "SOURCE_PACKAGE_ID_MISMATCH",
+        delivery_summary: deliverySummary
+      };
+    }
+
+    const requirementFiles = readCurrentRequirementOutputFiles(projectId, deliverySummary);
+
+    if (requirementFiles.length === 0) {
+      return {
+        ok: false,
+        mode: "BUILD_RUNNABLE_FROM_REQUIREMENTS_BLOCKED",
+        reason: "NO_CURRENT_REQUIREMENT_FILES_FOUND",
+        delivery_summary: deliverySummary
+      };
+    }
+
+    const originalGoal = String(
+      executionPackage &&
+      executionPackage.business_and_scope_decisions &&
+      executionPackage.business_and_scope_decisions.user_goal
+        ? executionPackage.business_and_scope_decisions.user_goal
+        : ""
+    ).trim();
+    const existingState = readJsonSafe(getProjectStateAbs(projectId), {});
+    const repairedName = originalGoal || existingState.original_user_goal || existingState.project_name || projectId;
+
+    persistProjectState(projectId, {
+      project_name: repairedName,
+      user_goal: originalGoal || existingState.user_goal || repairedName,
+      original_user_goal: originalGoal || existingState.original_user_goal || existingState.user_goal || repairedName,
+      latest_requested_action: action === "LOCAL_STATIC_PROTOTYPE" ? "CREATE_LOCAL_STATIC_PROTOTYPE" : "BUILD_RUNNABLE_FROM_REQUIREMENTS",
+      active_followup_action: action === "LOCAL_STATIC_PROTOTYPE" ? "CREATE_LOCAL_STATIC_PROTOTYPE" : "BUILD_RUNNABLE_FROM_REQUIREMENTS",
+      provider_error: ""
+    });
+
+    if (action === "LOCAL_STATIC_PROTOTYPE") {
+      const packageInfo = writeRunnableExecutionPackage(
+        projectId,
+        buildLocalPrototypeFiles(projectId, requirementFiles),
+        "LOCAL_STATIC_PROTOTYPE"
+      );
+      const runResult = await runForgeWorkspaceRuntime({ project_id: projectId });
+      return {
+        ok: runResult.ok === true,
+        mode: "LOCAL_STATIC_PROTOTYPE_FORGE_RUNTIME_COMPLETE",
+        project: runResult.project,
+        delivery_summary: runResult.delivery_summary,
+        package: packageInfo,
+        run_result: runResult,
+        message: "A local static prototype package was executed through Forge governance."
+      };
+    }
+
+    const providerFiles = await generateRunnableFilesViaProvider(projectId, requirementFiles);
+
+    if (!providerFiles.ok) {
+      const project = persistProjectState(projectId, {
+        project_name: repairedName,
+        user_goal: originalGoal || existingState.user_goal || repairedName,
+        original_user_goal: originalGoal || existingState.original_user_goal || existingState.user_goal || repairedName,
+        delivery_state: "REQUIREMENTS_PACKAGE",
+        delivery_summary: {
+          ...deliverySummary,
+          build_attempt_reason: providerFiles.reason,
+          next_suggested_actions: [
+            "Create a simple local HTML prototype from these requirements",
+            "Show requirement files",
+            "Stop",
+            "Start over"
+          ]
+        },
+        latest_requested_action: "BUILD_RUNNABLE_FROM_REQUIREMENTS",
+        active_followup_action: "BUILD_RUNNABLE_FROM_REQUIREMENTS",
+        provider_error: providerFiles.reason
+      });
+
+      return {
+        ok: true,
+        mode: "BUILD_RUNNABLE_PROVIDER_UNAVAILABLE",
+        project,
+        delivery_summary: project.delivery_summary,
+        reason: providerFiles.reason,
+        provider_metadata: providerFiles.provider_metadata || {},
+        message: "Building a runnable application requires a code generator/provider that is not available right now.",
+        followup_choices: [
+          "Create a simple local HTML prototype from these requirements",
+          "Show requirement files",
+          "Stop",
+          "Start over"
+        ]
+      };
+    }
+
+    const packageInfo = writeRunnableExecutionPackage(projectId, providerFiles.files, "PROVIDER_RUNNABLE_APPLICATION");
+    const runResult = await runForgeWorkspaceRuntime({ project_id: projectId });
+
+    return {
+      ok: runResult.ok === true,
+      mode: "BUILD_RUNNABLE_FROM_REQUIREMENTS_FORGE_RUNTIME_COMPLETE",
+      project: runResult.project,
+      delivery_summary: runResult.delivery_summary,
+      package: packageInfo,
+      run_result: runResult
     };
   }
 
@@ -3312,6 +3764,12 @@ function buildExecutionPackage(packet) {
       if (req.method === "POST" && pathname === "/api/ai-os/handoff") {
         const body = await readBody(req);
         sendJson(res, 200, await aiOsRuntime.createExecutionHandoff(body));
+        return;
+      }
+
+      if (req.method === "POST" && pathname === "/api/ai-os/build-runnable-from-requirements") {
+        const body = await readBody(req);
+        sendJson(res, 200, await buildRunnableFromRequirements(body));
         return;
       }
 
