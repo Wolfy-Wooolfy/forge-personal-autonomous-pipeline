@@ -32,13 +32,14 @@ const pipeline = [
     task_name: "TASK-066: MODULE FLOW — Design Exploration",
     ordinal_position: 5,
     required_previous_module: "GAP",
+    conditional_activation: "EXECUTION_FORK",
     terminal_flag: false
   },
   {
     module_id: "DECISION_GATE",
     task_name: "TASK-052: MODULE FLOW — Decision Gate",
     ordinal_position: 6,
-    required_previous_module: "DESIGN_EXPLORATION",
+    required_previous_module: "GAP",
     terminal_flag: false
   },
   {

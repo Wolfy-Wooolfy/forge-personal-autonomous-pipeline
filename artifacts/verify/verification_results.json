@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-25T19:45:38.610Z",
+  "generated_at": "2026-05-02T11:05:43.996Z",
   "blocked": false,
   "status": "PASS",
   "outcome": "PASS",
   "final_outcome": "PASS",
   "summary": {
-    "total_checks": 24,
+    "total_checks": 25,
     "failed_checks": 0
   },
   "closure_gate": {
@@ -63,22 +63,22 @@
     {
       "name": "decision_artifact_present",
       "passed": true,
-      "detail": "artifacts/decisions/decision_packet.json, artifacts/decisions/module_flow_decision_gate.json"
+      "detail": "artifacts/decisions/decision_auto_pass.md, artifacts/decisions/module_flow_decision_gate.json"
     },
     {
       "name": "execute_plan_matches_backfill_plan",
       "passed": true,
-      "detail": "backfill_actions=3; execute_actions=3"
+      "detail": "backfill_actions=0; execute_actions=0"
     },
     {
       "name": "decision_gate_matches_backfill_plan",
       "passed": true,
-      "detail": "decision_actions=3; backfill_actions=3"
+      "detail": "decision_actions=0; backfill_actions=0"
     },
     {
       "name": "workspace_runtime_execution_id_consistent",
       "passed": true,
-      "detail": "decision=ai_os_execution_1777146184959; backfill=ai_os_execution_1777146184959; execute=ai_os_execution_1777146184959"
+      "detail": "decision=NONE; backfill=NONE; execute=NONE"
     },
     {
       "name": "workspace_runtime_matches_current_execution_package",
@@ -88,7 +88,7 @@
     {
       "name": "workspace_execution_package_identity_consistent",
       "passed": true,
-      "detail": "decision_package_id=ai_os_package_1777146184959; backfill_package_id=ai_os_package_1777146184959; execute_package_id=ai_os_package_1777146184959; decision_package_path=artifacts/projects/action_game/execute/execution_package.json; backfill_package_path=artifacts/projects/action_game/execute/execution_package.json; execute_package_path=artifacts/projects/action_game/execute/execution_package.json"
+      "detail": "decision_package_id=NONE; backfill_package_id=NONE; execute_package_id=NONE; decision_package_path=NONE; backfill_package_path=NONE; execute_package_path=NONE"
     },
     {
       "name": "workspace_execution_package_matches_current_artifact",
@@ -98,7 +98,7 @@
     {
       "name": "workspace_runtime_write_applied",
       "passed": true,
-      "detail": "execute_actions=3; wrote_content_all=true"
+      "detail": "execute_actions=0; wrote_content_all=n/a"
     },
     {
       "name": "gap_count_zero",
@@ -133,12 +133,18 @@
     {
       "name": "trace_mappings_present",
       "passed": true,
-      "detail": "mappings=579"
+      "detail": "mappings=1253"
     },
     {
       "name": "intake_snapshot_locked",
       "passed": true,
       "detail": "locked_snapshot_flag=true"
+    },
+    {
+      "name": "docs_must_acceptance_passed",
+      "passed": true,
+      "detail": "result=PASS; failed_checks=0"
     }
-  ]
+  ],
+  "live_verification_report": "verify/unit/verification_report.json"
 }

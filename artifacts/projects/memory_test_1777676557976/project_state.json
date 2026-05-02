@@ -1,0 +1,96 @@
+{
+  "project_id": "memory_test_1777676557976",
+  "project_name": "Memory Test",
+  "project_type": "UNCLASSIFIED",
+  "project_mode": "EXTEND_EXISTING",
+  "project_status": "ACTIVE",
+  "primary_language": "AR",
+  "current_phase": "DISCOVERY",
+  "active_runtime_state": "INVALID_ARCHITECTURE",
+  "documentation_state": "EMPTY",
+  "execution_package_state": "NOT_READY",
+  "execution_state": "NOT_STARTED",
+  "verification_state": "NOT_READY",
+  "delivery_state": "NOT_READY",
+  "memory_state": "ACTIVE",
+  "accepted_options": [
+    "opt2"
+  ],
+  "rejected_options": [],
+  "open_questions": [],
+  "pending_decisions": [],
+  "review_cycles_count": 1,
+  "artifact_registry": {
+    "project_root": "artifacts/projects/memory_test_1777676557976",
+    "project_state": "artifacts/projects/memory_test_1777676557976/project_state.json",
+    "decision_packet": "",
+    "execution_package": "artifacts/projects/memory_test_1777676557976/execute/execution_package.json"
+  },
+  "active_project_flag": true,
+  "last_updated_at": "2026-05-02T11:51:52.462Z",
+  "user_goal": "موافق",
+  "business_goal": "",
+  "technical_goal": "",
+  "workspace_path": "D:\\S\\Halo\\Tech\\forge-personal-autonomous-pipeline",
+  "source_of_truth": "ZIP_SNAPSHOT",
+  "selected_strategy": "",
+  "clarification_answers": {},
+  "requirement_domain": "",
+  "requirement_completeness": false,
+  "requirement_model": {},
+  "requirement_reasoning_summary": "المستخدم طلب مقترح كامل لنظام حسابات دون تقديم تفاصيل إضافية، وتم تفويض النظام باقتراح الافتراضات والمعايير الأساسية بناءً على الأسئلة التي تم ذكرها مسبقاً. لذلك، تم بناء نموذج متكامل يشمل الميزات، الأدوار، التكامل، التقارير، ومتطلبات الأمان مع افتراضات واضحة، مما يجعل المتطلبات كاملة ولا توجد أسئلة مفتوحة.",
+  "provider_error": "PROVIDER_NOT_AVAILABLE",
+  "conversation_history": {
+    "proposal_count": 0,
+    "draft_count": 0,
+    "turn_count": 1,
+    "latest_turn_id": "turn_1777676558067",
+    "artifact_path": "artifacts/projects/memory_test_1777676557976/workspace/conversation_history.json"
+  },
+  "decision_history": {
+    "has_decision_packet": false
+  },
+  "version_registry": [
+    {
+      "version_id": "state_0001",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-01T23:02:38.049Z",
+      "state_hash": "a94043097fa3f27d0cc9ad4190fc4255eccc06de6c5fa6d59e336eb7bf185c2e",
+      "summary": {
+        "project_id": "memory_test_1777676557976",
+        "project_name": "Memory Test",
+        "project_status": "ACTIVE",
+        "current_phase": "DISCOVERY",
+        "active_runtime_state": "DISCUSSION",
+        "documentation_state": "EMPTY",
+        "execution_package_state": "NOT_READY",
+        "execution_state": "NOT_STARTED",
+        "verification_state": "NOT_READY",
+        "delivery_state": "NOT_READY",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0002",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-02T09:55:48.392Z",
+      "state_hash": "e8eb068295cd17343af7f64f8ff2c0b0de11198f68f09e73fdd0b8d21ed72c00",
+      "summary": {
+        "project_id": "memory_test_1777676557976",
+        "project_name": "Memory Test",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "EMPTY",
+        "execution_package_state": "APPROVED",
+        "execution_state": "PENDING_FORGE",
+        "verification_state": "NOT_READY",
+        "delivery_state": "NOT_READY",
+        "pending_decisions": [
+          "EXECUTION_PACKAGE_PENDING_FORGE"
+        ]
+      }
+    }
+  ],
+  "documentation_sha256": "3982efc6b29f60f23e3b62b16aeef7196f4b17e3fb1295032e235f16e14474b5"
+}

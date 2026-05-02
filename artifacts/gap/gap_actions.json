@@ -1,25 +1,27 @@
 {
-  "execution_id": "GAP-2026-04-05T18:48:11.185Z",
+  "execution_id": "GAP-2026-05-02T09:18:50.130Z",
   "total_gaps": 0,
   "critical_count": 0,
   "requires_decision": false,
   "cognitive_analysis": {
-    "response_id": "RESP-e1f66b4d-798b-4b29-8323-cc209219e04a",
-    "request_id": "GAP-1775414890298",
+    "response_id": "RESP-dd4bac0f-c4c1-4f32-85ed-3d74468ceb21",
+    "request_id": "GAP-1777713530128",
     "provider_metadata": {
       "provider": "OPENAI",
       "model": "gpt-4.1-mini",
-      "latency_ms": 884
+      "latency_ms": 0
     },
     "output": {
-      "type": "text",
-      "content": "The answer is 252."
+      "type": "structured",
+      "content": {
+        "error": "OPENAI_DRIVER_BLOCKED: missing OPENAI_API_KEY"
+      }
     },
     "usage": {
-      "prompt_tokens": 13,
-      "completion_tokens": 7
+      "prompt_tokens": 0,
+      "completion_tokens": 0
     },
-    "status": "SUCCESS"
+    "status": "FAILED"
   },
   "gaps": []
 }

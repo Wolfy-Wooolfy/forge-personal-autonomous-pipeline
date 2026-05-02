@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "project_id": "default_project",
+  "memory_state": "ACTIVE",
+  "idea_definition": {},
+  "decisions_taken": [],
+  "business_model": {},
+  "documentation_versions": [],
+  "execution_status": {
+    "current_phase": "EXECUTION_READY",
+    "active_runtime_state": "EXECUTION_PREPARATION",
+    "execution_state": "PENDING_FORGE",
+    "verification_state": "NOT_READY",
+    "delivery_state": "NOT_READY"
+  },
+  "change_history": [],
+  "version_registry": [
+    {
+      "version_id": "state_0001",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-02T09:14:29.420Z",
+      "state_hash": "5628a21bb781efd0d08caef440579acdd67ff2742b38571d0b397f1b3228459d",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "default_project",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "APPROVED",
+        "execution_package_state": "DRAFTING",
+        "execution_state": "PENDING_FORGE",
+        "verification_state": "NOT_READY",
+        "delivery_state": "NOT_READY",
+        "pending_decisions": [
+          "EXECUTION_PACKAGE_PENDING_FORGE"
+        ]
+      }
+    }
+  ],
+  "updated_at": "2026-05-02T11:50:36.964Z"
+}

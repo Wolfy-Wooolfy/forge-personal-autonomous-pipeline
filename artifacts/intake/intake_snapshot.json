@@ -1,9 +1,10 @@
 {
-  "execution_id": "INTAKE-2026-04-05T18:40:09.805Z",
-  "snapshot_timestamp": "2026-04-05T18:40:09.805Z",
-  "total_files": 468,
-  "total_directories": 96,
+  "module": "INTAKE",
+  "generated_at": "2026-05-02T09:18:49.823Z",
+  "total_files": 1141,
+  "total_directories": 194,
   "classification": "FULL_PIPELINE_STATE",
-  "repository_root_hash": "613b0d7acb331c26697bebaa04901cf47fef464f6a0c028bc8d2f4322c5ca0c7",
+  "repository_state": "FULL_PIPELINE_STATE",
+  "repository_root_hash": "5f865ca0aeff99d6099a8522e4bb747eb42bf407ac3d63c9766d68d9501f4304",
   "locked_snapshot_flag": true
 }

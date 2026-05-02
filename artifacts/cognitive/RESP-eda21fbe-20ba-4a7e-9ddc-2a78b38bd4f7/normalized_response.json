@@ -1,0 +1,20 @@
+{
+  "response_id": "RESP-eda21fbe-20ba-4a7e-9ddc-2a78b38bd4f7",
+  "request_id": "GAP-1777712660184",
+  "provider_metadata": {
+    "provider": "OPENAI",
+    "model": "gpt-4.1-mini",
+    "latency_ms": 0
+  },
+  "output": {
+    "type": "structured",
+    "content": {
+      "error": "OPENAI_DRIVER_BLOCKED: missing OPENAI_API_KEY"
+    }
+  },
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0
+  },
+  "status": "FAILED"
+}

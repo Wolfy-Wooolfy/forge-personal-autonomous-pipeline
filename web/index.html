@@ -719,6 +719,742 @@
       };
     }
 
+    function isCheckpointProgressRequest(value) {
+      const normalized = String(value || "").trim().toLowerCase();
+
+      return isPositiveConfirmation(normalized) ||
+        normalized.includes("proposal") ||
+        normalized.includes("option") ||
+        normalized.includes("show") ||
+        normalized.includes("display") ||
+        normalized.includes("اعرض") ||
+        normalized.includes("مقترح") ||
+        normalized.includes("سيناريو");
+    }
+
+    function askAiOsOptionsCheckpoint(requestText) {
+      const lang = detectUserLanguage(requestText);
+
+      pendingConversationCheckpoint = {
+        stage: "AI_OS_OPTIONS_READY",
+        request: requestText,
+        projectId: getActiveProjectId(),
+        nextAction: "AI_OS_OPTIONS"
+      };
+
+      pushMessage(
+        "assistant",
+        lang === "ar" ? "تأكيد قبل عرض المقترحات" : "Confirmation Before Proposals",
+        `<div class="file-preview">${formatMessageText(
+          lang === "ar"
+            ? [
+                `أنا فهمت طلبك كالتالي: ${requestText}`,
+                "التحليل اكتمل.",
+                "",
+                "الخطوة التالية لو وافقت: سأعرض عليك مقترحات منظمة للمشروع تختار منها، بدون أي تنفيذ مباشر.",
+                "اكتب: كمل",
+                "أو اكتب: اعرض المقترح"
+              ].join("\n")
+            : [
+                `I understood your request as: ${requestText}`,
+                "Discovery is complete.",
+                "",
+                "If you approve, I will show structured project proposals for your decision, with no direct execution.",
+                "Reply with: continue",
+                "Or reply with: show the proposal"
+              ].join("\n")
+        )}</div>`
+      );
+
+      setStatus(lang === "ar" ? "بانتظار تأكيدك قبل عرض المقترحات." : "Waiting for confirmation before showing proposals.");
+    }
+
+    function buildAiOsOptionsMessage(options, recommendation, requestText) {
+      const lang = detectUserLanguage(requestText);
+      const list = Array.isArray(options) ? options : [];
+      const lines = [];
+
+      lines.push(lang === "ar" ? "دي المقترحات الأولية للمشروع:" : "Here are the initial project proposals:");
+
+      list.forEach((option, index) => {
+        lines.push("");
+        lines.push(`${lang === "ar" ? "المقترح" : "Proposal"} ${index + 1}: ${option.title || option.option_id || "Suggested option"}`);
+        lines.push(option.description || "");
+        lines.push(`${lang === "ar" ? "الأثر" : "Impact"}: ${option.impact_level || "MEDIUM"} | ${lang === "ar" ? "المخاطر" : "Risk"}: ${option.risk_level || "MEDIUM"}`);
+      });
+
+      if (recommendation) {
+        lines.push("");
+        lines.push(`${lang === "ar" ? "ترشيحي" : "Recommendation"}: ${recommendation}`);
+      }
+
+      lines.push("");
+      lines.push(lang === "ar" ? "اختار رقم المقترح عشان نثبته وندخل مرحلة الوثائق." : "Choose a proposal number to approve it and move into documentation.");
+
+      return lines.join("\n");
+    }
+
+    function buildAiOsOptionChoiceHtml(options) {
+      const list = Array.isArray(options) ? options : [];
+
+      if (list.length === 0) {
+        return `<div class="file-preview">${formatMessageText("No project proposals available.")}</div>`;
+      }
+
+      return `
+        <div class="strategy-choice-list">
+          ${list.map((item, index) => `
+            <button
+              type="button"
+              class="strategy-choice-btn"
+              data-ai-os-option-choice="${index + 1}"
+            >
+              <strong>${escapeHtml(item.title || item.option_id || `Option ${index + 1}`)}</strong>
+              <div>${escapeHtml(item.description || "")}</div>
+            </button>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    async function presentAiOsOptions(projectId, request) {
+      const optionsResult = await requestAPI("/api/ai-os/options", {
+        project_id: projectId,
+        project_name: currentProjectState && currentProjectState.project_name
+          ? currentProjectState.project_name
+          : projectId
+      });
+
+      if (optionsResult.project) {
+        renderProjectState(optionsResult.project);
+      }
+
+      if (!optionsResult.ok) {
+        renderResponse(optionsResult);
+        pushMessage("assistant", "AI OS Response", `<div class="file-preview">${formatMessageText(JSON.stringify(optionsResult, null, 2))}</div>`);
+        setStatus(optionsResult.reason || "AI OS options generation blocked.");
+        return;
+      }
+
+      pendingAiOsOptions = {
+        projectId,
+        request,
+        options: Array.isArray(optionsResult.options) ? optionsResult.options : []
+      };
+
+      pushMessage(
+        "assistant",
+        detectUserLanguage(request) === "ar" ? "المقترحات الأولية" : "Initial Proposals",
+        `
+          <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
+            buildAiOsOptionsMessage(optionsResult.options, optionsResult.recommendation || "", request)
+          )}</div>
+          ${buildAiOsOptionChoiceHtml(optionsResult.options)}
+        `
+      );
+
+      setStatus("AI OS proposals are ready for selection.");
+    }
+
+    async function prepareAiOsDocumentationDraft(projectId, request) {
+      const draftResult = await requestAPI("/api/ai-os/documentation/draft", {
+        project_id: projectId,
+        project_name: currentProjectState && currentProjectState.project_name
+          ? currentProjectState.project_name
+          : projectId
+      });
+
+      if (draftResult.project) {
+        renderProjectState(draftResult.project);
+      }
+
+      if (!draftResult.ok) {
+        renderResponse(draftResult);
+        pushMessage("assistant", "AI OS Response", `<div class="file-preview">${formatMessageText(JSON.stringify(draftResult, null, 2))}</div>`);
+        setStatus(draftResult.reason || "AI OS documentation draft blocked.");
+        return false;
+      }
+
+      const lang = detectUserLanguage(request);
+      const content = draftResult.documentation_content || "";
+      const path = draftResult.documentation_path || "";
+
+      pushMessage(
+        "assistant",
+        lang === "ar" ? "مسودة الوثيقة جاهزة" : "Documentation Draft Ready",
+        `<div class="file-preview">${formatMessageText(
+          [
+            lang === "ar" ? "تم تجهيز مسودة الوثيقة للمراجعة." : "The documentation draft is ready for review.",
+            path ? `${lang === "ar" ? "المسار" : "Path"}: ${path}` : "",
+            "",
+            content
+          ].filter(Boolean).join("\n")
+        )}</div>`
+      );
+
+      setStatus("AI OS documentation draft is ready for review.");
+      return true;
+    }
+
+    function isExecutionRequest(value) {
+      const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+
+      if (!normalized) {
+        return false;
+      }
+
+      return normalized === "execute" ||
+        normalized === "run" ||
+        normalized === "start" ||
+        normalized === "start execution" ||
+        normalized === "\u0646\u0641\u0630" ||
+        normalized === "\u0646\u0641\u0651\u0630" ||
+        normalized === "\u0627\u0628\u062f\u0623 \u0627\u0644\u062a\u0646\u0641\u064a\u0630" ||
+        normalized === "\u0627\u0628\u062f\u0621 \u0627\u0644\u062a\u0646\u0641\u064a\u0630" ||
+        normalized === "\u0646\u0641\u0630 \u0627\u0644\u0645\u0634\u0631\u0648\u0639" ||
+        normalized === "\u0646\u0641\u0630 \u0627\u0644\u0645\u0637\u0644\u0648\u0628" ||
+        normalized === "\u0627\u0639\u062a\u0645\u062f \u0648\u0646\u0641\u0630" ||
+        normalized === "\u0627\u0639\u062a\u0645\u062f \u0648\u0646\u0641\u0651\u0630" ||
+        normalized === "\u0627\u0639\u062a\u0645\u062f \u0648\u0643\u0645\u0644" ||
+        normalized === "\u0648\u0627\u0641\u0642 \u0648\u0646\u0641\u0630";
+    }
+
+    function isContinueCurrentProjectRequest(value) {
+      const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+
+      return normalized === "continue" ||
+        normalized === "next" ||
+        normalized === "go on" ||
+        normalized === "\u0643\u0645\u0644" ||
+        normalized === "\u0637\u0628 \u0643\u0645\u0644" ||
+        normalized === "\u062a\u0627\u0628\u0639" ||
+        normalized === "\u0627\u0643\u0645\u0644" ||
+        normalized === "\u0643\u0645\u0644 \u0627\u0644\u0645\u0634\u0631\u0648\u0639";
+    }
+
+    function isShowDocumentationRequest(value) {
+      const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+
+      return normalized === "show docs" ||
+        normalized === "show documentation" ||
+        normalized === "\u0627\u0639\u0631\u0636 \u0627\u0644\u0648\u062b\u0627\u0626\u0642" ||
+        normalized === "\u0648\u0631\u064a\u0646\u064a \u0627\u0644\u0648\u062b\u0627\u0626\u0642" ||
+        normalized === "\u0627\u0639\u0631\u0636 \u0627\u0644\u0648\u062b\u064a\u0642\u0629" ||
+        normalized === "\u0648\u0631\u064a\u0646\u064a \u0627\u0644\u0648\u062b\u064a\u0642\u0629";
+    }
+
+    function isApproveDocumentationRequest(value) {
+      const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+
+      return normalized === "approve docs" ||
+        normalized === "approve documentation" ||
+        normalized === "approve" ||
+        normalized === "\u0627\u0639\u062a\u0645\u062f \u0627\u0644\u0648\u062b\u0627\u0626\u0642" ||
+        normalized === "\u0648\u0627\u0641\u0642 \u0639\u0644\u0649 \u0627\u0644\u0648\u062b\u0627\u0626\u0642" ||
+        normalized === "\u0627\u0639\u062a\u0645\u062f \u0627\u0644\u0648\u062b\u064a\u0642\u0629" ||
+        normalized === "\u0648\u0627\u0641\u0642 \u0639\u0644\u0649 \u0627\u0644\u0648\u062b\u064a\u0642\u0629" ||
+        normalized === "\u0627\u0639\u062a\u0645\u062f" ||
+        normalized === "\u0648\u0627\u0641\u0642";
+    }
+
+    function isStopCurrentProjectRequest(value) {
+      const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+
+      return normalized === "stop" ||
+        normalized === "cancel" ||
+        normalized === "\u0648\u0642\u0641" ||
+        normalized === "\u0627\u062a\u0648\u0642\u0641" ||
+        normalized === "\u0627\u0644\u063a\u0627\u0621" ||
+        normalized === "\u0625\u0644\u063a\u0627\u0621";
+    }
+
+    function isStartOverRequest(value) {
+      const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+
+      return normalized === "start over" ||
+        normalized === "new project" ||
+        normalized === "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f" ||
+        normalized === "\u0627\u0628\u062f\u0627 \u0645\u0646 \u062c\u062f\u064a\u062f" ||
+        normalized === "\u0645\u0634\u0631\u0648\u0639 \u062c\u062f\u064a\u062f";
+    }
+
+    function hasActiveProjectState() {
+      if (!currentProjectState) {
+        return false;
+      }
+
+      return Boolean(
+        currentProjectState.current_phase ||
+        currentProjectState.active_runtime_state ||
+        currentProjectState.documentation_state ||
+        currentProjectState.execution_package_state ||
+        currentProjectState.project_id
+      );
+    }
+
+    function isAmbiguousCurrentProjectRequest(value) {
+      const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+
+      if (!normalized || !hasActiveProjectState()) {
+        return false;
+      }
+
+      if (
+        isShowDocumentationRequest(normalized) ||
+        isApproveDocumentationRequest(normalized) ||
+        isContinueCurrentProjectRequest(normalized) ||
+        isExecutionRequest(normalized) ||
+        isStopCurrentProjectRequest(normalized) ||
+        isStartOverRequest(normalized)
+      ) {
+        return false;
+      }
+
+      return normalized === "ok" ||
+        normalized === "okay" ||
+        normalized === "what next" ||
+        normalized === "next step" ||
+        normalized === "\u062a\u0645\u0627\u0645" ||
+        normalized === "\u0645\u0627\u0634\u064a" ||
+        normalized === "\u0645\u0634 \u0641\u0627\u0647\u0645" ||
+        normalized === "\u0645\u0634 \u0641\u0627\u0647\u0645\u0643" ||
+        normalized === "\u0627\u0639\u0645\u0644 \u0627\u064a\u0647" ||
+        normalized === "\u0627\u064a\u0647 \u0627\u0644\u062a\u0627\u0644\u064a" ||
+        normalized === "\u0627\u064a\u0647 \u0627\u0644\u062e\u0637\u0648\u0629 \u0627\u0644\u062c\u0627\u064a\u0629";
+    }
+
+    function canHandleAiOsExecutionRequest() {
+      if (!currentProjectState) {
+        return false;
+      }
+
+      const documentationState = String(currentProjectState.documentation_state || "").toUpperCase();
+      const executionPackageState = String(currentProjectState.execution_package_state || "").toUpperCase();
+      const runtimeState = String(currentProjectState.active_runtime_state || "").toUpperCase();
+
+      return documentationState === "DRAFT_READY" ||
+        documentationState === "DOCS_APPROVED" ||
+        executionPackageState === "READY_FOR_HANDOFF" ||
+        executionPackageState === "APPROVED_PENDING_FORGE" ||
+        runtimeState === "DOCUMENTATION_REVIEW" ||
+        runtimeState === "EXECUTION_HANDOFF_READY" ||
+        runtimeState === "EXECUTION_HANDOFF_CREATED";
+    }
+
+    function clearPendingDiscoveryForProjectCommand() {
+      pendingAiOsDiscovery = null;
+      pendingConversationCheckpoint = null;
+    }
+
+    function clearConversationFlowState() {
+      pendingAiOsDiscovery = null;
+      pendingConversationCheckpoint = null;
+      pendingAiOsOptions = null;
+      currentStrategyCandidates = [];
+      currentRequestText = "";
+    }
+
+    function buildCurrentProjectActionChoices() {
+      const documentationState = String(currentProjectState && currentProjectState.documentation_state || "").toUpperCase();
+      const executionPackageState = String(currentProjectState && currentProjectState.execution_package_state || "").toUpperCase();
+      const choices = [];
+
+      if (pendingConversationCheckpoint && pendingConversationCheckpoint.nextAction === "AI_OS_OPTIONS") {
+        choices.push({
+          label: "\u0627\u0639\u0631\u0636 \u0627\u0644\u0645\u0642\u062a\u0631\u062d",
+          value: "\u0627\u0639\u0631\u0636 \u0627\u0644\u0645\u0642\u062a\u0631\u062d",
+          description: "\u0639\u0631\u0636 \u0627\u0644\u0645\u0642\u062a\u0631\u062d\u0627\u062a \u0627\u0644\u0645\u0646\u0638\u0645\u0629 \u0644\u0644\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062d\u0627\u0644\u064a."
+        });
+      }
+
+      if (documentationState && documentationState !== "EMPTY") {
+        choices.push({
+          label: "\u0627\u0639\u0631\u0636 \u0627\u0644\u0648\u062b\u0627\u0626\u0642",
+          value: "\u0627\u0639\u0631\u0636 \u0627\u0644\u0648\u062b\u0627\u0626\u0642",
+          description: "\u0639\u0631\u0636 \u0645\u0633\u0648\u062f\u0629 \u0627\u0644\u0648\u062b\u0627\u0626\u0642 \u0623\u0648 \u0622\u062e\u0631 \u0648\u062b\u064a\u0642\u0629 \u0644\u0644\u0645\u0634\u0631\u0648\u0639."
+        });
+      }
+
+      if (documentationState === "DRAFT_READY") {
+        choices.push({
+          label: "\u0627\u0639\u062a\u0645\u062f \u0627\u0644\u0648\u062b\u0627\u0626\u0642",
+          value: "\u0627\u0639\u062a\u0645\u062f \u0627\u0644\u0648\u062b\u0627\u0626\u0642",
+          description: "\u0627\u0639\u062a\u0645\u0627\u062f \u0627\u0644\u0645\u0633\u0648\u062f\u0629 \u0643\u0646\u0637\u0627\u0642 \u0645\u0648\u0627\u0641\u0642 \u0639\u0644\u064a\u0647."
+        });
+      }
+
+      if (canHandleAiOsExecutionRequest() || executionPackageState === "READY_FOR_HANDOFF") {
+        choices.push({
+          label: "\u0646\u0641\u0630",
+          value: "\u0646\u0641\u0630",
+          description: "\u0627\u0639\u062a\u0645\u0627\u062f \u0627\u0644\u0648\u062b\u0627\u0626\u0642 \u0639\u0646\u062f \u0627\u0644\u062d\u0627\u062c\u0629 \u0648\u062a\u062c\u0647\u064a\u0632 \u062a\u0633\u0644\u064a\u0645 Forge."
+        });
+      }
+
+      choices.push({
+        label: "\u0627\u062a\u0648\u0642\u0641",
+        value: "\u0627\u062a\u0648\u0642\u0641",
+        description: "\u0625\u064a\u0642\u0627\u0641 \u0627\u0644\u0637\u0644\u0628 \u0627\u0644\u0645\u0641\u062a\u0648\u062d \u062f\u0627\u062e\u0644 \u0627\u0644\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062d\u0627\u0644\u064a."
+      });
+
+      choices.push({
+        label: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f",
+        value: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f",
+        description: "\u0625\u063a\u0644\u0627\u0642 \u0627\u0644\u062a\u062f\u0641\u0642 \u0627\u0644\u062d\u0627\u0644\u064a \u0648\u0627\u0646\u062a\u0638\u0627\u0631 \u0641\u0643\u0631\u0629 \u0645\u0634\u0631\u0648\u0639 \u062c\u062f\u064a\u062f\u0629."
+      });
+
+      const seen = new Set();
+      return choices.filter((choice) => {
+        if (seen.has(choice.value)) {
+          return false;
+        }
+        seen.add(choice.value);
+        return true;
+      });
+    }
+
+    function buildCurrentProjectActionChoiceHtml(choices) {
+      const list = Array.isArray(choices) ? choices : [];
+
+      return `
+        <div class="strategy-choice-list">
+          ${list.map((choice) => `
+            <button class="strategy-choice-btn" type="button" data-project-command-choice="${escapeHtml(choice.value)}">
+              <strong>${escapeHtml(choice.label)}</strong>
+              ${escapeHtml(choice.description || "")}
+            </button>
+          `).join("")}
+        </div>
+      `;
+    }
+
+    function askCurrentProjectActionChoice(request) {
+      const lang = detectUserLanguage(request);
+      const choices = buildCurrentProjectActionChoices();
+
+      pushMessage(
+        "user",
+        lang === "ar" ? "\u0631\u0633\u0627\u0644\u0629 \u063a\u064a\u0631 \u0648\u0627\u0636\u062d\u0629" : "Unclear Message",
+        `<div class="file-preview">${formatMessageText(request)}</div>`
+      );
+      requestInput.value = "";
+
+      pushMessage(
+        "assistant",
+        lang === "ar" ? "\u0627\u062e\u062a\u064a\u0627\u0631\u0627\u062a \u0627\u0644\u0645\u062a\u0627\u0628\u0639\u0629" : "Follow-up Choices",
+        `
+          <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
+            lang === "ar"
+              ? "\u0645\u0634 \u0648\u0627\u0636\u062d \u0623\u062a\u0639\u0627\u0645\u0644 \u0645\u0639 \u0631\u0633\u0627\u0644\u062a\u0643 \u0643\u0625\u064a\u0647. \u0627\u062e\u062a\u0631 \u0627\u0644\u062e\u0637\u0648\u0629 \u0627\u0644\u0645\u0646\u0627\u0633\u0628\u0629:"
+              : "I am not sure how to treat your message. Choose the next step:"
+          )}</div>
+          ${buildCurrentProjectActionChoiceHtml(choices)}
+        `
+      );
+
+      setStatus(lang === "ar" ? "\u0628\u0627\u0646\u062a\u0638\u0627\u0631 \u0627\u062e\u062a\u064a\u0627\u0631 \u062e\u0637\u0648\u0629 \u0627\u0644\u0645\u062a\u0627\u0628\u0639\u0629." : "Waiting for a follow-up choice.");
+    }
+
+    function stopCurrentProjectFlow(request) {
+      const lang = detectUserLanguage(request);
+      clearConversationFlowState();
+
+      pushMessage(
+        "user",
+        lang === "ar" ? "\u0625\u064a\u0642\u0627\u0641 \u0627\u0644\u0637\u0644\u0628" : "Stop Request",
+        `<div class="file-preview">${formatMessageText(request)}</div>`
+      );
+      requestInput.value = "";
+
+      pushMessage(
+        "assistant",
+        lang === "ar" ? "\u062a\u0645 \u0625\u064a\u0642\u0627\u0641 \u0627\u0644\u0637\u0644\u0628 \u0627\u0644\u062d\u0627\u0644\u064a" : "Current Request Stopped",
+        `<div class="file-preview">${formatMessageText(
+          lang === "ar"
+            ? "\u062a\u0645. \u0623\u0648\u0642\u0641\u062a \u0627\u0644\u062a\u062f\u0641\u0642 \u0627\u0644\u0645\u0641\u062a\u0648\u062d \u0641\u064a \u0627\u0644\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062d\u0627\u0644\u064a."
+            : "Done. I stopped the open flow in the current project."
+        )}</div>`
+      );
+
+      setStatus(lang === "ar" ? "\u062a\u0645 \u0625\u064a\u0642\u0627\u0641 \u0627\u0644\u0637\u0644\u0628." : "Current request stopped.");
+    }
+
+    function startOverCurrentProjectFlow(request) {
+      const lang = detectUserLanguage(request);
+      clearConversationFlowState();
+      resetDraft();
+
+      pushMessage(
+        "user",
+        lang === "ar" ? "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f" : "Start Over",
+        `<div class="file-preview">${formatMessageText(request)}</div>`
+      );
+      requestInput.value = "";
+
+      pushMessage(
+        "assistant",
+        lang === "ar" ? "\u062c\u0627\u0647\u0632 \u0644\u0645\u0634\u0631\u0648\u0639 \u062c\u062f\u064a\u062f" : "Ready for a New Project",
+        `<div class="file-preview">${formatMessageText(
+          lang === "ar"
+            ? "\u062a\u0645. \u0627\u0643\u062a\u0628 \u0641\u0643\u0631\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062c\u062f\u064a\u062f \u0628\u0648\u0636\u0648\u062d\u060c \u0648\u0647\u0623\u0628\u062f\u0623 \u0645\u0639\u0627\u0643 \u0645\u0646 \u0623\u0648\u0644 \u0627\u0644\u062a\u062d\u0644\u064a\u0644."
+            : "Done. Write the new project idea, and I will start from the first analysis step."
+        )}</div>`
+      );
+
+      setStatus(lang === "ar" ? "\u062c\u0627\u0647\u0632 \u0644\u0641\u0643\u0631\u0629 \u0645\u0634\u0631\u0648\u0639 \u062c\u062f\u064a\u062f\u0629." : "Ready for a new project idea.");
+    }
+
+    async function createAiOsExecutionHandoffFromCurrentProject(request) {
+      const projectId = getActiveProjectId();
+      const projectName = currentProjectState && currentProjectState.project_name
+        ? currentProjectState.project_name
+        : projectId;
+      const lang = detectUserLanguage(request);
+      const documentationState = String(currentProjectState && currentProjectState.documentation_state || "").toUpperCase();
+
+      pushMessage("user", lang === "ar" ? "\u0637\u0644\u0628 \u0627\u0644\u062a\u0646\u0641\u064a\u0630" : "Execution Request", `<div class="file-preview">${formatMessageText(request)}</div>`);
+      requestInput.value = "";
+      chatSendBtn.disabled = true;
+      setStatus("Preparing governed AI OS execution handoff...");
+
+      try {
+        let handoffResult = await requestAPI("/api/ai-os/handoff", {
+          project_id: projectId,
+          project_name: projectName,
+          summary: "User approved execution from workspace conversation."
+        });
+
+        if (!handoffResult.ok && handoffResult.reason === "DOCUMENTATION_NOT_APPROVED_FOR_HANDOFF" && documentationState !== "DOCS_APPROVED") {
+          const approvalResult = await requestAPI("/api/ai-os/documentation/approve", {
+            project_id: projectId,
+            project_name: projectName
+          });
+
+          if (approvalResult.project) {
+            renderProjectState(approvalResult.project);
+          }
+
+          if (!approvalResult.ok) {
+            renderResponse(approvalResult);
+            pushMessage("assistant", "AI OS Response", `<div class="file-preview">${formatMessageText(JSON.stringify(approvalResult, null, 2))}</div>`);
+            setStatus(approvalResult.reason || "AI OS documentation approval blocked.");
+            return;
+          }
+
+          handoffResult = await requestAPI("/api/ai-os/handoff", {
+            project_id: projectId,
+            project_name: projectName,
+            summary: "User approved execution from workspace conversation."
+          });
+        }
+
+        if (handoffResult.project) {
+          renderProjectState(handoffResult.project);
+        }
+
+        if (!handoffResult.ok) {
+          renderResponse(handoffResult);
+          pushMessage(
+            "assistant",
+            lang === "ar" ? "\u062a\u0648\u0642\u0641 \u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062a\u0646\u0641\u064a\u0630" : "Execution Handoff Blocked",
+            `<div class="file-preview">${formatMessageText(
+              handoffResult.blocking_question || handoffResult.reason || "Execution handoff is blocked."
+            )}</div>`
+          );
+          setStatus(handoffResult.reason || "AI OS execution handoff blocked.");
+          return;
+        }
+
+        const handoff = handoffResult.handoff || {};
+        const alreadyCreated = handoffResult.mode === "EXECUTION_HANDOFF_ALREADY_CREATED";
+        const lines = lang === "ar"
+          ? [
+              alreadyCreated
+                ? "\u062d\u0632\u0645\u0629 \u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062a\u0646\u0641\u064a\u0630 \u0645\u0648\u062c\u0648\u062f\u0629 \u0628\u0627\u0644\u0641\u0639\u0644 \u0648\u062c\u0627\u0647\u0632\u0629 \u0644\u0640 Forge."
+                : "\u062a\u0645 \u0627\u0639\u062a\u0645\u0627\u062f \u0627\u0644\u0648\u062b\u064a\u0642\u0629 \u0648\u0625\u0646\u0634\u0627\u0621 \u062d\u0632\u0645\u0629 \u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062a\u0646\u0641\u064a\u0630 \u0644\u0640 Forge.",
+              handoff.execution_package_path ? `\u062d\u0632\u0645\u0629 \u0627\u0644\u062a\u0646\u0641\u064a\u0630: ${handoff.execution_package_path}` : "",
+              handoff.handoff_report_path ? `\u062a\u0642\u0631\u064a\u0631 \u0627\u0644\u062a\u0633\u0644\u064a\u0645: ${handoff.handoff_report_path}` : ""
+            ]
+          : [
+              alreadyCreated
+                ? "The Forge execution handoff package already exists and is ready."
+                : "Documentation was approved and the Forge execution handoff package was created.",
+              handoff.execution_package_path ? `Execution package: ${handoff.execution_package_path}` : "",
+              handoff.handoff_report_path ? `Handoff report: ${handoff.handoff_report_path}` : ""
+            ];
+
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "\u062a\u0645 \u062a\u062c\u0647\u064a\u0632 \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0644\u0644\u062a\u0646\u0641\u064a\u0630" : "Execution Handoff Ready",
+          `<div class="file-preview">${formatMessageText(lines.filter(Boolean).join("\n"))}</div>`
+        );
+
+        setStatus("AI OS execution handoff package created.");
+      } catch (err) {
+        renderResponse({ error: err.message });
+        pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>`);
+        setStatus(`Error: ${err.message}`);
+      } finally {
+        chatSendBtn.disabled = false;
+      }
+    }
+
+    async function showAiOsDocumentationForCurrentProject(request) {
+      const projectId = getActiveProjectId();
+      const projectName = currentProjectState && currentProjectState.project_name
+        ? currentProjectState.project_name
+        : projectId;
+      const lang = detectUserLanguage(request);
+
+      pushMessage("user", lang === "ar" ? "\u0637\u0644\u0628 \u0639\u0631\u0636 \u0627\u0644\u0648\u062b\u0627\u0626\u0642" : "Show Documentation", `<div class="file-preview">${formatMessageText(request)}</div>`);
+      requestInput.value = "";
+      chatSendBtn.disabled = true;
+      setStatus("Loading current AI OS documentation...");
+
+      try {
+        const docsResult = await requestAPI("/api/ai-os/documentation/current", {
+          project_id: projectId,
+          project_name: projectName
+        });
+
+        if (docsResult.project) {
+          renderProjectState(docsResult.project);
+        }
+
+        if (!docsResult.ok) {
+          renderResponse(docsResult);
+          pushMessage(
+            "assistant",
+            lang === "ar" ? "\u0627\u0644\u0648\u062b\u0627\u0626\u0642 \u063a\u064a\u0631 \u062c\u0627\u0647\u0632\u0629" : "Documentation Not Ready",
+            `<div class="file-preview">${formatMessageText(docsResult.blocking_question || docsResult.reason || "Documentation is not ready.")}</div>`
+          );
+          setStatus(docsResult.reason || "AI OS documentation is not ready.");
+          return;
+        }
+
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "\u0627\u0644\u0648\u062b\u0627\u0626\u0642 \u0627\u0644\u062d\u0627\u0644\u064a\u0629" : "Current Documentation",
+          `<div class="file-preview">${formatMessageText(
+            [
+              docsResult.documentation_path ? `${lang === "ar" ? "\u0627\u0644\u0645\u0633\u0627\u0631" : "Path"}: ${docsResult.documentation_path}` : "",
+              "",
+              docsResult.documentation_content || ""
+            ].filter(Boolean).join("\n")
+          )}</div>`
+        );
+
+        setStatus("AI OS documentation loaded.");
+      } catch (err) {
+        renderResponse({ error: err.message });
+        pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>`);
+        setStatus(`Error: ${err.message}`);
+      } finally {
+        chatSendBtn.disabled = false;
+      }
+    }
+
+    async function approveAiOsDocumentationForCurrentProject(request) {
+      const projectId = getActiveProjectId();
+      const projectName = currentProjectState && currentProjectState.project_name
+        ? currentProjectState.project_name
+        : projectId;
+      const lang = detectUserLanguage(request);
+
+      pushMessage("user", lang === "ar" ? "\u0637\u0644\u0628 \u0627\u0639\u062a\u0645\u0627\u062f \u0627\u0644\u0648\u062b\u0627\u0626\u0642" : "Approve Documentation", `<div class="file-preview">${formatMessageText(request)}</div>`);
+      requestInput.value = "";
+      chatSendBtn.disabled = true;
+      setStatus("Approving current AI OS documentation...");
+
+      try {
+        const approvalResult = await requestAPI("/api/ai-os/documentation/approve", {
+          project_id: projectId,
+          project_name: projectName
+        });
+
+        if (approvalResult.project) {
+          renderProjectState(approvalResult.project);
+        }
+
+        if (!approvalResult.ok) {
+          renderResponse(approvalResult);
+          pushMessage("assistant", "AI OS Response", `<div class="file-preview">${formatMessageText(JSON.stringify(approvalResult, null, 2))}</div>`);
+          setStatus(approvalResult.reason || "AI OS documentation approval blocked.");
+          return;
+        }
+
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "\u062a\u0645 \u0627\u0639\u062a\u0645\u0627\u062f \u0627\u0644\u0648\u062b\u0627\u0626\u0642" : "Documentation Approved",
+          `<div class="file-preview">${formatMessageText(
+            lang === "ar"
+              ? "\u062a\u0645 \u0627\u0639\u062a\u0645\u0627\u062f \u0627\u0644\u0648\u062b\u0627\u0626\u0642. \u0627\u0644\u062e\u0637\u0648\u0629 \u0627\u0644\u062a\u0627\u0644\u064a\u0629 \u0644\u0648 \u062d\u0628\u064a\u062a: \u0627\u0643\u062a\u0628 \u0646\u0641\u0630."
+              : "Documentation is approved. Next, you can write: execute."
+          )}</div>`
+        );
+
+        setStatus("AI OS documentation approved.");
+      } catch (err) {
+        renderResponse({ error: err.message });
+        pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>`);
+        setStatus(`Error: ${err.message}`);
+      } finally {
+        chatSendBtn.disabled = false;
+      }
+    }
+
+    async function handleCurrentProjectStateCommand(request) {
+      if (isStopCurrentProjectRequest(request)) {
+        stopCurrentProjectFlow(request);
+        return true;
+      }
+
+      if (isStartOverRequest(request)) {
+        startOverCurrentProjectFlow(request);
+        return true;
+      }
+
+      if (isContinueCurrentProjectRequest(request) && pendingConversationCheckpoint) {
+        return false;
+      }
+
+      if (isShowDocumentationRequest(request)) {
+        clearPendingDiscoveryForProjectCommand();
+        await showAiOsDocumentationForCurrentProject(request);
+        return true;
+      }
+
+      if (isApproveDocumentationRequest(request)) {
+        clearPendingDiscoveryForProjectCommand();
+        await approveAiOsDocumentationForCurrentProject(request);
+        return true;
+      }
+
+      if (isContinueCurrentProjectRequest(request) && canHandleAiOsExecutionRequest()) {
+        clearPendingDiscoveryForProjectCommand();
+        await createAiOsExecutionHandoffFromCurrentProject(request);
+        return true;
+      }
+
+      if (isContinueCurrentProjectRequest(request) && hasActiveProjectState()) {
+        askCurrentProjectActionChoice(request);
+        return true;
+      }
+
+      if (isExecutionRequest(request)) {
+        clearPendingDiscoveryForProjectCommand();
+        await createAiOsExecutionHandoffFromCurrentProject(request);
+        return true;
+      }
+
+      if (isAmbiguousCurrentProjectRequest(request)) {
+        askCurrentProjectActionChoice(request);
+        return true;
+      }
+
+      return false;
+    }
+
     function getCheckpointUserMessageTitle(userText, sourceRequestText) {
       if (isPositiveConfirmation(userText)) {
         return detectUserLanguage(sourceRequestText) === "ar" ? "تأكيد المتابعة" : "Continue Confirmation";
@@ -845,6 +1581,7 @@
     let currentRequestText = "";
     let pendingConversationCheckpoint = null;
     let pendingAiOsDiscovery = null;
+    let pendingAiOsOptions = null;
 
     function snapshotTurn(turn) {
       return {
@@ -875,10 +1612,13 @@
 
       const conversationTurns = getConversationStore(activeTurn.projectId || getActiveProjectId());
 
-      conversationTurns.push({
+      const turn = {
         ...snapshotTurn(activeTurn),
         ...extra
-      });
+      };
+
+      conversationTurns.push(turn);
+      persistConversationTurn(activeTurn.projectId || getActiveProjectId(), turn);
 
       renderConversationTurns(conversationTurns);
     }
@@ -1114,9 +1854,56 @@
         null;
 
       renderProjectState(activeProject);
-      renderConversationTurns(getConversationStore(projectSelect.value));
+      await loadProjectConversationHistory(projectSelect.value);
       await loadHistory();
       chatStream.scrollTop = chatStream.scrollHeight;
+    }
+
+    async function loadProjectConversationHistory(projectIdInput = "") {
+      const projectId = projectIdInput && projectIdInput.trim() !== ""
+        ? projectIdInput.trim()
+        : getActiveProjectId();
+
+      try {
+        const apiBase = window.location.origin.replace(":3000", ":3100");
+        const res = await fetch(`${apiBase}/api/projects/conversation-history?project_id=${encodeURIComponent(projectId)}`);
+        const data = await res.json();
+
+        if (!res.ok) {
+          throw new Error(data.error || "Failed to load conversation history.");
+        }
+
+        const store = getConversationStore(projectId);
+        store.splice(0, store.length, ...(Array.isArray(data.items) ? data.items.map((item) => ({
+          request: item.request || "",
+          projectId: item.project_id || projectId,
+          proposalId: item.proposal_id || "",
+          operationType: item.operation_type || "UNKNOWN",
+          finalStatus: item.final_status || "",
+          decisionPacketId: item.decision_packet_id || "",
+          fileCount: item.file_count || 0,
+          messages: Array.isArray(item.messages) ? item.messages : []
+        })) : []));
+
+        renderConversationTurns(store);
+      } catch (err) {
+        renderConversationTurns(getConversationStore(projectId));
+      }
+    }
+
+    async function persistConversationTurn(projectIdInput, turn) {
+      const projectId = projectIdInput && projectIdInput.trim() !== ""
+        ? projectIdInput.trim()
+        : getActiveProjectId();
+
+      try {
+        await requestAPI("/api/projects/conversation-history", {
+          project_id: projectId,
+          turn
+        });
+      } catch (err) {
+        setStatus(`Conversation history persistence failed: ${err.message}`);
+      }
     }
 
     async function activateProject(projectId) {
@@ -1266,6 +2053,7 @@
       activeTurn = createEmptyTurnState();
       currentStrategyCandidates = [];
       currentRequestText = "";
+      pendingAiOsOptions = null;
       approveBtn.disabled = true;
       rejectBtn.disabled = true;
       renderResponse(null);
@@ -1583,6 +2371,7 @@
         currentStrategyCandidates = [];
         currentRequestText = "";
         pendingConversationCheckpoint = null;
+        pendingAiOsOptions = null;
 
         await loadProjects(data.active_project_id);
 
@@ -1605,6 +2394,10 @@
 
       if (!request) {
         setStatus("Please enter a message.");
+        return;
+      }
+
+      if (await handleCurrentProjectStateCommand(request)) {
         return;
       }
 
@@ -1658,11 +2451,7 @@
               `<div class="file-preview">${formatMessageText("Discovery is complete. The project is ready for the next governed step.")}</div>`
             );
 
-            askConversationCheckpoint(
-              "DISCUSSION_READY_FOR_DOCUMENTATION",
-              discoveryState.originalRequest || activeTurn.request || request,
-              []
-            );
+            askAiOsOptionsCheckpoint(discoveryState.originalRequest || activeTurn.request || request);
 
             setStatus("AI OS discovery completed.");
             return;
@@ -1686,7 +2475,7 @@
       if (pendingConversationCheckpoint) {
         const checkpointRequest = pendingConversationCheckpoint.request;
 
-        if (isPositiveConfirmation(request)) {
+        if (isCheckpointProgressRequest(request)) {
           pushMessage(
             "user",
             getCheckpointUserMessageTitle(request, checkpointRequest),
@@ -1705,7 +2494,11 @@
           );
 
           try {
-            await prepareDraftFromConfirmedRequest(checkpoint.request, checkpoint.projectId);
+            if (checkpoint.nextAction === "AI_OS_OPTIONS") {
+              await presentAiOsOptions(checkpoint.projectId, checkpoint.request);
+            } else {
+              await prepareDraftFromConfirmedRequest(checkpoint.request, checkpoint.projectId);
+            }
           } catch (err) {
             renderResponse({ error: err.message });
             pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>`);
@@ -1771,6 +2564,71 @@
             ? "يجب حسم الطلب الحالي أولاً."
             : "You must resolve the current request first."
         );
+        return;
+      }
+
+      if (pendingAiOsOptions && /^\d+$/.test(request)) {
+        const selectedIndex = parseInt(request, 10) - 1;
+        const optionsState = { ...pendingAiOsOptions };
+        const selected = Array.isArray(optionsState.options) ? optionsState.options[selectedIndex] : null;
+
+        pushMessage("user", "Proposal Selection", `<div class="file-preview">${formatMessageText(request)}</div>`);
+        requestInput.value = "";
+
+        if (!selected) {
+          pushMessage(
+            "assistant",
+            "Invalid Choice",
+            `<div class="file-preview">${formatMessageText("Invalid selection. Please choose a valid proposal number.")}</div>`
+          );
+          setStatus("Invalid AI OS proposal selection.");
+          return;
+        }
+
+        chatSendBtn.disabled = true;
+        setStatus("Approving selected AI OS proposal...");
+
+        try {
+          const decisionResult = await requestAPI("/api/ai-os/decision", {
+            project_id: optionsState.projectId,
+            selected_option_id: selected.option_id,
+            decision_owner: "USER",
+            rationale: `Selected from workspace conversation: ${selected.title || selected.option_id}`
+          });
+
+          if (decisionResult.project) {
+            renderProjectState(decisionResult.project);
+          }
+
+          if (!decisionResult.ok) {
+            renderResponse(decisionResult);
+            pushMessage("assistant", "AI OS Response", `<div class="file-preview">${formatMessageText(JSON.stringify(decisionResult, null, 2))}</div>`);
+            setStatus(decisionResult.reason || "AI OS decision blocked.");
+            return;
+          }
+
+          pendingAiOsOptions = null;
+
+          pushMessage(
+            "assistant",
+            detectUserLanguage(optionsState.request) === "ar" ? "تم تثبيت المقترح" : "Proposal Accepted",
+            `<div class="file-preview">${formatMessageText(
+              detectUserLanguage(optionsState.request) === "ar"
+                ? `تم اختيار: ${selected.title || selected.option_id}\nهجهز دلوقتي وثيقة منظمة للمراجعة.`
+                : `Selected: ${selected.title || selected.option_id}\nI will now prepare a structured documentation draft for review.`
+            )}</div>`
+          );
+
+          setStatus("AI OS proposal accepted. Preparing documentation draft...");
+          await prepareAiOsDocumentationDraft(optionsState.projectId, optionsState.request);
+        } catch (err) {
+          renderResponse({ error: err.message });
+          pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>`);
+          setStatus(`Error: ${err.message}`);
+        } finally {
+          chatSendBtn.disabled = false;
+        }
+
         return;
       }
 
@@ -1845,6 +2703,7 @@
       activeTurn.projectId = getActiveProjectId();
       currentStrategyCandidates = [];
       currentRequestText = "";
+      pendingAiOsOptions = null;
 
       pushMessage("user", "Request", `<div class="file-preview">${formatMessageText(request)}</div>`);
       requestInput.value = "";
@@ -1909,6 +2768,8 @@
             detectUserLanguage(request) === "ar" ? "اكتمل التحليل" : "Discovery Complete",
             `<div class="file-preview">${formatMessageText("Discovery is complete. The project is ready for the next governed step.")}</div>`
           );
+
+          askAiOsOptionsCheckpoint(request);
 
           setStatus("AI OS discovery completed.");
           return;
@@ -2030,6 +2891,48 @@
     });
 
     chatStream.addEventListener("click", (event) => {
+      const projectCommandButton = event.target.closest("[data-project-command-choice]");
+
+      if (projectCommandButton) {
+        const choiceValue = projectCommandButton.getAttribute("data-project-command-choice");
+
+        if (!choiceValue || projectCommandButton.disabled) {
+          return;
+        }
+
+        const allProjectCommandButtons = chatStream.querySelectorAll("[data-project-command-choice]");
+        allProjectCommandButtons.forEach((btn) => {
+          btn.disabled = true;
+          btn.style.opacity = "0.6";
+          btn.style.cursor = "not-allowed";
+        });
+
+        requestInput.value = choiceValue;
+        chatSendBtn.click();
+        return;
+      }
+
+      const aiOsOptionButton = event.target.closest("[data-ai-os-option-choice]");
+
+      if (aiOsOptionButton) {
+        const choiceValue = aiOsOptionButton.getAttribute("data-ai-os-option-choice");
+
+        if (!choiceValue || aiOsOptionButton.disabled) {
+          return;
+        }
+
+        const allAiOsOptionButtons = chatStream.querySelectorAll("[data-ai-os-option-choice]");
+        allAiOsOptionButtons.forEach((btn) => {
+          btn.disabled = true;
+          btn.style.opacity = "0.6";
+          btn.style.cursor = "not-allowed";
+        });
+
+        requestInput.value = choiceValue;
+        chatSendBtn.click();
+        return;
+      }
+
       const button = event.target.closest("[data-strategy-choice]");
 
       if (!button) {
@@ -2074,6 +2977,7 @@
       currentRequestText = "";
       pendingConversationCheckpoint = null;
       renderConversationTurns(getConversationStore(projectSelect.value));
+      await loadProjectConversationHistory(projectSelect.value);
       chatStream.scrollTop = chatStream.scrollHeight;
     });
 

@@ -1,0 +1,8 @@
+{
+  "response_id": "RESP-8f076e30-72b6-4345-a59c-3d33175ab3e6",
+  "request_id": "TRACE-1777713068468",
+  "status": "FAILED",
+  "payload": {
+    "error": "OPENAI_DRIVER_BLOCKED: missing OPENAI_API_KEY"
+  }
+}

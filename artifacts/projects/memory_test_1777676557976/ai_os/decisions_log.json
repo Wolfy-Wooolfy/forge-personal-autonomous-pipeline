@@ -1,0 +1,65 @@
+[
+  {
+    "entry_type": "OPTION_DECISION",
+    "selected_option_id": "opt2",
+    "decision_owner": "USER",
+    "rationale": "Selected from workspace conversation: نظام موارد بشرية بسيط مع التركيز على الوظائف الأساسية فقط",
+    "created_at": "2026-05-02T09:30:15.962Z"
+  },
+  {
+    "entry_type": "OPTION_DECISION",
+    "selected_option_id": "option_2",
+    "decision_owner": "USER",
+    "rationale": "Selected from workspace conversation: نظام حسابات ويب مع دعم عملات متعددة وصلاحيات مستخدم",
+    "created_at": "2026-05-02T09:40:46.237Z"
+  },
+  {
+    "entry_type": "OPTION_DECISION",
+    "selected_option_id": "option_2",
+    "decision_owner": "USER",
+    "rationale": "Selected from workspace conversation: نظام خدمة عملاء ويب بسيط مع تركيز على إدارة الشكاوى وقاعدة بيانات العملاء",
+    "created_at": "2026-05-02T09:43:55.705Z"
+  },
+  {
+    "entry_type": "OPTION_DECISION",
+    "selected_option_id": "option_2",
+    "decision_owner": "USER",
+    "rationale": "Selected from workspace conversation: نظام خدمة عملاء عبر الهاتف والبريد الإلكتروني فقط",
+    "created_at": "2026-05-02T09:49:50.617Z"
+  },
+  {
+    "entry_type": "OPTION_DECISION",
+    "selected_option_id": "option_2",
+    "decision_owner": "USER",
+    "rationale": "Selected from workspace conversation: نظام خدمة عملاء أساسي مع دعم قنوات محدودة",
+    "created_at": "2026-05-02T09:56:19.495Z"
+  },
+  {
+    "entry_type": "OPTION_DECISION",
+    "selected_option_id": "option_2",
+    "decision_owner": "USER",
+    "rationale": "Selected from workspace conversation: مراجعة يدوية قبل تنفيذ المتطلبات",
+    "created_at": "2026-05-02T09:57:21.889Z"
+  },
+  {
+    "entry_type": "OPTION_DECISION",
+    "selected_option_id": "opt2",
+    "decision_owner": "USER",
+    "rationale": "Selected from workspace conversation: مراجعة الافتراضات قبل الاعتماد",
+    "created_at": "2026-05-02T09:58:00.393Z"
+  },
+  {
+    "entry_type": "OPTION_DECISION",
+    "selected_option_id": "opt2",
+    "decision_owner": "USER",
+    "rationale": "Selected from workspace conversation: نظام حسابات أساسي مع تقارير مالية ودعم أمان محدود",
+    "created_at": "2026-05-02T10:56:39.985Z"
+  },
+  {
+    "entry_type": "OPTION_DECISION",
+    "selected_option_id": "opt2",
+    "decision_owner": "USER",
+    "rationale": "Selected from workspace conversation: نظام حسابات متكامل مع تكامل أنظمة الرواتب والمخزون",
+    "created_at": "2026-05-02T11:51:26.525Z"
+  }
+]

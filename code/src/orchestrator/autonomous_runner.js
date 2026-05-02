@@ -215,6 +215,52 @@ function markModuleCompleted(state, moduleId) {
   state.pending_modules = state.pending_modules.filter((item) => item !== moduleId);
 }
 
+function safeReadJson(absPath) {
+  try {
+    if (!fs.existsSync(absPath)) {
+      return null;
+    }
+
+    return JSON.parse(fs.readFileSync(absPath, "utf8"));
+  } catch (error) {
+    return null;
+  }
+}
+
+function gapActionsHaveExecutionFork() {
+  const gapActions = safeReadJson(path.join(process.cwd(), "artifacts", "gap", "gap_actions.json"));
+
+  if (!gapActions || typeof gapActions !== "object") {
+    return true;
+  }
+
+  if (gapActions.requires_decision === true) {
+    return true;
+  }
+
+  const gaps = Array.isArray(gapActions.gaps) ? gapActions.gaps : [];
+
+  return gaps.some((gap) => {
+    const actions = Array.isArray(gap && gap.recommended_actions)
+      ? gap.recommended_actions
+      : [];
+
+    return (
+      actions.length > 1 ||
+      actions.some((action) => action && action.requires_decision === true)
+    );
+  });
+}
+
+function shouldSkipConditionalModule(step) {
+  return (
+    step &&
+    step.module_id === "DESIGN_EXPLORATION" &&
+    step.conditional_activation === "EXECUTION_FORK" &&
+    !gapActionsHaveExecutionFork()
+  );
+}
+
 function finalizeBlocked(state, reason, executionLog) {
   state.status = "BLOCKED";
   state.blocked = true;
@@ -401,6 +447,26 @@ async function runAutonomous(runContextInput = {}) {
 
   for (let i = startIndex; i < pipeline.length; i += 1) {
     const step = pipeline[i];
+
+    if (shouldSkipConditionalModule(step)) {
+      executionLog.push({
+        timestamp: nowIso(),
+        module_id: step.module_id,
+        task_name: step.task_name,
+        outcome: "SKIPPED_CONDITIONAL_NO_EXECUTION_FORK"
+      });
+
+      markModuleCompleted(state, step.module_id);
+
+      const nextStep = pipeline[i + 1] || null;
+      state.current_module = null;
+      state.next_task = nextStep ? nextStep.task_name : null;
+      state.next_module = nextStep ? nextStep.module_id : null;
+
+      writeState(state);
+      writeReport(state, executionLog);
+      continue;
+    }
 
     state.current_module = step.module_id;
     state.next_task = step.task_name;

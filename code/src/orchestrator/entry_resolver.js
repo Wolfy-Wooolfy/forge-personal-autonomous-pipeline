@@ -189,11 +189,54 @@ function isTaskClosed(taskName, closureFiles) {
   return closureFiles.includes(`${taskId}.EXECUTION.CLOSURE.MD`);
 }
 
+function gapActionsHaveExecutionFork() {
+  const gapActionsPath = path.join(process.cwd(), "artifacts", "gap", "gap_actions.json");
+  const gapActions = safeReadJson(gapActionsPath);
+
+  if (!gapActions || typeof gapActions !== "object") {
+    return true;
+  }
+
+  if (gapActions.requires_decision === true) {
+    return true;
+  }
+
+  const gaps = Array.isArray(gapActions.gaps) ? gapActions.gaps : [];
+
+  return gaps.some((gap) => {
+    const actions = Array.isArray(gap && gap.recommended_actions)
+      ? gap.recommended_actions
+      : [];
+
+    return (
+      actions.length > 1 ||
+      actions.some((action) => action && action.requires_decision === true)
+    );
+  });
+}
+
+function isPipelineModuleSatisfied(moduleDef, closureFiles) {
+  if (isTaskClosed(moduleDef.task_name, closureFiles)) {
+    return true;
+  }
+
+  if (
+    moduleDef &&
+    moduleDef.module_id === "DESIGN_EXPLORATION" &&
+    moduleDef.conditional_activation === "EXECUTION_FORK" &&
+    !gapActionsHaveExecutionFork()
+  ) {
+    return true;
+  }
+
+  return false;
+}
+
 function getContiguousClosedIndex(pipeline, closureFiles) {
   let lastClosedIndex = -1;
 
   for (let i = 0; i < pipeline.length; i += 1) {
-    if (!isTaskClosed(pipeline[i].task_name, closureFiles)) {
+    if (!isPipelineModuleSatisfied(pipeline[i], closureFiles)) {
       break;
     }
     lastClosedIndex = i;

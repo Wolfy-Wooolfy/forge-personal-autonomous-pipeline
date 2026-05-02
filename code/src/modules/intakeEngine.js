@@ -85,6 +85,8 @@ function detectRepositoryState(rootAbs) {
   const hasCode = fs.existsSync(path.join(rootAbs, "code")) && fs.statSync(path.join(rootAbs, "code")).isDirectory();
   const hasArtifacts = fs.existsSync(path.join(rootAbs, "artifacts")) && fs.statSync(path.join(rootAbs, "artifacts")).isDirectory();
   const hasStatus = fs.existsSync(path.join(rootAbs, "progress", "status.json"));
+  const hasForgeState = fs.existsSync(path.join(rootAbs, "artifacts", "forge", "forge_state.json"));
+  const hasOrchestrationState = fs.existsSync(path.join(rootAbs, "artifacts", "orchestration", "orchestration_state.json"));
 
   if (!hasDocs && !hasCode && !hasArtifacts) {
     return {
@@ -119,13 +121,35 @@ function detectRepositoryState(rootAbs) {
     };
   }
 
+  if (hasDocs && hasCode && hasArtifacts && hasForgeState && hasOrchestrationState) {
+    return {
+      repository_state: "FULL_PIPELINE_STATE",
+      docs_present: true,
+      code_present: true,
+      artifacts_present: true,
+      status_present: hasStatus,
+      rules: ["docs/ present", "code/ present", "artifacts/ present", "governed runtime state artifacts present"]
+    };
+  }
+
+  if (hasDocs && hasCode) {
+    return {
+      repository_state: "DOCS_AND_CODE",
+      docs_present: true,
+      code_present: true,
+      artifacts_present: hasArtifacts,
+      status_present: hasStatus,
+      rules: ["docs/ present", "code/ present", "no active governed runtime state detected"]
+    };
+  }
+
   return {
-    repository_state: "MIXED",
+    repository_state: "IDEA_ONLY",
     docs_present: hasDocs,
     code_present: hasCode,
     artifacts_present: hasArtifacts,
     status_present: hasStatus,
-    rules: ["docs/code mixed repository state detected"]
+    rules: ["no deterministic docs/code classification matched"]
   };
 }
 
@@ -291,7 +315,7 @@ function runIntake(context) {
     generated_at: new Date().toISOString(),
     total_files: totalFiles,
     total_directories: totalDirs,
-    classification: operatingModeInfo.operating_mode,
+    classification: repositoryStateInfo.repository_state,
     repository_state: repositoryStateInfo.repository_state,
     repository_root_hash: repositoryRootHash,
     locked_snapshot_flag: true
@@ -300,6 +324,7 @@ function runIntake(context) {
   writeJson(path.join(rootAbs, intakeSnapshotRel), snapshotPayload);
 
   const intakeContextPayload = {
+    classification: repositoryStateInfo.repository_state,
     operating_mode: operatingModeInfo.operating_mode,
     repository_state: repositoryStateInfo.repository_state,
     docs_present: repositoryStateInfo.docs_present,

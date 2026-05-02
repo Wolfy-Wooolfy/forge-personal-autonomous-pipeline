@@ -105,13 +105,17 @@ Implements:
 
 ## 7) Open Gaps (Declared)
 
-1) Verify outputs specified under docs/09_verify/* that do not have producing code under verify/** remain pending as documentation-to-code gaps.
+No declared open documentation-to-code gaps remain in this coverage scope.
 
-2) Memory Engine implementation is specified conceptually but no corresponding code module exists in current code state. No formal execution-bound contract exists under docs/** for Memory Engine.
+Resolved implementation points:
 
-3) AI Layer Project Isolation (per docs/11_ai_layer/06_CHAT_FIRST_WORKSPACE_SPEC.md Section 3) — project_id scoping, per-project conversation_history, and sidebar project list are not implemented in code/src/workspace/apiServer.js. Declared as open documentation-to-code gap.
+1) Verify outputs specified under docs/09_verify/* are produced by verify/smoke/* and code/src/modules/verifyEngine.js.
 
-4) verify/unit/retry_attempts/ — Retry artifact logging path defined in docs/09_verify/09_Build_and_Verify_Playbook_Local.md has no producing implementation. No code writes RETRY-*.json files under this path. Declared as open documentation-to-code gap.
+2) Memory Engine persistence is implemented by code/src/memoryEngine/index.js and integrated with code/src/workspace/apiServer.js for per-project memory snapshots and change history.
+
+3) AI Layer Project Isolation is implemented through project_id scoped project state, per-project conversation_history, active project selection, and project registry handling in code/src/workspace/apiServer.js and web/index.html.
+
+4) verify/unit/retry_attempts/ retry attempt records are produced by code/src/modules/verifyEngine.js when verification fails.
 
 ## 8) Non-authority Clause
 

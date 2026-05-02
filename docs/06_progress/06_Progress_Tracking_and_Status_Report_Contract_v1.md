@@ -390,7 +390,7 @@ If verification status is unknown
 
 Examples:
 
-* `docs/Scope_and_Success_Contract_v1.md`
+* `docs/02_scope/02_Scope_and_Success_Contract.md`
 * `code/memoryEngine/index.js`
 
 If no artifact exists → value MUST be `"NONE"`
@@ -412,7 +412,7 @@ it is not a valid current_task.
 
 Valid:
 
-* "Close docs/04_autonomy/autonomy_policy.md"
+* "Close docs/04_autonomy/04_Autonomy_Policy_and_Human_Interrupt_Protocol.md"
 * "Run verify/smoke/smoke_check.sh"
 * "Generate code/src/memoryEngine/index.js"
 

@@ -1,0 +1,8 @@
+{
+  "response_id": "RESP-dd4bac0f-c4c1-4f32-85ed-3d74468ceb21",
+  "request_id": "GAP-1777713530128",
+  "status": "FAILED",
+  "payload": {
+    "error": "OPENAI_DRIVER_BLOCKED: missing OPENAI_API_KEY"
+  }
+}

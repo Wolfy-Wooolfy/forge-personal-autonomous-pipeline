@@ -1,0 +1,24 @@
+{
+  "timestamp_utc": "2026-05-02T11:05:43.996Z",
+  "stage": "D",
+  "target_artifacts": [
+    "artifacts/intake/intake_snapshot.json",
+    "artifacts/audit/audit_findings.json",
+    "artifacts/trace/trace_matrix.json",
+    "artifacts/gap/gap_actions.json",
+    "artifacts/backfill/backfill_plan.json",
+    "artifacts/execute/execute_plan.json",
+    "artifacts/execute/execute_diff.md",
+    "artifacts/execute/execute_log.md",
+    "artifacts/decisions/module_flow_decision_gate.json",
+    "artifacts/decisions/decision_auto_pass.md",
+    "artifacts/decisions/decision_packet.json",
+    "verify/unit/docs_must_acceptance_report.json"
+  ],
+  "verification_types": [
+    "STRUCTURAL_MODULE_FLOW",
+    "CONTRACT_MODULE_FLOW",
+    "CONSISTENCY_MODULE_FLOW"
+  ],
+  "result": "PASS"
+}

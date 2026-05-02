@@ -260,7 +260,7 @@ function runBackfill(context) {
         items.find((item) => typeof item.workspace_execution_package_path === "string" && item.workspace_execution_package_path.trim() !== "")
           ?.workspace_execution_package_path || null
     },
-    approved_code_actions: items
+    approved_actions: items
       .map((item) => {
         const affected = Array.isArray(item.affected_entities) ? item.affected_entities : [];
 

@@ -201,7 +201,7 @@ Canonical example (structure reference ONLY):
 {
   "audit_id": "AUDIT-20260208-001",
   "stage": "B",
-  "artifact": "docs/03_pipeline/03_pipeline_stages.md",
+  "artifact": "docs/03_pipeline/03_Pipeline_Stages_Specification_A-D.md",
   "failed_dimension": "derived_authority_prohibition",
   "failure_code": "DERIVED_AUTHORITY_INFERRED",
   "short_reason": "Behavior cannot be justified by an explicit authoritative contract clause."

@@ -156,9 +156,11 @@ function runExecute(context) {
     };
   }
 
-  const actions = Array.isArray(backfillPlan.approved_code_actions)
-    ? backfillPlan.approved_code_actions
-    : [];
+  const actions = Array.isArray(backfillPlan.approved_actions)
+    ? backfillPlan.approved_actions
+    : Array.isArray(backfillPlan.approved_code_actions)
+      ? backfillPlan.approved_code_actions
+      : [];
 
   const executedActions = [];
 
@@ -305,7 +307,10 @@ function runExecute(context) {
     executedActions.push({
       action_id: String(action.action_id || ""),
       origin_gap_id: String(action.origin_gap_id || ""),
+      linked_gap_id: String(action.origin_gap_id || action.linked_gap_id || ""),
       action_type: String(action.action_type || ""),
+      modification_type: String(action.modification_type || action.action_type || ""),
+      reason: String(action.reason || "Approved action executed deterministically."),
       target_path: targetRel,
       target_file: targetRel,
       source_type: String(action.source_type || "FORGE"),

@@ -69,6 +69,13 @@ function rmDirIfExists(abs) {
   fs.rmSync(abs, { recursive: true, force: true });
 }
 
+function rmFileIfExists(abs) {
+  if (!fs.existsSync(abs)) return;
+  const st = fs.statSync(abs);
+  if (!st.isFile()) return;
+  fs.rmSync(abs, { force: true });
+}
+
 function addViolation(violations, category, severity, relPath, description) {
   violations.push({
     category: String(category || ""),
@@ -279,10 +286,11 @@ function runAudit(context) {
       repositoryState === "IDEA_ONLY" ||
       repositoryState === "DOCS_ONLY" ||
       repositoryState === "CODE_ONLY" ||
-      repositoryState === "MIXED";
+      repositoryState === "DOCS_AND_CODE" ||
+      repositoryState === "FULL_PIPELINE_STATE";
     mark(validRepositoryState);
     if (!validRepositoryState) {
-      addViolation(violations, "Activation", "CRITICAL", "artifacts/intake/intake_context.json", "repository_state must be IDEA_ONLY, DOCS_ONLY, CODE_ONLY, or MIXED.");
+      addViolation(violations, "Activation", "CRITICAL", "artifacts/intake/intake_context.json", "repository_state must be IDEA_ONLY, DOCS_ONLY, CODE_ONLY, DOCS_AND_CODE, or FULL_PIPELINE_STATE.");
     }
 
     mark(blockedFlag);
@@ -380,15 +388,17 @@ function runAudit(context) {
 
   let requiredDirs = ["artifacts", "progress"];
 
-  if (operatingMode === "IMPROVE") {
+  if (repositoryState === "FULL_PIPELINE_STATE") {
+    requiredDirs = ["docs", "artifacts", "code", "progress"];
+  } else if (repositoryState === "DOCS_AND_CODE") {
+    requiredDirs = ["docs", "code", "progress"];
+  } else if (operatingMode === "IMPROVE") {
     requiredDirs = ["docs", "artifacts", "code", "progress"];
   } else if (operatingMode === "BUILD") {
     if (repositoryState === "DOCS_ONLY") {
       requiredDirs = ["docs", "artifacts", "progress"];
     } else if (repositoryState === "CODE_ONLY") {
       requiredDirs = ["code", "artifacts", "progress"];
-    } else if (repositoryState === "MIXED") {
-      requiredDirs = ["docs", "artifacts", "code", "progress"];
     }
   }
 
@@ -484,8 +494,9 @@ function runAudit(context) {
     }
   }
 
-  const allowedModules = new Set(["intake", "audit", "trace", "gap", "decisions", "backfill", "execute", "closure", "release", "orchestration", "verify", "forge", "exploration", "cognitive", "coverage"]);
-  const immutableLegacy = new Set(["tasks", "stage_A", "stage_B", "stage_C", "stage_D", "reports", "release", "archive"]);
+  const moduleOwnedNamespaces = new Set(["intake", "audit", "trace", "gap", "exploration", "decisions", "backfill", "execute", "closure"]);
+  const systemGovernedNamespaces = new Set(["forge", "orchestration", "cognitive", "llm", "ai", "coverage", "verify", "archive", "projects", "admission"]);
+  const immutableLegacyNamespaces = new Set(["tasks", "stage_A", "stage_B", "stage_C", "stage_D", "reports", "release"]);
 
   if (Array.isArray(inventory)) {
     const artifactPaths = inventory
@@ -495,15 +506,12 @@ function runAudit(context) {
     for (const p of artifactPaths) {
       const parts = p.split("/");
       const ns = parts.length >= 2 ? parts[1] : "";
-      const isAllowed = allowedModules.has(ns);
-      const isImmutableLegacy = immutableLegacy.has(ns);
+      const isKnownGovernedNamespace =
+        moduleOwnedNamespaces.has(ns) ||
+        systemGovernedNamespaces.has(ns) ||
+        immutableLegacyNamespaces.has(ns);
 
-      if (isAllowed) {
-        mark(true);
-        continue;
-      }
-
-      if (isImmutableLegacy) {
+      if (isKnownGovernedNamespace) {
         mark(true);
         continue;
       }
@@ -627,6 +635,7 @@ function runAudit(context) {
   }
 
   if (!blocked) {
+    rmFileIfExists(path.join(auditDirAbs, "audit_error.md"));
     rmDirIfExists(path.join(rootAbs, "artifacts", "trace"));
     rmDirIfExists(path.join(rootAbs, "artifacts", "gap"));
     rmDirIfExists(path.join(rootAbs, "artifacts", "decisions"));

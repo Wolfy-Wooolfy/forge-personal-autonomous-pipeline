@@ -1,25 +1,17 @@
 # MODULE FLOW — Execute Report
 
-- generated_at: 2026-04-25T19:45:38.607Z
-- operating_mode: FULL_PIPELINE_STATE
-- repository_state: MIXED
+- generated_at: 2026-05-02T09:18:50.158Z
+- operating_mode: IMPROVE
+- repository_state: FULL_PIPELINE_STATE
 
 ## Source
 - backfill_plan: artifacts/backfill/backfill_plan.json
-- backfill_sha256: 9290db374d13dffa5ea501402a6fd3945c26ff43bf6c470e12b6c7b7c3d84449
+- backfill_sha256: cc8498a9255aec090307ce4ca29b5ce847f75f8a93df1e014f2097f514b0b9dd
 - intake_context: artifacts/intake/intake_context.json
-- intake_sha256: f40ec234cf5a934d54762b1007cd357199a8e0146a2b6610ba7d3fff3979d7bd
+- intake_sha256: dc92e1525e817fd677f11c8ef0a568afe24863ccd794a3e796efba547b51b053
 
 ## Execution Plan
-- WORKSPACE_ACTION_1
-  - type: BACKFILL_RECONCILIATION
-  - target: artifacts/projects/action_game/output/index.html
-- WORKSPACE_ACTION_2
-  - type: BACKFILL_RECONCILIATION
-  - target: artifacts/projects/action_game/output/style.css
-- WORKSPACE_ACTION_3
-  - type: BACKFILL_RECONCILIATION
-  - target: artifacts/projects/action_game/output/game.js
+- No execution actions
 
 ## Next
 - next_step: MODULE_FLOW — Execute COMPLETE. Next=Closure (implement closureEngine + task bridge).

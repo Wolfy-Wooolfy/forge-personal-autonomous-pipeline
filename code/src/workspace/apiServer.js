@@ -6,6 +6,7 @@ const fs = require("fs");
 const crypto = require("crypto");
 const { handleAuthRequest } = require("../auth/authSystem");
 const { createAiOsRuntime } = require("../ai_os/projectRuntime");
+const { createProjectMemoryStore } = require("../memoryEngine");
 
 const ProviderRouter = require("../providers/providerRouter");
 
@@ -27,6 +28,7 @@ function createWorkspaceApiServer(options = {}) {
   const projectRegistryPath = path.resolve(projectsRoot, "project_registry.json");
 
   const aiOsRuntime = createAiOsRuntime({ root });
+  const projectMemoryStore = createProjectMemoryStore({ root });
 
   const allowedWriteRoots = [
     path.resolve(root, "artifacts/llm"),
@@ -1625,6 +1627,43 @@ ${trimmedExisting}`
     return path.resolve(root, getProjectStateRel(projectIdInput));
   }
 
+  function getProjectConversationHistoryRel(projectIdInput) {
+    return `artifacts/projects/${normalizeProjectId(projectIdInput)}/workspace/conversation_history.json`;
+  }
+
+  function getProjectConversationHistoryAbs(projectIdInput) {
+    return path.resolve(root, getProjectConversationHistoryRel(projectIdInput));
+  }
+
+  function readProjectConversationHistory(projectIdInput) {
+    const items = readJsonSafe(getProjectConversationHistoryAbs(projectIdInput), []);
+    return Array.isArray(items) ? items : [];
+  }
+
+  function appendProjectConversationTurn(projectIdInput, turn) {
+    const projectId = normalizeProjectId(projectIdInput);
+    const historyAbs = getProjectConversationHistoryAbs(projectId);
+    const items = readProjectConversationHistory(projectId);
+    const entry = {
+      turn_id: `turn_${Date.now()}`,
+      project_id: projectId,
+      created_at: new Date().toISOString(),
+      request: String(turn && turn.request ? turn.request : ""),
+      final_status: String(turn && turn.finalStatus ? turn.finalStatus : ""),
+      proposal_id: String(turn && turn.proposalId ? turn.proposalId : ""),
+      decision_packet_id: String(turn && turn.decisionPacketId ? turn.decisionPacketId : ""),
+      operation_type: String(turn && turn.operationType ? turn.operationType : "UNKNOWN"),
+      file_count: Number.isInteger(turn && turn.fileCount) ? turn.fileCount : 0,
+      messages: Array.isArray(turn && turn.messages) ? turn.messages : []
+    };
+
+    ensureDir(path.dirname(historyAbs));
+    items.push(entry);
+    fs.writeFileSync(historyAbs, JSON.stringify(items, null, 2), "utf8");
+    projectMemoryStore.recordConversationTurn(projectId, entry);
+    return entry;
+  }
+
   function readActiveProjectId() {
     const payload = readJsonSafe(activeProjectPath, null);
 
@@ -1683,6 +1722,8 @@ ${trimmedExisting}`
 
     const decisionPacket = readJsonSafe(decisionPacketAbs, null);
     const executionPackage = readJsonSafe(executionPackageAbs, null);
+    const conversationHistory = readProjectConversationHistory(projectId);
+    const projectMemory = projectMemoryStore.loadMemory(projectId);
 
     const hasDecisionPacket = !!decisionPacket;
     const hasExecutionPackage = !!executionPackage;
@@ -1788,7 +1829,12 @@ ${trimmedExisting}`
       delivery_state: deliveryState,
       conversation_history: {
         proposal_count: proposalCount,
-        draft_count: draftCount
+        draft_count: draftCount,
+        turn_count: conversationHistory.length,
+        latest_turn_id: conversationHistory.length > 0
+          ? String(conversationHistory[conversationHistory.length - 1].turn_id || "")
+          : "",
+        artifact_path: getProjectConversationHistoryRel(projectId)
       },
       decision_history: {
         has_decision_packet: hasDecisionPacket
@@ -1801,8 +1847,13 @@ ${trimmedExisting}`
       },
       review_cycles_count: Number.isInteger(existing.review_cycles_count) ? existing.review_cycles_count : 0,
       pending_decisions: hasExecutionPackage ? ["EXECUTION_PACKAGE_PENDING_FORGE"] : [],
-      memory_state: proposalCount > 0 || hasDecisionPacket ? "ACTIVE" : "EMPTY",
-      version_registry: Array.isArray(existing.version_registry) ? existing.version_registry : [],
+      memory_state:
+        projectMemory.memory_state && projectMemory.memory_state !== "EMPTY"
+          ? projectMemory.memory_state
+          : proposalCount > 0 || hasDecisionPacket ? "ACTIVE" : "EMPTY",
+      version_registry: Array.isArray(projectMemory.version_registry) && projectMemory.version_registry.length > 0
+        ? projectMemory.version_registry
+        : Array.isArray(existing.version_registry) ? existing.version_registry : [],
       active_project_flag: readActiveProjectId() === projectId,
       last_updated_at: new Date().toISOString()
     };
@@ -1814,6 +1865,12 @@ ${trimmedExisting}`
     const projectId = normalizeProjectId(projectIdInput);
     const state = buildProjectState(projectId, overrides);
     const projectStateAbs = getProjectStateAbs(projectId);
+
+    const projectMemory = projectMemoryStore.snapshotProjectState(projectId, state);
+    state.memory_state = projectMemory.memory_state;
+    state.version_registry = Array.isArray(projectMemory.version_registry)
+      ? projectMemory.version_registry
+      : [];
 
     ensureDir(path.dirname(projectStateAbs));
     fs.writeFileSync(projectStateAbs, JSON.stringify(state, null, 2));
@@ -1865,7 +1922,7 @@ ${trimmedExisting}`
         requirement_completeness: state.requirement_completeness === true,
         blocking_questions: openQuestions
       };
-    }
+  }
 
     return {
       ok: true,
@@ -1885,6 +1942,36 @@ ${trimmedExisting}`
     return {
       active_project_id: readActiveProjectId(),
       items
+    };
+  }
+
+  function getProjectConversationHistory(body = {}) {
+    const projectId =
+      typeof body.project_id === "string" && body.project_id.trim() !== ""
+        ? body.project_id.trim()
+        : readActiveProjectId();
+
+    return {
+      ok: true,
+      project_id: normalizeProjectId(projectId),
+      items: readProjectConversationHistory(projectId)
+    };
+  }
+
+  function recordProjectConversationTurn(body = {}) {
+    const projectId =
+      typeof body.project_id === "string" && body.project_id.trim() !== ""
+        ? body.project_id.trim()
+        : readActiveProjectId();
+
+    const entry = appendProjectConversationTurn(projectId, body.turn || body);
+    const state = persistProjectState(projectId);
+
+    return {
+      ok: true,
+      project_id: normalizeProjectId(projectId),
+      entry,
+      project: state
     };
   }
 
@@ -2833,7 +2920,7 @@ function buildExecutionPackage(packet) {
 
       if (req.method === "POST" && pathname === "/api/ai-os/options") {
         const body = await readBody(req);
-        sendJson(res, 200, aiOsRuntime.registerOptions(body));
+        sendJson(res, 200, await aiOsRuntime.registerOptions(body));
         return;
       }
 
@@ -2845,7 +2932,13 @@ function buildExecutionPackage(packet) {
 
       if (req.method === "POST" && pathname === "/api/ai-os/documentation/draft") {
         const body = await readBody(req);
-        sendJson(res, 200, aiOsRuntime.saveDocumentationDraft(body));
+        sendJson(res, 200, await aiOsRuntime.saveDocumentationDraft(body));
+        return;
+      }
+
+      if (req.method === "POST" && pathname === "/api/ai-os/documentation/current") {
+        const body = await readBody(req);
+        sendJson(res, 200, aiOsRuntime.getDocumentationDraft(body));
         return;
       }
 
@@ -2857,7 +2950,7 @@ function buildExecutionPackage(packet) {
 
       if (req.method === "POST" && pathname === "/api/ai-os/handoff") {
         const body = await readBody(req);
-        sendJson(res, 200, aiOsRuntime.createExecutionHandoff(body));
+        sendJson(res, 200, await aiOsRuntime.createExecutionHandoff(body));
         return;
       }
 
@@ -2891,6 +2984,19 @@ function buildExecutionPackage(packet) {
           active_project_id: projectId,
           project: state
         });
+        return;
+      }
+
+      if (req.method === "GET" && pathname === "/api/projects/conversation-history") {
+        sendJson(res, 200, getProjectConversationHistory({
+          project_id: requestUrl.searchParams.get("project_id") || ""
+        }));
+        return;
+      }
+
+      if (req.method === "POST" && pathname === "/api/projects/conversation-history") {
+        const body = await readBody(req);
+        sendJson(res, 200, recordProjectConversationTurn(body));
         return;
       }
 

@@ -230,24 +230,9 @@ function buildRequirementsFromAllDocs(rootAbs) {
   }
 
   const allMdFiles = listFilesRecursive(docsRootAbs).filter((p) => p.toLowerCase().endsWith(".md"));
-  const traceableDocs = [];
 
-  for (const abs of allMdFiles) {
-    const rel = path.relative(rootAbs, abs).replace(/\\/g, "/");
-    const text = fs.readFileSync(abs, "utf-8");
-
-    if (rel.startsWith("docs/03_pipeline/")) {
-      traceableDocs.push(abs);
-      continue;
-    }
-
-    if (isExecutionBoundDoc(text)) {
-      traceableDocs.push(abs);
-    }
-  }
-
-  traceableDocs.sort();
-  return buildRequirementsFromDocFiles(traceableDocs, rootAbs);
+  allMdFiles.sort();
+  return buildRequirementsFromDocFiles(allMdFiles, rootAbs);
 }
 
 function shouldTraceArtifact(relPath) {
@@ -742,6 +727,40 @@ function mapDeterministically(requirements, codeUnits, artifacts, intakeContext)
           "artifacts/verify/verification_results.json"
         ]
       );
+    }
+
+    if (document.startsWith("docs/11_ai_layer/")) {
+      addCodeByFileIncludes([
+        "workspace/apiServer.js",
+        "memoryEngine/index.js",
+        "providers/codexProvider.js",
+        "providers/providerRouter.js",
+        "providers/openAiRequirementDiscoveryProvider.js",
+        "providers/openAiStructuredJsonProvider.js",
+        "auth/authSystem.js"
+      ]);
+      addArtifactsIfPresent([
+        "artifacts/projects/active_project.json",
+        "artifacts/projects/project_registry.json"
+      ]);
+    }
+
+    if (document.startsWith("docs/12_ai_os/")) {
+      addCodeByFileIncludes([
+        "ai_os/projectRuntime.js",
+        "workspace/apiServer.js",
+        "memoryEngine/index.js",
+        "providers/providerRouter.js",
+        "providers/openAiRequirementDiscoveryProvider.js",
+        "providers/openAiStructuredJsonProvider.js",
+        "auth/authSystem.js"
+      ]);
+      addArtifactsIfPresent([
+        "artifacts/projects/active_project.json",
+        "artifacts/projects/project_registry.json",
+        "artifacts/projects/default_project/project_state.json",
+        "artifacts/projects/default_project/execute/execution_package.json"
+      ]);
     }
 
     const uniqCode = Array.from(new Set(mapped_code_units)).sort();

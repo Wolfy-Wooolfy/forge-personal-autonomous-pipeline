@@ -1,10 +1,10 @@
 # intake_report
 
 ## Operating Mode
-- result: FULL_PIPELINE_STATE
+- result: IMPROVE
 
 ## Repository State
-- result: MIXED
+- result: FULL_PIPELINE_STATE
 
 ## Request Presence
 - project_request.json: missing
@@ -13,7 +13,10 @@
 - existing code or docs detected
 
 ## Rules Triggered
-- docs/code/artifacts governed runtime state detected
+- docs/ present
+- code/ present
+- artifacts/ present
+- governed runtime state artifacts present
 
 ## Observed Components
 - docs/

@@ -1,74 +1,22 @@
 {
   "backfill_id": "MODULE_FLOW_BACKFILL_v2",
-  "generated_at": "2026-04-25T19:45:38.601Z",
-  "operating_mode": "FULL_PIPELINE_STATE",
-  "repository_state": "MIXED",
+  "generated_at": "2026-05-02T09:18:50.156Z",
+  "operating_mode": "IMPROVE",
+  "repository_state": "FULL_PIPELINE_STATE",
   "source": {
     "decision_gate_path": "artifacts/decisions/module_flow_decision_gate.json",
-    "decision_gate_sha256": "baa60484ab759f58121fd8d5b9ec61c105f177cb91b4b2e5bf91b063caee676f",
+    "decision_gate_sha256": "81108773ebdb3da1a0157c10b322024306181c1be85697176a48ff0d6922adfd",
     "intake_context_path": "artifacts/intake/intake_context.json",
-    "intake_context_sha256": "f40ec234cf5a934d54762b1007cd357199a8e0146a2b6610ba7d3fff3979d7bd",
-    "workspace_execution_id": "ai_os_execution_1777146184959",
-    "workspace_execution_package_id": "ai_os_package_1777146184959",
-    "workspace_execution_package_path": "artifacts/projects/action_game/execute/execution_package.json"
+    "intake_context_sha256": "dc92e1525e817fd677f11c8ef0a568afe24863ccd794a3e796efba547b51b053",
+    "workspace_execution_id": null,
+    "workspace_execution_package_id": null,
+    "workspace_execution_package_path": null
   },
   "summary": {
-    "approved_actions_seen": 3,
-    "deterministic_backfill_actions": 3,
+    "approved_actions_seen": 0,
+    "deterministic_backfill_actions": 0,
     "excluded_non_backfill_actions": 0,
-    "items_emitted": 3
+    "items_emitted": 0
   },
-  "items": [
-    {
-      "gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "category": "WORKSPACE_CHANGE_REQUEST",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "artifacts/projects/action_game/output/index.html"
-      ],
-      "action": {
-        "action_id": "WORKSPACE_ACTION_1",
-        "description": "governed workspace decision packet approved",
-        "impact_scope": "CODE_WRITE",
-        "requires_decision": false,
-        "target_path": "artifacts/projects/action_game/output/index.html",
-        "action_type": "BACKFILL_RECONCILIATION",
-        "deterministic_template_used": true
-      }
-    },
-    {
-      "gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "category": "WORKSPACE_CHANGE_REQUEST",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "artifacts/projects/action_game/output/style.css"
-      ],
-      "action": {
-        "action_id": "WORKSPACE_ACTION_2",
-        "description": "governed workspace decision packet approved",
-        "impact_scope": "CODE_WRITE",
-        "requires_decision": false,
-        "target_path": "artifacts/projects/action_game/output/style.css",
-        "action_type": "BACKFILL_RECONCILIATION",
-        "deterministic_template_used": true
-      }
-    },
-    {
-      "gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "category": "WORKSPACE_CHANGE_REQUEST",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "artifacts/projects/action_game/output/game.js"
-      ],
-      "action": {
-        "action_id": "WORKSPACE_ACTION_3",
-        "description": "governed workspace decision packet approved",
-        "impact_scope": "CODE_WRITE",
-        "requires_decision": false,
-        "target_path": "artifacts/projects/action_game/output/game.js",
-        "action_type": "BACKFILL_RECONCILIATION",
-        "deterministic_template_used": true
-      }
-    }
-  ]
+  "items": []
 }

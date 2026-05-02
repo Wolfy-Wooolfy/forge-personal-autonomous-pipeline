@@ -1,35 +1,24 @@
 # MODULE FLOW — Backfill Execution Log
 
-- generated_at: 2026-04-25T19:45:38.601Z
-- operating_mode: FULL_PIPELINE_STATE
-- repository_state: MIXED
+- generated_at: 2026-05-02T09:18:50.156Z
+- operating_mode: IMPROVE
+- repository_state: FULL_PIPELINE_STATE
 - blocked: false
 
 ## Source
 - decision_gate_path: artifacts/decisions/module_flow_decision_gate.json
-- decision_gate_sha256: 7def4d37713acc40f16f3b0b29c39e997ff35c0cac4584ff4ab530647b3d56b7
+- decision_gate_sha256: 81108773ebdb3da1a0157c10b322024306181c1be85697176a48ff0d6922adfd
 - intake_context_path: artifacts/intake/intake_context.json
-- intake_context_sha256: f40ec234cf5a934d54762b1007cd357199a8e0146a2b6610ba7d3fff3979d7bd
+- intake_context_sha256: dc92e1525e817fd677f11c8ef0a568afe24863ccd794a3e796efba547b51b053
 
 ## Summary
-- approved_actions_seen: 3
-- deterministic_backfill_actions: 3
+- approved_actions_seen: 0
+- deterministic_backfill_actions: 0
 - excluded_non_backfill_actions: 0
-- items_emitted: 3
+- items_emitted: 0
 
 ## Approved Backfill Actions
-- WORKSPACE_ACTION_1 [WORKSPACE_CHANGE_REQUEST/MEDIUM] governed workspace decision packet approved
-  - target_path: artifacts/projects/action_game/output/index.html
-  - action_type: BACKFILL_RECONCILIATION
-  - deterministic_template_used: true
-- WORKSPACE_ACTION_2 [WORKSPACE_CHANGE_REQUEST/MEDIUM] governed workspace decision packet approved
-  - target_path: artifacts/projects/action_game/output/style.css
-  - action_type: BACKFILL_RECONCILIATION
-  - deterministic_template_used: true
-- WORKSPACE_ACTION_3 [WORKSPACE_CHANGE_REQUEST/MEDIUM] governed workspace decision packet approved
-  - target_path: artifacts/projects/action_game/output/game.js
-  - action_type: BACKFILL_RECONCILIATION
-  - deterministic_template_used: true
+- None
 
 ## Next
 - next_step: MODULE_FLOW — Backfill COMPLETE. Next=Execute (implement executeEngine + task bridge).

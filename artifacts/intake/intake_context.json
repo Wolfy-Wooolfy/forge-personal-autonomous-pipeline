@@ -1,6 +1,7 @@
 {
-  "operating_mode": "FULL_PIPELINE_STATE",
-  "repository_state": "MIXED",
+  "classification": "FULL_PIPELINE_STATE",
+  "operating_mode": "IMPROVE",
+  "repository_state": "FULL_PIPELINE_STATE",
   "docs_present": true,
   "code_present": true,
   "artifacts_present": true,

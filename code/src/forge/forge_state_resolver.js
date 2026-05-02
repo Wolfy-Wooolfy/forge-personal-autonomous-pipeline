@@ -113,6 +113,36 @@ function isAuthoritativeClosureArtifact(taskId) {
   );
 }
 
+function gapActionsHaveExecutionFork() {
+  const gapActionsPath = path.join(ROOT, "artifacts", "gap", "gap_actions.json");
+  const gapActions = safeReadJson(gapActionsPath);
+
+  if (!gapActions || typeof gapActions !== "object") {
+    return true;
+  }
+
+  if (gapActions.requires_decision === true) {
+    return true;
+  }
+
+  const gaps = Array.isArray(gapActions.gaps) ? gapActions.gaps : [];
+
+  return gaps.some((gap) => {
+    const actions = Array.isArray(gap && gap.recommended_actions)
+      ? gap.recommended_actions
+      : [];
+
+    return (
+      actions.length > 1 ||
+      actions.some((action) => action && action.requires_decision === true)
+    );
+  });
+}
+
+function isConditionalModuleSatisfied(taskId) {
+  return taskId === "TASK-066" && !gapActionsHaveExecutionFork();
+}
+
 function loadRegistryModule() {
   delete require.cache[require.resolve(REGISTRY_PATH)];
   const registryModule = require(REGISTRY_PATH);
@@ -290,13 +320,15 @@ function buildTaskFacts(taskNames, closureMap, allFiles) {
     const taskId = extractTaskIdFromArtifact(taskName);
     const stageArtifact = findStageArtifactForTask(taskId, allFiles);
     const closureArtifact = closureMap.get(taskId) || null;
+    const conditionallySatisfied = isConditionalModuleSatisfied(taskId);
 
     return {
       task_id: taskId,
       has_stage_artifact: Boolean(stageArtifact),
       stage_artifact: stageArtifact ? `artifacts/tasks/${stageArtifact}` : "",
-      has_closure_artifact: Boolean(closureArtifact),
+      has_closure_artifact: Boolean(closureArtifact) || conditionallySatisfied,
       closure_artifact: closureArtifact ? `artifacts/tasks/${closureArtifact}` : "",
+      skipped_by_condition: conditionallySatisfied,
       stage: deriveStageFromTask(taskId, allFiles)
     };
   });

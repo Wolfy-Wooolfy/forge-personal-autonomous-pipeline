@@ -10,7 +10,7 @@
   "technical_goal": "add a button to the UI",
   "current_phase": "EXECUTION_READY",
   "active_runtime_state": "EXECUTION_PREPARATION",
-  "workspace_path": "D:\\S\\Forge\\Tech\\forge-personal-autonomous-pipeline",
+  "workspace_path": "D:\\S\\Halo\\Tech\\forge-personal-autonomous-pipeline",
   "source_of_truth": "ZIP_SNAPSHOT",
   "selected_strategy": "HTML_BUTTON_CREATE",
   "accepted_options": [
@@ -31,7 +31,10 @@
   "delivery_state": "NOT_READY",
   "conversation_history": {
     "proposal_count": 1,
-    "draft_count": 1
+    "draft_count": 1,
+    "turn_count": 0,
+    "latest_turn_id": "",
+    "artifact_path": "artifacts/projects/test_project/workspace/conversation_history.json"
   },
   "decision_history": {
     "has_decision_packet": true
@@ -47,7 +50,29 @@
     "EXECUTION_PACKAGE_PENDING_FORGE"
   ],
   "memory_state": "ACTIVE",
-  "version_registry": [],
+  "version_registry": [
+    {
+      "version_id": "state_0001",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-02T09:14:29.448Z",
+      "state_hash": "367fa3e5e42bf99e2013d8b895a5bdaeb1205fd8baa61d609ca32046fd5864dc",
+      "summary": {
+        "project_id": "test_project",
+        "project_name": "test_project",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "APPROVED",
+        "execution_package_state": "DRAFTING",
+        "execution_state": "PENDING_FORGE",
+        "verification_state": "NOT_READY",
+        "delivery_state": "NOT_READY",
+        "pending_decisions": [
+          "EXECUTION_PACKAGE_PENDING_FORGE"
+        ]
+      }
+    }
+  ],
   "active_project_flag": false,
-  "last_updated_at": "2026-04-28T11:38:49.269Z"
+  "last_updated_at": "2026-05-02T11:50:36.993Z"
 }

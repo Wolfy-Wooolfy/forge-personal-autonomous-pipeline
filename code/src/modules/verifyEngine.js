@@ -1,5 +1,7 @@
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
+const { runValidator: runDocsMustAcceptanceValidator } = require("../../../verify/unit/docs_must_acceptance_validator");
 
 const ROOT = path.resolve(__dirname, "../../..");
 
@@ -16,6 +18,63 @@ function readJson(rel) {
   const abs = path.resolve(ROOT, rel);
   const raw = fs.readFileSync(abs, "utf8");
   return JSON.parse(raw);
+}
+
+function sha256Text(text) {
+  return crypto.createHash("sha256").update(String(text || ""), "utf8").digest("hex");
+}
+
+function utcStampForFile(date = new Date()) {
+  return date.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}Z$/, "Z");
+}
+
+function writeJsonAbs(absPath, payload) {
+  ensureDir(path.dirname(absPath));
+  fs.writeFileSync(absPath, JSON.stringify(payload, null, 2), "utf8");
+}
+
+function writeLiveVerificationReport(results, stage, targetArtifacts) {
+  const liveReportAbs = path.resolve(ROOT, "verify", "unit", "verification_report.json");
+  const failed = results.summary.failed_checks > 0;
+  const payload = {
+    timestamp_utc: results.generated_at,
+    stage,
+    target_artifacts: targetArtifacts,
+    verification_types: [
+      "STRUCTURAL_MODULE_FLOW",
+      "CONTRACT_MODULE_FLOW",
+      "CONSISTENCY_MODULE_FLOW"
+    ],
+    result: failed ? "FAIL" : "PASS"
+  };
+
+  if (failed) {
+    payload.failure_code = "MODULE_FLOW_VERIFICATION_FAILED";
+    payload.short_reason = `failed_checks=${results.summary.failed_checks}`;
+  }
+
+  writeJsonAbs(liveReportAbs, payload);
+  return "verify/unit/verification_report.json";
+}
+
+function writeRetryAttemptRecord(results, stage, triggeringReportRel) {
+  const stamp = utcStampForFile();
+  const retryId = `RETRY-${stamp}-${stage}`;
+  const retryRel = `verify/unit/retry_attempts/${retryId}.json`;
+  const retryAbs = path.resolve(ROOT, retryRel);
+
+  writeJsonAbs(retryAbs, {
+    retry_id: retryId,
+    timestamp_utc: new Date().toISOString(),
+    stage,
+    triggering_verification_report: triggeringReportRel,
+    failure_code: "MODULE_FLOW_VERIFICATION_FAILED",
+    corrective_strategy_id: "NO_RETRY_AUTOMATIC_VERIFICATION_FINALITY",
+    materially_distinct_proof: "No retry attempted by Verify; downstream control must classify the failed attempt.",
+    result: "SKIPPED"
+  });
+
+  return retryRel;
 }
 
 function normalizeProjectId(projectIdInput) {
@@ -84,9 +143,22 @@ function runVerify(context) {
     "artifacts/execute/execute_plan.json"
   ];
 
+  const stage = context && typeof context.stage === "string" && /^[BCD]$/i.test(context.stage)
+    ? String(context.stage).toUpperCase()
+    : "D";
+
   const requiredMdArtifacts = [
     "artifacts/execute/execute_diff.md",
     "artifacts/execute/execute_log.md"
+  ];
+
+  const verificationTargets = [
+    ...requiredJsonArtifacts,
+    ...requiredMdArtifacts,
+    "artifacts/decisions/module_flow_decision_gate.json",
+    "artifacts/decisions/decision_auto_pass.md",
+    "artifacts/decisions/decision_packet.json",
+    "verify/unit/docs_must_acceptance_report.json"
   ];
 
   const decisionArtifactOptions = [
@@ -204,9 +276,11 @@ function runVerify(context) {
     }
   } catch (e) {}
 
-  const backfillActions = Array.isArray(backfillPlan && backfillPlan.approved_code_actions)
-    ? backfillPlan.approved_code_actions
-    : [];
+  const backfillActions = Array.isArray(backfillPlan && backfillPlan.approved_actions)
+    ? backfillPlan.approved_actions
+    : Array.isArray(backfillPlan && backfillPlan.approved_code_actions)
+      ? backfillPlan.approved_code_actions
+      : [];
 
   const executeActions = Array.isArray(executePlan && executePlan.approved_code_actions)
     ? executePlan.approved_code_actions
@@ -450,6 +524,31 @@ function runVerify(context) {
     intakeSnapshot !== null ? `locked_snapshot_flag=${intakeSnapshot.locked_snapshot_flag === true ? "true" : "false"}` : "intake snapshot unavailable"
   );
 
+  let docsMustAcceptanceReport = null;
+
+  try {
+    docsMustAcceptanceReport = runDocsMustAcceptanceValidator();
+  } catch (err) {
+    docsMustAcceptanceReport = {
+      result: "FAIL",
+      summary: {
+        failed_checks: 1
+      },
+      error: err && err.message ? err.message : String(err)
+    };
+  }
+
+  addCheck(
+    "docs_must_acceptance_passed",
+    docsMustAcceptanceReport &&
+      docsMustAcceptanceReport.result === "PASS" &&
+      docsMustAcceptanceReport.summary &&
+      docsMustAcceptanceReport.summary.failed_checks === 0,
+    docsMustAcceptanceReport
+      ? `result=${docsMustAcceptanceReport.result}; failed_checks=${docsMustAcceptanceReport.summary ? docsMustAcceptanceReport.summary.failed_checks : "unknown"}`
+      : "docs MUST acceptance report unavailable"
+  );
+
   results.closure_gate.execute_artifacts_complete =
     fileExists(executePlanRel) &&
     fileExists("artifacts/execute/execute_diff.md") &&
@@ -506,6 +605,10 @@ function runVerify(context) {
     results.outcome = "FAIL";
     results.final_outcome = "FAIL";
 
+    const liveReportRel = writeLiveVerificationReport(results, stage, verificationTargets);
+    results.live_verification_report = liveReportRel;
+    results.retry_attempt_record = writeRetryAttemptRecord(results, stage, liveReportRel);
+
     fs.writeFileSync(reportPath, md.join("\n"), { encoding: "utf8" });
     fs.writeFileSync(jsonPath, JSON.stringify(results, null, 2), { encoding: "utf8" });
 
@@ -527,6 +630,7 @@ function runVerify(context) {
   results.status = "PASS";
   results.outcome = "PASS";
   results.final_outcome = "PASS";
+  results.live_verification_report = writeLiveVerificationReport(results, stage, verificationTargets);
 
   fs.writeFileSync(reportPath, md.join("\n"), { encoding: "utf8" });
   fs.writeFileSync(jsonPath, JSON.stringify(results, null, 2), { encoding: "utf8" });

@@ -1,6 +1,6 @@
 # Verification Report
 
-generated_at: 2026-04-25T19:45:38.610Z
+generated_at: 2026-05-02T11:05:43.996Z
 status: PASS
 
 ## Closure Gate Readiness
@@ -23,19 +23,20 @@ status: PASS
 - artifacts_execute_execute_plan_json_valid_json: PASS artifacts/execute/execute_plan.json
 - artifacts_execute_execute_diff_md_exists: PASS artifacts/execute/execute_diff.md
 - artifacts_execute_execute_log_md_exists: PASS artifacts/execute/execute_log.md
-- decision_artifact_present: PASS artifacts/decisions/decision_packet.json, artifacts/decisions/module_flow_decision_gate.json
-- execute_plan_matches_backfill_plan: PASS backfill_actions=3; execute_actions=3
-- decision_gate_matches_backfill_plan: PASS decision_actions=3; backfill_actions=3
-- workspace_runtime_execution_id_consistent: PASS decision=ai_os_execution_1777146184959; backfill=ai_os_execution_1777146184959; execute=ai_os_execution_1777146184959
+- decision_artifact_present: PASS artifacts/decisions/decision_auto_pass.md, artifacts/decisions/module_flow_decision_gate.json
+- execute_plan_matches_backfill_plan: PASS backfill_actions=0; execute_actions=0
+- decision_gate_matches_backfill_plan: PASS decision_actions=0; backfill_actions=0
+- workspace_runtime_execution_id_consistent: PASS decision=NONE; backfill=NONE; execute=NONE
 - workspace_runtime_matches_current_execution_package: PASS No current workspace execution_package.json
-- workspace_execution_package_identity_consistent: PASS decision_package_id=ai_os_package_1777146184959; backfill_package_id=ai_os_package_1777146184959; execute_package_id=ai_os_package_1777146184959; decision_package_path=artifacts/projects/action_game/execute/execution_package.json; backfill_package_path=artifacts/projects/action_game/execute/execution_package.json; execute_package_path=artifacts/projects/action_game/execute/execution_package.json
+- workspace_execution_package_identity_consistent: PASS decision_package_id=NONE; backfill_package_id=NONE; execute_package_id=NONE; decision_package_path=NONE; backfill_package_path=NONE; execute_package_path=NONE
 - workspace_execution_package_matches_current_artifact: PASS No current workspace execution_package.json
-- workspace_runtime_write_applied: PASS execute_actions=3; wrote_content_all=true
+- workspace_runtime_write_applied: PASS execute_actions=0; wrote_content_all=n/a
 - gap_count_zero: PASS gap_count=0
 - critical_violations_zero: PASS critical_violations=0
 - orphan_code_units_zero: PASS orphan_code_units=0
 - orphan_requirements_zero: PASS orphan_requirements=0
 - orphan_artifacts_zero: PASS orphan_artifacts=0
 - audit_not_blocked: PASS audit_blocked=false
-- trace_mappings_present: PASS mappings=579
+- trace_mappings_present: PASS mappings=1253
 - intake_snapshot_locked: PASS locked_snapshot_flag=true
+- docs_must_acceptance_passed: PASS result=PASS; failed_checks=0

@@ -355,8 +355,14 @@ function renderDecisionMd(payload) {
     lines.push(`- intake_context_path: ${payload.source.intake_context_path}`);
     lines.push(`- intake_context_sha256: ${payload.source.intake_context_sha256}`);
   } else {
-    lines.push(`- exploration_matrix_path: ${payload.source.exploration_matrix_path}`);
-    lines.push(`- exploration_matrix_sha256: ${payload.source.exploration_matrix_sha256}`);
+    if (payload.source.exploration_matrix_path) {
+      lines.push(`- exploration_matrix_path: ${payload.source.exploration_matrix_path}`);
+      lines.push(`- exploration_matrix_sha256: ${payload.source.exploration_matrix_sha256}`);
+    }
+    if (payload.source.gap_actions_path) {
+      lines.push(`- gap_actions_path: ${payload.source.gap_actions_path}`);
+      lines.push(`- gap_actions_sha256: ${payload.source.gap_actions_sha256}`);
+    }
     lines.push(`- intake_context_path: ${payload.source.intake_context_path}`);
     lines.push(`- intake_context_sha256: ${payload.source.intake_context_sha256}`);
   }
@@ -423,22 +429,88 @@ function renderDecisionMd(payload) {
   return lines.join("\n");
 }
 
+function buildDecisionPacketPayload({
+  executionId,
+  triggeringGaps,
+  question,
+  options,
+  recommendationReference
+}) {
+  return {
+    execution_id: executionId,
+    triggering_gaps: Array.isArray(triggeringGaps) ? triggeringGaps : [],
+    question: String(question || ""),
+    options: Array.isArray(options) ? options : [],
+    recommendation_reference: String(recommendationReference || ""),
+    confirmation_required_format: "Select exactly one option_id"
+  };
+}
+
+function renderDecisionPacketMd(packet) {
+  const lines = [];
+
+  lines.push("# Decision Packet");
+  lines.push("");
+  lines.push(`- execution_id: ${packet.execution_id}`);
+  lines.push(`- question: ${packet.question}`);
+  lines.push(`- confirmation_required_format: ${packet.confirmation_required_format}`);
+  lines.push(`- recommendation_reference: ${packet.recommendation_reference || "NONE"}`);
+  lines.push("");
+  lines.push("## Triggering Gaps");
+
+  if (packet.triggering_gaps.length === 0) {
+    lines.push("- None");
+  } else {
+    for (const gapId of packet.triggering_gaps) {
+      lines.push(`- ${gapId}`);
+    }
+  }
+
+  lines.push("");
+  lines.push("## Options");
+
+  if (packet.options.length === 0) {
+    lines.push("- None");
+  } else {
+    for (const option of packet.options) {
+      lines.push(`- ${option.option_id}: ${option.description}`);
+      lines.push(`  - impact_scope: ${option.impact_scope}`);
+      lines.push(`  - risk_level: ${option.risk_level}`);
+    }
+  }
+
+  lines.push("");
+  return lines.join("\n");
+}
+
+function renderDecisionAutoPassMd(payload) {
+  return [
+    "# Decision Auto Pass",
+    "",
+    `- execution_id: ${payload.execution_id}`,
+    `- reason: ${payload.reason}`,
+    "- blocked: false",
+    ""
+  ].join("\n");
+}
+
 function runDecisionGate(context) {
   const explorationMatrixAbs = path.resolve(ROOT, "artifacts", "exploration", "option_matrix.json");
+  const gapActionsAbs = path.resolve(ROOT, "artifacts", "gap", "gap_actions.json");
   const intakeContextAbs = path.resolve(ROOT, "artifacts", "intake", "intake_context.json");
   const projectId = normalizeProjectId(
     context && typeof context.project_id === "string" ? context.project_id : ""
   );
   const workspaceBundle = readExecutionPackageBundle(projectId);
 
-  if (!workspaceBundle && !fs.existsSync(explorationMatrixAbs)) {
+  if (!workspaceBundle && !fs.existsSync(explorationMatrixAbs) && !fs.existsSync(gapActionsAbs)) {
     return {
       stage_progress_percent: 100,
       blocked: true,
       status_patch: {
         next_step: "",
         blocking_questions: [
-          "Decision Gate BLOCKED: artifacts/exploration/option_matrix.json missing. Run Design Exploration first."
+          "Decision Gate BLOCKED: artifacts/gap/gap_actions.json missing. Run Gap first."
         ]
       }
     };
@@ -497,9 +569,15 @@ function runDecisionGate(context) {
 
   const relDecisionJson = "artifacts/decisions/module_flow_decision_gate.json";
   const relDecisionMd = "artifacts/decisions/module_flow_decision_gate.md";
+  const relDecisionPacketJson = "artifacts/decisions/decision_packet.json";
+  const relDecisionPacketMd = "artifacts/decisions/decision_packet.md";
+  const relDecisionAutoPassMd = "artifacts/decisions/decision_auto_pass.md";
 
   const decisionJsonAbs = path.resolve(ROOT, relDecisionJson);
   const decisionMdAbs = path.resolve(ROOT, relDecisionMd);
+  const decisionPacketJsonAbs = path.resolve(ROOT, relDecisionPacketJson);
+  const decisionPacketMdAbs = path.resolve(ROOT, relDecisionPacketMd);
+  const decisionAutoPassMdAbs = path.resolve(ROOT, relDecisionAutoPassMd);
 
   if (workspaceBundle) {
     const flatActions = flattenExecutionPackageActions(workspaceBundle);
@@ -561,6 +639,14 @@ function runDecisionGate(context) {
 
     fs.writeFileSync(decisionJsonAbs, JSON.stringify(decisionPayload, null, 2), { encoding: "utf8" });
     fs.writeFileSync(decisionMdAbs, renderDecisionMd(decisionPayload), { encoding: "utf8" });
+    fs.writeFileSync(
+      decisionAutoPassMdAbs,
+      renderDecisionAutoPassMd({
+        execution_id: decisionPayload.decision_id,
+        reason: "workspace execution package contains approved deterministic actions"
+      }),
+      { encoding: "utf8" }
+    );
 
     return {
       stage_progress_percent: 100,
@@ -574,7 +660,25 @@ function runDecisionGate(context) {
     };
   }
 
-  const actionsObj = readJson(explorationMatrixAbs);
+  const gapActionsObj = fs.existsSync(gapActionsAbs) ? readJson(gapActionsAbs) : null;
+  const gapHasCurrentActions =
+    gapActionsObj &&
+    (
+      (Array.isArray(gapActionsObj.gaps) && gapActionsObj.gaps.length > 0) ||
+      (Array.isArray(gapActionsObj.items) && gapActionsObj.items.length > 0) ||
+      (Array.isArray(gapActionsObj.actions) && gapActionsObj.actions.length > 0) ||
+      gapActionsObj.requires_decision === true ||
+      Number(gapActionsObj.total_gaps || 0) > 0
+    );
+
+  const sourceActionsPath = gapHasCurrentActions || !fs.existsSync(explorationMatrixAbs)
+    ? "artifacts/gap/gap_actions.json"
+    : "artifacts/exploration/option_matrix.json";
+  const sourceActionsAbs = path.resolve(ROOT, sourceActionsPath);
+  const actionsObj = sourceActionsPath === "artifacts/gap/gap_actions.json" && gapActionsObj
+    ? gapActionsObj
+    : readJson(sourceActionsAbs);
+  const sourceActionsText = JSON.stringify(actionsObj, null, 2);
   const flatActions = flattenGapActions(actionsObj);
 
   if (flatActions.length === 0) {
@@ -592,8 +696,15 @@ function runDecisionGate(context) {
       override_source: decision.source,
       override_raw: decision.raw,
       source: {
-        exploration_matrix_path: "artifacts/exploration/option_matrix.json",
-        exploration_matrix_sha256: sha256Text(JSON.stringify(actionsObj, null, 2)),
+        ...(sourceActionsPath === "artifacts/exploration/option_matrix.json"
+          ? {
+              exploration_matrix_path: sourceActionsPath,
+              exploration_matrix_sha256: sha256Text(sourceActionsText)
+            }
+          : {
+              gap_actions_path: sourceActionsPath,
+              gap_actions_sha256: sha256Text(sourceActionsText)
+            }),
         intake_context_path: "artifacts/intake/intake_context.json",
         intake_context_sha256: sha256Text(intakeText)
       },
@@ -611,6 +722,14 @@ function runDecisionGate(context) {
 
     fs.writeFileSync(decisionJsonAbs, JSON.stringify(decisionPayload, null, 2), { encoding: "utf8" });
     fs.writeFileSync(decisionMdAbs, renderDecisionMd(decisionPayload), { encoding: "utf8" });
+    fs.writeFileSync(
+      decisionAutoPassMdAbs,
+      renderDecisionAutoPassMd({
+        execution_id: decisionPayload.decision_id,
+        reason: "gap_actions.requires_decision=false and no critical gaps detected"
+      }),
+      { encoding: "utf8" }
+    );
 
     return {
       stage_progress_percent: 100,
@@ -667,7 +786,7 @@ function runDecisionGate(context) {
     approvedActions.push(cleanRow);
   }
 
-  const actionsText = JSON.stringify(actionsObj, null, 2);
+  const actionsText = sourceActionsText;
   const intakeText = JSON.stringify(intakeContext, null, 2);
   const stamp = new Date().toISOString();
 
@@ -684,8 +803,15 @@ function runDecisionGate(context) {
     override_source: decision.source,
     override_raw: decision.raw,
     source: {
-      exploration_matrix_path: "artifacts/exploration/option_matrix.json",
-      exploration_matrix_sha256: sha256Text(actionsText),
+      ...(sourceActionsPath === "artifacts/exploration/option_matrix.json"
+        ? {
+            exploration_matrix_path: sourceActionsPath,
+            exploration_matrix_sha256: sha256Text(actionsText)
+          }
+        : {
+            gap_actions_path: sourceActionsPath,
+            gap_actions_sha256: sha256Text(actionsText)
+          }),
       intake_context_path: "artifacts/intake/intake_context.json",
       intake_context_sha256: sha256Text(intakeText)
     },
@@ -720,6 +846,25 @@ function runDecisionGate(context) {
   }
 
   if (blocked) {
+    const packetOptions = reviewRequiredActions.map((row) => ({
+      option_id: row.action_id,
+      description: row.description,
+      impact_scope: row.impact_scope,
+      risk_level: row.severity,
+      downstream_effects: [row.category],
+      cognitive_priority_hint: row.cognitive_priority_hint
+    }));
+    const packet = buildDecisionPacketPayload({
+      executionId: decisionPayload.decision_id,
+      triggeringGaps: Array.from(new Set(reviewRequiredActions.map((row) => row.gap_id).filter(Boolean))).sort(),
+      question: "Select exactly one reviewed action option to approve, or reject the decision packet.",
+      options: packetOptions,
+      recommendationReference: sourceActionsPath
+    });
+
+    fs.writeFileSync(decisionPacketJsonAbs, JSON.stringify(packet, null, 2), { encoding: "utf8" });
+    fs.writeFileSync(decisionPacketMdAbs, renderDecisionPacketMd(packet), { encoding: "utf8" });
+
     return {
       stage_progress_percent: 100,
       artifact: relDecisionMd,
@@ -733,6 +878,15 @@ function runDecisionGate(context) {
       }
     };
   }
+
+  fs.writeFileSync(
+    decisionAutoPassMdAbs,
+    renderDecisionAutoPassMd({
+      execution_id: decisionPayload.decision_id,
+      reason: "requires_decision=false after deterministic risk classification"
+    }),
+    { encoding: "utf8" }
+  );
 
   return {
     stage_progress_percent: 100,

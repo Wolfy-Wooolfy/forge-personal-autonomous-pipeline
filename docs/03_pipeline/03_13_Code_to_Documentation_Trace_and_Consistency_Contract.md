@@ -56,7 +56,7 @@ If artifact container format is violated:
 → Execution MUST FAIL CLOSED.
 
 Reference:
-- `docs/05_artifacts/Artifact_Serialization_and_Embedded_JSON_Rule.md` (DOC-21)
+- `docs/05_artifacts/05_18_Artifact_Serialization_and_Embedded_JSON_Rule.md` (DOC-21)
 
 ---
 

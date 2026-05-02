@@ -2,8 +2,8 @@
 
 ## Summary
 - blocked: false
-- total_checks: 347
-- passed_checks: 346
+- total_checks: 921
+- passed_checks: 920
 - failed_checks: 0
 
 ## Violations

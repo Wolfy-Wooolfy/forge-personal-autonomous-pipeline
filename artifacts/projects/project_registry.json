@@ -1,6 +1,6 @@
 {
-  "active_project_id": "test_project_2",
-  "updated_at": "2026-04-28T11:38:49.301Z",
+  "active_project_id": "memory_test_1777676557976",
+  "updated_at": "2026-05-02T11:50:37.007Z",
   "projects": [
     {
       "project_id": "action_game",
@@ -12,7 +12,17 @@
         "EXECUTION_PACKAGE_PENDING_FORGE"
       ],
       "active_project_flag": false,
-      "last_updated_at": "2026-04-28T11:38:49.303Z"
+      "last_updated_at": "2026-05-02T11:50:37.008Z"
+    },
+    {
+      "project_id": "codex_test_project",
+      "project_name": "codex_test_project",
+      "project_status": "ACTIVE",
+      "current_phase": "DISCOVERY",
+      "active_runtime_state": "DISCUSSION",
+      "pending_decisions": [],
+      "active_project_flag": false,
+      "last_updated_at": "2026-05-02T11:50:37.009Z"
     },
     {
       "project_id": "default_project",
@@ -24,7 +34,29 @@
         "EXECUTION_PACKAGE_PENDING_FORGE"
       ],
       "active_project_flag": false,
-      "last_updated_at": "2026-04-28T11:38:49.305Z"
+      "last_updated_at": "2026-05-02T11:50:37.009Z"
+    },
+    {
+      "project_id": "memory_test_1777676534218",
+      "project_name": "Memory Test",
+      "project_status": "ACTIVE",
+      "current_phase": "DISCOVERY",
+      "active_runtime_state": "DISCUSSION",
+      "pending_decisions": [],
+      "active_project_flag": false,
+      "last_updated_at": "2026-05-02T11:50:37.010Z"
+    },
+    {
+      "project_id": "memory_test_1777676557976",
+      "project_name": "Memory Test",
+      "project_status": "ACTIVE",
+      "current_phase": "EXECUTION_READY",
+      "active_runtime_state": "EXECUTION_PREPARATION",
+      "pending_decisions": [
+        "EXECUTION_PACKAGE_PENDING_FORGE"
+      ],
+      "active_project_flag": true,
+      "last_updated_at": "2026-05-02T11:50:37.010Z"
     },
     {
       "project_id": "mobile_game",
@@ -36,7 +68,7 @@
         "EXECUTION_PACKAGE_PENDING_FORGE"
       ],
       "active_project_flag": false,
-      "last_updated_at": "2026-04-28T11:38:49.307Z"
+      "last_updated_at": "2026-05-02T11:50:37.011Z"
     },
     {
       "project_id": "test_project",
@@ -48,7 +80,7 @@
         "EXECUTION_PACKAGE_PENDING_FORGE"
       ],
       "active_project_flag": false,
-      "last_updated_at": "2026-04-28T11:38:49.310Z"
+      "last_updated_at": "2026-05-02T11:50:37.012Z"
     },
     {
       "project_id": "test_project_2",
@@ -57,8 +89,8 @@
       "current_phase": "DOCS_DRAFTING",
       "active_runtime_state": "DOCUMENTATION",
       "pending_decisions": [],
-      "active_project_flag": true,
-      "last_updated_at": "2026-04-28T11:38:49.311Z"
+      "active_project_flag": false,
+      "last_updated_at": "2026-05-02T11:50:37.013Z"
     },
     {
       "project_id": "test_project_3",
@@ -70,7 +102,7 @@
         "EXECUTION_PACKAGE_PENDING_FORGE"
       ],
       "active_project_flag": false,
-      "last_updated_at": "2026-04-28T11:38:49.299Z"
+      "last_updated_at": "2026-05-02T11:50:37.007Z"
     }
   ]
 }
