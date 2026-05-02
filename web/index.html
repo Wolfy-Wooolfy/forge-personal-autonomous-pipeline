@@ -666,9 +666,7 @@
         }
 
         lines.push("");
-        lines.push("الخطوة التالية لو وافقت: سأجهز لك مسودة منظمة ومراجعة للتغييرات فقط، بدون أي تنفيذ مباشر.");
-        lines.push("لو تريدني أكمل في نفس الطلب اكتب: كمل");
-        lines.push("ولو تريد إيقاف الطلب الحالي أو تغييره اكتب: وقف");
+        lines.push("اختار الخطوة المناسبة من الأزرار التالية. لن يتم أي تنفيذ مباشر بدون موافقة واضحة.");
 
         return lines.join("\n");
       }
@@ -685,9 +683,7 @@
       }
 
       lines.push("");
-      lines.push("If you want me to continue, I will prepare a governed draft and change review only, with no direct execution.");
-      lines.push("Reply with: continue");
-      lines.push("Or reply with: stop");
+      lines.push("Choose the appropriate next step from the buttons below. No direct execution will happen without explicit approval.");
 
       return lines.join("\n");
     }
@@ -698,17 +694,13 @@
       if (lang === "ar") {
         return [
           "ما زال عندنا طلب مفتوح لم يتم حسمه بعد.",
-          "أحتاج أولاً تأكيدًا منك قبل أن أفتح اتجاهًا جديدًا.",
-          "اكتب: كمل",
-          "أو اكتب: وقف"
+          "اختار الخطوة المناسبة من الأزرار التالية قبل فتح اتجاه جديد."
         ].join("\n");
       }
 
       return [
         "There is still an open request waiting for your decision.",
-        "I need your confirmation first before opening a new direction.",
-        "Reply with: continue",
-        "Or reply with: stop"
+        "Choose the appropriate next step from the buttons below before opening a new direction."
       ].join("\n");
     }
 
@@ -742,31 +734,32 @@
         nextAction: "AI_OS_OPTIONS"
       };
 
+      const choices = buildCurrentProjectActionChoices();
+
       pushMessage(
         "assistant",
-        lang === "ar" ? "تأكيد قبل عرض المقترحات" : "Confirmation Before Proposals",
-        `<div class="file-preview">${formatMessageText(
-          lang === "ar"
-            ? [
-                `أنا فهمت طلبك كالتالي: ${requestText}`,
-                "التحليل اكتمل.",
-                "",
-                "الخطوة التالية لو وافقت: سأعرض عليك مقترحات منظمة للمشروع تختار منها، بدون أي تنفيذ مباشر.",
-                "اكتب: كمل",
-                "أو اكتب: اعرض المقترح"
-              ].join("\n")
-            : [
-                `I understood your request as: ${requestText}`,
-                "Discovery is complete.",
-                "",
-                "If you approve, I will show structured project proposals for your decision, with no direct execution.",
-                "Reply with: continue",
-                "Or reply with: show the proposal"
-              ].join("\n")
-        )}</div>`
+        lang === "ar" ? "اختيارات المتابعة" : "Follow-up Choices",
+        `
+          <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
+            lang === "ar"
+              ? [
+                  `أنا فهمت طلبك كالتالي: ${requestText}`,
+                  "التحليل اكتمل.",
+                  "",
+                  "اختار الخطوة المناسبة من الأزرار التالية:"
+                ].join("\n")
+              : [
+                  `I understood your request as: ${requestText}`,
+                  "Discovery is complete.",
+                  "",
+                  "Choose the appropriate next step from the buttons below:"
+                ].join("\n")
+          )}</div>
+          ${buildCurrentProjectActionChoiceHtml(choices)}
+        `
       );
 
-      setStatus(lang === "ar" ? "بانتظار تأكيدك قبل عرض المقترحات." : "Waiting for confirmation before showing proposals.");
+      setStatus(lang === "ar" ? "بانتظار اختيارك للخطوة التالية." : "Waiting for your next-step choice.");
     }
 
     function buildAiOsOptionsMessage(options, recommendation, requestText) {
@@ -870,7 +863,32 @@
 
       if (!draftResult.ok) {
         renderResponse(draftResult);
-        pushMessage("assistant", "AI OS Response", `<div class="file-preview">${formatMessageText(JSON.stringify(draftResult, null, 2))}</div>`);
+
+        const choices = buildCurrentProjectActionChoices();
+
+        pushMessage(
+          "assistant",
+          detectUserLanguage(request) === "ar" ? "توقف مؤقت في تجهيز الوثيقة" : "Documentation Draft Blocked",
+          `
+            <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
+              detectUserLanguage(request) === "ar"
+                ? [
+                    "تجهيز الوثيقة توقف مؤقتًا.",
+                    `السبب: ${draftResult.blocking_question || draftResult.reason || "AI Provider is not available."}`,
+                    "",
+                    "اختار الخطوة المناسبة من الأزرار التالية:"
+                  ].join("\n")
+                : [
+                    "Documentation drafting is temporarily blocked.",
+                    `Reason: ${draftResult.blocking_question || draftResult.reason || "AI Provider is not available."}`,
+                    "",
+                    "Choose the appropriate next step from the buttons below:"
+                  ].join("\n")
+            )}</div>
+            ${buildCurrentProjectActionChoiceHtml(choices)}
+          `
+        );
+
         setStatus(draftResult.reason || "AI OS documentation draft blocked.");
         return false;
       }
@@ -879,17 +897,24 @@
       const content = draftResult.documentation_content || "";
       const path = draftResult.documentation_path || "";
 
+      const choices = buildCurrentProjectActionChoices();
+
       pushMessage(
         "assistant",
         lang === "ar" ? "مسودة الوثيقة جاهزة" : "Documentation Draft Ready",
-        `<div class="file-preview">${formatMessageText(
-          [
-            lang === "ar" ? "تم تجهيز مسودة الوثيقة للمراجعة." : "The documentation draft is ready for review.",
-            path ? `${lang === "ar" ? "المسار" : "Path"}: ${path}` : "",
-            "",
-            content
-          ].filter(Boolean).join("\n")
-        )}</div>`
+        `
+          <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
+            [
+              lang === "ar" ? "تم تجهيز مسودة الوثيقة للمراجعة." : "The documentation draft is ready for review.",
+              path ? `${lang === "ar" ? "المسار" : "Path"}: ${path}` : "",
+              "",
+              content,
+              "",
+              lang === "ar" ? "اختار الخطوة المناسبة من الأزرار التالية:" : "Choose the appropriate next step from the buttons below:"
+            ].filter(Boolean).join("\n")
+          )}</div>
+          ${buildCurrentProjectActionChoiceHtml(choices)}
+        `
       );
 
       setStatus("AI OS documentation draft is ready for review.");
@@ -949,12 +974,16 @@
       return normalized === "approve docs" ||
         normalized === "approve documentation" ||
         normalized === "approve" ||
-        normalized === "\u0627\u0639\u062a\u0645\u062f \u0627\u0644\u0648\u062b\u0627\u0626\u0642" ||
-        normalized === "\u0648\u0627\u0641\u0642 \u0639\u0644\u0649 \u0627\u0644\u0648\u062b\u0627\u0626\u0642" ||
-        normalized === "\u0627\u0639\u062a\u0645\u062f \u0627\u0644\u0648\u062b\u064a\u0642\u0629" ||
-        normalized === "\u0648\u0627\u0641\u0642 \u0639\u0644\u0649 \u0627\u0644\u0648\u062b\u064a\u0642\u0629" ||
-        normalized === "\u0627\u0639\u062a\u0645\u062f" ||
-        normalized === "\u0648\u0627\u0641\u0642";
+        normalized === "approved" ||
+        normalized === "اعتمد الوثائق" ||
+        normalized === "وافق على الوثائق" ||
+        normalized === "موافق على الوثائق" ||
+        normalized === "اعتمد الوثيقة" ||
+        normalized === "وافق على الوثيقة" ||
+        normalized === "موافق على الوثيقة" ||
+        normalized === "اعتمد" ||
+        normalized === "وافق" ||
+        normalized === "موافق";
     }
 
     function isStopCurrentProjectRequest(value) {
@@ -1010,17 +1039,24 @@
         return false;
       }
 
+      if (
+        normalized.includes("الخطوة") ||
+        normalized.includes("التالي") ||
+        normalized.includes("الجاي") ||
+        normalized.includes("اعمل ايه") ||
+        normalized.includes("اعمل إيه") ||
+        normalized.includes("مش فاهم") ||
+        normalized.includes("مش واضح") ||
+        normalized.includes("what next") ||
+        normalized.includes("next step")
+      ) {
+        return true;
+      }
+
       return normalized === "ok" ||
         normalized === "okay" ||
-        normalized === "what next" ||
-        normalized === "next step" ||
-        normalized === "\u062a\u0645\u0627\u0645" ||
-        normalized === "\u0645\u0627\u0634\u064a" ||
-        normalized === "\u0645\u0634 \u0641\u0627\u0647\u0645" ||
-        normalized === "\u0645\u0634 \u0641\u0627\u0647\u0645\u0643" ||
-        normalized === "\u0627\u0639\u0645\u0644 \u0627\u064a\u0647" ||
-        normalized === "\u0627\u064a\u0647 \u0627\u0644\u062a\u0627\u0644\u064a" ||
-        normalized === "\u0627\u064a\u0647 \u0627\u0644\u062e\u0637\u0648\u0629 \u0627\u0644\u062c\u0627\u064a\u0629";
+        normalized === "تمام" ||
+        normalized === "ماشي";
     }
 
     function canHandleAiOsExecutionRequest() {
@@ -1039,6 +1075,18 @@
         runtimeState === "DOCUMENTATION_REVIEW" ||
         runtimeState === "EXECUTION_HANDOFF_READY" ||
         runtimeState === "EXECUTION_HANDOFF_CREATED";
+    }
+
+    function canApproveAiOsDocumentation() {
+      if (!currentProjectState) {
+        return false;
+      }
+
+      const documentationState = String(currentProjectState.documentation_state || "").toUpperCase();
+      const runtimeState = String(currentProjectState.active_runtime_state || "").toUpperCase();
+
+      return documentationState === "DRAFT_READY" ||
+        runtimeState === "DOCUMENTATION_REVIEW";
     }
 
     function clearPendingDiscoveryForProjectCommand() {
@@ -1383,14 +1431,19 @@
           return;
         }
 
+        const choices = buildCurrentProjectActionChoices();
+
         pushMessage(
           "assistant",
           lang === "ar" ? "\u062a\u0645 \u0627\u0639\u062a\u0645\u0627\u062f \u0627\u0644\u0648\u062b\u0627\u0626\u0642" : "Documentation Approved",
-          `<div class="file-preview">${formatMessageText(
-            lang === "ar"
-              ? "\u062a\u0645 \u0627\u0639\u062a\u0645\u0627\u062f \u0627\u0644\u0648\u062b\u0627\u0626\u0642. \u0627\u0644\u062e\u0637\u0648\u0629 \u0627\u0644\u062a\u0627\u0644\u064a\u0629 \u0644\u0648 \u062d\u0628\u064a\u062a: \u0627\u0643\u062a\u0628 \u0646\u0641\u0630."
-              : "Documentation is approved. Next, you can write: execute."
-          )}</div>`
+          `
+            <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
+              lang === "ar"
+                ? "\u062a\u0645 \u0627\u0639\u062a\u0645\u0627\u062f \u0627\u0644\u0648\u062b\u0627\u0626\u0642. \u0627\u062e\u062a\u0627\u0631 \u0627\u0644\u062e\u0637\u0648\u0629 \u0627\u0644\u0645\u0646\u0627\u0633\u0628\u0629 \u0645\u0646 \u0627\u0644\u0623\u0632\u0631\u0627\u0631 \u0627\u0644\u062a\u0627\u0644\u064a\u0629:"
+                : "Documentation is approved. Choose the appropriate next step from the buttons below:"
+            )}</div>
+            ${buildCurrentProjectActionChoiceHtml(choices)}
+          `
         );
 
         setStatus("AI OS documentation approved.");
@@ -1424,7 +1477,7 @@
         return true;
       }
 
-      if (isApproveDocumentationRequest(request)) {
+      if (isApproveDocumentationRequest(request) && canApproveAiOsDocumentation()) {
         clearPendingDiscoveryForProjectCommand();
         await approveAiOsDocumentationForCurrentProject(request);
         return true;
@@ -2066,8 +2119,19 @@
     }
 
     function isPositiveConfirmation(value) {
-      const normalized = String(value || "").trim().toLowerCase();
-      return normalized === "yes" || normalized === "continue" || normalized === "كمل";
+      const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+
+      return normalized === "yes" ||
+        normalized === "continue" ||
+        normalized === "ok" ||
+        normalized === "okay" ||
+        normalized === "approve" ||
+        normalized === "كمل" ||
+        normalized === "اكمل" ||
+        normalized === "تابع" ||
+        normalized === "موافق" ||
+        normalized === "تمام" ||
+        normalized === "اعتمد";
     }
 
     function isNegativeConfirmation(value) {
@@ -2082,18 +2146,24 @@
         projectId: getActiveProjectId()
       };
 
+      const lang = detectUserLanguage(requestText);
+      const choices = buildCurrentProjectActionChoices();
+
       pushMessage(
         "assistant",
-        detectUserLanguage(requestText) === "ar" ? "تأكيد قبل الانتقال" : "Confirmation Before Progression",
-        `<div class="file-preview">${formatMessageText(
-          buildCompanionCheckpointMessage(stageLabel, requestText, summaryLines)
-        )}</div>`
+        lang === "ar" ? "اختيارات المتابعة" : "Follow-up Choices",
+        `
+          <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
+            buildCompanionCheckpointMessage(stageLabel, requestText, summaryLines)
+          )}</div>
+          ${buildCurrentProjectActionChoiceHtml(choices)}
+        `
       );
 
       setStatus(
-        detectUserLanguage(requestText) === "ar"
-          ? "بانتظار قرارك على الطلب الحالي."
-          : "Waiting for your decision on the current request."
+        lang === "ar"
+          ? "بانتظار اختيارك للخطوة التالية."
+          : "Waiting for your next-step choice."
       );
     }
 
@@ -2549,14 +2619,19 @@
         );
         requestInput.value = "";
 
+        const choices = buildCurrentProjectActionChoices();
+
         pushMessage(
           "assistant",
           detectUserLanguage(checkpointRequest) === "ar"
-            ? "لا يمكن بدء طلب جديد الآن"
-            : "Cannot Start a New Request Now",
-          `<div class="file-preview">${formatMessageText(
-            buildCheckpointReminderMessage(checkpointRequest)
-          )}</div>`
+            ? "اختيارات المتابعة"
+            : "Follow-up Choices",
+          `
+            <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
+              buildCheckpointReminderMessage(checkpointRequest)
+            )}</div>
+            ${buildCurrentProjectActionChoiceHtml(choices)}
+          `
         );
 
         setStatus(

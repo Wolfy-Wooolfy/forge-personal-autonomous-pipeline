@@ -1,31 +1,45 @@
 {
-  "package_id": "ai_os_package_1777715401835",
-  "handoff_id": "ai_os_handoff_1777715401835",
-  "created_at": "2026-05-02T09:50:01.835Z",
+  "package_id": "ai_os_package_1777728806263",
+  "handoff_id": "ai_os_handoff_1777728806263",
+  "created_at": "2026-05-02T13:33:26.263Z",
   "source": "EXTERNAL_AI_WORKSPACE",
   "source_layer": "AI_OPERATING_SYSTEM",
   "handoff_status": "APPROVED_PENDING_FORGE",
   "project_id": "memory_test_1777676557976",
-  "execution_id": "ai_os_execution_1777715401835",
+  "execution_id": "ai_os_execution_1777728806263",
   "artifact_path": "artifacts/projects/memory_test_1777676557976/execute/execution_package.json",
   "approved_scope": {
     "summary": "User approved execution from workspace conversation.",
-    "operation_mode": "SINGLE_FILE",
-    "file_count": 1
+    "operation_mode": "MULTI_FILE",
+    "file_count": 7
   },
   "target_project_path": "artifacts/projects/memory_test_1777676557976",
   "requested_outputs": [
-    "Apply approved AI OS change to proposal_memory_test.txt"
+    "Apply approved AI OS change to artifacts/projects/memory_test_1777676557976/output/MemoryTest_ExecutionPackage.md",
+    "Apply approved AI OS change to artifacts/projects/memory_test_1777676557976/output/RequirementSpecification.json",
+    "Apply approved AI OS change to artifacts/projects/memory_test_1777676557976/output/SecurityPlan.md",
+    "Apply approved AI OS change to artifacts/projects/memory_test_1777676557976/output/CompliancePlan.md",
+    "Apply approved AI OS change to artifacts/projects/memory_test_1777676557976/output/IntegrationPlan.md",
+    "Apply approved AI OS change to artifacts/projects/memory_test_1777676557976/output/SystemDesign.md",
+    "Apply approved AI OS change to artifacts/projects/memory_test_1777676557976/output/TestPlan.md"
   ],
   "file_or_artifact_targets": [
-    "proposal_memory_test.txt"
+    "artifacts/projects/memory_test_1777676557976/output/MemoryTest_ExecutionPackage.md",
+    "artifacts/projects/memory_test_1777676557976/output/RequirementSpecification.json",
+    "artifacts/projects/memory_test_1777676557976/output/SecurityPlan.md",
+    "artifacts/projects/memory_test_1777676557976/output/CompliancePlan.md",
+    "artifacts/projects/memory_test_1777676557976/output/IntegrationPlan.md",
+    "artifacts/projects/memory_test_1777676557976/output/SystemDesign.md",
+    "artifacts/projects/memory_test_1777676557976/output/TestPlan.md"
   ],
   "dependency_assumptions": [],
   "risk_notes": [],
   "execution_approval_reference": {
     "approved_by_role": "CTO",
-    "approved_at": "2026-05-02T09:50:01.835Z",
+    "approved_at": "2026-05-02T13:33:26.263Z",
     "documentation_state": "DOCS_APPROVED",
+    "documentation_sha256": "c15da2c323334076f38297ba9fd2812a32f83e637ba69b5b202776fd2215defc",
+    "scope_fingerprint": "c49d07e3b0022c648c7f85a356e4c052aa194f55b04e2964f106cffdc79992d3",
     "project_state_path": "artifacts/projects/memory_test_1777676557976/project_state.json"
   },
   "finalized_documentation_set": [
@@ -33,13 +47,67 @@
     "artifacts/projects/memory_test_1777676557976/ai_os/documentation/draft.md"
   ],
   "execution_plan": {
-    "mode": "SINGLE_FILE",
-    "file_count": 1,
+    "mode": "MULTI_FILE",
+    "file_count": 7,
     "proposed_files": [
       {
-        "path": "proposal_memory_test.txt",
+        "path": "artifacts/projects/memory_test_1777676557976/output/MemoryTest_ExecutionPackage.md",
         "allow_overwrite": false,
-        "sha256": "3e1c703a6cfe35581afb397717e117f51fb315a28e014d1a2f3d2b7035011c6f",
+        "sha256": "54314c056ba532c27bb6502402a0d6eb96f0f60877ad92f5c8a3268eded9b471",
+        "required_roles": [
+          "cto"
+        ],
+        "diff": ""
+      },
+      {
+        "path": "artifacts/projects/memory_test_1777676557976/output/RequirementSpecification.json",
+        "allow_overwrite": false,
+        "sha256": "540ee8ed8cf2a239b278a5231955cbd257eea98e4758ddeb8b3f85a657036552",
+        "required_roles": [
+          "cto"
+        ],
+        "diff": ""
+      },
+      {
+        "path": "artifacts/projects/memory_test_1777676557976/output/SecurityPlan.md",
+        "allow_overwrite": false,
+        "sha256": "0ebe7564fbf0e44ebc6c11a64b86d2b2c1e409956f663beb2fa04747b8004834",
+        "required_roles": [
+          "cto"
+        ],
+        "diff": ""
+      },
+      {
+        "path": "artifacts/projects/memory_test_1777676557976/output/CompliancePlan.md",
+        "allow_overwrite": false,
+        "sha256": "e00eda0574ce418723f0813c05bb10978a0fd2b812b95bf882e490b6b46dfa25",
+        "required_roles": [
+          "cto"
+        ],
+        "diff": ""
+      },
+      {
+        "path": "artifacts/projects/memory_test_1777676557976/output/IntegrationPlan.md",
+        "allow_overwrite": false,
+        "sha256": "a966ca76f04549b188788d2e5ecb5282e6bfd6ac5e68c9232a6e41e736bb7f9c",
+        "required_roles": [
+          "cto"
+        ],
+        "diff": ""
+      },
+      {
+        "path": "artifacts/projects/memory_test_1777676557976/output/SystemDesign.md",
+        "allow_overwrite": false,
+        "sha256": "047ae089642e7be5a76070e3c24f013e1f57f571f41c6a9f33c6cc49a45e5cff",
+        "required_roles": [
+          "cto"
+        ],
+        "diff": ""
+      },
+      {
+        "path": "artifacts/projects/memory_test_1777676557976/output/TestPlan.md",
+        "allow_overwrite": false,
+        "sha256": "e8e4a92d9bff47b0a63322c0e56a4237b6609df2b1ee46de1de35db7087fa35b",
         "required_roles": [
           "cto"
         ],
@@ -49,9 +117,9 @@
   },
   "business_and_scope_decisions": {
     "accepted_options": [
-      "option_2"
+      "opt2"
     ],
-    "user_goal": "عايز سيستم خدمة عملاء \nاعمل مقترح واعرضه عليا",
+    "user_goal": "اعمل سيستم مالية",
     "documentation_state": "DOCS_APPROVED"
   }
 }
