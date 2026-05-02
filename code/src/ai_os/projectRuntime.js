@@ -49,6 +49,14 @@ function createAiOsRuntime(options = {}) {
     return path.join(projectsRoot, normalizeProjectId(projectId));
   }
 
+  function projectOutputRoot(projectId) {
+    return path.join(projectRoot(projectId), "output");
+  }
+
+  function projectOutputArchiveRoot(projectId) {
+    return path.join(projectRoot(projectId), "output_archive");
+  }
+
   function aiOsRoot(projectId) {
     return path.join(projectRoot(projectId), "ai_os");
   }
@@ -136,6 +144,89 @@ function createAiOsRuntime(options = {}) {
         : "";
 
     return storedFingerprint !== "" && storedFingerprint === buildExecutionScopeFingerprint(state);
+  }
+
+  function packageTargetsScopedToOutput(projectId, executionPackage) {
+    const outputBase = `artifacts/projects/${normalizeProjectId(projectId)}/output/`;
+    const proposedFiles =
+      executionPackage &&
+      executionPackage.execution_plan &&
+      Array.isArray(executionPackage.execution_plan.proposed_files)
+        ? executionPackage.execution_plan.proposed_files
+        : [];
+
+    return proposedFiles.length > 0 && proposedFiles.every((file) => {
+      const relPath = String(file && file.path ? file.path : "").trim().replace(/\\/g, "/");
+      return relPath.startsWith(outputBase);
+    });
+  }
+
+  function safePathSegment(value, fallback) {
+    const cleaned = String(value || "")
+      .trim()
+      .replace(/[<>:"|?*\x00-\x1F]/g, "_")
+      .replace(/[\\/]+/g, "_")
+      .replace(/^\.+$/g, "")
+      .slice(0, 140);
+
+    return cleaned || fallback;
+  }
+
+  function safeFileNameFromPath(inputPath, index, state) {
+    const normalized = String(inputPath || "").trim().replace(/\\/g, "/");
+    const baseName = path.posix.basename(normalized);
+    const projectName = safePathSegment(state.project_name || state.user_goal || "project", "project");
+    return safePathSegment(baseName, `${projectName}_file_${index + 1}.txt`);
+  }
+
+  function normalizeOutputRelativePath(projectId, state, inputPath, index) {
+    const outputBase = `artifacts/projects/${projectId}/output`;
+    const raw = String(inputPath || "").trim().replace(/\\/g, "/");
+    const withoutRootPrefix = raw.replace(/^[A-Za-z]:\//, "").replace(/^\/+/, "");
+    const relativeInsideOutput =
+      withoutRootPrefix === outputBase
+        ? ""
+        : withoutRootPrefix.startsWith(`${outputBase}/`)
+          ? withoutRootPrefix.slice(outputBase.length + 1)
+          : "";
+
+    if (relativeInsideOutput) {
+      const safeSegments = relativeInsideOutput
+        .split("/")
+        .filter((segment) => segment && segment !== "." && segment !== "..")
+        .map((segment, segmentIndex) => safePathSegment(segment, `part_${segmentIndex + 1}`));
+
+      if (safeSegments.length > 0) {
+        return `${outputBase}/${safeSegments.join("/")}`;
+      }
+    }
+
+    return `${outputBase}/${safeFileNameFromPath(raw, index, state)}`;
+  }
+
+  function archiveExistingOutput(projectId) {
+    const outputAbs = projectOutputRoot(projectId);
+
+    if (!fs.existsSync(outputAbs)) {
+      ensureDir(outputAbs);
+      return null;
+    }
+
+    const entries = fs.readdirSync(outputAbs);
+
+    if (entries.length === 0) {
+      return null;
+    }
+
+    const stamp = nowIso().replace(/[:.]/g, "-");
+    const archiveAbs = path.join(projectOutputArchiveRoot(projectId), stamp);
+    ensureDir(archiveAbs);
+
+    entries.forEach((entryName) => {
+      fs.renameSync(path.join(outputAbs, entryName), path.join(archiveAbs, entryName));
+    });
+
+    return toArtifactRelPath(archiveAbs);
   }
 
   function appendArrayJson(filePath, entry) {
@@ -934,7 +1025,11 @@ async function generateExecutionFilesViaProvider(projectId, state) {
     const handoffMdAbs = path.join(aiOsRoot(projectId), "handoff", "execution_handoff.md");
     const existingPackage = readJsonSafe(packageAbs, null);
 
-    if (existingPackage && packageMatchesCurrentScope(existingPackage, state)) {
+    if (
+      existingPackage &&
+      packageMatchesCurrentScope(existingPackage, state) &&
+      packageTargetsScopedToOutput(projectId, existingPackage)
+    ) {
       return {
         ok: true,
         mode: "EXECUTION_HANDOFF_ALREADY_CREATED",
@@ -991,8 +1086,15 @@ async function generateExecutionFilesViaProvider(projectId, state) {
       };
     }
 
+    const archivedOutputPath = archiveExistingOutput(projectId);
+
     const normalizedFiles = files.map((file, index) => {
-      const relPath = String(file && file.path ? file.path : "").trim().replace(/\\/g, "/");
+      const relPath = normalizeOutputRelativePath(
+        projectId,
+        state,
+        file && file.path ? file.path : "",
+        index
+      );
       const content = typeof (file && file.content) === "string" ? file.content : "";
 
       if (!relPath) {
@@ -1018,11 +1120,14 @@ async function generateExecutionFilesViaProvider(projectId, state) {
       execution_id: executionId,
       source: "AI_OPERATING_SYSTEM",
       project_id: projectId,
+      package_id: packageId,
       created_at: createdAt,
       summary: String(body.summary || "AI OS execution handoff response artifact."),
       files: normalizedFiles.map((file) => ({
         path: file.path,
-        content: file.content
+        content: file.content,
+        execution_id: executionId,
+        package_id: packageId
       }))
     };
 
@@ -1044,6 +1149,8 @@ async function generateExecutionFilesViaProvider(projectId, state) {
         file_count: normalizedFiles.length
       },
       target_project_path: String(body.target_project_path || `artifacts/projects/${projectId}`),
+      output_path: `artifacts/projects/${projectId}/output`,
+      output_archive_path: archivedOutputPath || "",
       requested_outputs: Array.isArray(body.requested_outputs)
         ? body.requested_outputs.map((item) => String(item))
         : normalizedFiles.map((file) => `Apply approved AI OS change to ${file.path}`),

@@ -1350,13 +1350,29 @@
       const indicators = Array.isArray(summary.runnable_indicators) ? summary.runnable_indicators : [];
       const instructions = Array.isArray(summary.run_instructions) ? summary.run_instructions : [];
       const runnable = summary.runnable_application_created === true;
+      const currentOutputFound = summary.current_execution_output_found === true;
+      const isRequirementsPackage = outputTypes.includes("REQUIREMENTS_PACKAGE");
+      const deliverySentenceAr = !currentOutputFound
+        ? "\u0644\u0645 \u064a\u062a\u0645 \u0627\u0644\u0639\u062b\u0648\u0631 \u0639\u0644\u0649 \u0645\u062e\u0631\u062c\u0627\u062a \u0645\u0631\u062a\u0628\u0637\u0629 \u0628\u0627\u0644\u062a\u0646\u0641\u064a\u0630 \u0627\u0644\u062d\u0627\u0644\u064a."
+        : isRequirementsPackage
+          ? "\u062a\u0645 \u0625\u0646\u0634\u0627\u0621 \u062d\u0632\u0645\u0629 \u0645\u062a\u0637\u0644\u0628\u0627\u062a \u0648\u062e\u0637\u0629 \u062a\u0646\u0641\u064a\u0630\u060c \u0648\u0644\u064a\u0633 \u062a\u0637\u0628\u064a\u0642\u0627 \u0642\u0627\u0628\u0644\u0627 \u0644\u0644\u062a\u0634\u063a\u064a\u0644."
+          : runnable
+            ? "\u062a\u0645 \u0625\u0646\u0634\u0627\u0621 \u0645\u0624\u0634\u0631\u0627\u062a \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644."
+            : "\u0627\u0643\u062a\u0645\u0644\u062a \u0645\u0631\u0627\u062d\u0644 Forge \u0628\u0646\u062c\u0627\u062d\u060c \u0644\u0643\u0646 \u0644\u0645 \u064a\u062a\u0645 \u0625\u0646\u0634\u0627\u0621 \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644. \u0627\u0644\u0646\u0627\u062a\u062c \u0627\u0644\u062d\u0627\u0644\u064a \u0647\u0648 \u0645\u0644\u0641\u0627\u062a \u062d\u0632\u0645\u0629/\u062a\u0642\u0627\u0631\u064a\u0631 \u0641\u0642\u0637. \u0644\u0627 \u064a\u0648\u062c\u062f \u0634\u064a\u0621 \u064a\u0645\u0643\u0646 \u062a\u0634\u063a\u064a\u0644\u0647 \u062d\u062a\u0649 \u0627\u0644\u0622\u0646.";
+      const deliverySentenceEn = !currentOutputFound
+        ? "No output files linked to the current execution were found."
+        : isRequirementsPackage
+          ? "A requirements package and execution plan were created, not a runnable application."
+          : runnable
+            ? "A runnable application indicator was created."
+            : "Forge stages completed successfully, but no runnable application was created. The current output is package/report files only. There is nothing to run yet.";
 
       if (lang === "ar") {
         const lines = [
           "Delivery Summary:",
-          runnable
-            ? "\u062a\u0645 \u0625\u0646\u0634\u0627\u0621 \u0645\u0624\u0634\u0631\u0627\u062a \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644."
-            : "\u0627\u0643\u062a\u0645\u0644\u062a \u0645\u0631\u0627\u062d\u0644 Forge \u0628\u0646\u062c\u0627\u062d\u060c \u0644\u0643\u0646 \u0644\u0645 \u064a\u062a\u0645 \u0625\u0646\u0634\u0627\u0621 \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644. \u0627\u0644\u0646\u0627\u062a\u062c \u0627\u0644\u062d\u0627\u0644\u064a \u0647\u0648 \u0645\u0644\u0641\u0627\u062a \u062d\u0632\u0645\u0629/\u062a\u0642\u0627\u0631\u064a\u0631 \u0641\u0642\u0637. \u0644\u0627 \u064a\u0648\u062c\u062f \u0634\u064a\u0621 \u064a\u0645\u0643\u0646 \u062a\u0634\u063a\u064a\u0644\u0647 \u062d\u062a\u0649 \u0627\u0644\u0622\u0646.",
+          deliverySentenceAr,
+          summary.execution_id ? `execution_id: ${summary.execution_id}` : "",
+          summary.package_id ? `package_id: ${summary.package_id}` : "",
           outputPath ? `\u0645\u0643\u0627\u0646 \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a: ${outputPath}` : "",
           `\u0646\u0648\u0639 \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a: ${outputTypes.join(", ") || "UNKNOWN"}`,
           `\u0645\u0624\u0634\u0631\u0627\u062a \u0627\u0644\u062a\u0634\u063a\u064a\u0644: ${indicators.join(", ") || "\u0644\u0627 \u064a\u0648\u062c\u062f"}`,
@@ -1374,9 +1390,9 @@
 
       const lines = [
         "Delivery Summary:",
-        runnable
-          ? "A runnable application indicator was created."
-          : "Forge stages completed successfully, but no runnable application was created. The current output is package/report files only. There is nothing to run yet.",
+        deliverySentenceEn,
+        summary.execution_id ? `execution_id: ${summary.execution_id}` : "",
+        summary.package_id ? `package_id: ${summary.package_id}` : "",
         outputPath ? `Output path: ${outputPath}` : "",
         `Output type: ${outputTypes.join(", ") || "UNKNOWN"}`,
         `Runnable indicators: ${indicators.join(", ") || "none"}`,

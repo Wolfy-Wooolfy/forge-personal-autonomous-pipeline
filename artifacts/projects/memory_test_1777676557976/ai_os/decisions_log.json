@@ -96,5 +96,12 @@
     "decision_owner": "USER",
     "rationale": "Selected from workspace conversation: نظام إدارة مالية ويب مع دعم تعدد المستخدمين والتكامل البنكي",
     "created_at": "2026-05-02T16:51:22.161Z"
+  },
+  {
+    "entry_type": "OPTION_DECISION",
+    "selected_option_id": "option_3",
+    "decision_owner": "USER",
+    "rationale": "Selected from workspace conversation: نظام دعم فني بسيط مع التركيز على تسجيل الشكاوى وقاعدة المعرفة",
+    "created_at": "2026-05-02T17:02:54.776Z"
   }
 ]

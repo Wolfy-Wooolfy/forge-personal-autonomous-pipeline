@@ -2154,7 +2154,24 @@ ${trimmedExisting}`
     const projectId = normalizeProjectId(projectIdInput);
     const outputRel = getProjectOutputRel(projectId);
     const outputAbs = getProjectOutputAbs(projectId);
-    const files = listOutputFiles(outputAbs);
+    const executionPackage = readJsonSafe(getProjectExecutionPackageAbs(projectId), null);
+    const executionId = String(executionPackage && executionPackage.execution_id ? executionPackage.execution_id : "").trim();
+    const packageId = String(executionPackage && executionPackage.package_id ? executionPackage.package_id : "").trim();
+    const proposedFiles =
+      executionPackage &&
+      executionPackage.execution_plan &&
+      Array.isArray(executionPackage.execution_plan.proposed_files)
+        ? executionPackage.execution_plan.proposed_files
+        : [];
+    const expectedOutputFiles = proposedFiles
+      .map((file) => String(file && file.path ? file.path : "").trim().replace(/\\/g, "/"))
+      .filter((filePath) => filePath.startsWith(`${outputRel}/`))
+      .map((filePath) => filePath.slice(outputRel.length + 1));
+    const allFiles = listOutputFiles(outputAbs);
+    const expectedSet = new Set(expectedOutputFiles.map((file) => file.toLowerCase()));
+    const files = expectedSet.size > 0
+      ? allFiles.filter((file) => expectedSet.has(file.toLowerCase()))
+      : [];
     const lowerFiles = files.map((file) => file.toLowerCase());
     const topLevelEntries = fs.existsSync(outputAbs)
       ? fs.readdirSync(outputAbs, { withFileTypes: true })
@@ -2186,7 +2203,19 @@ ${trimmedExisting}`
       readme ? "README.md" : ""
     ].filter(Boolean);
 
-    const hasRunnableApplication = runnableIndicators.length > 0;
+    const currentExecutionOutputFound = files.length > 0;
+    const requirementPackageNames = new Set([
+      "requirements.md",
+      "execution_plan.json",
+      "provider_requirements_model.json"
+    ]);
+    const hasOnlyRequirementsPackage =
+      currentExecutionOutputFound &&
+      files.every((file) => {
+        const normalized = file.toLowerCase();
+        return Array.from(requirementPackageNames).some((suffix) => normalized.endsWith(suffix));
+      });
+    const hasRunnableApplication = currentExecutionOutputFound && !hasOnlyRequirementsPackage && runnableIndicators.length > 0;
     const outputTypes = [];
 
     if (indexHtml) {
@@ -2204,10 +2233,16 @@ ${trimmedExisting}`
     if (readme) {
       outputTypes.push("README");
     }
-    if (!hasRunnableApplication && files.length > 0) {
+    if (hasOnlyRequirementsPackage) {
+      outputTypes.push("REQUIREMENTS_PACKAGE");
+    }
+    if (!currentExecutionOutputFound && expectedOutputFiles.length > 0) {
+      outputTypes.push("NO_CURRENT_EXECUTION_OUTPUT_FILES");
+    }
+    if (!hasRunnableApplication && currentExecutionOutputFound && !hasOnlyRequirementsPackage) {
       outputTypes.push("PACKAGE_OR_REPORT_FILES");
     }
-    if (files.length === 0) {
+    if (allFiles.length === 0) {
       outputTypes.push("NO_OUTPUT_FILES");
     }
 
@@ -2230,16 +2265,25 @@ ${trimmedExisting}`
       }
     }
 
-    if (!hasRunnableApplication) {
-      runInstructions.push("No runnable application was detected in the output folder.");
+    if (!currentExecutionOutputFound) {
+      runInstructions.push("No output files linked to the current execution were found.");
+    } else if (hasOnlyRequirementsPackage) {
+      runInstructions.push("A requirements package and execution plan were created, not a runnable application.");
+    } else if (!hasRunnableApplication) {
+      runInstructions.push("No runnable application was detected in the current execution output.");
     }
 
     return {
       project_id: projectId,
+      execution_id: executionId,
+      package_id: packageId,
       output_path: outputRel,
       output_exists: fs.existsSync(outputAbs),
+      current_execution_output_found: currentExecutionOutputFound,
+      expected_current_output_files: expectedOutputFiles,
       output_file_count: files.length,
       output_files: files,
+      ignored_existing_output_files: allFiles.filter((file) => !files.includes(file)),
       output_types: outputTypes,
       runnable_application_created: hasRunnableApplication,
       runnable_indicators: runnableIndicators,
