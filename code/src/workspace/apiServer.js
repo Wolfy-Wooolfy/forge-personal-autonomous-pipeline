@@ -1737,8 +1737,10 @@ ${trimmedExisting}`
       overrides.current_phase ||
       (hasExecutionPackage ? "EXECUTION_READY" : proposalCount > 0 ? "DOCS_DRAFTING" : "DISCOVERY");
 
+    const existingDocumentationState = String(existing.documentation_state || "").trim();
     const documentationState =
       overrides.documentation_state ||
+      (existingDocumentationState && existingDocumentationState !== "EMPTY" ? existingDocumentationState : "") ||
       (hasDecisionPacket ? "APPROVED" : proposalCount > 0 ? "DRAFTING" : "EMPTY");
 
     const executionPackageStatus = hasExecutionPackage
@@ -1764,7 +1766,7 @@ ${trimmedExisting}`
         : "NOT_STARTED");
 
     const verificationState = overrides.verification_state || (executionPackageStatus === "EXECUTED" ? "PASS" : "NOT_READY");
-    const deliveryState = overrides.delivery_state || (executionPackageStatus === "EXECUTED" ? "READY" : "NOT_READY");
+    const deliveryState = overrides.delivery_state || existing.delivery_state || (executionPackageStatus === "EXECUTED" ? "ARTIFACTS_ONLY" : "NOT_READY");
 
     const state = {
       project_id: projectId,
@@ -1838,6 +1840,12 @@ ${trimmedExisting}`
       execution_state: executionState,
       verification_state: verificationState,
       delivery_state: deliveryState,
+      delivery_summary:
+        overrides.delivery_summary && typeof overrides.delivery_summary === "object"
+          ? overrides.delivery_summary
+          : existing.delivery_summary && typeof existing.delivery_summary === "object"
+            ? existing.delivery_summary
+            : null,
       conversation_history: {
         proposal_count: proposalCount,
         draft_count: draftCount,
@@ -1967,17 +1975,20 @@ ${trimmedExisting}`
       ).toUpperCase();
       const blocked = orchestrationState.blocked === true || result.blocked === true;
       const ok = blocked !== true && finalOutcome === "WORKSPACE_RUNTIME_COMPLETE";
+      const deliverySummary = buildDeliverySummary(projectId);
+      const runnableApplicationCreated = deliverySummary.runnable_application_created === true;
       const blockingReason = String(
         orchestrationState.blocking_reason || result.blocking_reason || result.reason || ""
       ).trim();
 
       const project = persistProjectState(projectId, {
-        current_phase: ok ? "DELIVERY_READY" : "EXECUTION_BLOCKED",
+        current_phase: ok ? (runnableApplicationCreated ? "DELIVERY_READY" : "FORGE_RUNTIME_COMPLETE") : "EXECUTION_BLOCKED",
         active_runtime_state: ok ? "EXECUTION_COMPLETE" : "EXECUTION_BLOCKED",
         execution_package_state: ok ? "EXECUTED" : "APPROVED_PENDING_FORGE",
         execution_state: ok ? "EXECUTED" : "BLOCKED",
         verification_state: ok ? "PASS" : "BLOCKED",
-        delivery_state: ok ? "READY" : "NOT_READY"
+        delivery_state: ok ? (runnableApplicationCreated ? "READY" : "ARTIFACTS_ONLY") : "NOT_READY",
+        delivery_summary: deliverySummary
       });
 
       return {
@@ -1987,6 +1998,7 @@ ${trimmedExisting}`
         project,
         result,
         orchestration_state: orchestrationState,
+        delivery_summary: deliverySummary,
         blocking_reason: blockingReason,
         artifacts: {
           orchestration_state: "artifacts/orchestration/orchestration_state.json",
@@ -2093,6 +2105,146 @@ ${trimmedExisting}`
 
   function getProjectExecutionPackageAbs(projectIdInput) {
     return path.resolve(root, getProjectExecutionPackageRel(projectIdInput));
+  }
+
+  function getProjectOutputRel(projectIdInput) {
+    return `artifacts/projects/${normalizeProjectId(projectIdInput)}/output`;
+  }
+
+  function getProjectOutputAbs(projectIdInput) {
+    return path.resolve(root, getProjectOutputRel(projectIdInput));
+  }
+
+  function listOutputFiles(outputAbs, currentAbs = outputAbs, depth = 0) {
+    if (!fs.existsSync(currentAbs) || depth > 6) {
+      return [];
+    }
+
+    return fs.readdirSync(currentAbs, { withFileTypes: true }).flatMap((entry) => {
+      const entryAbs = path.join(currentAbs, entry.name);
+
+      if (entry.isDirectory()) {
+        return listOutputFiles(outputAbs, entryAbs, depth + 1);
+      }
+
+      if (!entry.isFile()) {
+        return [];
+      }
+
+      return [path.relative(outputAbs, entryAbs).replace(/\\/g, "/")];
+    });
+  }
+
+  function readPackageScripts(packageAbs) {
+    const packageJson = readJsonSafe(packageAbs, null);
+
+    if (!packageJson || typeof packageJson !== "object" || !packageJson.scripts || typeof packageJson.scripts !== "object") {
+      return {};
+    }
+
+    return Object.keys(packageJson.scripts).reduce((acc, key) => {
+      if (typeof packageJson.scripts[key] === "string") {
+        acc[key] = packageJson.scripts[key];
+      }
+      return acc;
+    }, {});
+  }
+
+  function buildDeliverySummary(projectIdInput) {
+    const projectId = normalizeProjectId(projectIdInput);
+    const outputRel = getProjectOutputRel(projectId);
+    const outputAbs = getProjectOutputAbs(projectId);
+    const files = listOutputFiles(outputAbs);
+    const lowerFiles = files.map((file) => file.toLowerCase());
+    const topLevelEntries = fs.existsSync(outputAbs)
+      ? fs.readdirSync(outputAbs, { withFileTypes: true })
+      : [];
+    const directories = topLevelEntries
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => entry.name);
+    const lowerDirectories = directories.map((name) => name.toLowerCase());
+
+    const findFile = (name) => {
+      const target = String(name || "").toLowerCase();
+      const index = lowerFiles.findIndex((file) => file === target || file.endsWith(`/${target}`));
+      return index >= 0 ? files[index] : "";
+    };
+
+    const indexHtml = findFile("index.html");
+    const packageJson = findFile("package.json");
+    const serverJs = findFile("server.js");
+    const appJs = findFile("app.js");
+    const readme = findFile("readme.md");
+    const hasSrc = lowerDirectories.includes("src") || lowerFiles.some((file) => file.startsWith("src/") || file.includes("/src/"));
+
+    const runnableIndicators = [
+      indexHtml ? "index.html" : "",
+      packageJson ? "package.json" : "",
+      serverJs ? "server.js" : "",
+      appJs ? "app.js" : "",
+      hasSrc ? "src/" : "",
+      readme ? "README.md" : ""
+    ].filter(Boolean);
+
+    const hasRunnableApplication = runnableIndicators.length > 0;
+    const outputTypes = [];
+
+    if (indexHtml) {
+      outputTypes.push("HTML_STATIC_APP");
+    }
+    if (packageJson) {
+      outputTypes.push("NODE_PACKAGE");
+    }
+    if (serverJs || appJs) {
+      outputTypes.push("NODE_SERVER");
+    }
+    if (hasSrc) {
+      outputTypes.push("SOURCE_TREE");
+    }
+    if (readme) {
+      outputTypes.push("README");
+    }
+    if (!hasRunnableApplication && files.length > 0) {
+      outputTypes.push("PACKAGE_OR_REPORT_FILES");
+    }
+    if (files.length === 0) {
+      outputTypes.push("NO_OUTPUT_FILES");
+    }
+
+    const runInstructions = [];
+
+    if (indexHtml) {
+      runInstructions.push(`Open this file in the browser: ${outputRel}/${indexHtml}`);
+    }
+
+    if (packageJson) {
+      const scripts = readPackageScripts(path.join(outputAbs, packageJson));
+      runInstructions.push(`From this folder run: cd ${path.dirname(`${outputRel}/${packageJson}`).replace(/\\/g, "/")}`);
+      runInstructions.push("npm install");
+
+      if (scripts.start) {
+        runInstructions.push("npm start");
+      } else {
+        const firstScript = Object.keys(scripts)[0] || "";
+        runInstructions.push(firstScript ? `npm run ${firstScript}` : "No npm start script was found in package.json.");
+      }
+    }
+
+    if (!hasRunnableApplication) {
+      runInstructions.push("No runnable application was detected in the output folder.");
+    }
+
+    return {
+      project_id: projectId,
+      output_path: outputRel,
+      output_exists: fs.existsSync(outputAbs),
+      output_file_count: files.length,
+      output_files: files,
+      output_types: outputTypes,
+      runnable_application_created: hasRunnableApplication,
+      runnable_indicators: runnableIndicators,
+      run_instructions: runInstructions
+    };
   }
 
   function writeDecisionLinkArtifact(proposalId, decisionPacketId, projectIdInput = "") {

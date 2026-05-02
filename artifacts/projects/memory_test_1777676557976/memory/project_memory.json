@@ -7,11 +7,11 @@
   "business_model": {},
   "documentation_versions": [],
   "execution_status": {
-    "current_phase": "DELIVERY_READY",
+    "current_phase": "FORGE_RUNTIME_COMPLETE",
     "active_runtime_state": "EXECUTION_COMPLETE",
     "execution_state": "EXECUTED",
     "verification_state": "PASS",
-    "delivery_state": "READY"
+    "delivery_state": "ARTIFACTS_ONLY"
   },
   "change_history": [
     {
@@ -108,7 +108,45 @@
         "delivery_state": "READY",
         "pending_decisions": []
       }
+    },
+    {
+      "version_id": "state_0005",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-02T16:50:40.076Z",
+      "state_hash": "69dac5705ea3be289619d9eda6d7352a702fa2f5dfcacab9dff1058eb1a77a72",
+      "summary": {
+        "project_id": "memory_test_1777676557976",
+        "project_name": "سيستم crm",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "EMPTY",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "READY",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0006",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-02T16:51:50.970Z",
+      "state_hash": "695abc1445a7b502ef86fdac59f16f8e0fd0f773010aa9803b2130fe06891d4c",
+      "summary": {
+        "project_id": "memory_test_1777676557976",
+        "project_name": "سيستم للادارة المالية",
+        "project_status": "ACTIVE",
+        "current_phase": "FORGE_RUNTIME_COMPLETE",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "ARTIFACTS_ONLY",
+        "pending_decisions": []
+      }
     }
   ],
-  "updated_at": "2026-05-02T16:30:09.422Z"
+  "updated_at": "2026-05-02T16:51:50.970Z"
 }

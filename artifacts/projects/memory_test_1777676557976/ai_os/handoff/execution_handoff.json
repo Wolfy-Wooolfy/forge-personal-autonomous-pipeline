@@ -1,33 +1,37 @@
 {
-  "package_id": "ai_os_package_1777739408451",
-  "handoff_id": "ai_os_handoff_1777739408451",
-  "created_at": "2026-05-02T16:30:08.451Z",
+  "package_id": "ai_os_package_1777740710607",
+  "handoff_id": "ai_os_handoff_1777740710607",
+  "created_at": "2026-05-02T16:51:50.607Z",
   "source": "EXTERNAL_AI_WORKSPACE",
   "source_layer": "AI_OPERATING_SYSTEM",
   "handoff_status": "APPROVED_PENDING_FORGE",
   "project_id": "memory_test_1777676557976",
-  "execution_id": "ai_os_execution_1777739408451",
+  "execution_id": "ai_os_execution_1777740710607",
   "artifact_path": "artifacts/projects/memory_test_1777676557976/execute/execution_package.json",
   "approved_scope": {
     "summary": "User approved execution from workspace conversation.",
-    "operation_mode": "SINGLE_FILE",
-    "file_count": 1
+    "operation_mode": "MULTI_FILE",
+    "file_count": 3
   },
   "target_project_path": "artifacts/projects/memory_test_1777676557976",
   "requested_outputs": [
-    "Apply approved AI OS change to artifacts/projects/memory_test_1777676557976/output/سيستم_crm_execution_package.json"
+    "Apply approved AI OS change to سيستم للادارة المالية_requirements.md",
+    "Apply approved AI OS change to سيستم للادارة المالية_execution_plan.json",
+    "Apply approved AI OS change to سيستم للادارة المالية_provider_requirements_model.json"
   ],
   "file_or_artifact_targets": [
-    "artifacts/projects/memory_test_1777676557976/output/سيستم_crm_execution_package.json"
+    "سيستم للادارة المالية_requirements.md",
+    "سيستم للادارة المالية_execution_plan.json",
+    "سيستم للادارة المالية_provider_requirements_model.json"
   ],
   "dependency_assumptions": [],
   "risk_notes": [],
   "execution_approval_reference": {
     "approved_by_role": "CTO",
-    "approved_at": "2026-05-02T16:30:08.451Z",
+    "approved_at": "2026-05-02T16:51:50.607Z",
     "documentation_state": "DOCS_APPROVED",
-    "documentation_sha256": "b50edddca4e2eb420b8eed99ea4e2e2416469920411f8e125ccc3bfeed7909ca",
-    "scope_fingerprint": "2cc184b8c0a497aaa47cdf2e838eb40b99df524b703367e7200e105ac4a13d10",
+    "documentation_sha256": "94b52626fb7b6bb08f4585f2918ad148266b4d69fd21f5e9db95477cc1b68078",
+    "scope_fingerprint": "85ddcdbc1f1a5cc3adf5696c76fc6997f2bb241a5cf211cc20522c4adc0bd1ba",
     "project_state_path": "artifacts/projects/memory_test_1777676557976/project_state.json"
   },
   "finalized_documentation_set": [
@@ -35,13 +39,31 @@
     "artifacts/projects/memory_test_1777676557976/ai_os/documentation/draft.md"
   ],
   "execution_plan": {
-    "mode": "SINGLE_FILE",
-    "file_count": 1,
+    "mode": "MULTI_FILE",
+    "file_count": 3,
     "proposed_files": [
       {
-        "path": "artifacts/projects/memory_test_1777676557976/output/سيستم_crm_execution_package.json",
+        "path": "سيستم للادارة المالية_requirements.md",
         "allow_overwrite": false,
-        "sha256": "43b075321b83315e65cfe4bf7e86d99a368be2730970ce8ecb365b4880a8308c",
+        "sha256": "d0e4c2f426181130690eaea0f486dd6fc02a4e3535443bcdf7977ed35b890020",
+        "required_roles": [
+          "cto"
+        ],
+        "diff": ""
+      },
+      {
+        "path": "سيستم للادارة المالية_execution_plan.json",
+        "allow_overwrite": false,
+        "sha256": "66be807ad584b5164aa0eb396a710987eb57522a22ed171405b41370916afab0",
+        "required_roles": [
+          "cto"
+        ],
+        "diff": ""
+      },
+      {
+        "path": "سيستم للادارة المالية_provider_requirements_model.json",
+        "allow_overwrite": false,
+        "sha256": "e7160aaf0654ba10326e99b6826f19dcd58eb8063e92786ff63e81956af81032",
         "required_roles": [
           "cto"
         ],
@@ -53,7 +75,7 @@
     "accepted_options": [
       "opt2"
     ],
-    "user_goal": "عايز سيستم HR",
+    "user_goal": "عايز سيستم للادارة المالية",
     "documentation_state": "DOCS_APPROVED"
   }
 }

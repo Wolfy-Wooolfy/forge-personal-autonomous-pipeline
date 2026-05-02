@@ -1342,6 +1342,56 @@
       setStatus(lang === "ar" ? "\u062c\u0627\u0647\u0632 \u0644\u0641\u0643\u0631\u0629 \u0645\u0634\u0631\u0648\u0639 \u062c\u062f\u064a\u062f\u0629." : "Ready for a new project idea.");
     }
 
+    function buildDeliverySummaryLines(deliverySummary, lang) {
+      const summary = deliverySummary && typeof deliverySummary === "object" ? deliverySummary : {};
+      const outputPath = summary.output_path || "";
+      const outputTypes = Array.isArray(summary.output_types) ? summary.output_types : [];
+      const outputFiles = Array.isArray(summary.output_files) ? summary.output_files : [];
+      const indicators = Array.isArray(summary.runnable_indicators) ? summary.runnable_indicators : [];
+      const instructions = Array.isArray(summary.run_instructions) ? summary.run_instructions : [];
+      const runnable = summary.runnable_application_created === true;
+
+      if (lang === "ar") {
+        const lines = [
+          "Delivery Summary:",
+          runnable
+            ? "\u062a\u0645 \u0625\u0646\u0634\u0627\u0621 \u0645\u0624\u0634\u0631\u0627\u062a \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644."
+            : "\u0627\u0643\u062a\u0645\u0644\u062a \u0645\u0631\u0627\u062d\u0644 Forge \u0628\u0646\u062c\u0627\u062d\u060c \u0644\u0643\u0646 \u0644\u0645 \u064a\u062a\u0645 \u0625\u0646\u0634\u0627\u0621 \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644. \u0627\u0644\u0646\u0627\u062a\u062c \u0627\u0644\u062d\u0627\u0644\u064a \u0647\u0648 \u0645\u0644\u0641\u0627\u062a \u062d\u0632\u0645\u0629/\u062a\u0642\u0627\u0631\u064a\u0631 \u0641\u0642\u0637. \u0644\u0627 \u064a\u0648\u062c\u062f \u0634\u064a\u0621 \u064a\u0645\u0643\u0646 \u062a\u0634\u063a\u064a\u0644\u0647 \u062d\u062a\u0649 \u0627\u0644\u0622\u0646.",
+          outputPath ? `\u0645\u0643\u0627\u0646 \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a: ${outputPath}` : "",
+          `\u0646\u0648\u0639 \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a: ${outputTypes.join(", ") || "UNKNOWN"}`,
+          `\u0645\u0624\u0634\u0631\u0627\u062a \u0627\u0644\u062a\u0634\u063a\u064a\u0644: ${indicators.join(", ") || "\u0644\u0627 \u064a\u0648\u062c\u062f"}`,
+          `\u0639\u062f\u062f \u0627\u0644\u0645\u0644\u0641\u0627\u062a: ${outputFiles.length}`
+        ];
+
+        if (instructions.length > 0) {
+          lines.push("");
+          lines.push("\u0637\u0631\u064a\u0642\u0629 \u0627\u0644\u062a\u0634\u063a\u064a\u0644:");
+          lines.push(...instructions);
+        }
+
+        return lines.filter(Boolean);
+      }
+
+      const lines = [
+        "Delivery Summary:",
+        runnable
+          ? "A runnable application indicator was created."
+          : "Forge stages completed successfully, but no runnable application was created. The current output is package/report files only. There is nothing to run yet.",
+        outputPath ? `Output path: ${outputPath}` : "",
+        `Output type: ${outputTypes.join(", ") || "UNKNOWN"}`,
+        `Runnable indicators: ${indicators.join(", ") || "none"}`,
+        `Output file count: ${outputFiles.length}`
+      ];
+
+      if (instructions.length > 0) {
+        lines.push("");
+        lines.push("Run instructions:");
+        lines.push(...instructions);
+      }
+
+      return lines.filter(Boolean);
+    }
+
     async function runForgeWorkspaceRuntimeForCurrentProject(request) {
       const projectId = getActiveProjectId();
       const projectName = currentProjectState && currentProjectState.project_name
@@ -1402,6 +1452,8 @@
       }
 
       const artifacts = runResult.artifacts || {};
+      const deliverySummary = runResult.delivery_summary || (runResult.project && runResult.project.delivery_summary) || {};
+      const runnable = deliverySummary && deliverySummary.runnable_application_created === true;
       const lines = lang === "ar"
         ? [
             "تم تنفيذ مرحلة Forge بنجاح.",
@@ -1420,13 +1472,20 @@
             artifacts.orchestration_report ? `Orchestration report: ${artifacts.orchestration_report}` : ""
           ];
 
+      lines.push("");
+      lines.push(...buildDeliverySummaryLines(deliverySummary, lang));
+
       pushMessage(
         "assistant",
-        lang === "ar" ? "اكتمل تنفيذ Forge" : "Forge Execution Complete",
+        lang === "ar" ? "\u0645\u0644\u062e\u0635 \u062a\u0633\u0644\u064a\u0645 Forge" : "Forge Delivery Summary",
         `<div class="file-preview">${formatMessageText(lines.filter(Boolean).join("\n"))}</div>`
       );
 
-      setStatus("Forge workspace runtime completed successfully.");
+      setStatus(
+        runnable
+          ? "Forge workspace runtime completed and runnable output was detected."
+          : "Forge workspace runtime completed; no runnable application was detected."
+      );
       return true;
     }
 
@@ -2071,13 +2130,7 @@
     }
 
     function getProjectNameForNewRequest(request) {
-      const currentName = currentProjectState && currentProjectState.project_name
-        ? currentProjectState.project_name
-        : "";
-
-      return isPlaceholderProjectName(currentName)
-        ? deriveProjectNameFromRequest(request)
-        : currentName;
+      return deriveProjectNameFromRequest(request);
     }
 
     function getActiveProjectId() {
