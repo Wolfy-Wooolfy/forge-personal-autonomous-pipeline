@@ -1345,15 +1345,20 @@
     function buildDeliverySummaryLines(deliverySummary, lang) {
       const summary = deliverySummary && typeof deliverySummary === "object" ? deliverySummary : {};
       const outputPath = summary.output_path || "";
+      const deliveryType = summary.delivery_type || "UNKNOWN_ARTIFACTS";
       const outputTypes = Array.isArray(summary.output_types) ? summary.output_types : [];
       const outputFiles = Array.isArray(summary.output_files) ? summary.output_files : [];
       const indicators = Array.isArray(summary.runnable_indicators) ? summary.runnable_indicators : [];
       const instructions = Array.isArray(summary.run_instructions) ? summary.run_instructions : [];
+      const nextActions = Array.isArray(summary.next_suggested_actions) ? summary.next_suggested_actions : [];
       const runnable = summary.runnable_application_created === true;
       const currentOutputFound = summary.current_execution_output_found === true;
-      const isRequirementsPackage = outputTypes.includes("REQUIREMENTS_PACKAGE");
+      const isDocumentDelivery = deliveryType === "DOCUMENT_DELIVERY";
+      const isRequirementsPackage = deliveryType === "REQUIREMENTS_PACKAGE" || outputTypes.includes("REQUIREMENTS_PACKAGE");
       const deliverySentenceAr = !currentOutputFound
         ? "\u0644\u0645 \u064a\u062a\u0645 \u0627\u0644\u0639\u062b\u0648\u0631 \u0639\u0644\u0649 \u0645\u062e\u0631\u062c\u0627\u062a \u0645\u0631\u062a\u0628\u0637\u0629 \u0628\u0627\u0644\u062a\u0646\u0641\u064a\u0630 \u0627\u0644\u062d\u0627\u0644\u064a."
+        : isDocumentDelivery
+          ? "\u062a\u0645 \u0625\u0646\u0634\u0627\u0621 \u0645\u0644\u0641 \u0627\u0644\u0648\u062b\u064a\u0642\u0629/\u0627\u0644\u0645\u0642\u062a\u0631\u062d \u0628\u0646\u062c\u0627\u062d. \u0647\u0630\u0627 \u0627\u0644\u0646\u0627\u062a\u062c \u0644\u064a\u0633 \u062a\u0637\u0628\u064a\u0642\u0627 \u0642\u0627\u0628\u0644\u0627 \u0644\u0644\u062a\u0634\u063a\u064a\u0644 \u0644\u0623\u0646\u0647 \u062a\u0633\u0644\u064a\u0645 \u0648\u062b\u0627\u0626\u0642\u064a."
         : isRequirementsPackage
           ? "\u062a\u0645 \u0625\u0646\u0634\u0627\u0621 \u062d\u0632\u0645\u0629 \u0645\u062a\u0637\u0644\u0628\u0627\u062a \u0648\u062e\u0637\u0629 \u062a\u0646\u0641\u064a\u0630\u060c \u0648\u0644\u064a\u0633 \u062a\u0637\u0628\u064a\u0642\u0627 \u0642\u0627\u0628\u0644\u0627 \u0644\u0644\u062a\u0634\u063a\u064a\u0644."
           : runnable
@@ -1361,6 +1366,8 @@
             : "\u0627\u0643\u062a\u0645\u0644\u062a \u0645\u0631\u0627\u062d\u0644 Forge \u0628\u0646\u062c\u0627\u062d\u060c \u0644\u0643\u0646 \u0644\u0645 \u064a\u062a\u0645 \u0625\u0646\u0634\u0627\u0621 \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644. \u0627\u0644\u0646\u0627\u062a\u062c \u0627\u0644\u062d\u0627\u0644\u064a \u0647\u0648 \u0645\u0644\u0641\u0627\u062a \u062d\u0632\u0645\u0629/\u062a\u0642\u0627\u0631\u064a\u0631 \u0641\u0642\u0637. \u0644\u0627 \u064a\u0648\u062c\u062f \u0634\u064a\u0621 \u064a\u0645\u0643\u0646 \u062a\u0634\u063a\u064a\u0644\u0647 \u062d\u062a\u0649 \u0627\u0644\u0622\u0646.";
       const deliverySentenceEn = !currentOutputFound
         ? "No output files linked to the current execution were found."
+        : isDocumentDelivery
+          ? "The document/proposal file was created successfully. This is not a runnable application because it is a document delivery."
         : isRequirementsPackage
           ? "A requirements package and execution plan were created, not a runnable application."
           : runnable
@@ -1371,18 +1378,27 @@
         const lines = [
           "Delivery Summary:",
           deliverySentenceAr,
+          `delivery_type: ${deliveryType}`,
           summary.execution_id ? `execution_id: ${summary.execution_id}` : "",
           summary.package_id ? `package_id: ${summary.package_id}` : "",
           outputPath ? `\u0645\u0643\u0627\u0646 \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a: ${outputPath}` : "",
+          `\u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644: ${runnable ? "\u0646\u0639\u0645" : "\u0644\u0627"}`,
           `\u0646\u0648\u0639 \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a: ${outputTypes.join(", ") || "UNKNOWN"}`,
           `\u0645\u0624\u0634\u0631\u0627\u062a \u0627\u0644\u062a\u0634\u063a\u064a\u0644: ${indicators.join(", ") || "\u0644\u0627 \u064a\u0648\u062c\u062f"}`,
-          `\u0639\u062f\u062f \u0627\u0644\u0645\u0644\u0641\u0627\u062a: ${outputFiles.length}`
+          `\u0639\u062f\u062f \u0627\u0644\u0645\u0644\u0641\u0627\u062a: ${outputFiles.length}`,
+          outputFiles.length > 0 ? `output_files:\n${outputFiles.map((file) => `- ${outputPath}/${file}`).join("\n")}` : ""
         ];
 
         if (instructions.length > 0) {
           lines.push("");
-          lines.push("\u0637\u0631\u064a\u0642\u0629 \u0627\u0644\u062a\u0634\u063a\u064a\u0644:");
+          lines.push(runnable ? "\u0637\u0631\u064a\u0642\u0629 \u0627\u0644\u062a\u0634\u063a\u064a\u0644:" : "\u0637\u0631\u064a\u0642\u0629 \u0627\u0644\u0627\u0633\u062a\u062e\u062f\u0627\u0645:");
           lines.push(...instructions);
+        }
+
+        if (nextActions.length > 0) {
+          lines.push("");
+          lines.push("\u062e\u0637\u0648\u0627\u062a \u0645\u0642\u062a\u0631\u062d\u0629:");
+          lines.push(...nextActions.map((action) => `- ${action}`));
         }
 
         return lines.filter(Boolean);
@@ -1391,21 +1407,96 @@
       const lines = [
         "Delivery Summary:",
         deliverySentenceEn,
+        `delivery_type: ${deliveryType}`,
         summary.execution_id ? `execution_id: ${summary.execution_id}` : "",
         summary.package_id ? `package_id: ${summary.package_id}` : "",
         outputPath ? `Output path: ${outputPath}` : "",
+        `Runnable: ${runnable ? "yes" : "no"}`,
         `Output type: ${outputTypes.join(", ") || "UNKNOWN"}`,
         `Runnable indicators: ${indicators.join(", ") || "none"}`,
-        `Output file count: ${outputFiles.length}`
+        `Output file count: ${outputFiles.length}`,
+        outputFiles.length > 0 ? `output_files:\n${outputFiles.map((file) => `- ${outputPath}/${file}`).join("\n")}` : ""
       ];
 
       if (instructions.length > 0) {
         lines.push("");
-        lines.push("Run instructions:");
+        lines.push(runnable ? "Run instructions:" : "Usage:");
         lines.push(...instructions);
       }
 
+      if (nextActions.length > 0) {
+        lines.push("");
+        lines.push("Next suggested actions:");
+        lines.push(...nextActions.map((action) => `- ${action}`));
+      }
+
       return lines.filter(Boolean);
+    }
+
+    function buildDeliveryFollowupChoices(deliverySummary, lang) {
+      const deliveryType = deliverySummary && deliverySummary.delivery_type ? deliverySummary.delivery_type : "";
+
+      if (deliveryType !== "DOCUMENT_DELIVERY") {
+        return [];
+      }
+
+      if (lang === "ar") {
+        return [
+          {
+            label: "\u0627\u0628\u0646\u064a \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0645\u0646 \u0647\u0630\u0627 \u0627\u0644\u0645\u0642\u062a\u0631\u062d",
+            value: "\u0627\u0628\u0646\u064a \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0645\u0646 \u0647\u0630\u0627 \u0627\u0644\u0645\u0642\u062a\u0631\u062d",
+            description: "\u062a\u062d\u0648\u064a\u0644 \u0627\u0644\u0645\u0642\u062a\u0631\u062d \u0625\u0644\u0649 \u0637\u0644\u0628 \u0628\u0646\u0627\u0621 \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644."
+          },
+          {
+            label: "\u0639\u062f\u0651\u0644 \u0627\u0644\u0645\u0642\u062a\u0631\u062d",
+            value: "\u0639\u062f\u0644 \u0627\u0644\u0648\u062b\u064a\u0642\u0629",
+            description: "\u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u0648\u062b\u064a\u0642\u0629 \u0642\u0628\u0644 \u0623\u064a \u062a\u0646\u0641\u064a\u0630 \u062c\u062f\u064a\u062f."
+          },
+          {
+            label: "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641 \u0627\u0644\u0645\u0642\u062a\u0631\u062d",
+            value: "\u0627\u0639\u0631\u0636 \u0627\u0644\u0648\u062b\u064a\u0642\u0629",
+            description: "\u0639\u0631\u0636 \u0622\u062e\u0631 \u0648\u062b\u064a\u0642\u0629 \u0645\u0639\u062a\u0645\u062f\u0629 \u0623\u0648 \u0645\u0633\u0648\u062f\u0629."
+          },
+          {
+            label: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f",
+            value: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f",
+            description: "\u0625\u063a\u0644\u0627\u0642 \u0627\u0644\u062a\u062f\u0641\u0642 \u0627\u0644\u062d\u0627\u0644\u064a."
+          },
+          {
+            label: "\u0627\u062a\u0648\u0642\u0641",
+            value: "\u0627\u062a\u0648\u0642\u0641",
+            description: "\u0625\u064a\u0642\u0627\u0641 \u0627\u0644\u0637\u0644\u0628 \u0627\u0644\u062d\u0627\u0644\u064a."
+          }
+        ];
+      }
+
+      return [
+        {
+          label: "Build app from proposal",
+          value: "build the application from this proposal",
+          description: "Turn this document delivery into a runnable application request."
+        },
+        {
+          label: "Revise proposal",
+          value: "revise documentation",
+          description: "Change the current proposal before another execution."
+        },
+        {
+          label: "Show proposal file",
+          value: "show documentation",
+          description: "Show the latest documentation draft or approved document."
+        },
+        {
+          label: "Start over",
+          value: "start over",
+          description: "Close this flow and start a new request."
+        },
+        {
+          label: "Stop",
+          value: "stop",
+          description: "Stop the current project flow."
+        }
+      ];
     }
 
     async function runForgeWorkspaceRuntimeForCurrentProject(request) {
@@ -1491,16 +1582,24 @@
       lines.push("");
       lines.push(...buildDeliverySummaryLines(deliverySummary, lang));
 
+      const followupChoices = buildDeliveryFollowupChoices(deliverySummary, lang);
+      const followupHtml = followupChoices.length > 0
+        ? `<div style="margin-top:12px;">${buildCurrentProjectActionChoiceHtml(followupChoices)}</div>`
+        : "";
+
       pushMessage(
         "assistant",
         lang === "ar" ? "\u0645\u0644\u062e\u0635 \u062a\u0633\u0644\u064a\u0645 Forge" : "Forge Delivery Summary",
-        `<div class="file-preview">${formatMessageText(lines.filter(Boolean).join("\n"))}</div>`
+        `<div class="file-preview">${formatMessageText(lines.filter(Boolean).join("\n"))}</div>${followupHtml}`
       );
 
+      const deliveryType = deliverySummary && deliverySummary.delivery_type ? deliverySummary.delivery_type : "";
       setStatus(
         runnable
           ? "Forge workspace runtime completed and runnable output was detected."
-          : "Forge workspace runtime completed; no runnable application was detected."
+          : deliveryType === "DOCUMENT_DELIVERY"
+            ? "Forge workspace runtime completed with a document delivery."
+            : "Forge workspace runtime completed; no runnable application was detected."
       );
       return true;
     }

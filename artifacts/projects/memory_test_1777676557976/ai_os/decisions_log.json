@@ -103,5 +103,12 @@
     "decision_owner": "USER",
     "rationale": "Selected from workspace conversation: نظام دعم فني بسيط مع التركيز على تسجيل الشكاوى وقاعدة المعرفة",
     "created_at": "2026-05-02T17:02:54.776Z"
+  },
+  {
+    "entry_type": "OPTION_DECISION",
+    "selected_option_id": "option_2",
+    "decision_owner": "USER",
+    "rationale": "Selected from workspace conversation: نظام خدمة عملاء مركّز على التذاكر وقاعدة المعرفة",
+    "created_at": "2026-05-02T17:24:10.578Z"
   }
 ]

@@ -1,6 +1,6 @@
 {
   "active_project_id": "memory_test_1777676557976",
-  "updated_at": "2026-05-02T17:03:31.693Z",
+  "updated_at": "2026-05-02T17:24:55.357Z",
   "projects": [
     {
       "project_id": "action_game",
@@ -10,7 +10,7 @@
       "active_runtime_state": "EXECUTION_PREPARATION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-02T17:03:31.694Z"
+      "last_updated_at": "2026-05-02T17:24:55.358Z"
     },
     {
       "project_id": "codex_test_project",
@@ -20,7 +20,7 @@
       "active_runtime_state": "DISCUSSION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-02T17:03:31.695Z"
+      "last_updated_at": "2026-05-02T17:24:55.358Z"
     },
     {
       "project_id": "default_project",
@@ -30,7 +30,7 @@
       "active_runtime_state": "EXECUTION_PREPARATION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-02T17:03:31.695Z"
+      "last_updated_at": "2026-05-02T17:24:55.359Z"
     },
     {
       "project_id": "memory_test_1777676534218",
@@ -40,17 +40,17 @@
       "active_runtime_state": "DISCUSSION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-02T17:03:31.696Z"
+      "last_updated_at": "2026-05-02T17:24:55.360Z"
     },
     {
       "project_id": "memory_test_1777676557976",
-      "project_name": "مقترح كامل لسيستم خدمة عملا واعرضه عليا",
+      "project_name": "سيستم خدمة عملا",
       "project_status": "ACTIVE",
       "current_phase": "FORGE_RUNTIME_COMPLETE",
       "active_runtime_state": "EXECUTION_COMPLETE",
       "pending_decisions": [],
       "active_project_flag": true,
-      "last_updated_at": "2026-05-02T17:03:31.693Z"
+      "last_updated_at": "2026-05-02T17:24:55.356Z"
     },
     {
       "project_id": "mobile_game",
@@ -60,7 +60,7 @@
       "active_runtime_state": "EXECUTION_PREPARATION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-02T17:03:31.696Z"
+      "last_updated_at": "2026-05-02T17:24:55.360Z"
     },
     {
       "project_id": "test_project",
@@ -72,7 +72,7 @@
         "EXECUTION_PACKAGE_PENDING_FORGE"
       ],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-02T17:03:31.698Z"
+      "last_updated_at": "2026-05-02T17:24:55.362Z"
     },
     {
       "project_id": "test_project_2",
@@ -82,7 +82,7 @@
       "active_runtime_state": "DOCUMENTATION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-02T17:03:31.698Z"
+      "last_updated_at": "2026-05-02T17:24:55.362Z"
     },
     {
       "project_id": "test_project_3",
@@ -92,7 +92,7 @@
       "active_runtime_state": "EXECUTION_PREPARATION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-02T17:03:31.699Z"
+      "last_updated_at": "2026-05-02T17:24:55.363Z"
     }
   ]
 }

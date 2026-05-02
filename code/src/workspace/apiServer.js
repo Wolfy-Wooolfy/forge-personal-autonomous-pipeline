@@ -1987,7 +1987,7 @@ ${trimmedExisting}`
         execution_package_state: ok ? "EXECUTED" : "APPROVED_PENDING_FORGE",
         execution_state: ok ? "EXECUTED" : "BLOCKED",
         verification_state: ok ? "PASS" : "BLOCKED",
-        delivery_state: ok ? (runnableApplicationCreated ? "READY" : "ARTIFACTS_ONLY") : "NOT_READY",
+        delivery_state: ok ? (runnableApplicationCreated ? "READY" : deliverySummary.delivery_type || "ARTIFACTS_ONLY") : "NOT_READY",
         delivery_summary: deliverySummary
       });
 
@@ -2155,6 +2155,7 @@ ${trimmedExisting}`
     const outputRel = getProjectOutputRel(projectId);
     const outputAbs = getProjectOutputAbs(projectId);
     const executionPackage = readJsonSafe(getProjectExecutionPackageAbs(projectId), null);
+    const projectState = readJsonSafe(getProjectStateAbs(projectId), {});
     const executionId = String(executionPackage && executionPackage.execution_id ? executionPackage.execution_id : "").trim();
     const packageId = String(executionPackage && executionPackage.package_id ? executionPackage.package_id : "").trim();
     const proposedFiles =
@@ -2192,6 +2193,18 @@ ${trimmedExisting}`
     const serverJs = findFile("server.js");
     const appJs = findFile("app.js");
     const readme = findFile("readme.md");
+    const readmeText = readme ? readTextSafe(path.join(outputAbs, readme)).toLowerCase() : "";
+    const readmeHasRunInstructions = Boolean(
+      readme &&
+      (
+        readmeText.includes("npm ") ||
+        readmeText.includes("run ") ||
+        readmeText.includes("start") ||
+        readmeText.includes("open ") ||
+        readmeText.includes("تشغيل") ||
+        readmeText.includes("افتح")
+      )
+    );
     const hasSrc = lowerDirectories.includes("src") || lowerFiles.some((file) => file.startsWith("src/") || file.includes("/src/"));
 
     const runnableIndicators = [
@@ -2200,10 +2213,25 @@ ${trimmedExisting}`
       serverJs ? "server.js" : "",
       appJs ? "app.js" : "",
       hasSrc ? "src/" : "",
-      readme ? "README.md" : ""
+      readmeHasRunInstructions ? "README.md" : ""
     ].filter(Boolean);
 
     const currentExecutionOutputFound = files.length > 0;
+    const mdFiles = files.filter((file) => file.toLowerCase().endsWith(".md"));
+    const intentText = [
+      projectState.user_goal,
+      projectState.project_name,
+      projectState.business_goal,
+      projectState.technical_goal,
+      projectState.requirement_domain,
+      executionPackage && executionPackage.approved_scope && executionPackage.approved_scope.summary,
+      executionPackage && executionPackage.business_and_scope_decisions && executionPackage.business_and_scope_decisions.user_goal,
+      files.join(" ")
+    ].map((value) => String(value || "")).join(" ").toLowerCase();
+    const documentIntentPattern = /(مقترح|وثيقة|خطة|متطلبات|proposal|document|documentation|plan|requirements)/i;
+    const buildIntentPattern = /(ابني|اعمل|تطبيق|سيستم|نظام|قابل للتشغيل|build app|create app|build system|create system|runnable)/i;
+    const hasDocumentIntent = documentIntentPattern.test(intentText);
+    const hasBuildIntent = buildIntentPattern.test(intentText);
     const requirementPackageNames = new Set([
       "requirements.md",
       "execution_plan.json",
@@ -2216,6 +2244,29 @@ ${trimmedExisting}`
         return Array.from(requirementPackageNames).some((suffix) => normalized.endsWith(suffix));
       });
     const hasRunnableApplication = currentExecutionOutputFound && !hasOnlyRequirementsPackage && runnableIndicators.length > 0;
+    const hasOnlyDocsOrData =
+      currentExecutionOutputFound &&
+      files.every((file) => {
+        const normalized = file.toLowerCase();
+        return normalized.endsWith(".md") || normalized.endsWith(".json") || normalized.endsWith(".txt");
+      });
+    const hasDocumentDelivery =
+      currentExecutionOutputFound &&
+      !hasRunnableApplication &&
+      mdFiles.length > 0 &&
+      hasDocumentIntent &&
+      (!hasBuildIntent || intentText.includes("مقترح") || intentText.includes("proposal") || intentText.includes("وثيقة") || intentText.includes("document"));
+    const deliveryType = hasRunnableApplication
+      ? "RUNNABLE_APPLICATION"
+      : hasDocumentDelivery
+        ? "DOCUMENT_DELIVERY"
+        : hasOnlyRequirementsPackage || (hasOnlyDocsOrData && hasBuildIntent)
+          ? "REQUIREMENTS_PACKAGE"
+          : currentExecutionOutputFound && files.every((file) => /(^|\/).*(report|log|summary).*\.(md|json|txt)$/i.test(file))
+            ? "REPORTS_ONLY"
+            : currentExecutionOutputFound
+              ? "UNKNOWN_ARTIFACTS"
+              : "UNKNOWN_ARTIFACTS";
     const outputTypes = [];
 
     if (indexHtml) {
@@ -2233,13 +2284,21 @@ ${trimmedExisting}`
     if (readme) {
       outputTypes.push("README");
     }
-    if (hasOnlyRequirementsPackage) {
+    if (hasDocumentDelivery) {
+      outputTypes.push("DOCUMENT_DELIVERY");
+    }
+    if (deliveryType === "REQUIREMENTS_PACKAGE") {
       outputTypes.push("REQUIREMENTS_PACKAGE");
     }
     if (!currentExecutionOutputFound && expectedOutputFiles.length > 0) {
       outputTypes.push("NO_CURRENT_EXECUTION_OUTPUT_FILES");
     }
-    if (!hasRunnableApplication && currentExecutionOutputFound && !hasOnlyRequirementsPackage) {
+    if (
+      !hasRunnableApplication &&
+      currentExecutionOutputFound &&
+      deliveryType !== "DOCUMENT_DELIVERY" &&
+      deliveryType !== "REQUIREMENTS_PACKAGE"
+    ) {
       outputTypes.push("PACKAGE_OR_REPORT_FILES");
     }
     if (allFiles.length === 0) {
@@ -2267,6 +2326,13 @@ ${trimmedExisting}`
 
     if (!currentExecutionOutputFound) {
       runInstructions.push("No output files linked to the current execution were found.");
+    } else if (deliveryType === "DOCUMENT_DELIVERY") {
+      const firstDoc = mdFiles[0] || files[0];
+      runInstructions.push("Open and review the generated document/proposal.");
+      if (firstDoc) {
+        runInstructions.push(`Document path: ${outputRel}/${firstDoc}`);
+      }
+      runInstructions.push("You can then request building the application based on it.");
     } else if (hasOnlyRequirementsPackage) {
       runInstructions.push("A requirements package and execution plan were created, not a runnable application.");
     } else if (!hasRunnableApplication) {
@@ -2277,6 +2343,7 @@ ${trimmedExisting}`
       project_id: projectId,
       execution_id: executionId,
       package_id: packageId,
+      delivery_type: deliveryType,
       output_path: outputRel,
       output_exists: fs.existsSync(outputAbs),
       current_execution_output_found: currentExecutionOutputFound,
@@ -2287,7 +2354,32 @@ ${trimmedExisting}`
       output_types: outputTypes,
       runnable_application_created: hasRunnableApplication,
       runnable_indicators: runnableIndicators,
-      run_instructions: runInstructions
+      run_instructions: runInstructions,
+      usage_or_run_instructions: runInstructions,
+      next_suggested_actions: deliveryType === "DOCUMENT_DELIVERY"
+        ? [
+            "Build the application from this proposal",
+            "Revise the proposal",
+            "Show the proposal file",
+            "Start over",
+            "Stop"
+          ]
+        : deliveryType === "REQUIREMENTS_PACKAGE"
+          ? [
+              "Build the runnable application from these requirements",
+              "Revise the requirements",
+              "Show output files"
+            ]
+          : deliveryType === "RUNNABLE_APPLICATION"
+            ? [
+                "Run or open the application",
+                "Review generated files",
+                "Request changes"
+              ]
+            : [
+                "Review output files",
+                "Clarify the requested delivery"
+              ]
     };
   }
 

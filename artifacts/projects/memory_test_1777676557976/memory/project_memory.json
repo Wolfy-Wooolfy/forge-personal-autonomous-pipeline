@@ -11,7 +11,7 @@
     "active_runtime_state": "EXECUTION_COMPLETE",
     "execution_state": "EXECUTED",
     "verification_state": "PASS",
-    "delivery_state": "ARTIFACTS_ONLY"
+    "delivery_state": "REQUIREMENTS_PACKAGE"
   },
   "change_history": [
     {
@@ -184,7 +184,45 @@
         "delivery_state": "ARTIFACTS_ONLY",
         "pending_decisions": []
       }
+    },
+    {
+      "version_id": "state_0009",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-02T17:20:10.411Z",
+      "state_hash": "59bd6cc0976dc001fcde811d427a5eee6c7a9b2f857d19a2447076817667a3fc",
+      "summary": {
+        "project_id": "memory_test_1777676557976",
+        "project_name": "مقترح كامل لسيستم خدمة عملا واعرضه عليا",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "ARTIFACTS_ONLY",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0010",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-02T17:24:55.356Z",
+      "state_hash": "9a7826fb113986d17f3b349c59955be8e2bf8afefbd027c348e432c2e42b0dad",
+      "summary": {
+        "project_id": "memory_test_1777676557976",
+        "project_name": "سيستم خدمة عملا",
+        "project_status": "ACTIVE",
+        "current_phase": "FORGE_RUNTIME_COMPLETE",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "REQUIREMENTS_PACKAGE",
+        "pending_decisions": []
+      }
     }
   ],
-  "updated_at": "2026-05-02T17:03:31.693Z"
+  "updated_at": "2026-05-02T17:24:55.356Z"
 }
