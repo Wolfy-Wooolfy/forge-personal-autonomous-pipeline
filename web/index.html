@@ -712,16 +712,55 @@
     }
 
     function isCheckpointProgressRequest(value) {
-      const normalized = String(value || "").trim().toLowerCase();
+      const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
 
       return isPositiveConfirmation(normalized) ||
-        normalized.includes("proposal") ||
-        normalized.includes("option") ||
-        normalized.includes("show") ||
-        normalized.includes("display") ||
-        normalized.includes("اعرض") ||
-        normalized.includes("مقترح") ||
-        normalized.includes("سيناريو");
+        normalized === "show proposal" ||
+        normalized === "show proposals" ||
+        normalized === "display proposal" ||
+        normalized === "display proposals" ||
+        normalized === "options" ||
+        normalized === "proposal" ||
+        normalized === "اعرض" ||
+        normalized === "اعرض المقترح" ||
+        normalized === "اعرض المقترحات" ||
+        normalized === "المقترح" ||
+        normalized === "المقترحات";
+    }
+
+    function isLikelyNewOrModifiedProjectRequest(value) {
+      const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+
+      if (!normalized || isCheckpointProgressRequest(normalized) || isNegativeConfirmation(normalized)) {
+        return false;
+      }
+
+      return normalized.length >= 8;
+    }
+
+    function buildCheckpointRequestChangeChoiceHtml(currentRequest, proposedRequest) {
+      const lang = detectUserLanguage(proposedRequest || currentRequest);
+
+      return `
+        <div class="strategy-choice-list">
+          <button class="strategy-choice-btn" type="button" data-checkpoint-action-choice="continue-current">
+            <strong>${escapeHtml(lang === "ar" ? "اعرض مقترحات الطلب الحالي" : "Show current request proposals")}</strong>
+            ${escapeHtml(currentRequest || "")}
+          </button>
+          <button class="strategy-choice-btn" type="button" data-checkpoint-action-choice="replace-request" data-replacement-request="${escapeHtml(proposedRequest || "")}">
+            <strong>${escapeHtml(lang === "ar" ? "عدّل الطلب للرسالة الجديدة" : "Use the new message instead")}</strong>
+            ${escapeHtml(proposedRequest || "")}
+          </button>
+          <button class="strategy-choice-btn" type="button" data-project-command-choice="اتوقف">
+            <strong>${escapeHtml(lang === "ar" ? "اتوقف" : "Stop")}</strong>
+            ${escapeHtml(lang === "ar" ? "إيقاف الطلب المفتوح داخل المشروع الحالي." : "Stop the current open request.")}
+          </button>
+          <button class="strategy-choice-btn" type="button" data-project-command-choice="ابدأ من جديد">
+            <strong>${escapeHtml(lang === "ar" ? "ابدأ من جديد" : "Start over")}</strong>
+            ${escapeHtml(lang === "ar" ? "إغلاق التدفق الحالي وانتظار فكرة مشروع جديدة." : "Close the current flow and wait for a new project idea.")}
+          </button>
+        </div>
+      `;
     }
 
     function askAiOsOptionsCheckpoint(requestText) {
@@ -986,6 +1025,44 @@
         normalized === "موافق";
     }
 
+    function isAmendDocumentationRequest(value) {
+      const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+
+      return normalized === "edit docs" ||
+        normalized === "edit documentation" ||
+        normalized === "revise docs" ||
+        normalized === "revise documentation" ||
+        normalized === "عدل الوثيقة" ||
+        normalized === "عدّل الوثيقة" ||
+        normalized === "عدل الوثائق" ||
+        normalized === "عدّل الوثائق" ||
+        normalized === "تعديل الوثيقة" ||
+        normalized === "تعديل الوثائق";
+    }
+
+    function askForDocumentationRevision(request) {
+      const lang = detectUserLanguage(request);
+
+      pushMessage(
+        "user",
+        lang === "ar" ? "طلب تعديل الوثيقة" : "Documentation Revision Request",
+        `<div class="file-preview">${formatMessageText(request)}</div>`
+      );
+      requestInput.value = "";
+
+      pushMessage(
+        "assistant",
+        lang === "ar" ? "مطلوب تفاصيل التعديل" : "Revision Details Needed",
+        `<div class="file-preview">${formatMessageText(
+          lang === "ar"
+            ? "اكتب بوضوح التعديلات المطلوبة على الوثيقة، مثال: أضف الرواتب، احذف التكامل، غيّر النظام إلى موبايل. بعد ذلك سأتعامل معها كتعديل على النطاق الحالي وليس كطلب جديد."
+            : "Write the required documentation changes clearly. I will treat them as changes to the current scope, not as a new request."
+        )}</div>`
+      );
+
+      setStatus(lang === "ar" ? "بانتظار تفاصيل تعديل الوثيقة." : "Waiting for documentation revision details.");
+    }
+
     function isStopCurrentProjectRequest(value) {
       const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
 
@@ -1031,6 +1108,7 @@
       if (
         isShowDocumentationRequest(normalized) ||
         isApproveDocumentationRequest(normalized) ||
+        isAmendDocumentationRequest(normalized) ||
         isContinueCurrentProjectRequest(normalized) ||
         isExecutionRequest(normalized) ||
         isStopCurrentProjectRequest(normalized) ||
@@ -1105,50 +1183,62 @@
     function buildCurrentProjectActionChoices() {
       const documentationState = String(currentProjectState && currentProjectState.documentation_state || "").toUpperCase();
       const executionPackageState = String(currentProjectState && currentProjectState.execution_package_state || "").toUpperCase();
+      const runtimeState = String(currentProjectState && currentProjectState.active_runtime_state || "").toUpperCase();
       const choices = [];
 
       if (pendingConversationCheckpoint && pendingConversationCheckpoint.nextAction === "AI_OS_OPTIONS") {
         choices.push({
-          label: "\u0627\u0639\u0631\u0636 \u0627\u0644\u0645\u0642\u062a\u0631\u062d",
-          value: "\u0627\u0639\u0631\u0636 \u0627\u0644\u0645\u0642\u062a\u0631\u062d",
-          description: "\u0639\u0631\u0636 \u0627\u0644\u0645\u0642\u062a\u0631\u062d\u0627\u062a \u0627\u0644\u0645\u0646\u0638\u0645\u0629 \u0644\u0644\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062d\u0627\u0644\u064a."
+          label: "اعرض المقترح",
+          value: "اعرض المقترح",
+          description: "عرض المقترحات المنظمة للمشروع الحالي."
         });
       }
 
       if (documentationState && documentationState !== "EMPTY") {
         choices.push({
-          label: "\u0627\u0639\u0631\u0636 \u0627\u0644\u0648\u062b\u0627\u0626\u0642",
-          value: "\u0627\u0639\u0631\u0636 \u0627\u0644\u0648\u062b\u0627\u0626\u0642",
-          description: "\u0639\u0631\u0636 \u0645\u0633\u0648\u062f\u0629 \u0627\u0644\u0648\u062b\u0627\u0626\u0642 \u0623\u0648 \u0622\u062e\u0631 \u0648\u062b\u064a\u0642\u0629 \u0644\u0644\u0645\u0634\u0631\u0648\u0639."
+          label: "اعرض الوثائق",
+          value: "اعرض الوثائق",
+          description: "عرض مسودة الوثائق أو آخر وثيقة للمشروع."
         });
       }
 
       if (documentationState === "DRAFT_READY") {
         choices.push({
-          label: "\u0627\u0639\u062a\u0645\u062f \u0627\u0644\u0648\u062b\u0627\u0626\u0642",
-          value: "\u0627\u0639\u062a\u0645\u062f \u0627\u0644\u0648\u062b\u0627\u0626\u0642",
-          description: "\u0627\u0639\u062a\u0645\u0627\u062f \u0627\u0644\u0645\u0633\u0648\u062f\u0629 \u0643\u0646\u0637\u0627\u0642 \u0645\u0648\u0627\u0641\u0642 \u0639\u0644\u064a\u0647."
+          label: "اعتمد الوثائق",
+          value: "اعتمد الوثائق",
+          description: "اعتماد المسودة كنطاق موافق عليه."
+        });
+        choices.push({
+          label: "عدّل الوثيقة",
+          value: "عدل الوثيقة",
+          description: "وضّح التعديل المطلوب قبل الاعتماد."
         });
       }
 
-      if (canHandleAiOsExecutionRequest() || executionPackageState === "READY_FOR_HANDOFF") {
+      if (
+        documentationState === "DOCS_APPROVED" ||
+        executionPackageState === "READY_FOR_HANDOFF" ||
+        executionPackageState === "APPROVED_PENDING_FORGE" ||
+        runtimeState === "EXECUTION_HANDOFF_READY" ||
+        runtimeState === "EXECUTION_HANDOFF_CREATED"
+      ) {
         choices.push({
-          label: "\u0646\u0641\u0630",
-          value: "\u0646\u0641\u0630",
-          description: "\u0627\u0639\u062a\u0645\u0627\u062f \u0627\u0644\u0648\u062b\u0627\u0626\u0642 \u0639\u0646\u062f \u0627\u0644\u062d\u0627\u062c\u0629 \u0648\u062a\u062c\u0647\u064a\u0632 \u062a\u0633\u0644\u064a\u0645 Forge."
+          label: "نفذ",
+          value: "نفذ",
+          description: "تجهيز تسليم Forge بعد اعتماد الوثائق."
         });
       }
 
       choices.push({
-        label: "\u0627\u062a\u0648\u0642\u0641",
-        value: "\u0627\u062a\u0648\u0642\u0641",
-        description: "\u0625\u064a\u0642\u0627\u0641 \u0627\u0644\u0637\u0644\u0628 \u0627\u0644\u0645\u0641\u062a\u0648\u062d \u062f\u0627\u062e\u0644 \u0627\u0644\u0645\u0634\u0631\u0648\u0639 \u0627\u0644\u062d\u0627\u0644\u064a."
+        label: "اتوقف",
+        value: "اتوقف",
+        description: "إيقاف الطلب المفتوح داخل المشروع الحالي."
       });
 
       choices.push({
-        label: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f",
-        value: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f",
-        description: "\u0625\u063a\u0644\u0627\u0642 \u0627\u0644\u062a\u062f\u0641\u0642 \u0627\u0644\u062d\u0627\u0644\u064a \u0648\u0627\u0646\u062a\u0638\u0627\u0631 \u0641\u0643\u0631\u0629 \u0645\u0634\u0631\u0648\u0639 \u062c\u062f\u064a\u062f\u0629."
+        label: "ابدأ من جديد",
+        value: "ابدأ من جديد",
+        description: "إغلاق التدفق الحالي وانتظار فكرة مشروع جديدة."
       });
 
       const seen = new Set();
@@ -1354,7 +1444,7 @@
         : projectId;
       const lang = detectUserLanguage(request);
 
-      pushMessage("user", lang === "ar" ? "\u0637\u0644\u0628 \u0639\u0631\u0636 \u0627\u0644\u0648\u062b\u0627\u0626\u0642" : "Show Documentation", `<div class="file-preview">${formatMessageText(request)}</div>`);
+      pushMessage("user", lang === "ar" ? "طلب عرض الوثائق" : "Show Documentation", `<div class="file-preview">${formatMessageText(request)}</div>`);
       requestInput.value = "";
       chatSendBtn.disabled = true;
       setStatus("Loading current AI OS documentation...");
@@ -1373,23 +1463,30 @@
           renderResponse(docsResult);
           pushMessage(
             "assistant",
-            lang === "ar" ? "\u0627\u0644\u0648\u062b\u0627\u0626\u0642 \u063a\u064a\u0631 \u062c\u0627\u0647\u0632\u0629" : "Documentation Not Ready",
+            lang === "ar" ? "الوثائق غير جاهزة" : "Documentation Not Ready",
             `<div class="file-preview">${formatMessageText(docsResult.blocking_question || docsResult.reason || "Documentation is not ready.")}</div>`
           );
           setStatus(docsResult.reason || "AI OS documentation is not ready.");
           return;
         }
 
+        const choices = buildCurrentProjectActionChoices();
+
         pushMessage(
           "assistant",
-          lang === "ar" ? "\u0627\u0644\u0648\u062b\u0627\u0626\u0642 \u0627\u0644\u062d\u0627\u0644\u064a\u0629" : "Current Documentation",
-          `<div class="file-preview">${formatMessageText(
-            [
-              docsResult.documentation_path ? `${lang === "ar" ? "\u0627\u0644\u0645\u0633\u0627\u0631" : "Path"}: ${docsResult.documentation_path}` : "",
-              "",
-              docsResult.documentation_content || ""
-            ].filter(Boolean).join("\n")
-          )}</div>`
+          lang === "ar" ? "الوثائق الحالية" : "Current Documentation",
+          `
+            <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
+              [
+                docsResult.documentation_path ? `${lang === "ar" ? "المسار" : "Path"}: ${docsResult.documentation_path}` : "",
+                "",
+                docsResult.documentation_content || "",
+                "",
+                lang === "ar" ? "اختار الخطوة المناسبة من الأزرار التالية:" : "Choose the appropriate next step from the buttons below:"
+              ].filter(Boolean).join("\n")
+            )}</div>
+            ${buildCurrentProjectActionChoiceHtml(choices)}
+          `
         );
 
         setStatus("AI OS documentation loaded.");
@@ -1480,6 +1577,12 @@
       if (isApproveDocumentationRequest(request) && canApproveAiOsDocumentation()) {
         clearPendingDiscoveryForProjectCommand();
         await approveAiOsDocumentationForCurrentProject(request);
+        return true;
+      }
+
+      if (isAmendDocumentationRequest(request) && canApproveAiOsDocumentation()) {
+        clearPendingDiscoveryForProjectCommand();
+        askForDocumentationRevision(request);
         return true;
       }
 
@@ -1845,6 +1948,43 @@
         card.appendChild(summaryEl);
         historyBox.appendChild(card);
       });
+    }
+
+    function isPlaceholderProjectName(value) {
+      const normalized = String(value || "").trim().toLowerCase().replace(/[_\-]+/g, " ").replace(/\s+/g, " ");
+
+      return !normalized ||
+        normalized === "default project" ||
+        normalized === "new project" ||
+        normalized === "memory test" ||
+        normalized.startsWith("memory test") ||
+        normalized.includes("test");
+    }
+
+    function deriveProjectNameFromRequest(request) {
+      const raw = String(request || "").trim().replace(/\s+/g, " ");
+
+      if (!raw) {
+        return "New Project";
+      }
+
+      const cleaned = raw
+        .replace(/^(عايز|أريد|اريد|اعمل|ابني|صمم|create|build|make)\s+/i, "")
+        .replace(/\s+/g, " ")
+        .trim();
+
+      const candidate = cleaned || raw;
+      return candidate.length > 60 ? candidate.slice(0, 60).trim() : candidate;
+    }
+
+    function getProjectNameForNewRequest(request) {
+      const currentName = currentProjectState && currentProjectState.project_name
+        ? currentProjectState.project_name
+        : "";
+
+      return isPlaceholderProjectName(currentName)
+        ? deriveProjectNameFromRequest(request)
+        : currentName;
     }
 
     function getActiveProjectId() {
@@ -2545,6 +2685,39 @@
       if (pendingConversationCheckpoint) {
         const checkpointRequest = pendingConversationCheckpoint.request;
 
+        if (isLikelyNewOrModifiedProjectRequest(request)) {
+          const lang = detectUserLanguage(request);
+
+          pushMessage(
+            "user",
+            lang === "ar" ? "رسالة جديدة أثناء اختيار مفتوح" : "New Message During Open Choice",
+            `<div class="file-preview">${formatMessageText(request)}</div>`
+          );
+          requestInput.value = "";
+
+          pushMessage(
+            "assistant",
+            lang === "ar" ? "اختار المقصود" : "Choose What You Mean",
+            `
+              <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
+                lang === "ar"
+                  ? [
+                      "عندنا طلب مفتوح لم يتم حسمه بعد.",
+                      "هل تريد عرض مقترحات الطلب الحالي، أم تعديل الطلب إلى رسالتك الجديدة؟"
+                    ].join("\n")
+                  : [
+                      "There is an open request that has not been resolved yet.",
+                      "Do you want to show proposals for the current request, or replace it with your new message?"
+                    ].join("\n")
+              )}</div>
+              ${buildCheckpointRequestChangeChoiceHtml(checkpointRequest, request)}
+            `
+          );
+
+          setStatus(lang === "ar" ? "بانتظار تحديد المقصود." : "Waiting for intent choice.");
+          return;
+        }
+
         if (isCheckpointProgressRequest(request)) {
           pushMessage(
             "user",
@@ -2792,9 +2965,7 @@
         const intake = await requestAPI("/api/ai-os/intake", {
           message: request,
           project_id: activeTurn.projectId,
-          project_name: currentProjectState && currentProjectState.project_name
-            ? currentProjectState.project_name
-            : activeTurn.projectId
+          project_name: getProjectNameForNewRequest(request)
         });
 
         if (intake.project) {
@@ -2808,9 +2979,7 @@
 
           pendingAiOsDiscovery = {
             projectId: activeTurn.projectId,
-            projectName: currentProjectState && currentProjectState.project_name
-              ? currentProjectState.project_name
-              : activeTurn.projectId,
+            projectName: getProjectNameForNewRequest(request),
             originalRequest: request,
             questions
           };
@@ -2966,6 +3135,37 @@
     });
 
     chatStream.addEventListener("click", (event) => {
+      const checkpointActionButton = event.target.closest("[data-checkpoint-action-choice]");
+
+      if (checkpointActionButton) {
+        const action = checkpointActionButton.getAttribute("data-checkpoint-action-choice");
+
+        if (!action || checkpointActionButton.disabled) {
+          return;
+        }
+
+        const allCheckpointActionButtons = chatStream.querySelectorAll("[data-checkpoint-action-choice]");
+        allCheckpointActionButtons.forEach((btn) => {
+          btn.disabled = true;
+          btn.style.opacity = "0.6";
+          btn.style.cursor = "not-allowed";
+        });
+
+        if (action === "replace-request") {
+          const replacementRequest = checkpointActionButton.getAttribute("data-replacement-request") || "";
+          clearConversationFlowState();
+          requestInput.value = replacementRequest;
+          chatSendBtn.click();
+          return;
+        }
+
+        if (action === "continue-current") {
+          requestInput.value = "اعرض المقترح";
+          chatSendBtn.click();
+          return;
+        }
+      }
+
       const projectCommandButton = event.target.closest("[data-project-command-choice]");
 
       if (projectCommandButton) {

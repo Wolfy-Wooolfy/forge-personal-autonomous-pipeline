@@ -1,7 +1,7 @@
 {
   "project_id": "memory_test_1777676557976",
-  "project_name": "Memory Test",
-  "project_type": "UNCLASSIFIED",
+  "project_name": "سيستم crm",
+  "project_type": "CUSTOMER_RELATIONSHIP_MANAGEMENT_CRM",
   "project_mode": "EXTEND_EXISTING",
   "project_status": "ACTIVE",
   "primary_language": "AR",
@@ -27,60 +27,58 @@
     "execution_package": "artifacts/projects/memory_test_1777676557976/execute/execution_package.json"
   },
   "active_project_flag": true,
-  "last_updated_at": "2026-05-02T13:33:26.269Z",
-  "user_goal": "اعمل سيستم مالية",
+  "last_updated_at": "2026-05-02T16:12:50.461Z",
+  "user_goal": "عايز سيستم crm",
   "business_goal": "",
   "technical_goal": "",
   "workspace_path": "D:\\S\\Halo\\Tech\\forge-personal-autonomous-pipeline",
   "source_of_truth": "ZIP_SNAPSHOT",
   "selected_strategy": "",
   "clarification_answers": {
-    "raw_answer": "اعمل مقترح كامل واعرضه",
+    "raw_answer": "اعمل مقترح واعرضه عليا",
     "answered_questions": [
-      "ما هي الوظائف المالية التي تريد أن يغطيها النظام؟ (مثل المحاسبة، الفواتير، إدارة الميزانية، الرواتب، إلخ)",
-      "هل هناك متطلبات خاصة بالأمان أو الامتثال التنظيمي يجب تضمينها؟",
-      "هل تريد النظام ليكون مخصصًا لشركة صغيرة، متوسطة، أم كبيرة؟",
-      "هل تفضل النظام أن يكون قائمًا على الويب، سطح المكتب، أو تطبيق موبايل؟",
-      "هل هناك تكامل مطلوب مع أنظمة أخرى حالية؟"
+      "ما هي الوظائف الأساسية التي تريدها في نظام الـ CRM؟ (مثل إدارة العملاء، تتبع المبيعات، دعم العملاء، التسويق، إلخ)",
+      "من هم المستخدمون المستهدفون للنظام؟ (مثل فريق المبيعات، الدعم الفني، الإدارة)",
+      "هل هناك أنظمة أخرى يجب أن يتكامل معها نظام الـ CRM؟",
+      "هل لديك متطلبات خاصة بالأمان أو الخصوصية؟",
+      "هل تفضل أن يكون النظام مستضافًا على السحابة أم على خوادم محلية؟",
+      "هل هناك متطلبات خاصة بإدارة البيانات مثل نوع البيانات التي سيتم تخزينها أو قواعد الحفظ؟"
     ]
   },
-  "requirement_domain": "المالية",
+  "requirement_domain": "Customer Relationship Management (CRM)",
   "requirement_completeness": true,
   "requirement_model": {
-    "system_type": "نظام مالية",
-    "functional_requirements": [
-      "المحاسبة",
-      "الفواتير",
-      "إدارة الميزانية",
-      "الرواتب"
+    "system_type": "CRM",
+    "features": [
+      "إدارة العملاء",
+      "تتبع المبيعات",
+      "دعم العملاء",
+      "التسويق"
     ],
-    "non_functional_requirements": [
-      "متطلبات أمان عالية",
-      "امتثال تنظيمي"
+    "users": [
+      "فريق المبيعات",
+      "الدعم الفني",
+      "الإدارة"
     ],
-    "target_company_size": "متوسطة",
-    "platform_preference": "قائم على الويب",
-    "integration_requirements": "تكامل مع أنظمة حالية",
+    "integration_requirements": [
+      "تكامل مع أنظمة أخرى محتملة"
+    ],
+    "data_management": {
+      "نوع البيانات": "بيانات العملاء، بيانات المبيعات، بيانات الدعم، بيانات التسويق",
+      "قواعد الحفظ": "حسب السياسات الداخلية"
+    },
+    "security_requirements": {
+      "متطلبات الأمان": "حماية البيانات والخصوصية"
+    },
+    "deployment_preferences": {
+      "الاستضافة": "سحابة أو خوادم محلية حسب التفضيل"
+    },
     "assumptions": {},
     "recommended_scenario": {
-      "system_type": "نظام مالية متكامل",
-      "functional_coverage": [
-        "محاسبة شاملة",
-        "إصدار وإدارة الفواتير",
-        "إدارة الميزانية الشهرية والسنوية",
-        "حساب الرواتب والخصومات",
-        "تقارير مالية دورية"
-      ],
-      "non_functional": {
-        "security": "تشفير البيانات، صلاحيات وصول متعددة المستويات",
-        "compliance": "متوافق مع القوانين المالية المحلية والدولية"
-      },
-      "company_size": "متوسطة",
-      "platform": "تطبيق ويب متجاوب",
-      "integration": "تكامل مع أنظمة ERP وCRM موجودة"
+      "مقترح": "نظام CRM متكامل يشمل الوظائف الأساسية المذكورة، موجه لفريق المبيعات والدعم والإدارة، مع إمكانية التكامل مع أنظمة أخرى، مع تأمين البيانات وحفظها حسب السياسات، ونشره على السحابة أو خوادم محلية حسب الحاجة."
     }
   },
-  "requirement_reasoning_summary": "المستخدم فوض النظام ليقترح مقترح كامل للنظام المالي مع تغطية الوظائف المالية الأساسية، متطلبات الأمان والامتثال، حجم الشركة، نوع المنصة، والتكامل مع الأنظمة الحالية. بناءً على ذلك، تم إعداد نموذج متكامل يغطي جميع الجوانب التنفيذية بدون أسئلة مفتوحة.",
+  "requirement_reasoning_summary": "المستخدم طلب اقتراحًا كاملاً لنظام CRM دون تقديم تفاصيل إضافية، وتم تفويض النظام باقتراح سيناريو متكامل يشمل الوظائف الأساسية، المستخدمين، التكامل، الأمان، إدارة البيانات، ونشر النظام، مما يجعل المتطلبات كاملة بدون أسئلة مفتوحة.",
   "provider_error": "PROVIDER_NOT_AVAILABLE",
   "conversation_history": {
     "proposal_count": 0,
@@ -134,5 +132,5 @@
       }
     }
   ],
-  "documentation_sha256": "c15da2c323334076f38297ba9fd2812a32f83e637ba69b5b202776fd2215defc"
+  "documentation_sha256": "6ebeab608d23efed9aa0aa87ede8d94538fd3b66634207c1da29d3aeeab7bf29"
 }
