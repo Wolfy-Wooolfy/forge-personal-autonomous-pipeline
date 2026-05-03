@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T17:24:55.045Z",
+  "generated_at": "2026-05-03T08:53:21.398Z",
   "blocked": false,
   "status": "PASS",
   "outcome": "PASS",
@@ -78,7 +78,7 @@
     {
       "name": "workspace_runtime_execution_id_consistent",
       "passed": true,
-      "detail": "decision=ai_os_execution_1777742694974; backfill=ai_os_execution_1777742694974; execute=ai_os_execution_1777742694974"
+      "detail": "decision=ai_os_execution_1777798401068; backfill=ai_os_execution_1777798401068; execute=ai_os_execution_1777798401068"
     },
     {
       "name": "workspace_runtime_matches_current_execution_package",
@@ -88,7 +88,7 @@
     {
       "name": "workspace_execution_package_identity_consistent",
       "passed": true,
-      "detail": "decision_package_id=ai_os_package_1777742694974; backfill_package_id=ai_os_package_1777742694974; execute_package_id=ai_os_package_1777742694974; decision_package_path=artifacts/projects/memory_test_1777676557976/execute/execution_package.json; backfill_package_path=artifacts/projects/memory_test_1777676557976/execute/execution_package.json; execute_package_path=artifacts/projects/memory_test_1777676557976/execute/execution_package.json"
+      "detail": "decision_package_id=ai_os_package_1777798401068; backfill_package_id=ai_os_package_1777798401068; execute_package_id=ai_os_package_1777798401068; decision_package_path=artifacts/projects/memory_test_1777676557976/execute/execution_package.json; backfill_package_path=artifacts/projects/memory_test_1777676557976/execute/execution_package.json; execute_package_path=artifacts/projects/memory_test_1777676557976/execute/execution_package.json"
     },
     {
       "name": "workspace_execution_package_matches_current_artifact",

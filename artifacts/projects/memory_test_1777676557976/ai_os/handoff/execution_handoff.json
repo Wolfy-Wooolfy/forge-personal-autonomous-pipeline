@@ -1,12 +1,12 @@
 {
-  "package_id": "ai_os_package_1777742694974",
-  "handoff_id": "ai_os_handoff_1777742694974",
-  "created_at": "2026-05-02T17:24:54.974Z",
+  "package_id": "ai_os_package_1777798401068",
+  "handoff_id": "ai_os_handoff_1777798401068",
+  "created_at": "2026-05-03T08:53:21.068Z",
   "source": "EXTERNAL_AI_WORKSPACE",
   "source_layer": "AI_OPERATING_SYSTEM",
   "handoff_status": "APPROVED_PENDING_FORGE",
   "project_id": "memory_test_1777676557976",
-  "execution_id": "ai_os_execution_1777742694974",
+  "execution_id": "ai_os_execution_1777798401068",
   "artifact_path": "artifacts/projects/memory_test_1777676557976/execute/execution_package.json",
   "approved_scope": {
     "summary": "User approved execution from workspace conversation.",
@@ -15,25 +15,25 @@
   },
   "target_project_path": "artifacts/projects/memory_test_1777676557976",
   "output_path": "artifacts/projects/memory_test_1777676557976/output",
-  "output_archive_path": "artifacts/projects/memory_test_1777676557976/output_archive/2026-05-02T17-24-54-972Z",
+  "output_archive_path": "artifacts/projects/memory_test_1777676557976/output_archive/2026-05-03T08-53-21-054Z",
   "requested_outputs": [
-    "Apply approved AI OS change to artifacts/projects/memory_test_1777676557976/output/سيستم خدمة عملا_requirements.json",
-    "Apply approved AI OS change to artifacts/projects/memory_test_1777676557976/output/سيستم خدمة عملا_execution_plan.md",
-    "Apply approved AI OS change to artifacts/projects/memory_test_1777676557976/output/سيستم خدمة عملا_security_guidelines.md"
+    "Apply approved AI OS change to artifacts/projects/memory_test_1777676557976/output/README.md",
+    "Apply approved AI OS change to artifacts/projects/memory_test_1777676557976/output/requirements.json",
+    "Apply approved AI OS change to artifacts/projects/memory_test_1777676557976/output/project_metadata.json"
   ],
   "file_or_artifact_targets": [
-    "artifacts/projects/memory_test_1777676557976/output/سيستم خدمة عملا_requirements.json",
-    "artifacts/projects/memory_test_1777676557976/output/سيستم خدمة عملا_execution_plan.md",
-    "artifacts/projects/memory_test_1777676557976/output/سيستم خدمة عملا_security_guidelines.md"
+    "artifacts/projects/memory_test_1777676557976/output/README.md",
+    "artifacts/projects/memory_test_1777676557976/output/requirements.json",
+    "artifacts/projects/memory_test_1777676557976/output/project_metadata.json"
   ],
   "dependency_assumptions": [],
   "risk_notes": [],
   "execution_approval_reference": {
     "approved_by_role": "CTO",
-    "approved_at": "2026-05-02T17:24:54.974Z",
+    "approved_at": "2026-05-03T08:53:21.068Z",
     "documentation_state": "DOCS_APPROVED",
-    "documentation_sha256": "c82ab4c9fbbbba9c0106080523ecef18f5a865875f95812db7b431c6c4f4b9bd",
-    "scope_fingerprint": "bf2e21b2a3c363a744629abe3ba4d5af1dc19627af448ee021982467b8fc7623",
+    "documentation_sha256": "a08d8f4adc23a43fc917b017208ffbc14a097f1d39284fbe47d7e34c7e8f79a1",
+    "scope_fingerprint": "fcf517c39e0497d5e275b39bf538b8e0056057c93cc48c60ff7ae5d3b3f2ec76",
     "project_state_path": "artifacts/projects/memory_test_1777676557976/project_state.json"
   },
   "finalized_documentation_set": [
@@ -45,27 +45,27 @@
     "file_count": 3,
     "proposed_files": [
       {
-        "path": "artifacts/projects/memory_test_1777676557976/output/سيستم خدمة عملا_requirements.json",
+        "path": "artifacts/projects/memory_test_1777676557976/output/README.md",
         "allow_overwrite": false,
-        "sha256": "7994f1a066de431fd63dae292d32fa582dd00613aec8373c5813f8f2048ca561",
+        "sha256": "cc590578655cfde4c5aa49143739337e4b95445d5ef81cd70aa424e85221c64a",
         "required_roles": [
           "cto"
         ],
         "diff": ""
       },
       {
-        "path": "artifacts/projects/memory_test_1777676557976/output/سيستم خدمة عملا_execution_plan.md",
+        "path": "artifacts/projects/memory_test_1777676557976/output/requirements.json",
         "allow_overwrite": false,
-        "sha256": "971c9d2ebeb9a8c35bc95e15c96e0ccd2733f3408ad6ae317defc7b447725470",
+        "sha256": "6bbd2a92a6c6c9996925a3483013fc024ade0efa7e143d2f43c3888ac4f1dd45",
         "required_roles": [
           "cto"
         ],
         "diff": ""
       },
       {
-        "path": "artifacts/projects/memory_test_1777676557976/output/سيستم خدمة عملا_security_guidelines.md",
+        "path": "artifacts/projects/memory_test_1777676557976/output/project_metadata.json",
         "allow_overwrite": false,
-        "sha256": "d36ffdcd7ad154413d63154038dad925e2763163195786553dbf18e25d1a6f28",
+        "sha256": "0fc7f2e4a9b55880764ac180194e03149fed2e229cf770e9716c920040bd2f6d",
         "required_roles": [
           "cto"
         ],
@@ -75,9 +75,9 @@
   },
   "business_and_scope_decisions": {
     "accepted_options": [
-      "option_2"
+      "opt2"
     ],
-    "user_goal": "عايز سيستم خدمة عملا",
+    "user_goal": "عايز اعمل سيستم حسابات",
     "documentation_state": "DOCS_APPROVED"
   }
 }

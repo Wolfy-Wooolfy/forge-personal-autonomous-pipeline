@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عايز سيستم خدمة عملا - Prototype</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f8fafc; color: #111827; }
+    header { background: #0f172a; color: #f8fafc; padding: 28px; }
+    main { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    section { background: #ffffff; border: 1px solid #d1d5db; border-radius: 8px; padding: 18px; margin-bottom: 16px; }
+    h1, h2 { margin-top: 0; }
+    .notice { border-color: #f59e0b; background: #fffbeb; }
+    pre { white-space: pre-wrap; direction: ltr; text-align: left; background: #f1f5f9; padding: 14px; border-radius: 8px; overflow: auto; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+    .card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px; background: #f9fafb; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>عايز سيستم خدمة عملا</h1>
+    <p>Static runnable prototype generated from the approved requirements package.</p>
+  </header>
+  <main>
+    <section class="notice">
+      <h2>تنبيه</h2>
+      <p>هذا Prototype ثابت مبني من المتطلبات، وليس نظام production كامل.</p>
+    </section>
+    <section>
+      <h2>لوحة تشغيل أولية</h2>
+      <div class="grid">
+        <div class="card"><strong>Tickets</strong><br />عرض وتتبع طلبات العملاء.</div>
+        <div class="card"><strong>Knowledge Base</strong><br />مساحة محتوى مساعدة أولية.</div>
+        <div class="card"><strong>Reports</strong><br />مؤشرات أداء تجريبية.</div>
+      </div>
+    </section>
+    <section>
+      <h2>Requirements Source</h2>
+      <pre>Source: artifacts/projects/memory_test_1777676557976/output/سيستم خدمة عملا_execution_plan.md
+# خطة تنفيذ مشروع سيستم خدمة عملا
+
+## مقدمة
+هذا المستند يوضح خطة التنفيذ لنظام خدمة العملاء المتكامل الذي يدعم قنوات متعددة ويشمل ميزات تتبع التذاكر، قاعدة المعرفة، وتقارير الأداء.
+
+## نطاق المشروع
+- نظام خدمة عملاء
+- دعم القنوات: الهاتف، البريد الإلكتروني، الدردشة الحية، وسائل التواصل الاجتماعي
+- المستخدمون: موظفي الدعم، العملاء، المديرين
+
+## المتطلبات الأساسية
+- أداء معقول في وقت الاستجابة
+- دعم عدد كبير من المستخدمين المتزامنين
+- مطابقة للمعايير الأمنية القياسية
+- تكامل مع أنظمة داخلية وخارجية حسب الحاجة
+
+## خطة التنفيذ
+1. تحليل المتطلبات وتأكيدها
+2. تصميم النظام وفق الميزات والقنوات المحددة
+3. تطوير وحدات تتبع التذاكر، قاعدة المعرفة، وتقارير الأداء
+4. اختبار الأداء والأمن
+5. التكامل مع الأنظمة الأخرى
+6. التدريب والدعم للمستخدمين
+
+## المخرجات المتوقعة
+- نظام خدمة عملاء متكامل
+- وثائق النظام والتشغيل
+- خطة صيانة ودعم
+
+## ملاحظات
+تم اعتماد هذا المشروع بناءً على الوثائق والمواصفات المعتمدة من قبل المزود.
+
+---
+
+Source: artifacts/projects/memory_test_1777676557976/output/سيستم خدمة عملا_requirements.json
+{
+  &quot;project_name&quot;: &quot;سيستم خدمة عملا&quot;,
+  &quot;requirement_domain&quot;: &quot;نظام خدمة عملاء&quot;,
+  &quot;system_type&quot;: &quot;نظام خدمة عملاء&quot;,
+  &quot;features&quot;: [&quot;تتبع التذاكر&quot;, &quot;قاعدة المعرفة&quot;, &quot;تقارير الأداء&quot;],
+  &quot;user_roles&quot;: [&quot;موظفي الدعم&quot;, &quot;العملاء&quot;, &quot;المديرين&quot;],
+  &quot;channels&quot;: [&quot;الهاتف&quot;, &quot;البريد الإلكتروني&quot;, &quot;الدردشة الحية&quot;, &quot;وسائل التواصل الاجتماعي&quot;],
+  &quot;performance_requirements&quot;: {
+    &quot;وقت الاستجابة&quot;: &quot;معقول&quot;,
+    &quot;عدد المستخدمين المتزامنين&quot;: &quot;يدعم عدد كبير&quot;
+  },
+  &quot;security_requirements&quot;: {
+    &quot;معايير أمنية خاصة&quot;: &quot;مطابقة للمعايير القياسية&quot;
+  },
+  &quot;integration_requirements&quot;: {
+    &quot;أنظمة أخرى&quot;: &quot;متكامل مع أنظمة داخلية وخارجية حسب الحاجة&quot;
+  },
+  &quot;assumptions&quot;: {
+    &quot;اقتراح كامل للنظام&quot;: &quot;تم بناء المقترح بناءً على القنوات والميزات والأدوار والأداء والأمن والتكامل المذكورة&quot;
+  },
+  &quot;recommended_scenario&quot;: {
+    &quot;وصف&quot;: &quot;نظام خدمة عملاء متكامل يدعم قنوات متعددة مع ميزات تتبع التذاكر وقاعدة المعرفة وتقارير الأداء، موجه لموظفي الدعم والعملاء والمديرين، مع متطلبات أداء وأمن متوسطة، وتكامل مع أنظمة أخرى.&quot;
+  },
+  &quot;accepted_options&quot;: [&quot;option_2&quot;]
+}
+
+---
+
+Source: artifacts/projects/memory_test_1777676557976/output/سيستم خدمة عملا_security_guidelines.md
+# إرشادات الأمان لنظام سيستم خدمة عملا
+
+## مقدمة
+تلتزم هذه الإرشادات بتطبيق معايير أمنية خاصة مطابقة للمعايير القياسية لضمان حماية بيانات العملاء وموظفي الدعم.
+
+## المتطلبات الأمنية
+- التحقق من هوية المستخدمين
+- تشفير البيانات أثناء النقل والتخزين
+- مراقبة الدخول وتسجيل النشاطات
+- تحديثات أمنية دورية
+- إدارة صلاحيات دقيقة للمستخدمين
+
+## توصيات
+- استخدام بروتوكولات HTTPS وTLS
+- تنفيذ جدران حماية وأنظمة كشف التسلل
+- تدريب الموظفين على ممارسات الأمان
+
+## التكامل الأمني
+يجب أن يتكامل النظام مع أنظمة الأمن الداخلية والخارجية لضمان حماية شاملة.</pre>
+    </section>
+  </main>
+</body>
+</html>

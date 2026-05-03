@@ -110,5 +110,12 @@
     "decision_owner": "USER",
     "rationale": "Selected from workspace conversation: نظام خدمة عملاء مركّز على التذاكر وقاعدة المعرفة",
     "created_at": "2026-05-02T17:24:10.578Z"
+  },
+  {
+    "entry_type": "OPTION_DECISION",
+    "selected_option_id": "opt2",
+    "decision_owner": "USER",
+    "rationale": "Selected from workspace conversation: نظام حسابات ويب مبسط مع تركيز على التقارير والتكامل",
+    "created_at": "2026-05-03T08:52:43.571Z"
   }
 ]

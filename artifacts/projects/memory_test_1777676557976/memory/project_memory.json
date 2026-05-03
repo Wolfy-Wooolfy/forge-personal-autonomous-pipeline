@@ -222,7 +222,83 @@
         "delivery_state": "REQUIREMENTS_PACKAGE",
         "pending_decisions": []
       }
+    },
+    {
+      "version_id": "state_0011",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T08:39:22.677Z",
+      "state_hash": "bece69e198a6f89c3c0cec5848693f8e35034cac5bac16b97301099a838354c6",
+      "summary": {
+        "project_id": "memory_test_1777676557976",
+        "project_name": "عايز سيستم خدمة عملا",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "EMPTY",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "REQUIREMENTS_PACKAGE",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0012",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T08:39:25.822Z",
+      "state_hash": "4e12a4e95ae2d6c2ec44f10b1fcc0f83bc85aa71ce3ae61881c0232c16ec43ff",
+      "summary": {
+        "project_id": "memory_test_1777676557976",
+        "project_name": "عايز سيستم خدمة عملا",
+        "project_status": "ACTIVE",
+        "current_phase": "DELIVERY_READY",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "EMPTY",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "READY",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0013",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T08:51:53.883Z",
+      "state_hash": "3250d93dd41cfa12ede2f980aae09fd070b072bb6eb5d8f054d81e1413e42724",
+      "summary": {
+        "project_id": "memory_test_1777676557976",
+        "project_name": "عايز سيستم خدمة عملا",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "EMPTY",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "READY",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0014",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T08:53:22.093Z",
+      "state_hash": "0de81175cdf31c70aa88f86874bbf89f45fd88e786b49ebbc8771b13de5c5495",
+      "summary": {
+        "project_id": "memory_test_1777676557976",
+        "project_name": "اعمل سيستم حسابات",
+        "project_status": "ACTIVE",
+        "current_phase": "FORGE_RUNTIME_COMPLETE",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "REQUIREMENTS_PACKAGE",
+        "pending_decisions": []
+      }
     }
   ],
-  "updated_at": "2026-05-02T17:24:55.356Z"
+  "updated_at": "2026-05-03T08:53:22.093Z"
 }

@@ -1729,6 +1729,22 @@ ${trimmedExisting}`
 
     const hasDecisionPacket = !!decisionPacket;
     const hasExecutionPackage = !!executionPackage;
+    const packageOriginalGoal = String(
+      executionPackage &&
+      executionPackage.business_and_scope_decisions &&
+      executionPackage.business_and_scope_decisions.user_goal
+        ? executionPackage.business_and_scope_decisions.user_goal
+        : ""
+    ).trim();
+    const existingProjectName = String(existing.project_name || "").trim();
+    const existingUserGoal = String(existing.user_goal || "").trim();
+    const repairedOriginalGoal = String(existing.original_user_goal || packageOriginalGoal || "").trim();
+    const shouldRepairFollowupIdentity =
+      repairedOriginalGoal &&
+      (
+        isRequirementsFollowupActionText(existingProjectName) ||
+        isRequirementsFollowupActionText(existingUserGoal)
+      );
 
     const activeRuntimeState =
       overrides.active_runtime_state ||
@@ -1773,14 +1789,16 @@ ${trimmedExisting}`
       project_id: projectId,
       project_name: typeof overrides.project_name === "string" && overrides.project_name.trim() !== ""
         ? overrides.project_name.trim()
-        : typeof existing.project_name === "string" && existing.project_name.trim() !== ""
+        : shouldRepairFollowupIdentity
+          ? repairedOriginalGoal
+          : typeof existing.project_name === "string" && existing.project_name.trim() !== ""
           ? existing.project_name.trim()
           : projectId,
       project_type: overrides.project_type || existing.project_type || "REVIEW",
       project_mode: overrides.project_mode || existing.project_mode || "EXTEND_EXISTING",
       project_status: overrides.project_status || existing.project_status || "ACTIVE",
       primary_language: overrides.primary_language || existing.primary_language || "MIXED",
-      user_goal: overrides.user_goal || existing.user_goal || "",
+      user_goal: overrides.user_goal || (shouldRepairFollowupIdentity ? repairedOriginalGoal : existing.user_goal) || "",
       business_goal: overrides.business_goal || existing.business_goal || "",
       technical_goal: overrides.technical_goal || existing.technical_goal || "",
       current_phase: currentPhase,
@@ -1838,7 +1856,7 @@ ${trimmedExisting}`
       original_user_goal:
         typeof overrides.original_user_goal === "string"
           ? overrides.original_user_goal
-          : existing.original_user_goal || "",
+          : existing.original_user_goal || packageOriginalGoal || "",
       latest_requested_action:
         typeof overrides.latest_requested_action === "string"
           ? overrides.latest_requested_action
@@ -2126,6 +2144,52 @@ ${trimmedExisting}`
 
   function getProjectOutputAbs(projectIdInput) {
     return path.resolve(root, getProjectOutputRel(projectIdInput));
+  }
+
+  function isRequirementsFollowupActionText(value) {
+    const normalized = String(value || "")
+      .trim()
+      .toLowerCase()
+      .replace(/^\s*-\s*/, "")
+      .replace(/\s+/g, " ");
+
+    return normalized === "build the runnable application from these requirements" ||
+      normalized === "build the application from these requirements" ||
+      normalized === "build runnable application from these requirements" ||
+      normalized === "build app from these requirements" ||
+      normalized === "build the app from these requirements" ||
+      normalized === "create a simple local html prototype from these requirements" ||
+      normalized === "create local html prototype from these requirements" ||
+      normalized === "create a local html prototype from these requirements" ||
+      normalized === "show requirement files" ||
+      normalized === "show output files" ||
+      normalized === "revise the requirements" ||
+      normalized === "\u0627\u0628\u0646\u064a \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644 \u0645\u0646 \u0647\u0630\u0647 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" ||
+      normalized === "\u0627\u0628\u0646\u064a \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0645\u0646 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" ||
+      normalized === "\u0627\u0628\u0646\u064a \u062a\u0637\u0628\u064a\u0642 \u0645\u0646 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" ||
+      normalized === "\u062d\u0648\u0644 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a \u0644\u062a\u0637\u0628\u064a\u0642" ||
+      normalized === "\u0625\u0646\u0634\u0627\u0621 \u0642\u0627\u0644\u0628 html \u0645\u062d\u0644\u064a \u0628\u0633\u064a\u0637 \u0645\u0646 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" ||
+      normalized === "\u0627\u0646\u0634\u0627\u0621 \u0642\u0627\u0644\u0628 html \u0645\u062d\u0644\u064a \u0628\u0633\u064a\u0637 \u0645\u0646 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" ||
+      normalized === "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" ||
+      normalized === "\u0639\u062f\u0644 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a";
+  }
+
+  function isBuildRunnableRequirementsFollowupText(value) {
+    const normalized = String(value || "")
+      .trim()
+      .toLowerCase()
+      .replace(/^\s*-\s*/, "")
+      .replace(/\s+/g, " ");
+
+    return normalized === "build the runnable application from these requirements" ||
+      normalized === "build the application from these requirements" ||
+      normalized === "build runnable application from these requirements" ||
+      normalized === "build app from these requirements" ||
+      normalized === "build the app from these requirements" ||
+      normalized === "\u0627\u0628\u0646\u064a \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644 \u0645\u0646 \u0647\u0630\u0647 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" ||
+      normalized === "\u0627\u0628\u0646\u064a \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0645\u0646 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" ||
+      normalized === "\u0627\u0628\u0646\u064a \u062a\u0637\u0628\u064a\u0642 \u0645\u0646 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" ||
+      normalized === "\u062d\u0648\u0644 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a \u0644\u062a\u0637\u0628\u064a\u0642";
   }
 
   function listOutputFiles(outputAbs, currentAbs = outputAbs, depth = 0) {
@@ -3721,6 +3785,18 @@ function buildExecutionPackage(packet) {
 
       if (req.method === "POST" && pathname === "/api/ai-os/intake") {
         const body = await readBody(req);
+        const message = String(body.message || body.request || "").trim();
+
+        if (isBuildRunnableRequirementsFollowupText(message)) {
+          sendJson(res, 200, await buildRunnableFromRequirements({
+            project_id: body.project_id || readActiveProjectId(),
+            source_execution_id: body.source_execution_id || "",
+            package_id: body.package_id || body.source_package_id || "",
+            action: "BUILD_RUNNABLE_FROM_REQUIREMENTS"
+          }));
+          return;
+        }
+
         sendJson(res, 200, await aiOsRuntime.intakeProject(body));
         return;
       }

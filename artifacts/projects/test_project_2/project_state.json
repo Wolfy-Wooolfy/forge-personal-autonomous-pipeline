@@ -32,6 +32,9 @@
   },
   "requirement_reasoning_summary": "تم تحديد أن المشروع هو نظام موارد بشرية (HR) بناءً على طلب المستخدم. لم يتم توفير تفاصيل كافية حول الوظائف المطلوبة أو متطلبات النظام، لذلك تم إنشاء نموذج متطلبات فارغ مع قائمة أسئلة مفتوحة لجمع معلومات إضافية لضمان اكتمال المتطلبات.",
   "provider_error": "PROVIDER_NOT_AVAILABLE",
+  "original_user_goal": "",
+  "latest_requested_action": "",
+  "active_followup_action": "",
   "documentation_state": "DRAFTING",
   "execution_package_state": "NOT_READY",
   "execution_state": "NOT_STARTED",
@@ -79,5 +82,5 @@
     }
   ],
   "active_project_flag": false,
-  "last_updated_at": "2026-05-02T17:20:10.432Z"
+  "last_updated_at": "2026-05-03T08:51:53.965Z"
 }
