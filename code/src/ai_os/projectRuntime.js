@@ -42,7 +42,46 @@ function createAiOsRuntime(options = {}) {
   }
 
   function normalizeProjectName(value) {
-    return String(value || "").trim() || "New Project";
+    return deriveCleanEnglishProjectName(value);
+  }
+
+  function deriveCleanEnglishProjectName(value) {
+    const raw = String(value || "").trim().replace(/\s+/g, " ");
+
+    if (!raw) {
+      return "New Project";
+    }
+
+    const normalized = raw
+      .toLowerCase()
+      .replace(/[\u064b-\u065f]/g, "")
+      .replace(/\u0623|\u0625|\u0622/g, "\u0627")
+      .replace(/\u0649/g, "\u064a")
+      .replace(/\u0629/g, "\u0647");
+
+    if (/\bcrm\b/i.test(raw)) return "CRM System";
+    if (/\bhr\b/i.test(raw)) return "HR System";
+    if (normalized.includes("\u062e\u062f\u0645\u0647 \u0639\u0645\u0644\u0627\u0621") || normalized.includes("customer service")) return "Customer Service System";
+    if (normalized.includes("\u0627\u062f\u0627\u0631\u0647 \u0645\u0627\u0644\u064a\u0647") || normalized.includes("\u0645\u0627\u0644\u064a") || normalized.includes("financial")) return "Financial Management System";
+    if (normalized.includes("\u062d\u0633\u0627\u0628\u0627\u062a") || normalized.includes("accounting")) return "Accounting System";
+
+    const cleaned = raw
+      .replace(/\u0627\u0639\u0645\u0644|\u0639\u0627\u064a\u0632|\u0627\u0631\u064a\u062f|\u0623\u0631\u064a\u062f|\u0625\u0639\u0645\u0644|\u0627\u0628\u0646\u064a|\u0635\u0645\u0645|\u0645\u0642\u062a\u0631\u062d|\u0643\u0627\u0645\u0644|\u0627\u0639\u0631\u0636\u0647 \u0639\u0644\u064a\u0627|\u0627\u0639\u0631\u0636\u0647|\u0627\u0634\u0631\u062d|\u0646\u0641\u0630|\u062d\u0648\u0651\u0644|\u062d\u0648\u0644|\u0645\u0646 \u0641\u0636\u0644\u0643/gi, " ")
+      .replace(/\b(create|build|make|proposal|complete|full|show|explain|execute|run|please)\b/gi, " ")
+      .replace(/\b(system|\u0633\u064a\u0633\u062a\u0645|\u0646\u0638\u0627\u0645)\b/gi, " ")
+      .replace(/[^\p{L}\p{N}\s]/gu, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    if (!cleaned) return "New Project";
+
+    const words = cleaned.split(/\s+/).filter(Boolean).slice(0, 5);
+    const title = words.map((word) => {
+      if (/^[A-Z0-9]{2,}$/i.test(word) && word.length <= 5) return word.toUpperCase();
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    }).join(" ");
+
+    return /\bSystem$/i.test(title) ? title : `${title} System`;
   }
 
   function projectRoot(projectId) {
@@ -179,6 +218,15 @@ function createAiOsRuntime(options = {}) {
     return safePathSegment(baseName, `${projectName}_file_${index + 1}.txt`);
   }
 
+  function safeOutputFolderNameFromProject(state) {
+    return safePathSegment(
+      deriveCleanEnglishProjectName(
+        state.project_name || state.original_user_goal || state.user_goal || "project"
+      ).replace(/\s+/g, "_"),
+      "project"
+    );
+  }
+
   function normalizeOutputRelativePath(projectId, state, inputPath, index) {
     const outputBase = `artifacts/projects/${projectId}/output`;
     const raw = String(inputPath || "").trim().replace(/\\/g, "/");
@@ -197,6 +245,12 @@ function createAiOsRuntime(options = {}) {
         .map((segment, segmentIndex) => safePathSegment(segment, `part_${segmentIndex + 1}`));
 
       if (safeSegments.length > 0) {
+        const reservedOutputFolders = new Set(["app", "src", "dist", "build"]);
+
+        if (safeSegments.length > 1 && !reservedOutputFolders.has(safeSegments[0].toLowerCase())) {
+          safeSegments[0] = safeOutputFolderNameFromProject(state);
+        }
+
         return `${outputBase}/${safeSegments.join("/")}`;
       }
     }
@@ -409,7 +463,7 @@ function createAiOsRuntime(options = {}) {
 
   async function intakeProject(body = {}) {
     const message = String(body.message || body.request || "").trim();
-    const projectName = normalizeProjectName(body.project_name || "New Project");
+    const projectName = normalizeProjectName(body.project_name || message || "New Project");
     const projectId = normalizeProjectId(body.project_id || projectName);
 
     if (!message) {
@@ -417,7 +471,7 @@ function createAiOsRuntime(options = {}) {
         ok: false,
         mode: "BLOCKED",
         reason: "EMPTY_MESSAGE",
-        blocking_question: "اكتب فكرة المشروع أو الهدف المطلوب بناؤه."
+        blocking_question: "Ø§ÙƒØªØ¨ ÙÙƒØ±Ø© Ø§Ù„Ù…Ø´Ø±ÙˆØ¹ Ø£و Ø§Ù„Ù‡Ø¯Ù Ø§Ù„Ù…Ø·Ù„ÙˆØ¨ Ø¨Ù†Ø§Ø¤ه."
       };
     }
 
@@ -521,7 +575,7 @@ function createAiOsRuntime(options = {}) {
         ok: false,
         mode: "BLOCKED",
         reason: "INVALID_CLARIFICATION_ANSWERS",
-        blocking_question: "لازم تبعت answers object يحتوي على إجابات الأسئلة المطلوبة."
+        blocking_question: "Ù„Ø§Ø²م ØªØ¨Ø¹Øª answers object ÙŠØ­Øªوي Ø¹لى Ø¥Ø¬Ø§Ø¨Ø§Øª Ø§Ù„Ø£Ø³Ø¦Ù„Ø© Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©."
       };
     }
 
@@ -532,7 +586,7 @@ function createAiOsRuntime(options = {}) {
         ok: false,
         mode: "BLOCKED",
         reason: "NO_OPEN_CLARIFICATION_QUESTIONS",
-        blocking_question: "لا توجد أسئلة مفتوحة تحتاج إجابات."
+        blocking_question: "Ù„Ø§ ØªÙˆØ¬Ø¯ Ø£Ø³Ø¦Ù„Ø© Ù…ÙØªÙˆØ­Ø© ØªØ­ØªØ§Ø¬ Ø¥Ø¬Ø§Ø¨Ø§Øª."
       };
     }
 
@@ -687,7 +741,7 @@ function createAiOsRuntime(options = {}) {
         ok: false,
         mode: "BLOCKED",
         reason: "DECISION_ALREADY_ACCEPTED",
-        blocking_question: "يوجد Option معتمد بالفعل. لا يمكن إعادة توليد أو تسجيل Options جديدة إلا بإرسال reopen_decision=true."
+        blocking_question: "ÙŠÙˆØ¬Ø¯ Option Ù…Ø¹ØªÙ…Ø¯ Ø¨Ø§Ù„ÙØ¹ل. Ù„Ø§ يمكن Ø¥Ø¹Ø§Ø¯Ø© ØªÙˆÙ„ÙŠØ¯ Ø£و ØªØ³Ø¬يل Options Ø¬Ø¯ÙŠØ¯Ø© Ø¥Ù„Ø§ Ø¨Ø¥Ø±Ø³Ø§ل reopen_decision=true."
       };
     }
 
@@ -718,7 +772,7 @@ function createAiOsRuntime(options = {}) {
         ok: false,
         mode: "BLOCKED",
         reason: "NO_OPTIONS",
-        blocking_question: "لازم يكون فيه Option واحد على الأقل قبل تسجيل القرار."
+        blocking_question: "Ù„Ø§Ø²م يكون Ùيه Option ÙˆØ§Ø­Ø¯ Ø¹لى Ø§Ù„Ø£قل Ù‚Ø¨ل ØªØ³Ø¬يل Ø§Ù„Ù‚Ø±Ø§Ø±."
       };
     }
 
@@ -766,7 +820,7 @@ function createAiOsRuntime(options = {}) {
         ok: false,
         mode: "BLOCKED",
         reason: "NO_SELECTED_OPTION",
-        blocking_question: "حدد option_id المطلوب اعتماده."
+        blocking_question: "Ø­Ø¯Ø¯ option_id Ø§Ù„Ù…Ø·Ù„ÙˆØ¨ Ø§Ø¹ØªÙ…Ø§Ø¯ه."
       };
     }
 
@@ -921,7 +975,7 @@ async function generateExecutionFilesViaProvider(projectId, state) {
           ok: false,
           mode: "BLOCKED",
           reason: "NO_SELECTED_OPTION_FOR_DOCUMENTATION",
-          blocking_question: "لازم يتم اختيار Option قبل توليد وثيقة تلقائية."
+          blocking_question: "Ù„Ø§Ø²م ÙŠØªم Ø§Ø®ØªÙŠØ§Ø± Option Ù‚Ø¨ل ØªÙˆÙ„ÙŠØ¯ ÙˆØ«ÙŠÙ‚Ø© ØªÙ„Ù‚Ø§Ø¦ÙŠØ©."
         };
       }
 
@@ -1000,7 +1054,7 @@ async function generateExecutionFilesViaProvider(projectId, state) {
         ok: false,
         mode: "BLOCKED",
         reason: "DOCUMENTATION_DRAFT_MISSING",
-        blocking_question: "لازم يوجد Documentation Draft قبل الاعتماد."
+        blocking_question: "Ù„Ø§Ø²م ÙŠÙˆØ¬Ø¯ Documentation Draft Ù‚Ø¨ل Ø§Ù„Ø§Ø¹ØªÙ…Ø§Ø¯."
       };
     }
 
@@ -1067,7 +1121,7 @@ async function generateExecutionFilesViaProvider(projectId, state) {
         ok: false,
         mode: "BLOCKED",
         reason: "DOCUMENTATION_NOT_APPROVED_FOR_HANDOFF",
-        blocking_question: "لازم تكون الوثائق معتمدة والحالة EXECUTION_HANDOFF_READY قبل إنشاء handoff إلى Forge."
+        blocking_question: "Ù„Ø§Ø²م Øªكون Ø§Ù„ÙˆØ«Ø§Ø¦ق Ù…Ø¹ØªÙ…Ø¯Ø© ÙˆØ§Ù„Ø­Ø§Ù„Ø© EXECUTION_HANDOFF_READY Ù‚Ø¨ل Ø¥Ù†Ø´Ø§Ø¡ handoff Ø¥لى Forge."
       };
     }
 
@@ -1094,7 +1148,7 @@ async function generateExecutionFilesViaProvider(projectId, state) {
         ok: false,
         mode: "BLOCKED",
         reason: "NO_EXECUTION_FILES",
-        blocking_question: "لازم يتم تحديد ملف واحد على الأقل داخل files قبل إنشاء execution package."
+        blocking_question: "Ù„Ø§Ø²م ÙŠØªم ØªØ­Ø¯ÙŠØ¯ Ù…Ù„Ù ÙˆØ§Ø­Ø¯ Ø¹لى Ø§Ù„Ø£قل Ø¯Ø§Ø®ل files Ù‚Ø¨ل Ø¥Ù†Ø´Ø§Ø¡ execution package."
       };
     }
 

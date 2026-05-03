@@ -4,6 +4,7 @@ const http = require("http");
 const path = require("path");
 const fs = require("fs");
 const crypto = require("crypto");
+const { execFile } = require("child_process");
 const { handleAuthRequest } = require("../auth/authSystem");
 const { createAiOsRuntime } = require("../ai_os/projectRuntime");
 const { createProjectMemoryStore } = require("../memoryEngine");
@@ -1605,9 +1606,46 @@ ${trimmedExisting}`
   }
 
   function normalizeProjectName(projectNameInput) {
-    return typeof projectNameInput === "string" && projectNameInput.trim() !== ""
-      ? projectNameInput.trim()
-      : "New Project";
+    return deriveCleanEnglishProjectName(projectNameInput);
+  }
+
+  function deriveCleanEnglishProjectName(value) {
+    const raw = String(value || "").trim().replace(/\s+/g, " ");
+
+    if (!raw) {
+      return "New Project";
+    }
+
+    const normalized = raw
+      .toLowerCase()
+      .replace(/[\u064b-\u065f]/g, "")
+      .replace(/\u0623|\u0625|\u0622/g, "\u0627")
+      .replace(/\u0649/g, "\u064a")
+      .replace(/\u0629/g, "\u0647");
+
+    if (/\bcrm\b/i.test(raw)) return "CRM System";
+    if (/\bhr\b/i.test(raw)) return "HR System";
+    if (normalized.includes("\u062e\u062f\u0645\u0647 \u0639\u0645\u0644\u0627\u0621") || normalized.includes("customer service")) return "Customer Service System";
+    if (normalized.includes("\u0627\u062f\u0627\u0631\u0647 \u0645\u0627\u0644\u064a\u0647") || normalized.includes("\u0645\u0627\u0644\u064a") || normalized.includes("financial")) return "Financial Management System";
+    if (normalized.includes("\u062d\u0633\u0627\u0628\u0627\u062a") || normalized.includes("accounting")) return "Accounting System";
+
+    const cleaned = raw
+      .replace(/\u0627\u0639\u0645\u0644|\u0639\u0627\u064a\u0632|\u0627\u0631\u064a\u062f|\u0623\u0631\u064a\u062f|\u0625\u0639\u0645\u0644|\u0627\u0628\u0646\u064a|\u0635\u0645\u0645|\u0645\u0642\u062a\u0631\u062d|\u0643\u0627\u0645\u0644|\u0627\u0639\u0631\u0636\u0647 \u0639\u0644\u064a\u0627|\u0627\u0639\u0631\u0636\u0647|\u0627\u0634\u0631\u062d|\u0646\u0641\u0630|\u062d\u0648\u0651\u0644|\u062d\u0648\u0644|\u0645\u0646 \u0641\u0636\u0644\u0643/gi, " ")
+      .replace(/\b(create|build|make|proposal|complete|full|show|explain|execute|run|please)\b/gi, " ")
+      .replace(/\b(system|\u0633\u064a\u0633\u062a\u0645|\u0646\u0638\u0627\u0645)\b/gi, " ")
+      .replace(/[^\p{L}\p{N}\s]/gu, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    if (!cleaned) return "New Project";
+
+    const words = cleaned.split(/\s+/).filter(Boolean).slice(0, 5);
+    const title = words.map((word) => {
+      if (/^[A-Z0-9]{2,}$/i.test(word) && word.length <= 5) return word.toUpperCase();
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    }).join(" ");
+
+    return /\bSystem$/i.test(title) ? title : `${title} System`;
   }
 
   function buildProjectId(projectIdInput, projectNameInput) {
@@ -1800,11 +1838,11 @@ ${trimmedExisting}`
     const state = {
       project_id: projectId,
       project_name: typeof overrides.project_name === "string" && overrides.project_name.trim() !== ""
-        ? overrides.project_name.trim()
+        ? normalizeProjectName(overrides.project_name)
         : shouldRepairFollowupIdentity
-          ? repairedOriginalGoal
+          ? normalizeProjectName(repairedOriginalGoal)
           : typeof existing.project_name === "string" && existing.project_name.trim() !== ""
-          ? existing.project_name.trim()
+          ? normalizeProjectName(existing.project_name)
           : projectId,
       project_type: overrides.project_type || existing.project_type || "REVIEW",
       project_mode: overrides.project_mode || existing.project_mode || "EXTEND_EXISTING",
@@ -2227,6 +2265,59 @@ ${trimmedExisting}`
     return path.resolve(root, getProjectOutputRel(projectIdInput));
   }
 
+  function openProjectOutputFolder(body = {}) {
+    const projectId = normalizeProjectId(body.project_id || readActiveProjectId());
+    const projectRootAbs = path.resolve(projectsRoot, projectId);
+    const outputAbs = getProjectOutputAbs(projectId);
+    const appAbs = path.join(outputAbs, "app");
+    const targetAbs = fs.existsSync(appAbs) ? appAbs : outputAbs;
+    const resolvedTarget = path.resolve(targetAbs);
+    const resolvedProjectRoot = path.resolve(projectRootAbs);
+
+    if (!(resolvedTarget === resolvedProjectRoot || resolvedTarget.startsWith(`${resolvedProjectRoot}${path.sep}`))) {
+      return {
+        ok: false,
+        mode: "OPEN_OUTPUT_FOLDER_BLOCKED",
+        reason: "TARGET_OUTSIDE_PROJECT_ROOT",
+        project_id: projectId
+      };
+    }
+
+    if (!fs.existsSync(resolvedTarget)) {
+      return {
+        ok: false,
+        mode: "OUTPUT_FOLDER_NOT_FOUND",
+        reason: "OUTPUT_FOLDER_NOT_FOUND",
+        project_id: projectId,
+        output_folder: path.relative(root, resolvedTarget).replace(/\\/g, "/"),
+        message: "Output folder was not found for this project."
+      };
+    }
+
+    const outputFolder = path.relative(root, resolvedTarget).replace(/\\/g, "/");
+
+    if (process.platform !== "win32") {
+      return {
+        ok: false,
+        mode: "OPEN_OUTPUT_FOLDER_UNAVAILABLE",
+        reason: "UNSUPPORTED_PLATFORM",
+        project_id: projectId,
+        output_folder: outputFolder,
+        message: "Opening the output folder is only enabled for local Windows workspace runs."
+      };
+    }
+
+    execFile("explorer", [resolvedTarget], { windowsHide: true }, () => {});
+
+    return {
+      ok: true,
+      mode: "OPEN_OUTPUT_FOLDER_REQUESTED",
+      project_id: projectId,
+      output_folder: outputFolder,
+      message: "Open-folder request was sent to Windows Explorer."
+    };
+  }
+
   function isRequirementsFollowupActionText(value) {
     const normalized = String(value || "")
       .trim()
@@ -2353,6 +2444,8 @@ ${trimmedExisting}`
     const mainPy = findFile("main.py");
     const appPy = findFile("app.py");
     const requirementsTxt = findFile("requirements.txt");
+    const runBat = findFile("run.bat");
+    const openAppBat = findFile("open_app.bat");
     const readme = findFile("readme.md");
     const readmeText = readme ? readTextSafe(path.join(outputAbs, readme)).toLowerCase() : "";
     const readmeHasRunInstructions = Boolean(
@@ -2458,6 +2551,9 @@ ${trimmedExisting}`
     if (packageJson) {
       outputTypes.push("NODE_PACKAGE");
     }
+    if (runBat || openAppBat) {
+      outputTypes.push("WINDOWS_QUICK_LAUNCH");
+    }
     if (serverJs || appJs) {
       outputTypes.push("NODE_SERVER");
     }
@@ -2489,6 +2585,18 @@ ${trimmedExisting}`
     }
 
     const runInstructions = [];
+    const appOutputPath = `${outputRel}/app`;
+
+    if (hasRunnableApplication) {
+      runInstructions.push(`Application folder: ${appOutputPath}`);
+      if (runBat) {
+        runInstructions.push(`Quick start on Windows: double-click ${outputRel}/${runBat}`);
+      }
+      if (openAppBat) {
+        runInstructions.push(`Quick open on Windows: double-click ${outputRel}/${openAppBat}`);
+      }
+      runInstructions.push("Prototype note: This is a prototype built from requirements, not a production system.");
+    }
 
     if (indexHtml) {
       runInstructions.push(`Open this file in the browser: ${outputRel}/${indexHtml}`);
@@ -2547,10 +2655,16 @@ ${trimmedExisting}`
 
     return {
       project_id: projectId,
+      project_name: normalizeProjectName(projectState.project_name || projectState.original_user_goal || projectState.user_goal || projectId),
       execution_id: executionId,
       package_id: packageId,
       delivery_type: deliveryType,
       output_path: outputRel,
+      app_output_path: appOutputPath,
+      quick_launch_files: {
+        run_bat: runBat ? `${outputRel}/${runBat}` : "",
+        open_app_bat: openAppBat ? `${outputRel}/${openAppBat}` : ""
+      },
       output_exists: fs.existsSync(outputAbs),
       current_execution_output_found: currentExecutionOutputFound,
       expected_current_output_files: expectedOutputFiles,
@@ -2589,12 +2703,100 @@ ${trimmedExisting}`
     };
   }
 
+  function buildOpenAppBat() {
+    return [
+      "@echo off",
+      "cd /d \"%~dp0\"",
+      "start \"\" \"index.html\"",
+      ""
+    ].join("\r\n");
+  }
+
+  function buildRunBat() {
+    return [
+      "@echo off",
+      "cd /d \"%~dp0\"",
+      "echo Installing dependencies...",
+      "npm install",
+      "echo Starting application...",
+      "npm start",
+      "pause",
+      ""
+    ].join("\r\n");
+  }
+
+  function appendWindowsQuickStartReadme(content, hasPackageJson, hasIndexHtml) {
+    const base = String(content || "").trimEnd();
+    const existing = base.toLowerCase();
+
+    if (existing.includes("windows quick start") || existing.includes("تشغيل سريع على windows")) {
+      return `${base}\n`;
+    }
+
+    const lines = [
+      "",
+      "## تشغيل سريع على Windows",
+      "",
+      hasPackageJson ? "- Double click `run.bat` لتثبيت الاعتماديات وتشغيل التطبيق." : "",
+      hasIndexHtml ? "- Double click `open_app.bat` لو التطبيق static HTML فقط." : "",
+      "",
+      "هذا Prototype أولي مبني من المتطلبات، وليس نظام Production كامل.",
+      ""
+    ].filter((line) => line !== "");
+
+    return `${base}\n${lines.join("\n")}`;
+  }
+
+  function withWindowsLauncherFiles(projectIdInput, files) {
+    const projectId = normalizeProjectId(projectIdInput);
+    const outputBase = `artifacts/projects/${projectId}/output/app`;
+    const list = Array.isArray(files) ? files.slice() : [];
+    const lowerPaths = list.map((file) => String(file && file.path ? file.path : "").toLowerCase().replace(/\\/g, "/"));
+    const hasIndexHtml = lowerPaths.some((filePath) => filePath === `${outputBase}/index.html` || filePath.endsWith("/app/index.html"));
+    const hasPackageJson = lowerPaths.some((filePath) => filePath === `${outputBase}/package.json` || filePath.endsWith("/app/package.json"));
+    const hasReadme = lowerPaths.some((filePath) => filePath === `${outputBase}/readme.md` || filePath.endsWith("/app/readme.md"));
+
+    const upsertFile = (relativePath, content) => {
+      const target = `${outputBase}/${relativePath}`;
+      const index = list.findIndex((file) => String(file && file.path ? file.path : "").replace(/\\/g, "/") === target);
+
+      if (index >= 0) {
+        list[index] = { ...list[index], content, allow_overwrite: true };
+      } else {
+        list.push({ path: target, content, allow_overwrite: true });
+      }
+    };
+
+    if (hasPackageJson) {
+      upsertFile("run.bat", buildRunBat());
+    }
+
+    if (hasIndexHtml) {
+      upsertFile("open_app.bat", buildOpenAppBat());
+    }
+
+    if (hasPackageJson || hasIndexHtml) {
+      const readmeIndex = list.findIndex((file) => String(file && file.path ? file.path : "").toLowerCase().replace(/\\/g, "/").endsWith("/app/readme.md"));
+      if (readmeIndex >= 0) {
+        list[readmeIndex] = {
+          ...list[readmeIndex],
+          content: appendWindowsQuickStartReadme(list[readmeIndex].content, hasPackageJson, hasIndexHtml),
+          allow_overwrite: true
+        };
+      } else if (!hasReadme) {
+        upsertFile("README.md", appendWindowsQuickStartReadme("# Runnable Prototype\n\nThis is a prototype built from requirements, not a production system.", hasPackageJson, hasIndexHtml));
+      }
+    }
+
+    return list;
+  }
+
   function normalizeProviderRunnableFiles(projectIdInput, providerFiles) {
     const projectId = normalizeProjectId(projectIdInput);
     const outputBase = `artifacts/projects/${projectId}/output/app`;
     const list = Array.isArray(providerFiles) ? providerFiles : [];
 
-    return list
+    const normalized = list
       .map((file, index) => {
         const rawPath = String(file && file.path ? file.path : "").trim().replace(/\\/g, "/");
         const content = typeof (file && file.content) === "string" ? file.content : "";
@@ -2612,6 +2814,8 @@ ${trimmedExisting}`
         };
       })
       .filter((file) => file.path && typeof file.content === "string");
+
+    return withWindowsLauncherFiles(projectId, normalized);
   }
 
   function filesContainRunnableIndicator(files) {
@@ -2647,6 +2851,8 @@ ${trimmedExisting}`
         };
       })
       .filter((file) => file.content !== "");
+
+    return withWindowsLauncherFiles(projectId, normalized);
   }
 
   function escapeHtmlText(value) {
@@ -2662,10 +2868,12 @@ ${trimmedExisting}`
     const projectId = normalizeProjectId(projectIdInput);
     const projectState = readJsonSafe(getProjectStateAbs(projectId), {});
     const executionPackage = readJsonSafe(getProjectExecutionPackageAbs(projectId), {});
-    const projectName =
-      String(projectState.original_user_goal || "").trim() ||
-      String(executionPackage && executionPackage.business_and_scope_decisions && executionPackage.business_and_scope_decisions.user_goal || "").trim() ||
-      String(projectState.project_name || projectId).trim();
+    const projectName = normalizeProjectName(
+      projectState.project_name ||
+      projectState.original_user_goal ||
+      (executionPackage && executionPackage.business_and_scope_decisions && executionPackage.business_and_scope_decisions.user_goal) ||
+      projectId
+    );
     const requirementText = (Array.isArray(requirementFiles) ? requirementFiles : [])
       .map((file) => `Source: ${file.path}\n${file.content}`)
       .join("\n\n---\n\n")
@@ -2724,7 +2932,7 @@ ${trimmedExisting}`
       "",
       "## Run",
       "",
-      "Open `index.html` in a browser.",
+      "Double click `open_app.bat`, or open `index.html` in a browser.",
       ""
     ].join("\n");
 
@@ -2946,7 +3154,7 @@ ${trimmedExisting}`
         : ""
     ).trim();
     const existingState = readJsonSafe(getProjectStateAbs(projectId), {});
-    const repairedName = originalGoal || existingState.original_user_goal || existingState.project_name || projectId;
+    const repairedName = normalizeProjectName(originalGoal || existingState.original_user_goal || existingState.project_name || projectId);
 
     persistProjectState(projectId, {
       project_name: repairedName,
@@ -4014,6 +4222,12 @@ function buildExecutionPackage(packet) {
           active_project_id: projectId,
           project: state
         });
+        return;
+      }
+
+      if (req.method === "POST" && pathname === "/api/projects/open-output-folder") {
+        const body = await readBody(req);
+        sendJson(res, 200, openProjectOutputFolder(body));
         return;
       }
 

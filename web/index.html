@@ -440,7 +440,7 @@
 
     <div class="header">
       <h1>Forge AI Workspace</h1>
-      <p>اكتب طلبك بالعربي أو بالإنجليزي. النظام هيجهز Draft للملفات المقترحة، وبعد مراجعتك وموافقتك يتم إنشاء Decision Packet governed بدل الكتابة المباشرة.</p>
+      <p>Ø§ÙƒØªØ¨ Ø·Ù„Ø¨ك Ø¨Ø§Ù„Ø¹Ø±Ø¨ي Ø£و Ø¨Ø§Ù„Ø¥Ù†Ø¬Ù„ÙŠØ²ي. Ø§Ù„Ù†Ø¸Ø§م Ù‡ÙŠØ¬Ù‡Ø² Draft Ù„Ù„Ù…Ù„ÙØ§Øª Ø§Ù„Ù…Ù‚ØªØ±Ø­Ø©، ÙˆØ¨Ø¹Ø¯ Ù…Ø±Ø§Ø¬Ø¹Øªك ÙˆÙ…ÙˆØ§ÙÙ‚Øªك ÙŠØªم Ø¥Ù†Ø´Ø§Ø¡ Decision Packet governed Ø¨Ø¯ل Ø§Ù„ÙƒØªØ§Ø¨Ø© Ø§Ù„Ù…Ø¨Ø§Ø´Ø±Ø©.</p>
     </div>
 
     <div class="workspace-shell">
@@ -463,7 +463,7 @@
         </div>
           <div class="composer-message">
             <div class="composer-input-row">
-              <textarea id="requestInput" placeholder="اكتب رسالتك هنا..."></textarea>
+              <textarea id="requestInput" placeholder="Ø§ÙƒØªØ¨ Ø±Ø³Ø§Ù„Øªك Ù‡Ù†Ø§..."></textarea>
               <button id="chatSendBtn" class="send-icon-btn" title="Send">➜</button>
             </div>
             <div id="statusBox" class="status-inline">Ready.</div>
@@ -627,15 +627,15 @@
 
       const labels = {
         DISCUSSION: {
-          ar: "نناقش الفكرة ونفهم المطلوب",
+          ar: "Ù†Ù†Ø§Ù‚Ø´ Ø§Ù„ÙÙƒØ±Ø© ÙˆÙ†Ùهم Ø§Ù„Ù…Ø·Ù„ÙˆØ¨",
           en: "We are discussing the idea and understanding the request"
         },
         DOCUMENTATION: {
-          ar: "نجهز تصور منظم للمطلوب",
+          ar: "Ù†Ø¬Ù‡Ø² ØªØµÙˆØ± Ù…Ù†Ø¸م Ù„Ù„Ù…Ø·Ù„ÙˆØ¨",
           en: "We are preparing a structured draft"
         },
         EXECUTION_PREPARATION: {
-          ar: "المطلوب جاهز كتسليم منظم للتنفيذ عبر Forge",
+          ar: "Ø§Ù„Ù…Ø·Ù„ÙˆØ¨ Ø¬Ø§Ù‡Ø² ÙƒØªØ³ليم Ù…Ù†Ø¸م Ù„Ù„ØªÙ†ÙÙŠØ° Ø¹Ø¨Ø± Forge",
           en: "The work is prepared for governed handoff to Forge"
         }
       };
@@ -645,7 +645,7 @@
       }
 
       return lang === "ar"
-        ? "هناك خطوة حالية نشطة في المشروع"
+        ? "Ù‡Ù†Ø§ك Ø®Ø·ÙˆØ© Ø­Ø§Ù„ÙŠØ© Ù†Ø´Ø·Ø© Ùي Ø§Ù„Ù…Ø´Ø±ÙˆØ¹"
         : "There is an active runtime step in this project";
     }
 
@@ -665,9 +665,9 @@
 
       if (lang === "ar") {
         const lines = [
-          `أنا فهمت طلبك الحالي كالتالي: ${requestText}`,
-          `المشروع الحالي: ${projectName}`,
-          `الحالة الحالية: ${runtimeLabel}`
+          `Ø£Ù†Ø§ ÙÙ‡Ù…Øª Ø·Ù„Ø¨ك Ø§Ù„Ø­Ø§لي ÙƒØ§Ù„ØªØ§لي: ${requestText}`,
+          `Ø§Ù„Ù…Ø´Ø±ÙˆØ¹ Ø§Ù„Ø­Ø§لي: ${projectName}`,
+          `Ø§Ù„Ø­Ø§Ù„Ø© Ø§Ù„Ø­Ø§Ù„ÙŠØ©: ${runtimeLabel}`
         ];
 
         if (Array.isArray(summaryLines) && summaryLines.length > 0) {
@@ -676,7 +676,7 @@
         }
 
         lines.push("");
-        lines.push("اختار الخطوة المناسبة من الأزرار التالية. لن يتم أي تنفيذ مباشر بدون موافقة واضحة.");
+        lines.push("Ø§Ø®ØªØ§Ø± Ø§Ù„Ø®Ø·ÙˆØ© Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø© من Ø§Ù„Ø£Ø²Ø±Ø§Ø± Ø§Ù„ØªØ§Ù„ÙŠØ©. لن ÙŠØªم Ø£ي ØªÙ†ÙÙŠØ° Ù…Ø¨Ø§Ø´Ø± Ø¨Ø¯ون Ù…ÙˆØ§ÙÙ‚Ø© ÙˆØ§Ø¶Ø­Ø©.");
 
         return lines.join("\n");
       }
@@ -703,8 +703,8 @@
 
       if (lang === "ar") {
         return [
-          "ما زال عندنا طلب مفتوح لم يتم حسمه بعد.",
-          "اختار الخطوة المناسبة من الأزرار التالية قبل فتح اتجاه جديد."
+          "Ù…Ø§ Ø²Ø§ل Ø¹Ù†Ø¯Ù†Ø§ Ø·Ù„Ø¨ Ù…ÙØªÙˆØ­ لم ÙŠØªم Ø­Ø³مه Ø¨Ø¹Ø¯.",
+          "Ø§Ø®ØªØ§Ø± Ø§Ù„Ø®Ø·ÙˆØ© Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø© من Ø§Ù„Ø£Ø²Ø±Ø§Ø± Ø§Ù„ØªØ§Ù„ÙŠØ© Ù‚Ø¨ل ÙØªØ­ Ø§ØªØ¬Ø§ه Ø¬Ø¯ÙŠØ¯."
         ].join("\n");
       }
 
@@ -731,11 +731,11 @@
         normalized === "display proposals" ||
         normalized === "options" ||
         normalized === "proposal" ||
-        normalized === "اعرض" ||
-        normalized === "اعرض المقترح" ||
-        normalized === "اعرض المقترحات" ||
-        normalized === "المقترح" ||
-        normalized === "المقترحات";
+        normalized === "Ø§Ø¹Ø±Ø¶" ||
+        normalized === "Ø§Ø¹Ø±Ø¶ Ø§Ù„Ù…Ù‚ØªØ±Ø­" ||
+        normalized === "Ø§Ø¹Ø±Ø¶ Ø§Ù„Ù…Ù‚ØªØ±Ø­Ø§Øª" ||
+        normalized === "Ø§Ù„Ù…Ù‚ØªØ±Ø­" ||
+        normalized === "Ø§Ù„Ù…Ù‚ØªØ±Ø­Ø§Øª";
     }
 
     function isLikelyNewOrModifiedProjectRequest(value) {
@@ -754,20 +754,20 @@
       return `
         <div class="strategy-choice-list">
           <button class="strategy-choice-btn" type="button" data-checkpoint-action-choice="continue-current">
-            <strong>${escapeHtml(lang === "ar" ? "اعرض مقترحات الطلب الحالي" : "Show current request proposals")}</strong>
+            <strong>${escapeHtml(lang === "ar" ? "Ø§Ø¹Ø±Ø¶ Ù…Ù‚ØªØ±Ø­Ø§Øª Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ø­Ø§لي" : "Show current request proposals")}</strong>
             ${escapeHtml(currentRequest || "")}
           </button>
           <button class="strategy-choice-btn" type="button" data-checkpoint-action-choice="replace-request" data-replacement-request="${escapeHtml(proposedRequest || "")}">
-            <strong>${escapeHtml(lang === "ar" ? "عدّل الطلب للرسالة الجديدة" : "Use the new message instead")}</strong>
+            <strong>${escapeHtml(lang === "ar" ? "Ø¹Ø¯ّل Ø§Ù„Ø·Ù„Ø¨ Ù„Ù„Ø±Ø³Ø§Ù„Ø© Ø§Ù„Ø¬Ø¯ÙŠØ¯Ø©" : "Use the new message instead")}</strong>
             ${escapeHtml(proposedRequest || "")}
           </button>
-          <button class="strategy-choice-btn" type="button" data-project-command-choice="اتوقف">
-            <strong>${escapeHtml(lang === "ar" ? "اتوقف" : "Stop")}</strong>
-            ${escapeHtml(lang === "ar" ? "إيقاف الطلب المفتوح داخل المشروع الحالي." : "Stop the current open request.")}
+          <button class="strategy-choice-btn" type="button" data-project-command-choice="Ø§ØªÙˆÙ‚Ù">
+            <strong>${escapeHtml(lang === "ar" ? "Ø§ØªÙˆÙ‚Ù" : "Stop")}</strong>
+            ${escapeHtml(lang === "ar" ? "Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ù…ÙØªÙˆØ­ Ø¯Ø§Ø®ل Ø§Ù„Ù…Ø´Ø±ÙˆØ¹ Ø§Ù„Ø­Ø§لي." : "Stop the current open request.")}
           </button>
-          <button class="strategy-choice-btn" type="button" data-project-command-choice="ابدأ من جديد">
-            <strong>${escapeHtml(lang === "ar" ? "ابدأ من جديد" : "Start over")}</strong>
-            ${escapeHtml(lang === "ar" ? "إغلاق التدفق الحالي وانتظار فكرة مشروع جديدة." : "Close the current flow and wait for a new project idea.")}
+          <button class="strategy-choice-btn" type="button" data-project-command-choice="Ø§Ø¨Ø¯Ø£ من Ø¬Ø¯ÙŠØ¯">
+            <strong>${escapeHtml(lang === "ar" ? "Ø§Ø¨Ø¯Ø£ من Ø¬Ø¯ÙŠØ¯" : "Start over")}</strong>
+            ${escapeHtml(lang === "ar" ? "Ø¥ØºÙ„Ø§ق Ø§Ù„ØªØ¯Ùق Ø§Ù„Ø­Ø§لي ÙˆØ§Ù†ØªØ¸Ø§Ø± ÙÙƒØ±Ø© Ù…Ø´Ø±ÙˆØ¹ Ø¬Ø¯ÙŠØ¯Ø©." : "Close the current flow and wait for a new project idea.")}
           </button>
         </div>
       `;
@@ -787,15 +787,15 @@
 
       pushMessage(
         "assistant",
-        lang === "ar" ? "اختيارات المتابعة" : "Follow-up Choices",
+        lang === "ar" ? "Ø§Ø®ØªÙŠØ§Ø±Ø§Øª Ø§Ù„Ù…ØªØ§Ø¨Ø¹Ø©" : "Follow-up Choices",
         `
           <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
             lang === "ar"
               ? [
-                  `أنا فهمت طلبك كالتالي: ${requestText}`,
-                  "التحليل اكتمل.",
+                  `Ø£Ù†Ø§ ÙÙ‡Ù…Øª Ø·Ù„Ø¨ك ÙƒØ§Ù„ØªØ§لي: ${requestText}`,
+                  "Ø§Ù„ØªØ­ليل Ø§ÙƒØªمل.",
                   "",
-                  "اختار الخطوة المناسبة من الأزرار التالية:"
+                  "Ø§Ø®ØªØ§Ø± Ø§Ù„Ø®Ø·ÙˆØ© Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø© من Ø§Ù„Ø£Ø²Ø±Ø§Ø± Ø§Ù„ØªØ§Ù„ÙŠØ©:"
                 ].join("\n")
               : [
                   `I understood your request as: ${requestText}`,
@@ -808,7 +808,7 @@
         `
       );
 
-      setStatus(lang === "ar" ? "بانتظار اختيارك للخطوة التالية." : "Waiting for your next-step choice.");
+      setStatus(lang === "ar" ? "Ø¨Ø§Ù†ØªØ¸Ø§Ø± Ø§Ø®ØªÙŠØ§Ø±ك Ù„Ù„Ø®Ø·ÙˆØ© Ø§Ù„ØªØ§Ù„ÙŠØ©." : "Waiting for your next-step choice.");
     }
 
     function buildAiOsOptionsMessage(options, recommendation, requestText) {
@@ -816,22 +816,22 @@
       const list = Array.isArray(options) ? options : [];
       const lines = [];
 
-      lines.push(lang === "ar" ? "دي المقترحات الأولية للمشروع:" : "Here are the initial project proposals:");
+      lines.push(lang === "ar" ? "Ø¯ي Ø§Ù„Ù…Ù‚ØªØ±Ø­Ø§Øª Ø§Ù„Ø£ÙˆÙ„ÙŠØ© Ù„Ù„Ù…Ø´Ø±ÙˆØ¹:" : "Here are the initial project proposals:");
 
       list.forEach((option, index) => {
         lines.push("");
-        lines.push(`${lang === "ar" ? "المقترح" : "Proposal"} ${index + 1}: ${option.title || option.option_id || "Suggested option"}`);
+        lines.push(`${lang === "ar" ? "Ø§Ù„Ù…Ù‚ØªØ±Ø­" : "Proposal"} ${index + 1}: ${option.title || option.option_id || "Suggested option"}`);
         lines.push(getAiOsOptionDescription(option, index, lang));
-        lines.push(`${lang === "ar" ? "الأثر" : "Impact"}: ${option.impact_level || "MEDIUM"} | ${lang === "ar" ? "المخاطر" : "Risk"}: ${option.risk_level || "MEDIUM"}`);
+        lines.push(`${lang === "ar" ? "Ø§Ù„Ø£Ø«Ø±" : "Impact"}: ${option.impact_level || "MEDIUM"} | ${lang === "ar" ? "Ø§Ù„Ù…Ø®Ø§Ø·Ø±" : "Risk"}: ${option.risk_level || "MEDIUM"}`);
       });
 
       if (recommendation) {
         lines.push("");
-        lines.push(`${lang === "ar" ? "ترشيحي" : "Recommendation"}: ${recommendation}`);
+        lines.push(`${lang === "ar" ? "ØªØ±Ø´ÙŠØ­ي" : "Recommendation"}: ${recommendation}`);
       }
 
       lines.push("");
-      lines.push(lang === "ar" ? "اختار رقم المقترح عشان نثبته وندخل مرحلة الوثائق." : "Choose a proposal number to approve it and move into documentation.");
+      lines.push(lang === "ar" ? "Ø§Ø®ØªØ§Ø± Ø±قم Ø§Ù„Ù…Ù‚ØªØ±Ø­ Ø¹Ø´Ø§ن Ù†Ø«Ø¨Øªه ÙˆÙ†Ø¯Ø®ل Ù…Ø±Ø­Ù„Ø© Ø§Ù„ÙˆØ«Ø§Ø¦ق." : "Choose a proposal number to approve it and move into documentation.");
 
       return lines.join("\n");
     }
@@ -1255,7 +1255,7 @@
 
       pushMessage(
         "assistant",
-        detectUserLanguage(request) === "ar" ? "المقترحات الأولية" : "Initial Proposals",
+        detectUserLanguage(request) === "ar" ? "Ø§Ù„Ù…Ù‚ØªØ±Ø­Ø§Øª Ø§Ù„Ø£ÙˆÙ„ÙŠØ©" : "Initial Proposals",
         `
           <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
             buildAiOsOptionsMessage(optionsResult.options, optionsResult.recommendation || "", request)
@@ -1286,15 +1286,15 @@
 
         pushMessage(
           "assistant",
-          detectUserLanguage(request) === "ar" ? "توقف مؤقت في تجهيز الوثيقة" : "Documentation Draft Blocked",
+          detectUserLanguage(request) === "ar" ? "ØªÙˆÙ‚Ù Ù…Ø¤Ù‚Øª Ùي ØªØ¬Ù‡ÙŠØ² Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©" : "Documentation Draft Blocked",
           `
             <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
               detectUserLanguage(request) === "ar"
                 ? [
-                    "تجهيز الوثيقة توقف مؤقتًا.",
-                    `السبب: ${draftResult.blocking_question || draftResult.reason || "AI Provider is not available."}`,
+                    "ØªØ¬Ù‡ÙŠØ² Ø§Ù„ÙˆØ«ÙŠÙ‚Ø© ØªÙˆÙ‚Ù Ù…Ø¤Ù‚ØªÙ‹Ø§.",
+                    `Ø§Ù„Ø³Ø¨Ø¨: ${draftResult.blocking_question || draftResult.reason || "AI Provider is not available."}`,
                     "",
-                    "اختار الخطوة المناسبة من الأزرار التالية:"
+                    "Ø§Ø®ØªØ§Ø± Ø§Ù„Ø®Ø·ÙˆØ© Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø© من Ø§Ù„Ø£Ø²Ø±Ø§Ø± Ø§Ù„ØªØ§Ù„ÙŠØ©:"
                   ].join("\n")
                 : [
                     "Documentation drafting is temporarily blocked.",
@@ -1319,16 +1319,16 @@
 
       pushMessage(
         "assistant",
-        lang === "ar" ? "مسودة الوثيقة جاهزة" : "Documentation Draft Ready",
+        lang === "ar" ? "Ù…Ø³ÙˆØ¯Ø© Ø§Ù„ÙˆØ«ÙŠÙ‚Ø© Ø¬Ø§Ù‡Ø²Ø©" : "Documentation Draft Ready",
         `
           <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
             [
-              lang === "ar" ? "تم تجهيز مسودة الوثيقة للمراجعة." : "The documentation draft is ready for review.",
-              path ? `${lang === "ar" ? "المسار" : "Path"}: ${path}` : "",
+              lang === "ar" ? "Øªم ØªØ¬Ù‡ÙŠØ² Ù…Ø³ÙˆØ¯Ø© Ø§Ù„ÙˆØ«ÙŠÙ‚Ø© Ù„Ù„Ù…Ø±Ø§Ø¬Ø¹Ø©." : "The documentation draft is ready for review.",
+              path ? `${lang === "ar" ? "Ø§Ù„Ù…Ø³Ø§Ø±" : "Path"}: ${path}` : "",
               "",
               content,
               "",
-              lang === "ar" ? "اختار الخطوة المناسبة من الأزرار التالية:" : "Choose the appropriate next step from the buttons below:"
+              lang === "ar" ? "Ø§Ø®ØªØ§Ø± Ø§Ù„Ø®Ø·ÙˆØ© Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø© من Ø§Ù„Ø£Ø²Ø±Ø§Ø± Ø§Ù„ØªØ§Ù„ÙŠØ©:" : "Choose the appropriate next step from the buttons below:"
             ].filter(Boolean).join("\n")
           )}</div>
           ${buildCurrentProjectActionChoiceHtml(choices)}
@@ -1459,15 +1459,15 @@
         normalized === "approve documentation" ||
         normalized === "approve" ||
         normalized === "approved" ||
-        normalized === "اعتمد الوثائق" ||
-        normalized === "وافق على الوثائق" ||
-        normalized === "موافق على الوثائق" ||
-        normalized === "اعتمد الوثيقة" ||
-        normalized === "وافق على الوثيقة" ||
-        normalized === "موافق على الوثيقة" ||
+        normalized === "Ø§Ø¹ØªÙ…Ø¯ Ø§Ù„ÙˆØ«Ø§Ø¦ق" ||
+        normalized === "ÙˆØ§Ùق Ø¹لى Ø§Ù„ÙˆØ«Ø§Ø¦ق" ||
+        normalized === "Ù…ÙˆØ§Ùق Ø¹لى Ø§Ù„ÙˆØ«Ø§Ø¦ق" ||
+        normalized === "Ø§Ø¹ØªÙ…Ø¯ Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©" ||
+        normalized === "ÙˆØ§Ùق Ø¹لى Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©" ||
+        normalized === "Ù…ÙˆØ§Ùق Ø¹لى Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©" ||
         normalized === "\u0627\u0639\u062a\u0645\u062f" ||
-        normalized === "وافق" ||
-        normalized === "موافق";
+        normalized === "ÙˆØ§Ùق" ||
+        normalized === "Ù…ÙˆØ§Ùق";
     }
 
     function isAmendDocumentationRequest(value) {
@@ -1477,12 +1477,12 @@
         normalized === "edit documentation" ||
         normalized === "revise docs" ||
         normalized === "revise documentation" ||
-        normalized === "عدل الوثيقة" ||
-        normalized === "عدّل الوثيقة" ||
-        normalized === "عدل الوثائق" ||
-        normalized === "عدّل الوثائق" ||
-        normalized === "تعديل الوثيقة" ||
-        normalized === "تعديل الوثائق";
+        normalized === "Ø¹Ø¯ل Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©" ||
+        normalized === "Ø¹Ø¯ّل Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©" ||
+        normalized === "Ø¹Ø¯ل Ø§Ù„ÙˆØ«Ø§Ø¦ق" ||
+        normalized === "Ø¹Ø¯ّل Ø§Ù„ÙˆØ«Ø§Ø¦ق" ||
+        normalized === "ØªØ¹Ø¯يل Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©" ||
+        normalized === "ØªØ¹Ø¯يل Ø§Ù„ÙˆØ«Ø§Ø¦ق";
     }
 
     function askForDocumentationRevision(request) {
@@ -1490,22 +1490,22 @@
 
       pushMessage(
         "user",
-        lang === "ar" ? "طلب تعديل الوثيقة" : "Documentation Revision Request",
+        lang === "ar" ? "Ø·Ù„Ø¨ ØªØ¹Ø¯يل Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©" : "Documentation Revision Request",
         `<div class="file-preview">${formatMessageText(request)}</div>`
       );
       requestInput.value = "";
 
       pushMessage(
         "assistant",
-        lang === "ar" ? "مطلوب تفاصيل التعديل" : "Revision Details Needed",
+        lang === "ar" ? "Ù…Ø·Ù„ÙˆØ¨ ØªÙØ§Øµيل Ø§Ù„ØªØ¹Ø¯يل" : "Revision Details Needed",
         `<div class="file-preview">${formatMessageText(
           lang === "ar"
-            ? "اكتب بوضوح التعديلات المطلوبة على الوثيقة، مثال: أضف الرواتب، احذف التكامل، غيّر النظام إلى موبايل. بعد ذلك سأتعامل معها كتعديل على النطاق الحالي وليس كطلب جديد."
+            ? "Ø§ÙƒØªØ¨ Ø¨ÙˆØ¶ÙˆØ­ Ø§Ù„ØªØ¹Ø¯ÙŠÙ„Ø§Øª Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø© Ø¹لى Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©، Ù…Ø«Ø§ل: Ø£Ø¶Ù Ø§Ù„Ø±ÙˆØ§ØªØ¨، Ø§Ø­Ø°Ù Ø§Ù„ØªÙƒØ§مل، ØºÙŠÙ‘Ø± Ø§Ù„Ù†Ø¸Ø§م Ø¥لى Ù…ÙˆØ¨Ø§يل. Ø¨Ø¹Ø¯ Ø°لك Ø³Ø£ØªØ¹Ø§مل Ù…Ø¹Ù‡Ø§ ÙƒØªØ¹Ø¯يل Ø¹لى Ø§Ù„Ù†Ø·Ø§ق Ø§Ù„Ø­Ø§لي ÙˆÙ„ÙŠØ³ ÙƒØ·Ù„Ø¨ Ø¬Ø¯ÙŠØ¯."
             : "Write the required documentation changes clearly. I will treat them as changes to the current scope, not as a new request."
         )}</div>`
       );
 
-      setStatus(lang === "ar" ? "بانتظار تفاصيل تعديل الوثيقة." : "Waiting for documentation revision details.");
+      setStatus(lang === "ar" ? "Ø¨Ø§Ù†ØªØ¸Ø§Ø± ØªÙØ§Øµيل ØªØ¹Ø¯يل Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©." : "Waiting for documentation revision details.");
     }
 
     function isStopCurrentProjectRequest(value) {
@@ -1566,13 +1566,13 @@
       }
 
       if (
-        normalized.includes("الخطوة") ||
-        normalized.includes("التالي") ||
-        normalized.includes("الجاي") ||
-        normalized.includes("اعمل ايه") ||
-        normalized.includes("اعمل إيه") ||
-        normalized.includes("مش فاهم") ||
-        normalized.includes("مش واضح") ||
+        normalized.includes("Ø§Ù„Ø®Ø·ÙˆØ©") ||
+        normalized.includes("Ø§Ù„ØªØ§لي") ||
+        normalized.includes("Ø§Ù„Ø¬Ø§ي") ||
+        normalized.includes("Ø§Ø¹مل Ø§يه") ||
+        normalized.includes("Ø§Ø¹مل Ø¥يه") ||
+        normalized.includes("Ù…Ø´ ÙØ§هم") ||
+        normalized.includes("Ù…Ø´ ÙˆØ§Ø¶Ø­") ||
         normalized.includes("what next") ||
         normalized.includes("next step")
       ) {
@@ -1581,8 +1581,8 @@
 
       return normalized === "ok" ||
         normalized === "okay" ||
-        normalized === "تمام" ||
-        normalized === "ماشي";
+        normalized === "ØªÙ…Ø§م" ||
+        normalized === "Ù…Ø§Ø´ي";
     }
 
     function canHandleAiOsExecutionRequest() {
@@ -1636,30 +1636,30 @@
 
       if (pendingConversationCheckpoint && pendingConversationCheckpoint.nextAction === "AI_OS_OPTIONS") {
         choices.push({
-          label: "اعرض المقترح",
-          value: "اعرض المقترح",
-          description: "عرض المقترحات المنظمة للمشروع الحالي."
+          label: "Ø§Ø¹Ø±Ø¶ Ø§Ù„Ù…Ù‚ØªØ±Ø­",
+          value: "Ø§Ø¹Ø±Ø¶ Ø§Ù„Ù…Ù‚ØªØ±Ø­",
+          description: "Ø¹Ø±Ø¶ Ø§Ù„Ù…Ù‚ØªØ±Ø­Ø§Øª Ø§Ù„Ù…Ù†Ø¸Ù…Ø© Ù„Ù„Ù…Ø´Ø±ÙˆØ¹ Ø§Ù„Ø­Ø§لي."
         });
       }
 
       if (documentationState && documentationState !== "EMPTY") {
         choices.push({
-          label: "اعرض الوثائق",
+          label: "Ø§Ø¹Ø±Ø¶ Ø§Ù„ÙˆØ«Ø§Ø¦ق",
           value: "\u0627\u0639\u0631\u0636 \u0627\u0644\u0648\u062b\u0627\u0626\u0642",
-          description: "عرض مسودة الوثائق أو آخر وثيقة للمشروع."
+          description: "Ø¹Ø±Ø¶ Ù…Ø³ÙˆØ¯Ø© Ø§Ù„ÙˆØ«Ø§Ø¦ق Ø£و Ø¢Ø®Ø± ÙˆØ«ÙŠÙ‚Ø© Ù„Ù„Ù…Ø´Ø±ÙˆØ¹."
         });
       }
 
       if (documentationState === "DRAFT_READY") {
         choices.push({
-          label: "اعتمد الوثائق",
-          value: "اعتمد الوثائق",
-          description: "اعتماد المسودة كنطاق موافق عليه."
+          label: "Ø§Ø¹ØªÙ…Ø¯ Ø§Ù„ÙˆØ«Ø§Ø¦ق",
+          value: "Ø§Ø¹ØªÙ…Ø¯ Ø§Ù„ÙˆØ«Ø§Ø¦ق",
+          description: "Ø§Ø¹ØªÙ…Ø§Ø¯ Ø§Ù„Ù…Ø³ÙˆØ¯Ø© ÙƒÙ†Ø·Ø§ق Ù…ÙˆØ§Ùق Ø¹ليه."
         });
         choices.push({
-          label: "عدّل الوثيقة",
-          value: "عدل الوثيقة",
-          description: "وضّح التعديل المطلوب قبل الاعتماد."
+          label: "Ø¹Ø¯ّل Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©",
+          value: "Ø¹Ø¯ل Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©",
+          description: "ÙˆØ¶Ù‘Ø­ Ø§Ù„ØªØ¹Ø¯يل Ø§Ù„Ù…Ø·Ù„ÙˆØ¨ Ù‚Ø¨ل Ø§Ù„Ø§Ø¹ØªÙ…Ø§Ø¯."
         });
       }
 
@@ -1671,22 +1671,22 @@
         runtimeState === "EXECUTION_HANDOFF_CREATED"
       ) {
         choices.push({
-          label: "نفذ",
+          label: "Ù†ÙØ°",
           value: "\u0646\u0641\u0630",
-          description: "تجهيز تسليم Forge بعد اعتماد الوثائق."
+          description: "ØªØ¬Ù‡ÙŠØ² ØªØ³ليم Forge Ø¨Ø¹Ø¯ Ø§Ø¹ØªÙ…Ø§Ø¯ Ø§Ù„ÙˆØ«Ø§Ø¦ق."
         });
       }
 
       choices.push({
-        label: "اتوقف",
+        label: "Ø§ØªÙˆÙ‚Ù",
         value: "\u0627\u062a\u0648\u0642\u0641",
-        description: "إيقاف الطلب المفتوح داخل المشروع الحالي."
+        description: "Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ù…ÙØªÙˆØ­ Ø¯Ø§Ø®ل Ø§Ù„Ù…Ø´Ø±ÙˆØ¹ Ø§Ù„Ø­Ø§لي."
       });
 
       choices.push({
-        label: "ابدأ من جديد",
+        label: "Ø§Ø¨Ø¯Ø£ من Ø¬Ø¯ÙŠØ¯",
         value: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f",
-        description: "إغلاق التدفق الحالي وانتظار فكرة مشروع جديدة."
+        description: "Ø¥ØºÙ„Ø§ق Ø§Ù„ØªØ¯Ùق Ø§Ù„Ø­Ø§لي ÙˆØ§Ù†ØªØ¸Ø§Ø± ÙÙƒØ±Ø© Ù…Ø´Ø±ÙˆØ¹ Ø¬Ø¯ÙŠØ¯Ø©."
       });
 
       const seen = new Set();
@@ -1809,6 +1809,35 @@
       setStatus(lang === "ar" ? "\u062c\u0627\u0647\u0632 \u0644\u0641\u0643\u0631\u0629 \u0645\u0634\u0631\u0648\u0639 \u062c\u062f\u064a\u062f\u0629." : "Ready for a new project idea.");
     }
 
+    function getDeliveryQuickLaunch(summary) {
+      const data = summary && typeof summary === "object" ? summary : {};
+      const outputPath = String(data.output_path || "").replace(/\\/g, "/");
+      const files = Array.isArray(data.output_files) ? data.output_files : [];
+      const quick = data.quick_launch_files && typeof data.quick_launch_files === "object" ? data.quick_launch_files : {};
+      const formatPath = (file) => {
+        const value = String(file || "").replace(/\\/g, "/").trim();
+        if (!value) return "";
+        if (value.startsWith("artifacts/") || /^[A-Za-z]:\//.test(value) || value.startsWith("/")) return value;
+        return outputPath ? `${outputPath}/${value}` : value;
+      };
+      const findFile = (name) => {
+        const target = String(name || "").toLowerCase();
+        const found = files.find((file) => {
+          const normalized = String(file || "").toLowerCase().replace(/\\/g, "/");
+          return normalized === target || normalized.endsWith(`/${target}`);
+        });
+        return found ? formatPath(found) : "";
+      };
+
+      return {
+        appPath: String(data.app_output_path || (outputPath ? `${outputPath}/app` : "")).replace(/\\/g, "/"),
+        runBat: formatPath(quick.run_bat) || findFile("run.bat"),
+        openAppBat: formatPath(quick.open_app_bat) || findFile("open_app.bat"),
+        indexHtml: findFile("index.html"),
+        packageJson: findFile("package.json")
+      };
+    }
+
     function buildDeliverySummaryLines(deliverySummary, lang) {
       const summary = deliverySummary && typeof deliverySummary === "object" ? deliverySummary : {};
       const outputPath = summary.output_path || "";
@@ -1819,6 +1848,7 @@
       const instructions = Array.isArray(summary.run_instructions) ? summary.run_instructions : [];
       const nextActions = Array.isArray(summary.next_suggested_actions) ? summary.next_suggested_actions : [];
       const runnable = summary.runnable_application_created === true;
+      const quickLaunch = getDeliveryQuickLaunch(summary);
       const currentOutputFound = summary.current_execution_output_found === true;
       const isDocumentDelivery = deliveryType === "DOCUMENT_DELIVERY";
       const isRequirementsPackage = deliveryType === "REQUIREMENTS_PACKAGE" || outputTypes.includes("REQUIREMENTS_PACKAGE");
@@ -1862,33 +1892,38 @@
         }
 
         if (!currentOutputFound) {
-          return ["لم يتم العثور على ملفات تسليم مرتبطة بالتنفيذ الحالي."];
+          return ["لم ÙŠØªم Ø§Ù„Ø¹Ø«ÙˆØ± Ø¹لى Ù…Ù„ÙØ§Øª ØªØ³ليم Ù…Ø±ØªØ¨Ø·Ø© Ø¨Ø§Ù„ØªÙ†ÙÙŠØ° Ø§Ù„Ø­Ø§لي."];
         }
 
         if (isRequirementsPackage) {
           return [
-            "هذه ليست ملفات تشغيل. تم إنشاء حزمة متطلبات فقط. راجع ملفات التسليم الحالية، ثم يمكنك اختيار بناء تطبيق قابل للتشغيل من هذه المتطلبات."
+            "Ù‡Ø°ه Ù„ÙŠØ³Øª Ù…Ù„ÙØ§Øª ØªØ´Øºيل. Øªم Ø¥Ù†Ø´Ø§Ø¡ Ø­Ø²Ù…Ø© Ù…ØªØ·Ù„Ø¨Ø§Øª ÙÙ‚Ø·. Ø±Ø§Ø¬Ø¹ Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ³ليم Ø§Ù„Ø­Ø§Ù„ÙŠØ©، Ø«م يمكنك Ø§Ø®ØªÙŠØ§Ø± Ø¨Ù†Ø§Ø¡ ØªØ·Ø¨يق Ù‚Ø§Ø¨ل Ù„Ù„ØªØ´Øºيل من Ù‡Ø°ه Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª."
           ];
         }
 
         if (isDocumentDelivery) {
-          return ["هذا تسليم وثائقي وليس تطبيقًا قابلًا للتشغيل."];
+          return ["Ù‡Ø°Ø§ ØªØ³ليم ÙˆØ«Ø§Ø¦قي ÙˆÙ„ÙŠØ³ ØªØ·Ø¨ÙŠÙ‚Ù‹Ø§ Ù‚Ø§Ø¨Ù„Ù‹Ø§ Ù„Ù„ØªØ´Øºيل."];
         }
 
         if (runnable) {
-          if (outputFiles.some((file) => String(file || "").toLowerCase().endsWith("index.html"))) {
-            const indexFile = outputFiles.find((file) => String(file || "").toLowerCase().endsWith("index.html"));
-            return [`افتح الملف في المتصفح: ${formatOutputPath(indexFile)}`];
+          const lines = [
+            "\u062a\u0645 \u0625\u0646\u0634\u0627\u0621 Prototype \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644.",
+            "\u0644\u062a\u0634\u063a\u064a\u0644\u0647 \u0628\u0633\u0647\u0648\u0644\u0629:",
+            quickLaunch.appPath ? `1. \u0627\u0641\u062a\u062d \u0627\u0644\u0645\u062c\u0644\u062f: ${quickLaunch.appPath}` : "",
+            quickLaunch.runBat ? `2. \u0627\u0636\u063a\u0637 \u0645\u0631\u062a\u064a\u0646 \u0639\u0644\u0649: ${quickLaunch.runBat}` : "",
+            quickLaunch.openAppBat ? `\u0623\u0648: ${quickLaunch.openAppBat}` : "",
+            "\u062d\u0633\u0628 \u0646\u0648\u0639 \u0627\u0644\u062a\u0637\u0628\u064a\u0642.",
+            "\u0647\u0630\u0627 Prototype \u062b\u0627\u0628\u062a/\u0623\u0648\u0644\u064a \u0645\u0628\u0646\u064a \u0645\u0646 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a\u060c \u0648\u0644\u064a\u0633 \u0646\u0638\u0627\u0645 Production \u0643\u0627\u0645\u0644."
+          ].filter(Boolean);
+
+          if (!quickLaunch.runBat && !quickLaunch.openAppBat && quickLaunch.indexHtml) {
+            lines.splice(3, 0, `\u0627\u0641\u062a\u062d \u0627\u0644\u0645\u0644\u0641 \u0627\u0644\u062a\u0627\u0644\u064a \u0641\u064a \u0627\u0644\u0645\u062a\u0635\u0641\u062d: ${quickLaunch.indexHtml}`);
           }
 
-          return instructions.map((item) =>
-            String(item || "")
-              .replace(/^Open this file in the browser:\s*/i, "افتح الملف في المتصفح: ")
-              .replace(/^From this folder run:\s*/i, "من هذا المجلد شغّل: ")
-          );
+          return lines;
         }
 
-        return ["لا يوجد تطبيق قابل للتشغيل في ملفات التسليم الحالية."];
+        return ["Ù„Ø§ ÙŠÙˆØ¬Ø¯ ØªØ·Ø¨يق Ù‚Ø§Ø¨ل Ù„Ù„ØªØ´Øºيل Ùي Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ³ليم Ø§Ù„Ø­Ø§Ù„ÙŠØ©."];
       })();
 
       if (lang === "ar") {
@@ -1896,9 +1931,13 @@
           "Delivery Summary:",
           deliverySentenceAr,
           `delivery_type: ${deliveryType}`,
+          summary.project_name ? `project_name: ${summary.project_name}` : "",
           summary.execution_id ? `execution_id: ${summary.execution_id}` : "",
           summary.package_id ? `package_id: ${summary.package_id}` : "",
           outputPath ? `\u0645\u0643\u0627\u0646 \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a: ${outputPath}` : "",
+          quickLaunch.appPath && runnable ? `\u0645\u0643\u0627\u0646 \u0627\u0644\u062a\u0637\u0628\u064a\u0642: ${quickLaunch.appPath}` : "",
+          quickLaunch.runBat && runnable ? `\u0645\u0644\u0641 \u0627\u0644\u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u0633\u0631\u064a\u0639: ${quickLaunch.runBat}` : "",
+          quickLaunch.openAppBat && runnable ? `\u0645\u0644\u0641 \u0627\u0644\u0641\u062a\u062d \u0627\u0644\u0633\u0631\u064a\u0639: ${quickLaunch.openAppBat}` : "",
           `\u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644: ${runnable ? "\u0646\u0639\u0645" : "\u0644\u0627"}`,
           `\u0646\u0648\u0639 \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a: ${outputTypes.join(", ") || "UNKNOWN"}`,
           `\u0645\u0624\u0634\u0631\u0627\u062a \u0627\u0644\u062a\u0634\u063a\u064a\u0644: ${indicators.join(", ") || "\u0644\u0627 \u064a\u0648\u062c\u062f"}`,
@@ -1919,9 +1958,13 @@
         "Delivery Summary:",
         deliverySentenceEn,
         `delivery_type: ${deliveryType}`,
+        summary.project_name ? `project_name: ${summary.project_name}` : "",
         summary.execution_id ? `execution_id: ${summary.execution_id}` : "",
         summary.package_id ? `package_id: ${summary.package_id}` : "",
         outputPath ? `Output path: ${outputPath}` : "",
+        quickLaunch.appPath && runnable ? `Application path: ${quickLaunch.appPath}` : "",
+        quickLaunch.runBat && runnable ? `Quick run file: ${quickLaunch.runBat}` : "",
+        quickLaunch.openAppBat && runnable ? `Quick open file: ${quickLaunch.openAppBat}` : "",
         `Runnable: ${runnable ? "yes" : "no"}`,
         `Output type: ${outputTypes.join(", ") || "UNKNOWN"}`,
         `Runnable indicators: ${indicators.join(", ") || "none"}`,
@@ -1980,10 +2023,10 @@
       if (mode === "PROVIDER_UNAVAILABLE") {
         return ar
           ? [
-              { action_id: "CREATE_STATIC_PROTOTYPE", label: "إنشاء Prototype HTML محلي بسيط من المتطلبات", value: "إنشاء Prototype HTML محلي بسيط من المتطلبات", description: "إنشاء Prototype ثابت محكوم عبر Forge، وليس نظام Production كامل." },
-              { action_id: "SHOW_REQUIREMENTS_FILES", label: "اعرض ملفات المتطلبات", value: "اعرض ملفات المتطلبات", description: "عرض ملفات التسليم الحالية." },
-              { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." },
-              { action_id: "START_OVER", label: "ابدأ من جديد", value: "ابدأ من جديد", description: "إغلاق التدفق الحالي وانتظار طلب جديد." }
+              { action_id: "CREATE_STATIC_PROTOTYPE", label: "Ø¥Ù†Ø´Ø§Ø¡ Prototype HTML Ù…Ø­لي Ø¨Ø³ÙŠØ· من Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª", value: "Ø¥Ù†Ø´Ø§Ø¡ Prototype HTML Ù…Ø­لي Ø¨Ø³ÙŠØ· من Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª", description: "Ø¥Ù†Ø´Ø§Ø¡ Prototype Ø«Ø§Ø¨Øª Ù…Ø­كوم Ø¹Ø¨Ø± Forge، ÙˆÙ„ÙŠØ³ Ù†Ø¸Ø§م Production ÙƒØ§مل." },
+              { action_id: "SHOW_REQUIREMENTS_FILES", label: "Ø§Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª", value: "Ø§Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª", description: "Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ³ليم Ø§Ù„Ø­Ø§Ù„ÙŠØ©." },
+              { action_id: "STOP_FLOW", label: "Ø§ØªÙˆÙ‚Ù", value: "Ø§ØªÙˆÙ‚Ù", description: "Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ø­Ø§لي." },
+              { action_id: "START_OVER", label: "Ø§Ø¨Ø¯Ø£ من Ø¬Ø¯ÙŠØ¯", value: "Ø§Ø¨Ø¯Ø£ من Ø¬Ø¯ÙŠØ¯", description: "Ø¥ØºÙ„Ø§ق Ø§Ù„ØªØ¯Ùق Ø§Ù„Ø­Ø§لي ÙˆØ§Ù†ØªØ¸Ø§Ø± Ø·Ù„Ø¨ Ø¬Ø¯ÙŠØ¯." }
             ]
           : [
               { action_id: "CREATE_STATIC_PROTOTYPE", label: "Create local HTML prototype", value: "Create a simple local HTML prototype from these requirements", description: "Create a governed static prototype, not a production system." },
@@ -1996,9 +2039,9 @@
       if (mode === "REVISION_PROMPT") {
         return ar
           ? [
-              { action_id: deliveryType === "RUNNABLE_APPLICATION" ? "SHOW_APP_FILES" : "SHOW_REQUIREMENTS_FILES", label: deliveryType === "RUNNABLE_APPLICATION" ? "اعرض ملفات التطبيق" : "اعرض ملفات المتطلبات", value: deliveryType === "RUNNABLE_APPLICATION" ? "اعرض ملفات التطبيق" : "اعرض ملفات المتطلبات", description: "عرض ملفات التسليم الحالية قبل كتابة التعديل." },
-              { action_id: "BACK_TO_DELIVERY_CHOICES", label: "ارجع", value: "ارجع", description: "الرجوع لاختيارات التسليم الحالية." },
-              { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." }
+              { action_id: deliveryType === "RUNNABLE_APPLICATION" ? "SHOW_APP_FILES" : "SHOW_REQUIREMENTS_FILES", label: deliveryType === "RUNNABLE_APPLICATION" ? "Ø§Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ·Ø¨يق" : "Ø§Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª", value: deliveryType === "RUNNABLE_APPLICATION" ? "Ø§Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ·Ø¨يق" : "Ø§Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª", description: "Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ³ليم Ø§Ù„Ø­Ø§Ù„ÙŠØ© Ù‚Ø¨ل ÙƒØªØ§Ø¨Ø© Ø§Ù„ØªØ¹Ø¯يل." },
+              { action_id: "BACK_TO_DELIVERY_CHOICES", label: "Ø§Ø±Ø¬Ø¹", value: "Ø§Ø±Ø¬Ø¹", description: "Ø§Ù„Ø±Ø¬ÙˆØ¹ Ù„Ø§Ø®ØªÙŠØ§Ø±Ø§Øª Ø§Ù„ØªØ³ليم Ø§Ù„Ø­Ø§Ù„ÙŠØ©." },
+              { action_id: "STOP_FLOW", label: "Ø§ØªÙˆÙ‚Ù", value: "Ø§ØªÙˆÙ‚Ù", description: "Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ø­Ø§لي." }
             ]
           : [
               { action_id: deliveryType === "RUNNABLE_APPLICATION" ? "SHOW_APP_FILES" : "SHOW_REQUIREMENTS_FILES", label: deliveryType === "RUNNABLE_APPLICATION" ? "Show app files" : "Show requirement files", value: deliveryType === "RUNNABLE_APPLICATION" ? "Show app files" : "Show requirement files", description: "Show current delivery files before changing them." },
@@ -2026,11 +2069,11 @@
       if (mode === "AFTER_REQUIREMENT_FILES") {
         return ar
           ? [
-              { action_id: "BUILD_RUNNABLE_FROM_REQUIREMENTS", label: "ابني تطبيق قابل للتشغيل من هذه المتطلبات", value: "ابني تطبيق قابل للتشغيل من هذه المتطلبات", description: "محاولة بناء تطبيق قابل للتشغيل من حزمة المتطلبات الحالية." },
-              { action_id: "REVISE_REQUIREMENTS", label: "عدّل المتطلبات", value: "عدل المتطلبات", description: "تعديل حزمة المتطلبات قبل بناء تطبيق." },
-              { action_id: "SHOW_FILE_DETAILS", label: "اعرض تفاصيل ملف", value: "اعرض تفاصيل ملف", description: "يعرض قائمة مرقمة وأزرار عرض لكل ملف." },
-              { action_id: "START_OVER", label: "ابدأ من جديد", value: "ابدأ من جديد", description: "إغلاق التدفق الحالي وانتظار طلب جديد." },
-              { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." }
+              { action_id: "BUILD_RUNNABLE_FROM_REQUIREMENTS", label: "Ø§Ø¨ني ØªØ·Ø¨يق Ù‚Ø§Ø¨ل Ù„Ù„ØªØ´Øºيل من Ù‡Ø°ه Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª", value: "Ø§Ø¨ني ØªØ·Ø¨يق Ù‚Ø§Ø¨ل Ù„Ù„ØªØ´Øºيل من Ù‡Ø°ه Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª", description: "Ù…Ø­Ø§ÙˆÙ„Ø© Ø¨Ù†Ø§Ø¡ ØªØ·Ø¨يق Ù‚Ø§Ø¨ل Ù„Ù„ØªØ´Øºيل من Ø­Ø²Ù…Ø© Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª Ø§Ù„Ø­Ø§Ù„ÙŠØ©." },
+              { action_id: "REVISE_REQUIREMENTS", label: "Ø¹Ø¯ّل Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª", value: "Ø¹Ø¯ل Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª", description: "ØªØ¹Ø¯يل Ø­Ø²Ù…Ø© Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª Ù‚Ø¨ل Ø¨Ù†Ø§Ø¡ ØªØ·Ø¨يق." },
+              { action_id: "SHOW_FILE_DETAILS", label: "Ø§Ø¹Ø±Ø¶ ØªÙØ§Øµيل Ù…Ù„Ù", value: "Ø§Ø¹Ø±Ø¶ ØªÙØ§Øµيل Ù…Ù„Ù", description: "ÙŠØ¹Ø±Ø¶ Ù‚Ø§Ø¦Ù…Ø© Ù…Ø±Ù‚Ù…Ø© ÙˆØ£Ø²Ø±Ø§Ø± Ø¹Ø±Ø¶ لكل Ù…Ù„Ù." },
+              { action_id: "START_OVER", label: "Ø§Ø¨Ø¯Ø£ من Ø¬Ø¯ÙŠØ¯", value: "Ø§Ø¨Ø¯Ø£ من Ø¬Ø¯ÙŠØ¯", description: "Ø¥ØºÙ„Ø§ق Ø§Ù„ØªØ¯Ùق Ø§Ù„Ø­Ø§لي ÙˆØ§Ù†ØªØ¸Ø§Ø± Ø·Ù„Ø¨ Ø¬Ø¯ÙŠØ¯." },
+              { action_id: "STOP_FLOW", label: "Ø§ØªÙˆÙ‚Ù", value: "Ø§ØªÙˆÙ‚Ù", description: "Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ø­Ø§لي." }
             ]
           : [
               { action_id: "BUILD_RUNNABLE_FROM_REQUIREMENTS", label: "Build runnable app", value: "Build the runnable application from these requirements", description: "Attempt to build a runnable application from the current requirements package." },
@@ -2044,12 +2087,14 @@
       if (mode === "AFTER_RUN_INSTRUCTIONS") {
         return ar
           ? [
-              { action_id: "SHOW_APP_FILES", label: "اعرض ملفات التطبيق", value: "اعرض ملفات التطبيق", description: "عرض كل ملفات التطبيق الناتجة." },
-              { action_id: "REQUEST_DELIVERY_CHANGES", label: "اطلب تعديل", value: "اطلب تعديل", description: "تحديد تعديل واضح على التسليم الحالي." },
-              { action_id: "START_OVER", label: "ابدأ من جديد", value: "ابدأ من جديد", description: "إغلاق التدفق الحالي وانتظار طلب جديد." },
-              { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." }
+              { action_id: "OPEN_OUTPUT_FOLDER", label: "\u0627\u0641\u062a\u062d \u0645\u062c\u0644\u062f \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a", value: "\u0627\u0641\u062a\u062d \u0645\u062c\u0644\u062f \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a", description: "\u064a\u0637\u0644\u0628 \u0641\u062a\u062d \u0645\u062c\u0644\u062f output/app \u0645\u062d\u0644\u064a\u0627 \u0625\u0630\u0627 \u0643\u0627\u0646 \u0645\u062a\u0627\u062d\u0627." },
+              { action_id: "SHOW_APP_FILES", label: "Ø§Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ·Ø¨يق", value: "Ø§Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ·Ø¨يق", description: "Ø¹Ø±Ø¶ كل Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ·Ø¨يق Ø§Ù„Ù†Ø§ØªØ¬Ø©." },
+              { action_id: "REQUEST_DELIVERY_CHANGES", label: "Ø§Ø·Ù„Ø¨ ØªØ¹Ø¯يل", value: "Ø§Ø·Ù„Ø¨ ØªØ¹Ø¯يل", description: "ØªØ­Ø¯ÙŠØ¯ ØªØ¹Ø¯يل ÙˆØ§Ø¶Ø­ Ø¹لى Ø§Ù„ØªØ³ليم Ø§Ù„Ø­Ø§لي." },
+              { action_id: "START_OVER", label: "Ø§Ø¨Ø¯Ø£ من Ø¬Ø¯ÙŠØ¯", value: "Ø§Ø¨Ø¯Ø£ من Ø¬Ø¯ÙŠØ¯", description: "Ø¥ØºÙ„Ø§ق Ø§Ù„ØªØ¯Ùق Ø§Ù„Ø­Ø§لي ÙˆØ§Ù†ØªØ¸Ø§Ø± Ø·Ù„Ø¨ Ø¬Ø¯ÙŠØ¯." },
+              { action_id: "STOP_FLOW", label: "Ø§ØªÙˆÙ‚Ù", value: "Ø§ØªÙˆÙ‚Ù", description: "Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ø­Ø§لي." }
             ]
           : [
+              { action_id: "OPEN_OUTPUT_FOLDER", label: "Open output folder", value: "Open output folder", description: "Ask the local server to open output/app when available." },
               { action_id: "SHOW_APP_FILES", label: "Show app files", value: "Show app files", description: "Show all current application files." },
               { action_id: "REQUEST_DELIVERY_CHANGES", label: "Request changes", value: "Request changes", description: "Describe changes to the current delivery." },
               { action_id: "START_OVER", label: "Start over", value: "start over", description: "Close this flow and start a new request." },
@@ -2060,14 +2105,16 @@
       if (deliveryType === "RUNNABLE_APPLICATION") {
         return ar
           ? [
-              { action_id: "SHOW_RUN_INSTRUCTIONS", label: "شغّل أو افتح التطبيق", value: "شغل أو افتح التطبيق", description: "عرض تعليمات التشغيل بدون فتح المتصفح تلقائيًا." },
-              { action_id: "SHOW_APP_FILES", label: "اعرض ملفات التطبيق", value: "اعرض ملفات التطبيق", description: "عرض كل ملفات التطبيق الناتجة." },
-              { action_id: "REQUEST_DELIVERY_CHANGES", label: "اطلب تعديل", value: "اطلب تعديل", description: "تحديد تعديل واضح على التسليم الحالي." },
-              { action_id: "START_OVER", label: "ابدأ من جديد", value: "ابدأ من جديد", description: "إغلاق التدفق الحالي وانتظار طلب جديد." },
-              { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." }
+              { action_id: "SHOW_RUN_INSTRUCTIONS", label: "Ø´Øºّل Ø£و Ø§ÙØªØ­ Ø§Ù„ØªØ·Ø¨يق", value: "Ø´Øºل Ø£و Ø§ÙØªØ­ Ø§Ù„ØªØ·Ø¨يق", description: "Ø¹Ø±Ø¶ ØªØ¹Ù„ÙŠÙ…Ø§Øª Ø§Ù„ØªØ´Øºيل Ø¨Ø¯ون ÙØªØ­ Ø§Ù„Ù…ØªØµÙØ­ ØªÙ„Ù‚Ø§Ø¦ÙŠÙ‹Ø§." },
+              { action_id: "OPEN_OUTPUT_FOLDER", label: "\u0627\u0641\u062a\u062d \u0645\u062c\u0644\u062f \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a", value: "\u0627\u0641\u062a\u062d \u0645\u062c\u0644\u062f \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a", description: "\u064a\u0637\u0644\u0628 \u0641\u062a\u062d \u0645\u062c\u0644\u062f output/app \u0645\u062d\u0644\u064a\u0627 \u0625\u0630\u0627 \u0643\u0627\u0646 \u0645\u062a\u0627\u062d\u0627." },
+              { action_id: "SHOW_APP_FILES", label: "Ø§Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ·Ø¨يق", value: "Ø§Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ·Ø¨يق", description: "Ø¹Ø±Ø¶ كل Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ·Ø¨يق Ø§Ù„Ù†Ø§ØªØ¬Ø©." },
+              { action_id: "REQUEST_DELIVERY_CHANGES", label: "Ø§Ø·Ù„Ø¨ ØªØ¹Ø¯يل", value: "Ø§Ø·Ù„Ø¨ ØªØ¹Ø¯يل", description: "ØªØ­Ø¯ÙŠØ¯ ØªØ¹Ø¯يل ÙˆØ§Ø¶Ø­ Ø¹لى Ø§Ù„ØªØ³ليم Ø§Ù„Ø­Ø§لي." },
+              { action_id: "START_OVER", label: "Ø§Ø¨Ø¯Ø£ من Ø¬Ø¯ÙŠØ¯", value: "Ø§Ø¨Ø¯Ø£ من Ø¬Ø¯ÙŠØ¯", description: "Ø¥ØºÙ„Ø§ق Ø§Ù„ØªØ¯Ùق Ø§Ù„Ø­Ø§لي ÙˆØ§Ù†ØªØ¸Ø§Ø± Ø·Ù„Ø¨ Ø¬Ø¯ÙŠØ¯." },
+              { action_id: "STOP_FLOW", label: "Ø§ØªÙˆÙ‚Ù", value: "Ø§ØªÙˆÙ‚Ù", description: "Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ø­Ø§لي." }
             ]
           : [
               { action_id: "SHOW_RUN_INSTRUCTIONS", label: "Run or open app", value: "Run or open the application", description: "Show run instructions without opening the browser." },
+              { action_id: "OPEN_OUTPUT_FOLDER", label: "Open output folder", value: "Open output folder", description: "Ask the local server to open output/app when available." },
               { action_id: "SHOW_APP_FILES", label: "Show app files", value: "Show app files", description: "Show all current application files." },
               { action_id: "REQUEST_DELIVERY_CHANGES", label: "Request changes", value: "Request changes", description: "Describe changes to the current delivery." },
               { action_id: "START_OVER", label: "Start over", value: "start over", description: "Close this flow and start a new request." },
@@ -2078,11 +2125,11 @@
       if (deliveryType === "DOCUMENT_DELIVERY") {
         return ar
           ? [
-              { action_id: "SHOW_DOCUMENT", label: "اعرض الوثيقة", value: "اعرض الوثيقة", description: "عرض آخر وثيقة معتمدة أو مسودة." },
-              { action_id: "BUILD_RUNNABLE_FROM_DOCUMENT", label: "ابني التطبيق من هذه الوثيقة", value: "ابني التطبيق من هذه الوثيقة", description: "تحويل الوثيقة إلى طلب بناء تطبيق قابل للتشغيل." },
-              { action_id: "REVISE_DOCUMENT", label: "عدّل الوثيقة", value: "عدل الوثيقة", description: "تعديل الوثيقة قبل أي تنفيذ جديد." },
-              { action_id: "START_OVER", label: "ابدأ من جديد", value: "ابدأ من جديد", description: "إغلاق التدفق الحالي وانتظار طلب جديد." },
-              { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." }
+              { action_id: "SHOW_DOCUMENT", label: "Ø§Ø¹Ø±Ø¶ Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©", value: "Ø§Ø¹Ø±Ø¶ Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©", description: "Ø¹Ø±Ø¶ Ø¢Ø®Ø± ÙˆØ«ÙŠÙ‚Ø© Ù…Ø¹ØªÙ…Ø¯Ø© Ø£و Ù…Ø³ÙˆØ¯Ø©." },
+              { action_id: "BUILD_RUNNABLE_FROM_DOCUMENT", label: "Ø§Ø¨ني Ø§Ù„ØªØ·Ø¨يق من Ù‡Ø°ه Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©", value: "Ø§Ø¨ني Ø§Ù„ØªØ·Ø¨يق من Ù‡Ø°ه Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©", description: "ØªØ­ويل Ø§Ù„ÙˆØ«ÙŠÙ‚Ø© Ø¥لى Ø·Ù„Ø¨ Ø¨Ù†Ø§Ø¡ ØªØ·Ø¨يق Ù‚Ø§Ø¨ل Ù„Ù„ØªØ´Øºيل." },
+              { action_id: "REVISE_DOCUMENT", label: "Ø¹Ø¯ّل Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©", value: "Ø¹Ø¯ل Ø§Ù„ÙˆØ«ÙŠÙ‚Ø©", description: "ØªØ¹Ø¯يل Ø§Ù„ÙˆØ«ÙŠÙ‚Ø© Ù‚Ø¨ل Ø£ي ØªÙ†ÙÙŠØ° Ø¬Ø¯ÙŠØ¯." },
+              { action_id: "START_OVER", label: "Ø§Ø¨Ø¯Ø£ من Ø¬Ø¯ÙŠØ¯", value: "Ø§Ø¨Ø¯Ø£ من Ø¬Ø¯ÙŠØ¯", description: "Ø¥ØºÙ„Ø§ق Ø§Ù„ØªØ¯Ùق Ø§Ù„Ø­Ø§لي ÙˆØ§Ù†ØªØ¸Ø§Ø± Ø·Ù„Ø¨ Ø¬Ø¯ÙŠØ¯." },
+              { action_id: "STOP_FLOW", label: "Ø§ØªÙˆÙ‚Ù", value: "Ø§ØªÙˆÙ‚Ù", description: "Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ø­Ø§لي." }
             ]
           : [
               { action_id: "SHOW_DOCUMENT", label: "Show document", value: "show documentation", description: "Show the latest document delivery." },
@@ -2095,11 +2142,11 @@
 
       return ar
         ? [
-            { action_id: "BUILD_RUNNABLE_FROM_REQUIREMENTS", label: "ابني تطبيق قابل للتشغيل من هذه المتطلبات", value: "ابني تطبيق قابل للتشغيل من هذه المتطلبات", description: "محاولة بناء تطبيق قابل للتشغيل من حزمة المتطلبات الحالية." },
-            { action_id: "SHOW_REQUIREMENTS_FILES", label: "اعرض ملفات المتطلبات", value: "اعرض ملفات المتطلبات", description: "عرض ملفات التسليم الحالية." },
-            { action_id: "REVISE_REQUIREMENTS", label: "عدّل المتطلبات", value: "عدل المتطلبات", description: "تعديل حزمة المتطلبات قبل بناء تطبيق." },
-            { action_id: "START_OVER", label: "ابدأ من جديد", value: "ابدأ من جديد", description: "إغلاق التدفق الحالي وانتظار طلب جديد." },
-            { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." }
+            { action_id: "BUILD_RUNNABLE_FROM_REQUIREMENTS", label: "Ø§Ø¨ني ØªØ·Ø¨يق Ù‚Ø§Ø¨ل Ù„Ù„ØªØ´Øºيل من Ù‡Ø°ه Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª", value: "Ø§Ø¨ني ØªØ·Ø¨يق Ù‚Ø§Ø¨ل Ù„Ù„ØªØ´Øºيل من Ù‡Ø°ه Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª", description: "Ù…Ø­Ø§ÙˆÙ„Ø© Ø¨Ù†Ø§Ø¡ ØªØ·Ø¨يق Ù‚Ø§Ø¨ل Ù„Ù„ØªØ´Øºيل من Ø­Ø²Ù…Ø© Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª Ø§Ù„Ø­Ø§Ù„ÙŠØ©." },
+            { action_id: "SHOW_REQUIREMENTS_FILES", label: "Ø§Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª", value: "Ø§Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª", description: "Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ³ليم Ø§Ù„Ø­Ø§Ù„ÙŠØ©." },
+            { action_id: "REVISE_REQUIREMENTS", label: "Ø¹Ø¯ّل Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª", value: "Ø¹Ø¯ل Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª", description: "ØªØ¹Ø¯يل Ø­Ø²Ù…Ø© Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª Ù‚Ø¨ل Ø¨Ù†Ø§Ø¡ ØªØ·Ø¨يق." },
+            { action_id: "START_OVER", label: "Ø§Ø¨Ø¯Ø£ من Ø¬Ø¯ÙŠØ¯", value: "Ø§Ø¨Ø¯Ø£ من Ø¬Ø¯ÙŠØ¯", description: "Ø¥ØºÙ„Ø§ق Ø§Ù„ØªØ¯Ùق Ø§Ù„Ø­Ø§لي ÙˆØ§Ù†ØªØ¸Ø§Ø± Ø·Ù„Ø¨ Ø¬Ø¯ÙŠØ¯." },
+            { action_id: "STOP_FLOW", label: "Ø§ØªÙˆÙ‚Ù", value: "Ø§ØªÙˆÙ‚Ù", description: "Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ø­Ø§لي." }
           ]
         : [
             { action_id: "BUILD_RUNNABLE_FROM_REQUIREMENTS", label: "Build runnable app", value: "Build the runnable application from these requirements", description: "Attempt to build a runnable application from the current requirements package." },
@@ -2128,6 +2175,7 @@
       const outputFiles = Array.isArray(summary && summary.output_files) ? summary.output_files : [];
       const outputPath = String(summary && summary.output_path ? summary.output_path : "").replace(/\\/g, "/");
       const indexFile = outputFiles.find((file) => String(file || "").toLowerCase().endsWith("index.html"));
+      const quickLaunch = getDeliveryQuickLaunch(summary);
       const formatPath = (file) => {
         const value = String(file || "").replace(/\\/g, "/");
         if (!value) return "";
@@ -2136,18 +2184,26 @@
       };
       const localized = list.map((item) =>
         String(item || "")
-          .replace(/^Open this file in the browser:\s*/i, "افتح الملف التالي في المتصفح: ")
-          .replace(/^From this folder run:\s*/i, "من هذا المجلد شغّل: ")
+          .replace(/^Open this file in the browser:\s*/i, "Ø§ÙØªØ­ Ø§Ù„Ù…Ù„Ù Ø§Ù„ØªØ§لي Ùي Ø§Ù„Ù…ØªØµÙØ­: ")
+          .replace(/^From this folder run:\s*/i, "من Ù‡Ø°Ø§ Ø§Ù„Ù…Ø¬Ù„Ø¯ Ø´Øºّل: ")
           .replace(/^npm install$/i, "npm install")
           .replace(/^npm start$/i, "npm start")
       );
 
       if (localized.length === 0 && indexFile) {
-        localized.push(`افتح الملف التالي في المتصفح: ${formatPath(indexFile)}`);
+        localized.push(`Ø§ÙØªØ­ Ø§Ù„Ù…Ù„Ù Ø§Ù„ØªØ§لي Ùي Ø§Ù„Ù…ØªØµÙØ­: ${formatPath(indexFile)}`);
       }
 
       if ((summary && summary.delivery_type) === "RUNNABLE_APPLICATION") {
-        localized.push("هذا Prototype ثابت مبني من المتطلبات، وليس نظام Production كامل.");
+        return [
+          "\u062a\u0645 \u0625\u0646\u0634\u0627\u0621 Prototype \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644.",
+          "\u0644\u062a\u0634\u063a\u064a\u0644\u0647 \u0628\u0633\u0647\u0648\u0644\u0629:",
+          quickLaunch.appPath ? `1. \u0627\u0641\u062a\u062d \u0627\u0644\u0645\u062c\u0644\u062f: ${quickLaunch.appPath}` : "",
+          quickLaunch.runBat ? `2. \u0627\u0636\u063a\u0637 \u0645\u0631\u062a\u064a\u0646 \u0639\u0644\u0649: ${quickLaunch.runBat}` : "",
+          quickLaunch.openAppBat ? `\u0623\u0648: ${quickLaunch.openAppBat}` : "",
+          "\u062d\u0633\u0628 \u0646\u0648\u0639 \u0627\u0644\u062a\u0637\u0628\u064a\u0642.",
+          "\u0647\u0630\u0627 Prototype \u062b\u0627\u0628\u062a/\u0623\u0648\u0644\u064a \u0645\u0628\u0646\u064a \u0645\u0646 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a\u060c \u0648\u0644\u064a\u0633 \u0646\u0638\u0627\u0645 Production \u0643\u0627\u0645\u0644."
+        ].filter(Boolean);
       }
 
       return localized;
@@ -2164,7 +2220,7 @@
         <div class="strategy-choice-list" style="margin-top:12px;">
           ${list.map((file, index) => `
             <button class="strategy-choice-btn" type="button" data-output-file-path="${escapeHtml(String(file || ""))}">
-              <strong>${escapeHtml(lang === "ar" ? `عرض هذا الملف ${index + 1}` : `View this file ${index + 1}`)}</strong>
+              <strong>${escapeHtml(lang === "ar" ? `Ø¹Ø±Ø¶ Ù‡Ø°Ø§ Ø§Ù„Ù…Ù„Ù ${index + 1}` : `View this file ${index + 1}`)}</strong>
               ${escapeHtml(String(file || ""))}
             </button>
           `).join("")}
@@ -2420,10 +2476,10 @@
 
       pushMessage(
         "assistant",
-        lang === "ar" ? "بدء تنفيذ Forge" : "Starting Forge Execution",
+        lang === "ar" ? "Ø¨Ø¯Ø¡ ØªÙ†ÙÙŠØ° Forge" : "Starting Forge Execution",
         `<div class="file-preview">${formatMessageText(
           lang === "ar"
-            ? "هنبدأ الآن مرحلة Forge الفعلية: Decision Gate ثم Backfill ثم Execute ثم Verify."
+            ? "Ù‡Ù†Ø¨Ø¯Ø£ Ø§Ù„Ø¢ن Ù…Ø±Ø­Ù„Ø© Forge Ø§Ù„ÙØ¹Ù„ÙŠØ©: Decision Gate Ø«م Backfill Ø«م Execute Ø«م Verify."
             : "Forge will now run the governed runtime: Decision Gate, Backfill, Execute, then Verify."
         )}</div>`
       );
@@ -2445,15 +2501,15 @@
 
         pushMessage(
           "assistant",
-          lang === "ar" ? "توقف تنفيذ Forge" : "Forge Execution Blocked",
+          lang === "ar" ? "ØªÙˆÙ‚Ù ØªÙ†ÙÙŠØ° Forge" : "Forge Execution Blocked",
           `
             <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
               lang === "ar"
                 ? [
-                    "توقف تنفيذ Forge أثناء المرحلة المحكومة.",
-                    `السبب: ${runResult.blocking_reason || "لم يتم تحديد سبب واضح."}`,
+                    "ØªÙˆÙ‚Ù ØªÙ†ÙÙŠØ° Forge Ø£Ø«Ù†Ø§Ø¡ Ø§Ù„Ù…Ø±Ø­Ù„Ø© Ø§Ù„Ù…Ø­ÙƒÙˆÙ…Ø©.",
+                    `Ø§Ù„Ø³Ø¨Ø¨: ${runResult.blocking_reason || "لم ÙŠØªم ØªØ­Ø¯ÙŠØ¯ Ø³Ø¨Ø¨ ÙˆØ§Ø¶Ø­."}`,
                     "",
-                    "اختار الخطوة المناسبة من الأزرار التالية."
+                    "Ø§Ø®ØªØ§Ø± Ø§Ù„Ø®Ø·ÙˆØ© Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø© من Ø§Ù„Ø£Ø²Ø±Ø§Ø± Ø§Ù„ØªØ§Ù„ÙŠØ©."
                   ].join("\n")
                 : [
                     "Forge execution stopped during the governed runtime.",
@@ -2475,12 +2531,12 @@
       const runnable = deliverySummary && deliverySummary.runnable_application_created === true;
       const lines = lang === "ar"
         ? [
-            "تم تنفيذ مرحلة Forge بنجاح.",
-            "اكتملت المراحل: Decision Gate → Backfill → Execute → Verify.",
-            artifacts.execute_plan ? `خطة التنفيذ: ${artifacts.execute_plan}` : "",
-            artifacts.execute_report ? `تقرير التنفيذ: ${artifacts.execute_report}` : "",
-            artifacts.verification_report ? `تقرير التحقق: ${artifacts.verification_report}` : "",
-            artifacts.orchestration_report ? `تقرير التشغيل: ${artifacts.orchestration_report}` : ""
+            "Øªم ØªÙ†ÙÙŠØ° Ù…Ø±Ø­Ù„Ø© Forge Ø¨Ù†Ø¬Ø§Ø­.",
+            "Ø§ÙƒØªÙ…Ù„Øª Ø§Ù„Ù…Ø±Ø§Ø­ل: Decision Gate → Backfill → Execute → Verify.",
+            artifacts.execute_plan ? `Ø®Ø·Ø© Ø§Ù„ØªÙ†ÙÙŠØ°: ${artifacts.execute_plan}` : "",
+            artifacts.execute_report ? `ØªÙ‚Ø±ÙŠØ± Ø§Ù„ØªÙ†ÙÙŠØ°: ${artifacts.execute_report}` : "",
+            artifacts.verification_report ? `ØªÙ‚Ø±ÙŠØ± Ø§Ù„ØªØ­قق: ${artifacts.verification_report}` : "",
+            artifacts.orchestration_report ? `ØªÙ‚Ø±ÙŠØ± Ø§Ù„ØªØ´Øºيل: ${artifacts.orchestration_report}` : ""
           ]
         : [
             "Forge runtime completed successfully.",
@@ -2551,7 +2607,7 @@
         return `${base}/${value}`;
       };
       const localizedInstructions = lang === "ar" && deliveryType === "REQUIREMENTS_PACKAGE"
-        ? ["هذه ليست ملفات تشغيل. تم إنشاء حزمة متطلبات فقط. راجع ملفات التسليم الحالية، ثم يمكنك اختيار بناء تطبيق قابل للتشغيل من هذه المتطلبات."]
+        ? ["Ù‡Ø°ه Ù„ÙŠØ³Øª Ù…Ù„ÙØ§Øª ØªØ´Øºيل. Øªم Ø¥Ù†Ø´Ø§Ø¡ Ø­Ø²Ù…Ø© Ù…ØªØ·Ù„Ø¨Ø§Øª ÙÙ‚Ø·. Ø±Ø§Ø¬Ø¹ Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ³ليم Ø§Ù„Ø­Ø§Ù„ÙŠØ©، Ø«م يمكنك Ø§Ø®ØªÙŠØ§Ø± Ø¨Ù†Ø§Ø¡ ØªØ·Ø¨يق Ù‚Ø§Ø¨ل Ù„Ù„ØªØ´Øºيل من Ù‡Ø°ه Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª."]
         : localizeRunInstructions(instructions, summary, lang);
       const lines = [
         `delivery_type: ${deliveryType}`,
@@ -2560,18 +2616,18 @@
         "",
         displayFiles.length > 0
           ? `output_files:\n${displayFiles.map((file, index) => `- ${index + 1}. ${formatOutputPath(file)}`).join("\n")}`
-          : (lang === "ar" ? "لا توجد ملفات في ملخص التسليم الحالي." : "No files were listed in the current delivery summary."),
+          : (lang === "ar" ? "Ù„Ø§ ØªÙˆØ¬Ø¯ Ù…Ù„ÙØ§Øª Ùي Ù…Ù„Ø®Øµ Ø§Ù„ØªØ³ليم Ø§Ù„Ø­Ø§لي." : "No files were listed in the current delivery summary."),
         "",
-        lang === "ar" ? "طريقة الاستخدام أو المراجعة:" : "Usage or review:",
+        lang === "ar" ? "Ø·Ø±ÙŠÙ‚Ø© Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§م Ø£و Ø§Ù„Ù…Ø±Ø§Ø¬Ø¹Ø©:" : "Usage or review:",
         ...(localizedInstructions.length > 0
           ? localizedInstructions
-          : [lang === "ar" ? "راجع ملفات التسليم الحالية." : "Review the current delivery files."])
+          : [lang === "ar" ? "Ø±Ø§Ø¬Ø¹ Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ³ليم Ø§Ù„Ø­Ø§Ù„ÙŠØ©." : "Review the current delivery files."])
       ].filter((line) => line !== "");
 
       pushMessage(
         "user",
         lang === "ar"
-          ? (isRunnableDelivery ? "عرض ملفات التطبيق" : isRequirementsDelivery ? "عرض ملفات المتطلبات" : "عرض ملفات التسليم")
+          ? (isRunnableDelivery ? "Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ·Ø¨يق" : isRequirementsDelivery ? "Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª" : "Ø¹Ø±Ø¶ Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ³ليم")
           : (isRunnableDelivery ? "Show App Files" : isRequirementsDelivery ? "Show Requirement Files" : "Show Delivery Files"),
         `<div class="file-preview">${formatMessageText(request)}</div>`
       );
@@ -2580,7 +2636,7 @@
       pushMessage(
         "assistant",
         lang === "ar"
-          ? (isRunnableDelivery ? "ملفات التطبيق الحالية" : isRequirementsDelivery ? "ملفات المتطلبات الحالية" : "ملفات التسليم الحالية")
+          ? (isRunnableDelivery ? "Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ·Ø¨يق Ø§Ù„Ø­Ø§Ù„ÙŠØ©" : isRequirementsDelivery ? "Ù…Ù„ÙØ§Øª Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª Ø§Ù„Ø­Ø§Ù„ÙŠØ©" : "Ù…Ù„ÙØ§Øª Ø§Ù„ØªØ³ليم Ø§Ù„Ø­Ø§Ù„ÙŠØ©")
           : (isRunnableDelivery ? "Current App Files" : isRequirementsDelivery ? "Current Requirement Files" : "Current Delivery Files"),
         `<div class="file-preview">${formatMessageText(lines.join("\n"))}</div>${buildOutputFileButtons(displayFiles, lang)}${buildPostActionChoicesHtml(summary, lang, isRequirementsDelivery ? "AFTER_REQUIREMENT_FILES" : isRunnableDelivery ? "AFTER_APP_FILES" : "DELIVERY_SUMMARY")}`
       );
@@ -2600,7 +2656,7 @@
       if (!requested || !files.includes(requested)) {
         const numbered = files.length > 0
           ? files.map((file, index) => `${index + 1}. ${file}`).join("\n")
-          : (lang === "ar" ? "لا توجد ملفات في التسليم الحالي." : "No files are listed in the current delivery.");
+          : (lang === "ar" ? "Ù„Ø§ ØªÙˆØ¬Ø¯ Ù…Ù„ÙØ§Øª Ùي Ø§Ù„ØªØ³ليم Ø§Ù„Ø­Ø§لي." : "No files are listed in the current delivery.");
 
         pendingOutputFileSelection = {
           project_id: getActiveProjectId(),
@@ -2609,10 +2665,10 @@
 
         pushMessage(
           "assistant",
-          lang === "ar" ? "اختر ملفًا من القائمة" : "Choose A File",
+          lang === "ar" ? "Ø§Ø®ØªØ± Ù…Ù„ÙÙ‹Ø§ من Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©" : "Choose A File",
           `<div class="file-preview">${formatMessageText(
             lang === "ar"
-              ? `اختر ملفًا من القائمة التالية عبر زر "عرض هذا الملف"، أو اكتب رقم الملف فقط:\n${numbered}`
+              ? `Ø§Ø®ØªØ± Ù…Ù„ÙÙ‹Ø§ من Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„ØªØ§Ù„ÙŠØ© Ø¹Ø¨Ø± Ø²Ø± "Ø¹Ø±Ø¶ Ù‡Ø°Ø§ Ø§Ù„Ù…Ù„Ù"، Ø£و Ø§ÙƒØªØ¨ Ø±قم Ø§Ù„Ù…Ù„Ù ÙÙ‚Ø·:\n${numbered}`
               : `Choose a file with its "View this file" button, or type only the file number:\n${numbered}`
           )}</div>${buildOutputFileButtons(files, lang)}${buildPostActionChoicesHtml(summary, lang, deliveryType === "REQUIREMENTS_PACKAGE" ? "AFTER_REQUIREMENT_FILES" : "DELIVERY_SUMMARY")}`
         );
@@ -2632,12 +2688,12 @@
 
         pushMessage(
           "assistant",
-          lang === "ar" ? "تفاصيل الملف" : "File Details",
+          lang === "ar" ? "ØªÙØ§Øµيل Ø§Ù„Ù…Ù„Ù" : "File Details",
           `<div class="file-preview">${formatMessageText(
             [
               `path: ${result.path || requested}`,
               "",
-              content || (lang === "ar" ? "الملف فارغ أو لا يحتوي على محتوى نصي." : "The file is empty or has no text content.")
+              content || (lang === "ar" ? "Ø§Ù„Ù…Ù„Ù ÙØ§Ø±Øº Ø£و Ù„Ø§ ÙŠØ­Øªوي Ø¹لى Ù…Ø­Øªوى Ù†Øµي." : "The file is empty or has no text content.")
             ].join("\n")
           )}</div>${buildPostActionChoicesHtml(summary, lang, deliveryType === "REQUIREMENTS_PACKAGE" ? "AFTER_REQUIREMENT_FILES" : "DELIVERY_SUMMARY")}`
         );
@@ -2646,7 +2702,7 @@
       } catch (err) {
         pushMessage(
           "assistant",
-          lang === "ar" ? "تعذر عرض الملف" : "Could Not Show File",
+          lang === "ar" ? "ØªØ¹Ø°Ø± Ø¹Ø±Ø¶ Ø§Ù„Ù…Ù„Ù" : "Could Not Show File",
           `<div class="file-preview">${formatMessageText(err.message)}</div>${buildPostActionChoicesHtml(summary, lang, deliveryType === "REQUIREMENTS_PACKAGE" ? "AFTER_REQUIREMENT_FILES" : "DELIVERY_SUMMARY")}`
         );
         return true;
@@ -2739,6 +2795,55 @@
       setStatus(lang === "ar" ? "\u062a\u0645 \u0639\u0631\u0636 \u062a\u0639\u0644\u064a\u0645\u0627\u062a \u0627\u0644\u062a\u0634\u063a\u064a\u0644." : "Run instructions shown.");
     }
 
+    async function openOutputFolderForCurrentProject(request) {
+      const lang = detectUserLanguage(request);
+      const summary = currentProjectState && currentProjectState.delivery_summary
+        ? currentProjectState.delivery_summary
+        : {};
+
+      pushMessage(
+        "user",
+        lang === "ar" ? "\u0627\u0641\u062a\u062d \u0645\u062c\u0644\u062f \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a" : "Open Output Folder",
+        `<div class="file-preview">${formatMessageText(request)}</div>`
+      );
+      requestInput.value = "";
+
+      try {
+        const result = await requestAPI("/api/projects/open-output-folder", {
+          project_id: getActiveProjectId()
+        });
+        const outputFolder = result && result.output_folder ? result.output_folder : getDeliveryQuickLaunch(summary).appPath || summary.output_path || "";
+        const lines = result && result.ok
+          ? [
+              lang === "ar"
+                ? "\u062a\u0645 \u0625\u0631\u0633\u0627\u0644 \u0637\u0644\u0628 \u0641\u062a\u062d \u0627\u0644\u0645\u062c\u0644\u062f \u0644\u0640 Windows Explorer. \u0625\u0630\u0627 \u0645\u0646\u0639 \u0627\u0644\u0645\u062a\u0635\u0641\u062d \u0623\u0648 \u0627\u0644\u0646\u0638\u0627\u0645 \u0627\u0644\u0641\u062a\u062d\u060c \u0627\u0633\u062a\u062e\u062f\u0645 \u0627\u0644\u0645\u0633\u0627\u0631 \u0627\u0644\u062a\u0627\u0644\u064a."
+                : "The local server sent an open-folder request to Windows Explorer. If the browser or system blocks it, use this path.",
+              outputFolder
+            ]
+          : [
+              lang === "ar"
+                ? "\u0644\u0645 \u064a\u062a\u0645 \u0641\u062a\u062d \u0627\u0644\u0645\u062c\u0644\u062f \u062a\u0644\u0642\u0627\u0626\u064a\u0627."
+                : "The folder was not opened automatically.",
+              result && result.message ? result.message : "",
+              outputFolder ? `${lang === "ar" ? "\u0627\u0644\u0645\u0633\u0627\u0631" : "Path"}: ${outputFolder}` : ""
+            ];
+
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "\u0645\u062c\u0644\u062f \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a" : "Output Folder",
+          `<div class="file-preview">${formatMessageText(lines.filter(Boolean).join("\n"))}</div>${buildPostActionChoicesHtml(summary, lang, "AFTER_RUN_INSTRUCTIONS")}`
+        );
+        updateCurrentDeliveryFlowState(summary, "AFTER_RUN_INSTRUCTIONS");
+        setStatus(lang === "ar" ? "\u062a\u0645 \u0639\u0631\u0636 \u0645\u0633\u0627\u0631 \u0645\u062c\u0644\u062f \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a." : "Output folder path shown.");
+      } catch (err) {
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "\u0645\u062c\u0644\u062f \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a" : "Output Folder",
+          `<div class="file-preview">${formatMessageText(err.message || String(err))}</div>${buildPostActionChoicesHtml(summary, lang, "AFTER_RUN_INSTRUCTIONS")}`
+        );
+      }
+    }
+
     function askForDeliveryChangeRequest(request) {
       const lang = detectUserLanguage(request);
       const summary = currentProjectState && currentProjectState.delivery_summary
@@ -2769,7 +2874,7 @@
         delivery_type: deliveryType,
         mode: "AWAITING_DELIVERY_CHANGE_REQUEST"
       };
-      setStatus(lang === "ar" ? "AWAITING_DELIVERY_CHANGE_REQUEST: بانتظار تفاصيل تعديل التسليم." : "AWAITING_DELIVERY_CHANGE_REQUEST: waiting for delivery change details.");
+      setStatus(lang === "ar" ? "AWAITING_DELIVERY_CHANGE_REQUEST: Ø¨Ø§Ù†ØªØ¸Ø§Ø± ØªÙØ§Øµيل ØªØ¹Ø¯يل Ø§Ù„ØªØ³ليم." : "AWAITING_DELIVERY_CHANGE_REQUEST: waiting for delivery change details.");
     }
 
     function submitDeliveryRevisionFromText(request) {
@@ -2781,7 +2886,7 @@
 
       pushMessage(
         "user",
-        lang === "ar" ? "تفاصيل التعديل" : "Change Details",
+        lang === "ar" ? "ØªÙØ§Øµيل Ø§Ù„ØªØ¹Ø¯يل" : "Change Details",
         `<div class="file-preview">${formatMessageText(request)}</div>`
       );
       requestInput.value = "";
@@ -2804,13 +2909,13 @@
 
       pushMessage(
         "assistant",
-        lang === "ar" ? "تم تسجيل التعديل على نفس المشروع" : "Change Captured For Current Project",
+        lang === "ar" ? "Øªم ØªØ³Ø¬يل Ø§Ù„ØªØ¹Ø¯يل Ø¹لى Ù†ÙØ³ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹" : "Change Captured For Current Project",
         `<div class="file-preview">${formatMessageText(
           lang === "ar"
             ? [
-                "تم تسجيل التعديل المطلوب داخل مسار التسليم الحالي، وليس كطلب جديد.",
-                `نوع التعديل: ${revision.mode || "REQUEST_DELIVERY_CHANGES"}`,
-                "لن يتم تعديل الملفات مباشرة خارج مسار Forge governance."
+                "Øªم ØªØ³Ø¬يل Ø§Ù„ØªØ¹Ø¯يل Ø§Ù„Ù…Ø·Ù„ÙˆØ¨ Ø¯Ø§Ø®ل Ù…Ø³Ø§Ø± Ø§Ù„ØªØ³ليم Ø§Ù„Ø­Ø§لي، ÙˆÙ„ÙŠØ³ ÙƒØ·Ù„Ø¨ Ø¬Ø¯ÙŠØ¯.",
+                `Ù†ÙˆØ¹ Ø§Ù„ØªØ¹Ø¯يل: ${revision.mode || "REQUEST_DELIVERY_CHANGES"}`,
+                "لن ÙŠØªم ØªØ¹Ø¯يل Ø§Ù„Ù…Ù„ÙØ§Øª Ù…Ø¨Ø§Ø´Ø±Ø© Ø®Ø§Ø±Ø¬ Ù…Ø³Ø§Ø± Forge governance."
               ].join("\n")
             : [
                 "The requested change was captured in the current delivery flow, not as a new request.",
@@ -2820,7 +2925,7 @@
         )}</div>${buildPostActionChoicesHtml(summary, lang, "DELIVERY_SUMMARY")}`
       );
       updateCurrentDeliveryFlowState(summary, "DELIVERY_SUMMARY");
-      setStatus(lang === "ar" ? "تم تسجيل تعديل التسليم الحالي." : "Current delivery change captured.");
+      setStatus(lang === "ar" ? "Øªم ØªØ³Ø¬يل ØªØ¹Ø¯يل Ø§Ù„ØªØ³ليم Ø§Ù„Ø­Ø§لي." : "Current delivery change captured.");
       return true;
     }
 
@@ -2885,7 +2990,7 @@
         }
 
         const prototypeNote = useLocalFallback
-          ? (lang === "ar" ? "\n\nهذا Prototype ثابت مبني من المتطلبات، وليس نظام Production كامل." : "\n\nThis is a static prototype built from the requirements, not a full production system.")
+          ? (lang === "ar" ? "\n\nÙ‡Ø°Ø§ Prototype Ø«Ø§Ø¨Øª Ù…Ø¨ني من Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª، ÙˆÙ„ÙŠØ³ Ù†Ø¸Ø§م Production ÙƒØ§مل." : "\n\nThis is a static prototype built from the requirements, not a full production system.")
           : "";
         const followupHtml = buildPostActionChoicesHtml(deliverySummary, lang, "DELIVERY_SUMMARY");
 
@@ -2978,12 +3083,12 @@
         const lines = lang === "ar"
           ? [
               alreadyCreated
-                ? "حزمة تسليم التنفيذ موجودة بالفعل وجاهزة لـ Forge."
-                : "تم اعتماد الوثيقة وإنشاء حزمة تسليم التنفيذ لـ Forge.",
-              handoff.execution_package_path ? `حزمة التنفيذ: ${handoff.execution_package_path}` : "",
-              handoff.handoff_report_path ? `تقرير التسليم: ${handoff.handoff_report_path}` : "",
+                ? "Ø­Ø²Ù…Ø© ØªØ³ليم Ø§Ù„ØªÙ†ÙÙŠØ° Ù…ÙˆØ¬ÙˆØ¯Ø© Ø¨Ø§Ù„ÙØ¹ل ÙˆØ¬Ø§Ù‡Ø²Ø© لـ Forge."
+                : "Øªم Ø§Ø¹ØªÙ…Ø§Ø¯ Ø§Ù„ÙˆØ«ÙŠÙ‚Ø© ÙˆØ¥Ù†Ø´Ø§Ø¡ Ø­Ø²Ù…Ø© ØªØ³ليم Ø§Ù„ØªÙ†ÙÙŠØ° لـ Forge.",
+              handoff.execution_package_path ? `Ø­Ø²Ù…Ø© Ø§Ù„ØªÙ†ÙÙŠØ°: ${handoff.execution_package_path}` : "",
+              handoff.handoff_report_path ? `ØªÙ‚Ø±ÙŠØ± Ø§Ù„ØªØ³ليم: ${handoff.handoff_report_path}` : "",
               "",
-              "الخطوة التالية بدأت تلقائيًا: تشغيل Forge Runtime."
+              "Ø§Ù„Ø®Ø·ÙˆØ© Ø§Ù„ØªØ§Ù„ÙŠØ© Ø¨Ø¯Ø£Øª ØªÙ„Ù‚Ø§Ø¦ÙŠÙ‹Ø§: ØªØ´Øºيل Forge Runtime."
             ]
           : [
               alreadyCreated
@@ -3019,7 +3124,7 @@
         : projectId;
       const lang = detectUserLanguage(request);
 
-      pushMessage("user", lang === "ar" ? "طلب عرض الوثائق" : "Show Documentation", `<div class="file-preview">${formatMessageText(request)}</div>`);
+      pushMessage("user", lang === "ar" ? "Ø·Ù„Ø¨ Ø¹Ø±Ø¶ Ø§Ù„ÙˆØ«Ø§Ø¦ق" : "Show Documentation", `<div class="file-preview">${formatMessageText(request)}</div>`);
       requestInput.value = "";
       chatSendBtn.disabled = true;
       setStatus("Loading current AI OS documentation...");
@@ -3038,7 +3143,7 @@
           renderResponse(docsResult);
           pushMessage(
             "assistant",
-            lang === "ar" ? "الوثائق غير جاهزة" : "Documentation Not Ready",
+            lang === "ar" ? "Ø§Ù„ÙˆØ«Ø§Ø¦ق ØºÙŠØ± Ø¬Ø§Ù‡Ø²Ø©" : "Documentation Not Ready",
             `<div class="file-preview">${formatMessageText(docsResult.blocking_question || docsResult.reason || "Documentation is not ready.")}</div>`
           );
           setStatus(docsResult.reason || "AI OS documentation is not ready.");
@@ -3049,15 +3154,15 @@
 
         pushMessage(
           "assistant",
-          lang === "ar" ? "الوثائق الحالية" : "Current Documentation",
+          lang === "ar" ? "Ø§Ù„ÙˆØ«Ø§Ø¦ق Ø§Ù„Ø­Ø§Ù„ÙŠØ©" : "Current Documentation",
           `
             <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
               [
-                docsResult.documentation_path ? `${lang === "ar" ? "المسار" : "Path"}: ${docsResult.documentation_path}` : "",
+                docsResult.documentation_path ? `${lang === "ar" ? "Ø§Ù„Ù…Ø³Ø§Ø±" : "Path"}: ${docsResult.documentation_path}` : "",
                 "",
                 docsResult.documentation_content || "",
                 "",
-                lang === "ar" ? "اختار الخطوة المناسبة من الأزرار التالية:" : "Choose the appropriate next step from the buttons below:"
+                lang === "ar" ? "Ø§Ø®ØªØ§Ø± Ø§Ù„Ø®Ø·ÙˆØ© Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø© من Ø§Ù„Ø£Ø²Ø±Ø§Ø± Ø§Ù„ØªØ§Ù„ÙŠØ©:" : "Choose the appropriate next step from the buttons below:"
               ].filter(Boolean).join("\n")
             )}</div>
             ${buildCurrentProjectActionChoiceHtml(choices)}
@@ -3246,6 +3351,11 @@
         return;
       }
 
+      if (action === "OPEN_OUTPUT_FOLDER") {
+        await openOutputFolderForCurrentProject(value || "Open output folder");
+        return;
+      }
+
       if (action === "REVISE_REQUIREMENTS" || action === "REQUEST_DELIVERY_CHANGES" || action === "REVISE_DOCUMENT") {
         askForDeliveryChangeRequest(value || "Request changes");
         return;
@@ -3263,7 +3373,7 @@
         pendingOutputFileSelection = null;
         pushMessage(
           "assistant",
-          lang === "ar" ? "اختيارات المتابعة" : "Follow-up Choices",
+          lang === "ar" ? "Ø§Ø®ØªÙŠØ§Ø±Ø§Øª Ø§Ù„Ù…ØªØ§Ø¨Ø¹Ø©" : "Follow-up Choices",
           `${buildPostActionChoicesHtml(summary, lang, "DELIVERY_SUMMARY")}`
         );
         updateCurrentDeliveryFlowState(summary, "DELIVERY_SUMMARY");
@@ -3300,14 +3410,14 @@
 
     function getCheckpointUserMessageTitle(userText, sourceRequestText) {
       if (isPositiveConfirmation(userText)) {
-        return detectUserLanguage(sourceRequestText) === "ar" ? "تأكيد المتابعة" : "Continue Confirmation";
+        return detectUserLanguage(sourceRequestText) === "ar" ? "ØªØ£ÙƒÙŠØ¯ Ø§Ù„Ù…ØªØ§Ø¨Ø¹Ø©" : "Continue Confirmation";
       }
 
       if (isNegativeConfirmation(userText)) {
-        return detectUserLanguage(sourceRequestText) === "ar" ? "إيقاف الطلب الحالي" : "Stop Current Request";
+        return detectUserLanguage(sourceRequestText) === "ar" ? "Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ø­Ø§لي" : "Stop Current Request";
       }
 
-      return detectUserLanguage(userText) === "ar" ? "رسالة جديدة" : "New Message";
+      return detectUserLanguage(userText) === "ar" ? "Ø±Ø³Ø§Ù„Ø© Ø¬Ø¯ÙŠØ¯Ø©" : "New Message";
     }
 
     function buildFriendlyOptionsMessage(items, requestText) {
@@ -3315,14 +3425,14 @@
       const list = Array.isArray(items) ? items : [];
 
       if (lang === "ar") {
-        const lines = ["وجدت أكثر من مسار ممكن لتنفيذ طلبك."];
+        const lines = ["ÙˆØ¬Ø¯Øª Ø£ÙƒØ«Ø± من Ù…Ø³Ø§Ø± ممكن Ù„ØªÙ†ÙÙŠØ° Ø·Ù„Ø¨ك."];
         list.forEach((item, index) => {
           lines.push("");
-          lines.push(`الخيار ${index + 1}: ${item.title || "مسار مقترح"}`);
-          lines.push(`${item.rationale || "هذا مسار مناسب لطلبك."}`);
+          lines.push(`Ø§Ù„Ø®ÙŠØ§Ø± ${index + 1}: ${item.title || "Ù…Ø³Ø§Ø± Ù…Ù‚ØªØ±Ø­"}`);
+          lines.push(`${item.rationale || "Ù‡Ø°Ø§ Ù…Ø³Ø§Ø± Ù…Ù†Ø§Ø³Ø¨ Ù„Ø·Ù„Ø¨ك."}`);
         });
         lines.push("");
-        lines.push("اختر المسار الأنسب لك.");
+        lines.push("Ø§Ø®ØªØ± Ø§Ù„Ù…Ø³Ø§Ø± Ø§Ù„Ø£Ù†Ø³Ø¨ لك.");
         return lines.join("\n");
       }
 
@@ -3342,8 +3452,8 @@
 
       if (lang === "ar") {
         return [
-          `أقرب مسار مناسب لطلبك هو: ${selected.title || "مسار مقترح"}`,
-          `${selected.rationale || "هذا هو المسار الأنسب بناءً على طلبك الحالي."}`
+          `Ø£Ù‚Ø±Ø¨ Ù…Ø³Ø§Ø± Ù…Ù†Ø§Ø³Ø¨ Ù„Ø·Ù„Ø¨ك هو: ${selected.title || "Ù…Ø³Ø§Ø± Ù…Ù‚ØªØ±Ø­"}`,
+          `${selected.rationale || "Ù‡Ø°Ø§ هو Ø§Ù„Ù…Ø³Ø§Ø± Ø§Ù„Ø£Ù†Ø³Ø¨ Ø¨Ù†Ø§Ø¡ً Ø¹لى Ø·Ù„Ø¨ك Ø§Ù„Ø­Ø§لي."}`
         ].join("\n");
       }
 
@@ -3649,19 +3759,46 @@
     }
 
     function deriveProjectNameFromRequest(request) {
-      const raw = String(request || "").trim().replace(/\s+/g, " ");
+      return deriveCleanEnglishProjectName(request);
+    }
+
+    function deriveCleanEnglishProjectName(value) {
+      const raw = String(value || "").trim().replace(/\s+/g, " ");
 
       if (!raw) {
         return "New Project";
       }
 
+      const normalized = raw
+        .toLowerCase()
+        .replace(/[\u064b-\u065f]/g, "")
+        .replace(/\u0623|\u0625|\u0622/g, "\u0627")
+        .replace(/\u0649/g, "\u064a")
+        .replace(/\u0629/g, "\u0647");
+
+      if (/\bcrm\b/i.test(raw)) return "CRM System";
+      if (/\bhr\b/i.test(raw)) return "HR System";
+      if (normalized.includes("\u062e\u062f\u0645\u0647 \u0639\u0645\u0644\u0627\u0621") || normalized.includes("customer service")) return "Customer Service System";
+      if (normalized.includes("\u0627\u062f\u0627\u0631\u0647 \u0645\u0627\u0644\u064a\u0647") || normalized.includes("\u0645\u0627\u0644\u064a") || normalized.includes("financial")) return "Financial Management System";
+      if (normalized.includes("\u062d\u0633\u0627\u0628\u0627\u062a") || normalized.includes("accounting")) return "Accounting System";
+
       const cleaned = raw
-        .replace(/^(عايز|أريد|اريد|اعمل|ابني|صمم|create|build|make)\s+/i, "")
+        .replace(/اعمل|عايز|اريد|أريد|إعمل|ابني|صمم|مقترح|كامل|اعرضه عليا|اعرضه|اشرح|نفذ|حوّل|حول|من فضلك/gi, " ")
+        .replace(/\b(create|build|make|proposal|complete|full|show|explain|execute|run|please)\b/gi, " ")
+        .replace(/\b(system|سيستم|نظام)\b/gi, " ")
+        .replace(/[^\p{L}\p{N}\s]/gu, " ")
         .replace(/\s+/g, " ")
         .trim();
 
-      const candidate = cleaned || raw;
-      return candidate.length > 60 ? candidate.slice(0, 60).trim() : candidate;
+      if (!cleaned) return "New Project";
+
+      const words = cleaned.split(/\s+/).filter(Boolean).slice(0, 5);
+      const title = words.map((word) => {
+        if (/^[A-Z0-9]{2,}$/i.test(word) && word.length <= 5) return word.toUpperCase();
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+      }).join(" ");
+
+      return /\bSystem$/i.test(title) ? title : `${title} System`;
     }
 
     function getProjectNameForNewRequest(request) {
@@ -3953,16 +4090,16 @@
         normalized === "okay" ||
         normalized === "approve" ||
         normalized === "\u0643\u0645\u0644" ||
-        normalized === "اكمل" ||
-        normalized === "تابع" ||
-        normalized === "موافق" ||
-        normalized === "تمام" ||
+        normalized === "Ø§كمل" ||
+        normalized === "ØªØ§Ø¨Ø¹" ||
+        normalized === "Ù…ÙˆØ§Ùق" ||
+        normalized === "ØªÙ…Ø§م" ||
         normalized === "\u0627\u0639\u062a\u0645\u062f";
     }
 
     function isNegativeConfirmation(value) {
       const normalized = String(value || "").trim().toLowerCase();
-      return normalized === "no" || normalized === "stop" || normalized === "وقف";
+      return normalized === "no" || normalized === "stop" || normalized === "ÙˆÙ‚Ù";
     }
 
     function askConversationCheckpoint(stageLabel, requestText, summaryLines = []) {
@@ -3977,7 +4114,7 @@
 
       pushMessage(
         "assistant",
-        lang === "ar" ? "اختيارات المتابعة" : "Follow-up Choices",
+        lang === "ar" ? "Ø§Ø®ØªÙŠØ§Ø±Ø§Øª Ø§Ù„Ù…ØªØ§Ø¨Ø¹Ø©" : "Follow-up Choices",
         `
           <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
             buildCompanionCheckpointMessage(stageLabel, requestText, summaryLines)
@@ -3988,7 +4125,7 @@
 
       setStatus(
         lang === "ar"
-          ? "بانتظار اختيارك للخطوة التالية."
+          ? "Ø¨Ø§Ù†ØªØ¸Ø§Ø± Ø§Ø®ØªÙŠØ§Ø±ك Ù„Ù„Ø®Ø·ÙˆØ© Ø§Ù„ØªØ§Ù„ÙŠØ©."
           : "Waiting for your next-step choice."
       );
     }
@@ -4003,7 +4140,7 @@
 
       setStatus(
         detectUserLanguage(request) === "ar"
-          ? "أجهز الآن مسودة منظمة ومراجعة للتغييرات."
+          ? "Ø£Ø¬Ù‡Ø² Ø§Ù„Ø¢ن Ù…Ø³ÙˆØ¯Ø© Ù…Ù†Ø¸Ù…Ø© ÙˆÙ…Ø±Ø§Ø¬Ø¹Ø© Ù„Ù„ØªØºÙŠÙŠØ±Ø§Øª."
           : "Preparing a governed draft and change review."
       );
 
@@ -4093,7 +4230,7 @@
         approveBtn.disabled = false;
         setStatus(
           detectUserLanguage(request) === "ar"
-            ? "المسودة أصبحت جاهزة للمراجعة واتخاذ القرار."
+            ? "Ø§Ù„Ù…Ø³ÙˆØ¯Ø© Ø£ØµØ¨Ø­Øª Ø¬Ø§Ù‡Ø²Ø© Ù„Ù„Ù…Ø±Ø§Ø¬Ø¹Ø© ÙˆØ§ØªØ®Ø§Ø° Ø§Ù„Ù‚Ø±Ø§Ø±."
             : "The draft is ready for review and decision."
         );
       }
@@ -4349,7 +4486,7 @@
 
             pushMessage(
               "assistant",
-              detectUserLanguage(request) === "ar" ? "استكمال التحليل" : "Discovery Follow-up",
+              detectUserLanguage(request) === "ar" ? "Ø§Ø³ØªÙƒÙ…Ø§ل Ø§Ù„ØªØ­ليل" : "Discovery Follow-up",
               `<div class="file-preview">${formatMessageText(questions.join("\n"))}</div>`
             );
 
@@ -4362,7 +4499,7 @@
 
             pushMessage(
               "assistant",
-              detectUserLanguage(request) === "ar" ? "اكتمل التحليل" : "Discovery Complete",
+              detectUserLanguage(request) === "ar" ? "Ø§ÙƒØªمل Ø§Ù„ØªØ­ليل" : "Discovery Complete",
               `<div class="file-preview">${formatMessageText("Discovery is complete. The project is ready for the next governed step.")}</div>`
             );
 
@@ -4395,20 +4532,20 @@
 
           pushMessage(
             "user",
-            lang === "ar" ? "رسالة جديدة أثناء اختيار مفتوح" : "New Message During Open Choice",
+            lang === "ar" ? "Ø±Ø³Ø§Ù„Ø© Ø¬Ø¯ÙŠØ¯Ø© Ø£Ø«Ù†Ø§Ø¡ Ø§Ø®ØªÙŠØ§Ø± Ù…ÙØªÙˆØ­" : "New Message During Open Choice",
             `<div class="file-preview">${formatMessageText(request)}</div>`
           );
           requestInput.value = "";
 
           pushMessage(
             "assistant",
-            lang === "ar" ? "اختار المقصود" : "Choose What You Mean",
+            lang === "ar" ? "Ø§Ø®ØªØ§Ø± Ø§Ù„Ù…Ù‚ØµÙˆØ¯" : "Choose What You Mean",
             `
               <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
                 lang === "ar"
                   ? [
-                      "عندنا طلب مفتوح لم يتم حسمه بعد.",
-                      "هل تريد عرض مقترحات الطلب الحالي، أم تعديل الطلب إلى رسالتك الجديدة؟"
+                      "Ø¹Ù†Ø¯Ù†Ø§ Ø·Ù„Ø¨ Ù…ÙØªÙˆØ­ لم ÙŠØªم Ø­Ø³مه Ø¨Ø¹Ø¯.",
+                      "هل ØªØ±ÙŠØ¯ Ø¹Ø±Ø¶ Ù…Ù‚ØªØ±Ø­Ø§Øª Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ø­Ø§لي، Ø£م ØªØ¹Ø¯يل Ø§Ù„Ø·Ù„Ø¨ Ø¥لى Ø±Ø³Ø§Ù„Øªك Ø§Ù„Ø¬Ø¯ÙŠØ¯Ø©؟"
                     ].join("\n")
                   : [
                       "There is an open request that has not been resolved yet.",
@@ -4419,7 +4556,7 @@
             `
           );
 
-          setStatus(lang === "ar" ? "بانتظار تحديد المقصود." : "Waiting for intent choice.");
+          setStatus(lang === "ar" ? "Ø¨Ø§Ù†ØªØ¸Ø§Ø± ØªØ­Ø¯ÙŠØ¯ Ø§Ù„Ù…Ù‚ØµÙˆØ¯." : "Waiting for intent choice.");
           return;
         }
 
@@ -4437,7 +4574,7 @@
           chatSendBtn.disabled = true;
           setStatus(
             detectUserLanguage(checkpoint.request) === "ar"
-              ? "تم تأكيد المتابعة. أجهز الآن المسودة المنظمة."
+              ? "Øªم ØªØ£ÙƒÙŠØ¯ Ø§Ù„Ù…ØªØ§Ø¨Ø¹Ø©. Ø£Ø¬Ù‡Ø² Ø§Ù„Ø¢ن Ø§Ù„Ù…Ø³ÙˆØ¯Ø© Ø§Ù„Ù…Ù†Ø¸Ù…Ø©."
               : "Continuation confirmed. Preparing the governed draft."
           );
 
@@ -4474,17 +4611,17 @@
 
           pushMessage(
             "assistant",
-            detectUserLanguage(checkpointRequest) === "ar" ? "تم إيقاف الطلب الحالي" : "Current Request Stopped",
+            detectUserLanguage(checkpointRequest) === "ar" ? "Øªم Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ø­Ø§لي" : "Current Request Stopped",
             `<div class="file-preview">${formatMessageText(
               detectUserLanguage(checkpointRequest) === "ar"
-                ? "تم إيقاف الطلب الحالي. لن أجهز مسودة لهذا الطلب."
+                ? "Øªم Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ø­Ø§لي. لن Ø£Ø¬Ù‡Ø² Ù…Ø³ÙˆØ¯Ø© Ù„Ù‡Ø°Ø§ Ø§Ù„Ø·Ù„Ø¨."
                 : "The current request was stopped. No draft will be prepared for it."
             )}</div>`
           );
 
           setStatus(
             detectUserLanguage(checkpointRequest) === "ar"
-              ? "تم إيقاف الطلب الحالي."
+              ? "Øªم Ø¥ÙŠÙ‚Ø§Ù Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ø­Ø§لي."
               : "The current request was stopped."
           );
           return;
@@ -4502,7 +4639,7 @@
         pushMessage(
           "assistant",
           detectUserLanguage(checkpointRequest) === "ar"
-            ? "اختيارات المتابعة"
+            ? "Ø§Ø®ØªÙŠØ§Ø±Ø§Øª Ø§Ù„Ù…ØªØ§Ø¨Ø¹Ø©"
             : "Follow-up Choices",
           `
             <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
@@ -4514,7 +4651,7 @@
 
         setStatus(
           detectUserLanguage(checkpointRequest) === "ar"
-            ? "يجب حسم الطلب الحالي أولاً."
+            ? "ÙŠØ¬Ø¨ Ø­Ø³م Ø§Ù„Ø·Ù„Ø¨ Ø§Ù„Ø­Ø§لي Ø£ÙˆÙ„Ø§ً."
             : "You must resolve the current request first."
         );
         return;
@@ -4564,10 +4701,10 @@
 
           pushMessage(
             "assistant",
-            detectUserLanguage(optionsState.request) === "ar" ? "تم تثبيت المقترح" : "Proposal Accepted",
+            detectUserLanguage(optionsState.request) === "ar" ? "Øªم ØªØ«Ø¨ÙŠØª Ø§Ù„Ù…Ù‚ØªØ±Ø­" : "Proposal Accepted",
             `<div class="file-preview">${formatMessageText(
               detectUserLanguage(optionsState.request) === "ar"
-                ? `تم اختيار: ${selected.title || selected.option_id}\nهجهز دلوقتي وثيقة منظمة للمراجعة.`
+                ? `Øªم Ø§Ø®ØªÙŠØ§Ø±: ${selected.title || selected.option_id}\nÙ‡Ø¬Ù‡Ø² Ø¯Ù„ÙˆÙ‚Øªي ÙˆØ«ÙŠÙ‚Ø© Ù…Ù†Ø¸Ù…Ø© Ù„Ù„Ù…Ø±Ø§Ø¬Ø¹Ø©.`
                 : `Selected: ${selected.title || selected.option_id}\nI will now prepare a structured documentation draft for review.`
             )}</div>`
           );
@@ -4691,7 +4828,7 @@
 
           pushMessage(
             "assistant",
-            detectUserLanguage(request) === "ar" ? "أسئلة التحليل" : "Discovery Questions",
+            detectUserLanguage(request) === "ar" ? "Ø£Ø³Ø¦Ù„Ø© Ø§Ù„ØªØ­ليل" : "Discovery Questions",
             `<div class="file-preview">${formatMessageText(questions.join("\n"))}</div>`
           );
 
@@ -4714,7 +4851,7 @@
         if (intake.mode === "IDEATION_READY") {
           pushMessage(
             "assistant",
-            detectUserLanguage(request) === "ar" ? "اكتمل التحليل" : "Discovery Complete",
+            detectUserLanguage(request) === "ar" ? "Ø§ÙƒØªمل Ø§Ù„ØªØ­ليل" : "Discovery Complete",
             `<div class="file-preview">${formatMessageText("Discovery is complete. The project is ready for the next governed step.")}</div>`
           );
 
@@ -4785,7 +4922,7 @@
 
           pushMessage(
             "assistant",
-            detectUserLanguage(request) === "ar" ? "اختيار المسار" : "Choose a Path",
+            detectUserLanguage(request) === "ar" ? "Ø§Ø®ØªÙŠØ§Ø± Ø§Ù„Ù…Ø³Ø§Ø±" : "Choose a Path",
             `
               <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(selectionTitle)}</div>
               ${buildStrategyChoiceHtml(currentStrategyCandidates)}
@@ -4865,7 +5002,7 @@
         }
 
         if (action === "continue-current") {
-          requestInput.value = "اعرض المقترح";
+          requestInput.value = "Ø§Ø¹Ø±Ø¶ Ø§Ù„Ù…Ù‚ØªØ±Ø­";
           chatSendBtn.click();
           return;
         }

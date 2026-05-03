@@ -1,6 +1,6 @@
 # MODULE FLOW — Decision Gate
 
-- timestamp: 2026-05-03T14:07:56.189Z
+- timestamp: 2026-05-03T14:39:10.253Z
 - policy: AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK
 - operating_mode: IMPROVE
 - repository_state: FULL_PIPELINE_STATE
@@ -8,28 +8,26 @@
 
 ## Source
 - source_type: EXECUTION_PACKAGE
-- execution_package_path: artifacts/projects/default_project/execute/execution_package.json
-- execution_package_id: ai_os_runnable_package_1777817276080
-- execution_package_execution_id: ai_os_runnable_execution_1777817276080
-- execution_package_sha256: 3bff16178487804cc05788fdee761603a4e3e2c607d16faa2ebd52c740ed10ad
-- workspace_response_path: artifacts/llm/responses/ai_os_runnable_execution_1777817276080.response.json
+- execution_package_path: artifacts/projects/codex_test_crm_1777819149689/execute/execution_package.json
+- execution_package_id: ai_os_runnable_package_1777819150058
+- execution_package_execution_id: ai_os_runnable_execution_1777819150058
+- execution_package_sha256: 965188aa974dd403aed845c9fce0cc2b04109a1d4e3ec42863b7449f51230f88
+- workspace_response_path: artifacts/llm/responses/ai_os_runnable_execution_1777819150058.response.json
 - intake_context_path: artifacts/intake/intake_context.json
 - intake_context_sha256: dc92e1525e817fd677f11c8ef0a568afe24863ccd794a3e796efba547b51b053
 
 ## Summary
-- total_actions: 4
-- approved_count: 4
+- total_actions: 3
+- approved_count: 3
 - review_required_count: 0
 - rejected_count: 0
 
 ## Approved Actions
-- WORKSPACE_ACTION_1 [WORKSPACE_CHANGE_REQUEST/MEDIUM] Apply governed workspace execution package to artifacts/projects/default_project/output/app/package.json
+- WORKSPACE_ACTION_1 [WORKSPACE_CHANGE_REQUEST/MEDIUM] Apply governed workspace execution package to artifacts/projects/codex_test_crm_1777819149689/output/app/index.html
   - reason: governed workspace decision packet approved
-- WORKSPACE_ACTION_2 [WORKSPACE_CHANGE_REQUEST/MEDIUM] Apply governed workspace execution package to artifacts/projects/default_project/output/app/server.js
+- WORKSPACE_ACTION_2 [WORKSPACE_CHANGE_REQUEST/MEDIUM] Apply governed workspace execution package to artifacts/projects/codex_test_crm_1777819149689/output/app/README.md
   - reason: governed workspace decision packet approved
-- WORKSPACE_ACTION_3 [WORKSPACE_CHANGE_REQUEST/MEDIUM] Apply governed workspace execution package to artifacts/projects/default_project/output/app/index.html
-  - reason: governed workspace decision packet approved
-- WORKSPACE_ACTION_4 [WORKSPACE_CHANGE_REQUEST/MEDIUM] Apply governed workspace execution package to artifacts/projects/default_project/output/app/README.md
+- WORKSPACE_ACTION_3 [WORKSPACE_CHANGE_REQUEST/MEDIUM] Apply governed workspace execution package to artifacts/projects/codex_test_crm_1777819149689/output/app/open_app.bat
   - reason: governed workspace decision packet approved
 
 ## Review Required

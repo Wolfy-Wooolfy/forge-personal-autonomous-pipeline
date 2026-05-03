@@ -1,0 +1,28 @@
+{
+  "execution_id": "ai_os_runnable_execution_1777818939547",
+  "source": "AI_OPERATING_SYSTEM",
+  "project_id": "codex_test_crm_1777818939180",
+  "package_id": "ai_os_runnable_package_1777818939547",
+  "created_at": "2026-05-03T14:35:39.547Z",
+  "summary": "Build runnable application from requirements package.",
+  "files": [
+    {
+      "path": "artifacts/projects/codex_test_crm_1777818939180/output/app/index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>CRM System - Prototype</title>\n  <style>\n    body { margin: 0; font-family: Arial, sans-serif; background: #f8fafc; color: #111827; }\n    header { background: #0f172a; color: #f8fafc; padding: 28px; }\n    main { max-width: 1100px; margin: 0 auto; padding: 24px; }\n    section { background: #ffffff; border: 1px solid #d1d5db; border-radius: 8px; padding: 18px; margin-bottom: 16px; }\n    h1, h2 { margin-top: 0; }\n    .notice { border-color: #f59e0b; background: #fffbeb; }\n    pre { white-space: pre-wrap; direction: ltr; text-align: left; background: #f1f5f9; padding: 14px; border-radius: 8px; overflow: auto; }\n    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }\n    .card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px; background: #f9fafb; }\n  </style>\n</head>\n<body>\n  <header>\n    <h1>CRM System</h1>\n    <p>Static runnable prototype generated from the approved requirements package.</p>\n  </header>\n  <main>\n    <section class=\"notice\">\n      <h2>تنبيه</h2>\n      <p>هذا Prototype ثابت مبني من المتطلبات، وليس نظام production كامل.</p>\n    </section>\n    <section>\n      <h2>لوحة تشغيل أولية</h2>\n      <div class=\"grid\">\n        <div class=\"card\"><strong>Tickets</strong><br />عرض وتتبع طلبات العملاء.</div>\n        <div class=\"card\"><strong>Knowledge Base</strong><br />مساحة محتوى مساعدة أولية.</div>\n        <div class=\"card\"><strong>Reports</strong><br />مؤشرات أداء تجريبية.</div>\n      </div>\n    </section>\n    <section>\n      <h2>Requirements Source</h2>\n      <pre>Source: artifacts/projects/codex_test_crm_1777818939180/output/requirements.json\n{\n  &quot;project_name&quot;: &quot;CRM System&quot;,\n  &quot;features&quot;: [\n    &quot;customers&quot;,\n    &quot;tickets&quot;\n  ]\n}</pre>\n    </section>\n  </main>\n</body>\n</html>\n",
+      "execution_id": "ai_os_runnable_execution_1777818939547",
+      "package_id": "ai_os_runnable_package_1777818939547"
+    },
+    {
+      "path": "artifacts/projects/codex_test_crm_1777818939180/output/app/README.md",
+      "content": "# Static Runnable Prototype\n\nThis is a static prototype generated from the approved requirements package.\nIt is not a production-ready system.\n\n## Run\n\nDouble click `open_app.bat`, or open `index.html` in a browser.\n## تشغيل سريع على Windows\n- Double click `open_app.bat` لو التطبيق static HTML فقط.\nهذا Prototype أولي مبني من المتطلبات، وليس نظام Production كامل.",
+      "execution_id": "ai_os_runnable_execution_1777818939547",
+      "package_id": "ai_os_runnable_package_1777818939547"
+    },
+    {
+      "path": "artifacts/projects/codex_test_crm_1777818939180/output/app/open_app.bat",
+      "content": "@echo off\r\ncd /d \"%~dp0\"\r\nstart \"\" \"index.html\"\r\n",
+      "execution_id": "ai_os_runnable_execution_1777818939547",
+      "package_id": "ai_os_runnable_package_1777818939547"
+    }
+  ]
+}

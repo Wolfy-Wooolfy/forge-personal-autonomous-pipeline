@@ -1,6 +1,6 @@
 {
   "decision_id": "MODULE_FLOW_DECISION_GATE",
-  "timestamp": "2026-05-03T14:07:56.189Z",
+  "timestamp": "2026-05-03T14:39:10.253Z",
   "task": "TASK-052",
   "policy": "AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK",
   "operating_mode": "IMPROVE",
@@ -10,17 +10,17 @@
   "override_raw": "",
   "source": {
     "source_type": "EXECUTION_PACKAGE",
-    "execution_package_path": "artifacts/projects/default_project/execute/execution_package.json",
-    "execution_package_id": "ai_os_runnable_package_1777817276080",
-    "execution_package_execution_id": "ai_os_runnable_execution_1777817276080",
-    "execution_package_sha256": "3bff16178487804cc05788fdee761603a4e3e2c607d16faa2ebd52c740ed10ad",
-    "workspace_response_path": "artifacts/llm/responses/ai_os_runnable_execution_1777817276080.response.json",
+    "execution_package_path": "artifacts/projects/codex_test_crm_1777819149689/execute/execution_package.json",
+    "execution_package_id": "ai_os_runnable_package_1777819150058",
+    "execution_package_execution_id": "ai_os_runnable_execution_1777819150058",
+    "execution_package_sha256": "965188aa974dd403aed845c9fce0cc2b04109a1d4e3ec42863b7449f51230f88",
+    "workspace_response_path": "artifacts/llm/responses/ai_os_runnable_execution_1777819150058.response.json",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "dc92e1525e817fd677f11c8ef0a568afe24863ccd794a3e796efba547b51b053"
   },
   "summary": {
-    "total_actions": 4,
-    "approved_count": 4,
+    "total_actions": 3,
+    "approved_count": 3,
     "review_required_count": 0,
     "rejected_count": 0
   },
@@ -30,88 +30,66 @@
       "category": "WORKSPACE_CHANGE_REQUEST",
       "severity": "MEDIUM",
       "affected_entities": [
-        "artifacts/projects/default_project/output/app/package.json"
+        "artifacts/projects/codex_test_crm_1777819149689/output/app/index.html"
       ],
       "action_id": "WORKSPACE_ACTION_1",
-      "description": "Apply governed workspace execution package to artifacts/projects/default_project/output/app/package.json",
+      "description": "Apply governed workspace execution package to artifacts/projects/codex_test_crm_1777819149689/output/app/index.html",
       "impact_scope": "CODE_WRITE",
       "requires_decision": false,
       "cognitive_priority_hint": null,
       "reason": "governed workspace decision packet approved",
       "workspace_source": "EXTERNAL_AI_WORKSPACE",
-      "workspace_execution_id": "ai_os_runnable_execution_1777817276080",
-      "workspace_execution_package_id": "ai_os_runnable_package_1777817276080",
-      "workspace_execution_package_path": "artifacts/projects/default_project/execute/execution_package.json",
-      "workspace_response_path": "artifacts/llm/responses/ai_os_runnable_execution_1777817276080.response.json",
+      "workspace_execution_id": "ai_os_runnable_execution_1777819150058",
+      "workspace_execution_package_id": "ai_os_runnable_package_1777819150058",
+      "workspace_execution_package_path": "artifacts/projects/codex_test_crm_1777819149689/execute/execution_package.json",
+      "workspace_response_path": "artifacts/llm/responses/ai_os_runnable_execution_1777819150058.response.json",
       "workspace_allow_overwrite": true,
-      "workspace_expected_sha256": "0fa4eeaf9444b0b949bbbd54b1d5f4db51bc81e1df7002084236aa5b24e2b6c3",
-      "workspace_target_path": "artifacts/projects/default_project/output/app/package.json"
+      "workspace_expected_sha256": "2dba9237c912c777ffef75d52cc358ac40e8def4a2074d80153da64062a8a2c7",
+      "workspace_target_path": "artifacts/projects/codex_test_crm_1777819149689/output/app/index.html"
     },
     {
       "gap_id": "WORKSPACE_CHANGE_REQUEST",
       "category": "WORKSPACE_CHANGE_REQUEST",
       "severity": "MEDIUM",
       "affected_entities": [
-        "artifacts/projects/default_project/output/app/server.js"
+        "artifacts/projects/codex_test_crm_1777819149689/output/app/README.md"
       ],
       "action_id": "WORKSPACE_ACTION_2",
-      "description": "Apply governed workspace execution package to artifacts/projects/default_project/output/app/server.js",
+      "description": "Apply governed workspace execution package to artifacts/projects/codex_test_crm_1777819149689/output/app/README.md",
       "impact_scope": "CODE_WRITE",
       "requires_decision": false,
       "cognitive_priority_hint": null,
       "reason": "governed workspace decision packet approved",
       "workspace_source": "EXTERNAL_AI_WORKSPACE",
-      "workspace_execution_id": "ai_os_runnable_execution_1777817276080",
-      "workspace_execution_package_id": "ai_os_runnable_package_1777817276080",
-      "workspace_execution_package_path": "artifacts/projects/default_project/execute/execution_package.json",
-      "workspace_response_path": "artifacts/llm/responses/ai_os_runnable_execution_1777817276080.response.json",
+      "workspace_execution_id": "ai_os_runnable_execution_1777819150058",
+      "workspace_execution_package_id": "ai_os_runnable_package_1777819150058",
+      "workspace_execution_package_path": "artifacts/projects/codex_test_crm_1777819149689/execute/execution_package.json",
+      "workspace_response_path": "artifacts/llm/responses/ai_os_runnable_execution_1777819150058.response.json",
       "workspace_allow_overwrite": true,
-      "workspace_expected_sha256": "c775ed1c5b01891f358f8e9e9c740e8926d7e77327e0061f88e107588b3251a8",
-      "workspace_target_path": "artifacts/projects/default_project/output/app/server.js"
+      "workspace_expected_sha256": "c6b9c730212cba67539582f7c0369f03c0b443998cd0d43864a08f47a3ff29eb",
+      "workspace_target_path": "artifacts/projects/codex_test_crm_1777819149689/output/app/README.md"
     },
     {
       "gap_id": "WORKSPACE_CHANGE_REQUEST",
       "category": "WORKSPACE_CHANGE_REQUEST",
       "severity": "MEDIUM",
       "affected_entities": [
-        "artifacts/projects/default_project/output/app/index.html"
+        "artifacts/projects/codex_test_crm_1777819149689/output/app/open_app.bat"
       ],
       "action_id": "WORKSPACE_ACTION_3",
-      "description": "Apply governed workspace execution package to artifacts/projects/default_project/output/app/index.html",
+      "description": "Apply governed workspace execution package to artifacts/projects/codex_test_crm_1777819149689/output/app/open_app.bat",
       "impact_scope": "CODE_WRITE",
       "requires_decision": false,
       "cognitive_priority_hint": null,
       "reason": "governed workspace decision packet approved",
       "workspace_source": "EXTERNAL_AI_WORKSPACE",
-      "workspace_execution_id": "ai_os_runnable_execution_1777817276080",
-      "workspace_execution_package_id": "ai_os_runnable_package_1777817276080",
-      "workspace_execution_package_path": "artifacts/projects/default_project/execute/execution_package.json",
-      "workspace_response_path": "artifacts/llm/responses/ai_os_runnable_execution_1777817276080.response.json",
+      "workspace_execution_id": "ai_os_runnable_execution_1777819150058",
+      "workspace_execution_package_id": "ai_os_runnable_package_1777819150058",
+      "workspace_execution_package_path": "artifacts/projects/codex_test_crm_1777819149689/execute/execution_package.json",
+      "workspace_response_path": "artifacts/llm/responses/ai_os_runnable_execution_1777819150058.response.json",
       "workspace_allow_overwrite": true,
-      "workspace_expected_sha256": "1f1152524f30779f874924a7243cf6ca954f8e0337c17547a134029d9f9819bd",
-      "workspace_target_path": "artifacts/projects/default_project/output/app/index.html"
-    },
-    {
-      "gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "category": "WORKSPACE_CHANGE_REQUEST",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "artifacts/projects/default_project/output/app/README.md"
-      ],
-      "action_id": "WORKSPACE_ACTION_4",
-      "description": "Apply governed workspace execution package to artifacts/projects/default_project/output/app/README.md",
-      "impact_scope": "CODE_WRITE",
-      "requires_decision": false,
-      "cognitive_priority_hint": null,
-      "reason": "governed workspace decision packet approved",
-      "workspace_source": "EXTERNAL_AI_WORKSPACE",
-      "workspace_execution_id": "ai_os_runnable_execution_1777817276080",
-      "workspace_execution_package_id": "ai_os_runnable_package_1777817276080",
-      "workspace_execution_package_path": "artifacts/projects/default_project/execute/execution_package.json",
-      "workspace_response_path": "artifacts/llm/responses/ai_os_runnable_execution_1777817276080.response.json",
-      "workspace_allow_overwrite": true,
-      "workspace_expected_sha256": "d3fd6dcdba8992d73ced2c333db42abda95a6b2ef56cd21fcc0ee9ccbfd52967",
-      "workspace_target_path": "artifacts/projects/default_project/output/app/README.md"
+      "workspace_expected_sha256": "288c31989d5802baff2f5f9b80e32a85f4cfc3be9895c4c9f25c821c9a0d0351",
+      "workspace_target_path": "artifacts/projects/codex_test_crm_1777819149689/output/app/open_app.bat"
     }
   ],
   "review_required_actions": [],

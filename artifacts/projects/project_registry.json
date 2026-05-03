@@ -1,70 +1,80 @@
 {
-  "active_project_id": "default_project",
-  "updated_at": "2026-05-03T14:07:56.905Z",
+  "active_project_id": "codex_test_crm_1777819149689",
+  "updated_at": "2026-05-03T14:39:11.953Z",
   "projects": [
     {
       "project_id": "action_game",
-      "project_name": "Action Game",
+      "project_name": "Action GAME System",
       "project_status": "ACTIVE",
       "current_phase": "EXECUTION_READY",
       "active_runtime_state": "EXECUTION_PREPARATION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-03T14:07:56.910Z"
+      "last_updated_at": "2026-05-03T14:39:11.958Z"
     },
     {
-      "project_id": "codex_test_project",
-      "project_name": "codex_test_project",
-      "project_status": "ACTIVE",
-      "current_phase": "DISCOVERY",
-      "active_runtime_state": "DISCUSSION",
-      "pending_decisions": [],
-      "active_project_flag": false,
-      "last_updated_at": "2026-05-03T14:07:56.912Z"
-    },
-    {
-      "project_id": "default_project",
-      "project_name": "عايز سيستم CRM\nاعمل مقترح كامل واعرضه عليا",
+      "project_id": "codex_test_crm_1777819149689",
+      "project_name": "CRM System",
       "project_status": "ACTIVE",
       "current_phase": "DELIVERY_READY",
       "active_runtime_state": "EXECUTION_COMPLETE",
       "pending_decisions": [],
       "active_project_flag": true,
-      "last_updated_at": "2026-05-03T14:07:56.901Z"
+      "last_updated_at": "2026-05-03T14:39:11.945Z"
     },
     {
-      "project_id": "memory_test_1777676534218",
-      "project_name": "Memory Test",
+      "project_id": "codex_test_project",
+      "project_name": "CODEX TEST Project System",
       "project_status": "ACTIVE",
       "current_phase": "DISCOVERY",
       "active_runtime_state": "DISCUSSION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-03T14:07:56.914Z"
+      "last_updated_at": "2026-05-03T14:39:11.966Z"
+    },
+    {
+      "project_id": "default_project",
+      "project_name": "CRM System",
+      "project_status": "ACTIVE",
+      "current_phase": "EXECUTION_READY",
+      "active_runtime_state": "EXECUTION_PREPARATION",
+      "pending_decisions": [],
+      "active_project_flag": false,
+      "last_updated_at": "2026-05-03T14:39:11.972Z"
+    },
+    {
+      "project_id": "memory_test_1777676534218",
+      "project_name": "Memory TEST System",
+      "project_status": "ACTIVE",
+      "current_phase": "DISCOVERY",
+      "active_runtime_state": "DISCUSSION",
+      "pending_decisions": [],
+      "active_project_flag": false,
+      "last_updated_at": "2026-05-03T14:39:11.979Z"
     },
     {
       "project_id": "memory_test_1777676557976",
-      "project_name": "اعمل سيستم خدمة عملاء",
+      "project_name": "Customer Service System",
       "project_status": "ACTIVE",
       "current_phase": "EXECUTION_READY",
       "active_runtime_state": "EXECUTION_PREPARATION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-03T14:07:56.918Z"
+      "last_updated_at": "2026-05-03T14:39:11.986Z"
     },
     {
       "project_id": "mobile_game",
-      "project_name": "Mobile Game",
+      "project_name": "Mobile GAME System",
       "project_status": "ACTIVE",
       "current_phase": "EXECUTION_READY",
       "active_runtime_state": "EXECUTION_PREPARATION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-03T14:07:56.921Z"
+      "last_updated_at": "2026-05-03T14:39:11.990Z"
     },
     {
       "project_id": "test_project",
-      "project_name": "test_project",
+      "project_name": "TEST Project System",
       "project_status": "ACTIVE",
       "current_phase": "EXECUTION_READY",
       "active_runtime_state": "EXECUTION_PREPARATION",
@@ -72,27 +82,27 @@
         "EXECUTION_PACKAGE_PENDING_FORGE"
       ],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-03T14:07:56.926Z"
+      "last_updated_at": "2026-05-03T14:39:12.001Z"
     },
     {
       "project_id": "test_project_2",
-      "project_name": "test_project_2",
+      "project_name": "TEST Project 2 System",
       "project_status": "ACTIVE",
       "current_phase": "DOCS_DRAFTING",
       "active_runtime_state": "DOCUMENTATION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-03T14:07:56.928Z"
+      "last_updated_at": "2026-05-03T14:39:12.005Z"
     },
     {
       "project_id": "test_project_3",
-      "project_name": "test_project_3",
+      "project_name": "TEST Project 3 System",
       "project_status": "ACTIVE",
       "current_phase": "EXECUTION_READY",
       "active_runtime_state": "EXECUTION_PREPARATION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-03T14:07:56.930Z"
+      "last_updated_at": "2026-05-03T14:39:12.015Z"
     }
   ]
 }
