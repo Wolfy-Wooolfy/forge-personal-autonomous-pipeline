@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T14:39:10.553Z",
+  "generated_at": "2026-05-03T19:32:19.542Z",
   "blocked": false,
   "status": "PASS",
   "outcome": "PASS",
@@ -78,7 +78,7 @@
     {
       "name": "workspace_runtime_execution_id_consistent",
       "passed": true,
-      "detail": "decision=ai_os_runnable_execution_1777819150058; backfill=ai_os_runnable_execution_1777819150058; execute=ai_os_runnable_execution_1777819150058"
+      "detail": "decision=ai_os_runnable_execution_1777836739493; backfill=ai_os_runnable_execution_1777836739493; execute=ai_os_runnable_execution_1777836739493"
     },
     {
       "name": "workspace_runtime_matches_current_execution_package",
@@ -88,7 +88,7 @@
     {
       "name": "workspace_execution_package_identity_consistent",
       "passed": true,
-      "detail": "decision_package_id=ai_os_runnable_package_1777819150058; backfill_package_id=ai_os_runnable_package_1777819150058; execute_package_id=ai_os_runnable_package_1777819150058; decision_package_path=artifacts/projects/codex_test_crm_1777819149689/execute/execution_package.json; backfill_package_path=artifacts/projects/codex_test_crm_1777819149689/execute/execution_package.json; execute_package_path=artifacts/projects/codex_test_crm_1777819149689/execute/execution_package.json"
+      "detail": "decision_package_id=ai_os_runnable_package_1777836739493; backfill_package_id=ai_os_runnable_package_1777836739493; execute_package_id=ai_os_runnable_package_1777836739493; decision_package_path=artifacts/projects/default_project/execute/execution_package.json; backfill_package_path=artifacts/projects/default_project/execute/execution_package.json; execute_package_path=artifacts/projects/default_project/execute/execution_package.json"
     },
     {
       "name": "workspace_execution_package_matches_current_artifact",

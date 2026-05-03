@@ -4,7 +4,7 @@ const http = require("http");
 const path = require("path");
 const fs = require("fs");
 const crypto = require("crypto");
-const { execFile } = require("child_process");
+const { execFile, spawn } = require("child_process");
 const { handleAuthRequest } = require("../auth/authSystem");
 const { createAiOsRuntime } = require("../ai_os/projectRuntime");
 const { createProjectMemoryStore } = require("../memoryEngine");
@@ -1828,11 +1828,21 @@ ${trimmedExisting}`
 
     const verificationState = overrides.verification_state || (executionPackageStatus === "EXECUTED" ? "PASS" : "NOT_READY");
     const deliveryState = overrides.delivery_state || existing.delivery_state || (executionPackageStatus === "EXECUTED" ? "ARTIFACTS_ONLY" : "NOT_READY");
+    const existingDeliverySummary =
+      existing.delivery_summary && typeof existing.delivery_summary === "object"
+        ? existing.delivery_summary
+        : null;
     const effectiveDeliverySummary =
       overrides.delivery_summary && typeof overrides.delivery_summary === "object"
         ? overrides.delivery_summary
-        : existing.delivery_summary && typeof existing.delivery_summary === "object"
-          ? existing.delivery_summary
+        : existingDeliverySummary
+          ? (
+              existingDeliverySummary.app_preview_url === undefined ||
+              existingDeliverySummary.absolute_output_path === undefined ||
+              existingDeliverySummary.absolute_app_output_path === undefined
+                ? buildDeliverySummary(projectId)
+                : existingDeliverySummary
+            )
           : null;
 
     const state = {
@@ -2265,31 +2275,46 @@ ${trimmedExisting}`
     return path.resolve(root, getProjectOutputRel(projectIdInput));
   }
 
+  function getProjectOutputAppAbs(projectIdInput) {
+    return path.join(getProjectOutputAbs(projectIdInput), "app");
+  }
+
+  function getProjectAppPreviewUrl(projectIdInput, fileInsideApp = "index.html") {
+    const projectId = normalizeProjectId(projectIdInput);
+    const safeFile = String(fileInsideApp || "index.html")
+      .replace(/\\/g, "/")
+      .replace(/^\/+/, "");
+
+    return `http://localhost:3000/outputs/${encodeURIComponent(projectId)}/app/${safeFile.split("/").map(encodeURIComponent).join("/")}`;
+  }
+
   function openProjectOutputFolder(body = {}) {
     const projectId = normalizeProjectId(body.project_id || readActiveProjectId());
     const projectRootAbs = path.resolve(projectsRoot, projectId);
-    const outputAbs = getProjectOutputAbs(projectId);
-    const appAbs = path.join(outputAbs, "app");
-    const targetAbs = fs.existsSync(appAbs) ? appAbs : outputAbs;
+    const targetAbs = getProjectOutputAppAbs(projectId);
     const resolvedTarget = path.resolve(targetAbs);
     const resolvedProjectRoot = path.resolve(projectRootAbs);
 
     if (!(resolvedTarget === resolvedProjectRoot || resolvedTarget.startsWith(`${resolvedProjectRoot}${path.sep}`))) {
       return {
         ok: false,
+        opened: false,
         mode: "OPEN_OUTPUT_FOLDER_BLOCKED",
         reason: "TARGET_OUTSIDE_PROJECT_ROOT",
-        project_id: projectId
+        project_id: projectId,
+        absolute_path: resolvedTarget
       };
     }
 
     if (!fs.existsSync(resolvedTarget)) {
       return {
         ok: false,
+        opened: false,
         mode: "OUTPUT_FOLDER_NOT_FOUND",
         reason: "OUTPUT_FOLDER_NOT_FOUND",
         project_id: projectId,
         output_folder: path.relative(root, resolvedTarget).replace(/\\/g, "/"),
+        absolute_path: resolvedTarget,
         message: "Output folder was not found for this project."
       };
     }
@@ -2299,10 +2324,12 @@ ${trimmedExisting}`
     if (process.platform !== "win32") {
       return {
         ok: false,
+        opened: false,
         mode: "OPEN_OUTPUT_FOLDER_UNAVAILABLE",
         reason: "UNSUPPORTED_PLATFORM",
         project_id: projectId,
         output_folder: outputFolder,
+        absolute_path: resolvedTarget,
         message: "Opening the output folder is only enabled for local Windows workspace runs."
       };
     }
@@ -2311,10 +2338,71 @@ ${trimmedExisting}`
 
     return {
       ok: true,
-      mode: "OPEN_OUTPUT_FOLDER_REQUESTED",
+      opened: true,
+      mode: "OPEN_OUTPUT_FOLDER_OPENED",
       project_id: projectId,
       output_folder: outputFolder,
-      message: "Open-folder request was sent to Windows Explorer."
+      absolute_path: resolvedTarget,
+      message: "Output folder was opened."
+    };
+  }
+
+  function runProjectOutputAppServer(body = {}) {
+    const projectId = normalizeProjectId(body.project_id || readActiveProjectId());
+    const appAbs = getProjectOutputAppAbs(projectId);
+    const packageAbs = path.join(appAbs, "package.json");
+
+    if (!fs.existsSync(appAbs) || !fs.statSync(appAbs).isDirectory()) {
+      return {
+        ok: false,
+        running: false,
+        reason: "OUTPUT_APP_FOLDER_NOT_FOUND",
+        project_id: projectId,
+        absolute_path: appAbs
+      };
+    }
+
+    if (!fs.existsSync(packageAbs)) {
+      return {
+        ok: false,
+        running: false,
+        reason: "PACKAGE_JSON_NOT_FOUND",
+        project_id: projectId,
+        absolute_path: appAbs,
+        message: "This output appears to be static. Use app_preview_url instead."
+      };
+    }
+
+    const scripts = readPackageScripts(packageAbs);
+    const startCommand = scripts.start ? "npm start" : "";
+
+    if (!startCommand) {
+      return {
+        ok: false,
+        running: false,
+        reason: "NPM_START_SCRIPT_NOT_FOUND",
+        project_id: projectId,
+        absolute_path: appAbs,
+        logs: ["package.json does not define scripts.start."]
+      };
+    }
+
+    const child = spawn("cmd", ["/c", "npm install && npm start"], {
+      cwd: appAbs,
+      detached: true,
+      windowsHide: true,
+      stdio: "ignore"
+    });
+    child.unref();
+
+    return {
+      ok: true,
+      running: true,
+      project_id: projectId,
+      absolute_path: appAbs,
+      app_url: "",
+      port: null,
+      logs: ["Started npm install && npm start in output/app.", "Port could not be inferred automatically."]
     };
   }
 
@@ -2586,9 +2674,24 @@ ${trimmedExisting}`
 
     const runInstructions = [];
     const appOutputPath = `${outputRel}/app`;
+    const absoluteOutputPath = outputAbs;
+    const absoluteAppOutputPath = getProjectOutputAppAbs(projectId);
+    const previewIndexFile = indexHtml || files.find((file) => String(file || "").toLowerCase().endsWith("/index.html")) || "";
+    const previewFileInsideApp = previewIndexFile.toLowerCase().startsWith("app/")
+      ? previewIndexFile.slice(4)
+      : previewIndexFile;
+    const appPreviewUrl = previewIndexFile ? getProjectAppPreviewUrl(projectId, previewFileInsideApp || "index.html") : "";
+    const appRuntimeType = packageJson || serverJs || appJs
+      ? "NODE_SERVER"
+      : appPreviewUrl
+        ? "STATIC_HTML"
+        : "UNKNOWN";
 
     if (hasRunnableApplication) {
       runInstructions.push(`Application folder: ${appOutputPath}`);
+      if (appPreviewUrl && appRuntimeType === "STATIC_HTML") {
+        runInstructions.push(`Open the application preview: ${appPreviewUrl}`);
+      }
       if (runBat) {
         runInstructions.push(`Quick start on Windows: double-click ${outputRel}/${runBat}`);
       }
@@ -2661,6 +2764,11 @@ ${trimmedExisting}`
       delivery_type: deliveryType,
       output_path: outputRel,
       app_output_path: appOutputPath,
+      absolute_output_path: absoluteOutputPath,
+      absolute_app_output_path: absoluteAppOutputPath,
+      app_preview_url: hasRunnableApplication ? appPreviewUrl : "",
+      app_runtime_type: hasRunnableApplication ? appRuntimeType : "UNKNOWN",
+      requires_server: hasRunnableApplication && appRuntimeType === "NODE_SERVER",
       quick_launch_files: {
         run_bat: runBat ? `${outputRel}/${runBat}` : "",
         open_app_bat: openAppBat ? `${outputRel}/${openAppBat}` : ""
@@ -2693,6 +2801,7 @@ ${trimmedExisting}`
           : deliveryType === "RUNNABLE_APPLICATION"
             ? [
                 "Run or open the application",
+                ...(appRuntimeType === "NODE_SERVER" ? ["Start app server"] : []),
                 "Review generated files",
                 "Request changes"
               ]
@@ -4228,6 +4337,12 @@ function buildExecutionPackage(packet) {
       if (req.method === "POST" && pathname === "/api/projects/open-output-folder") {
         const body = await readBody(req);
         sendJson(res, 200, openProjectOutputFolder(body));
+        return;
+      }
+
+      if (req.method === "POST" && pathname === "/api/projects/run-output-app") {
+        const body = await readBody(req);
+        sendJson(res, 200, runProjectOutputAppServer(body));
         return;
       }
 

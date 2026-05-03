@@ -583,6 +583,48 @@ function sendText(res, statusCode, text, contentType = "text/plain; charset=utf-
   res.end(text);
 }
 
+function getContentType(filePath) {
+  const ext = path.extname(filePath).toLowerCase();
+  if (ext === ".html") return "text/html; charset=utf-8";
+  if (ext === ".css") return "text/css; charset=utf-8";
+  if (ext === ".js") return "application/javascript; charset=utf-8";
+  if (ext === ".json") return "application/json; charset=utf-8";
+  if (ext === ".svg") return "image/svg+xml; charset=utf-8";
+  if (ext === ".png") return "image/png";
+  if (ext === ".jpg" || ext === ".jpeg") return "image/jpeg";
+  if (ext === ".gif") return "image/gif";
+  if (ext === ".webp") return "image/webp";
+  return "application/octet-stream";
+}
+
+function serveProjectOutputApp(req, res) {
+  const url = new URL(req.url, "http://localhost:3000");
+  const match = url.pathname.match(/^\/outputs\/([^/]+)\/app(?:\/(.*))?$/);
+
+  if (!match) {
+    return false;
+  }
+
+  const projectId = decodeURIComponent(match[1] || "").trim();
+  const requestedFile = decodeURIComponent(match[2] || "index.html").replace(/\\/g, "/");
+  if (!/^[A-Za-z0-9_-]+$/.test(projectId)) {
+    sendJson(res, 404, { error: "Output app file not found" });
+    return true;
+  }
+
+  const appRoot = path.resolve(root, "artifacts", "projects", projectId, "output", "app");
+  const targetPath = path.resolve(appRoot, requestedFile || "index.html");
+
+  if (!projectId || !isWithin(appRoot, targetPath) || !fs.existsSync(targetPath) || !fs.statSync(targetPath).isFile()) {
+    sendJson(res, 404, { error: "Output app file not found" });
+    return true;
+  }
+
+  res.writeHead(200, { "Content-Type": getContentType(targetPath) });
+  fs.createReadStream(targetPath).pipe(res);
+  return true;
+}
+
 function readRequestBody(req) {
   return new Promise((resolve, reject) => {
     let data = "";
@@ -682,6 +724,10 @@ async function generateDraft(userRequest) {
 
 const server = http.createServer(async (req, res) => {
   try {
+    if (req.method === "GET" && serveProjectOutputApp(req, res)) {
+      return;
+    }
+
     if (req.method === "GET" && req.url === "/") {
       const html = fs.readFileSync(indexPath, "utf-8");
       sendText(res, 200, html, "text/html; charset=utf-8");

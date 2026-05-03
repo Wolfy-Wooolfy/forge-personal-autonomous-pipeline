@@ -1,127 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CRM Prototype</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    h1 { color: #2c3e50; }
-    label { display: block; margin-top: 10px; }
-    input, select, textarea { width: 300px; padding: 5px; margin-top: 5px; }
-    button { margin-top: 10px; padding: 8px 12px; }
-    .section { margin-bottom: 40px; }
-    .log { margin-top: 10px; white-space: pre-wrap; background: #f0f0f0; padding: 10px; max-height: 150px; overflow-y: auto; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام الموارد البشرية - HR System</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f9f9f9; }
+        header { background-color: #004080; color: white; padding: 10px 20px; text-align: center; }
+        main { margin-top: 20px; }
+        section { background: white; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 0 5px #ccc; }
+        h1, h2 { margin: 0 0 10px 0; }
+        label { display: block; margin: 8px 0 4px; }
+        select, button { padding: 6px 10px; font-size: 1em; }
+        .feature-list, .user-list, .security-list, .integration-list, .ui-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li, .user-list li, .security-list li, .integration-list li, .ui-list li {
+            background: #e6f0ff;
+            margin: 4px 0;
+            padding: 6px 10px;
+            border-radius: 4px;
+        }
+        footer { text-align: center; margin-top: 40px; font-size: 0.9em; color: #666; }
+    </style>
 </head>
 <body>
-  <h1>CRM Prototype</h1>
-  <p><strong>Note:</strong> This is a prototype demonstrating core CRM features. Use the "X-User-Role" header in API requests to simulate roles.</p>
+    <header>
+        <h1>نظام الموارد البشرية - HR System</h1>
+    </header>
+    <main>
+        <section>
+            <h2>الميزات / Features</h2>
+            <ul class="feature-list">
+                <li>إدارة الموظفين</li>
+                <li>الرواتب</li>
+                <li>الحضور</li>
+                <li>التوظيف</li>
+                <li>التدريب</li>
+                <li>تقييم الأداء</li>
+            </ul>
+        </section>
+        <section>
+            <h2>المستخدمون / Users</h2>
+            <ul class="user-list">
+                <li>موظفو الموارد البشرية</li>
+                <li>المديرون</li>
+                <li>الموظفون العاديون</li>
+            </ul>
+        </section>
+        <section>
+            <h2>الأمان / Security</h2>
+            <ul class="security-list">
+                <li>الامتثال للخصوصية: نعم</li>
+                <li>تشفير البيانات: نعم</li>
+                <li>التحكم في الوصول بناءً على الدور: نعم</li>
+            </ul>
+        </section>
+        <section>
+            <h2>التكامل / Integration</h2>
+            <ul class="integration-list">
+                <li>التكامل مع نظام الرواتب: نعم</li>
+                <li>التكامل مع نظام الحضور: نعم</li>
+                <li>التكامل مع منصات التدريب: نعم</li>
+            </ul>
+        </section>
+        <section>
+            <h2>واجهة المستخدم / UI</h2>
+            <ul class="ui-list">
+                <li>دعم متعدد اللغات: العربية، الإنجليزية</li>
+                <li>واجهة سهلة الاستخدام: نعم</li>
+            </ul>
+            <label for="language-select">اختر اللغة / Select Language:</label>
+            <select id="language-select" aria-label="Language selector">
+                <option value="ar" selected>العربية</option>
+                <option value="en">English</option>
+            </select>
+        </section>
+    </main>
+    <footer>
+        <p>هذه نسخة أولية (Prototype) لنظام الموارد البشرية.</p>
+    </footer>
+    <script>
+        const langSelect = document.getElementById('language-select');
+        const content = {
+            ar: {
+                title: 'نظام الموارد البشرية - HR System',
+                featuresTitle: 'الميزات / Features',
+                features: [
+                    'إدارة الموظفين',
+                    'الرواتب',
+                    'الحضور',
+                    'التوظيف',
+                    'التدريب',
+                    'تقييم الأداء'
+                ],
+                usersTitle: 'المستخدمون / Users',
+                users: [
+                    'موظفو الموارد البشرية',
+                    'المديرون',
+                    'الموظفون العاديون'
+                ],
+                securityTitle: 'الأمان / Security',
+                security: [
+                    'الامتثال للخصوصية: نعم',
+                    'تشفير البيانات: نعم',
+                    'التحكم في الوصول بناءً على الدور: نعم'
+                ],
+                integrationTitle: 'التكامل / Integration',
+                integration: [
+                    'التكامل مع نظام الرواتب: نعم',
+                    'التكامل مع نظام الحضور: نعم',
+                    'التكامل مع منصات التدريب: نعم'
+                ],
+                uiTitle: 'واجهة المستخدم / UI',
+                ui: [
+                    'دعم متعدد اللغات: العربية، الإنجليزية',
+                    'واجهة سهلة الاستخدام: نعم'
+                ],
+                languageLabel: 'اختر اللغة / Select Language:',
+                footerText: 'هذه نسخة أولية (Prototype) لنظام الموارد البشرية.'
+            },
+            en: {
+                title: 'HR System - نظام الموارد البشرية',
+                featuresTitle: 'Features / الميزات',
+                features: [
+                    'Employee Management',
+                    'Payroll',
+                    'Attendance',
+                    'Recruitment',
+                    'Training',
+                    'Performance Evaluation'
+                ],
+                usersTitle: 'Users / المستخدمون',
+                users: [
+                    'HR Staff',
+                    'Managers',
+                    'Regular Employees'
+                ],
+                securityTitle: 'Security / الأمان',
+                security: [
+                    'Privacy Compliance: Yes',
+                    'Data Encryption: Yes',
+                    'Role-Based Access Control: Yes'
+                ],
+                integrationTitle: 'Integration / التكامل',
+                integration: [
+                    'Integrate with Payroll System: Yes',
+                    'Integrate with Attendance System: Yes',
+                    'Integrate with Training Platforms: Yes'
+                ],
+                uiTitle: 'User Interface / واجهة المستخدم',
+                ui: [
+                    'Multi-language Support: Arabic, English',
+                    'User-friendly Interface: Yes'
+                ],
+                languageLabel: 'Select Language / اختر اللغة:',
+                footerText: 'This is a prototype of the HR System.'
+            }
+        };
 
-  <div class="section">
-    <h2>Add Contact</h2>
-    <form id="contactForm">
-      <label>Name: <input type="text" name="name" required /></label>
-      <label>Email: <input type="email" name="email" required /></label>
-      <label>Phone: <input type="text" name="phone" /></label>
-      <button type="submit">Add Contact</button>
-    </form>
-    <div id="contactLog" class="log"></div>
-  </div>
+        function updateContent(lang) {
+            document.querySelector('header h1').textContent = content[lang].title;
+            document.querySelector('section:nth-of-type(1) h2').textContent = content[lang].featuresTitle;
+            const featureList = document.querySelector('.feature-list');
+            featureList.innerHTML = '';
+            content[lang].features.forEach(f => {
+                const li = document.createElement('li');
+                li.textContent = f;
+                featureList.appendChild(li);
+            });
 
-  <div class="section">
-    <h2>Add Lead</h2>
-    <form id="leadForm">
-      <label>Lead Name: <input type="text" name="name" required /></label>
-      <label>Contact Email: <input type="email" name="email" /></label>
-      <label>Status: <select name="status"><option value="new">New</option><option value="contacted">Contacted</option><option value="qualified">Qualified</option></select></label>
-      <button type="submit">Add Lead</button>
-    </form>
-    <div id="leadLog" class="log"></div>
-  </div>
+            document.querySelector('section:nth-of-type(2) h2').textContent = content[lang].usersTitle;
+            const userList = document.querySelector('.user-list');
+            userList.innerHTML = '';
+            content[lang].users.forEach(u => {
+                const li = document.createElement('li');
+                li.textContent = u;
+                userList.appendChild(li);
+            });
 
-  <div class="section">
-    <h2>Add Support Ticket</h2>
-    <form id="ticketForm">
-      <label>Subject: <input type="text" name="subject" required /></label>
-      <label>Description: <textarea name="description" rows="3"></textarea></label>
-      <button type="submit">Add Ticket</button>
-    </form>
-    <div id="ticketLog" class="log"></div>
-  </div>
+            document.querySelector('section:nth-of-type(3) h2').textContent = content[lang].securityTitle;
+            const securityList = document.querySelector('.security-list');
+            securityList.innerHTML = '';
+            content[lang].security.forEach(s => {
+                const li = document.createElement('li');
+                li.textContent = s;
+                securityList.appendChild(li);
+            });
 
-  <script>
-    const userRole = prompt('Enter your role (sales_representative, customer_support_agent, manager):', 'sales_representative');
+            document.querySelector('section:nth-of-type(4) h2').textContent = content[lang].integrationTitle;
+            const integrationList = document.querySelector('.integration-list');
+            integrationList.innerHTML = '';
+            content[lang].integration.forEach(i => {
+                const li = document.createElement('li');
+                li.textContent = i;
+                integrationList.appendChild(li);
+            });
 
-    function logMessage(elementId, message) {
-      const el = document.getElementById(elementId);
-      el.textContent = message + '\n' + el.textContent;
-    }
+            document.querySelector('section:nth-of-type(5) h2').textContent = content[lang].uiTitle;
+            const uiList = document.querySelector('.ui-list');
+            uiList.innerHTML = '';
+            content[lang].ui.forEach(ui => {
+                const li = document.createElement('li');
+                li.textContent = ui;
+                uiList.appendChild(li);
+            });
 
-    async function apiRequest(path, method = 'GET', body) {
-      const options = {
-        method,
-        headers: {
-          'Content-Type': 'application/json',
-          'X-User-Role': userRole
+            document.querySelector('label[for="language-select"]').textContent = content[lang].languageLabel;
+            document.querySelector('footer p').textContent = content[lang].footerText;
+
+            if(lang === 'ar') {
+                document.documentElement.lang = 'ar';
+                document.documentElement.dir = 'rtl';
+            } else {
+                document.documentElement.lang = 'en';
+                document.documentElement.dir = 'ltr';
+            }
         }
-      };
-      if (body) options.body = JSON.stringify(body);
-      const res = await fetch(path, options);
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'API error');
-      return data;
-    }
 
-    document.getElementById('contactForm').addEventListener('submit', async e => {
-      e.preventDefault();
-      const form = e.target;
-      const contact = {
-        name: form.name.value,
-        email: form.email.value,
-        phone: form.phone.value
-      };
-      try {
-        const result = await apiRequest('/api/contacts', 'POST', contact);
-        logMessage('contactLog', `Added contact: ${JSON.stringify(result)}`);
-        form.reset();
-      } catch (err) {
-        logMessage('contactLog', `Error: ${err.message}`);
-      }
-    });
+        langSelect.addEventListener('change', (e) => {
+            updateContent(e.target.value);
+        });
 
-    document.getElementById('leadForm').addEventListener('submit', async e => {
-      e.preventDefault();
-      const form = e.target;
-      const lead = {
-        name: form.name.value,
-        email: form.email.value,
-        status: form.status.value
-      };
-      try {
-        const result = await apiRequest('/api/leads', 'POST', lead);
-        logMessage('leadLog', `Added lead: ${JSON.stringify(result)}`);
-        form.reset();
-      } catch (err) {
-        logMessage('leadLog', `Error: ${err.message}`);
-      }
-    });
-
-    document.getElementById('ticketForm').addEventListener('submit', async e => {
-      e.preventDefault();
-      const form = e.target;
-      const ticket = {
-        subject: form.subject.value,
-        description: form.description.value
-      };
-      try {
-        const result = await apiRequest('/api/tickets', 'POST', ticket);
-        logMessage('ticketLog', `Added ticket: ${JSON.stringify(result)}`);
-        form.reset();
-      } catch (err) {
-        logMessage('ticketLog', `Error: ${err.message}`);
-      }
-    });
-  </script>
+        // Initialize content
+        updateContent('ar');
+    </script>
 </body>
 </html>

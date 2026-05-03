@@ -1,64 +1,79 @@
 {
   "project_id": "default_project",
-  "project_name": "عايز سيستم CRM\nاعمل مقترح كامل واعرضه عليا",
-  "project_type": "CUSTOMER_RELATIONSHIP_MANAGEMENT_CRM",
+  "project_name": "HR System",
+  "project_type": "HUMAN_RESOURCES",
   "project_mode": "EXTEND_EXISTING",
   "project_status": "ACTIVE",
   "primary_language": "AR",
-  "user_goal": "عايز سيستم CRM\nاعمل مقترح كامل واعرضه عليا",
+  "user_goal": "عايز اعمل سيستم HR",
   "business_goal": "",
   "technical_goal": "",
-  "current_phase": "DELIVERY_READY",
-  "active_runtime_state": "EXECUTION_COMPLETE",
+  "current_phase": "EXECUTION_READY",
+  "active_runtime_state": "EXECUTION_PREPARATION",
   "workspace_path": "D:\\S\\Halo\\Tech\\forge-personal-autonomous-pipeline",
   "source_of_truth": "ZIP_SNAPSHOT",
   "selected_strategy": "",
   "accepted_options": [
-    "option_1"
+    "opt3"
   ],
   "rejected_options": [],
   "open_questions": [],
-  "clarification_answers": {},
-  "requirement_domain": "Customer Relationship Management (CRM)",
+  "clarification_answers": {
+    "raw_answer": "اعمل مقترح بالكامل واعرضه عليا",
+    "answered_questions": [
+      "ما هي الوظائف الأساسية التي تريدها في نظام الموارد البشرية؟ (مثل إدارة الموظفين، الرواتب، الحضور، التوظيف، التدريب، تقييم الأداء، إلخ)",
+      "من هم المستخدمون المستهدفون للنظام؟ (مثل موظفو الموارد البشرية، المديرون، الموظفون العاديون)",
+      "هل هناك متطلبات خاصة بخصوص الأمان أو الخصوصية؟",
+      "هل يحتاج النظام إلى التكامل مع أنظمة أخرى؟ إذا نعم، ما هي هذه الأنظمة؟",
+      "هل تفضل أن يكون النظام سحابيًا أم محليًا؟",
+      "هل هناك متطلبات خاصة بواجهة المستخدم أو اللغات المدعومة؟"
+    ]
+  },
+  "requirement_domain": "Human Resources",
   "requirement_completeness": true,
   "requirement_model": {
-    "assumptions": {
-      "user_delegated_defaults": true
+    "system_type": "HR System",
+    "features": [
+      "إدارة الموظفين",
+      "الرواتب",
+      "الحضور",
+      "التوظيف",
+      "التدريب",
+      "تقييم الأداء"
+    ],
+    "users": [
+      "موظفو الموارد البشرية",
+      "المديرون",
+      "الموظفون العاديون"
+    ],
+    "security": {
+      "privacy_compliance": true,
+      "data_encryption": true,
+      "role_based_access_control": true
     },
+    "integration": {
+      "integrate_with_payroll_system": true,
+      "integrate_with_attendance_system": true,
+      "integrate_with_training_platforms": true
+    },
+    "deployment": {
+      "cloud_preferred": true
+    },
+    "ui_requirements": {
+      "multi_language_support": [
+        "العربية",
+        "الإنجليزية"
+      ],
+      "user_friendly_interface": true
+    },
+    "assumptions": {},
     "recommended_scenario": {
-      "core_features": [
-        "contact_management",
-        "lead_and_opportunity_management",
-        "sales_pipeline_tracking",
-        "customer_support_ticketing",
-        "email_integration",
-        "reporting_and_analytics",
-        "mobile_access"
-      ],
-      "user_roles": [
-        "sales_representative",
-        "customer_support_agent",
-        "manager"
-      ],
-      "integration": [
-        "email_system",
-        "calendar",
-        "marketing_tools"
-      ],
-      "security": {
-        "role_based_access_control": true,
-        "data_encryption": true
-      },
-      "deployment": "cloud_based",
-      "customization": {
-        "custom_fields": true,
-        "workflow_automation": true
-      }
+      "complete_hr_system": "نظام موارد بشرية متكامل يدعم جميع الوظائف الأساسية المذكورة، موجه لموظفي الموارد البشرية والمديرين والموظفين العاديين، مع أمان عالي وتكامل مع أنظمة الرواتب والحضور والتدريب، ونشر سحابي مع واجهة مستخدم متعددة اللغات وسهلة الاستخدام."
     }
   },
-  "requirement_reasoning_summary": "User requested a complete CRM system proposal and authorized the system to choose defaults. Therefore, a comprehensive CRM requirement model with typical features, roles, integrations, security, deployment, and customization options was proposed to ensure completeness without further questions.",
+  "requirement_reasoning_summary": "المستخدم طلب مقترح كامل لنظام موارد بشرية دون تقديم تفاصيل إضافية، وتم تفويض النظام لاختيار الافتراضات المعقولة. بناءً على الوظائف الأساسية الشائعة، المستخدمين المستهدفين، متطلبات الأمان، التكامل، النشر، ومتطلبات واجهة المستخدم، تم إعداد نموذج متكامل يلبي أغلب احتياجات نظام الموارد البشرية.",
   "provider_error": "",
-  "original_user_goal": "عايز سيستم CRM\nاعمل مقترح كامل واعرضه عليا",
+  "original_user_goal": "عايز اعمل سيستم HR",
   "latest_requested_action": "BUILD_RUNNABLE_FROM_REQUIREMENTS",
   "active_followup_action": "BUILD_RUNNABLE_FROM_REQUIREMENTS",
   "documentation_state": "DOCS_APPROVED",
@@ -68,53 +83,64 @@
   "delivery_state": "READY",
   "delivery_summary": {
     "project_id": "default_project",
-    "execution_id": "ai_os_runnable_execution_1777817276080",
-    "package_id": "ai_os_runnable_package_1777817276080",
+    "project_name": "HR System",
+    "execution_id": "ai_os_runnable_execution_1777836739493",
+    "package_id": "ai_os_runnable_package_1777836739493",
     "delivery_type": "RUNNABLE_APPLICATION",
     "output_path": "artifacts/projects/default_project/output",
+    "app_output_path": "artifacts/projects/default_project/output/app",
+    "absolute_output_path": "D:\\S\\Halo\\Tech\\forge-personal-autonomous-pipeline\\artifacts\\projects\\default_project\\output",
+    "absolute_app_output_path": "D:\\S\\Halo\\Tech\\forge-personal-autonomous-pipeline\\artifacts\\projects\\default_project\\output\\app",
+    "app_preview_url": "http://localhost:3000/outputs/default_project/app/index.html",
+    "app_runtime_type": "STATIC_HTML",
+    "requires_server": false,
+    "quick_launch_files": {
+      "run_bat": "",
+      "open_app_bat": "artifacts/projects/default_project/output/app/open_app.bat"
+    },
     "output_exists": true,
     "current_execution_output_found": true,
     "expected_current_output_files": [
-      "app/package.json",
-      "app/server.js",
       "app/index.html",
-      "app/README.md"
+      "app/README.md",
+      "app/open_app.bat"
     ],
-    "output_file_count": 4,
+    "output_file_count": 3,
     "output_files": [
       "app/index.html",
-      "app/package.json",
-      "app/README.md",
-      "app/server.js"
+      "app/open_app.bat",
+      "app/README.md"
     ],
     "ignored_existing_output_files": [
-      "سيستم_CRM_مقترح/proposal.md",
-      "سيستم_CRM_مقترح/README.md",
-      "سيستم_CRM_مقترح/requirements.json"
+      "HR_System/deployment_guide.md",
+      "HR_System/integration_plan.md",
+      "HR_System/README.md",
+      "HR_System/requirements.json",
+      "HR_System/security_policy.md",
+      "HR_System/ui_requirements.md"
     ],
     "output_types": [
       "HTML_STATIC_APP",
-      "NODE_PACKAGE",
-      "NODE_SERVER",
+      "WINDOWS_QUICK_LAUNCH",
       "README"
     ],
     "runnable_application_created": true,
     "runnable_indicators": [
-      "index.html",
-      "package.json",
-      "server.js"
+      "index.html"
     ],
     "run_instructions": [
-      "Open this file in the browser: artifacts/projects/default_project/output/app/index.html",
-      "From this folder run: cd artifacts/projects/default_project/output/app",
-      "npm install",
-      "npm start"
+      "Application folder: artifacts/projects/default_project/output/app",
+      "Open the application preview: http://localhost:3000/outputs/default_project/app/index.html",
+      "Quick open on Windows: double-click artifacts/projects/default_project/output/app/open_app.bat",
+      "Prototype note: This is a prototype built from requirements, not a production system.",
+      "Open this file in the browser: artifacts/projects/default_project/output/app/index.html"
     ],
     "usage_or_run_instructions": [
-      "Open this file in the browser: artifacts/projects/default_project/output/app/index.html",
-      "From this folder run: cd artifacts/projects/default_project/output/app",
-      "npm install",
-      "npm start"
+      "Application folder: artifacts/projects/default_project/output/app",
+      "Open the application preview: http://localhost:3000/outputs/default_project/app/index.html",
+      "Quick open on Windows: double-click artifacts/projects/default_project/output/app/open_app.bat",
+      "Prototype note: This is a prototype built from requirements, not a production system.",
+      "Open this file in the browser: artifacts/projects/default_project/output/app/index.html"
     ],
     "next_suggested_actions": [
       "Run or open the application",
@@ -124,13 +150,12 @@
   },
   "current_delivery_state": "DELIVERED",
   "current_delivery_type": "RUNNABLE_APPLICATION",
-  "current_execution_id": "ai_os_runnable_execution_1777817276080",
-  "current_package_id": "ai_os_runnable_package_1777817276080",
+  "current_execution_id": "ai_os_runnable_execution_1777836739493",
+  "current_package_id": "ai_os_runnable_package_1777836739493",
   "current_output_files": [
     "app/index.html",
-    "app/package.json",
-    "app/README.md",
-    "app/server.js"
+    "app/open_app.bat",
+    "app/README.md"
   ],
   "current_followup_mode": "",
   "conversation_history": {
@@ -420,8 +445,122 @@
         "delivery_state": "READY",
         "pending_decisions": []
       }
+    },
+    {
+      "version_id": "state_0015",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T19:14:04.123Z",
+      "state_hash": "95ec73f622b6cc39c243e8c621967afdc9e243994584cd0a24f73128c9c104c6",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "CRM System",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "READY",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0016",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T19:29:17.509Z",
+      "state_hash": "d25f8dadb05f1bf4b38c854d6e76367ebe807b07ce464b7b321963994947a5e5",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "CRM System",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "NOT_READY",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0017",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T19:31:30.408Z",
+      "state_hash": "8ecdd50a8d56bbf38bfe3abdfeb1e251250fc28b4361fcacf5caf03caf5598c0",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "HR System",
+        "project_status": "ACTIVE",
+        "current_phase": "FORGE_RUNTIME_COMPLETE",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "REQUIREMENTS_PACKAGE",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0018",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T19:31:36.104Z",
+      "state_hash": "63fa9e14bb5b13717bb953ba453334da709e167358e46fd66636d677032c8450",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "HR System",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "REQUIREMENTS_PACKAGE",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0019",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T19:32:20.147Z",
+      "state_hash": "18794133044450982740ffdd782240909cb09f4d88a0332cd167c953f4735965",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "HR System",
+        "project_status": "ACTIVE",
+        "current_phase": "DELIVERY_READY",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "READY",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0020",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T19:54:30.105Z",
+      "state_hash": "4bf8ab5b197f343b0ae5e4a45638e12c0f9b5ce9f968b3c87d79b1290c4b5ab4",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "HR System",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "READY",
+        "pending_decisions": []
+      }
     }
   ],
-  "active_project_flag": true,
-  "last_updated_at": "2026-05-03T14:07:56.901Z"
+  "active_project_flag": false,
+  "last_updated_at": "2026-05-03T19:56:08.257Z"
 }

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRM Prototype</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { color: #2c3e50; }
+    label { display: block; margin-top: 10px; }
+    input, select, textarea { width: 300px; padding: 5px; margin-top: 5px; }
+    button { margin-top: 10px; padding: 8px 12px; }
+    .section { margin-bottom: 40px; }
+    .log { margin-top: 10px; white-space: pre-wrap; background: #f0f0f0; padding: 10px; max-height: 150px; overflow-y: auto; }
+  </style>
+</head>
+<body>
+  <h1>CRM Prototype</h1>
+  <p><strong>Note:</strong> This is a prototype demonstrating core CRM features. Use the "X-User-Role" header in API requests to simulate roles.</p>
+
+  <div class="section">
+    <h2>Add Contact</h2>
+    <form id="contactForm">
+      <label>Name: <input type="text" name="name" required /></label>
+      <label>Email: <input type="email" name="email" required /></label>
+      <label>Phone: <input type="text" name="phone" /></label>
+      <button type="submit">Add Contact</button>
+    </form>
+    <div id="contactLog" class="log"></div>
+  </div>
+
+  <div class="section">
+    <h2>Add Lead</h2>
+    <form id="leadForm">
+      <label>Lead Name: <input type="text" name="name" required /></label>
+      <label>Contact Email: <input type="email" name="email" /></label>
+      <label>Status: <select name="status"><option value="new">New</option><option value="contacted">Contacted</option><option value="qualified">Qualified</option></select></label>
+      <button type="submit">Add Lead</button>
+    </form>
+    <div id="leadLog" class="log"></div>
+  </div>
+
+  <div class="section">
+    <h2>Add Support Ticket</h2>
+    <form id="ticketForm">
+      <label>Subject: <input type="text" name="subject" required /></label>
+      <label>Description: <textarea name="description" rows="3"></textarea></label>
+      <button type="submit">Add Ticket</button>
+    </form>
+    <div id="ticketLog" class="log"></div>
+  </div>
+
+  <script>
+    const userRole = prompt('Enter your role (sales_representative, customer_support_agent, manager):', 'sales_representative');
+
+    function logMessage(elementId, message) {
+      const el = document.getElementById(elementId);
+      el.textContent = message + '\n' + el.textContent;
+    }
+
+    async function apiRequest(path, method = 'GET', body) {
+      const options = {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+          'X-User-Role': userRole
+        }
+      };
+      if (body) options.body = JSON.stringify(body);
+      const res = await fetch(path, options);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'API error');
+      return data;
+    }
+
+    document.getElementById('contactForm').addEventListener('submit', async e => {
+      e.preventDefault();
+      const form = e.target;
+      const contact = {
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value
+      };
+      try {
+        const result = await apiRequest('/api/contacts', 'POST', contact);
+        logMessage('contactLog', `Added contact: ${JSON.stringify(result)}`);
+        form.reset();
+      } catch (err) {
+        logMessage('contactLog', `Error: ${err.message}`);
+      }
+    });
+
+    document.getElementById('leadForm').addEventListener('submit', async e => {
+      e.preventDefault();
+      const form = e.target;
+      const lead = {
+        name: form.name.value,
+        email: form.email.value,
+        status: form.status.value
+      };
+      try {
+        const result = await apiRequest('/api/leads', 'POST', lead);
+        logMessage('leadLog', `Added lead: ${JSON.stringify(result)}`);
+        form.reset();
+      } catch (err) {
+        logMessage('leadLog', `Error: ${err.message}`);
+      }
+    });
+
+    document.getElementById('ticketForm').addEventListener('submit', async e => {
+      e.preventDefault();
+      const form = e.target;
+      const ticket = {
+        subject: form.subject.value,
+        description: form.description.value
+      };
+      try {
+        const result = await apiRequest('/api/tickets', 'POST', ticket);
+        logMessage('ticketLog', `Added ticket: ${JSON.stringify(result)}`);
+        form.reset();
+      } catch (err) {
+        logMessage('ticketLog', `Error: ${err.message}`);
+      }
+    });
+  </script>
+</body>
+</html>

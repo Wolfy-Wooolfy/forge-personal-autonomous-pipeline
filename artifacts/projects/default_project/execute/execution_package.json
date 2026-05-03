@@ -1,31 +1,29 @@
 {
-  "package_id": "ai_os_runnable_package_1777817276080",
-  "handoff_id": "ai_os_runnable_handoff_1777817276080",
-  "created_at": "2026-05-03T14:07:56.080Z",
+  "package_id": "ai_os_runnable_package_1777836739493",
+  "handoff_id": "ai_os_runnable_handoff_1777836739493",
+  "created_at": "2026-05-03T19:32:19.493Z",
   "source": "EXTERNAL_AI_WORKSPACE",
   "source_layer": "AI_OPERATING_SYSTEM",
   "handoff_status": "EXECUTED",
   "project_id": "default_project",
-  "execution_id": "ai_os_runnable_execution_1777817276080",
+  "execution_id": "ai_os_runnable_execution_1777836739493",
   "artifact_path": "artifacts/projects/default_project/execute/execution_package.json",
   "approved_scope": {
     "summary": "Build runnable application from the approved requirements package.",
     "operation_mode": "MULTI_FILE",
-    "file_count": 4
+    "file_count": 3
   },
   "target_project_path": "artifacts/projects/default_project",
   "output_path": "artifacts/projects/default_project/output",
   "requested_outputs": [
-    "Create runnable artifact artifacts/projects/default_project/output/app/package.json",
-    "Create runnable artifact artifacts/projects/default_project/output/app/server.js",
     "Create runnable artifact artifacts/projects/default_project/output/app/index.html",
-    "Create runnable artifact artifacts/projects/default_project/output/app/README.md"
+    "Create runnable artifact artifacts/projects/default_project/output/app/README.md",
+    "Create runnable artifact artifacts/projects/default_project/output/app/open_app.bat"
   ],
   "file_or_artifact_targets": [
-    "artifacts/projects/default_project/output/app/package.json",
-    "artifacts/projects/default_project/output/app/server.js",
     "artifacts/projects/default_project/output/app/index.html",
-    "artifacts/projects/default_project/output/app/README.md"
+    "artifacts/projects/default_project/output/app/README.md",
+    "artifacts/projects/default_project/output/app/open_app.bat"
   ],
   "dependency_assumptions": [],
   "risk_notes": [
@@ -33,10 +31,10 @@
   ],
   "execution_approval_reference": {
     "approved_by_role": "CTO",
-    "approved_at": "2026-05-03T14:07:56.080Z",
+    "approved_at": "2026-05-03T19:32:19.493Z",
     "documentation_state": "DOCS_APPROVED",
-    "source_execution_id": "ai_os_execution_1777817197502",
-    "source_package_id": "ai_os_package_1777817197502",
+    "source_execution_id": "ai_os_execution_1777836689458",
+    "source_package_id": "ai_os_package_1777836689458",
     "project_state_path": "artifacts/projects/default_project/project_state.json"
   },
   "finalized_documentation_set": [
@@ -44,30 +42,12 @@
   ],
   "execution_plan": {
     "mode": "MULTI_FILE",
-    "file_count": 4,
+    "file_count": 3,
     "proposed_files": [
-      {
-        "path": "artifacts/projects/default_project/output/app/package.json",
-        "allow_overwrite": true,
-        "sha256": "0fa4eeaf9444b0b949bbbd54b1d5f4db51bc81e1df7002084236aa5b24e2b6c3",
-        "required_roles": [
-          "cto"
-        ],
-        "diff": ""
-      },
-      {
-        "path": "artifacts/projects/default_project/output/app/server.js",
-        "allow_overwrite": true,
-        "sha256": "c775ed1c5b01891f358f8e9e9c740e8926d7e77327e0061f88e107588b3251a8",
-        "required_roles": [
-          "cto"
-        ],
-        "diff": ""
-      },
       {
         "path": "artifacts/projects/default_project/output/app/index.html",
         "allow_overwrite": true,
-        "sha256": "1f1152524f30779f874924a7243cf6ca954f8e0337c17547a134029d9f9819bd",
+        "sha256": "3ccd36eba8bc4a50fae960da335fb055ea5b0a5f9de689b28ce578032a6b5fd3",
         "required_roles": [
           "cto"
         ],
@@ -76,7 +56,16 @@
       {
         "path": "artifacts/projects/default_project/output/app/README.md",
         "allow_overwrite": true,
-        "sha256": "d3fd6dcdba8992d73ced2c333db42abda95a6b2ef56cd21fcc0ee9ccbfd52967",
+        "sha256": "3df553fcee082a96ecc8d78612ad8fd5076f5e3054971cd8e3c778c656c23de2",
+        "required_roles": [
+          "cto"
+        ],
+        "diff": ""
+      },
+      {
+        "path": "artifacts/projects/default_project/output/app/open_app.bat",
+        "allow_overwrite": true,
+        "sha256": "288c31989d5802baff2f5f9b80e32a85f4cfc3be9895c4c9f25c821c9a0d0351",
         "required_roles": [
           "cto"
         ],
@@ -86,13 +75,13 @@
   },
   "business_and_scope_decisions": {
     "accepted_options": [
-      "option_1"
+      "opt3"
     ],
-    "user_goal": "عايز سيستم CRM\nاعمل مقترح كامل واعرضه عليا",
+    "user_goal": "عايز اعمل سيستم HR",
     "documentation_state": "DOCS_APPROVED",
     "followup_action": "PROVIDER_RUNNABLE_APPLICATION"
   },
-  "executed_at": "2026-05-03T14:07:56.272Z",
+  "executed_at": "2026-05-03T19:32:19.540Z",
   "execution_result": {
     "status": "EXECUTED",
     "execute_plan_path": "artifacts/execute/execute_plan.json"
