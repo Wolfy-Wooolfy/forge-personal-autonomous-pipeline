@@ -571,6 +571,15 @@
     const composerMessage = requestInput.closest(".chat-message");
 
     let currentProjectState = null;
+    let currentDeliveryFlowState = {
+      current_delivery_state: "UNKNOWN",
+      current_delivery_type: "",
+      current_execution_id: "",
+      current_package_id: "",
+      current_output_files: [],
+      current_followup_mode: ""
+    };
+    let pendingDeliveryRevision = null;
 
     function appendMessage(type, title, contentHtml) {
       const wrapper = document.createElement("div");
@@ -1013,8 +1022,40 @@
 
       return normalized === "show requirement files" ||
         normalized === "show output files" ||
+        normalized === "show generated files" ||
+        normalized === "show app files" ||
         normalized === "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" ||
+        normalized === "\u0627\u0639\u0631\u0636 \u0627\u0644\u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0646\u0627\u062a\u062c\u0629" ||
+        normalized === "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0637\u0628\u064a\u0642" ||
         normalized === "\u0627\u0639\u0631\u0636 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a";
+    }
+
+    function isRunOrOpenApplicationRequest(value) {
+      const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+
+      return normalized === "run or open the application" ||
+        normalized === "run app" ||
+        normalized === "open app" ||
+        normalized === "\u0634\u063a\u0644 \u0623\u0648 \u0627\u0641\u062a\u062d \u0627\u0644\u062a\u0637\u0628\u064a\u0642" ||
+        normalized === "\u0634\u063a\u0651\u0644 \u0623\u0648 \u0627\u0641\u062a\u062d \u0627\u0644\u062a\u0637\u0628\u064a\u0642" ||
+        normalized === "\u0627\u0641\u062a\u062d \u0627\u0644\u062a\u0637\u0628\u064a\u0642";
+    }
+
+    function isRequestDeliveryChangesRequest(value) {
+      const normalized = String(value || "").trim().toLowerCase().replace(/\s+/g, " ");
+
+      return normalized === "request changes" ||
+        normalized === "revise documentation" ||
+        normalized === "revise requirements" ||
+        normalized === "change app" ||
+        normalized === "revise app" ||
+        normalized === "\u0627\u0637\u0644\u0628 \u062a\u0639\u062f\u064a\u0644" ||
+        normalized === "\u0639\u062f\u0644 \u0627\u0644\u0648\u062b\u064a\u0642\u0629" ||
+        normalized === "\u0639\u062f\u0651\u0644 \u0627\u0644\u0648\u062b\u064a\u0642\u0629" ||
+        normalized === "\u0639\u062f\u0644 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" ||
+        normalized === "\u0639\u062f\u0651\u0644 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" ||
+        normalized === "\u0639\u062f\u0644 \u0627\u0644\u062a\u0637\u0628\u064a\u0642" ||
+        normalized === "\u0639\u062f\u0651\u0644 \u0627\u0644\u062a\u0637\u0628\u064a\u0642";
     }
 
     function isContinueCurrentProjectRequest(value) {
@@ -1143,6 +1184,9 @@
         isShowDocumentationRequest(normalized) ||
         isApproveDocumentationRequest(normalized) ||
         isAmendDocumentationRequest(normalized) ||
+        isShowRequirementFilesRequest(normalized) ||
+        isRunOrOpenApplicationRequest(normalized) ||
+        isRequestDeliveryChangesRequest(normalized) ||
         isContinueCurrentProjectRequest(normalized) ||
         isExecutionRequest(normalized) ||
         isStopCurrentProjectRequest(normalized) ||
@@ -1285,17 +1329,36 @@
       });
     }
 
+    function inferProjectActionId(choice) {
+      const explicit = String(choice && choice.action_id ? choice.action_id : "").trim().toUpperCase();
+      const value = String(choice && choice.value ? choice.value : "").trim().toLowerCase().replace(/\s+/g, " ");
+
+      if (explicit) return explicit;
+      if (isBuildRunnableFromRequirementsRequest(value)) return "BUILD_RUNNABLE_FROM_REQUIREMENTS";
+      if (isCreateLocalPrototypeFromRequirementsRequest(value)) return "CREATE_STATIC_PROTOTYPE";
+      if (isRunOrOpenApplicationRequest(value)) return "SHOW_RUN_INSTRUCTIONS";
+      if (isShowRequirementFilesRequest(value)) return "SHOW_REQUIREMENTS_FILES";
+      if (isRequestDeliveryChangesRequest(value)) return "REQUEST_APP_CHANGES";
+      if (isAmendDocumentationRequest(value)) return "REVISE_REQUIREMENTS";
+      if (isStartOverRequest(value)) return "START_OVER";
+      if (isStopCurrentProjectRequest(value)) return "STOP_FLOW";
+      if (isShowDocumentationRequest(value)) return "SHOW_DOCUMENT";
+      return "UNKNOWN_ACTION";
+    }
+
     function buildCurrentProjectActionChoiceHtml(choices) {
       const list = Array.isArray(choices) ? choices : [];
 
       return `
         <div class="strategy-choice-list">
-          ${list.map((choice) => `
-            <button class="strategy-choice-btn" type="button" data-project-command-choice="${escapeHtml(choice.value)}">
+          ${list.map((choice) => {
+            const actionId = inferProjectActionId(choice);
+            return `
+            <button class="strategy-choice-btn" type="button" data-project-command-choice="${escapeHtml(choice.value)}" data-action-id="${escapeHtml(actionId)}">
               <strong>${escapeHtml(choice.label)}</strong>
               ${escapeHtml(choice.description || "")}
-            </button>
-          `).join("")}
+            </button>`;
+          }).join("")}
         </div>
       `;
     }
@@ -1408,6 +1471,56 @@
             ? "A runnable application indicator was created."
             : "Forge stages completed successfully, but no runnable application was created. The current output is package/report files only. There is nothing to run yet.";
 
+      const formatOutputPath = (file) => {
+        const value = String(file || "").trim().replace(/\\/g, "/");
+        const base = String(outputPath || "").trim().replace(/\\/g, "/");
+
+        if (!value) {
+          return "";
+        }
+
+        if (/^[A-Za-z]:\//.test(value) || value.startsWith("/") || value.startsWith("artifacts/") || !base) {
+          return value;
+        }
+
+        return `${base}/${value}`;
+      };
+
+      const localizedInstructions = (() => {
+        if (lang !== "ar") {
+          return instructions;
+        }
+
+        if (!currentOutputFound) {
+          return ["لم يتم العثور على ملفات تسليم مرتبطة بالتنفيذ الحالي."];
+        }
+
+        if (isRequirementsPackage) {
+          return [
+            "هذه ليست ملفات تشغيل. تم إنشاء حزمة متطلبات فقط. راجع ملفات التسليم الحالية، ثم يمكنك اختيار بناء تطبيق قابل للتشغيل من هذه المتطلبات."
+          ];
+        }
+
+        if (isDocumentDelivery) {
+          return ["هذا تسليم وثائقي وليس تطبيقًا قابلًا للتشغيل."];
+        }
+
+        if (runnable) {
+          if (outputFiles.some((file) => String(file || "").toLowerCase().endsWith("index.html"))) {
+            const indexFile = outputFiles.find((file) => String(file || "").toLowerCase().endsWith("index.html"));
+            return [`افتح الملف في المتصفح: ${formatOutputPath(indexFile)}`];
+          }
+
+          return instructions.map((item) =>
+            String(item || "")
+              .replace(/^Open this file in the browser:\s*/i, "افتح الملف في المتصفح: ")
+              .replace(/^From this folder run:\s*/i, "من هذا المجلد شغّل: ")
+          );
+        }
+
+        return ["لا يوجد تطبيق قابل للتشغيل في ملفات التسليم الحالية."];
+      })();
+
       if (lang === "ar") {
         const lines = [
           "Delivery Summary:",
@@ -1420,19 +1533,13 @@
           `\u0646\u0648\u0639 \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a: ${outputTypes.join(", ") || "UNKNOWN"}`,
           `\u0645\u0624\u0634\u0631\u0627\u062a \u0627\u0644\u062a\u0634\u063a\u064a\u0644: ${indicators.join(", ") || "\u0644\u0627 \u064a\u0648\u062c\u062f"}`,
           `\u0639\u062f\u062f \u0627\u0644\u0645\u0644\u0641\u0627\u062a: ${outputFiles.length}`,
-          outputFiles.length > 0 ? `output_files:\n${outputFiles.map((file) => `- ${outputPath}/${file}`).join("\n")}` : ""
+          outputFiles.length > 0 ? `output_files:\n${outputFiles.map((file) => `- ${formatOutputPath(file)}`).join("\n")}` : ""
         ];
 
-        if (instructions.length > 0) {
+        if (localizedInstructions.length > 0) {
           lines.push("");
           lines.push(runnable ? "\u0637\u0631\u064a\u0642\u0629 \u0627\u0644\u062a\u0634\u063a\u064a\u0644:" : "\u0637\u0631\u064a\u0642\u0629 \u0627\u0644\u0627\u0633\u062a\u062e\u062f\u0627\u0645:");
-          lines.push(...instructions);
-        }
-
-        if (nextActions.length > 0 && !isRequirementsPackage) {
-          lines.push("");
-          lines.push("\u062e\u0637\u0648\u0627\u062a \u0645\u0642\u062a\u0631\u062d\u0629:");
-          lines.push(...nextActions.map((action) => `- ${action}`));
+          lines.push(...localizedInstructions);
         }
 
         return lines.filter(Boolean);
@@ -1449,7 +1556,7 @@
         `Output type: ${outputTypes.join(", ") || "UNKNOWN"}`,
         `Runnable indicators: ${indicators.join(", ") || "none"}`,
         `Output file count: ${outputFiles.length}`,
-        outputFiles.length > 0 ? `output_files:\n${outputFiles.map((file) => `- ${outputPath}/${file}`).join("\n")}` : ""
+        outputFiles.length > 0 ? `output_files:\n${outputFiles.map((file) => `- ${formatOutputPath(file)}`).join("\n")}` : ""
       ];
 
       if (instructions.length > 0) {
@@ -1458,16 +1565,159 @@
         lines.push(...instructions);
       }
 
-      if (nextActions.length > 0 && !isRequirementsPackage) {
-        lines.push("");
-        lines.push("Next suggested actions:");
-        lines.push(...nextActions.map((action) => `- ${action}`));
-      }
-
       return lines.filter(Boolean);
     }
 
+    function updateCurrentDeliveryFlowState(deliverySummary, followupMode = "") {
+      const summary = deliverySummary && typeof deliverySummary === "object" ? deliverySummary : {};
+
+      currentDeliveryFlowState = {
+        current_delivery_state: summary.delivery_type ? "DELIVERED" : "UNKNOWN",
+        current_delivery_type: String(summary.delivery_type || ""),
+        current_execution_id: String(summary.execution_id || ""),
+        current_package_id: String(summary.package_id || ""),
+        current_output_files: Array.isArray(summary.output_files) ? summary.output_files.slice() : [],
+        current_followup_mode: followupMode
+      };
+    }
+
+    function buildFollowUpChoicesForCurrentState(options = {}) {
+      const summary = options.deliverySummary || (currentProjectState && currentProjectState.delivery_summary) || {};
+      const lang = options.lang || detectUserLanguage(
+        currentProjectState && (currentProjectState.original_user_goal || currentProjectState.user_goal || currentProjectState.project_name) || ""
+      );
+      const mode = String(options.mode || "").toUpperCase();
+      const deliveryType = String(summary.delivery_type || currentDeliveryFlowState.current_delivery_type || "");
+      const ar = lang === "ar";
+
+      if (mode === "PROVIDER_UNAVAILABLE") {
+        return ar
+          ? [
+              { action_id: "CREATE_STATIC_PROTOTYPE", label: "إنشاء Prototype HTML محلي بسيط من المتطلبات", value: "إنشاء Prototype HTML محلي بسيط من المتطلبات", description: "إنشاء Prototype ثابت محكوم عبر Forge، وليس نظام Production كامل." },
+              { action_id: "SHOW_REQUIREMENTS_FILES", label: "اعرض ملفات المتطلبات", value: "اعرض ملفات المتطلبات", description: "عرض ملفات التسليم الحالية." },
+              { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." },
+              { action_id: "START_OVER", label: "ابدأ من جديد", value: "ابدأ من جديد", description: "إغلاق التدفق الحالي وانتظار طلب جديد." }
+            ]
+          : [
+              { action_id: "CREATE_STATIC_PROTOTYPE", label: "Create local HTML prototype", value: "Create a simple local HTML prototype from these requirements", description: "Create a governed static prototype, not a production system." },
+              { action_id: "SHOW_REQUIREMENTS_FILES", label: "Show requirement files", value: "Show requirement files", description: "Show the current delivery files." },
+              { action_id: "STOP_FLOW", label: "Stop", value: "stop", description: "Stop the current project flow." },
+              { action_id: "START_OVER", label: "Start over", value: "start over", description: "Close this flow and start a new request." }
+            ];
+      }
+
+      if (mode === "REVISION_PROMPT") {
+        return ar
+          ? [
+              { action_id: "SUBMIT_REVISION", label: "أرسل التعديل", value: "أرسل التعديل", description: "اكتب تفاصيل التعديل في مربع الرسالة ثم أرسلها." },
+              { action_id: "SHOW_REQUIREMENTS_FILES", label: "اعرض ملفات المتطلبات", value: "اعرض ملفات المتطلبات", description: "عرض ملفات المتطلبات الحالية قبل التعديل." },
+              { action_id: "BACK_TO_DELIVERY", label: "ارجع", value: "ارجع", description: "الرجوع لاختيارات التسليم الحالية." },
+              { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." }
+            ]
+          : [
+              { action_id: "SUBMIT_REVISION", label: "Submit change", value: "Submit change", description: "Type the change details in the message box and send them." },
+              { action_id: "SHOW_REQUIREMENTS_FILES", label: "Show requirement files", value: "Show requirement files", description: "Show current requirement files before changing them." },
+              { action_id: "BACK_TO_DELIVERY", label: "Back", value: "back", description: "Return to the current delivery choices." },
+              { action_id: "STOP_FLOW", label: "Stop", value: "stop", description: "Stop the current project flow." }
+            ];
+      }
+
+      if (mode === "AFTER_REQUIREMENT_FILES") {
+        return ar
+          ? [
+              { action_id: "BUILD_RUNNABLE_FROM_REQUIREMENTS", label: "ابني تطبيق قابل للتشغيل من هذه المتطلبات", value: "ابني تطبيق قابل للتشغيل من هذه المتطلبات", description: "محاولة بناء تطبيق قابل للتشغيل من حزمة المتطلبات الحالية." },
+              { action_id: "REVISE_REQUIREMENTS", label: "عدّل المتطلبات", value: "عدل المتطلبات", description: "تعديل حزمة المتطلبات قبل بناء تطبيق." },
+              { action_id: "SHOW_FILE_DETAILS", label: "اعرض تفاصيل ملف", value: "اعرض تفاصيل ملف", description: "اكتب اسم ملف من القائمة لعرض تفاصيله." },
+              { action_id: "START_OVER", label: "ابدأ من جديد", value: "ابدأ من جديد", description: "إغلاق التدفق الحالي وانتظار طلب جديد." },
+              { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." }
+            ]
+          : [
+              { action_id: "BUILD_RUNNABLE_FROM_REQUIREMENTS", label: "Build runnable app", value: "Build the runnable application from these requirements", description: "Attempt to build a runnable application from the current requirements package." },
+              { action_id: "REVISE_REQUIREMENTS", label: "Revise requirements", value: "revise requirements", description: "Revise the current requirements before building." },
+              { action_id: "SHOW_FILE_DETAILS", label: "Show file details", value: "Show file details", description: "Type a file name from the list to inspect it." },
+              { action_id: "START_OVER", label: "Start over", value: "start over", description: "Close this flow and start a new request." },
+              { action_id: "STOP_FLOW", label: "Stop", value: "stop", description: "Stop the current project flow." }
+            ];
+      }
+
+      if (mode === "AFTER_RUN_INSTRUCTIONS") {
+        return ar
+          ? [
+              { action_id: "SHOW_APP_FILES", label: "اعرض ملفات التطبيق", value: "اعرض ملفات التطبيق", description: "عرض كل ملفات التطبيق الناتجة." },
+              { action_id: "REQUEST_APP_CHANGES", label: "اطلب تعديل", value: "اطلب تعديل", description: "تحديد تعديل واضح على التسليم الحالي." },
+              { action_id: "START_OVER", label: "ابدأ من جديد", value: "ابدأ من جديد", description: "إغلاق التدفق الحالي وانتظار طلب جديد." },
+              { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." }
+            ]
+          : [
+              { action_id: "SHOW_APP_FILES", label: "Show app files", value: "Show app files", description: "Show all current application files." },
+              { action_id: "REQUEST_APP_CHANGES", label: "Request changes", value: "Request changes", description: "Describe changes to the current delivery." },
+              { action_id: "START_OVER", label: "Start over", value: "start over", description: "Close this flow and start a new request." },
+              { action_id: "STOP_FLOW", label: "Stop", value: "stop", description: "Stop the current project flow." }
+            ];
+      }
+
+      if (deliveryType === "RUNNABLE_APPLICATION") {
+        return ar
+          ? [
+              { action_id: "SHOW_RUN_INSTRUCTIONS", label: "شغّل أو افتح التطبيق", value: "شغل أو افتح التطبيق", description: "عرض تعليمات التشغيل بدون فتح المتصفح تلقائيًا." },
+              { action_id: "SHOW_APP_FILES", label: "اعرض ملفات التطبيق", value: "اعرض ملفات التطبيق", description: "عرض كل ملفات التطبيق الناتجة." },
+              { action_id: "REQUEST_APP_CHANGES", label: "اطلب تعديل", value: "اطلب تعديل", description: "تحديد تعديل واضح على التسليم الحالي." },
+              { action_id: "START_OVER", label: "ابدأ من جديد", value: "ابدأ من جديد", description: "إغلاق التدفق الحالي وانتظار طلب جديد." },
+              { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." }
+            ]
+          : [
+              { action_id: "SHOW_RUN_INSTRUCTIONS", label: "Run or open app", value: "Run or open the application", description: "Show run instructions without opening the browser." },
+              { action_id: "SHOW_APP_FILES", label: "Show app files", value: "Show app files", description: "Show all current application files." },
+              { action_id: "REQUEST_APP_CHANGES", label: "Request changes", value: "Request changes", description: "Describe changes to the current delivery." },
+              { action_id: "START_OVER", label: "Start over", value: "start over", description: "Close this flow and start a new request." },
+              { action_id: "STOP_FLOW", label: "Stop", value: "stop", description: "Stop the current project flow." }
+            ];
+      }
+
+      if (deliveryType === "DOCUMENT_DELIVERY") {
+        return ar
+          ? [
+              { action_id: "SHOW_DOCUMENT", label: "اعرض الوثيقة", value: "اعرض الوثيقة", description: "عرض آخر وثيقة معتمدة أو مسودة." },
+              { action_id: "BUILD_RUNNABLE_FROM_DOCUMENT", label: "ابني التطبيق من هذه الوثيقة", value: "ابني التطبيق من هذه الوثيقة", description: "تحويل الوثيقة إلى طلب بناء تطبيق قابل للتشغيل." },
+              { action_id: "REVISE_DOCUMENT", label: "عدّل الوثيقة", value: "عدل الوثيقة", description: "تعديل الوثيقة قبل أي تنفيذ جديد." },
+              { action_id: "START_OVER", label: "ابدأ من جديد", value: "ابدأ من جديد", description: "إغلاق التدفق الحالي وانتظار طلب جديد." },
+              { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." }
+            ]
+          : [
+              { action_id: "SHOW_DOCUMENT", label: "Show document", value: "show documentation", description: "Show the latest document delivery." },
+              { action_id: "BUILD_RUNNABLE_FROM_DOCUMENT", label: "Build app from document", value: "build the application from this proposal", description: "Turn this document into a runnable application request." },
+              { action_id: "REVISE_DOCUMENT", label: "Revise document", value: "revise documentation", description: "Change the current document before another execution." },
+              { action_id: "START_OVER", label: "Start over", value: "start over", description: "Close this flow and start a new request." },
+              { action_id: "STOP_FLOW", label: "Stop", value: "stop", description: "Stop the current project flow." }
+            ];
+      }
+
+      return ar
+        ? [
+            { action_id: "BUILD_RUNNABLE_FROM_REQUIREMENTS", label: "ابني تطبيق قابل للتشغيل من هذه المتطلبات", value: "ابني تطبيق قابل للتشغيل من هذه المتطلبات", description: "محاولة بناء تطبيق قابل للتشغيل من حزمة المتطلبات الحالية." },
+            { action_id: "SHOW_REQUIREMENTS_FILES", label: "اعرض ملفات المتطلبات", value: "اعرض ملفات المتطلبات", description: "عرض ملفات التسليم الحالية." },
+            { action_id: "REVISE_REQUIREMENTS", label: "عدّل المتطلبات", value: "عدل المتطلبات", description: "تعديل حزمة المتطلبات قبل بناء تطبيق." },
+            { action_id: "START_OVER", label: "ابدأ من جديد", value: "ابدأ من جديد", description: "إغلاق التدفق الحالي وانتظار طلب جديد." },
+            { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." }
+          ]
+        : [
+            { action_id: "BUILD_RUNNABLE_FROM_REQUIREMENTS", label: "Build runnable app", value: "Build the runnable application from these requirements", description: "Attempt to build a runnable application from the current requirements package." },
+            { action_id: "SHOW_REQUIREMENTS_FILES", label: "Show requirement files", value: "Show requirement files", description: "Show current delivery files." },
+            { action_id: "REVISE_REQUIREMENTS", label: "Revise requirements", value: "revise requirements", description: "Revise the current requirements before building." },
+            { action_id: "START_OVER", label: "Start over", value: "start over", description: "Close this flow and start a new request." },
+            { action_id: "STOP_FLOW", label: "Stop", value: "stop", description: "Stop the current project flow." }
+          ];
+    }
+
+    function buildPostActionChoicesHtml(deliverySummary, lang, mode = "") {
+      const choices = buildFollowUpChoicesForCurrentState({ deliverySummary, lang, mode });
+      return choices.length > 0 ? `<div style="margin-top:12px;">${buildCurrentProjectActionChoiceHtml(choices)}</div>` : "";
+    }
+
     function buildDeliveryFollowupChoices(deliverySummary, lang) {
+      updateCurrentDeliveryFlowState(deliverySummary, "DELIVERY_SUMMARY");
+      return buildFollowUpChoicesForCurrentState({ deliverySummary, lang, mode: "DELIVERY_SUMMARY" });
+
       const deliveryType = deliverySummary && deliverySummary.delivery_type ? deliverySummary.delivery_type : "";
 
       if (deliveryType === "REQUIREMENTS_PACKAGE") {
@@ -1530,6 +1780,66 @@
         ];
       }
 
+      if (deliveryType === "RUNNABLE_APPLICATION") {
+        if (lang === "ar") {
+          return [
+            {
+              label: "\u0634\u063a\u0651\u0644 \u0623\u0648 \u0627\u0641\u062a\u062d \u0627\u0644\u062a\u0637\u0628\u064a\u0642",
+              value: "\u0634\u063a\u0644 \u0623\u0648 \u0627\u0641\u062a\u062d \u0627\u0644\u062a\u0637\u0628\u064a\u0642",
+              description: "\u0639\u0631\u0636 \u062a\u0639\u0644\u064a\u0645\u0627\u062a \u0627\u0644\u062a\u0634\u063a\u064a\u0644 \u0644\u0644\u0645\u062e\u0631\u062c \u0627\u0644\u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644."
+            },
+            {
+              label: "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0637\u0628\u064a\u0642",
+              value: "\u0627\u0639\u0631\u0636 \u0627\u0644\u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0646\u0627\u062a\u062c\u0629",
+              description: "\u0639\u0631\u0636 \u0643\u0644 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062d\u0627\u0644\u064a\u0629."
+            },
+            {
+              label: "\u0639\u062f\u0651\u0644 \u0627\u0644\u062a\u0637\u0628\u064a\u0642",
+              value: "\u0627\u0637\u0644\u0628 \u062a\u0639\u062f\u064a\u0644",
+              description: "\u062a\u062d\u062f\u064a\u062f \u062a\u0639\u062f\u064a\u0644 \u0648\u0627\u0636\u062d \u0639\u0644\u0649 \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062d\u0627\u0644\u064a."
+            },
+            {
+              label: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f",
+              value: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f",
+              description: "\u0625\u063a\u0644\u0627\u0642 \u0627\u0644\u062a\u062f\u0641\u0642 \u0627\u0644\u062d\u0627\u0644\u064a."
+            },
+            {
+              label: "\u0627\u062a\u0648\u0642\u0641",
+              value: "\u0627\u062a\u0648\u0642\u0641",
+              description: "\u0625\u064a\u0642\u0627\u0641 \u0627\u0644\u0637\u0644\u0628 \u0627\u0644\u062d\u0627\u0644\u064a."
+            }
+          ];
+        }
+
+        return [
+          {
+            label: "Run or open app",
+            value: "Run or open the application",
+            description: "Show run instructions for the runnable output."
+          },
+          {
+            label: "Show app files",
+            value: "Show generated files",
+            description: "Show all current delivery files."
+          },
+          {
+            label: "Request changes",
+            value: "Request changes",
+            description: "Describe changes to the current delivery."
+          },
+          {
+            label: "Start over",
+            value: "start over",
+            description: "Close this flow and start a new request."
+          },
+          {
+            label: "Stop",
+            value: "stop",
+            description: "Stop the current project flow."
+          }
+        ];
+      }
+
       if (deliveryType !== "DOCUMENT_DELIVERY") {
         return [];
       }
@@ -1537,19 +1847,19 @@
       if (lang === "ar") {
         return [
           {
-            label: "\u0627\u0628\u0646\u064a \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0645\u0646 \u0647\u0630\u0627 \u0627\u0644\u0645\u0642\u062a\u0631\u062d",
-            value: "\u0627\u0628\u0646\u064a \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0645\u0646 \u0647\u0630\u0627 \u0627\u0644\u0645\u0642\u062a\u0631\u062d",
-            description: "\u062a\u062d\u0648\u064a\u0644 \u0627\u0644\u0645\u0642\u062a\u0631\u062d \u0625\u0644\u0649 \u0637\u0644\u0628 \u0628\u0646\u0627\u0621 \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644."
-          },
-          {
-            label: "\u0639\u062f\u0651\u0644 \u0627\u0644\u0645\u0642\u062a\u0631\u062d",
-            value: "\u0639\u062f\u0644 \u0627\u0644\u0648\u062b\u064a\u0642\u0629",
-            description: "\u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u0648\u062b\u064a\u0642\u0629 \u0642\u0628\u0644 \u0623\u064a \u062a\u0646\u0641\u064a\u0630 \u062c\u062f\u064a\u062f."
-          },
-          {
-            label: "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641 \u0627\u0644\u0645\u0642\u062a\u0631\u062d",
+            label: "\u0627\u0639\u0631\u0636 \u0627\u0644\u0648\u062b\u064a\u0642\u0629",
             value: "\u0627\u0639\u0631\u0636 \u0627\u0644\u0648\u062b\u064a\u0642\u0629",
             description: "\u0639\u0631\u0636 \u0622\u062e\u0631 \u0648\u062b\u064a\u0642\u0629 \u0645\u0639\u062a\u0645\u062f\u0629 \u0623\u0648 \u0645\u0633\u0648\u062f\u0629."
+          },
+          {
+            label: "\u0627\u0628\u0646\u064a \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0645\u0646 \u0647\u0630\u0647 \u0627\u0644\u0648\u062b\u064a\u0642\u0629",
+            value: "\u0627\u0628\u0646\u064a \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0645\u0646 \u0647\u0630\u0647 \u0627\u0644\u0648\u062b\u064a\u0642\u0629",
+            description: "\u062a\u062d\u0648\u064a\u0644 \u0627\u0644\u0648\u062b\u064a\u0642\u0629 \u0625\u0644\u0649 \u0637\u0644\u0628 \u0628\u0646\u0627\u0621 \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644."
+          },
+          {
+            label: "\u0639\u062f\u0651\u0644 \u0627\u0644\u0648\u062b\u064a\u0642\u0629",
+            value: "\u0639\u062f\u0644 \u0627\u0644\u0648\u062b\u064a\u0642\u0629",
+            description: "\u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u0648\u062b\u064a\u0642\u0629 \u0642\u0628\u0644 \u0623\u064a \u062a\u0646\u0641\u064a\u0630 \u062c\u062f\u064a\u062f."
           },
           {
             label: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f",
@@ -1755,24 +2065,216 @@
         : {};
       const outputPath = summary.output_path || "";
       const files = Array.isArray(summary.output_files) ? summary.output_files : [];
-      const requirementFiles = files.filter((file) => /requirements|execution_plan|security_guidelines/i.test(String(file || "")));
-      const lines = requirementFiles.length > 0
-        ? requirementFiles.map((file) => `${outputPath}/${file}`)
-        : [lang === "ar" ? "\u0644\u0645 \u0623\u062c\u062f \u0645\u0644\u0641\u0627\u062a \u0645\u062a\u0637\u0644\u0628\u0627\u062a \u0641\u064a \u0645\u0644\u062e\u0635 \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062d\u0627\u0644\u064a." : "No requirement files were found in the current delivery summary."];
+      const deliveryType = summary.delivery_type || "UNKNOWN_ARTIFACTS";
+      const instructions = Array.isArray(summary.usage_or_run_instructions)
+        ? summary.usage_or_run_instructions
+        : Array.isArray(summary.run_instructions)
+          ? summary.run_instructions
+          : [];
+      const formatOutputPath = (file) => {
+        const value = String(file || "").trim().replace(/\\/g, "/");
+        const base = String(outputPath || "").trim().replace(/\\/g, "/");
+
+        if (!value) {
+          return "";
+        }
+
+        if (/^[A-Za-z]:\//.test(value) || value.startsWith("/") || value.startsWith("artifacts/") || !base) {
+          return value;
+        }
+
+        return `${base}/${value}`;
+      };
+      const localizedInstructions = lang === "ar" && deliveryType === "REQUIREMENTS_PACKAGE"
+        ? ["هذه ليست ملفات تشغيل. تم إنشاء حزمة متطلبات فقط. راجع ملفات التسليم الحالية، ثم يمكنك اختيار بناء تطبيق قابل للتشغيل من هذه المتطلبات."]
+        : instructions;
+      const lines = [
+        `delivery_type: ${deliveryType}`,
+        summary.execution_id ? `execution_id: ${summary.execution_id}` : "",
+        summary.package_id ? `package_id: ${summary.package_id}` : "",
+        "",
+        files.length > 0
+          ? `output_files:\n${files.map((file) => `- ${formatOutputPath(file)}`).join("\n")}`
+          : (lang === "ar" ? "لا توجد ملفات في ملخص التسليم الحالي." : "No files were listed in the current delivery summary."),
+        "",
+        lang === "ar" ? "طريقة الاستخدام أو المراجعة:" : "Usage or review:",
+        ...(localizedInstructions.length > 0
+          ? localizedInstructions
+          : [lang === "ar" ? "راجع ملفات التسليم الحالية." : "Review the current delivery files."])
+      ].filter((line) => line !== "");
 
       pushMessage(
         "user",
-        lang === "ar" ? "\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" : "Show Requirement Files",
+        lang === "ar" ? "\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0633\u0644\u064a\u0645" : "Show Delivery Files",
         `<div class="file-preview">${formatMessageText(request)}</div>`
       );
       requestInput.value = "";
 
       pushMessage(
         "assistant",
-        lang === "ar" ? "\u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a" : "Requirement Files",
-        `<div class="file-preview">${formatMessageText(lines.join("\n"))}</div>`
+        lang === "ar" ? "\u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062d\u0627\u0644\u064a\u0629" : "Current Delivery Files",
+        `<div class="file-preview">${formatMessageText(lines.join("\n"))}</div>${buildPostActionChoicesHtml(summary, lang, deliveryType === "REQUIREMENTS_PACKAGE" ? "AFTER_REQUIREMENT_FILES" : "DELIVERY_SUMMARY")}`
       );
-      setStatus(lang === "ar" ? "\u062a\u0645 \u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a." : "Requirement files shown.");
+      updateCurrentDeliveryFlowState(summary, deliveryType === "REQUIREMENTS_PACKAGE" ? "AFTER_REQUIREMENT_FILES" : "DELIVERY_SUMMARY");
+      setStatus(lang === "ar" ? "\u062a\u0645 \u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062d\u0627\u0644\u064a\u0629." : "Current delivery files shown.");
+    }
+
+    function getRealRunnableIndicators(summary) {
+      const indicators = Array.isArray(summary && summary.runnable_indicators)
+        ? summary.runnable_indicators.map((item) => String(item || "").trim()).filter(Boolean)
+        : [];
+
+      return indicators.filter((indicator) => {
+        const normalized = indicator.toLowerCase().replace(/\\/g, "/");
+
+        return normalized === "index.html" ||
+          normalized === "package.json" ||
+          normalized === "server.js" ||
+          normalized === "app.js" ||
+          normalized === "main.py" ||
+          normalized === "app.py" ||
+          normalized === "requirements.txt" ||
+          normalized === "src/" ||
+          normalized === "dist/build index.html" ||
+          normalized === "dist/index.html" ||
+          normalized === "build/index.html" ||
+          normalized.endsWith("/index.html") ||
+          normalized.endsWith("/server.js") ||
+          normalized.endsWith("/app.js") ||
+          normalized.endsWith("/main.py") ||
+          normalized.endsWith("/app.py");
+      });
+    }
+
+    function showRunInstructionsForCurrentProject(request) {
+      const lang = detectUserLanguage(request);
+      const summary = currentProjectState && currentProjectState.delivery_summary
+        ? currentProjectState.delivery_summary
+        : {};
+      const deliveryType = summary.delivery_type || "UNKNOWN_ARTIFACTS";
+      const realIndicators = getRealRunnableIndicators(summary);
+      const runnable = deliveryType === "RUNNABLE_APPLICATION" &&
+        summary.runnable_application_created === true &&
+        realIndicators.length > 0;
+      const instructions = Array.isArray(summary.run_instructions)
+        ? summary.run_instructions
+        : Array.isArray(summary.usage_or_run_instructions)
+          ? summary.usage_or_run_instructions
+          : [];
+
+      pushMessage(
+        "user",
+        lang === "ar" ? "\u062a\u0634\u063a\u064a\u0644 \u0623\u0648 \u0641\u062a\u062d \u0627\u0644\u062a\u0637\u0628\u064a\u0642" : "Run Or Open Application",
+        `<div class="file-preview">${formatMessageText(request)}</div>`
+      );
+      requestInput.value = "";
+
+      if (!runnable) {
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "\u0644\u0627 \u064a\u0648\u062c\u062f \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644" : "No Runnable Application",
+          `<div class="file-preview">${formatMessageText(
+            lang === "ar"
+              ? "\u0644\u0627 \u064a\u0648\u062c\u062f \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644 \u062d\u0627\u0644\u064a\u064b\u0627."
+              : "There is no runnable application in the current delivery."
+          )}</div>${buildPostActionChoicesHtml(summary, lang, "DELIVERY_SUMMARY")}`
+        );
+        updateCurrentDeliveryFlowState(summary, "DELIVERY_SUMMARY");
+        setStatus(lang === "ar" ? "\u0644\u0627 \u064a\u0648\u062c\u062f \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644 \u062d\u0627\u0644\u064a\u064b\u0627." : "No runnable application is available.");
+        return;
+      }
+
+      const lines = [
+        `delivery_type: ${deliveryType}`,
+        `runnable: ${summary.runnable_application_created === true ? "true" : "false"}`,
+        `runnable_indicators: ${realIndicators.join(", ")}`,
+        "",
+        lang === "ar" ? "\u062a\u0639\u0644\u064a\u0645\u0627\u062a \u0627\u0644\u062a\u0634\u063a\u064a\u0644:" : "Run instructions:",
+        ...(instructions.length > 0
+          ? instructions
+          : [lang === "ar" ? "\u0627\u0641\u062a\u062d \u0645\u0644\u0641 index.html \u0641\u064a \u0627\u0644\u0645\u062a\u0635\u0641\u062d \u0625\u0630\u0627 \u0643\u0627\u0646 \u0645\u0648\u062c\u0648\u062f\u064b\u0627." : "Open index.html in a browser if present."])
+      ];
+
+      pushMessage(
+        "assistant",
+        lang === "ar" ? "\u062a\u0639\u0644\u064a\u0645\u0627\u062a \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062a\u0637\u0628\u064a\u0642" : "Application Run Instructions",
+        `<div class="file-preview">${formatMessageText(lines.join("\n"))}</div>${buildPostActionChoicesHtml(summary, lang, "AFTER_RUN_INSTRUCTIONS")}`
+      );
+      updateCurrentDeliveryFlowState(summary, "AFTER_RUN_INSTRUCTIONS");
+      setStatus(lang === "ar" ? "\u062a\u0645 \u0639\u0631\u0636 \u062a\u0639\u0644\u064a\u0645\u0627\u062a \u0627\u0644\u062a\u0634\u063a\u064a\u0644." : "Run instructions shown.");
+    }
+
+    function askForDeliveryChangeRequest(request) {
+      const lang = detectUserLanguage(request);
+      const summary = currentProjectState && currentProjectState.delivery_summary
+        ? currentProjectState.delivery_summary
+        : {};
+      const deliveryType = String(summary.delivery_type || "");
+      const isRequirements = deliveryType === "REQUIREMENTS_PACKAGE";
+
+      pushMessage(
+        "user",
+        lang === "ar" ? "\u0637\u0644\u0628 \u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u062a\u0633\u0644\u064a\u0645" : "Delivery Change Request",
+        `<div class="file-preview">${formatMessageText(request)}</div>`
+      );
+      requestInput.value = "";
+
+      pushMessage(
+        "assistant",
+        lang === "ar" ? "\u0645\u0637\u0644\u0648\u0628 \u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u062a\u0639\u062f\u064a\u0644" : "Change Details Needed",
+        `<div class="file-preview">${formatMessageText(
+          lang === "ar"
+            ? (isRequirements
+                ? "\u0645\u0627 \u0627\u0644\u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u0645\u0637\u0644\u0648\u0628 \u0639\u0644\u0649 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a\u061f"
+                : "\u0645\u0627 \u0627\u0644\u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u0645\u0637\u0644\u0648\u0628 \u0639\u0644\u0649 \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062d\u0627\u0644\u064a\u061f")
+            : "Describe the requested change clearly. I will treat it as a change to this project, not as a new request."
+        )}</div>${buildPostActionChoicesHtml(summary, lang, "REVISION_PROMPT")}`
+      );
+
+      updateCurrentDeliveryFlowState(summary, "REVISION_PROMPT");
+      pendingDeliveryRevision = {
+        project_id: getActiveProjectId(),
+        delivery_type: deliveryType,
+        mode: isRequirements ? "REVISE_REQUIREMENTS" : "REQUEST_DELIVERY_CHANGES"
+      };
+      setStatus(lang === "ar" ? "\u0628\u0627\u0646\u062a\u0638\u0627\u0631 \u062a\u0641\u0627\u0635\u064a\u0644 \u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u062a\u0633\u0644\u064a\u0645." : "Waiting for delivery change details.");
+    }
+
+    function submitDeliveryRevisionFromText(request) {
+      const lang = detectUserLanguage(request);
+      const summary = currentProjectState && currentProjectState.delivery_summary
+        ? currentProjectState.delivery_summary
+        : {};
+      const revision = pendingDeliveryRevision || {};
+
+      pushMessage(
+        "user",
+        lang === "ar" ? "تفاصيل التعديل" : "Change Details",
+        `<div class="file-preview">${formatMessageText(request)}</div>`
+      );
+      requestInput.value = "";
+      pendingDeliveryRevision = null;
+
+      pushMessage(
+        "assistant",
+        lang === "ar" ? "تم تسجيل التعديل على نفس المشروع" : "Change Captured For Current Project",
+        `<div class="file-preview">${formatMessageText(
+          lang === "ar"
+            ? [
+                "تم تسجيل التعديل المطلوب داخل مسار التسليم الحالي، وليس كطلب جديد.",
+                `نوع التعديل: ${revision.mode || "REQUEST_DELIVERY_CHANGES"}`,
+                "لن يتم تعديل الملفات مباشرة خارج مسار Forge governance."
+              ].join("\n")
+            : [
+                "The requested change was captured in the current delivery flow, not as a new request.",
+                `Change type: ${revision.mode || "REQUEST_DELIVERY_CHANGES"}`,
+                "Files will not be modified directly outside Forge governance."
+              ].join("\n")
+        )}</div>${buildPostActionChoicesHtml(summary, lang, "DELIVERY_SUMMARY")}`
+      );
+      updateCurrentDeliveryFlowState(summary, "DELIVERY_SUMMARY");
+      setStatus(lang === "ar" ? "تم تسجيل تعديل التسليم الحالي." : "Current delivery change captured.");
+      return true;
     }
 
     async function buildRunnableFromRequirementsForCurrentProject(request, useLocalFallback = false) {
@@ -1812,7 +2314,7 @@
         if (result.mode === "BUILD_RUNNABLE_PROVIDER_UNAVAILABLE") {
           const message = lang === "ar"
             ? [
-                "\u0628\u0646\u0627\u0621 \u062a\u0637\u0628\u064a\u0642 \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644 \u064a\u062d\u062a\u0627\u062c \u0645\u0648\u0644\u0651\u062f \u0643\u0648\u062f/Provider \u063a\u064a\u0631 \u0645\u062a\u0627\u062d \u062d\u0627\u0644\u064a\u064b\u0627.",
+                "\u0628\u0646\u0627\u0621 \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u064a\u062d\u062a\u0627\u062c Provider \u063a\u064a\u0631 \u0645\u062a\u0627\u062d \u062d\u0627\u0644\u064a\u064b\u0627.",
                 "",
                 ...lines
               ].join("\n")
@@ -1827,23 +2329,25 @@
             lang === "ar" ? "\u0645\u0633\u0627\u0631 \u0627\u0644\u0628\u0646\u0627\u0621" : "Build Path",
             `
               <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(message)}</div>
-              ${buildCurrentProjectActionChoiceHtml(buildProviderUnavailableRequirementChoices(lang))}
+              ${buildPostActionChoicesHtml(deliverySummary, lang, "PROVIDER_UNAVAILABLE")}
             `
           );
+          updateCurrentDeliveryFlowState(deliverySummary, "PROVIDER_UNAVAILABLE");
           setStatus("Provider unavailable for runnable build; fallback choices shown.");
           return true;
         }
 
-        const followupChoices = buildDeliveryFollowupChoices(deliverySummary, lang);
-        const followupHtml = followupChoices.length > 0
-          ? `<div style="margin-top:12px;">${buildCurrentProjectActionChoiceHtml(followupChoices)}</div>`
+        const prototypeNote = useLocalFallback
+          ? (lang === "ar" ? "\n\nهذا Prototype ثابت مبني من المتطلبات، وليس نظام Production كامل." : "\n\nThis is a static prototype built from the requirements, not a full production system.")
           : "";
+        const followupHtml = buildPostActionChoicesHtml(deliverySummary, lang, "DELIVERY_SUMMARY");
 
         pushMessage(
           "assistant",
           lang === "ar" ? "\u0645\u0644\u062e\u0635 \u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u0628\u0646\u0627\u0621" : "Build Delivery Summary",
-          `<div class="file-preview">${formatMessageText(lines.join("\n"))}</div>${followupHtml}`
+          `<div class="file-preview">${formatMessageText(lines.join("\n") + prototypeNote)}</div>${followupHtml}`
         );
+        updateCurrentDeliveryFlowState(deliverySummary, "DELIVERY_SUMMARY");
         setStatus(
           deliverySummary.runnable_application_created
             ? "Runnable application output detected."
@@ -1852,7 +2356,8 @@
         return true;
       } catch (err) {
         renderResponse({ error: err.message });
-        pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>`);
+        const summaryForChoices = (currentProjectState && currentProjectState.delivery_summary) || summary || {};
+        pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>${buildPostActionChoicesHtml(summaryForChoices, lang, "DELIVERY_SUMMARY")}`);
         setStatus(`Error: ${err.message}`);
         return true;
       } finally {
@@ -2089,9 +2594,21 @@
         return true;
       }
 
+      if (isRunOrOpenApplicationRequest(request)) {
+        clearPendingDiscoveryForProjectCommand();
+        showRunInstructionsForCurrentProject(request);
+        return true;
+      }
+
       if (isShowRequirementFilesRequest(request)) {
         clearPendingDiscoveryForProjectCommand();
         showRequirementFilesForCurrentProject(request);
+        return true;
+      }
+
+      if (isRequestDeliveryChangesRequest(request)) {
+        clearPendingDiscoveryForProjectCommand();
+        askForDeliveryChangeRequest(request);
         return true;
       }
 
@@ -2150,6 +2667,110 @@
       }
 
       return false;
+    }
+
+    async function handleProjectActionChoice(actionId, choiceValue) {
+      const action = String(actionId || "").trim().toUpperCase();
+      const value = String(choiceValue || "").trim();
+
+      if (!action || action === "UNKNOWN_ACTION") {
+        requestInput.value = value;
+        chatSendBtn.click();
+        return;
+      }
+
+      if (action === "BUILD_RUNNABLE_FROM_REQUIREMENTS") {
+        await buildRunnableFromRequirementsForCurrentProject(value || "Build the runnable application from these requirements", false);
+        return;
+      }
+
+      if (action === "CREATE_STATIC_PROTOTYPE") {
+        await buildRunnableFromRequirementsForCurrentProject(value || "Create a simple local HTML prototype from these requirements", true);
+        return;
+      }
+
+      if (action === "SHOW_REQUIREMENTS_FILES" || action === "SHOW_APP_FILES") {
+        showRequirementFilesForCurrentProject(value || (action === "SHOW_APP_FILES" ? "Show app files" : "Show requirement files"));
+        return;
+      }
+
+      if (action === "SHOW_RUN_INSTRUCTIONS") {
+        showRunInstructionsForCurrentProject(value || "Run or open the application");
+        return;
+      }
+
+      if (action === "REVISE_REQUIREMENTS" || action === "REQUEST_APP_CHANGES" || action === "REVISE_DOCUMENT") {
+        askForDeliveryChangeRequest(value || "Request changes");
+        return;
+      }
+
+      if (action === "SUBMIT_REVISION") {
+        const lang = detectUserLanguage(value || (currentProjectState && currentProjectState.project_name) || "");
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "اكتب التعديل" : "Type The Change",
+          `<div class="file-preview">${formatMessageText(
+            lang === "ar"
+              ? "اكتب تفاصيل التعديل في مربع الرسالة ثم اضغط إرسال. سيتم التعامل معه كتعديل على نفس المشروع وليس طلبًا جديدًا."
+              : "Type the change details in the message box and send them. It will be treated as a change to the same project, not a new request."
+          )}</div>${buildPostActionChoicesHtml((currentProjectState && currentProjectState.delivery_summary) || {}, lang, "REVISION_PROMPT")}`
+        );
+        requestInput.focus();
+        return;
+      }
+
+      if (action === "SHOW_FILE_DETAILS") {
+        const lang = detectUserLanguage(value || (currentProjectState && currentProjectState.project_name) || "");
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "تفاصيل ملف" : "File Details",
+          `<div class="file-preview">${formatMessageText(
+            lang === "ar"
+              ? "اكتب اسم الملف من القائمة لعرض تفاصيله. سأتعامل معه داخل نفس تسليم المشروع."
+              : "Type a file name from the list to inspect it within this delivery."
+          )}</div>${buildPostActionChoicesHtml((currentProjectState && currentProjectState.delivery_summary) || {}, lang, "AFTER_REQUIREMENT_FILES")}`
+        );
+        requestInput.focus();
+        return;
+      }
+
+      if (action === "BACK_TO_DELIVERY") {
+        const lang = detectUserLanguage(value || (currentProjectState && currentProjectState.project_name) || "");
+        const summary = (currentProjectState && currentProjectState.delivery_summary) || {};
+        pendingDeliveryRevision = null;
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "اختيارات المتابعة" : "Follow-up Choices",
+          `${buildPostActionChoicesHtml(summary, lang, "DELIVERY_SUMMARY")}`
+        );
+        updateCurrentDeliveryFlowState(summary, "DELIVERY_SUMMARY");
+        return;
+      }
+
+      if (action === "SHOW_DOCUMENT") {
+        await showAiOsDocumentationForCurrentProject(value || "show documentation");
+        return;
+      }
+
+      if (action === "BUILD_RUNNABLE_FROM_DOCUMENT") {
+        await buildRunnableFromRequirementsForCurrentProject(value || "build the application from this proposal", false);
+        return;
+      }
+
+      if (action === "START_OVER") {
+        pendingDeliveryRevision = null;
+        startOverCurrentProjectFlow(value || "start over");
+        return;
+      }
+
+      if (action === "STOP_FLOW") {
+        pendingDeliveryRevision = null;
+        stopCurrentProjectFlow(value || "stop");
+        return;
+      }
+
+      requestInput.value = value;
+      chatSendBtn.click();
     }
 
     function getCheckpointUserMessageTitle(userText, sourceRequestText) {
@@ -2535,6 +3156,9 @@
       }
 
       currentProjectState = project;
+      if (project.delivery_summary) {
+        updateCurrentDeliveryFlowState(project.delivery_summary, project.current_followup_mode || currentDeliveryFlowState.current_followup_mode || "");
+      }
 
       const pending = Array.isArray(project.pending_decisions) ? project.pending_decisions : [];
 
@@ -2545,6 +3169,8 @@
         `Docs: ${project.documentation_state || "UNKNOWN"}\n` +
         `Execution package: ${project.execution_package_state || "UNKNOWN"}\n` +
         `Execution: ${project.execution_state || "UNKNOWN"}\n` +
+        `Delivery type: ${project.current_delivery_type || (project.delivery_summary && project.delivery_summary.delivery_type) || "UNKNOWN"}\n` +
+        `Follow-up: ${project.current_followup_mode || currentDeliveryFlowState.current_followup_mode || "None"}\n` +
         `Pending decisions: ${pending.join(", ") || "None"}`;
     }
 
@@ -3142,6 +3768,11 @@
         return;
       }
 
+      if (pendingDeliveryRevision) {
+        submitDeliveryRevisionFromText(request);
+        return;
+      }
+
       if (await handleCurrentProjectStateCommand(request)) {
         return;
       }
@@ -3705,6 +4336,7 @@
 
       if (projectCommandButton) {
         const choiceValue = projectCommandButton.getAttribute("data-project-command-choice");
+        const actionId = projectCommandButton.getAttribute("data-action-id") || "";
 
         if (!choiceValue || projectCommandButton.disabled) {
           return;
@@ -3717,8 +4349,12 @@
           btn.style.cursor = "not-allowed";
         });
 
-        requestInput.value = choiceValue;
-        chatSendBtn.click();
+        handleProjectActionChoice(actionId, choiceValue).catch((err) => {
+          renderResponse({ error: err.message });
+          const summary = (currentProjectState && currentProjectState.delivery_summary) || {};
+          pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>${buildPostActionChoicesHtml(summary, detectUserLanguage(choiceValue), "DELIVERY_SUMMARY")}`);
+          setStatus(`Error: ${err.message}`);
+        });
         return;
       }
 

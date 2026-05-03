@@ -24,7 +24,7 @@
   "requirement_model": {},
   "requirement_reasoning_summary": "",
   "provider_error": "",
-  "original_user_goal": "",
+  "original_user_goal": "add a button to the UI",
   "latest_requested_action": "",
   "active_followup_action": "",
   "documentation_state": "APPROVED",
@@ -33,6 +33,12 @@
   "verification_state": "NOT_READY",
   "delivery_state": "NOT_READY",
   "delivery_summary": null,
+  "current_delivery_state": "UNKNOWN",
+  "current_delivery_type": "",
+  "current_execution_id": "",
+  "current_package_id": "",
+  "current_output_files": [],
+  "current_followup_mode": "",
   "conversation_history": {
     "proposal_count": 1,
     "draft_count": 1,
@@ -78,5 +84,5 @@
     }
   ],
   "active_project_flag": false,
-  "last_updated_at": "2026-05-03T08:51:53.939Z"
+  "last_updated_at": "2026-05-03T11:47:39.543Z"
 }

@@ -1738,12 +1738,18 @@ ${trimmedExisting}`
     ).trim();
     const existingProjectName = String(existing.project_name || "").trim();
     const existingUserGoal = String(existing.user_goal || "").trim();
-    const repairedOriginalGoal = String(existing.original_user_goal || packageOriginalGoal || "").trim();
+    const currentOriginalGoal = String(packageOriginalGoal || existing.original_user_goal || existingUserGoal || "").trim();
+    const repairedOriginalGoal = currentOriginalGoal;
     const shouldRepairFollowupIdentity =
       repairedOriginalGoal &&
       (
         isRequirementsFollowupActionText(existingProjectName) ||
-        isRequirementsFollowupActionText(existingUserGoal)
+        isRequirementsFollowupActionText(existingUserGoal) ||
+        (
+          packageOriginalGoal &&
+          existingUserGoal &&
+          existingUserGoal !== packageOriginalGoal
+        )
       );
 
     const activeRuntimeState =
@@ -1784,6 +1790,12 @@ ${trimmedExisting}`
 
     const verificationState = overrides.verification_state || (executionPackageStatus === "EXECUTED" ? "PASS" : "NOT_READY");
     const deliveryState = overrides.delivery_state || existing.delivery_state || (executionPackageStatus === "EXECUTED" ? "ARTIFACTS_ONLY" : "NOT_READY");
+    const effectiveDeliverySummary =
+      overrides.delivery_summary && typeof overrides.delivery_summary === "object"
+        ? overrides.delivery_summary
+        : existing.delivery_summary && typeof existing.delivery_summary === "object"
+          ? existing.delivery_summary
+          : null;
 
     const state = {
       project_id: projectId,
@@ -1856,7 +1868,7 @@ ${trimmedExisting}`
       original_user_goal:
         typeof overrides.original_user_goal === "string"
           ? overrides.original_user_goal
-          : existing.original_user_goal || packageOriginalGoal || "",
+          : currentOriginalGoal,
       latest_requested_action:
         typeof overrides.latest_requested_action === "string"
           ? overrides.latest_requested_action
@@ -1871,12 +1883,39 @@ ${trimmedExisting}`
       execution_state: executionState,
       verification_state: verificationState,
       delivery_state: deliveryState,
-      delivery_summary:
-        overrides.delivery_summary && typeof overrides.delivery_summary === "object"
-          ? overrides.delivery_summary
-          : existing.delivery_summary && typeof existing.delivery_summary === "object"
-            ? existing.delivery_summary
-            : null,
+      delivery_summary: effectiveDeliverySummary,
+      current_delivery_state:
+        typeof overrides.current_delivery_state === "string"
+          ? overrides.current_delivery_state
+          : effectiveDeliverySummary ? "DELIVERED" : existing.current_delivery_state || "UNKNOWN",
+      current_delivery_type:
+        typeof overrides.current_delivery_type === "string"
+          ? overrides.current_delivery_type
+          : effectiveDeliverySummary && effectiveDeliverySummary.delivery_type
+            ? String(effectiveDeliverySummary.delivery_type)
+            : existing.current_delivery_type || "",
+      current_execution_id:
+        typeof overrides.current_execution_id === "string"
+          ? overrides.current_execution_id
+          : effectiveDeliverySummary && effectiveDeliverySummary.execution_id
+            ? String(effectiveDeliverySummary.execution_id)
+            : existing.current_execution_id || "",
+      current_package_id:
+        typeof overrides.current_package_id === "string"
+          ? overrides.current_package_id
+          : effectiveDeliverySummary && effectiveDeliverySummary.package_id
+            ? String(effectiveDeliverySummary.package_id)
+            : existing.current_package_id || "",
+      current_output_files:
+        Array.isArray(overrides.current_output_files)
+          ? overrides.current_output_files
+          : effectiveDeliverySummary && Array.isArray(effectiveDeliverySummary.output_files)
+            ? effectiveDeliverySummary.output_files
+            : Array.isArray(existing.current_output_files) ? existing.current_output_files : [],
+      current_followup_mode:
+        typeof overrides.current_followup_mode === "string"
+          ? overrides.current_followup_mode
+          : existing.current_followup_mode || "",
       conversation_history: {
         proposal_count: proposalCount,
         draft_count: draftCount,
@@ -2269,6 +2308,9 @@ ${trimmedExisting}`
     const packageJson = findFile("package.json");
     const serverJs = findFile("server.js");
     const appJs = findFile("app.js");
+    const mainPy = findFile("main.py");
+    const appPy = findFile("app.py");
+    const requirementsTxt = findFile("requirements.txt");
     const readme = findFile("readme.md");
     const readmeText = readme ? readTextSafe(path.join(outputAbs, readme)).toLowerCase() : "";
     const readmeHasRunInstructions = Boolean(
@@ -2283,14 +2325,24 @@ ${trimmedExisting}`
       )
     );
     const hasSrc = lowerDirectories.includes("src") || lowerFiles.some((file) => file.startsWith("src/") || file.includes("/src/"));
+    const hasDistOrBuildIndex = lowerFiles.some((file) =>
+      (file.startsWith("dist/") || file.includes("/dist/") || file.startsWith("build/") || file.includes("/build/")) &&
+      file.endsWith("/index.html")
+    );
+    const hasPythonEntrypoint = Boolean(mainPy || appPy);
+    const hasNodeEntrypoint = Boolean(packageJson || serverJs || appJs);
+    const hasStaticEntrypoint = Boolean(indexHtml || hasDistOrBuildIndex);
 
     const runnableIndicators = [
       indexHtml ? "index.html" : "",
       packageJson ? "package.json" : "",
       serverJs ? "server.js" : "",
       appJs ? "app.js" : "",
-      hasSrc ? "src/" : "",
-      readmeHasRunInstructions ? "README.md" : ""
+      mainPy ? "main.py" : "",
+      appPy ? "app.py" : "",
+      requirementsTxt && hasPythonEntrypoint ? "requirements.txt" : "",
+      hasSrc && packageJson ? "src/" : "",
+      hasDistOrBuildIndex ? "dist/build index.html" : ""
     ].filter(Boolean);
 
     const currentExecutionOutputFound = files.length > 0;
@@ -2311,16 +2363,28 @@ ${trimmedExisting}`
     const hasBuildIntent = buildIntentPattern.test(intentText);
     const requirementPackageNames = new Set([
       "requirements.md",
+      "requirements.json",
       "execution_plan.json",
-      "provider_requirements_model.json"
+      "provider_requirements_model.json",
+      "project_metadata.json",
+      "deployment_plan.md",
+      "specification.md"
     ]);
+    const requirementArtifactPattern = /(^|\/)(readme\.md|project_metadata\.json|deployment_plan\.md|execution_plan\.md|security_guidelines\.md|specification\.md|requirements\.(json|md)|.*_requirements\.json|.*_execution_plan\.md|.*_security_guidelines\.md|.*_specification\.md)$/i;
     const hasOnlyRequirementsPackage =
       currentExecutionOutputFound &&
       files.every((file) => {
         const normalized = file.toLowerCase();
-        return Array.from(requirementPackageNames).some((suffix) => normalized.endsWith(suffix));
+        return Array.from(requirementPackageNames).some((suffix) => normalized.endsWith(suffix)) ||
+          requirementArtifactPattern.test(file);
       });
-    const hasRunnableApplication = currentExecutionOutputFound && !hasOnlyRequirementsPackage && runnableIndicators.length > 0;
+    const hasRealRunnableEntrypoint =
+      hasStaticEntrypoint ||
+      hasNodeEntrypoint ||
+      hasPythonEntrypoint ||
+      Boolean(requirementsTxt && hasPythonEntrypoint) ||
+      Boolean(hasSrc && packageJson);
+    const hasRunnableApplication = currentExecutionOutputFound && !hasOnlyRequirementsPackage && hasRealRunnableEntrypoint;
     const hasOnlyDocsOrData =
       currentExecutionOutputFound &&
       files.every((file) => {
@@ -2335,15 +2399,15 @@ ${trimmedExisting}`
       (!hasBuildIntent || intentText.includes("مقترح") || intentText.includes("proposal") || intentText.includes("وثيقة") || intentText.includes("document"));
     const deliveryType = hasRunnableApplication
       ? "RUNNABLE_APPLICATION"
-      : hasDocumentDelivery
-        ? "DOCUMENT_DELIVERY"
-        : hasOnlyRequirementsPackage || (hasOnlyDocsOrData && hasBuildIntent)
+      : hasOnlyRequirementsPackage || (hasOnlyDocsOrData && hasBuildIntent)
           ? "REQUIREMENTS_PACKAGE"
-          : currentExecutionOutputFound && files.every((file) => /(^|\/).*(report|log|summary).*\.(md|json|txt)$/i.test(file))
-            ? "REPORTS_ONLY"
-            : currentExecutionOutputFound
-              ? "UNKNOWN_ARTIFACTS"
-              : "UNKNOWN_ARTIFACTS";
+          : hasDocumentDelivery
+            ? "DOCUMENT_DELIVERY"
+            : currentExecutionOutputFound && files.every((file) => /(^|\/).*(report|log|summary).*\.(md|json|txt)$/i.test(file))
+              ? "REPORTS_ONLY"
+              : currentExecutionOutputFound
+                ? "UNKNOWN_ARTIFACTS"
+                : "UNKNOWN_ARTIFACTS";
     const outputTypes = [];
 
     if (indexHtml) {
@@ -2386,6 +2450,15 @@ ${trimmedExisting}`
 
     if (indexHtml) {
       runInstructions.push(`Open this file in the browser: ${outputRel}/${indexHtml}`);
+    } else if (hasDistOrBuildIndex) {
+      const distIndex = files.find((file) => {
+        const normalized = String(file || "").toLowerCase();
+        return (normalized.startsWith("dist/") || normalized.includes("/dist/") || normalized.startsWith("build/") || normalized.includes("/build/")) &&
+          normalized.endsWith("/index.html");
+      });
+      if (distIndex) {
+        runInstructions.push(`Open this file in the browser: ${outputRel}/${distIndex}`);
+      }
     }
 
     if (packageJson) {
@@ -2401,6 +2474,20 @@ ${trimmedExisting}`
       }
     }
 
+    if (mainPy) {
+      runInstructions.push(`From this folder run: cd ${path.dirname(`${outputRel}/${mainPy}`).replace(/\\/g, "/")}`);
+      if (requirementsTxt) {
+        runInstructions.push("pip install -r requirements.txt");
+      }
+      runInstructions.push("python main.py");
+    } else if (appPy) {
+      runInstructions.push(`From this folder run: cd ${path.dirname(`${outputRel}/${appPy}`).replace(/\\/g, "/")}`);
+      if (requirementsTxt) {
+        runInstructions.push("pip install -r requirements.txt");
+      }
+      runInstructions.push("python app.py");
+    }
+
     if (!currentExecutionOutputFound) {
       runInstructions.push("No output files linked to the current execution were found.");
     } else if (deliveryType === "DOCUMENT_DELIVERY") {
@@ -2410,7 +2497,7 @@ ${trimmedExisting}`
         runInstructions.push(`Document path: ${outputRel}/${firstDoc}`);
       }
       runInstructions.push("You can then request building the application based on it.");
-    } else if (hasOnlyRequirementsPackage) {
+    } else if (deliveryType === "REQUIREMENTS_PACKAGE") {
       runInstructions.push("A requirements package and execution plan were created, not a runnable application.");
     } else if (!hasRunnableApplication) {
       runInstructions.push("No runnable application was detected in the current execution output.");
@@ -2507,7 +2594,7 @@ ${trimmedExisting}`
       : [];
 
     return files
-      .filter((file) => /(_requirements\.json|requirements\.json|_execution_plan\.md|execution_plan\.md|_security_guidelines\.md|security_guidelines\.md)$/i.test(String(file || "")))
+      .filter((file) => /(_requirements\.json|requirements\.json|_execution_plan\.md|execution_plan\.md|_security_guidelines\.md|security_guidelines\.md|_specification\.md|specification\.md)$/i.test(String(file || "")))
       .map((file) => {
         const rel = String(file || "").replace(/\\/g, "/");
         const abs = path.resolve(outputAbs, rel);

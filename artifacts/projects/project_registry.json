@@ -1,6 +1,6 @@
 {
-  "active_project_id": "memory_test_1777676557976",
-  "updated_at": "2026-05-03T08:53:22.097Z",
+  "active_project_id": "default_project",
+  "updated_at": "2026-05-03T11:50:38.216Z",
   "projects": [
     {
       "project_id": "action_game",
@@ -10,7 +10,7 @@
       "active_runtime_state": "EXECUTION_PREPARATION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-03T08:53:22.100Z"
+      "last_updated_at": "2026-05-03T11:50:38.219Z"
     },
     {
       "project_id": "codex_test_project",
@@ -20,17 +20,17 @@
       "active_runtime_state": "DISCUSSION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-03T08:53:22.101Z"
+      "last_updated_at": "2026-05-03T11:50:38.222Z"
     },
     {
       "project_id": "default_project",
-      "project_name": "default_project",
+      "project_name": "اعمل سيستم خدمة عملاء",
       "project_status": "ACTIVE",
-      "current_phase": "EXECUTION_READY",
-      "active_runtime_state": "EXECUTION_PREPARATION",
+      "current_phase": "DELIVERY_READY",
+      "active_runtime_state": "EXECUTION_COMPLETE",
       "pending_decisions": [],
-      "active_project_flag": false,
-      "last_updated_at": "2026-05-03T08:53:22.104Z"
+      "active_project_flag": true,
+      "last_updated_at": "2026-05-03T11:50:38.213Z"
     },
     {
       "project_id": "memory_test_1777676534218",
@@ -40,17 +40,17 @@
       "active_runtime_state": "DISCUSSION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-03T08:53:22.106Z"
+      "last_updated_at": "2026-05-03T11:50:38.224Z"
     },
     {
       "project_id": "memory_test_1777676557976",
-      "project_name": "اعمل سيستم حسابات",
+      "project_name": "اعمل سيستم خدمة عملاء",
       "project_status": "ACTIVE",
-      "current_phase": "FORGE_RUNTIME_COMPLETE",
-      "active_runtime_state": "EXECUTION_COMPLETE",
+      "current_phase": "EXECUTION_READY",
+      "active_runtime_state": "EXECUTION_PREPARATION",
       "pending_decisions": [],
-      "active_project_flag": true,
-      "last_updated_at": "2026-05-03T08:53:22.093Z"
+      "active_project_flag": false,
+      "last_updated_at": "2026-05-03T11:50:38.227Z"
     },
     {
       "project_id": "mobile_game",
@@ -60,7 +60,7 @@
       "active_runtime_state": "EXECUTION_PREPARATION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-03T08:53:22.107Z"
+      "last_updated_at": "2026-05-03T11:50:38.229Z"
     },
     {
       "project_id": "test_project",
@@ -72,7 +72,7 @@
         "EXECUTION_PACKAGE_PENDING_FORGE"
       ],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-03T08:53:22.111Z"
+      "last_updated_at": "2026-05-03T11:50:38.233Z"
     },
     {
       "project_id": "test_project_2",
@@ -82,7 +82,7 @@
       "active_runtime_state": "DOCUMENTATION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-03T08:53:22.113Z"
+      "last_updated_at": "2026-05-03T11:50:38.235Z"
     },
     {
       "project_id": "test_project_3",
@@ -92,7 +92,7 @@
       "active_runtime_state": "EXECUTION_PREPARATION",
       "pending_decisions": [],
       "active_project_flag": false,
-      "last_updated_at": "2026-05-03T08:53:22.115Z"
+      "last_updated_at": "2026-05-03T11:50:38.238Z"
     }
   ]
 }

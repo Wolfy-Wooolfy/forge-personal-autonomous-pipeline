@@ -1,67 +1,76 @@
 {
-  "package_id": "execution_package_1776625569188",
-  "created_at": "2026-04-19T19:06:09.188Z",
+  "package_id": "ai_os_runnable_package_1777809037483",
+  "handoff_id": "ai_os_runnable_handoff_1777809037483",
+  "created_at": "2026-05-03T11:50:37.483Z",
   "source": "EXTERNAL_AI_WORKSPACE",
+  "source_layer": "AI_OPERATING_SYSTEM",
   "handoff_status": "EXECUTED",
   "project_id": "default_project",
-  "execution_id": "workspace_decision_1776625569174",
+  "execution_id": "ai_os_runnable_execution_1777809037483",
+  "artifact_path": "artifacts/projects/default_project/execute/execution_package.json",
   "approved_scope": {
-    "summary": "edit this file to add logging",
-    "operation_mode": "SINGLE_FILE",
-    "file_count": 1
+    "summary": "Build runnable application from the approved requirements package.",
+    "operation_mode": "MULTI_FILE",
+    "file_count": 2
   },
-  "target_project_path": "D:\\S\\Forge\\Tech\\forge-personal-autonomous-pipeline",
+  "target_project_path": "artifacts/projects/default_project",
+  "output_path": "artifacts/projects/default_project/output",
   "requested_outputs": [
-    "Apply approved change to web/index.html"
+    "Create runnable artifact artifacts/projects/default_project/output/app/index.html",
+    "Create runnable artifact artifacts/projects/default_project/output/app/README.md"
   ],
   "file_or_artifact_targets": [
-    "web/index.html"
+    "artifacts/projects/default_project/output/app/index.html",
+    "artifacts/projects/default_project/output/app/README.md"
   ],
   "dependency_assumptions": [],
-  "risk_notes": [],
+  "risk_notes": [
+    "Provider output must create runnable application indicators."
+  ],
   "execution_approval_reference": {
-    "decision_packet_json": "artifacts/projects/default_project/decisions/decision_packet.json",
-    "decision_packet_md": "artifacts/projects/default_project/decisions/decision_packet.md",
-    "approved_by_role": "cto",
-    "approved_at": "2026-04-19T19:06:09.175Z"
+    "approved_by_role": "CTO",
+    "approved_at": "2026-05-03T11:50:37.483Z",
+    "documentation_state": "DOCS_APPROVED",
+    "source_execution_id": "ai_os_execution_1777808968355",
+    "source_package_id": "ai_os_package_1777808968355",
+    "project_state_path": "artifacts/projects/default_project/project_state.json"
   },
   "finalized_documentation_set": [
-    "artifacts/projects/default_project/decisions/decision_packet.json",
-    "artifacts/projects/default_project/decisions/decision_packet.md"
+    "artifacts/projects/default_project/project_state.json"
   ],
   "execution_plan": {
-    "mode": "SINGLE_FILE",
-    "file_count": 1,
+    "mode": "MULTI_FILE",
+    "file_count": 2,
     "proposed_files": [
       {
-        "path": "web/index.html",
+        "path": "artifacts/projects/default_project/output/app/index.html",
         "allow_overwrite": true,
-        "sha256": "eaa5eade39dac7a9e7120b9a5c10d0393aba1c67e08c55d20833e7556673beb8",
+        "sha256": "046e5b4043b7b37237a6e32a0585ab5536c62bf7bf4526bdc3a885b936f5f7df",
         "required_roles": [
-          "tech_lead",
           "cto"
         ],
-        "diff": "+   <script>\n+     console.log(\"Forge AI Workspace loaded\");\n+   </script>"
+        "diff": ""
+      },
+      {
+        "path": "artifacts/projects/default_project/output/app/README.md",
+        "allow_overwrite": true,
+        "sha256": "86947160f416f6c58d21f1838c01b8d4c5a782e44bc5131ddd15a0519c21e9e5",
+        "required_roles": [
+          "cto"
+        ],
+        "diff": ""
       }
     ]
   },
   "business_and_scope_decisions": {
-    "confirmation_required_format": "OPTION-APPROVE-WORKSPACE-DRAFT",
-    "context_summary": "edit this file to add logging",
-    "options": [
-      {
-        "option_id": "OPTION-APPROVE-WORKSPACE-DRAFT",
-        "description": "Queue the workspace draft as a governed pending change set.",
-        "impact_scope": "EXTERNAL_WORKSPACE",
-        "risk_level": "MEDIUM",
-        "downstream_effects": [
-          "Apply candidate change to web/index.html"
-        ],
-        "cognitive_priority_hint": null
-      }
-    ]
+    "accepted_options": [
+      "option_2"
+    ],
+    "user_goal": "اعمل سيستم خدمة عملاء",
+    "documentation_state": "DOCS_APPROVED",
+    "followup_action": "PROVIDER_RUNNABLE_APPLICATION"
   },
-  "executed_at": "2026-04-21T15:26:53.375Z",
+  "executed_at": "2026-05-03T11:50:37.635Z",
   "execution_result": {
     "status": "EXECUTED",
     "execute_plan_path": "artifacts/execute/execute_plan.json"

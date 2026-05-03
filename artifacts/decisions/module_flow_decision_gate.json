@@ -1,6 +1,6 @@
 {
   "decision_id": "MODULE_FLOW_DECISION_GATE",
-  "timestamp": "2026-05-03T08:53:21.268Z",
+  "timestamp": "2026-05-03T11:50:37.565Z",
   "task": "TASK-052",
   "policy": "AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK",
   "operating_mode": "IMPROVE",
@@ -10,17 +10,17 @@
   "override_raw": "",
   "source": {
     "source_type": "EXECUTION_PACKAGE",
-    "execution_package_path": "artifacts/projects/memory_test_1777676557976/execute/execution_package.json",
-    "execution_package_id": "ai_os_package_1777798401068",
-    "execution_package_execution_id": "ai_os_execution_1777798401068",
-    "execution_package_sha256": "953a10701e20f846fa6f9f96e3c9e96f54e92011a7e5a240f2413db21133a2e1",
-    "workspace_response_path": "artifacts/llm/responses/ai_os_execution_1777798401068.response.json",
+    "execution_package_path": "artifacts/projects/default_project/execute/execution_package.json",
+    "execution_package_id": "ai_os_runnable_package_1777809037483",
+    "execution_package_execution_id": "ai_os_runnable_execution_1777809037483",
+    "execution_package_sha256": "053c64f74d50147194be0f4b96a37aa4b6eab875294b0155636ce31d50388d1c",
+    "workspace_response_path": "artifacts/llm/responses/ai_os_runnable_execution_1777809037483.response.json",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "dc92e1525e817fd677f11c8ef0a568afe24863ccd794a3e796efba547b51b053"
   },
   "summary": {
-    "total_actions": 3,
-    "approved_count": 3,
+    "total_actions": 2,
+    "approved_count": 2,
     "review_required_count": 0,
     "rejected_count": 0
   },
@@ -30,66 +30,44 @@
       "category": "WORKSPACE_CHANGE_REQUEST",
       "severity": "MEDIUM",
       "affected_entities": [
-        "artifacts/projects/memory_test_1777676557976/output/README.md"
+        "artifacts/projects/default_project/output/app/index.html"
       ],
       "action_id": "WORKSPACE_ACTION_1",
-      "description": "Apply governed workspace execution package to artifacts/projects/memory_test_1777676557976/output/README.md",
+      "description": "Apply governed workspace execution package to artifacts/projects/default_project/output/app/index.html",
       "impact_scope": "CODE_WRITE",
       "requires_decision": false,
       "cognitive_priority_hint": null,
       "reason": "governed workspace decision packet approved",
       "workspace_source": "EXTERNAL_AI_WORKSPACE",
-      "workspace_execution_id": "ai_os_execution_1777798401068",
-      "workspace_execution_package_id": "ai_os_package_1777798401068",
-      "workspace_execution_package_path": "artifacts/projects/memory_test_1777676557976/execute/execution_package.json",
-      "workspace_response_path": "artifacts/llm/responses/ai_os_execution_1777798401068.response.json",
-      "workspace_allow_overwrite": false,
-      "workspace_expected_sha256": "cc590578655cfde4c5aa49143739337e4b95445d5ef81cd70aa424e85221c64a",
-      "workspace_target_path": "artifacts/projects/memory_test_1777676557976/output/README.md"
+      "workspace_execution_id": "ai_os_runnable_execution_1777809037483",
+      "workspace_execution_package_id": "ai_os_runnable_package_1777809037483",
+      "workspace_execution_package_path": "artifacts/projects/default_project/execute/execution_package.json",
+      "workspace_response_path": "artifacts/llm/responses/ai_os_runnable_execution_1777809037483.response.json",
+      "workspace_allow_overwrite": true,
+      "workspace_expected_sha256": "046e5b4043b7b37237a6e32a0585ab5536c62bf7bf4526bdc3a885b936f5f7df",
+      "workspace_target_path": "artifacts/projects/default_project/output/app/index.html"
     },
     {
       "gap_id": "WORKSPACE_CHANGE_REQUEST",
       "category": "WORKSPACE_CHANGE_REQUEST",
       "severity": "MEDIUM",
       "affected_entities": [
-        "artifacts/projects/memory_test_1777676557976/output/requirements.json"
+        "artifacts/projects/default_project/output/app/README.md"
       ],
       "action_id": "WORKSPACE_ACTION_2",
-      "description": "Apply governed workspace execution package to artifacts/projects/memory_test_1777676557976/output/requirements.json",
+      "description": "Apply governed workspace execution package to artifacts/projects/default_project/output/app/README.md",
       "impact_scope": "CODE_WRITE",
       "requires_decision": false,
       "cognitive_priority_hint": null,
       "reason": "governed workspace decision packet approved",
       "workspace_source": "EXTERNAL_AI_WORKSPACE",
-      "workspace_execution_id": "ai_os_execution_1777798401068",
-      "workspace_execution_package_id": "ai_os_package_1777798401068",
-      "workspace_execution_package_path": "artifacts/projects/memory_test_1777676557976/execute/execution_package.json",
-      "workspace_response_path": "artifacts/llm/responses/ai_os_execution_1777798401068.response.json",
-      "workspace_allow_overwrite": false,
-      "workspace_expected_sha256": "6bbd2a92a6c6c9996925a3483013fc024ade0efa7e143d2f43c3888ac4f1dd45",
-      "workspace_target_path": "artifacts/projects/memory_test_1777676557976/output/requirements.json"
-    },
-    {
-      "gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "category": "WORKSPACE_CHANGE_REQUEST",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "artifacts/projects/memory_test_1777676557976/output/project_metadata.json"
-      ],
-      "action_id": "WORKSPACE_ACTION_3",
-      "description": "Apply governed workspace execution package to artifacts/projects/memory_test_1777676557976/output/project_metadata.json",
-      "impact_scope": "CODE_WRITE",
-      "requires_decision": false,
-      "cognitive_priority_hint": null,
-      "reason": "governed workspace decision packet approved",
-      "workspace_source": "EXTERNAL_AI_WORKSPACE",
-      "workspace_execution_id": "ai_os_execution_1777798401068",
-      "workspace_execution_package_id": "ai_os_package_1777798401068",
-      "workspace_execution_package_path": "artifacts/projects/memory_test_1777676557976/execute/execution_package.json",
-      "workspace_response_path": "artifacts/llm/responses/ai_os_execution_1777798401068.response.json",
-      "workspace_allow_overwrite": false,
-      "workspace_expected_sha256": "0fc7f2e4a9b55880764ac180194e03149fed2e229cf770e9716c920040bd2f6d",
-      "workspace_target_path": "artifacts/projects/memory_test_1777676557976/output/project_metadata.json"
+      "workspace_execution_id": "ai_os_runnable_execution_1777809037483",
+      "workspace_execution_package_id": "ai_os_runnable_package_1777809037483",
+      "workspace_execution_package_path": "artifacts/projects/default_project/execute/execution_package.json",
+      "workspace_response_path": "artifacts/llm/responses/ai_os_runnable_execution_1777809037483.response.json",
+      "workspace_allow_overwrite": true,
+      "workspace_expected_sha256": "86947160f416f6c58d21f1838c01b8d4c5a782e44bc5131ddd15a0519c21e9e5",
+      "workspace_target_path": "artifacts/projects/default_project/output/app/README.md"
     }
   ],
   "review_required_actions": [],
