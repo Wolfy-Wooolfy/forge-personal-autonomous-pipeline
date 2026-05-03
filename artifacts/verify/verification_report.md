@@ -1,6 +1,6 @@
 # Verification Report
 
-generated_at: 2026-05-03T11:50:37.652Z
+generated_at: 2026-05-03T14:07:56.280Z
 status: PASS
 
 ## Closure Gate Readiness
@@ -24,13 +24,13 @@ status: PASS
 - artifacts_execute_execute_diff_md_exists: PASS artifacts/execute/execute_diff.md
 - artifacts_execute_execute_log_md_exists: PASS artifacts/execute/execute_log.md
 - decision_artifact_present: PASS artifacts/decisions/decision_auto_pass.md, artifacts/decisions/module_flow_decision_gate.json
-- execute_plan_matches_backfill_plan: PASS backfill_actions=2; execute_actions=2
-- decision_gate_matches_backfill_plan: PASS decision_actions=2; backfill_actions=2
-- workspace_runtime_execution_id_consistent: PASS decision=ai_os_runnable_execution_1777809037483; backfill=ai_os_runnable_execution_1777809037483; execute=ai_os_runnable_execution_1777809037483
+- execute_plan_matches_backfill_plan: PASS backfill_actions=4; execute_actions=4
+- decision_gate_matches_backfill_plan: PASS decision_actions=4; backfill_actions=4
+- workspace_runtime_execution_id_consistent: PASS decision=ai_os_runnable_execution_1777817276080; backfill=ai_os_runnable_execution_1777817276080; execute=ai_os_runnable_execution_1777817276080
 - workspace_runtime_matches_current_execution_package: PASS No current workspace execution_package.json
-- workspace_execution_package_identity_consistent: PASS decision_package_id=ai_os_runnable_package_1777809037483; backfill_package_id=ai_os_runnable_package_1777809037483; execute_package_id=ai_os_runnable_package_1777809037483; decision_package_path=artifacts/projects/default_project/execute/execution_package.json; backfill_package_path=artifacts/projects/default_project/execute/execution_package.json; execute_package_path=artifacts/projects/default_project/execute/execution_package.json
+- workspace_execution_package_identity_consistent: PASS decision_package_id=ai_os_runnable_package_1777817276080; backfill_package_id=ai_os_runnable_package_1777817276080; execute_package_id=ai_os_runnable_package_1777817276080; decision_package_path=artifacts/projects/default_project/execute/execution_package.json; backfill_package_path=artifacts/projects/default_project/execute/execution_package.json; execute_package_path=artifacts/projects/default_project/execute/execution_package.json
 - workspace_execution_package_matches_current_artifact: PASS No current workspace execution_package.json
-- workspace_runtime_write_applied: PASS execute_actions=2; wrote_content_all=true
+- workspace_runtime_write_applied: PASS execute_actions=4; wrote_content_all=true
 - gap_count_zero: PASS gap_count=0
 - critical_violations_zero: PASS critical_violations=0
 - orphan_code_units_zero: PASS orphan_code_units=0

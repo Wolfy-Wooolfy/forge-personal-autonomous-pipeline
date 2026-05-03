@@ -111,7 +111,178 @@
         "delivery_state": "READY",
         "pending_decisions": []
       }
+    },
+    {
+      "version_id": "state_0006",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T12:06:40.837Z",
+      "state_hash": "0041db04563b5ec12e34142819807f1b854fa3848091f29cdbcd51aac2884e6d",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "اعمل سيستم خدمة عملاء",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "READY",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0007",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T12:24:49.523Z",
+      "state_hash": "b61ba76c028cff45fcf4ddb0dcd4a53e337d2c6e3f3cfddc02f561011b0f6f60",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "سيستم HR",
+        "project_status": "ACTIVE",
+        "current_phase": "FORGE_RUNTIME_COMPLETE",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "REQUIREMENTS_PACKAGE",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0008",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T12:25:16.010Z",
+      "state_hash": "74c458f60941f88756e7de9151fc7b31484731d12ac8f3b41fba1b0d28159bc9",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "عايز سيستم HR",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "REQUIREMENTS_PACKAGE",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0009",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T12:25:24.810Z",
+      "state_hash": "fe0a45c039c765d9f6a875c07d79592f33769c04f57ba9f3cf85f771c3c92f98",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "عايز سيستم HR",
+        "project_status": "ACTIVE",
+        "current_phase": "DELIVERY_READY",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "READY",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0010",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T13:41:25.839Z",
+      "state_hash": "595b87a8415fb55abfa1a38b4b8e9324282444e5c11950f3e13bcb3379b619cc",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "عايز سيستم HR",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "READY",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0011",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T14:05:17.769Z",
+      "state_hash": "0cc8a29994bf6b53470a92a228a815ab2bb62989e0aa6b61fc5d2a4016673a33",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "عايز سيستم HR",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "NOT_READY",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0012",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T14:06:38.552Z",
+      "state_hash": "da56feebeb389a94566d059d798ba68a116d47ff31468757989aff0e319c6634",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "سيستم CRM اعمل مقترح كامل واعرضه عليا",
+        "project_status": "ACTIVE",
+        "current_phase": "FORGE_RUNTIME_COMPLETE",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "REQUIREMENTS_PACKAGE",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0013",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T14:07:21.748Z",
+      "state_hash": "78fd9b481ce74d721c16e4d6a98aea48c162425e4444189ca687f6ee4311290b",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "عايز سيستم CRM\nاعمل مقترح كامل واعرضه عليا",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "REQUIREMENTS_PACKAGE",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0014",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T14:07:56.901Z",
+      "state_hash": "4b72beaeed1154f3d63bd4c2ed0da29ef2c46e79b5cb6bcf1994ef4c82c3c238",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "عايز سيستم CRM\nاعمل مقترح كامل واعرضه عليا",
+        "project_status": "ACTIVE",
+        "current_phase": "DELIVERY_READY",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "READY",
+        "pending_decisions": []
+      }
     }
   ],
-  "updated_at": "2026-05-03T11:50:38.213Z"
+  "updated_at": "2026-05-03T14:07:56.901Z"
 }

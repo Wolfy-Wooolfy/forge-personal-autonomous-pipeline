@@ -206,5 +206,252 @@
     "next_open_questions": [],
     "requirement_reasoning_summary": "تم تفويض النظام باقتراح كامل بناءً على طلب المستخدم، وتم تضمين الوظائف الأساسية، المتطلبات غير الوظيفية، الأدوار، والقنوات المناسبة لنظام خدمة العملاء. لا توجد أسئلة مفتوحة لأن جميع المتطلبات التنفيذية تم تحديدها أو تم تفويض اختيارها للنظام.",
     "created_at": "2026-05-03T11:48:39.768Z"
+  },
+  {
+    "entry_type": "IDEATION_INTAKE",
+    "message": "عايز سيستم HR",
+    "inferred_project_type": "HUMAN_RESOURCES",
+    "needs_clarification": true,
+    "clarification_questions": [
+      "ما هي الوظائف الأساسية التي تريدها في نظام الموارد البشرية؟ (مثل إدارة الموظفين، الرواتب، الحضور، التوظيف، التدريب، تقييم الأداء)",
+      "من هم المستخدمون الأساسيون للنظام؟ (مثل موظفو الموارد البشرية، المديرين، الموظفين)",
+      "هل هناك أنظمة أخرى يجب أن يتكامل معها النظام؟",
+      "ما هي متطلبات الأمان والخصوصية للنظام؟",
+      "هل هناك متطلبات خاصة بالتقارير أو التحليلات؟"
+    ],
+    "requirement_model": {
+      "system_type": "HR System",
+      "features": [],
+      "users": [],
+      "integration": [],
+      "security": [],
+      "assumptions": []
+    },
+    "requirement_domain": "Human Resources",
+    "requirement_completeness": false,
+    "requirement_reasoning_summary": "تم تحديد أن المشروع هو نظام موارد بشرية (HR System) بناءً على طلب المستخدم. لكن لم يتم توفير تفاصيل حول الوظائف المطلوبة، المستخدمين، التكامل، الأمان، أو متطلبات أخرى. لذلك، تم تحديد أسئلة مفتوحة لجمع المعلومات اللازمة لتحديد متطلبات النظام بشكل كامل.",
+    "created_at": "2026-05-03T12:23:33.677Z"
+  },
+  {
+    "entry_type": "DISCOVERY_COMPLETED",
+    "open_questions_answered": [
+      "ما هي الوظائف الأساسية التي تريدها في نظام الموارد البشرية؟ (مثل إدارة الموظفين، الرواتب، الحضور، التوظيف، التدريب، تقييم الأداء)",
+      "من هم المستخدمون الأساسيون للنظام؟ (مثل موظفو الموارد البشرية، المديرين، الموظفين)",
+      "هل هناك أنظمة أخرى يجب أن يتكامل معها النظام؟",
+      "ما هي متطلبات الأمان والخصوصية للنظام؟",
+      "هل هناك متطلبات خاصة بالتقارير أو التحليلات؟"
+    ],
+    "answers": {
+      "raw_answer": "اعمل مقترح واعرضه عليا",
+      "answered_questions": [
+        "ما هي الوظائف الأساسية التي تريدها في نظام الموارد البشرية؟ (مثل إدارة الموظفين، الرواتب، الحضور، التوظيف، التدريب، تقييم الأداء)",
+        "من هم المستخدمون الأساسيون للنظام؟ (مثل موظفو الموارد البشرية، المديرين، الموظفين)",
+        "هل هناك أنظمة أخرى يجب أن يتكامل معها النظام؟",
+        "ما هي متطلبات الأمان والخصوصية للنظام؟",
+        "هل هناك متطلبات خاصة بالتقارير أو التحليلات؟"
+      ]
+    },
+    "merged_answers": {
+      "raw_answer": "اعمل مقترح واعرضه عليا",
+      "answered_questions": [
+        "ما هي الوظائف الأساسية التي تريدها في نظام الموارد البشرية؟ (مثل إدارة الموظفين، الرواتب، الحضور، التوظيف، التدريب، تقييم الأداء)",
+        "من هم المستخدمون الأساسيون للنظام؟ (مثل موظفو الموارد البشرية، المديرين، الموظفين)",
+        "هل هناك أنظمة أخرى يجب أن يتكامل معها النظام؟",
+        "ما هي متطلبات الأمان والخصوصية للنظام؟",
+        "هل هناك متطلبات خاصة بالتقارير أو التحليلات؟"
+      ]
+    },
+    "requirement_domain": "نظام إدارة الموارد البشرية",
+    "requirement_model": {
+      "system_type": "HR System",
+      "features": [
+        "إدارة الموظفين",
+        "الرواتب",
+        "الحضور",
+        "التوظيف",
+        "التدريب",
+        "تقييم الأداء"
+      ],
+      "users": [
+        "موظفو الموارد البشرية",
+        "المديرين",
+        "الموظفين"
+      ],
+      "integration": "غير محدد",
+      "security": "غير محدد",
+      "reporting_and_analytics": "غير محدد",
+      "assumptions": [
+        "تم تفويض النظام باقتراح كامل للوظائف الأساسية والمستخدمين بناءً على الممارسات الشائعة في أنظمة الموارد البشرية."
+      ],
+      "recommended_scenario": "اقتراح نظام موارد بشرية متكامل يشمل الوظائف الأساسية المذكورة أعلاه، مع دعم المستخدمين الرئيسيين، مع افتراض عدم وجود تكاملات أو متطلبات أمان خاصة ما لم يتم تحديدها لاحقاً."
+    },
+    "completeness": true,
+    "next_open_questions": [],
+    "requirement_reasoning_summary": "المستخدم طلب اقتراحاً كاملاً لنظام الموارد البشرية دون تحديد تفاصيل إضافية. بناءً على ذلك، تم اقتراح نموذج شامل يغطي الوظائف الأساسية والمستخدمين الرئيسيين مع تسجيل الافتراضات والتوصيات اللازمة، مما يجعل المتطلبات كاملة ولا توجد أسئلة مفتوحة حالياً.",
+    "created_at": "2026-05-03T12:23:46.470Z"
+  },
+  {
+    "entry_type": "IDEATION_INTAKE",
+    "message": "اعمل مقترح لسيستم CRMكامل واعرضه عليا",
+    "inferred_project_type": "CUSTOMER_RELATIONSHIP_MANAGEMENT_CRM",
+    "needs_clarification": false,
+    "clarification_questions": [],
+    "requirement_model": {
+      "assumptions": {
+        "user_delegated_defaults": true
+      },
+      "recommended_scenario": {
+        "core_features": [
+          "Contact Management",
+          "Lead and Opportunity Management",
+          "Sales Pipeline Tracking",
+          "Customer Support Ticketing",
+          "Marketing Automation",
+          "Reporting and Analytics",
+          "Integration with Email and Calendar",
+          "Mobile Access"
+        ],
+        "user_roles": [
+          "Sales Representative",
+          "Marketing Manager",
+          "Customer Support Agent",
+          "Administrator"
+        ],
+        "data_security": {
+          "role_based_access_control": true,
+          "data_encryption": true,
+          "audit_logs": true
+        },
+        "deployment": {
+          "cloud_based": true,
+          "multi_tenant_support": true
+        }
+      }
+    },
+    "requirement_domain": "Customer Relationship Management (CRM)",
+    "requirement_completeness": true,
+    "requirement_reasoning_summary": "User requested a complete CRM system proposal and authorized the system to choose defaults. Therefore, a comprehensive CRM requirement model was proposed covering core features, user roles, security, and deployment aspects, ensuring no execution-impacting ambiguity remains.",
+    "created_at": "2026-05-03T13:41:50.929Z"
+  },
+  {
+    "entry_type": "IDEATION_INTAKE",
+    "message": "اشرحلي المقترح الثاني",
+    "inferred_project_type": "UNCLASSIFIED",
+    "needs_clarification": true,
+    "clarification_questions": [
+      "ما هو المقترح الثاني الذي تريد شرحه؟ يرجى تقديم تفاصيل أو سياق حول المقترح.",
+      "ما هو مجال المشروع أو الموضوع الذي يتعلق به هذا المقترح؟"
+    ],
+    "requirement_model": {},
+    "requirement_domain": "غير محدد",
+    "requirement_completeness": false,
+    "requirement_reasoning_summary": "المستخدم طلب شرح المقترح الثاني، لكن لم يتم توفير أي معلومات سابقة أو سياق حول المقترحات أو المجال. لذلك، لا يمكن تحديد المتطلبات أو بناء نموذج متطلبات دون مزيد من التفاصيل.",
+    "created_at": "2026-05-03T13:42:59.813Z"
+  },
+  {
+    "entry_type": "DISCOVERY_ITERATION_REQUIRED",
+    "open_questions_answered": [
+      "ما هو المقترح الثاني الذي تريد شرحه؟ يرجى تقديم تفاصيل أو سياق حول المقترح.",
+      "ما هو مجال المشروع أو الموضوع الذي يتعلق به هذا المقترح؟"
+    ],
+    "answers": {
+      "raw_answer": "2",
+      "answered_questions": [
+        "ما هو المقترح الثاني الذي تريد شرحه؟ يرجى تقديم تفاصيل أو سياق حول المقترح.",
+        "ما هو مجال المشروع أو الموضوع الذي يتعلق به هذا المقترح؟"
+      ]
+    },
+    "merged_answers": {
+      "raw_answer": "2",
+      "answered_questions": [
+        "ما هو المقترح الثاني الذي تريد شرحه؟ يرجى تقديم تفاصيل أو سياق حول المقترح.",
+        "ما هو مجال المشروع أو الموضوع الذي يتعلق به هذا المقترح؟"
+      ]
+    },
+    "requirement_domain": "غير محدد",
+    "requirement_model": {},
+    "completeness": false,
+    "next_open_questions": [
+      "ما هو المقترح الثاني الذي تريد شرحه؟ يرجى تقديم تفاصيل أو سياق حول المقترح.",
+      "ما هو مجال المشروع أو الموضوع الذي يتعلق به هذا المقترح؟"
+    ],
+    "requirement_reasoning_summary": "المستخدم طلب شرح المقترح الثاني لكنه لم يقدم تفاصيل أو سياق حول المقترح أو مجال المشروع، مما يجعل من المستحيل تحديد متطلبات واضحة أو بناء نموذج متطلبات. هناك حاجة لمزيد من المعلومات لتحديد المجال وفهم المقترح.",
+    "created_at": "2026-05-03T13:43:06.029Z"
+  },
+  {
+    "entry_type": "DISCOVERY_ITERATION_REQUIRED",
+    "open_questions_answered": [
+      "ما هو المقترح الثاني الذي تريد شرحه؟ يرجى تقديم تفاصيل أو سياق حول المقترح.",
+      "ما هو مجال المشروع أو الموضوع الذي يتعلق به هذا المقترح؟"
+    ],
+    "answers": {
+      "raw_answer": "اشرحهولي",
+      "answered_questions": [
+        "ما هو المقترح الثاني الذي تريد شرحه؟ يرجى تقديم تفاصيل أو سياق حول المقترح.",
+        "ما هو مجال المشروع أو الموضوع الذي يتعلق به هذا المقترح؟"
+      ]
+    },
+    "merged_answers": {
+      "raw_answer": "اشرحهولي",
+      "answered_questions": [
+        "ما هو المقترح الثاني الذي تريد شرحه؟ يرجى تقديم تفاصيل أو سياق حول المقترح.",
+        "ما هو مجال المشروع أو الموضوع الذي يتعلق به هذا المقترح؟"
+      ]
+    },
+    "requirement_domain": "",
+    "requirement_model": {},
+    "completeness": false,
+    "next_open_questions": [
+      "ما هو المقترح الثاني الذي تريد شرحه؟ يرجى تقديم تفاصيل أو سياق حول المقترح.",
+      "ما هو مجال المشروع أو الموضوع الذي يتعلق به هذا المقترح؟"
+    ],
+    "requirement_reasoning_summary": "لم يتم توفير تفاصيل كافية عن المقترح الثاني أو مجال المشروع، مما يمنع تحديد المتطلبات أو شرح المقترح بشكل دقيق.",
+    "created_at": "2026-05-03T13:43:21.858Z"
+  },
+  {
+    "entry_type": "IDEATION_INTAKE",
+    "message": "عايز سيستم CRM\nاعمل مقترح كامل واعرضه عليا",
+    "inferred_project_type": "CUSTOMER_RELATIONSHIP_MANAGEMENT_CRM",
+    "needs_clarification": false,
+    "clarification_questions": [],
+    "requirement_model": {
+      "assumptions": {
+        "user_delegated_defaults": true
+      },
+      "recommended_scenario": {
+        "core_features": [
+          "contact_management",
+          "lead_and_opportunity_management",
+          "sales_pipeline_tracking",
+          "customer_support_ticketing",
+          "email_integration",
+          "reporting_and_analytics",
+          "mobile_access"
+        ],
+        "user_roles": [
+          "sales_representative",
+          "customer_support_agent",
+          "manager"
+        ],
+        "integration": [
+          "email_system",
+          "calendar",
+          "marketing_tools"
+        ],
+        "security": {
+          "role_based_access_control": true,
+          "data_encryption": true
+        },
+        "deployment": "cloud_based",
+        "customization": {
+          "custom_fields": true,
+          "workflow_automation": true
+        }
+      }
+    },
+    "requirement_domain": "Customer Relationship Management (CRM)",
+    "requirement_completeness": true,
+    "requirement_reasoning_summary": "User requested a complete CRM system proposal and authorized the system to choose defaults. Therefore, a comprehensive CRM requirement model with typical features, roles, integrations, security, deployment, and customization options was proposed to ensure completeness without further questions.",
+    "created_at": "2026-05-03T14:05:37.565Z"
   }
 ]

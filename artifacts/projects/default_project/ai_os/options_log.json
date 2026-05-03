@@ -30,5 +30,101 @@
       "model": "gpt-4.1-mini"
     },
     "created_at": "2026-05-03T11:48:49.263Z"
+  },
+  {
+    "entry_type": "OPTIONS_PRESENTED",
+    "options": [
+      {
+        "option_id": "option_1",
+        "title": "نظام موارد بشرية متكامل أساسي",
+        "description": "نظام يشمل جميع الوظائف الأساسية: إدارة الموظفين، الرواتب، الحضور، التوظيف، التدريب، وتقييم الأداء، مع دعم المستخدمين الرئيسيين (موظفو الموارد البشرية، المديرين، الموظفين) بدون تكاملات أو متطلبات أمان خاصة.",
+        "impact_level": "HIGH",
+        "risk_level": "LOW"
+      },
+      {
+        "option_id": "option_2",
+        "title": "نظام موارد بشرية مع تركيز على إدارة الأداء والتدريب",
+        "description": "نظام يركز على تحسين عمليات تقييم الأداء والتدريب مع تضمين الوظائف الأساسية الأخرى (إدارة الموظفين، الرواتب، الحضور، التوظيف) ودعم المستخدمين الرئيسيين، مع افتراض عدم وجود تكاملات أو متطلبات أمان خاصة.",
+        "impact_level": "MEDIUM",
+        "risk_level": "LOW"
+      },
+      {
+        "option_id": "option_3",
+        "title": "نظام موارد بشرية مبسط لإدارة الموظفين والرواتب",
+        "description": "نظام يركز على الوظائف الأساسية لإدارة الموظفين والرواتب فقط، مع دعم المستخدمين الرئيسيين، مناسب لمن يبحث عن حل بسيط وسريع التنفيذ بدون وظائف متقدمة أو تكاملات.",
+        "impact_level": "LOW",
+        "risk_level": "LOW"
+      }
+    ],
+    "recommendation": "ننصح باختيار الخيار الأول للحصول على نظام موارد بشرية متكامل يغطي جميع الوظائف الأساسية المطلوبة ويدعم جميع المستخدمين الرئيسيين، مما يضمن تغطية شاملة وفعالة لاحتياجات إدارة الموارد البشرية.",
+    "provider_metadata": {
+      "provider": "openai_structured_json",
+      "model": "gpt-4.1-mini"
+    },
+    "created_at": "2026-05-03T12:24:13.574Z"
+  },
+  {
+    "entry_type": "OPTIONS_PRESENTED",
+    "options": [
+      {
+        "option_id": "opt1",
+        "title": "Comprehensive Cloud-Based CRM with Full Feature Set",
+        "description": "Develop a cloud-based CRM system supporting multi-tenant architecture that includes all core features: Contact Management, Lead and Opportunity Management, Sales Pipeline Tracking, Customer Support Ticketing, Marketing Automation, Reporting and Analytics, Integration with Email and Calendar, and Mobile Access. Implement strict data security with role-based access control, data encryption, and audit logs. Suitable for all user roles including Sales Representatives, Marketing Managers, Customer Support Agents, and Administrators.",
+        "impact_level": "HIGH",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "option_id": "opt2",
+        "title": "Modular CRM with Phased Feature Deployment",
+        "description": "Create a cloud-based, multi-tenant CRM system with phased implementation starting with core modules: Contact Management, Lead and Opportunity Management, and Sales Pipeline Tracking. Subsequent phases will add Customer Support Ticketing, Marketing Automation, Reporting and Analytics, and Integration with Email and Calendar. Mobile Access and full data security features including role-based access control, encryption, and audit logs will be integrated from the start. This approach reduces initial complexity and allows user feedback to guide feature rollout.",
+        "impact_level": "MEDIUM",
+        "risk_level": "LOW"
+      },
+      {
+        "option_id": "opt3",
+        "title": "Lightweight CRM Focused on Sales and Support",
+        "description": "Build a streamlined cloud-based CRM targeting Sales Representatives and Customer Support Agents with essential features: Contact Management, Lead and Opportunity Management, Sales Pipeline Tracking, and Customer Support Ticketing. Include basic Marketing Automation and Reporting and Analytics with integration to Email and Calendar. Mobile Access and data security with role-based access control, encryption, and audit logs will be maintained. This option prioritizes faster deployment and ease of use with potential for future expansion.",
+        "impact_level": "MEDIUM",
+        "risk_level": "LOW"
+      }
+    ],
+    "recommendation": "Option 1 is recommended for a full-featured, scalable CRM solution that meets all specified requirements and supports all user roles with robust security. If a phased or faster deployment is preferred, Option 2 or Option 3 can be considered based on organizational priorities.",
+    "provider_metadata": {
+      "provider": "openai_structured_json",
+      "model": "gpt-4.1-mini"
+    },
+    "created_at": "2026-05-03T13:42:06.302Z"
+  },
+  {
+    "entry_type": "OPTIONS_PRESENTED",
+    "options": [
+      {
+        "option_id": "option_1",
+        "title": "نظام CRM متكامل سحابي مع دعم كامل للميزات الأساسية",
+        "description": "نظام CRM سحابي يشمل إدارة جهات الاتصال، إدارة العملاء المحتملين والفرص، تتبع مسار المبيعات، تذاكر دعم العملاء، تكامل البريد الإلكتروني، تقارير وتحليلات، والوصول عبر الجوال. يدعم أدوار المستخدمين المختلفة مع تحكم وصول قائم على الأدوار وتشفير البيانات. يمكن تخصيص الحقول وأتمتة سير العمل، ويتكامل مع البريد الإلكتروني، التقويم، وأدوات التسويق.",
+        "impact_level": "HIGH",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "option_id": "option_2",
+        "title": "نظام CRM سحابي مع تركيز على دعم العملاء والمبيعات",
+        "description": "نظام CRM سحابي يركز على إدارة العملاء المحتملين، تتبع فرص المبيعات، تذاكر دعم العملاء، وتكامل البريد الإلكتروني والتقويم. يدعم أدوار المستخدمين الأساسية مع تحكم وصول قائم على الأدوار وتشفير البيانات. يوفر تخصيص الحقول وأتمتة سير العمل، مع تقارير وتحليلات محدودة، ويوفر وصولًا عبر الجوال.",
+        "impact_level": "MEDIUM",
+        "risk_level": "LOW"
+      },
+      {
+        "option_id": "option_3",
+        "title": "نظام CRM سحابي بسيط مع التركيز على إدارة جهات الاتصال والتقارير",
+        "description": "نظام CRM سحابي يركز على إدارة جهات الاتصال، تقارير وتحليلات أساسية، وتكامل البريد الإلكتروني. يدعم أدوار المستخدمين مع تحكم وصول بسيط وتشفير البيانات. يوفر تخصيص الحقول دون أتمتة سير العمل، مع إمكانية الوصول عبر الجوال. لا يشمل إدارة الفرص أو تذاكر الدعم أو تكامل أدوات التسويق.",
+        "impact_level": "LOW",
+        "risk_level": "LOW"
+      }
+    ],
+    "recommendation": "ننصح باختيار الخيار الأول للحصول على نظام CRM متكامل يغطي جميع المتطلبات الأساسية ويوفر مرونة في التخصيص والأمان، مما يدعم نمو الأعمال وتحسين تجربة العملاء بشكل شامل.",
+    "provider_metadata": {
+      "provider": "openai_structured_json",
+      "model": "gpt-4.1-mini"
+    },
+    "created_at": "2026-05-03T14:05:48.109Z"
   }
 ]

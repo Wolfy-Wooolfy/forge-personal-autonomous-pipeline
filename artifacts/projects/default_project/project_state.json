@@ -1,11 +1,11 @@
 {
   "project_id": "default_project",
-  "project_name": "اعمل سيستم خدمة عملاء",
-  "project_type": "UNCLASSIFIED",
+  "project_name": "عايز سيستم CRM\nاعمل مقترح كامل واعرضه عليا",
+  "project_type": "CUSTOMER_RELATIONSHIP_MANAGEMENT_CRM",
   "project_mode": "EXTEND_EXISTING",
   "project_status": "ACTIVE",
   "primary_language": "AR",
-  "user_goal": "اعمل سيستم خدمة عملاء",
+  "user_goal": "عايز سيستم CRM\nاعمل مقترح كامل واعرضه عليا",
   "business_goal": "",
   "technical_goal": "",
   "current_phase": "DELIVERY_READY",
@@ -14,55 +14,51 @@
   "source_of_truth": "ZIP_SNAPSHOT",
   "selected_strategy": "",
   "accepted_options": [
-    "option_2"
+    "option_1"
   ],
   "rejected_options": [],
   "open_questions": [],
-  "clarification_answers": {
-    "raw_answer": "اعمل مقترح بنفسك واعرضه",
-    "answered_questions": [
-      "ما هي متطلبات الأداء المحددة للنظام؟",
-      "هل هناك متطلبات خاصة بواجهة المستخدم أو تجربة المستخدم؟",
-      "هل هناك متطلبات قانونية أو تنظيمية يجب الالتزام بها؟",
-      "هل يحتاج النظام إلى دعم لغات متعددة؟",
-      "هل هناك متطلبات خاصة بالنسخ الاحتياطي أو استعادة البيانات؟"
-    ]
-  },
-  "requirement_domain": "نظام خدمة عملاء",
+  "clarification_answers": {},
+  "requirement_domain": "Customer Relationship Management (CRM)",
   "requirement_completeness": true,
   "requirement_model": {
-    "system_type": "نظام خدمة عملاء",
-    "functional_requirements": [
-      "إدارة التذاكر",
-      "الرد الآلي",
-      "تقارير الأداء",
-      "دعم قنوات متعددة: الهاتف، البريد الإلكتروني، الدردشة الحية، وسائل التواصل الاجتماعي",
-      "إدارة المستخدمين والأدوار"
-    ],
-    "non_functional_requirements": [
-      "متطلبات الأمان والخصوصية",
-      "دعم لغات متعددة",
-      "نسخ احتياطي واستعادة البيانات",
-      "واجهة مستخدم سهلة الاستخدام ومتوافقة مع معايير تجربة المستخدم"
-    ],
-    "user_roles": [
-      "ممثلي خدمة العملاء",
-      "المشرفين",
-      "العملاء"
-    ],
-    "channels": [
-      "الهاتف",
-      "البريد الإلكتروني",
-      "الدردشة الحية",
-      "وسائل التواصل الاجتماعي"
-    ],
-    "integration_requirements": "لا يحتاج النظام إلى التكامل مع أنظمة أخرى حالية",
-    "assumptions": [],
-    "recommended_scenario": "تم تفويض النظام باقتراح كامل بناءً على القنوات والوظائف والأدوار المذكورة"
+    "assumptions": {
+      "user_delegated_defaults": true
+    },
+    "recommended_scenario": {
+      "core_features": [
+        "contact_management",
+        "lead_and_opportunity_management",
+        "sales_pipeline_tracking",
+        "customer_support_ticketing",
+        "email_integration",
+        "reporting_and_analytics",
+        "mobile_access"
+      ],
+      "user_roles": [
+        "sales_representative",
+        "customer_support_agent",
+        "manager"
+      ],
+      "integration": [
+        "email_system",
+        "calendar",
+        "marketing_tools"
+      ],
+      "security": {
+        "role_based_access_control": true,
+        "data_encryption": true
+      },
+      "deployment": "cloud_based",
+      "customization": {
+        "custom_fields": true,
+        "workflow_automation": true
+      }
+    }
   },
-  "requirement_reasoning_summary": "تم تفويض النظام باقتراح كامل بناءً على طلب المستخدم، وتم تضمين الوظائف الأساسية، المتطلبات غير الوظيفية، الأدوار، والقنوات المناسبة لنظام خدمة العملاء. لا توجد أسئلة مفتوحة لأن جميع المتطلبات التنفيذية تم تحديدها أو تم تفويض اختيارها للنظام.",
+  "requirement_reasoning_summary": "User requested a complete CRM system proposal and authorized the system to choose defaults. Therefore, a comprehensive CRM requirement model with typical features, roles, integrations, security, deployment, and customization options was proposed to ensure completeness without further questions.",
   "provider_error": "",
-  "original_user_goal": "اعمل سيستم خدمة عملاء",
+  "original_user_goal": "عايز سيستم CRM\nاعمل مقترح كامل واعرضه عليا",
   "latest_requested_action": "BUILD_RUNNABLE_FROM_REQUIREMENTS",
   "active_followup_action": "BUILD_RUNNABLE_FROM_REQUIREMENTS",
   "documentation_state": "DOCS_APPROVED",
@@ -72,39 +68,53 @@
   "delivery_state": "READY",
   "delivery_summary": {
     "project_id": "default_project",
-    "execution_id": "ai_os_runnable_execution_1777809037483",
-    "package_id": "ai_os_runnable_package_1777809037483",
+    "execution_id": "ai_os_runnable_execution_1777817276080",
+    "package_id": "ai_os_runnable_package_1777817276080",
     "delivery_type": "RUNNABLE_APPLICATION",
     "output_path": "artifacts/projects/default_project/output",
     "output_exists": true,
     "current_execution_output_found": true,
     "expected_current_output_files": [
+      "app/package.json",
+      "app/server.js",
       "app/index.html",
       "app/README.md"
     ],
-    "output_file_count": 2,
+    "output_file_count": 4,
     "output_files": [
       "app/index.html",
-      "app/README.md"
+      "app/package.json",
+      "app/README.md",
+      "app/server.js"
     ],
     "ignored_existing_output_files": [
-      "سيستم خدمة عملاء/project_plan.md",
-      "سيستم خدمة عملاء/README.md",
-      "سيستم خدمة عملاء/requirements.json"
+      "سيستم_CRM_مقترح/proposal.md",
+      "سيستم_CRM_مقترح/README.md",
+      "سيستم_CRM_مقترح/requirements.json"
     ],
     "output_types": [
       "HTML_STATIC_APP",
+      "NODE_PACKAGE",
+      "NODE_SERVER",
       "README"
     ],
     "runnable_application_created": true,
     "runnable_indicators": [
-      "index.html"
+      "index.html",
+      "package.json",
+      "server.js"
     ],
     "run_instructions": [
-      "Open this file in the browser: artifacts/projects/default_project/output/app/index.html"
+      "Open this file in the browser: artifacts/projects/default_project/output/app/index.html",
+      "From this folder run: cd artifacts/projects/default_project/output/app",
+      "npm install",
+      "npm start"
     ],
     "usage_or_run_instructions": [
-      "Open this file in the browser: artifacts/projects/default_project/output/app/index.html"
+      "Open this file in the browser: artifacts/projects/default_project/output/app/index.html",
+      "From this folder run: cd artifacts/projects/default_project/output/app",
+      "npm install",
+      "npm start"
     ],
     "next_suggested_actions": [
       "Run or open the application",
@@ -114,11 +124,13 @@
   },
   "current_delivery_state": "DELIVERED",
   "current_delivery_type": "RUNNABLE_APPLICATION",
-  "current_execution_id": "ai_os_runnable_execution_1777809037483",
-  "current_package_id": "ai_os_runnable_package_1777809037483",
+  "current_execution_id": "ai_os_runnable_execution_1777817276080",
+  "current_package_id": "ai_os_runnable_package_1777817276080",
   "current_output_files": [
     "app/index.html",
-    "app/README.md"
+    "app/package.json",
+    "app/README.md",
+    "app/server.js"
   ],
   "current_followup_mode": "",
   "conversation_history": {
@@ -237,8 +249,179 @@
         "delivery_state": "READY",
         "pending_decisions": []
       }
+    },
+    {
+      "version_id": "state_0006",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T12:06:40.837Z",
+      "state_hash": "0041db04563b5ec12e34142819807f1b854fa3848091f29cdbcd51aac2884e6d",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "اعمل سيستم خدمة عملاء",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "READY",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0007",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T12:24:49.523Z",
+      "state_hash": "b61ba76c028cff45fcf4ddb0dcd4a53e337d2c6e3f3cfddc02f561011b0f6f60",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "سيستم HR",
+        "project_status": "ACTIVE",
+        "current_phase": "FORGE_RUNTIME_COMPLETE",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "REQUIREMENTS_PACKAGE",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0008",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T12:25:16.010Z",
+      "state_hash": "74c458f60941f88756e7de9151fc7b31484731d12ac8f3b41fba1b0d28159bc9",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "عايز سيستم HR",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "REQUIREMENTS_PACKAGE",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0009",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T12:25:24.810Z",
+      "state_hash": "fe0a45c039c765d9f6a875c07d79592f33769c04f57ba9f3cf85f771c3c92f98",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "عايز سيستم HR",
+        "project_status": "ACTIVE",
+        "current_phase": "DELIVERY_READY",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "READY",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0010",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T13:41:25.839Z",
+      "state_hash": "595b87a8415fb55abfa1a38b4b8e9324282444e5c11950f3e13bcb3379b619cc",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "عايز سيستم HR",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "READY",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0011",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T14:05:17.769Z",
+      "state_hash": "0cc8a29994bf6b53470a92a228a815ab2bb62989e0aa6b61fc5d2a4016673a33",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "عايز سيستم HR",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "NOT_READY",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0012",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T14:06:38.552Z",
+      "state_hash": "da56feebeb389a94566d059d798ba68a116d47ff31468757989aff0e319c6634",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "سيستم CRM اعمل مقترح كامل واعرضه عليا",
+        "project_status": "ACTIVE",
+        "current_phase": "FORGE_RUNTIME_COMPLETE",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "REQUIREMENTS_PACKAGE",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0013",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T14:07:21.748Z",
+      "state_hash": "78fd9b481ce74d721c16e4d6a98aea48c162425e4444189ca687f6ee4311290b",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "عايز سيستم CRM\nاعمل مقترح كامل واعرضه عليا",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "REQUIREMENTS_PACKAGE",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0014",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T14:07:56.901Z",
+      "state_hash": "4b72beaeed1154f3d63bd4c2ed0da29ef2c46e79b5cb6bcf1994ef4c82c3c238",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "عايز سيستم CRM\nاعمل مقترح كامل واعرضه عليا",
+        "project_status": "ACTIVE",
+        "current_phase": "DELIVERY_READY",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "READY",
+        "pending_decisions": []
+      }
     }
   ],
   "active_project_flag": true,
-  "last_updated_at": "2026-05-03T11:50:38.213Z"
+  "last_updated_at": "2026-05-03T14:07:56.901Z"
 }

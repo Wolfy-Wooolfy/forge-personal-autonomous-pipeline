@@ -1,0 +1,22 @@
+{
+  "execution_id": "ai_os_runnable_execution_1777811124089",
+  "source": "AI_OPERATING_SYSTEM",
+  "project_id": "default_project",
+  "package_id": "ai_os_runnable_package_1777811124089",
+  "created_at": "2026-05-03T12:25:24.089Z",
+  "summary": "Build runnable application from requirements package.",
+  "files": [
+    {
+      "path": "artifacts/projects/default_project/output/app/index.html",
+      "content": "<!DOCTYPE html>\n<html lang=\"ar\" dir=\"rtl\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>نظام الموارد البشرية - نموذج أولي</title>\n    <style>\n        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f9f9f9; color: #333; }\n        h1 { color: #2c3e50; }\n        section { background: white; padding: 15px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }\n        ul { line-height: 1.6; }\n        .feature, .user { margin-bottom: 8px; }\n        footer { font-size: 0.9em; color: #777; margin-top: 40px; }\n    </style>\n</head>\n<body>\n    <h1>نظام الموارد البشرية - نموذج أولي</h1>\n    <section>\n        <h2>الميزات الأساسية</h2>\n        <ul>\n            <li class=\"feature\">إدارة الموظفين</li>\n            <li class=\"feature\">الرواتب</li>\n            <li class=\"feature\">الحضور</li>\n            <li class=\"feature\">التوظيف</li>\n            <li class=\"feature\">التدريب</li>\n            <li class=\"feature\">تقييم الأداء</li>\n        </ul>\n    </section>\n    <section>\n        <h2>المستخدمون الرئيسيون</h2>\n        <ul>\n            <li class=\"user\">موظفو الموارد البشرية</li>\n            <li class=\"user\">المديرين</li>\n            <li class=\"user\">الموظفين</li>\n        </ul>\n    </section>\n    <section>\n        <h2>ملاحظات</h2>\n        <p>هذا نموذج أولي بسيط يعرض الميزات والمستخدمين للنظام بناءً على المتطلبات المقدمة. لا توجد وظائف تفاعلية أو تكاملات في هذا الإصدار.</p>\n    </section>\n    <footer>\n        <p>نموذج أولي للنظام - للاستخدام التجريبي فقط</p>\n    </footer>\n</body>\n</html>",
+      "execution_id": "ai_os_runnable_execution_1777811124089",
+      "package_id": "ai_os_runnable_package_1777811124089"
+    },
+    {
+      "path": "artifacts/projects/default_project/output/app/README.md",
+      "content": "# نظام الموارد البشرية - نموذج أولي\n\nهذا مشروع نموذج أولي بسيط يعرض الميزات والمستخدمين الأساسيين لنظام الموارد البشرية بناءً على المتطلبات المقدمة.\n\n## كيفية التشغيل\n\n1. افتح الملف `index.html` في متصفح الويب الخاص بك.\n\n   - يمكنك فتح الملف مباشرة بالنقر المزدوج عليه أو سحب الملف إلى نافذة المتصفح.\n\n2. ستظهر صفحة تعرض الميزات والمستخدمين للنظام.\n\n## ملاحظات\n\n- هذا النموذج الأولي لا يحتوي على وظائف تفاعلية أو تكاملات.\n- الغرض منه هو عرض المتطلبات بشكل مبسط.\n- لا يعتبر هذا التطبيق جاهزًا للإنتاج.\n\n## هيكل الملفات\n\n- `index.html`: الصفحة الرئيسية التي تعرض المعلومات.\n- `README.md`: تعليمات التشغيل والملاحظات.\n\n\n---\n\n**تنبيه:** هذا التطبيق هو نموذج أولي فقط ولا يحتوي على أي منطق برمجي أو قاعدة بيانات أو أمان.\n\n",
+      "execution_id": "ai_os_runnable_execution_1777811124089",
+      "package_id": "ai_os_runnable_package_1777811124089"
+    }
+  ]
+}

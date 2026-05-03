@@ -629,8 +629,14 @@ function createAiOsRuntime(options = {}) {
         requirement_domain: state.requirement_domain || "",
         requirement_model: state.requirement_model || {},
         user_goal: state.user_goal || "",
+        user_language: state.primary_language || detectPrimaryLanguage(state.user_goal || ""),
         previous_decisions: state.accepted_options || []
       },
+      constraints: [
+        "Return option titles and descriptions in the same language as user_language.",
+        "If user_language is AR, all user-facing option text must be Arabic.",
+        "Do not switch to English unless the user goal is English."
+      ],
       expected_output: {
         options: [
           {

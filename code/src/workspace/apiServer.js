@@ -2113,6 +2113,48 @@ ${trimmedExisting}`
     };
   }
 
+  function getProjectOutputFile(body = {}) {
+    const projectId = normalizeProjectId(body.project_id || readActiveProjectId());
+    const requestedPath = String(body.path || "").trim().replace(/\\/g, "/");
+    const deliverySummary = buildDeliverySummary(projectId);
+    const outputFiles = Array.isArray(deliverySummary.output_files) ? deliverySummary.output_files : [];
+
+    if (!requestedPath || !outputFiles.includes(requestedPath)) {
+      return {
+        ok: false,
+        reason: "OUTPUT_FILE_NOT_IN_CURRENT_DELIVERY",
+        delivery_summary: deliverySummary
+      };
+    }
+
+    const outputAbs = getProjectOutputAbs(projectId);
+    const fileAbs = path.resolve(outputAbs, requestedPath);
+
+    if (!fileAbs.startsWith(outputAbs + path.sep) && fileAbs !== outputAbs) {
+      return {
+        ok: false,
+        reason: "OUTPUT_FILE_PATH_OUTSIDE_PROJECT",
+        delivery_summary: deliverySummary
+      };
+    }
+
+    if (!fs.existsSync(fileAbs) || !fs.statSync(fileAbs).isFile()) {
+      return {
+        ok: false,
+        reason: "OUTPUT_FILE_NOT_FOUND",
+        delivery_summary: deliverySummary
+      };
+    }
+
+    return {
+      ok: true,
+      project_id: projectId,
+      path: requestedPath,
+      content: readTextSafe(fileAbs),
+      delivery_summary: deliverySummary
+    };
+  }
+
   function recordProjectConversationTurn(body = {}) {
     const projectId =
       typeof body.project_id === "string" && body.project_id.trim() !== ""
@@ -3985,6 +4027,12 @@ function buildExecutionPackage(packet) {
       if (req.method === "POST" && pathname === "/api/projects/conversation-history") {
         const body = await readBody(req);
         sendJson(res, 200, recordProjectConversationTurn(body));
+        return;
+      }
+
+      if (req.method === "POST" && pathname === "/api/projects/output-file") {
+        const body = await readBody(req);
+        sendJson(res, 200, getProjectOutputFile(body));
         return;
       }
 

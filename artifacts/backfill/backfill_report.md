@@ -1,12 +1,12 @@
 # MODULE FLOW — Backfill Report
 
-- generated_at: 2026-05-03T11:50:37.593Z
+- generated_at: 2026-05-03T14:07:56.220Z
 - operating_mode: IMPROVE
 - repository_state: FULL_PIPELINE_STATE
-- approved_actions_seen: 2
-- deterministic_backfill_actions: 2
+- approved_actions_seen: 4
+- deterministic_backfill_actions: 4
 - excluded_non_backfill_actions: 0
-- items_emitted: 2
+- items_emitted: 4
 
 ## Outputs
 - artifacts/backfill/backfill_plan.json

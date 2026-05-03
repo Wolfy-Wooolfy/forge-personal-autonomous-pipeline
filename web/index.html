@@ -580,6 +580,7 @@
       current_followup_mode: ""
     };
     let pendingDeliveryRevision = null;
+    let pendingOutputFileSelection = null;
 
     function appendMessage(type, title, contentHtml) {
       const wrapper = document.createElement("div");
@@ -820,7 +821,7 @@
       list.forEach((option, index) => {
         lines.push("");
         lines.push(`${lang === "ar" ? "المقترح" : "Proposal"} ${index + 1}: ${option.title || option.option_id || "Suggested option"}`);
-        lines.push(option.description || "");
+        lines.push(getAiOsOptionDescription(option, index, lang));
         lines.push(`${lang === "ar" ? "الأثر" : "Impact"}: ${option.impact_level || "MEDIUM"} | ${lang === "ar" ? "المخاطر" : "Risk"}: ${option.risk_level || "MEDIUM"}`);
       });
 
@@ -835,8 +836,36 @@
       return lines.join("\n");
     }
 
+    function buildAiOsOptionsMessage(options, recommendation, requestText) {
+      const lang = detectUserLanguage(requestText);
+      const list = Array.isArray(options) ? options : [];
+      const lines = [];
+
+      lines.push(lang === "ar" ? "\u062f\u064a \u0627\u0644\u0645\u0642\u062a\u0631\u062d\u0627\u062a \u0627\u0644\u0623\u0648\u0644\u064a\u0629 \u0644\u0644\u0645\u0634\u0631\u0648\u0639:" : "Here are the initial project proposals:");
+
+      list.forEach((option, index) => {
+        lines.push("");
+        lines.push(`${lang === "ar" ? "\u0627\u0644\u0645\u0642\u062a\u0631\u062d" : "Proposal"} ${index + 1}: ${getAiOsOptionTitle(option, index, lang)}`);
+        lines.push(getAiOsOptionDescription(option, index, lang));
+        lines.push(`${lang === "ar" ? "\u0627\u0644\u0623\u062b\u0631" : "Impact"}: ${option.impact_level || "MEDIUM"} | ${lang === "ar" ? "\u0627\u0644\u0645\u062e\u0627\u0637\u0631" : "Risk"}: ${option.risk_level || "MEDIUM"}`);
+      });
+
+      if (recommendation) {
+        lines.push("");
+        lines.push(`${lang === "ar" ? "\u062a\u0631\u0634\u064a\u062d\u064a" : "Recommendation"}: ${formatAiOsOptionText(recommendation, lang, "\u062a\u0631\u0634\u064a\u062d \u0645\u0628\u062f\u0626\u064a \u0645\u0646 \u0646\u0641\u0633 \u0642\u0627\u0626\u0645\u0629 \u0627\u0644\u0645\u0642\u062a\u0631\u062d\u0627\u062a.")}`);
+      }
+
+      lines.push("");
+      lines.push(lang === "ar" ? "\u0627\u062e\u062a\u0627\u0631 \u0631\u0642\u0645 \u0627\u0644\u0645\u0642\u062a\u0631\u062d \u0639\u0634\u0627\u0646 \u0646\u062b\u0628\u062a\u0647 \u0648\u0646\u062f\u062e\u0644 \u0645\u0631\u062d\u0644\u0629 \u0627\u0644\u0648\u062b\u0627\u0626\u0642." : "Choose a proposal number to approve it and move into documentation.");
+
+      return lines.join("\n");
+    }
+
     function buildAiOsOptionChoiceHtml(options) {
       const list = Array.isArray(options) ? options : [];
+      const lang = pendingAiOsOptions && pendingAiOsOptions.lang
+        ? pendingAiOsOptions.lang
+        : "en";
 
       if (list.length === 0) {
         return `<div class="file-preview">${formatMessageText("No project proposals available.")}</div>`;
@@ -845,17 +874,355 @@
       return `
         <div class="strategy-choice-list">
           ${list.map((item, index) => `
-            <button
-              type="button"
-              class="strategy-choice-btn"
-              data-ai-os-option-choice="${index + 1}"
-            >
-              <strong>${escapeHtml(item.title || item.option_id || `Option ${index + 1}`)}</strong>
-              <div>${escapeHtml(item.description || "")}</div>
-            </button>
+            <div class="file-card">
+              <div class="file-path">${escapeHtml(getAiOsOptionTitle(item, index, lang))}</div>
+              <div class="file-preview">${escapeHtml(getAiOsOptionDescription(item, index, lang))}</div>
+              <div class="actions" style="margin-top:12px;">
+                <button type="button" class="secondary" data-ai-os-option-choice="${index + 1}">
+                  ${escapeHtml(lang === "ar" ? "\u0627\u062e\u062a\u0627\u0631 \u0647\u0630\u0627 \u0627\u0644\u0645\u0642\u062a\u0631\u062d" : "Choose this proposal")}
+                </button>
+                <button type="button" class="secondary" data-ai-os-option-explain="${index + 1}">
+                  ${escapeHtml(lang === "ar" ? "\u0627\u0634\u0631\u062d \u0647\u0630\u0627 \u0627\u0644\u0645\u0642\u062a\u0631\u062d" : "Explain this proposal")}
+                </button>
+              </div>
+            </div>
           `).join("")}
         </div>
       `;
+    }
+
+    function containsArabic(value) {
+      return /[\u0600-\u06FF]/.test(String(value || ""));
+    }
+
+    function aiOsProposalLanguage(optionsState, requestText = "") {
+      return detectUserLanguage(requestText || (optionsState && optionsState.request) || "") === "ar" ? "ar" : "en";
+    }
+
+    function formatAiOsOptionText(value, lang, fallback) {
+      const text = String(value || "").trim();
+      if (lang === "ar" && text && !containsArabic(text)) {
+        return fallback;
+      }
+      return text || fallback;
+    }
+
+    function getAiOsOptionTitle(option, index, lang) {
+      return formatAiOsOptionText(
+        option && option.title,
+        lang,
+        lang === "ar" ? `\u0627\u0644\u0645\u0642\u062a\u0631\u062d ${index + 1}` : `Proposal ${index + 1}`
+      );
+    }
+
+    function getAiOsOptionDescription(option, index, lang) {
+      return formatAiOsOptionText(
+        option && option.description,
+        lang,
+        lang === "ar"
+          ? `\u0645\u0633\u0627\u0631 \u0645\u0642\u062a\u0631\u062d \u0631\u0642\u0645 ${index + 1} \u0645\u0646 \u0646\u0641\u0633 \u0642\u0627\u0626\u0645\u0629 \u0627\u0644\u0645\u0642\u062a\u0631\u062d\u0627\u062a \u0627\u0644\u062d\u0627\u0644\u064a\u0629. \u0627\u0644\u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u0643\u0627\u0645\u0644\u0629 \u0633\u062a\u062a\u0648\u0636\u062d \u0641\u064a \u0627\u0644\u0634\u0631\u062d \u0648\u0627\u0644\u0648\u062b\u0627\u0626\u0642 \u0628\u0639\u062f \u0627\u0644\u0627\u062e\u062a\u064a\u0627\u0631.`
+          : "No description was provided for this proposal."
+      );
+    }
+
+    function normalizeArabicOrdinalText(value) {
+      return String(value || "")
+        .replace(/\u0623/g, "\u0627")
+        .replace(/\u0625/g, "\u0627")
+        .replace(/\u0622/g, "\u0627")
+        .replace(/\u0649/g, "\u064a")
+        .replace(/\u0629/g, "\u0647");
+    }
+
+    function extractAiOsProposalIndex(requestText, optionsState = {}) {
+      const normalized = normalizeArabicOrdinalText(String(requestText || "").trim().toLowerCase());
+      const options = Array.isArray(optionsState.options) ? optionsState.options : [];
+      const digit = normalized.match(/\d+/);
+      if (digit) {
+        const index = Number(digit[0]) - 1;
+        return index >= 0 && index < options.length ? index : -1;
+      }
+
+      const ordinals = [
+        ["\u0627\u0644\u0627\u0648\u0644", "\u0627\u0648\u0644", "first"],
+        ["\u0627\u0644\u062b\u0627\u0646\u064a", "\u0627\u0644\u062a\u0627\u0646\u064a", "\u062b\u0627\u0646\u064a", "\u062a\u0627\u0646\u064a", "second"],
+        ["\u0627\u0644\u062b\u0627\u0644\u062b", "\u062b\u0627\u0644\u062b", "third"],
+        ["\u0627\u0644\u0631\u0627\u0628\u0639", "\u0631\u0627\u0628\u0639", "fourth"],
+        ["\u0627\u0644\u062e\u0627\u0645\u0633", "\u062e\u0627\u0645\u0633", "fifth"]
+      ];
+
+      for (let i = 0; i < ordinals.length; i += 1) {
+        if (ordinals[i].some((word) => normalized.includes(word))) {
+          return i < options.length ? i : -1;
+        }
+      }
+
+      if ((normalized.includes("\u0647\u0630\u0627 \u0627\u0644\u0645\u0642\u062a\u0631\u062d") || normalized.includes("this proposal")) && Number.isInteger(optionsState.lastExplainedIndex)) {
+        return optionsState.lastExplainedIndex;
+      }
+
+      return -1;
+    }
+
+    function getAiOsProposalIntent(requestText) {
+      const text = normalizeArabicOrdinalText(String(requestText || "").trim().toLowerCase().replace(/\s+/g, " "));
+      if (/^\d+$/.test(text)) return "select";
+      if (text.includes("\u0642\u0627\u0631\u0646") || text.includes("\u0627\u0644\u0641\u0631\u0642") || text.includes("compare")) return "compare";
+      if (text.includes("\u0631\u0634\u062d") || text.includes("\u0627\u0641\u0636\u0644") || text.includes("\u0627\u0644\u0627\u0646\u0633\u0628") || text.includes("\u0627\u0646\u0647\u064a") || text.includes("recommend")) return "recommend";
+      if (text.includes("\u0627\u0634\u0631\u062d") || text.includes("\u0648\u0636\u062d") || text.includes("\u0644\u064a\u0647") || text.includes("\u0645\u0627 \u0645\u0639\u0646\u064a") || text.includes("explain")) return "explain";
+      if (text.includes("\u0627\u062e\u062a\u0627\u0631") || text.includes("\u0627\u0639\u062a\u0645\u062f") || text.includes("choose") || text.includes("select")) return "select";
+      if (text.includes("\u0627\u0639\u0631\u0636") && text.includes("\u0645\u0642\u062a\u0631\u062d")) return "show";
+      if (isStopCurrentProjectRequest(text)) return "stop";
+      if (isStartOverRequest(text)) return "start_over";
+      return "";
+    }
+
+    function buildAiOsProposalFollowupHtml(selectedIndex = -1, lang = "en") {
+      return `
+        <div class="strategy-choice-list" style="margin-top:12px;">
+          ${selectedIndex >= 0 ? `<button class="strategy-choice-btn" type="button" data-ai-os-option-choice="${selectedIndex + 1}"><strong>${escapeHtml(lang === "ar" ? "\u0627\u062e\u062a\u0627\u0631 \u0647\u0630\u0627 \u0627\u0644\u0645\u0642\u062a\u0631\u062d" : "Choose this proposal")}</strong></button>` : ""}
+          <button class="strategy-choice-btn" type="button" data-ai-os-proposal-action="explain_another"><strong>${escapeHtml(lang === "ar" ? "\u0627\u0634\u0631\u062d \u0645\u0642\u062a\u0631\u062d \u0622\u062e\u0631" : "Explain another proposal")}</strong></button>
+          <button class="strategy-choice-btn" type="button" data-ai-os-proposal-action="compare"><strong>${escapeHtml(lang === "ar" ? "\u0642\u0627\u0631\u0646 \u0627\u0644\u0645\u0642\u062a\u0631\u062d\u0627\u062a" : "Compare proposals")}</strong></button>
+          <button class="strategy-choice-btn" type="button" data-ai-os-proposal-action="show"><strong>${escapeHtml(lang === "ar" ? "\u0627\u0639\u0631\u0636 \u0627\u0644\u0645\u0642\u062a\u0631\u062d\u0627\u062a \u0645\u0631\u0629 \u0623\u062e\u0631\u0649" : "Show proposals again")}</strong></button>
+          <button class="strategy-choice-btn" type="button" data-ai-os-proposal-action="stop"><strong>${escapeHtml(lang === "ar" ? "\u0627\u062a\u0648\u0642\u0641" : "Stop")}</strong></button>
+          <button class="strategy-choice-btn" type="button" data-ai-os-proposal-action="start_over"><strong>${escapeHtml(lang === "ar" ? "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f" : "Start over")}</strong></button>
+        </div>
+      `;
+    }
+
+    function buildAiOsProposalExplanation(option, index, lang) {
+      const title = getAiOsOptionTitle(option, index, lang);
+      const description = getAiOsOptionDescription(option, index, lang);
+      const impact = option && option.impact_level ? option.impact_level : "MEDIUM";
+      const risk = option && option.risk_level ? option.risk_level : "MEDIUM";
+
+      if (lang === "ar") {
+        return [
+          `\u0627\u0644\u0639\u0646\u0648\u0627\u0646: ${title}`,
+          "",
+          `\u0627\u0644\u0641\u0643\u0631\u0629: ${description}`,
+          "",
+          `\u0645\u0627\u0630\u0627 \u064a\u0634\u0645\u0644: \u064a\u0634\u0645\u0644 \u0646\u0637\u0627\u0642 \u0647\u0630\u0627 \u0627\u0644\u0645\u0642\u062a\u0631\u062d \u0643\u0645\u0627 \u0647\u0648 \u0645\u0639\u0631\u0648\u0636 \u0641\u064a \u0627\u0644\u0648\u0635\u0641 \u0648\u0633\u064a\u062a\u062d\u0648\u0644 \u0625\u0644\u0649 \u0648\u062b\u0627\u0626\u0642 \u0645\u0646\u0638\u0645\u0629 \u0628\u0639\u062f \u0627\u062e\u062a\u064a\u0627\u0631\u0647.`,
+          `\u0645\u0627 \u0627\u0644\u0630\u064a \u0644\u0627 \u064a\u0634\u0645\u0644\u0647: \u0644\u0627 \u064a\u0639\u0646\u064a \u0627\u062e\u062a\u064a\u0627\u0631\u0647 \u062a\u0646\u0641\u064a\u0630\u064b\u0627 \u0641\u0648\u0631\u064a\u064b\u0627 \u0623\u0648 \u0625\u0646\u0634\u0627\u0621 \u0645\u0644\u0641\u0627\u062a \u0628\u062f\u0648\u0646 \u0645\u0631\u062d\u0644\u0629 \u0627\u0644\u0648\u062b\u0627\u0626\u0642 \u0648\u0627\u0644\u0627\u0639\u062a\u0645\u0627\u062f.`,
+          `\u0645\u0646\u0627\u0633\u0628 \u0644\u0645\u064a\u0646: \u0645\u0646\u0627\u0633\u0628 \u0644\u0648 \u0643\u0627\u0646\u062a \u0623\u0648\u0644\u0648\u064a\u0627\u062a\u0643 \u0645\u062a\u0648\u0627\u0641\u0642\u0629 \u0645\u0639 \u0647\u0630\u0627 \u0627\u0644\u0648\u0635\u0641.`,
+          `\u0627\u0644\u0645\u0645\u064a\u0632\u0627\u062a: \u0623\u062b\u0631 ${impact} \u0648\u064a\u0639\u0637\u064a \u0645\u0633\u0627\u0631\u064b\u0627 \u0648\u0627\u0636\u062d\u064b\u0627 \u0644\u0644\u0648\u062b\u0627\u0626\u0642.`,
+          `\u0627\u0644\u0645\u062e\u0627\u0637\u0631: \u0645\u0633\u062a\u0648\u0649 \u0627\u0644\u0645\u062e\u0627\u0637\u0631 ${risk}.`,
+          `\u0645\u062a\u0649 \u0623\u062e\u062a\u0627\u0631\u0647: \u0627\u062e\u062a\u0631\u0647 \u0644\u0648 \u0647\u0630\u0627 \u0627\u0644\u0645\u0633\u0627\u0631 \u0647\u0648 \u0627\u0644\u0623\u0642\u0631\u0628 \u0644\u0647\u062f\u0641\u0643 \u0642\u0628\u0644 \u062a\u062c\u0647\u064a\u0632 \u0645\u0633\u0648\u062f\u0629 \u0627\u0644\u0648\u062b\u0627\u0626\u0642.`
+        ].join("\n");
+      }
+
+      return [
+        `Title: ${title}`,
+        "",
+        `Idea: ${description}`,
+        "",
+        "Includes: The scope described in this option, which will become structured documentation after selection.",
+        "Does not include: Immediate execution or file generation before explicit documentation approval.",
+        "Best for: Users whose priorities match this option's scope.",
+        `Advantages: ${impact} impact with a clear documentation path.`,
+        `Risks: ${risk} risk level.`,
+        "Choose it when: This path best matches your goal before moving to documentation."
+      ].join("\n");
+    }
+
+    function buildAiOsProposalComparison(optionsState, requestText) {
+      const lang = aiOsProposalLanguage(optionsState, requestText);
+      const options = Array.isArray(optionsState.options) ? optionsState.options : [];
+      const firstIndex = extractAiOsProposalIndex(requestText, optionsState);
+      const selectedIndexes = firstIndex >= 0
+        ? [firstIndex]
+        : options.map((_, index) => index);
+      const indexes = selectedIndexes.length >= 2 ? selectedIndexes : options.map((_, index) => index).slice(0, 2);
+      const lines = [lang === "ar" ? "\u0645\u0642\u0627\u0631\u0646\u0629 \u0627\u0644\u0645\u0642\u062a\u0631\u062d\u0627\u062a:" : "Proposal comparison:"];
+
+      indexes.forEach((index) => {
+        const option = options[index];
+        if (!option) return;
+        lines.push("");
+        lines.push(`${index + 1}. ${getAiOsOptionTitle(option, index, lang)}`);
+        lines.push(lang === "ar" ? `\u0627\u0644\u0641\u0643\u0631\u0629: ${getAiOsOptionDescription(option, index, lang)}` : `Idea: ${getAiOsOptionDescription(option, index, lang)}`);
+        lines.push(`${lang === "ar" ? "\u0627\u0644\u0623\u062b\u0631" : "Impact"}: ${option.impact_level || "MEDIUM"} | ${lang === "ar" ? "\u0627\u0644\u0645\u062e\u0627\u0637\u0631" : "Risk"}: ${option.risk_level || "MEDIUM"}`);
+      });
+
+      return lines.join("\n");
+    }
+
+    function pickRecommendedAiOsOption(options) {
+      const impactScore = { HIGH: 3, MEDIUM: 2, LOW: 1 };
+      const riskScore = { LOW: 3, MEDIUM: 2, HIGH: 1 };
+      return (Array.isArray(options) ? options : [])
+        .map((option, index) => ({
+          option,
+          index,
+          score: (impactScore[String(option.impact_level || "MEDIUM").toUpperCase()] || 2) +
+            (riskScore[String(option.risk_level || "MEDIUM").toUpperCase()] || 2)
+        }))
+        .sort((a, b) => b.score - a.score || a.index - b.index)[0] || null;
+    }
+
+    async function approveAiOsOptionByIndex(optionsState, selectedIndex, requestText) {
+      const selected = Array.isArray(optionsState.options) ? optionsState.options[selectedIndex] : null;
+      const lang = aiOsProposalLanguage(optionsState, requestText);
+
+      pushMessage("user", lang === "ar" ? "\u0627\u062e\u062a\u064a\u0627\u0631 \u0645\u0642\u062a\u0631\u062d" : "Proposal Selection", `<div class="file-preview">${formatMessageText(requestText)}</div>`);
+      requestInput.value = "";
+
+      if (!selected) {
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "\u0627\u062e\u062a\u064a\u0627\u0631 \u063a\u064a\u0631 \u0635\u062d\u064a\u062d" : "Invalid Choice",
+          `<div class="file-preview">${formatMessageText(lang === "ar" ? "\u0627\u062e\u062a\u0631 \u0631\u0642\u0645 \u0645\u0642\u062a\u0631\u062d \u0635\u062d\u064a\u062d \u0645\u0646 \u0627\u0644\u0642\u0627\u0626\u0645\u0629." : "Please choose a valid proposal number.")}</div>${buildAiOsProposalFollowupHtml(-1, lang)}`
+        );
+        setStatus("Invalid AI OS proposal selection.");
+        return true;
+      }
+
+      chatSendBtn.disabled = true;
+      setStatus("Approving selected AI OS proposal...");
+
+      try {
+        const decisionResult = await requestAPI("/api/ai-os/decision", {
+          project_id: optionsState.projectId,
+          selected_option_id: selected.option_id,
+          decision_owner: "USER",
+          rationale: `Selected from workspace conversation: ${selected.title || selected.option_id}`
+        });
+
+        if (decisionResult.project) {
+          renderProjectState(decisionResult.project);
+        }
+
+        if (!decisionResult.ok) {
+          renderResponse(decisionResult);
+          pushMessage("assistant", "AI OS Response", `<div class="file-preview">${formatMessageText(JSON.stringify(decisionResult, null, 2))}</div>`);
+          setStatus(decisionResult.reason || "AI OS decision blocked.");
+          return true;
+        }
+
+        pendingAiOsOptions = null;
+
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "\u062a\u0645 \u062a\u062b\u0628\u064a\u062a \u0627\u0644\u0645\u0642\u062a\u0631\u062d" : "Proposal Accepted",
+          `<div class="file-preview">${formatMessageText(
+            lang === "ar"
+              ? `\u062a\u0645 \u0627\u062e\u062a\u064a\u0627\u0631: ${getAiOsOptionTitle(selected, selectedIndex, lang)}\n\u0647\u062c\u0647\u0632 \u062f\u0644\u0648\u0642\u062a\u064a \u0648\u062b\u064a\u0642\u0629 \u0645\u0646\u0638\u0645\u0629 \u0644\u0644\u0645\u0631\u0627\u062c\u0639\u0629.`
+              : `Selected: ${getAiOsOptionTitle(selected, selectedIndex, lang)}\nI will now prepare a structured documentation draft for review.`
+          )}</div>`
+        );
+
+        setStatus("AI OS proposal accepted. Preparing documentation draft...");
+        await prepareAiOsDocumentationDraft(optionsState.projectId, optionsState.request);
+      } catch (err) {
+        renderResponse({ error: err.message });
+        pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>`);
+        setStatus(`Error: ${err.message}`);
+      } finally {
+        chatSendBtn.disabled = false;
+      }
+
+      return true;
+    }
+
+    function showAiOsOptionsAgain(optionsState, requestText = "") {
+      const lang = aiOsProposalLanguage(optionsState, requestText);
+      pushMessage(
+        "assistant",
+        lang === "ar" ? "\u0627\u0644\u0645\u0642\u062a\u0631\u062d\u0627\u062a \u0627\u0644\u062d\u0627\u0644\u064a\u0629" : "Current Proposals",
+        `
+          <div class="file-preview" style="margin-bottom:12px;">${formatMessageText(
+            buildAiOsOptionsMessage(optionsState.options, optionsState.recommendation || "", optionsState.request || requestText)
+          )}</div>
+          ${buildAiOsOptionChoiceHtml(optionsState.options)}
+        `
+      );
+      setStatus("AI OS proposals are ready for selection.");
+    }
+
+    async function handlePendingAiOsProposalMessage(requestText) {
+      if (!pendingAiOsOptions || !Array.isArray(pendingAiOsOptions.options)) {
+        return false;
+      }
+
+      const optionsState = pendingAiOsOptions;
+      const lang = aiOsProposalLanguage(optionsState, requestText);
+      const intent = getAiOsProposalIntent(requestText);
+      const selectedIndex = extractAiOsProposalIndex(requestText, optionsState);
+
+      if (!intent) {
+        return false;
+      }
+
+      if (intent === "select") {
+        const index = selectedIndex >= 0 ? selectedIndex : (Number.isInteger(optionsState.lastExplainedIndex) ? optionsState.lastExplainedIndex : -1);
+        return approveAiOsOptionByIndex(optionsState, index, requestText);
+      }
+
+      pushMessage("user", lang === "ar" ? "\u0637\u0644\u0628 \u062d\u0648\u0644 \u0627\u0644\u0645\u0642\u062a\u0631\u062d\u0627\u062a" : "Proposal Request", `<div class="file-preview">${formatMessageText(requestText)}</div>`);
+      requestInput.value = "";
+
+      if (intent === "explain") {
+        const option = optionsState.options[selectedIndex];
+        if (!option) {
+          showAiOsOptionsAgain(optionsState, requestText);
+          return true;
+        }
+        pendingAiOsOptions = { ...optionsState, lastExplainedIndex: selectedIndex };
+        pushMessage(
+          "assistant",
+          lang === "ar" ? `\u0634\u0631\u062d \u0627\u0644\u0645\u0642\u062a\u0631\u062d ${selectedIndex + 1}` : `Proposal ${selectedIndex + 1} Explanation`,
+          `<div class="file-preview">${formatMessageText(buildAiOsProposalExplanation(option, selectedIndex, lang))}</div>${buildAiOsProposalFollowupHtml(selectedIndex, lang)}`
+        );
+        setStatus("AI OS proposal explanation shown.");
+        return true;
+      }
+
+      if (intent === "compare") {
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "\u0645\u0642\u0627\u0631\u0646\u0629 \u0627\u0644\u0645\u0642\u062a\u0631\u062d\u0627\u062a" : "Proposal Comparison",
+          `<div class="file-preview">${formatMessageText(buildAiOsProposalComparison(optionsState, requestText))}</div>${buildAiOsProposalFollowupHtml(-1, lang)}`
+        );
+        setStatus("AI OS proposal comparison shown.");
+        return true;
+      }
+
+      if (intent === "recommend") {
+        const best = pickRecommendedAiOsOption(optionsState.options);
+        const text = best
+          ? (lang === "ar"
+              ? `\u0623\u0631\u0634\u062d \u0627\u0644\u0645\u0642\u062a\u0631\u062d ${best.index + 1}: ${getAiOsOptionTitle(best.option, best.index, lang)}\n\u0627\u0644\u0633\u0628\u0628: \u064a\u0648\u0627\u0632\u0646 \u0628\u064a\u0646 \u0627\u0644\u0623\u062b\u0631 ${best.option.impact_level || "MEDIUM"} \u0648\u0627\u0644\u0645\u062e\u0627\u0637\u0631 ${best.option.risk_level || "MEDIUM"} \u0645\u0646 \u0646\u0641\u0633 \u0642\u0627\u0626\u0645\u0629 \u0627\u0644\u0645\u0642\u062a\u0631\u062d\u0627\u062a.`
+              : `I recommend proposal ${best.index + 1}: ${getAiOsOptionTitle(best.option, best.index, lang)}\nReason: it balances ${best.option.impact_level || "MEDIUM"} impact with ${best.option.risk_level || "MEDIUM"} risk from the current proposal list.`)
+          : (lang === "ar" ? "\u0644\u0627 \u062a\u0648\u062c\u062f \u0645\u0642\u062a\u0631\u062d\u0627\u062a \u0643\u0627\u0641\u064a\u0629 \u0644\u0644\u062a\u0631\u0634\u064a\u062d." : "There are not enough proposals to recommend from.");
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "\u0627\u0644\u062a\u0631\u0634\u064a\u062d" : "Recommendation",
+          `<div class="file-preview">${formatMessageText(text)}</div>${buildAiOsProposalFollowupHtml(best ? best.index : -1, lang)}`
+        );
+        setStatus("AI OS proposal recommendation shown.");
+        return true;
+      }
+
+      if (intent === "show") {
+        showAiOsOptionsAgain(optionsState, requestText);
+        return true;
+      }
+
+      if (intent === "stop") {
+        pendingAiOsOptions = null;
+        pushMessage("assistant", lang === "ar" ? "\u062a\u0645 \u0627\u0644\u0625\u064a\u0642\u0627\u0641" : "Stopped", `<div class="file-preview">${formatMessageText(lang === "ar" ? "\u062a\u0645 \u0625\u064a\u0642\u0627\u0641 \u0645\u0633\u0627\u0631 \u0627\u0644\u0645\u0642\u062a\u0631\u062d\u0627\u062a \u0627\u0644\u062d\u0627\u0644\u064a." : "The current proposal flow was stopped.")}</div>`);
+        setStatus("AI OS proposal flow stopped.");
+        return true;
+      }
+
+      if (intent === "start_over") {
+        clearConversationFlowState();
+        pushMessage("assistant", lang === "ar" ? "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f" : "Start Over", `<div class="file-preview">${formatMessageText(lang === "ar" ? "\u0627\u0643\u062a\u0628 \u0627\u0644\u0637\u0644\u0628 \u0627\u0644\u062c\u062f\u064a\u062f." : "Type the new request.")}</div>`);
+        setStatus("Ready for a new request.");
+        return true;
+      }
+
+      return false;
     }
 
     async function presentAiOsOptions(projectId, request) {
@@ -880,7 +1247,10 @@
       pendingAiOsOptions = {
         projectId,
         request,
-        options: Array.isArray(optionsResult.options) ? optionsResult.options : []
+        options: Array.isArray(optionsResult.options) ? optionsResult.options : [],
+        recommendation: optionsResult.recommendation || "",
+        state: "PROPOSALS_READY",
+        lang: detectUserLanguage(request) === "ar" ? "ar" : "en"
       };
 
       pushMessage(
@@ -1338,7 +1708,7 @@
       if (isCreateLocalPrototypeFromRequirementsRequest(value)) return "CREATE_STATIC_PROTOTYPE";
       if (isRunOrOpenApplicationRequest(value)) return "SHOW_RUN_INSTRUCTIONS";
       if (isShowRequirementFilesRequest(value)) return "SHOW_REQUIREMENTS_FILES";
-      if (isRequestDeliveryChangesRequest(value)) return "REQUEST_APP_CHANGES";
+      if (isRequestDeliveryChangesRequest(value)) return "REQUEST_DELIVERY_CHANGES";
       if (isAmendDocumentationRequest(value)) return "REVISE_REQUIREMENTS";
       if (isStartOverRequest(value)) return "START_OVER";
       if (isStopCurrentProjectRequest(value)) return "STOP_FLOW";
@@ -1568,11 +1938,28 @@
       return lines.filter(Boolean);
     }
 
+    function deliveryStateForMode(deliveryType, followupMode = "") {
+      const type = String(deliveryType || "").toUpperCase();
+      const mode = String(followupMode || "").toUpperCase();
+
+      if (mode === "PROVIDER_UNAVAILABLE") return "PROVIDER_UNAVAILABLE_FOR_BUILD";
+      if (mode === "AWAITING_STATIC_PROTOTYPE_CONFIRMATION") return "AWAITING_STATIC_PROTOTYPE_CONFIRMATION";
+      if (mode === "REVISION_PROMPT") return "AWAITING_DELIVERY_CHANGE_REQUEST";
+      if (mode === "AFTER_REQUIREMENT_FILES" || mode === "AFTER_APP_FILES" || mode === "FILE_DETAILS_PROMPT") return "SHOWING_OUTPUT_FILES";
+      if (mode === "AFTER_RUN_INSTRUCTIONS") return "SHOWING_RUN_INSTRUCTIONS";
+      if (mode === "STOPPED") return "STOPPED";
+      if (mode === "START_OVER") return "START_OVER";
+      if (type === "RUNNABLE_APPLICATION") return "RUNNABLE_PROTOTYPE_DELIVERED";
+      if (type === "REQUIREMENTS_PACKAGE") return "REQUIREMENTS_DELIVERED";
+      if (type === "DOCUMENT_DELIVERY") return "DOCUMENT_DELIVERED";
+      return type ? "DELIVERED" : "UNKNOWN";
+    }
+
     function updateCurrentDeliveryFlowState(deliverySummary, followupMode = "") {
       const summary = deliverySummary && typeof deliverySummary === "object" ? deliverySummary : {};
 
       currentDeliveryFlowState = {
-        current_delivery_state: summary.delivery_type ? "DELIVERED" : "UNKNOWN",
+        current_delivery_state: deliveryStateForMode(summary.delivery_type, followupMode),
         current_delivery_type: String(summary.delivery_type || ""),
         current_execution_id: String(summary.execution_id || ""),
         current_package_id: String(summary.package_id || ""),
@@ -1609,16 +1996,30 @@
       if (mode === "REVISION_PROMPT") {
         return ar
           ? [
-              { action_id: "SUBMIT_REVISION", label: "أرسل التعديل", value: "أرسل التعديل", description: "اكتب تفاصيل التعديل في مربع الرسالة ثم أرسلها." },
-              { action_id: "SHOW_REQUIREMENTS_FILES", label: "اعرض ملفات المتطلبات", value: "اعرض ملفات المتطلبات", description: "عرض ملفات المتطلبات الحالية قبل التعديل." },
-              { action_id: "BACK_TO_DELIVERY", label: "ارجع", value: "ارجع", description: "الرجوع لاختيارات التسليم الحالية." },
+              { action_id: deliveryType === "RUNNABLE_APPLICATION" ? "SHOW_APP_FILES" : "SHOW_REQUIREMENTS_FILES", label: deliveryType === "RUNNABLE_APPLICATION" ? "اعرض ملفات التطبيق" : "اعرض ملفات المتطلبات", value: deliveryType === "RUNNABLE_APPLICATION" ? "اعرض ملفات التطبيق" : "اعرض ملفات المتطلبات", description: "عرض ملفات التسليم الحالية قبل كتابة التعديل." },
+              { action_id: "BACK_TO_DELIVERY_CHOICES", label: "ارجع", value: "ارجع", description: "الرجوع لاختيارات التسليم الحالية." },
               { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." }
             ]
           : [
-              { action_id: "SUBMIT_REVISION", label: "Submit change", value: "Submit change", description: "Type the change details in the message box and send them." },
-              { action_id: "SHOW_REQUIREMENTS_FILES", label: "Show requirement files", value: "Show requirement files", description: "Show current requirement files before changing them." },
-              { action_id: "BACK_TO_DELIVERY", label: "Back", value: "back", description: "Return to the current delivery choices." },
+              { action_id: deliveryType === "RUNNABLE_APPLICATION" ? "SHOW_APP_FILES" : "SHOW_REQUIREMENTS_FILES", label: deliveryType === "RUNNABLE_APPLICATION" ? "Show app files" : "Show requirement files", value: deliveryType === "RUNNABLE_APPLICATION" ? "Show app files" : "Show requirement files", description: "Show current delivery files before changing them." },
+              { action_id: "BACK_TO_DELIVERY_CHOICES", label: "Back", value: "back", description: "Return to the current delivery choices." },
               { action_id: "STOP_FLOW", label: "Stop", value: "stop", description: "Stop the current project flow." }
+            ];
+      }
+
+      if (mode === "APP_CHANGE_PROVIDER_UNAVAILABLE") {
+        return ar
+          ? [
+              { action_id: "REVISE_REQUIREMENTS", label: "\u0639\u062f\u0651\u0644 \u0645\u0644\u0641 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a", value: "\u0639\u062f\u0644 \u0645\u0644\u0641 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a", description: "\u062a\u0633\u062c\u064a\u0644 \u062a\u0639\u062f\u064a\u0644 \u0639\u0644\u0649 \u0645\u062a\u0637\u0644\u0628\u0627\u062a \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062d\u0627\u0644\u064a." },
+              { action_id: "SHOW_APP_FILES", label: "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0637\u0628\u064a\u0642", value: "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0637\u0628\u064a\u0642", description: "\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0627\u0644\u062d\u0627\u0644\u064a\u0629." },
+              { action_id: "STOP_FLOW", label: "\u0627\u062a\u0648\u0642\u0641", value: "\u0627\u062a\u0648\u0642\u0641", description: "\u0625\u064a\u0642\u0627\u0641 \u0627\u0644\u0637\u0644\u0628 \u0627\u0644\u062d\u0627\u0644\u064a." },
+              { action_id: "START_OVER", label: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f", value: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f", description: "\u0625\u063a\u0644\u0627\u0642 \u0627\u0644\u062a\u062f\u0641\u0642 \u0627\u0644\u062d\u0627\u0644\u064a \u0648\u0627\u0646\u062a\u0638\u0627\u0631 \u0637\u0644\u0628 \u062c\u062f\u064a\u062f." }
+            ]
+          : [
+              { action_id: "REVISE_REQUIREMENTS", label: "Revise requirements file", value: "revise requirements file", description: "Capture a requirements-level change for the current delivery." },
+              { action_id: "SHOW_APP_FILES", label: "Show app files", value: "Show app files", description: "Show current application files." },
+              { action_id: "STOP_FLOW", label: "Stop", value: "stop", description: "Stop the current project flow." },
+              { action_id: "START_OVER", label: "Start over", value: "start over", description: "Close this flow and start a new request." }
             ];
       }
 
@@ -1627,14 +2028,14 @@
           ? [
               { action_id: "BUILD_RUNNABLE_FROM_REQUIREMENTS", label: "ابني تطبيق قابل للتشغيل من هذه المتطلبات", value: "ابني تطبيق قابل للتشغيل من هذه المتطلبات", description: "محاولة بناء تطبيق قابل للتشغيل من حزمة المتطلبات الحالية." },
               { action_id: "REVISE_REQUIREMENTS", label: "عدّل المتطلبات", value: "عدل المتطلبات", description: "تعديل حزمة المتطلبات قبل بناء تطبيق." },
-              { action_id: "SHOW_FILE_DETAILS", label: "اعرض تفاصيل ملف", value: "اعرض تفاصيل ملف", description: "اكتب اسم ملف من القائمة لعرض تفاصيله." },
+              { action_id: "SHOW_FILE_DETAILS", label: "اعرض تفاصيل ملف", value: "اعرض تفاصيل ملف", description: "يعرض قائمة مرقمة وأزرار عرض لكل ملف." },
               { action_id: "START_OVER", label: "ابدأ من جديد", value: "ابدأ من جديد", description: "إغلاق التدفق الحالي وانتظار طلب جديد." },
               { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." }
             ]
           : [
               { action_id: "BUILD_RUNNABLE_FROM_REQUIREMENTS", label: "Build runnable app", value: "Build the runnable application from these requirements", description: "Attempt to build a runnable application from the current requirements package." },
               { action_id: "REVISE_REQUIREMENTS", label: "Revise requirements", value: "revise requirements", description: "Revise the current requirements before building." },
-              { action_id: "SHOW_FILE_DETAILS", label: "Show file details", value: "Show file details", description: "Type a file name from the list to inspect it." },
+              { action_id: "SHOW_FILE_DETAILS", label: "Show file details", value: "Show file details", description: "Show a numbered list and per-file view buttons." },
               { action_id: "START_OVER", label: "Start over", value: "start over", description: "Close this flow and start a new request." },
               { action_id: "STOP_FLOW", label: "Stop", value: "stop", description: "Stop the current project flow." }
             ];
@@ -1644,13 +2045,13 @@
         return ar
           ? [
               { action_id: "SHOW_APP_FILES", label: "اعرض ملفات التطبيق", value: "اعرض ملفات التطبيق", description: "عرض كل ملفات التطبيق الناتجة." },
-              { action_id: "REQUEST_APP_CHANGES", label: "اطلب تعديل", value: "اطلب تعديل", description: "تحديد تعديل واضح على التسليم الحالي." },
+              { action_id: "REQUEST_DELIVERY_CHANGES", label: "اطلب تعديل", value: "اطلب تعديل", description: "تحديد تعديل واضح على التسليم الحالي." },
               { action_id: "START_OVER", label: "ابدأ من جديد", value: "ابدأ من جديد", description: "إغلاق التدفق الحالي وانتظار طلب جديد." },
               { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." }
             ]
           : [
               { action_id: "SHOW_APP_FILES", label: "Show app files", value: "Show app files", description: "Show all current application files." },
-              { action_id: "REQUEST_APP_CHANGES", label: "Request changes", value: "Request changes", description: "Describe changes to the current delivery." },
+              { action_id: "REQUEST_DELIVERY_CHANGES", label: "Request changes", value: "Request changes", description: "Describe changes to the current delivery." },
               { action_id: "START_OVER", label: "Start over", value: "start over", description: "Close this flow and start a new request." },
               { action_id: "STOP_FLOW", label: "Stop", value: "stop", description: "Stop the current project flow." }
             ];
@@ -1661,14 +2062,14 @@
           ? [
               { action_id: "SHOW_RUN_INSTRUCTIONS", label: "شغّل أو افتح التطبيق", value: "شغل أو افتح التطبيق", description: "عرض تعليمات التشغيل بدون فتح المتصفح تلقائيًا." },
               { action_id: "SHOW_APP_FILES", label: "اعرض ملفات التطبيق", value: "اعرض ملفات التطبيق", description: "عرض كل ملفات التطبيق الناتجة." },
-              { action_id: "REQUEST_APP_CHANGES", label: "اطلب تعديل", value: "اطلب تعديل", description: "تحديد تعديل واضح على التسليم الحالي." },
+              { action_id: "REQUEST_DELIVERY_CHANGES", label: "اطلب تعديل", value: "اطلب تعديل", description: "تحديد تعديل واضح على التسليم الحالي." },
               { action_id: "START_OVER", label: "ابدأ من جديد", value: "ابدأ من جديد", description: "إغلاق التدفق الحالي وانتظار طلب جديد." },
               { action_id: "STOP_FLOW", label: "اتوقف", value: "اتوقف", description: "إيقاف الطلب الحالي." }
             ]
           : [
               { action_id: "SHOW_RUN_INSTRUCTIONS", label: "Run or open app", value: "Run or open the application", description: "Show run instructions without opening the browser." },
               { action_id: "SHOW_APP_FILES", label: "Show app files", value: "Show app files", description: "Show all current application files." },
-              { action_id: "REQUEST_APP_CHANGES", label: "Request changes", value: "Request changes", description: "Describe changes to the current delivery." },
+              { action_id: "REQUEST_DELIVERY_CHANGES", label: "Request changes", value: "Request changes", description: "Describe changes to the current delivery." },
               { action_id: "START_OVER", label: "Start over", value: "start over", description: "Close this flow and start a new request." },
               { action_id: "STOP_FLOW", label: "Stop", value: "stop", description: "Stop the current project flow." }
             ];
@@ -1710,8 +2111,65 @@
     }
 
     function buildPostActionChoicesHtml(deliverySummary, lang, mode = "") {
-      const choices = buildFollowUpChoicesForCurrentState({ deliverySummary, lang, mode });
+      let choices = buildFollowUpChoicesForCurrentState({ deliverySummary, lang, mode });
+      if (mode === "AFTER_REQUIREMENT_FILES" || mode === "AFTER_APP_FILES") {
+        choices = choices.filter((choice) => choice && choice.action_id !== "SHOW_FILE_DETAILS");
+      }
       return choices.length > 0 ? `<div style="margin-top:12px;">${buildCurrentProjectActionChoiceHtml(choices)}</div>` : "";
+    }
+
+    function localizeRunInstructions(instructions, summary, lang) {
+      const list = Array.isArray(instructions) ? instructions : [];
+
+      if (lang !== "ar") {
+        return list;
+      }
+
+      const outputFiles = Array.isArray(summary && summary.output_files) ? summary.output_files : [];
+      const outputPath = String(summary && summary.output_path ? summary.output_path : "").replace(/\\/g, "/");
+      const indexFile = outputFiles.find((file) => String(file || "").toLowerCase().endsWith("index.html"));
+      const formatPath = (file) => {
+        const value = String(file || "").replace(/\\/g, "/");
+        if (!value) return "";
+        if (value.startsWith("artifacts/") || /^[A-Za-z]:\//.test(value) || value.startsWith("/")) return value;
+        return outputPath ? `${outputPath}/${value}` : value;
+      };
+      const localized = list.map((item) =>
+        String(item || "")
+          .replace(/^Open this file in the browser:\s*/i, "افتح الملف التالي في المتصفح: ")
+          .replace(/^From this folder run:\s*/i, "من هذا المجلد شغّل: ")
+          .replace(/^npm install$/i, "npm install")
+          .replace(/^npm start$/i, "npm start")
+      );
+
+      if (localized.length === 0 && indexFile) {
+        localized.push(`افتح الملف التالي في المتصفح: ${formatPath(indexFile)}`);
+      }
+
+      if ((summary && summary.delivery_type) === "RUNNABLE_APPLICATION") {
+        localized.push("هذا Prototype ثابت مبني من المتطلبات، وليس نظام Production كامل.");
+      }
+
+      return localized;
+    }
+
+    function buildOutputFileButtons(files, lang) {
+      const list = Array.isArray(files) ? files : [];
+
+      if (list.length === 0) {
+        return "";
+      }
+
+      return `
+        <div class="strategy-choice-list" style="margin-top:12px;">
+          ${list.map((file, index) => `
+            <button class="strategy-choice-btn" type="button" data-output-file-path="${escapeHtml(String(file || ""))}">
+              <strong>${escapeHtml(lang === "ar" ? `عرض هذا الملف ${index + 1}` : `View this file ${index + 1}`)}</strong>
+              ${escapeHtml(String(file || ""))}
+            </button>
+          `).join("")}
+        </div>
+      `;
     }
 
     function buildDeliveryFollowupChoices(deliverySummary, lang) {
@@ -2066,6 +2524,13 @@
       const outputPath = summary.output_path || "";
       const files = Array.isArray(summary.output_files) ? summary.output_files : [];
       const deliveryType = summary.delivery_type || "UNKNOWN_ARTIFACTS";
+      const isRunnableDelivery = deliveryType === "RUNNABLE_APPLICATION";
+      const isRequirementsDelivery = deliveryType === "REQUIREMENTS_PACKAGE";
+      const displayFiles = isRunnableDelivery
+        ? (files.filter((file) => String(file || "").replace(/\\/g, "/").startsWith("app/")).length > 0
+            ? files.filter((file) => String(file || "").replace(/\\/g, "/").startsWith("app/"))
+            : files)
+        : files;
       const instructions = Array.isArray(summary.usage_or_run_instructions)
         ? summary.usage_or_run_instructions
         : Array.isArray(summary.run_instructions)
@@ -2087,14 +2552,14 @@
       };
       const localizedInstructions = lang === "ar" && deliveryType === "REQUIREMENTS_PACKAGE"
         ? ["هذه ليست ملفات تشغيل. تم إنشاء حزمة متطلبات فقط. راجع ملفات التسليم الحالية، ثم يمكنك اختيار بناء تطبيق قابل للتشغيل من هذه المتطلبات."]
-        : instructions;
+        : localizeRunInstructions(instructions, summary, lang);
       const lines = [
         `delivery_type: ${deliveryType}`,
         summary.execution_id ? `execution_id: ${summary.execution_id}` : "",
         summary.package_id ? `package_id: ${summary.package_id}` : "",
         "",
-        files.length > 0
-          ? `output_files:\n${files.map((file) => `- ${formatOutputPath(file)}`).join("\n")}`
+        displayFiles.length > 0
+          ? `output_files:\n${displayFiles.map((file, index) => `- ${index + 1}. ${formatOutputPath(file)}`).join("\n")}`
           : (lang === "ar" ? "لا توجد ملفات في ملخص التسليم الحالي." : "No files were listed in the current delivery summary."),
         "",
         lang === "ar" ? "طريقة الاستخدام أو المراجعة:" : "Usage or review:",
@@ -2105,18 +2570,87 @@
 
       pushMessage(
         "user",
-        lang === "ar" ? "\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0633\u0644\u064a\u0645" : "Show Delivery Files",
+        lang === "ar"
+          ? (isRunnableDelivery ? "عرض ملفات التطبيق" : isRequirementsDelivery ? "عرض ملفات المتطلبات" : "عرض ملفات التسليم")
+          : (isRunnableDelivery ? "Show App Files" : isRequirementsDelivery ? "Show Requirement Files" : "Show Delivery Files"),
         `<div class="file-preview">${formatMessageText(request)}</div>`
       );
       requestInput.value = "";
 
       pushMessage(
         "assistant",
-        lang === "ar" ? "\u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062d\u0627\u0644\u064a\u0629" : "Current Delivery Files",
-        `<div class="file-preview">${formatMessageText(lines.join("\n"))}</div>${buildPostActionChoicesHtml(summary, lang, deliveryType === "REQUIREMENTS_PACKAGE" ? "AFTER_REQUIREMENT_FILES" : "DELIVERY_SUMMARY")}`
+        lang === "ar"
+          ? (isRunnableDelivery ? "ملفات التطبيق الحالية" : isRequirementsDelivery ? "ملفات المتطلبات الحالية" : "ملفات التسليم الحالية")
+          : (isRunnableDelivery ? "Current App Files" : isRequirementsDelivery ? "Current Requirement Files" : "Current Delivery Files"),
+        `<div class="file-preview">${formatMessageText(lines.join("\n"))}</div>${buildOutputFileButtons(displayFiles, lang)}${buildPostActionChoicesHtml(summary, lang, isRequirementsDelivery ? "AFTER_REQUIREMENT_FILES" : isRunnableDelivery ? "AFTER_APP_FILES" : "DELIVERY_SUMMARY")}`
       );
-      updateCurrentDeliveryFlowState(summary, deliveryType === "REQUIREMENTS_PACKAGE" ? "AFTER_REQUIREMENT_FILES" : "DELIVERY_SUMMARY");
+      updateCurrentDeliveryFlowState(summary, isRequirementsDelivery ? "AFTER_REQUIREMENT_FILES" : isRunnableDelivery ? "AFTER_APP_FILES" : "DELIVERY_SUMMARY");
       setStatus(lang === "ar" ? "\u062a\u0645 \u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062d\u0627\u0644\u064a\u0629." : "Current delivery files shown.");
+    }
+
+    async function showOutputFileDetailsForCurrentProject(fileValue) {
+      const summary = currentProjectState && currentProjectState.delivery_summary
+        ? currentProjectState.delivery_summary
+        : {};
+      const lang = detectUserLanguage(fileValue || (currentProjectState && currentProjectState.project_name) || "");
+      const files = Array.isArray(summary.output_files) ? summary.output_files : [];
+      const requested = String(fileValue || "").trim().replace(/\\/g, "/");
+      const deliveryType = String(summary.delivery_type || "");
+
+      if (!requested || !files.includes(requested)) {
+        const numbered = files.length > 0
+          ? files.map((file, index) => `${index + 1}. ${file}`).join("\n")
+          : (lang === "ar" ? "لا توجد ملفات في التسليم الحالي." : "No files are listed in the current delivery.");
+
+        pendingOutputFileSelection = {
+          project_id: getActiveProjectId(),
+          files
+        };
+
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "اختر ملفًا من القائمة" : "Choose A File",
+          `<div class="file-preview">${formatMessageText(
+            lang === "ar"
+              ? `اختر ملفًا من القائمة التالية عبر زر "عرض هذا الملف"، أو اكتب رقم الملف فقط:\n${numbered}`
+              : `Choose a file with its "View this file" button, or type only the file number:\n${numbered}`
+          )}</div>${buildOutputFileButtons(files, lang)}${buildPostActionChoicesHtml(summary, lang, deliveryType === "REQUIREMENTS_PACKAGE" ? "AFTER_REQUIREMENT_FILES" : "DELIVERY_SUMMARY")}`
+        );
+        updateCurrentDeliveryFlowState(summary, "FILE_DETAILS_PROMPT");
+        return true;
+      }
+
+      try {
+        const result = await requestAPI("/api/projects/output-file", {
+          project_id: getActiveProjectId(),
+          path: requested
+        });
+        if (!result || result.ok === false) {
+          throw new Error(result && result.reason ? result.reason : "OUTPUT_FILE_READ_FAILED");
+        }
+        const content = result && typeof result.content === "string" ? result.content : "";
+
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "تفاصيل الملف" : "File Details",
+          `<div class="file-preview">${formatMessageText(
+            [
+              `path: ${result.path || requested}`,
+              "",
+              content || (lang === "ar" ? "الملف فارغ أو لا يحتوي على محتوى نصي." : "The file is empty or has no text content.")
+            ].join("\n")
+          )}</div>${buildPostActionChoicesHtml(summary, lang, deliveryType === "REQUIREMENTS_PACKAGE" ? "AFTER_REQUIREMENT_FILES" : "DELIVERY_SUMMARY")}`
+        );
+        updateCurrentDeliveryFlowState(summary, "SHOWING_OUTPUT_FILES");
+        return true;
+      } catch (err) {
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "تعذر عرض الملف" : "Could Not Show File",
+          `<div class="file-preview">${formatMessageText(err.message)}</div>${buildPostActionChoicesHtml(summary, lang, deliveryType === "REQUIREMENTS_PACKAGE" ? "AFTER_REQUIREMENT_FILES" : "DELIVERY_SUMMARY")}`
+        );
+        return true;
+      }
     }
 
     function getRealRunnableIndicators(summary) {
@@ -2161,6 +2695,7 @@
         : Array.isArray(summary.usage_or_run_instructions)
           ? summary.usage_or_run_instructions
           : [];
+      const localizedInstructions = localizeRunInstructions(instructions, summary, lang);
 
       pushMessage(
         "user",
@@ -2190,8 +2725,8 @@
         `runnable_indicators: ${realIndicators.join(", ")}`,
         "",
         lang === "ar" ? "\u062a\u0639\u0644\u064a\u0645\u0627\u062a \u0627\u0644\u062a\u0634\u063a\u064a\u0644:" : "Run instructions:",
-        ...(instructions.length > 0
-          ? instructions
+        ...(localizedInstructions.length > 0
+          ? localizedInstructions
           : [lang === "ar" ? "\u0627\u0641\u062a\u062d \u0645\u0644\u0641 index.html \u0641\u064a \u0627\u0644\u0645\u062a\u0635\u0641\u062d \u0625\u0630\u0627 \u0643\u0627\u0646 \u0645\u0648\u062c\u0648\u062f\u064b\u0627." : "Open index.html in a browser if present."])
       ];
 
@@ -2210,7 +2745,6 @@
         ? currentProjectState.delivery_summary
         : {};
       const deliveryType = String(summary.delivery_type || "");
-      const isRequirements = deliveryType === "REQUIREMENTS_PACKAGE";
 
       pushMessage(
         "user",
@@ -2224,9 +2758,7 @@
         lang === "ar" ? "\u0645\u0637\u0644\u0648\u0628 \u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u062a\u0639\u062f\u064a\u0644" : "Change Details Needed",
         `<div class="file-preview">${formatMessageText(
           lang === "ar"
-            ? (isRequirements
-                ? "\u0645\u0627 \u0627\u0644\u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u0645\u0637\u0644\u0648\u0628 \u0639\u0644\u0649 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a\u061f"
-                : "\u0645\u0627 \u0627\u0644\u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u0645\u0637\u0644\u0648\u0628 \u0639\u0644\u0649 \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062d\u0627\u0644\u064a\u061f")
+            ? "\u0645\u0627 \u0627\u0644\u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u0645\u0637\u0644\u0648\u0628 \u0639\u0644\u0649 \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062d\u0627\u0644\u064a\u061f"
             : "Describe the requested change clearly. I will treat it as a change to this project, not as a new request."
         )}</div>${buildPostActionChoicesHtml(summary, lang, "REVISION_PROMPT")}`
       );
@@ -2235,9 +2767,9 @@
       pendingDeliveryRevision = {
         project_id: getActiveProjectId(),
         delivery_type: deliveryType,
-        mode: isRequirements ? "REVISE_REQUIREMENTS" : "REQUEST_DELIVERY_CHANGES"
+        mode: "AWAITING_DELIVERY_CHANGE_REQUEST"
       };
-      setStatus(lang === "ar" ? "\u0628\u0627\u0646\u062a\u0638\u0627\u0631 \u062a\u0641\u0627\u0635\u064a\u0644 \u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u062a\u0633\u0644\u064a\u0645." : "Waiting for delivery change details.");
+      setStatus(lang === "ar" ? "AWAITING_DELIVERY_CHANGE_REQUEST: بانتظار تفاصيل تعديل التسليم." : "AWAITING_DELIVERY_CHANGE_REQUEST: waiting for delivery change details.");
     }
 
     function submitDeliveryRevisionFromText(request) {
@@ -2254,6 +2786,21 @@
       );
       requestInput.value = "";
       pendingDeliveryRevision = null;
+
+      if (String(summary.delivery_type || "") === "RUNNABLE_APPLICATION") {
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "\u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u062a\u0637\u0628\u064a\u0642" : "Application Change",
+          `<div class="file-preview">${formatMessageText(
+            lang === "ar"
+              ? "\u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u064a\u062d\u062a\u0627\u062c Provider \u063a\u064a\u0631 \u0645\u062a\u0627\u062d \u062d\u0627\u0644\u064a\u064b\u0627."
+              : "Changing the application requires a provider that is not available right now."
+          )}</div>${buildPostActionChoicesHtml(summary, lang, "APP_CHANGE_PROVIDER_UNAVAILABLE")}`
+        );
+        updateCurrentDeliveryFlowState(summary, "APP_CHANGE_PROVIDER_UNAVAILABLE");
+        setStatus(lang === "ar" ? "\u062a\u0645 \u0627\u0633\u062a\u0644\u0627\u0645 \u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u062f\u0648\u0646 \u0641\u062a\u062d \u0637\u0644\u0628 \u062c\u062f\u064a\u062f." : "Application change captured without starting a new request.");
+        return true;
+      }
 
       pushMessage(
         "assistant",
@@ -2314,7 +2861,7 @@
         if (result.mode === "BUILD_RUNNABLE_PROVIDER_UNAVAILABLE") {
           const message = lang === "ar"
             ? [
-                "\u0628\u0646\u0627\u0621 \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u064a\u062d\u062a\u0627\u062c Provider \u063a\u064a\u0631 \u0645\u062a\u0627\u062d \u062d\u0627\u0644\u064a\u064b\u0627.",
+                "\u0628\u0646\u0627\u0621 \u062a\u0637\u0628\u064a\u0642 \u0643\u0627\u0645\u0644 \u064a\u062d\u062a\u0627\u062c Provider \u063a\u064a\u0631 \u0645\u062a\u0627\u062d \u062d\u0627\u0644\u064a\u064b\u0627. \u064a\u0645\u0643\u0646\u0643 \u0625\u0646\u0634\u0627\u0621 Prototype HTML \u062b\u0627\u0628\u062a \u0645\u0646 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a.",
                 "",
                 ...lines
               ].join("\n")
@@ -2699,45 +3246,21 @@
         return;
       }
 
-      if (action === "REVISE_REQUIREMENTS" || action === "REQUEST_APP_CHANGES" || action === "REVISE_DOCUMENT") {
+      if (action === "REVISE_REQUIREMENTS" || action === "REQUEST_DELIVERY_CHANGES" || action === "REVISE_DOCUMENT") {
         askForDeliveryChangeRequest(value || "Request changes");
         return;
       }
 
-      if (action === "SUBMIT_REVISION") {
-        const lang = detectUserLanguage(value || (currentProjectState && currentProjectState.project_name) || "");
-        pushMessage(
-          "assistant",
-          lang === "ar" ? "اكتب التعديل" : "Type The Change",
-          `<div class="file-preview">${formatMessageText(
-            lang === "ar"
-              ? "اكتب تفاصيل التعديل في مربع الرسالة ثم اضغط إرسال. سيتم التعامل معه كتعديل على نفس المشروع وليس طلبًا جديدًا."
-              : "Type the change details in the message box and send them. It will be treated as a change to the same project, not a new request."
-          )}</div>${buildPostActionChoicesHtml((currentProjectState && currentProjectState.delivery_summary) || {}, lang, "REVISION_PROMPT")}`
-        );
-        requestInput.focus();
-        return;
-      }
-
       if (action === "SHOW_FILE_DETAILS") {
-        const lang = detectUserLanguage(value || (currentProjectState && currentProjectState.project_name) || "");
-        pushMessage(
-          "assistant",
-          lang === "ar" ? "تفاصيل ملف" : "File Details",
-          `<div class="file-preview">${formatMessageText(
-            lang === "ar"
-              ? "اكتب اسم الملف من القائمة لعرض تفاصيله. سأتعامل معه داخل نفس تسليم المشروع."
-              : "Type a file name from the list to inspect it within this delivery."
-          )}</div>${buildPostActionChoicesHtml((currentProjectState && currentProjectState.delivery_summary) || {}, lang, "AFTER_REQUIREMENT_FILES")}`
-        );
-        requestInput.focus();
+        await showOutputFileDetailsForCurrentProject(value || "");
         return;
       }
 
-      if (action === "BACK_TO_DELIVERY") {
+      if (action === "BACK_TO_DELIVERY_CHOICES") {
         const lang = detectUserLanguage(value || (currentProjectState && currentProjectState.project_name) || "");
         const summary = (currentProjectState && currentProjectState.delivery_summary) || {};
         pendingDeliveryRevision = null;
+        pendingOutputFileSelection = null;
         pushMessage(
           "assistant",
           lang === "ar" ? "اختيارات المتابعة" : "Follow-up Choices",
@@ -2759,12 +3282,14 @@
 
       if (action === "START_OVER") {
         pendingDeliveryRevision = null;
+        pendingOutputFileSelection = null;
         startOverCurrentProjectFlow(value || "start over");
         return;
       }
 
       if (action === "STOP_FLOW") {
         pendingDeliveryRevision = null;
+        pendingOutputFileSelection = null;
         stopCurrentProjectFlow(value || "stop");
         return;
       }
@@ -3773,6 +4298,20 @@
         return;
       }
 
+      if (pendingOutputFileSelection && /^\d+$/.test(request)) {
+        const index = parseInt(request, 10) - 1;
+        const files = Array.isArray(pendingOutputFileSelection.files) ? pendingOutputFileSelection.files : [];
+        const selected = files[index] || "";
+        requestInput.value = "";
+        pendingOutputFileSelection = null;
+        await showOutputFileDetailsForCurrentProject(selected);
+        return;
+      }
+
+      if (await handlePendingAiOsProposalMessage(request)) {
+        return;
+      }
+
       if (await handleCurrentProjectStateCommand(request)) {
         return;
       }
@@ -4332,6 +4871,31 @@
         }
       }
 
+      const outputFileButton = event.target.closest("[data-output-file-path]");
+
+      if (outputFileButton) {
+        const filePath = outputFileButton.getAttribute("data-output-file-path");
+
+        if (!filePath || outputFileButton.disabled) {
+          return;
+        }
+
+        const allOutputFileButtons = chatStream.querySelectorAll("[data-output-file-path]");
+        allOutputFileButtons.forEach((btn) => {
+          btn.disabled = true;
+          btn.style.opacity = "0.6";
+          btn.style.cursor = "not-allowed";
+        });
+
+        showOutputFileDetailsForCurrentProject(filePath).catch((err) => {
+          renderResponse({ error: err.message });
+          const summary = (currentProjectState && currentProjectState.delivery_summary) || {};
+          pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>${buildPostActionChoicesHtml(summary, detectUserLanguage(filePath), "DELIVERY_SUMMARY")}`);
+          setStatus(`Error: ${err.message}`);
+        });
+        return;
+      }
+
       const projectCommandButton = event.target.closest("[data-project-command-choice]");
 
       if (projectCommandButton) {
@@ -4355,6 +4919,58 @@
           pushMessage("assistant", "Error", `<div class="file-preview">${formatMessageText(err.message)}</div>${buildPostActionChoicesHtml(summary, detectUserLanguage(choiceValue), "DELIVERY_SUMMARY")}`);
           setStatus(`Error: ${err.message}`);
         });
+        return;
+      }
+
+      const aiOsExplainButton = event.target.closest("[data-ai-os-option-explain]");
+
+      if (aiOsExplainButton) {
+        const choiceValue = aiOsExplainButton.getAttribute("data-ai-os-option-explain");
+
+        if (!choiceValue || aiOsExplainButton.disabled) {
+          return;
+        }
+
+        const allAiOsButtons = chatStream.querySelectorAll("[data-ai-os-option-explain], [data-ai-os-option-choice], [data-ai-os-proposal-action]");
+        allAiOsButtons.forEach((btn) => {
+          btn.disabled = true;
+          btn.style.opacity = "0.6";
+          btn.style.cursor = "not-allowed";
+        });
+
+        requestInput.value = detectUserLanguage(pendingAiOsOptions && pendingAiOsOptions.request || "") === "ar"
+          ? `\u0627\u0634\u0631\u062d \u0627\u0644\u0645\u0642\u062a\u0631\u062d ${choiceValue}`
+          : `explain proposal ${choiceValue}`;
+        chatSendBtn.click();
+        return;
+      }
+
+      const aiOsProposalActionButton = event.target.closest("[data-ai-os-proposal-action]");
+
+      if (aiOsProposalActionButton) {
+        const action = aiOsProposalActionButton.getAttribute("data-ai-os-proposal-action");
+
+        if (!action || aiOsProposalActionButton.disabled) {
+          return;
+        }
+
+        const allAiOsButtons = chatStream.querySelectorAll("[data-ai-os-option-explain], [data-ai-os-option-choice], [data-ai-os-proposal-action]");
+        allAiOsButtons.forEach((btn) => {
+          btn.disabled = true;
+          btn.style.opacity = "0.6";
+          btn.style.cursor = "not-allowed";
+        });
+
+        const lang = detectUserLanguage(pendingAiOsOptions && pendingAiOsOptions.request || "") === "ar" ? "ar" : "en";
+        const actionText = {
+          explain_another: lang === "ar" ? "\u0627\u0639\u0631\u0636 \u0627\u0644\u0645\u0642\u062a\u0631\u062d\u0627\u062a \u0645\u0631\u0629 \u0623\u062e\u0631\u0649" : "show proposals again",
+          compare: lang === "ar" ? "\u0642\u0627\u0631\u0646 \u0627\u0644\u0645\u0642\u062a\u0631\u062d\u0627\u062a" : "compare options",
+          show: lang === "ar" ? "\u0627\u0639\u0631\u0636 \u0627\u0644\u0645\u0642\u062a\u0631\u062d\u0627\u062a \u0645\u0631\u0629 \u0623\u062e\u0631\u0649" : "show proposals again",
+          stop: lang === "ar" ? "\u0627\u062a\u0648\u0642\u0641" : "stop",
+          start_over: lang === "ar" ? "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f" : "start over"
+        };
+        requestInput.value = actionText[action] || action;
+        chatSendBtn.click();
         return;
       }
 

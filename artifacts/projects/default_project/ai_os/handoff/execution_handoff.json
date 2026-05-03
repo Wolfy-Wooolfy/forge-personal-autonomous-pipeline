@@ -1,12 +1,12 @@
 {
-  "package_id": "ai_os_package_1777808968355",
-  "handoff_id": "ai_os_handoff_1777808968355",
-  "created_at": "2026-05-03T11:49:28.355Z",
+  "package_id": "ai_os_package_1777817197502",
+  "handoff_id": "ai_os_handoff_1777817197502",
+  "created_at": "2026-05-03T14:06:37.502Z",
   "source": "EXTERNAL_AI_WORKSPACE",
   "source_layer": "AI_OPERATING_SYSTEM",
   "handoff_status": "APPROVED_PENDING_FORGE",
   "project_id": "default_project",
-  "execution_id": "ai_os_execution_1777808968355",
+  "execution_id": "ai_os_execution_1777817197502",
   "artifact_path": "artifacts/projects/default_project/execute/execution_package.json",
   "approved_scope": {
     "summary": "User approved execution from workspace conversation.",
@@ -15,25 +15,25 @@
   },
   "target_project_path": "artifacts/projects/default_project",
   "output_path": "artifacts/projects/default_project/output",
-  "output_archive_path": "",
+  "output_archive_path": "artifacts/projects/default_project/output_archive/2026-05-03T14-06-37-498Z",
   "requested_outputs": [
-    "Apply approved AI OS change to artifacts/projects/default_project/output/سيستم خدمة عملاء/README.md",
-    "Apply approved AI OS change to artifacts/projects/default_project/output/سيستم خدمة عملاء/requirements.json",
-    "Apply approved AI OS change to artifacts/projects/default_project/output/سيستم خدمة عملاء/project_plan.md"
+    "Apply approved AI OS change to artifacts/projects/default_project/output/سيستم_CRM_مقترح/README.md",
+    "Apply approved AI OS change to artifacts/projects/default_project/output/سيستم_CRM_مقترح/requirements.json",
+    "Apply approved AI OS change to artifacts/projects/default_project/output/سيستم_CRM_مقترح/proposal.md"
   ],
   "file_or_artifact_targets": [
-    "artifacts/projects/default_project/output/سيستم خدمة عملاء/README.md",
-    "artifacts/projects/default_project/output/سيستم خدمة عملاء/requirements.json",
-    "artifacts/projects/default_project/output/سيستم خدمة عملاء/project_plan.md"
+    "artifacts/projects/default_project/output/سيستم_CRM_مقترح/README.md",
+    "artifacts/projects/default_project/output/سيستم_CRM_مقترح/requirements.json",
+    "artifacts/projects/default_project/output/سيستم_CRM_مقترح/proposal.md"
   ],
   "dependency_assumptions": [],
   "risk_notes": [],
   "execution_approval_reference": {
     "approved_by_role": "CTO",
-    "approved_at": "2026-05-03T11:49:28.355Z",
+    "approved_at": "2026-05-03T14:06:37.502Z",
     "documentation_state": "DOCS_APPROVED",
-    "documentation_sha256": "d5e6e25f0146af40aab5e024f841f7efad1c013622e808e6960912401e137251",
-    "scope_fingerprint": "fb7e7c21fd06cd2841a88b5ac5fb44c55a0499d00d48c38e666f71305d1dac52",
+    "documentation_sha256": "3a55dc3599e457987176f4777dbd8c49340eb56f16b9cba650ad7466ae94575c",
+    "scope_fingerprint": "c5d247fc08c2a3b1fbcf09a010745b383d6581fba4dd950c356201f9da252090",
     "project_state_path": "artifacts/projects/default_project/project_state.json"
   },
   "finalized_documentation_set": [
@@ -45,27 +45,27 @@
     "file_count": 3,
     "proposed_files": [
       {
-        "path": "artifacts/projects/default_project/output/سيستم خدمة عملاء/README.md",
+        "path": "artifacts/projects/default_project/output/سيستم_CRM_مقترح/README.md",
         "allow_overwrite": false,
-        "sha256": "387f329e31f584e984a8cb1fad78dc9b1a6e2a823aba2239879fe577f5805268",
+        "sha256": "358be38850878291a5959494282a0eb5d2b2e6340cb7039a3cf15a850f74fbd0",
         "required_roles": [
           "cto"
         ],
         "diff": ""
       },
       {
-        "path": "artifacts/projects/default_project/output/سيستم خدمة عملاء/requirements.json",
+        "path": "artifacts/projects/default_project/output/سيستم_CRM_مقترح/requirements.json",
         "allow_overwrite": false,
-        "sha256": "87015bdb69af83344e5f817b19048db18c7d9c94a35ad20a67ef54e0a5285d2c",
+        "sha256": "b16870aa1da18b6147e6ad8e670a37d453142088f48190dc18d1c62551ca9d24",
         "required_roles": [
           "cto"
         ],
         "diff": ""
       },
       {
-        "path": "artifacts/projects/default_project/output/سيستم خدمة عملاء/project_plan.md",
+        "path": "artifacts/projects/default_project/output/سيستم_CRM_مقترح/proposal.md",
         "allow_overwrite": false,
-        "sha256": "6a8ca2903c8afcf346680111b7677e1a7576e5a4ded1b5fd7700c2dc21135825",
+        "sha256": "5751753c34cb71f87046964bb4182b54b0aae7178c919360b7ff25113c2d2360",
         "required_roles": [
           "cto"
         ],
@@ -75,9 +75,9 @@
   },
   "business_and_scope_decisions": {
     "accepted_options": [
-      "option_2"
+      "option_1"
     ],
-    "user_goal": "اعمل سيستم خدمة عملاء",
+    "user_goal": "عايز سيستم CRM\nاعمل مقترح كامل واعرضه عليا",
     "documentation_state": "DOCS_APPROVED"
   }
 }

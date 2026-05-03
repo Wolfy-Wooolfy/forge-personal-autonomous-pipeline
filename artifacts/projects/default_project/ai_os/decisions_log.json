@@ -5,5 +5,19 @@
     "decision_owner": "USER",
     "rationale": "Selected from workspace conversation: نظام خدمة عملاء بسيط مع التركيز على الرد الآلي وإدارة التذاكر",
     "created_at": "2026-05-03T11:48:54.711Z"
+  },
+  {
+    "entry_type": "OPTION_DECISION",
+    "selected_option_id": "option_1",
+    "decision_owner": "USER",
+    "rationale": "Selected from workspace conversation: نظام موارد بشرية متكامل أساسي",
+    "created_at": "2026-05-03T12:24:20.391Z"
+  },
+  {
+    "entry_type": "OPTION_DECISION",
+    "selected_option_id": "option_1",
+    "decision_owner": "USER",
+    "rationale": "Selected from workspace conversation: نظام CRM متكامل سحابي مع دعم كامل للميزات الأساسية",
+    "created_at": "2026-05-03T14:06:10.521Z"
   }
 ]

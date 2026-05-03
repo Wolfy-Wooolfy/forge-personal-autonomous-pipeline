@@ -1,0 +1,28 @@
+{
+  "execution_id": "ai_os_execution_1777811088457",
+  "source": "AI_OPERATING_SYSTEM",
+  "project_id": "default_project",
+  "package_id": "ai_os_package_1777811088457",
+  "created_at": "2026-05-03T12:24:48.457Z",
+  "summary": "User approved execution from workspace conversation.",
+  "files": [
+    {
+      "path": "artifacts/projects/default_project/output/سيستم HR/README.md",
+      "content": "# سيستم HR\n\n## نظرة عامة\n\nسيستم HR هو نظام إدارة الموارد البشرية متكامل يهدف إلى تلبية احتياجات إدارة الموظفين، الرواتب، الحضور، التوظيف، التدريب، وتقييم الأداء. النظام موجه لموظفي الموارد البشرية، المديرين، والموظفين.\n\n## الميزات الأساسية\n\n- إدارة الموظفين\n- الرواتب\n- الحضور\n- التوظيف\n- التدريب\n- تقييم الأداء\n\n## المستخدمون\n\n- موظفو الموارد البشرية\n- المديرين\n- الموظفين\n\n## الافتراضات\n\n- تم تفويض النظام باقتراح كامل للوظائف الأساسية والمستخدمين بناءً على الممارسات الشائعة في أنظمة الموارد البشرية.\n- لا توجد متطلبات تكامل أو أمان خاصة محددة في الوقت الحالي.\n\n## السيناريو الموصى به\n\nاقتراح نظام موارد بشرية متكامل يشمل الوظائف الأساسية المذكورة أعلاه، مع دعم المستخدمين الرئيسيين، مع افتراض عدم وجود تكاملات أو متطلبات أمان خاصة ما لم يتم تحديدها لاحقاً.\n\n## حالة الوثائق\n\nتمت الموافقة على الوثائق الرسمية للنظام.\n",
+      "execution_id": "ai_os_execution_1777811088457",
+      "package_id": "ai_os_package_1777811088457"
+    },
+    {
+      "path": "artifacts/projects/default_project/output/سيستم HR/requirements.json",
+      "content": "{\n  \"system_type\": \"HR System\",\n  \"features\": [\n    \"إدارة الموظفين\",\n    \"الرواتب\",\n    \"الحضور\",\n    \"التوظيف\",\n    \"التدريب\",\n    \"تقييم الأداء\"\n  ],\n  \"users\": [\n    \"موظفو الموارد البشرية\",\n    \"المديرين\",\n    \"الموظفين\"\n  ],\n  \"integration\": \"غير محدد\",\n  \"security\": \"غير محدد\",\n  \"reporting_and_analytics\": \"غير محدد\",\n  \"assumptions\": [\n    \"تم تفويض النظام باقتراح كامل للوظائف الأساسية والمستخدمين بناءً على الممارسات الشائعة في أنظمة الموارد البشرية.\"\n  ],\n  \"recommended_scenario\": \"اقتراح نظام موارد بشرية متكامل يشمل الوظائف الأساسية المذكورة أعلاه، مع دعم المستخدمين الرئيسيين، مع افتراض عدم وجود تكاملات أو متطلبات أمان خاصة ما لم يتم تحديدها لاحقاً.\"\n}",
+      "execution_id": "ai_os_execution_1777811088457",
+      "package_id": "ai_os_package_1777811088457"
+    },
+    {
+      "path": "artifacts/projects/default_project/output/سيستم HR/project_metadata.json",
+      "content": "{\n  \"project_name\": \"سيستم HR\",\n  \"requirement_domain\": \"نظام إدارة الموارد البشرية\",\n  \"user_goal\": \"عايز سيستم HR\",\n  \"accepted_options\": [\"option_1\"],\n  \"documentation_state\": \"DOCS_APPROVED\"\n}",
+      "execution_id": "ai_os_execution_1777811088457",
+      "package_id": "ai_os_package_1777811088457"
+    }
+  ]
+}

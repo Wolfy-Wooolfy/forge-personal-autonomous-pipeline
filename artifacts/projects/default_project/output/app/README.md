@@ -1,27 +1,38 @@
-# سيستم خدمة عملاء - نموذج أولي
+# CRM Prototype Application
 
-هذا المشروع هو نموذج أولي بسيط لنظام خدمة عملاء متعدد القنوات يدعم:
-- إدارة التذاكر
-- الرد الآلي
-- تقارير الأداء
-- دعم قنوات متعددة: الهاتف، البريد الإلكتروني، الدردشة الحية، وسائل التواصل الاجتماعي
-- إدارة المستخدمين والأدوار (ممثلي خدمة العملاء، المشرفين، العملاء)
+This is a prototype implementation of a Customer Relationship Management (CRM) system demonstrating core features such as contact management, lead and opportunity management, sales pipeline tracking, customer support ticketing, and basic reporting.
 
-## تشغيل التطبيق
+## Features
+- Contact Management
+- Lead and Opportunity Management
+- Sales Pipeline Tracking
+- Customer Support Ticketing
+- Role-based access control (prototype level)
 
-1. افتح الملف `index.html` في متصفح حديث (مثل Chrome, Firefox, Edge).
-2. اختر دور المستخدم من القائمة المنسدلة (العميل، ممثلي خدمة العملاء، المشرفين).
-3. استخدم واجهة إدارة التذاكر لإنشاء تذاكر جديدة، عرض التذاكر الحالية، وتغيير حالة التذاكر.
+## Roles
+- sales_representative
+- customer_support_agent
+- manager
 
-## ملاحظات
-- هذا التطبيق هو نموذج أولي تعليمي فقط ولا يحتوي على تخزين بيانات دائم.
-- لا يوجد تكامل مع أنظمة خارجية.
-- الواجهة تدعم اللغة العربية مع اتجاه كتابة من اليمين إلى اليسار.
+## How to Run
 
-## متطلبات النظام
-- متصفح ويب حديث يدعم HTML5 و JavaScript.
+1. Make sure you have [Node.js](https://nodejs.org/) installed (version 14 or higher recommended).
+2. Open a terminal in the root directory (where `package.json` is located).
+3. Run `npm install` to install dependencies.
+4. Run `npm start` to start the server.
+5. Open your browser and navigate to `http://localhost:3000`.
 
+## How to Use
 
----
+- When you open the web app, you will be prompted to enter your role. Enter one of the roles listed above.
+- Use the forms to add contacts, leads, and support tickets.
+- The app sends API requests with your role in the header to simulate role-based access control.
 
-**تنويه:** هذا النظام هو نموذج أولي وليس جاهزًا للإنتاج. يستخدم فقط لأغراض العرض والتجربة الأولية.
+## Notes
+- This is a prototype and not production-ready.
+- Data is stored in memory and will be lost when the server restarts.
+- Security features such as data encryption are not implemented.
+- Integration with email, calendar, and marketing tools is not included.
+
+## License
+MIT

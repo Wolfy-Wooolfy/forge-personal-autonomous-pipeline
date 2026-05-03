@@ -1,25 +1,25 @@
 # AI OS Execution Handoff
 
-- handoff_id: ai_os_handoff_1777808968355
-- execution_id: ai_os_execution_1777808968355
-- package_id: ai_os_package_1777808968355
+- handoff_id: ai_os_handoff_1777817197502
+- execution_id: ai_os_execution_1777817197502
+- package_id: ai_os_package_1777817197502
 - project_id: default_project
-- created_at: 2026-05-03T11:49:28.355Z
+- created_at: 2026-05-03T14:06:37.502Z
 - handoff_status: APPROVED_PENDING_FORGE
 
 ## Approved Scope
 User approved execution from workspace conversation.
 
 ## Targets
-- artifacts/projects/default_project/output/سيستم خدمة عملاء/README.md
+- artifacts/projects/default_project/output/سيستم_CRM_مقترح/README.md
   - allow_overwrite: false
-  - sha256: 387f329e31f584e984a8cb1fad78dc9b1a6e2a823aba2239879fe577f5805268
-- artifacts/projects/default_project/output/سيستم خدمة عملاء/requirements.json
+  - sha256: 358be38850878291a5959494282a0eb5d2b2e6340cb7039a3cf15a850f74fbd0
+- artifacts/projects/default_project/output/سيستم_CRM_مقترح/requirements.json
   - allow_overwrite: false
-  - sha256: 87015bdb69af83344e5f817b19048db18c7d9c94a35ad20a67ef54e0a5285d2c
-- artifacts/projects/default_project/output/سيستم خدمة عملاء/project_plan.md
+  - sha256: b16870aa1da18b6147e6ad8e670a37d453142088f48190dc18d1c62551ca9d24
+- artifacts/projects/default_project/output/سيستم_CRM_مقترح/proposal.md
   - allow_overwrite: false
-  - sha256: 6a8ca2903c8afcf346680111b7677e1a7576e5a4ded1b5fd7700c2dc21135825
+  - sha256: 5751753c34cb71f87046964bb4182b54b0aae7178c919360b7ff25113c2d2360
 
 ## Boundary
 Execution is allowed only through Forge Core.
