@@ -586,5 +586,29 @@
     "next_open_questions": [],
     "requirement_reasoning_summary": "المستخدم طلب مقترح كامل لنظام موارد بشرية دون تقديم تفاصيل إضافية، وتم تفويض النظام لاختيار الافتراضات المعقولة. بناءً على الوظائف الأساسية الشائعة، المستخدمين المستهدفين، متطلبات الأمان، التكامل، النشر، ومتطلبات واجهة المستخدم، تم إعداد نموذج متكامل يلبي أغلب احتياجات نظام الموارد البشرية.",
     "created_at": "2026-05-03T19:29:45.344Z"
+  },
+  {
+    "entry_type": "IDEATION_INTAKE",
+    "message": "اعمل مقترح سيستم HR واعرضه",
+    "inferred_project_type": "HUMAN_RESOURCES_HR",
+    "needs_clarification": false,
+    "clarification_questions": [],
+    "requirement_model": {
+      "system_type": "HR Management System",
+      "core_features": [
+        "Employee Information Management",
+        "Attendance and Leave Tracking",
+        "Payroll Management",
+        "Recruitment and Onboarding",
+        "Performance Evaluation",
+        "Training and Development",
+        "Compliance and Reporting"
+      ],
+      "assumptions": "تم تفويض النظام باقتراح سيناريو كامل بناءً على الممارسات الشائعة لأن المستخدم طلب عرض مقترح سيستم HR دون تفاصيل إضافية."
+    },
+    "requirement_domain": "Human Resources (HR)",
+    "requirement_completeness": true,
+    "requirement_reasoning_summary": "المستخدم طلب مقترح نظام HR بدون تفاصيل محددة، وتم تفويض النظام باقتراح سيناريو كامل بناءً على الممارسات الشائعة في مجال الموارد البشرية، مما يجعل المتطلبات كاملة ولا توجد أسئلة مفتوحة.",
+    "created_at": "2026-05-03T20:06:21.850Z"
   }
 ]

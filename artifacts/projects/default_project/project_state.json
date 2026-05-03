@@ -1,15 +1,15 @@
 {
   "project_id": "default_project",
   "project_name": "HR System",
-  "project_type": "HUMAN_RESOURCES",
+  "project_type": "HUMAN_RESOURCES_HR",
   "project_mode": "EXTEND_EXISTING",
   "project_status": "ACTIVE",
   "primary_language": "AR",
-  "user_goal": "عايز اعمل سيستم HR",
+  "user_goal": "اعمل مقترح سيستم HR واعرضه",
   "business_goal": "",
   "technical_goal": "",
-  "current_phase": "EXECUTION_READY",
-  "active_runtime_state": "EXECUTION_PREPARATION",
+  "current_phase": "DELIVERY_READY",
+  "active_runtime_state": "EXECUTION_COMPLETE",
   "workspace_path": "D:\\S\\Halo\\Tech\\forge-personal-autonomous-pipeline",
   "source_of_truth": "ZIP_SNAPSHOT",
   "selected_strategy": "",
@@ -18,62 +18,25 @@
   ],
   "rejected_options": [],
   "open_questions": [],
-  "clarification_answers": {
-    "raw_answer": "اعمل مقترح بالكامل واعرضه عليا",
-    "answered_questions": [
-      "ما هي الوظائف الأساسية التي تريدها في نظام الموارد البشرية؟ (مثل إدارة الموظفين، الرواتب، الحضور، التوظيف، التدريب، تقييم الأداء، إلخ)",
-      "من هم المستخدمون المستهدفون للنظام؟ (مثل موظفو الموارد البشرية، المديرون، الموظفون العاديون)",
-      "هل هناك متطلبات خاصة بخصوص الأمان أو الخصوصية؟",
-      "هل يحتاج النظام إلى التكامل مع أنظمة أخرى؟ إذا نعم، ما هي هذه الأنظمة؟",
-      "هل تفضل أن يكون النظام سحابيًا أم محليًا؟",
-      "هل هناك متطلبات خاصة بواجهة المستخدم أو اللغات المدعومة؟"
-    ]
-  },
-  "requirement_domain": "Human Resources",
+  "clarification_answers": {},
+  "requirement_domain": "Human Resources (HR)",
   "requirement_completeness": true,
   "requirement_model": {
-    "system_type": "HR System",
-    "features": [
-      "إدارة الموظفين",
-      "الرواتب",
-      "الحضور",
-      "التوظيف",
-      "التدريب",
-      "تقييم الأداء"
+    "system_type": "HR Management System",
+    "core_features": [
+      "Employee Information Management",
+      "Attendance and Leave Tracking",
+      "Payroll Management",
+      "Recruitment and Onboarding",
+      "Performance Evaluation",
+      "Training and Development",
+      "Compliance and Reporting"
     ],
-    "users": [
-      "موظفو الموارد البشرية",
-      "المديرون",
-      "الموظفون العاديون"
-    ],
-    "security": {
-      "privacy_compliance": true,
-      "data_encryption": true,
-      "role_based_access_control": true
-    },
-    "integration": {
-      "integrate_with_payroll_system": true,
-      "integrate_with_attendance_system": true,
-      "integrate_with_training_platforms": true
-    },
-    "deployment": {
-      "cloud_preferred": true
-    },
-    "ui_requirements": {
-      "multi_language_support": [
-        "العربية",
-        "الإنجليزية"
-      ],
-      "user_friendly_interface": true
-    },
-    "assumptions": {},
-    "recommended_scenario": {
-      "complete_hr_system": "نظام موارد بشرية متكامل يدعم جميع الوظائف الأساسية المذكورة، موجه لموظفي الموارد البشرية والمديرين والموظفين العاديين، مع أمان عالي وتكامل مع أنظمة الرواتب والحضور والتدريب، ونشر سحابي مع واجهة مستخدم متعددة اللغات وسهلة الاستخدام."
-    }
+    "assumptions": "تم تفويض النظام باقتراح سيناريو كامل بناءً على الممارسات الشائعة لأن المستخدم طلب عرض مقترح سيستم HR دون تفاصيل إضافية."
   },
-  "requirement_reasoning_summary": "المستخدم طلب مقترح كامل لنظام موارد بشرية دون تقديم تفاصيل إضافية، وتم تفويض النظام لاختيار الافتراضات المعقولة. بناءً على الوظائف الأساسية الشائعة، المستخدمين المستهدفين، متطلبات الأمان، التكامل، النشر، ومتطلبات واجهة المستخدم، تم إعداد نموذج متكامل يلبي أغلب احتياجات نظام الموارد البشرية.",
+  "requirement_reasoning_summary": "المستخدم طلب مقترح نظام HR بدون تفاصيل محددة، وتم تفويض النظام باقتراح سيناريو كامل بناءً على الممارسات الشائعة في مجال الموارد البشرية، مما يجعل المتطلبات كاملة ولا توجد أسئلة مفتوحة.",
   "provider_error": "",
-  "original_user_goal": "عايز اعمل سيستم HR",
+  "original_user_goal": "اعمل مقترح سيستم HR واعرضه",
   "latest_requested_action": "BUILD_RUNNABLE_FROM_REQUIREMENTS",
   "active_followup_action": "BUILD_RUNNABLE_FROM_REQUIREMENTS",
   "documentation_state": "DOCS_APPROVED",
@@ -84,78 +47,82 @@
   "delivery_summary": {
     "project_id": "default_project",
     "project_name": "HR System",
-    "execution_id": "ai_os_runnable_execution_1777836739493",
-    "package_id": "ai_os_runnable_package_1777836739493",
+    "execution_id": "ai_os_runnable_execution_1777838839166",
+    "package_id": "ai_os_runnable_package_1777838839166",
     "delivery_type": "RUNNABLE_APPLICATION",
     "output_path": "artifacts/projects/default_project/output",
     "app_output_path": "artifacts/projects/default_project/output/app",
     "absolute_output_path": "D:\\S\\Halo\\Tech\\forge-personal-autonomous-pipeline\\artifacts\\projects\\default_project\\output",
     "absolute_app_output_path": "D:\\S\\Halo\\Tech\\forge-personal-autonomous-pipeline\\artifacts\\projects\\default_project\\output\\app",
-    "app_preview_url": "http://localhost:3000/outputs/default_project/app/index.html",
-    "app_runtime_type": "STATIC_HTML",
-    "requires_server": false,
+    "app_preview_url": "",
+    "app_runtime_type": "NODE_SERVER",
+    "requires_server": true,
     "quick_launch_files": {
-      "run_bat": "",
-      "open_app_bat": "artifacts/projects/default_project/output/app/open_app.bat"
+      "run_bat": "artifacts/projects/default_project/output/app/run.bat",
+      "open_app_bat": ""
     },
     "output_exists": true,
     "current_execution_output_found": true,
     "expected_current_output_files": [
-      "app/index.html",
+      "app/package.json",
+      "app/server.js",
       "app/README.md",
-      "app/open_app.bat"
+      "app/run.bat"
     ],
-    "output_file_count": 3,
+    "output_file_count": 4,
     "output_files": [
-      "app/index.html",
-      "app/open_app.bat",
-      "app/README.md"
+      "app/package.json",
+      "app/README.md",
+      "app/run.bat",
+      "app/server.js"
     ],
     "ignored_existing_output_files": [
-      "HR_System/deployment_guide.md",
-      "HR_System/integration_plan.md",
-      "HR_System/README.md",
-      "HR_System/requirements.json",
-      "HR_System/security_policy.md",
-      "HR_System/ui_requirements.md"
+      "HR_System_Proposal.md",
+      "HR_System_Requirements.json"
     ],
     "output_types": [
-      "HTML_STATIC_APP",
+      "NODE_PACKAGE",
       "WINDOWS_QUICK_LAUNCH",
+      "NODE_SERVER",
       "README"
     ],
     "runnable_application_created": true,
     "runnable_indicators": [
-      "index.html"
+      "package.json",
+      "server.js"
     ],
     "run_instructions": [
       "Application folder: artifacts/projects/default_project/output/app",
-      "Open the application preview: http://localhost:3000/outputs/default_project/app/index.html",
-      "Quick open on Windows: double-click artifacts/projects/default_project/output/app/open_app.bat",
+      "Quick start on Windows: double-click artifacts/projects/default_project/output/app/run.bat",
       "Prototype note: This is a prototype built from requirements, not a production system.",
-      "Open this file in the browser: artifacts/projects/default_project/output/app/index.html"
+      "From this folder run: cd artifacts/projects/default_project/output/app",
+      "npm install",
+      "npm start"
     ],
     "usage_or_run_instructions": [
       "Application folder: artifacts/projects/default_project/output/app",
-      "Open the application preview: http://localhost:3000/outputs/default_project/app/index.html",
-      "Quick open on Windows: double-click artifacts/projects/default_project/output/app/open_app.bat",
+      "Quick start on Windows: double-click artifacts/projects/default_project/output/app/run.bat",
       "Prototype note: This is a prototype built from requirements, not a production system.",
-      "Open this file in the browser: artifacts/projects/default_project/output/app/index.html"
+      "From this folder run: cd artifacts/projects/default_project/output/app",
+      "npm install",
+      "npm start"
     ],
     "next_suggested_actions": [
       "Run or open the application",
+      "Start app server",
       "Review generated files",
       "Request changes"
     ]
   },
   "current_delivery_state": "DELIVERED",
   "current_delivery_type": "RUNNABLE_APPLICATION",
-  "current_execution_id": "ai_os_runnable_execution_1777836739493",
-  "current_package_id": "ai_os_runnable_package_1777836739493",
+  "current_execution_id": "ai_os_runnable_execution_1777838839166",
+  "current_package_id": "ai_os_runnable_package_1777838839166",
   "current_output_files": [
-    "app/index.html",
-    "app/open_app.bat",
-    "app/README.md"
+    "app/package.json",
+    "app/README.md",
+    "app/run.bat",
+    "app/server.js"
   ],
   "current_followup_mode": "",
   "conversation_history": {
@@ -559,8 +526,65 @@
         "delivery_state": "READY",
         "pending_decisions": []
       }
+    },
+    {
+      "version_id": "state_0021",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T20:06:54.919Z",
+      "state_hash": "8ecdd50a8d56bbf38bfe3abdfeb1e251250fc28b4361fcacf5caf03caf5598c0",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "HR System",
+        "project_status": "ACTIVE",
+        "current_phase": "FORGE_RUNTIME_COMPLETE",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "REQUIREMENTS_PACKAGE",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0022",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T20:07:01.157Z",
+      "state_hash": "63fa9e14bb5b13717bb953ba453334da709e167358e46fd66636d677032c8450",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "HR System",
+        "project_status": "ACTIVE",
+        "current_phase": "EXECUTION_READY",
+        "active_runtime_state": "EXECUTION_PREPARATION",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "REQUIREMENTS_PACKAGE",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0023",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-03T20:07:19.507Z",
+      "state_hash": "18794133044450982740ffdd782240909cb09f4d88a0332cd167c953f4735965",
+      "summary": {
+        "project_id": "default_project",
+        "project_name": "HR System",
+        "project_status": "ACTIVE",
+        "current_phase": "DELIVERY_READY",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "READY",
+        "pending_decisions": []
+      }
     }
   ],
-  "active_project_flag": false,
-  "last_updated_at": "2026-05-03T19:56:08.257Z"
+  "active_project_flag": true,
+  "last_updated_at": "2026-05-03T20:07:19.507Z"
 }

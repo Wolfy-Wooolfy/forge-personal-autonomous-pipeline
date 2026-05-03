@@ -1,0 +1,14 @@
+{
+  "project_name": "HR System",
+  "system_type": "HR Management System",
+  "core_features": [
+    "Employee Information Management",
+    "Attendance and Leave Tracking",
+    "Payroll Management",
+    "Recruitment and Onboarding",
+    "Performance Evaluation",
+    "Training and Development",
+    "Compliance and Reporting"
+  ],
+  "assumptions": "تم تفويض النظام باقتراح سيناريو كامل بناءً على الممارسات الشائعة لأن المستخدم طلب عرض مقترح سيستم HR دون تفاصيل إضافية."
+}
