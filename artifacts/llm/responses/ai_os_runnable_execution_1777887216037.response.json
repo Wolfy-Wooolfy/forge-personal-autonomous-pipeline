@@ -1,0 +1,46 @@
+{
+  "execution_id": "ai_os_runnable_execution_1777887216037",
+  "source": "AI_OPERATING_SYSTEM",
+  "project_id": "default_project",
+  "package_id": "ai_os_runnable_package_1777887216037",
+  "created_at": "2026-05-04T09:33:36.037Z",
+  "summary": "Build runnable application from requirements package.",
+  "files": [
+    {
+      "path": "artifacts/projects/default_project/output/app/README.md",
+      "content": "# CRM System Prototype\n\nThis is a small prototype application for the CRM System based on the provided requirements.\n\n## Features Included in Prototype\n- إدارة العملاء (Customer Management)\n- تتبع المبيعات (Sales Tracking)\n- التسويق (Marketing)\n- الدعم الفني (Technical Support)\n\n## User Roles\n- مندوبي المبيعات (Sales Representatives)\n- مدراء التسويق (Marketing Managers)\n- الدعم الفني (Technical Support)\n- الإدارة العليا (Executive Management)\n\n## How to Run\n\nThis prototype is a simple React-based single page application.\n\n### Prerequisites\n- Node.js (version 14 or higher recommended)\n- npm (comes with Node.js)\n\n### Steps\n1. Open a terminal and navigate to this directory.\n2. Run `npm install` to install dependencies.\n3. Run `npm start` to start the development server.\n4. Open your browser at `http://localhost:3000` to view the app.\n\n## Notes\n- This is a prototype for demonstration purposes only.\n- It does not include backend integration or persistent data storage.\n- Security, compliance, and deployment preferences are not implemented.\n\n---\n\nThank you for testing this prototype.\n## تشغيل سريع على Windows\n- Double click `run.bat` لتثبيت الاعتماديات وتشغيل التطبيق.\nهذا Prototype أولي مبني من المتطلبات، وليس نظام Production كامل.\n",
+      "execution_id": "ai_os_runnable_execution_1777887216037",
+      "package_id": "ai_os_runnable_package_1777887216037"
+    },
+    {
+      "path": "artifacts/projects/default_project/output/app/package.json",
+      "content": "{\n  \"name\": \"crm-system-prototype\",\n  \"version\": \"0.1.0\",\n  \"private\": true,\n  \"dependencies\": {\n    \"react\": \"^18.2.0\",\n    \"react-dom\": \"^18.2.0\",\n    \"react-scripts\": \"5.0.1\"\n  },\n  \"scripts\": {\n    \"start\": \"react-scripts start\",\n    \"build\": \"react-scripts build\",\n    \"test\": \"react-scripts test\",\n    \"eject\": \"react-scripts eject\"\n  },\n  \"browserslist\": {\n    \"production\": [\n      \">0.2%\",\n      \"not dead\",\n      \"not op_mini all\"\n    ],\n    \"development\": [\n      \"last 1 chrome version\",\n      \"last 1 firefox version\",\n      \"last 1 safari version\"\n    ]\n  }\n}\n",
+      "execution_id": "ai_os_runnable_execution_1777887216037",
+      "package_id": "ai_os_runnable_package_1777887216037"
+    },
+    {
+      "path": "artifacts/projects/default_project/output/app/src/index.js",
+      "content": "import React from 'react';\nimport ReactDOM from 'react-dom/client';\nimport App from './App';\n\nconst root = ReactDOM.createRoot(document.getElementById('root'));\nroot.render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>\n);\n",
+      "execution_id": "ai_os_runnable_execution_1777887216037",
+      "package_id": "ai_os_runnable_package_1777887216037"
+    },
+    {
+      "path": "artifacts/projects/default_project/output/app/src/App.js",
+      "content": "import React, { useState } from 'react';\n\nconst customersSample = [\n  { id: 1, name: 'عميل 1', email: 'client1@example.com', phone: '0500000001' },\n  { id: 2, name: 'عميل 2', email: 'client2@example.com', phone: '0500000002' }\n];\n\nconst salesSample = [\n  { id: 1, customer: 'عميل 1', product: 'منتج أ', amount: 1000, date: '2024-05-01' },\n  { id: 2, customer: 'عميل 2', product: 'منتج ب', amount: 2000, date: '2024-05-03' }\n];\n\nconst marketingSample = [\n  { id: 1, campaign: 'حملة رمضان', status: 'نشطة' },\n  { id: 2, campaign: 'حملة الصيف', status: 'مكتملة' }\n];\n\nconst supportSample = [\n  { id: 1, ticket: '1234', customer: 'عميل 1', issue: 'مشكلة في المنتج', status: 'مفتوح' },\n  { id: 2, ticket: '1235', customer: 'عميل 2', issue: 'طلب دعم', status: 'مغلق' }\n];\n\nfunction App() {\n  const [view, setView] = useState('customers');\n\n  return (\n    <div style={{ fontFamily: 'Arial, sans-serif', maxWidth: 900, margin: 'auto', padding: 20 }}>\n      <h1>نظام إدارة علاقات العملاء (CRM) - نموذج أولي</h1>\n      <nav style={{ marginBottom: 20 }}>\n        <button onClick={() => setView('customers')} style={{ marginRight: 10 }}>إدارة العملاء</button>\n        <button onClick={() => setView('sales')} style={{ marginRight: 10 }}>تتبع المبيعات</button>\n        <button onClick={() => setView('marketing')} style={{ marginRight: 10 }}>التسويق</button>\n        <button onClick={() => setView('support')}>الدعم الفني</button>\n      </nav>\n\n      {view === 'customers' && <CustomersView />}\n      {view === 'sales' && <SalesView />}\n      {view === 'marketing' && <MarketingView />}\n      {view === 'support' && <SupportView />}\n    </div>\n  );\n}\n\nfunction CustomersView() {\n  return (\n    <div>\n      <h2>إدارة العملاء</h2>\n      <table border=\"1\" cellPadding=\"5\" cellSpacing=\"0\" style={{ width: '100%', textAlign: 'right' }}>\n        <thead>\n          <tr>\n            <th>الرقم</th>\n            <th>الاسم</th>\n            <th>البريد الإلكتروني</th>\n            <th>رقم الهاتف</th>\n          </tr>\n        </thead>\n        <tbody>\n          {customersSample.map(c => (\n            <tr key={c.id}>\n              <td>{c.id}</td>\n              <td>{c.name}</td>\n              <td>{c.email}</td>\n              <td>{c.phone}</td>\n            </tr>\n          ))}\n        </tbody>\n      </table>\n    </div>\n  );\n}\n\nfunction SalesView() {\n  return (\n    <div>\n      <h2>تتبع المبيعات</h2>\n      <table border=\"1\" cellPadding=\"5\" cellSpacing=\"0\" style={{ width: '100%', textAlign: 'right' }}>\n        <thead>\n          <tr>\n            <th>الرقم</th>\n            <th>العميل</th>\n            <th>المنتج</th>\n            <th>المبلغ</th>\n            <th>التاريخ</th>\n          </tr>\n        </thead>\n        <tbody>\n          {salesSample.map(s => (\n            <tr key={s.id}>\n              <td>{s.id}</td>\n              <td>{s.customer}</td>\n              <td>{s.product}</td>\n              <td>{s.amount}</td>\n              <td>{s.date}</td>\n            </tr>\n          ))}\n        </tbody>\n      </table>\n    </div>\n  );\n}\n\nfunction MarketingView() {\n  return (\n    <div>\n      <h2>التسويق</h2>\n      <table border=\"1\" cellPadding=\"5\" cellSpacing=\"0\" style={{ width: '100%', textAlign: 'right' }}>\n        <thead>\n          <tr>\n            <th>الرقم</th>\n            <th>الحملة</th>\n            <th>الحالة</th>\n          </tr>\n        </thead>\n        <tbody>\n          {marketingSample.map(m => (\n            <tr key={m.id}>\n              <td>{m.id}</td>\n              <td>{m.campaign}</td>\n              <td>{m.status}</td>\n            </tr>\n          ))}\n        </tbody>\n      </table>\n    </div>\n  );\n}\n\nfunction SupportView() {\n  return (\n    <div>\n      <h2>الدعم الفني</h2>\n      <table border=\"1\" cellPadding=\"5\" cellSpacing=\"0\" style={{ width: '100%', textAlign: 'right' }}>\n        <thead>\n          <tr>\n            <th>رقم التذكرة</th>\n            <th>العميل</th>\n            <th>المشكلة</th>\n            <th>الحالة</th>\n          </tr>\n        </thead>\n        <tbody>\n          {supportSample.map(s => (\n            <tr key={s.id}>\n              <td>{s.ticket}</td>\n              <td>{s.customer}</td>\n              <td>{s.issue}</td>\n              <td>{s.status}</td>\n            </tr>\n          ))}\n        </tbody>\n      </table>\n    </div>\n  );\n}\n\nexport default App;\n",
+      "execution_id": "ai_os_runnable_execution_1777887216037",
+      "package_id": "ai_os_runnable_package_1777887216037"
+    },
+    {
+      "path": "artifacts/projects/default_project/output/app/src/index.css",
+      "content": "body {\n  margin: 0;\n  padding: 0;\n  direction: rtl;\n  background-color: #f9f9f9;\n  color: #333;\n}\n\nbutton {\n  cursor: pointer;\n  padding: 8px 12px;\n  font-size: 14px;\n  border: 1px solid #ccc;\n  background-color: #fff;\n  border-radius: 4px;\n  transition: background-color 0.3s ease;\n}\n\nbutton:hover {\n  background-color: #e6e6e6;\n}\n\nh1, h2 {\n  color: #2c3e50;\n}\n\ntable {\n  background-color: #fff;\n  border-collapse: collapse;\n}\n\nth {\n  background-color: #3498db;\n  color: white;\n}\n",
+      "execution_id": "ai_os_runnable_execution_1777887216037",
+      "package_id": "ai_os_runnable_package_1777887216037"
+    },
+    {
+      "path": "artifacts/projects/default_project/output/app/run.bat",
+      "content": "@echo off\r\ncd /d \"%~dp0\"\r\necho Installing dependencies...\r\nnpm install\r\necho Starting application...\r\nnpm start\r\npause\r\n",
+      "execution_id": "ai_os_runnable_execution_1777887216037",
+      "package_id": "ai_os_runnable_package_1777887216037"
+    }
+  ]
+}

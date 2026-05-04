@@ -1,98 +1,16 @@
 {
   "active_project_id": "default_project",
-  "updated_at": "2026-05-03T20:07:19.508Z",
+  "updated_at": "2026-05-04T14:04:18.056Z",
   "projects": [
     {
-      "project_id": "action_game",
-      "project_name": "Action GAME System",
-      "project_status": "ACTIVE",
-      "current_phase": "EXECUTION_READY",
-      "active_runtime_state": "EXECUTION_PREPARATION",
-      "pending_decisions": [],
-      "active_project_flag": false,
-      "last_updated_at": "2026-05-03T20:07:19.509Z"
-    },
-    {
-      "project_id": "codex_test_project",
-      "project_name": "CODEX TEST Project System",
+      "project_id": "default_project",
+      "project_name": "Default Project System",
       "project_status": "ACTIVE",
       "current_phase": "DISCOVERY",
       "active_runtime_state": "DISCUSSION",
-      "pending_decisions": [],
-      "active_project_flag": false,
-      "last_updated_at": "2026-05-03T20:07:19.510Z"
-    },
-    {
-      "project_id": "default_project",
-      "project_name": "HR System",
-      "project_status": "ACTIVE",
-      "current_phase": "DELIVERY_READY",
-      "active_runtime_state": "EXECUTION_COMPLETE",
       "pending_decisions": [],
       "active_project_flag": true,
-      "last_updated_at": "2026-05-03T20:07:19.507Z"
-    },
-    {
-      "project_id": "memory_test_1777676534218",
-      "project_name": "Memory TEST System",
-      "project_status": "ACTIVE",
-      "current_phase": "DISCOVERY",
-      "active_runtime_state": "DISCUSSION",
-      "pending_decisions": [],
-      "active_project_flag": false,
-      "last_updated_at": "2026-05-03T20:07:19.510Z"
-    },
-    {
-      "project_id": "memory_test_1777676557976",
-      "project_name": "Customer Service System",
-      "project_status": "ACTIVE",
-      "current_phase": "EXECUTION_READY",
-      "active_runtime_state": "EXECUTION_PREPARATION",
-      "pending_decisions": [],
-      "active_project_flag": false,
-      "last_updated_at": "2026-05-03T20:07:19.512Z"
-    },
-    {
-      "project_id": "mobile_game",
-      "project_name": "Mobile GAME System",
-      "project_status": "ACTIVE",
-      "current_phase": "EXECUTION_READY",
-      "active_runtime_state": "EXECUTION_PREPARATION",
-      "pending_decisions": [],
-      "active_project_flag": false,
-      "last_updated_at": "2026-05-03T20:07:19.513Z"
-    },
-    {
-      "project_id": "test_project",
-      "project_name": "TEST Project System",
-      "project_status": "ACTIVE",
-      "current_phase": "EXECUTION_READY",
-      "active_runtime_state": "EXECUTION_PREPARATION",
-      "pending_decisions": [
-        "EXECUTION_PACKAGE_PENDING_FORGE"
-      ],
-      "active_project_flag": false,
-      "last_updated_at": "2026-05-03T20:07:19.514Z"
-    },
-    {
-      "project_id": "test_project_2",
-      "project_name": "TEST Project 2 System",
-      "project_status": "ACTIVE",
-      "current_phase": "DOCS_DRAFTING",
-      "active_runtime_state": "DOCUMENTATION",
-      "pending_decisions": [],
-      "active_project_flag": false,
-      "last_updated_at": "2026-05-03T20:07:19.515Z"
-    },
-    {
-      "project_id": "test_project_3",
-      "project_name": "TEST Project 3 System",
-      "project_status": "ACTIVE",
-      "current_phase": "EXECUTION_READY",
-      "active_runtime_state": "EXECUTION_PREPARATION",
-      "pending_decisions": [],
-      "active_project_flag": false,
-      "last_updated_at": "2026-05-03T20:07:19.516Z"
+      "last_updated_at": "2026-05-04T14:04:18.053Z"
     }
   ]
 }

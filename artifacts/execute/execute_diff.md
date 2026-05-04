@@ -1,18 +1,14 @@
 # Execute Diff
 
-- WORKSPACE_ACTION_1 → artifacts/projects/default_project/output/app/package.json
+- WORKSPACE_ACTION_1 → artifacts/projects/memory_test_runtime_smoke/output/app/index.html
   - wrote_content: true
   - old_sha256: null
-  - new_sha256: 463a09fe39a627f111cea3752eab2d5747e219bdc81526dd776858b7de7da9ac
-- WORKSPACE_ACTION_2 → artifacts/projects/default_project/output/app/server.js
+  - new_sha256: 08368e0f09fb6dc13da3c1e0401fc663e5480299104a77027af16d52be3751e4
+- WORKSPACE_ACTION_2 → artifacts/projects/memory_test_runtime_smoke/output/app/README.md
   - wrote_content: true
   - old_sha256: null
-  - new_sha256: 057f7d2ed652327a12cfa9215c592ce0bbf3db64d12a5418651e4f2b2c598ce8
-- WORKSPACE_ACTION_3 → artifacts/projects/default_project/output/app/README.md
+  - new_sha256: c6b9c730212cba67539582f7c0369f03c0b443998cd0d43864a08f47a3ff29eb
+- WORKSPACE_ACTION_3 → artifacts/projects/memory_test_runtime_smoke/output/app/open_app.bat
   - wrote_content: true
   - old_sha256: null
-  - new_sha256: 1345d7765b482fbfbe790bdb525d7022bca0a0f773435f6794889d10c4e8a2f1
-- WORKSPACE_ACTION_4 → artifacts/projects/default_project/output/app/run.bat
-  - wrote_content: true
-  - old_sha256: null
-  - new_sha256: 178642181155f29510291fff80c99618b5fe9c0f95d4b0c591f167dbf71557ba
+  - new_sha256: 288c31989d5802baff2f5f9b80e32a85f4cfc3be9895c4c9f25c821c9a0d0351

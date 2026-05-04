@@ -4,7 +4,8 @@ const http = require("http");
 const path = require("path");
 const fs = require("fs");
 const crypto = require("crypto");
-const { execFile, spawn } = require("child_process");
+const net = require("net");
+const { execFile, spawn, spawnSync } = require("child_process");
 const { handleAuthRequest } = require("../auth/authSystem");
 const { createAiOsRuntime } = require("../ai_os/projectRuntime");
 const { createProjectMemoryStore } = require("../memoryEngine");
@@ -29,6 +30,7 @@ function createWorkspaceApiServer(options = {}) {
   const projectsRoot = path.resolve(root, "artifacts/projects");
   const activeProjectPath = path.resolve(projectsRoot, "active_project.json");
   const projectRegistryPath = path.resolve(projectsRoot, "project_registry.json");
+  const appServerProcesses = new Map();
 
   const aiOsRuntime = createAiOsRuntime({ root });
   const projectMemoryStore = createProjectMemoryStore({ root });
@@ -1832,14 +1834,19 @@ ${trimmedExisting}`
       existing.delivery_summary && typeof existing.delivery_summary === "object"
         ? existing.delivery_summary
         : null;
+    const hasDeliverySummaryOverride = Object.prototype.hasOwnProperty.call(overrides, "delivery_summary");
     const effectiveDeliverySummary =
-      overrides.delivery_summary && typeof overrides.delivery_summary === "object"
-        ? overrides.delivery_summary
+      hasDeliverySummaryOverride
+        ? (overrides.delivery_summary && typeof overrides.delivery_summary === "object" ? overrides.delivery_summary : null)
         : existingDeliverySummary
           ? (
               existingDeliverySummary.app_preview_url === undefined ||
               existingDeliverySummary.absolute_output_path === undefined ||
-              existingDeliverySummary.absolute_app_output_path === undefined
+              existingDeliverySummary.absolute_app_output_path === undefined ||
+              (existingDeliverySummary.delivery_type === "RUNNABLE_APPLICATION" && !existingDeliverySummary.app_preview_url) ||
+              String(existingDeliverySummary.app_preview_url || "").includes("/app/app/") ||
+              (Array.isArray(existingDeliverySummary.output_files) &&
+                existingDeliverySummary.output_files.some((file) => String(file || "").replace(/\\/g, "/").includes("app/app/")))
                 ? buildDeliverySummary(projectId)
                 : existingDeliverySummary
             )
@@ -2247,6 +2254,60 @@ ${trimmedExisting}`
     };
   }
 
+  function deleteProject(body = {}) {
+    const rawProjectId = typeof body.project_id === "string" ? body.project_id.trim() : "";
+
+    if (!rawProjectId) {
+      return {
+        ok: false,
+        reason: "PROJECT_ID_REQUIRED"
+      };
+    }
+
+    const projectId = normalizeProjectId(rawProjectId);
+    const projectRootAbs = path.resolve(projectsRoot, projectId);
+    const resolvedProjectsRoot = path.resolve(projectsRoot);
+
+    if (!projectRootAbs.startsWith(`${resolvedProjectsRoot}${path.sep}`)) {
+      return {
+        ok: false,
+        reason: "PROJECT_PATH_OUTSIDE_PROJECTS_ROOT",
+        project_id: projectId
+      };
+    }
+
+    stopProjectAppServer({ project_id: projectId });
+
+    const existed = fs.existsSync(projectRootAbs);
+    if (existed) {
+      fs.rmSync(projectRootAbs, { recursive: true, force: true });
+    }
+
+    const remainingProjectIds = fs.existsSync(projectsRoot)
+      ? fs.readdirSync(projectsRoot, { withFileTypes: true })
+          .filter((entry) => entry.isDirectory())
+          .map((entry) => entry.name)
+          .filter((id) => id && id !== projectId)
+      : [];
+    const previousActiveProjectId = readActiveProjectId();
+    const nextActiveProjectId = previousActiveProjectId === projectId
+      ? (remainingProjectIds[0] || "default_project")
+      : previousActiveProjectId;
+
+    writeActiveProject(nextActiveProjectId);
+    const activeProject = persistProjectState(nextActiveProjectId);
+
+    return {
+      ok: true,
+      deleted: existed,
+      project_id: projectId,
+      deleted_path: path.relative(root, projectRootAbs).replace(/\\/g, "/"),
+      active_project_id: nextActiveProjectId,
+      project: activeProject,
+      projects: listProjects().items
+    };
+  }
+
   function getProjectArtifactsRoot(projectIdInput) {
     return path.resolve(root, "artifacts", "projects", normalizeProjectId(projectIdInput));
   }
@@ -2275,17 +2336,166 @@ ${trimmedExisting}`
     return path.resolve(root, getProjectOutputRel(projectIdInput));
   }
 
+  function getProjectOutputAppRelativePath(projectIdInput) {
+    return `${getProjectOutputRel(projectIdInput)}/app`;
+  }
+
+  function getProjectOutputAppDir(projectIdInput) {
+    return path.resolve(root, getProjectOutputAppRelativePath(projectIdInput));
+  }
+
   function getProjectOutputAppAbs(projectIdInput) {
-    return path.join(getProjectOutputAbs(projectIdInput), "app");
+    return getProjectOutputAppDir(projectIdInput);
+  }
+
+  function normalizeFileInsideOutputApp(fileInsideApp = "index.html") {
+    const normalized = String(fileInsideApp || "index.html")
+      .replace(/\\/g, "/")
+      .replace(/^\/+/, "")
+      .replace(/^app\/+/i, "");
+
+    return normalized || "index.html";
+  }
+
+  function getAppPreviewUrl(projectIdInput, fileInsideApp = "index.html") {
+    const projectId = normalizeProjectId(projectIdInput);
+    const safeFile = normalizeFileInsideOutputApp(fileInsideApp);
+
+    return `http://localhost:3000/outputs/${encodeURIComponent(projectId)}/app/${safeFile.split("/").map(encodeURIComponent).join("/")}`;
   }
 
   function getProjectAppPreviewUrl(projectIdInput, fileInsideApp = "index.html") {
-    const projectId = normalizeProjectId(projectIdInput);
-    const safeFile = String(fileInsideApp || "index.html")
-      .replace(/\\/g, "/")
-      .replace(/^\/+/, "");
+    return getAppPreviewUrl(projectIdInput, fileInsideApp);
+  }
 
-    return `http://localhost:3000/outputs/${encodeURIComponent(projectId)}/app/${safeFile.split("/").map(encodeURIComponent).join("/")}`;
+  function getProjectAppRuntimeAbs(projectIdInput) {
+    return path.join(getProjectOutputAppAbs(projectIdInput), "app_runtime.json");
+  }
+
+  function getStaticPreviewUrl(projectIdInput) {
+    const indexAbs = path.join(getProjectOutputAppAbs(projectIdInput), "index.html");
+    return fs.existsSync(indexAbs) ? getAppPreviewUrl(projectIdInput, "index.html") : "";
+  }
+
+  function getServerAppUrl(portValue) {
+    const portNumber = Number(portValue);
+    return Number.isInteger(portNumber) && portNumber > 0 ? `http://localhost:${portNumber}` : "";
+  }
+
+  function readAppRuntime(projectIdInput) {
+    const runtime = readJsonSafe(getProjectAppRuntimeAbs(projectIdInput), {});
+    return runtime && typeof runtime === "object" ? runtime : {};
+  }
+
+  function writeAppRuntime(projectIdInput, payload) {
+    const runtimeAbs = getProjectAppRuntimeAbs(projectIdInput);
+    ensureDir(path.dirname(runtimeAbs));
+    fs.writeFileSync(runtimeAbs, JSON.stringify(payload, null, 2), "utf8");
+    return payload;
+  }
+
+  function isPortAvailable(portValue) {
+    const portNumber = Number(portValue);
+    return new Promise((resolve) => {
+      const tester = net.createServer()
+        .once("error", () => resolve(false))
+        .once("listening", () => {
+          tester.close(() => resolve(true));
+        });
+      tester.listen(portNumber, "127.0.0.1");
+    });
+  }
+
+  async function allocateAppPort(projectIdInput) {
+    const projectId = normalizeProjectId(projectIdInput);
+    const reservedPorts = new Set([3000, 3100, port]);
+    const numericHint = Array.from(projectId).reduce((sum, char) => sum + char.charCodeAt(0), 0) % 100;
+    let candidate = 3210 + numericHint;
+
+    for (let attempts = 0; attempts < 300; attempts += 1) {
+      if (!reservedPorts.has(candidate) && await isPortAvailable(candidate)) {
+        return candidate;
+      }
+      candidate += 1;
+    }
+
+    throw new Error("NO_AVAILABLE_APP_PORT");
+  }
+
+  function httpHealthCheck(urlValue, timeoutMs = 5000) {
+    return new Promise((resolve) => {
+      const target = new URL(urlValue);
+      const req = http.request({
+        hostname: target.hostname,
+        port: target.port,
+        path: target.pathname || "/",
+        method: "GET",
+        timeout: timeoutMs
+      }, (res) => {
+        res.resume();
+        resolve(res.statusCode >= 200 && res.statusCode < 500);
+      });
+
+      req.on("timeout", () => {
+        req.destroy();
+        resolve(false);
+      });
+      req.on("error", () => resolve(false));
+      req.end();
+    });
+  }
+
+  async function waitForAppReady(projectId, child, fallbackUrl, logs, timeoutMs = 25000) {
+    const startedAt = Date.now();
+    let readyUrl = "";
+
+    while (Date.now() - startedAt < timeoutMs) {
+      const joinedLogs = logs.join("\n");
+      const match = joinedLogs.match(/APP_READY_URL=(https?:\/\/[^\s]+)/);
+      if (match && match[1]) {
+        readyUrl = match[1].trim();
+      }
+
+      const runtime = readAppRuntime(projectId);
+      if (!readyUrl && runtime && runtime.app_url) {
+        readyUrl = String(runtime.app_url || "").trim();
+      }
+
+      const candidate = readyUrl || fallbackUrl;
+      if (candidate && await httpHealthCheck(candidate, 1200)) {
+        return candidate;
+      }
+
+      if (child.exitCode !== null) {
+        return "";
+      }
+
+      await new Promise((resolve) => setTimeout(resolve, 600));
+    }
+
+    return "";
+  }
+
+  function repairNestedOutputAppDir(projectIdInput) {
+    const appAbs = getProjectOutputAppAbs(projectIdInput);
+    const nestedAppAbs = path.join(appAbs, "app");
+
+    if (!fs.existsSync(nestedAppAbs) || !fs.statSync(nestedAppAbs).isDirectory()) {
+      return;
+    }
+
+    fs.readdirSync(nestedAppAbs, { withFileTypes: true }).forEach((entry) => {
+      const fromAbs = path.join(nestedAppAbs, entry.name);
+      const toAbs = path.join(appAbs, entry.name);
+
+      if (!fs.existsSync(toAbs)) {
+        fs.renameSync(fromAbs, toAbs);
+      }
+    });
+
+    if (fs.readdirSync(nestedAppAbs).length === 0) {
+      fs.rmdirSync(nestedAppAbs);
+    }
   }
 
   function openProjectOutputFolder(body = {}) {
@@ -2347,10 +2557,25 @@ ${trimmedExisting}`
     };
   }
 
-  function runProjectOutputAppServer(body = {}) {
+  async function runProjectOutputAppServer(body = {}) {
     const projectId = normalizeProjectId(body.project_id || readActiveProjectId());
     const appAbs = getProjectOutputAppAbs(projectId);
     const packageAbs = path.join(appAbs, "package.json");
+    const existing = appServerProcesses.get(projectId);
+
+    if (existing && existing.child && existing.child.exitCode === null && existing.app_url && await httpHealthCheck(existing.app_url, 1200)) {
+      return {
+        ok: true,
+        already_running: true,
+        running: true,
+        project_id: projectId,
+        app_url: existing.app_url,
+        port: existing.port,
+        absolute_path: appAbs
+      };
+    }
+
+    appServerProcesses.delete(projectId);
 
     if (!fs.existsSync(appAbs) || !fs.statSync(appAbs).isDirectory()) {
       return {
@@ -2374,7 +2599,7 @@ ${trimmedExisting}`
     }
 
     const scripts = readPackageScripts(packageAbs);
-    const startCommand = scripts.start ? "npm start" : "";
+    const startCommand = scripts.start ? String(scripts.start) : "";
 
     if (!startCommand) {
       return {
@@ -2387,22 +2612,242 @@ ${trimmedExisting}`
       };
     }
 
-    const child = spawn("cmd", ["/c", "npm install && npm start"], {
-      cwd: appAbs,
-      detached: true,
-      windowsHide: true,
-      stdio: "ignore"
+    const logs = [];
+    const spawnNpmAction = (action, options = {}) => {
+      if (process.platform === "win32") {
+        return spawn(`npm ${action}`, [], {
+          ...options,
+          windowsHide: true,
+          shell: true
+        });
+      }
+
+      return spawn("npm", [action], {
+        ...options,
+        windowsHide: true,
+        shell: false
+      });
+    };
+    const nodeModulesAbs = path.join(appAbs, "node_modules");
+
+    try {
+      if (!fs.existsSync(nodeModulesAbs)) {
+        const installResult = await new Promise((resolve) => {
+          const installer = spawnNpmAction("install", {
+            cwd: appAbs
+          });
+
+          installer.stdout.on("data", (chunk) => logs.push(String(chunk)));
+          installer.stderr.on("data", (chunk) => logs.push(String(chunk)));
+          installer.on("error", (err) => resolve({ ok: false, error: err.message }));
+          installer.on("close", (code) => resolve({ ok: code === 0, code }));
+        });
+
+        if (!installResult.ok) {
+          return {
+            ok: false,
+            running: false,
+            reason: installResult.error || `NPM_INSTALL_FAILED_${installResult.code}`,
+            logs: logs.join("").slice(-4000),
+            absolute_path: appAbs
+          };
+        }
+      }
+
+      const allocatedPort = await allocateAppPort(projectId);
+      const fallbackUrl = getServerAppUrl(allocatedPort);
+      const child = spawnNpmAction("start", {
+        cwd: appAbs,
+        env: {
+          ...process.env,
+          PORT: String(allocatedPort),
+          BROWSER: "none",
+          HOST: "127.0.0.1"
+        }
+      });
+
+      child.stdout.on("data", (chunk) => {
+        const text = String(chunk);
+        logs.push(text);
+      });
+      child.stderr.on("data", (chunk) => {
+        const text = String(chunk);
+        logs.push(text);
+      });
+      child.on("exit", () => {
+        const current = appServerProcesses.get(projectId);
+        if (current && current.child === child) {
+          appServerProcesses.delete(projectId);
+        }
+      });
+
+      appServerProcesses.set(projectId, {
+        child,
+        port: allocatedPort,
+        app_url: fallbackUrl,
+        logs,
+        absolute_path: appAbs
+      });
+
+      const appUrl = await waitForAppReady(projectId, child, fallbackUrl, logs);
+
+      if (!appUrl) {
+        return {
+          ok: false,
+          running: child.exitCode === null,
+          reason: child.exitCode === null ? "APP_HEALTH_CHECK_FAILED" : `APP_PROCESS_EXITED_${child.exitCode}`,
+          logs: logs.join("").slice(-4000),
+          absolute_path: appAbs
+        };
+      }
+
+      writeAppRuntime(projectId, {
+        running: true,
+        port: allocatedPort,
+        app_url: appUrl,
+        started_at: new Date().toISOString()
+      });
+
+      const project = persistProjectState(projectId, {
+        delivery_summary: buildDeliverySummary(projectId)
+      });
+
+      return {
+        ok: true,
+        running: true,
+        already_running: false,
+        project_id: projectId,
+        absolute_path: appAbs,
+        app_url: appUrl,
+        port: allocatedPort,
+        project,
+        delivery_summary: project.delivery_summary,
+        logs: logs.join("").slice(-2000)
+      };
+    } catch (err) {
+      return {
+        ok: false,
+        running: false,
+        reason: err && err.message ? err.message : "APP_SERVER_START_FAILED",
+        logs: logs.join("").slice(-4000),
+        absolute_path: appAbs
+      };
+    }
+  }
+
+  function stopProjectAppServer(body = {}) {
+    const projectId = normalizeProjectId(body.project_id || readActiveProjectId());
+    const existing = appServerProcesses.get(projectId);
+
+    if (!existing || !existing.child || existing.child.exitCode !== null) {
+      appServerProcesses.delete(projectId);
+      writeAppRuntime(projectId, {
+        running: false,
+        stopped_at: new Date().toISOString()
+      });
+      return {
+        ok: true,
+        stopped: false,
+        already_stopped: true,
+        project_id: projectId,
+        message: "No running app server was registered for this project."
+      };
+    }
+
+    if (process.platform === "win32" && existing.child.pid) {
+      spawnSync("taskkill", ["/PID", String(existing.child.pid), "/T", "/F"], {
+        windowsHide: true,
+        stdio: "ignore"
+      });
+    } else {
+      existing.child.kill();
+    }
+    appServerProcesses.delete(projectId);
+    writeAppRuntime(projectId, {
+      running: false,
+      port: existing.port,
+      app_url: existing.app_url,
+      stopped_at: new Date().toISOString()
     });
-    child.unref();
+
+    const project = persistProjectState(projectId, {
+      delivery_summary: buildDeliverySummary(projectId)
+    });
 
     return {
       ok: true,
-      running: true,
+      stopped: true,
       project_id: projectId,
-      absolute_path: appAbs,
-      app_url: "",
-      port: null,
-      logs: ["Started npm install && npm start in output/app.", "Port could not be inferred automatically."]
+      app_url: existing.app_url,
+      port: existing.port,
+      absolute_path: existing.absolute_path,
+      project,
+      delivery_summary: project.delivery_summary
+    };
+  }
+
+  function getCleanupTargets(modeInput) {
+    const mode = String(modeInput || "").trim();
+    const targets = [];
+
+    if (mode === "default_project_only") {
+      ["output", "execute", "ai_os"].forEach((name) => {
+        targets.push(path.join(projectsRoot, "default_project", name));
+      });
+    } else if (mode === "test_projects") {
+      if (fs.existsSync(projectsRoot)) {
+        fs.readdirSync(projectsRoot, { withFileTypes: true })
+          .filter((entry) => entry.isDirectory() && /^memory_test_/i.test(entry.name))
+          .forEach((entry) => targets.push(path.join(projectsRoot, entry.name)));
+      }
+    } else {
+      throw new Error("INVALID_CLEANUP_MODE");
+    }
+
+    const resolvedProjectsRoot = path.resolve(projectsRoot);
+    return targets.map((targetAbs) => path.resolve(targetAbs)).filter((targetAbs) =>
+      targetAbs.startsWith(`${resolvedProjectsRoot}${path.sep}`)
+    );
+  }
+
+  function cleanupTestArtifacts(body = {}) {
+    const mode = String(body.mode || "").trim();
+    const dryRun = body.dry_run !== false;
+    const targets = getCleanupTargets(mode);
+    const existingTargets = targets.filter((targetAbs) => fs.existsSync(targetAbs));
+
+    if (!dryRun) {
+      if (mode === "default_project_only") {
+        stopProjectAppServer({ project_id: "default_project" });
+      }
+      if (mode === "test_projects") {
+        existingTargets.forEach((targetAbs) => {
+          stopProjectAppServer({ project_id: path.basename(targetAbs) });
+        });
+      }
+
+      existingTargets.forEach((targetAbs) => {
+        fs.rmSync(targetAbs, { recursive: true, force: true });
+      });
+
+      if (mode === "default_project_only") {
+        persistProjectState("default_project", {
+          delivery_state: "NOT_READY",
+          delivery_summary: null,
+          current_delivery_type: "",
+          current_delivery_state: "UNKNOWN",
+          current_output_files: []
+        });
+      }
+    }
+
+    return {
+      ok: true,
+      mode,
+      dry_run: dryRun,
+      deleted: dryRun ? [] : existingTargets.map((targetAbs) => path.relative(root, targetAbs).replace(/\\/g, "/")),
+      targets: existingTargets.map((targetAbs) => path.relative(root, targetAbs).replace(/\\/g, "/")),
+      protected_roots: ["code/", "docs/", "architecture/", "progress/", "artifacts/forge/"]
     };
   }
 
@@ -2489,6 +2934,7 @@ ${trimmedExisting}`
 
   function buildDeliverySummary(projectIdInput) {
     const projectId = normalizeProjectId(projectIdInput);
+    repairNestedOutputAppDir(projectId);
     const outputRel = getProjectOutputRel(projectId);
     const outputAbs = getProjectOutputAbs(projectId);
     const executionPackage = readJsonSafe(getProjectExecutionPackageAbs(projectId), null);
@@ -2504,12 +2950,12 @@ ${trimmedExisting}`
     const expectedOutputFiles = proposedFiles
       .map((file) => String(file && file.path ? file.path : "").trim().replace(/\\/g, "/"))
       .filter((filePath) => filePath.startsWith(`${outputRel}/`))
-      .map((filePath) => filePath.slice(outputRel.length + 1));
+      .map((filePath) => filePath.slice(outputRel.length + 1).replace(/^app\/app\//i, "app/"));
     const allFiles = listOutputFiles(outputAbs);
     const expectedSet = new Set(expectedOutputFiles.map((file) => file.toLowerCase()));
     const files = expectedSet.size > 0
       ? allFiles.filter((file) => expectedSet.has(file.toLowerCase()))
-      : [];
+      : allFiles;
     const lowerFiles = files.map((file) => file.toLowerCase());
     const topLevelEntries = fs.existsSync(outputAbs)
       ? fs.readdirSync(outputAbs, { withFileTypes: true })
@@ -2620,7 +3066,7 @@ ${trimmedExisting}`
       mdFiles.length > 0 &&
       hasDocumentIntent &&
       (!hasBuildIntent || intentText.includes("مقترح") || intentText.includes("proposal") || intentText.includes("وثيقة") || intentText.includes("document"));
-    const deliveryType = hasRunnableApplication
+    const detectedDeliveryType = hasRunnableApplication
       ? "RUNNABLE_APPLICATION"
       : hasOnlyRequirementsPackage || (hasOnlyDocsOrData && hasBuildIntent)
           ? "REQUIREMENTS_PACKAGE"
@@ -2630,7 +3076,7 @@ ${trimmedExisting}`
               ? "REPORTS_ONLY"
               : currentExecutionOutputFound
                 ? "UNKNOWN_ARTIFACTS"
-                : "UNKNOWN_ARTIFACTS";
+              : "UNKNOWN_ARTIFACTS";
     const outputTypes = [];
 
     if (indexHtml) {
@@ -2654,7 +3100,7 @@ ${trimmedExisting}`
     if (hasDocumentDelivery) {
       outputTypes.push("DOCUMENT_DELIVERY");
     }
-    if (deliveryType === "REQUIREMENTS_PACKAGE") {
+    if (detectedDeliveryType === "REQUIREMENTS_PACKAGE") {
       outputTypes.push("REQUIREMENTS_PACKAGE");
     }
     if (!currentExecutionOutputFound && expectedOutputFiles.length > 0) {
@@ -2663,8 +3109,8 @@ ${trimmedExisting}`
     if (
       !hasRunnableApplication &&
       currentExecutionOutputFound &&
-      deliveryType !== "DOCUMENT_DELIVERY" &&
-      deliveryType !== "REQUIREMENTS_PACKAGE"
+      detectedDeliveryType !== "DOCUMENT_DELIVERY" &&
+      detectedDeliveryType !== "REQUIREMENTS_PACKAGE"
     ) {
       outputTypes.push("PACKAGE_OR_REPORT_FILES");
     }
@@ -2673,21 +3119,26 @@ ${trimmedExisting}`
     }
 
     const runInstructions = [];
-    const appOutputPath = `${outputRel}/app`;
+    const appOutputPath = getProjectOutputAppRelativePath(projectId);
     const absoluteOutputPath = outputAbs;
     const absoluteAppOutputPath = getProjectOutputAppAbs(projectId);
     const previewIndexFile = indexHtml || files.find((file) => String(file || "").toLowerCase().endsWith("/index.html")) || "";
-    const previewFileInsideApp = previewIndexFile.toLowerCase().startsWith("app/")
-      ? previewIndexFile.slice(4)
-      : previewIndexFile;
+    const previewFileInsideApp = normalizeFileInsideOutputApp(previewIndexFile);
     const appPreviewUrl = previewIndexFile ? getProjectAppPreviewUrl(projectId, previewFileInsideApp || "index.html") : "";
-    const appRuntimeType = packageJson || serverJs || appJs
-      ? "NODE_SERVER"
-      : appPreviewUrl
-        ? "STATIC_HTML"
+    const runtimeState = readAppRuntime(projectId);
+    const serverAppUrl = runtimeState && runtimeState.running === true && runtimeState.app_url
+      ? String(runtimeState.app_url || "")
+      : "";
+    const appRuntimeType = appPreviewUrl
+      ? "STATIC_HTML"
+      : packageJson || serverJs || appJs
+        ? "NODE_SERVER"
         : "UNKNOWN";
+    const deliveryType = detectedDeliveryType === "RUNNABLE_APPLICATION" && !appPreviewUrl && !serverAppUrl
+      ? "SERVER_START_REQUIRED"
+      : detectedDeliveryType;
 
-    if (hasRunnableApplication) {
+    if (detectedDeliveryType === "RUNNABLE_APPLICATION") {
       runInstructions.push(`Application folder: ${appOutputPath}`);
       if (appPreviewUrl && appRuntimeType === "STATIC_HTML") {
         runInstructions.push(`Open the application preview: ${appPreviewUrl}`);
@@ -2759,6 +3210,7 @@ ${trimmedExisting}`
     return {
       project_id: projectId,
       project_name: normalizeProjectName(projectState.project_name || projectState.original_user_goal || projectState.user_goal || projectId),
+      language: String(projectState.primary_language || "").toUpperCase() === "AR" ? "ar" : "en",
       execution_id: executionId,
       package_id: packageId,
       delivery_type: deliveryType,
@@ -2766,9 +3218,14 @@ ${trimmedExisting}`
       app_output_path: appOutputPath,
       absolute_output_path: absoluteOutputPath,
       absolute_app_output_path: absoluteAppOutputPath,
-      app_preview_url: hasRunnableApplication ? appPreviewUrl : "",
-      app_runtime_type: hasRunnableApplication ? appRuntimeType : "UNKNOWN",
-      requires_server: hasRunnableApplication && appRuntimeType === "NODE_SERVER",
+      static_preview_url: detectedDeliveryType === "RUNNABLE_APPLICATION" ? appPreviewUrl : "",
+      server_app_url: detectedDeliveryType === "RUNNABLE_APPLICATION" ? serverAppUrl : "",
+      app_url: detectedDeliveryType === "RUNNABLE_APPLICATION" ? (appPreviewUrl || serverAppUrl) : "",
+      app_preview_url: detectedDeliveryType === "RUNNABLE_APPLICATION" ? (appPreviewUrl || serverAppUrl) : "",
+      app_runtime_type: detectedDeliveryType === "RUNNABLE_APPLICATION" ? appRuntimeType : "UNKNOWN",
+      requires_server: detectedDeliveryType === "RUNNABLE_APPLICATION" && !appPreviewUrl && appRuntimeType === "NODE_SERVER",
+      app_server_running: Boolean(serverAppUrl),
+      app_server_port: Number.isInteger(Number(runtimeState.port)) ? Number(runtimeState.port) : null,
       quick_launch_files: {
         run_bat: runBat ? `${outputRel}/${runBat}` : "",
         open_app_bat: openAppBat ? `${outputRel}/${openAppBat}` : ""
@@ -2780,7 +3237,8 @@ ${trimmedExisting}`
       output_files: files,
       ignored_existing_output_files: allFiles.filter((file) => !files.includes(file)),
       output_types: outputTypes,
-      runnable_application_created: hasRunnableApplication,
+      runnable_application_created: deliveryType === "RUNNABLE_APPLICATION",
+      runnable_application_detected: detectedDeliveryType === "RUNNABLE_APPLICATION",
       runnable_indicators: runnableIndicators,
       run_instructions: runInstructions,
       usage_or_run_instructions: runInstructions,
@@ -2805,6 +3263,12 @@ ${trimmedExisting}`
                 "Review generated files",
                 "Request changes"
               ]
+            : deliveryType === "SERVER_START_REQUIRED"
+              ? [
+                  "Start server and open app",
+                  "Review generated files",
+                  "Request changes"
+                ]
             : [
                 "Review output files",
                 "Clarify the requested delivery"
@@ -2858,7 +3322,7 @@ ${trimmedExisting}`
 
   function withWindowsLauncherFiles(projectIdInput, files) {
     const projectId = normalizeProjectId(projectIdInput);
-    const outputBase = `artifacts/projects/${projectId}/output/app`;
+    const outputBase = getProjectOutputAppRelativePath(projectId);
     const list = Array.isArray(files) ? files.slice() : [];
     const lowerPaths = list.map((file) => String(file && file.path ? file.path : "").toLowerCase().replace(/\\/g, "/"));
     const hasIndexHtml = lowerPaths.some((filePath) => filePath === `${outputBase}/index.html` || filePath.endsWith("/app/index.html"));
@@ -2902,7 +3366,7 @@ ${trimmedExisting}`
 
   function normalizeProviderRunnableFiles(projectIdInput, providerFiles) {
     const projectId = normalizeProjectId(projectIdInput);
-    const outputBase = `artifacts/projects/${projectId}/output/app`;
+    const outputBase = getProjectOutputAppRelativePath(projectId);
     const list = Array.isArray(providerFiles) ? providerFiles : [];
 
     const normalized = list
@@ -2910,11 +3374,16 @@ ${trimmedExisting}`
         const rawPath = String(file && file.path ? file.path : "").trim().replace(/\\/g, "/");
         const content = typeof (file && file.content) === "string" ? file.content : "";
         const basename = path.posix.basename(rawPath || `file_${index + 1}.txt`);
-        const scopedPath = rawPath.startsWith(`${outputBase}/`)
-          ? rawPath
-          : rawPath.startsWith("app/")
-            ? `artifacts/projects/${projectId}/output/${rawPath}`
-            : `${outputBase}/${basename}`;
+        const outputRoot = getProjectOutputRel(projectId);
+        const pathInsideApp = rawPath.startsWith(`${outputBase}/`)
+          ? rawPath.slice(outputBase.length + 1)
+          : rawPath.startsWith(`${outputRoot}/app/`)
+            ? rawPath.slice(`${outputRoot}/app/`.length)
+            : rawPath.startsWith("app/")
+              ? rawPath.slice(4)
+              : basename;
+        const safeInsideApp = normalizeFileInsideOutputApp(pathInsideApp || basename);
+        const scopedPath = `${outputBase}/${safeInsideApp}`;
 
         return {
           path: scopedPath,
@@ -4320,6 +4789,12 @@ function buildExecutionPackage(packet) {
         return;
       }
 
+      if (req.method === "POST" && pathname === "/api/projects/delete") {
+        const body = await readBody(req);
+        sendJson(res, 200, deleteProject(body));
+        return;
+      }
+
       if (req.method === "POST" && pathname === "/api/projects/activate") {
         const body = await readBody(req);
         const projectId = writeActiveProject(
@@ -4342,7 +4817,25 @@ function buildExecutionPackage(packet) {
 
       if (req.method === "POST" && pathname === "/api/projects/run-output-app") {
         const body = await readBody(req);
-        sendJson(res, 200, runProjectOutputAppServer(body));
+        sendJson(res, 200, await runProjectOutputAppServer(body));
+        return;
+      }
+
+      if (req.method === "POST" && pathname === "/api/projects/run-app-server") {
+        const body = await readBody(req);
+        sendJson(res, 200, await runProjectOutputAppServer(body));
+        return;
+      }
+
+      if (req.method === "POST" && pathname === "/api/projects/stop-app-server") {
+        const body = await readBody(req);
+        sendJson(res, 200, stopProjectAppServer(body));
+        return;
+      }
+
+      if (req.method === "POST" && pathname === "/api/projects/cleanup-test-artifacts") {
+        const body = await readBody(req);
+        sendJson(res, 200, cleanupTestArtifacts(body));
         return;
       }
 

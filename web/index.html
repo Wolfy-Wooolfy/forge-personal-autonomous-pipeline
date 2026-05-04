@@ -476,7 +476,11 @@
 
           <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px;">
             <label for="projectSelect" style="margin-bottom:0;">Active project</label>
-            <button id="newProjectBtn" type="button" class="secondary">New Project</button>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+              <button id="cleanupTestBtn" type="button" class="secondary">تنظيف مشاريع الاختبار</button>
+              <button id="newProjectBtn" type="button" class="secondary">New Project</button>
+              <button id="deleteProjectBtn" type="button" class="secondary">حذف المشروع</button>
+            </div>
           </div>
 
           <select id="projectSelect"></select>
@@ -545,6 +549,8 @@
     const requestInput = document.getElementById("requestInput");
     const projectSelect = document.getElementById("projectSelect");
     const newProjectBtn = document.getElementById("newProjectBtn");
+    const cleanupTestBtn = document.getElementById("cleanupTestBtn");
+    const deleteProjectBtn = document.getElementById("deleteProjectBtn");
     const projectStateBox = document.getElementById("projectStateBox");
     const chatSendBtn = document.getElementById("chatSendBtn");
     const approveBtn = document.getElementById("approveBtn");
@@ -577,7 +583,8 @@
       current_execution_id: "",
       current_package_id: "",
       current_output_files: [],
-      current_followup_mode: ""
+      current_followup_mode: "",
+      language: ""
     };
     let pendingDeliveryRevision = null;
     let pendingOutputFileSelection = null;
@@ -1311,7 +1318,7 @@
         return false;
       }
 
-      const lang = detectUserLanguage(request);
+      const lang = getDeliveryLanguage(currentProjectState && currentProjectState.delivery_summary, request);
       const content = draftResult.documentation_content || "";
       const path = draftResult.documentation_path || "";
 
@@ -1486,7 +1493,7 @@
     }
 
     function askForDocumentationRevision(request) {
-      const lang = detectUserLanguage(request);
+      const lang = getDeliveryLanguage(currentProjectState && currentProjectState.delivery_summary, request);
 
       pushMessage(
         "user",
@@ -1833,7 +1840,11 @@
         appPath: String(data.app_output_path || (outputPath ? `${outputPath}/app` : "")).replace(/\\/g, "/"),
         absoluteOutputPath: String(data.absolute_output_path || "").replace(/\\/g, "\\"),
         absoluteAppPath: String(data.absolute_app_output_path || "").replace(/\\/g, "\\"),
-        appPreviewUrl: String(data.app_preview_url || "").trim(),
+        staticPreviewUrl: String(data.static_preview_url || "").trim(),
+        serverAppUrl: String(data.server_app_url || "").trim(),
+        appPreviewUrl: String(data.app_url || data.app_preview_url || data.static_preview_url || data.server_app_url || "").trim(),
+        appServerRunning: data.app_server_running === true,
+        appServerPort: data.app_server_port || null,
         appRuntimeType: String(data.app_runtime_type || "").trim(),
         requiresServer: data.requires_server === true,
         runBat: formatPath(quick.run_bat) || findFile("run.bat"),
@@ -1841,6 +1852,25 @@
         indexHtml: findFile("index.html"),
         packageJson: findFile("package.json")
       };
+    }
+
+    function getDeliveryLanguage(summary, fallbackText = "") {
+      const data = summary && typeof summary === "object" ? summary : {};
+      const stored = String(data.language || currentDeliveryFlowState.language || "").trim().toLowerCase();
+
+      if (stored === "ar" || stored === "en") {
+        return stored;
+      }
+
+      const primary = String(currentProjectState && currentProjectState.primary_language || "").trim().toUpperCase();
+      if (primary === "AR") return "ar";
+      if (primary === "EN") return "en";
+
+      return detectUserLanguage(
+        fallbackText ||
+        (currentProjectState && (currentProjectState.original_user_goal || currentProjectState.user_goal || currentProjectState.project_name)) ||
+        ""
+      );
     }
 
     function buildDeliverySummaryLines(deliverySummary, lang) {
@@ -1857,6 +1887,35 @@
       const currentOutputFound = summary.current_execution_output_found === true;
       const isDocumentDelivery = deliveryType === "DOCUMENT_DELIVERY";
       const isRequirementsPackage = deliveryType === "REQUIREMENTS_PACKAGE" || outputTypes.includes("REQUIREMENTS_PACKAGE");
+
+      if (runnable && deliveryType === "RUNNABLE_APPLICATION") {
+        const pathLabel = lang === "ar" ? "\u0627\u0644\u0645\u0633\u0627\u0631:" : "Path:";
+        return lang === "ar"
+          ? [
+              "\u062a\u0645 \u0625\u0646\u0634\u0627\u0621 Prototype \u0642\u0627\u0628\u0644 \u0644\u0644\u062a\u0634\u063a\u064a\u0644.",
+              `\u0627\u0633\u0645 \u0627\u0644\u0645\u0634\u0631\u0648\u0639: ${summary.project_name || ""}`,
+              `\u0646\u0648\u0639 \u0627\u0644\u062a\u0633\u0644\u064a\u0645: ${deliveryType}`,
+              quickLaunch.appPreviewUrl ? "\u0631\u0627\u0628\u0637 \u0627\u0644\u0645\u0639\u0627\u064a\u0646\u0629:" : "",
+              quickLaunch.appPreviewUrl || "",
+              "",
+              pathLabel,
+              quickLaunch.appPath || summary.app_output_path || "",
+              "",
+              "\u0647\u0630\u0627 Prototype \u0623\u0648\u0644\u064a \u0645\u0628\u0646\u064a \u0645\u0646 \u0627\u0644\u0645\u062a\u0637\u0644\u0628\u0627\u062a\u060c \u0648\u0644\u064a\u0633 \u0646\u0638\u0627\u0645 Production \u0643\u0627\u0645\u0644."
+            ].filter(Boolean)
+          : [
+              "A runnable prototype was created.",
+              `Project name: ${summary.project_name || ""}`,
+              `Delivery type: ${deliveryType}`,
+              quickLaunch.appPreviewUrl ? "Preview URL:" : "",
+              quickLaunch.appPreviewUrl || "",
+              "",
+              pathLabel,
+              quickLaunch.appPath || summary.app_output_path || "",
+              "",
+              "This is a prototype built from requirements, not a production system."
+            ].filter(Boolean);
+      }
       const deliverySentenceAr = !currentOutputFound
         ? "\u0644\u0645 \u064a\u062a\u0645 \u0627\u0644\u0639\u062b\u0648\u0631 \u0639\u0644\u0649 \u0645\u062e\u0631\u062c\u0627\u062a \u0645\u0631\u062a\u0628\u0637\u0629 \u0628\u0627\u0644\u062a\u0646\u0641\u064a\u0630 \u0627\u0644\u062d\u0627\u0644\u064a."
         : isDocumentDelivery
@@ -2022,7 +2081,8 @@
         current_execution_id: String(summary.execution_id || ""),
         current_package_id: String(summary.package_id || ""),
         current_output_files: Array.isArray(summary.output_files) ? summary.output_files.slice() : [],
-        current_followup_mode: followupMode
+        current_followup_mode: followupMode,
+        language: getDeliveryLanguage(summary)
       };
     }
 
@@ -2036,6 +2096,64 @@
       const ar = lang === "ar";
       const quickLaunch = getDeliveryQuickLaunch(summary);
       const hasServerRunnable = summary.requires_server === true || Boolean(quickLaunch.packageJson);
+
+      if (String(deliveryType || "") === "RUNNABLE_APPLICATION" && mode !== "PROVIDER_UNAVAILABLE" && mode !== "REVISION_PROMPT" && mode !== "APP_CHANGE_PROVIDER_UNAVAILABLE") {
+        const baseChoices = ar
+          ? [
+              { action_id: "OPEN_APP_PREVIEW", label: "\u0627\u0641\u062a\u062d \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0627\u0644\u0622\u0646", value: "\u0627\u0641\u062a\u062d \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0627\u0644\u0622\u0646", description: "\u0641\u062a\u062d \u0631\u0627\u0628\u0637 \u0627\u0644\u0645\u0639\u0627\u064a\u0646\u0629 \u0645\u0628\u0627\u0634\u0631\u0629." },
+              { action_id: "SHOW_APP_FILES", label: "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0637\u0628\u064a\u0642", value: "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0637\u0628\u064a\u0642", description: "\u0639\u0631\u0636 \u0643\u0644 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0627\u0644\u0646\u0627\u062a\u062c\u0629." },
+              ...(quickLaunch.appServerRunning ? [{ action_id: "STOP_APP_SERVER", label: "\u0623\u0648\u0642\u0641 \u0633\u064a\u0631\u0641\u0631 \u0627\u0644\u062a\u0637\u0628\u064a\u0642", value: "\u0623\u0648\u0642\u0641 \u0633\u064a\u0631\u0641\u0631 \u0627\u0644\u062a\u0637\u0628\u064a\u0642", description: "\u0625\u064a\u0642\u0627\u0641 \u0633\u064a\u0631\u0641\u0631 \u0647\u0630\u0627 \u0627\u0644\u0645\u0634\u0631\u0648\u0639 \u0641\u0642\u0637." }] : []),
+              { action_id: "REQUEST_DELIVERY_CHANGES", label: "\u0627\u0637\u0644\u0628 \u062a\u0639\u062f\u064a\u0644", value: "\u0627\u0637\u0644\u0628 \u062a\u0639\u062f\u064a\u0644", description: "\u062a\u062d\u062f\u064a\u062f \u062a\u0639\u062f\u064a\u0644 \u0648\u0627\u0636\u062d \u0639\u0644\u0649 \u0627\u0644\u062a\u0633\u0644\u064a\u0645 \u0627\u0644\u062d\u0627\u0644\u064a." },
+              { action_id: "OPEN_OUTPUT_FOLDER", label: "\u0627\u0641\u062a\u062d \u0645\u062c\u0644\u062f \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a", value: "\u0627\u0641\u062a\u062d \u0645\u062c\u0644\u062f \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a", description: "\u0641\u062a\u062d \u0645\u062c\u0644\u062f output/app \u0645\u062d\u0644\u064a\u0627." },
+              { action_id: "START_OVER", label: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f", value: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f", description: "\u0625\u063a\u0644\u0627\u0642 \u0627\u0644\u062a\u062f\u0641\u0642 \u0627\u0644\u062d\u0627\u0644\u064a \u0648\u0627\u0646\u062a\u0638\u0627\u0631 \u0637\u0644\u0628 \u062c\u062f\u064a\u062f." },
+              { action_id: "STOP_FLOW", label: "\u0627\u062a\u0648\u0642\u0641", value: "\u0627\u062a\u0648\u0642\u0641", description: "\u0625\u064a\u0642\u0627\u0641 \u0627\u0644\u0637\u0644\u0628 \u0627\u0644\u062d\u0627\u0644\u064a." }
+            ]
+          : [
+              { action_id: "OPEN_APP_PREVIEW", label: "Open app now", value: "Open app now", description: "Open the preview URL directly." },
+              { action_id: "SHOW_APP_FILES", label: "Show app files", value: "Show app files", description: "Show all current application files." },
+              ...(quickLaunch.appServerRunning ? [{ action_id: "STOP_APP_SERVER", label: "Stop app server", value: "Stop app server", description: "Stop only this project's app server." }] : []),
+              { action_id: "REQUEST_DELIVERY_CHANGES", label: "Request changes", value: "Request changes", description: "Describe changes to the current delivery." },
+              { action_id: "OPEN_OUTPUT_FOLDER", label: "Open output folder", value: "Open output folder", description: "Ask the local server to open output/app when available." },
+              { action_id: "START_OVER", label: "Start over", value: "start over", description: "Close this flow and start a new request." },
+              { action_id: "STOP_FLOW", label: "Stop", value: "stop", description: "Stop the current project flow." }
+            ];
+
+        if (mode === "AFTER_RUN_INSTRUCTIONS" || mode === "ADVANCED_RUN_OPTIONS") {
+          return [
+            ...(mode === "ADVANCED_RUN_OPTIONS" && hasServerRunnable
+              ? [ar
+                  ? { action_id: "START_OUTPUT_APP_SERVER", label: "\u062a\u0634\u063a\u064a\u0644 \u0633\u064a\u0631\u0641\u0631 \u0627\u0644\u062a\u0637\u0628\u064a\u0642", value: "\u062a\u0634\u063a\u064a\u0644 \u0633\u064a\u0631\u0641\u0631 \u0627\u0644\u062a\u0637\u0628\u064a\u0642", description: "\u062a\u0634\u063a\u064a\u0644 npm install \u062b\u0645 npm start \u0639\u0646\u062f \u0639\u062f\u0645 \u062a\u0648\u0641\u0631 preview." }
+                  : { action_id: "START_OUTPUT_APP_SERVER", label: "Start app server", value: "Start app server", description: "Run npm install then npm start when preview is unavailable." }]
+              : []),
+            ar
+              ? { action_id: "ADVANCED_RUN_OPTIONS", label: "\u062e\u064a\u0627\u0631\u0627\u062a \u062a\u0634\u063a\u064a\u0644 \u0645\u062a\u0642\u062f\u0645\u0629", value: "\u062e\u064a\u0627\u0631\u0627\u062a \u062a\u0634\u063a\u064a\u0644 \u0645\u062a\u0642\u062f\u0645\u0629", description: "\u0639\u0631\u0636 npm/run.bat/open_app.bat \u0639\u0646\u062f \u0627\u0644\u062d\u0627\u062c\u0629." }
+              : { action_id: "ADVANCED_RUN_OPTIONS", label: "Advanced run options", value: "Advanced run options", description: "Show npm/run.bat/open_app.bat when needed." },
+            ...baseChoices.filter((choice) => choice.action_id !== "OPEN_APP_PREVIEW")
+          ];
+        }
+
+        return baseChoices;
+      }
+
+      if (String(deliveryType || "") === "SERVER_START_REQUIRED") {
+        return ar
+          ? [
+              { action_id: "START_OUTPUT_APP_SERVER", label: "\u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u0633\u064a\u0631\u0641\u0631 \u0648\u0641\u062a\u062d \u0627\u0644\u062a\u0637\u0628\u064a\u0642", value: "\u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u0633\u064a\u0631\u0641\u0631 \u0648\u0641\u062a\u062d \u0627\u0644\u062a\u0637\u0628\u064a\u0642", description: "\u062a\u062e\u0635\u064a\u0635 \u0628\u0648\u0631\u062a \u0622\u0645\u0646 \u0648\u0641\u062a\u062d app_url \u0628\u0639\u062f \u0627\u0644\u0646\u062c\u0627\u062d." },
+              { action_id: "SHOW_APP_FILES", label: "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0637\u0628\u064a\u0642", value: "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0637\u0628\u064a\u0642", description: "\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0633\u0644\u064a\u0645." },
+              { action_id: "OPEN_OUTPUT_FOLDER", label: "\u0627\u0641\u062a\u062d \u0645\u062c\u0644\u062f \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a", value: "\u0627\u0641\u062a\u062d \u0645\u062c\u0644\u062f \u0627\u0644\u0645\u062e\u0631\u062c\u0627\u062a", description: "\u0641\u062a\u062d output/app." },
+              { action_id: "REQUEST_DELIVERY_CHANGES", label: "\u0627\u0637\u0644\u0628 \u062a\u0639\u062f\u064a\u0644", value: "\u0627\u0637\u0644\u0628 \u062a\u0639\u062f\u064a\u0644", description: "\u062a\u0639\u062f\u064a\u0644 \u0627\u0644\u062a\u0633\u0644\u064a\u0645." },
+              { action_id: "START_OVER", label: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f", value: "\u0627\u0628\u062f\u0623 \u0645\u0646 \u062c\u062f\u064a\u062f", description: "\u0625\u063a\u0644\u0627\u0642 \u0627\u0644\u062a\u062f\u0641\u0642." },
+              { action_id: "STOP_FLOW", label: "\u0627\u062a\u0648\u0642\u0641", value: "\u0627\u062a\u0648\u0642\u0641", description: "\u0625\u064a\u0642\u0627\u0641 \u0627\u0644\u0637\u0644\u0628." }
+            ]
+          : [
+              { action_id: "START_OUTPUT_APP_SERVER", label: "Start server and open app", value: "Start server and open app", description: "Allocate a safe port and open app_url after success." },
+              { action_id: "SHOW_APP_FILES", label: "Show app files", value: "Show app files", description: "Show delivery files." },
+              { action_id: "OPEN_OUTPUT_FOLDER", label: "Open output folder", value: "Open output folder", description: "Open output/app." },
+              { action_id: "REQUEST_DELIVERY_CHANGES", label: "Request changes", value: "Request changes", description: "Request a delivery change." },
+              { action_id: "START_OVER", label: "Start over", value: "start over", description: "Close this flow." },
+              { action_id: "STOP_FLOW", label: "Stop", value: "stop", description: "Stop current flow." }
+            ];
+      }
 
       if (mode === "PROVIDER_UNAVAILABLE") {
         return ar
@@ -2177,7 +2295,8 @@
     }
 
     function buildPostActionChoicesHtml(deliverySummary, lang, mode = "") {
-      let choices = buildFollowUpChoicesForCurrentState({ deliverySummary, lang, mode });
+      const effectiveLang = getDeliveryLanguage(deliverySummary, lang);
+      let choices = buildFollowUpChoicesForCurrentState({ deliverySummary, lang: effectiveLang, mode });
       if (mode === "AFTER_REQUIREMENT_FILES" || mode === "AFTER_APP_FILES") {
         choices = choices.filter((choice) => choice && choice.action_id !== "SHOW_FILE_DETAILS");
       }
@@ -2594,10 +2713,10 @@
     }
 
     function showRequirementFilesForCurrentProject(request) {
-      const lang = detectUserLanguage(request);
       const summary = currentProjectState && currentProjectState.delivery_summary
         ? currentProjectState.delivery_summary
         : {};
+      const lang = getDeliveryLanguage(summary, request);
       const outputPath = summary.output_path || "";
       const files = Array.isArray(summary.output_files) ? summary.output_files : [];
       const deliveryType = summary.delivery_type || "UNKNOWN_ARTIFACTS";
@@ -2669,7 +2788,7 @@
       const summary = currentProjectState && currentProjectState.delivery_summary
         ? currentProjectState.delivery_summary
         : {};
-      const lang = detectUserLanguage(fileValue || (currentProjectState && currentProjectState.project_name) || "");
+      const lang = getDeliveryLanguage(summary, fileValue || (currentProjectState && currentProjectState.project_name) || "");
       const files = Array.isArray(summary.output_files) ? summary.output_files : [];
       const requested = String(fileValue || "").trim().replace(/\\/g, "/");
       const deliveryType = String(summary.delivery_type || "");
@@ -2706,6 +2825,42 @@
           throw new Error(result && result.reason ? result.reason : "OUTPUT_FILE_READ_FAILED");
         }
         const content = result && typeof result.content === "string" ? result.content : "";
+        const normalizedRequested = String(result.path || requested).replace(/\\/g, "/");
+        const quickLaunch = getDeliveryQuickLaunch(summary);
+        const isPreviewableHtml = deliveryType === "RUNNABLE_APPLICATION" &&
+          /(^|\/)index\.html$/i.test(normalizedRequested) &&
+          Boolean(quickLaunch.appPreviewUrl);
+
+        if (isPreviewableHtml && pendingOutputFileSelection && pendingOutputFileSelection.show_source === normalizedRequested) {
+          pendingOutputFileSelection = null;
+        } else if (isPreviewableHtml) {
+          pendingOutputFileSelection = {
+            project_id: getActiveProjectId(),
+            files,
+            show_source: ""
+          };
+
+          const details = [
+            `${lang === "ar" ? "\u0627\u0633\u0645 \u0627\u0644\u0645\u0644\u0641" : "File"}: ${normalizedRequested}`,
+            `${lang === "ar" ? "\u0627\u0644\u0646\u0648\u0639" : "Type"}: HTML application file`,
+            `${lang === "ar" ? "\u0631\u0627\u0628\u0637 \u0627\u0644\u0645\u0639\u0627\u064a\u0646\u0629" : "Preview URL"}: ${quickLaunch.appPreviewUrl}`
+          ].join("\n");
+
+          const htmlActions = [
+            { action_id: "OPEN_APP_PREVIEW", label: lang === "ar" ? "\u0627\u0641\u062a\u062d \u0627\u0644\u062a\u0637\u0628\u064a\u0642" : "Open app", value: normalizedRequested, description: lang === "ar" ? "\u0641\u062a\u062d \u0631\u0627\u0628\u0637 \u0627\u0644\u0645\u0639\u0627\u064a\u0646\u0629." : "Open the preview URL." },
+            { action_id: "SHOW_FILE_SOURCE", label: lang === "ar" ? "\u0627\u0639\u0631\u0636 \u0627\u0644\u0643\u0648\u062f" : "Show source", value: normalizedRequested, description: lang === "ar" ? "\u0639\u0631\u0636 \u0645\u0635\u062f\u0631 HTML." : "Show the HTML source." },
+            { action_id: "SHOW_APP_FILES", label: lang === "ar" ? "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0637\u0628\u064a\u0642" : "Show app files", value: lang === "ar" ? "\u0627\u0639\u0631\u0636 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0637\u0628\u064a\u0642" : "Show app files", description: lang === "ar" ? "\u0639\u0631\u0636 \u0643\u0644 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u062a\u0637\u0628\u064a\u0642." : "Show all app files." },
+            { action_id: "REQUEST_DELIVERY_CHANGES", label: lang === "ar" ? "\u0627\u0637\u0644\u0628 \u062a\u0639\u062f\u064a\u0644" : "Request changes", value: lang === "ar" ? "\u0627\u0637\u0644\u0628 \u062a\u0639\u062f\u064a\u0644" : "Request changes", description: lang === "ar" ? "\u062a\u062d\u062f\u064a\u062f \u062a\u0639\u062f\u064a\u0644 \u0639\u0644\u0649 \u0627\u0644\u062a\u0633\u0644\u064a\u0645." : "Request a delivery change." }
+          ];
+
+          pushMessage(
+            "assistant",
+            lang === "ar" ? "\u062a\u0641\u0627\u0635\u064a\u0644 \u0645\u0644\u0641 HTML" : "HTML File Details",
+            `<div class="file-preview">${formatMessageText(details)}</div><div style="margin-top:12px;">${buildCurrentProjectActionChoiceHtml(htmlActions)}</div>`
+          );
+          updateCurrentDeliveryFlowState(summary, "SHOWING_OUTPUT_FILES");
+          return true;
+        }
 
         pushMessage(
           "assistant",
@@ -2758,7 +2913,7 @@
     }
 
     function showRunInstructionsForCurrentProject(request) {
-      const lang = detectUserLanguage(request);
+      const lang = getDeliveryLanguage(currentProjectState && currentProjectState.delivery_summary, request);
       const summary = currentProjectState && currentProjectState.delivery_summary
         ? currentProjectState.delivery_summary
         : {};
@@ -2797,7 +2952,7 @@
         return;
       }
 
-      if (quickLaunch.appPreviewUrl && !quickLaunch.requiresServer) {
+      if (quickLaunch.appPreviewUrl) {
         const openedWindow = window.open(quickLaunch.appPreviewUrl, "_blank");
         const lines = [
           lang === "ar"
@@ -2840,8 +2995,40 @@
       setStatus(lang === "ar" ? "\u062a\u0645 \u0639\u0631\u0636 \u062a\u0639\u0644\u064a\u0645\u0627\u062a \u0627\u0644\u062a\u0634\u063a\u064a\u0644." : "Run instructions shown.");
     }
 
+    function showAdvancedRunOptionsForCurrentProject(request) {
+      const summary = currentProjectState && currentProjectState.delivery_summary
+        ? currentProjectState.delivery_summary
+        : {};
+      const lang = getDeliveryLanguage(summary, request);
+      const instructions = Array.isArray(summary.run_instructions)
+        ? summary.run_instructions
+        : Array.isArray(summary.usage_or_run_instructions)
+          ? summary.usage_or_run_instructions
+          : [];
+      const localizedInstructions = localizeRunInstructions(instructions, summary, lang);
+      const quickLaunch = getDeliveryQuickLaunch(summary);
+      const lines = [
+        lang === "ar" ? "\u062e\u064a\u0627\u0631\u0627\u062a \u062a\u0634\u063a\u064a\u0644 \u0645\u062a\u0642\u062f\u0645\u0629:" : "Advanced run options:",
+        quickLaunch.appPreviewUrl ? `${lang === "ar" ? "\u0627\u0644\u062e\u064a\u0627\u0631 \u0627\u0644\u0623\u0633\u0627\u0633\u064a" : "Primary option"}: ${quickLaunch.appPreviewUrl}` : "",
+        quickLaunch.openAppBat ? `open_app.bat: ${quickLaunch.openAppBat}` : "",
+        quickLaunch.runBat ? `run.bat: ${quickLaunch.runBat}` : "",
+        quickLaunch.packageJson ? `package.json: ${quickLaunch.packageJson}` : "",
+        ...localizedInstructions,
+        quickLaunch.appPreviewUrl && localizedInstructions.length > 0
+          ? (lang === "ar" ? "\u0623\u0648\u0627\u0645\u0631 npm/run.bat \u0647\u0646\u0627 \u0644\u0644\u062d\u0627\u0644\u0627\u062a \u0627\u0644\u0645\u062a\u0642\u062f\u0645\u0629 \u0641\u0642\u0637." : "npm/run.bat commands are advanced fallback options only.")
+          : ""
+      ].filter(Boolean);
+
+      pushMessage(
+        "assistant",
+        lang === "ar" ? "\u062e\u064a\u0627\u0631\u0627\u062a \u062a\u0634\u063a\u064a\u0644 \u0645\u062a\u0642\u062f\u0645\u0629" : "Advanced Run Options",
+        `<div class="file-preview">${formatMessageText(lines.join("\n"))}</div>${buildPostActionChoicesHtml(summary, lang, "ADVANCED_RUN_OPTIONS")}`
+      );
+      updateCurrentDeliveryFlowState(summary, "ADVANCED_RUN_OPTIONS");
+    }
+
     async function openOutputFolderForCurrentProject(request) {
-      const lang = detectUserLanguage(request);
+      const lang = getDeliveryLanguage(currentProjectState && currentProjectState.delivery_summary, request);
       const summary = currentProjectState && currentProjectState.delivery_summary
         ? currentProjectState.delivery_summary
         : {};
@@ -2894,7 +3081,7 @@
     }
 
     async function startOutputAppServerForCurrentProject(request) {
-      const lang = detectUserLanguage(request);
+      const lang = getDeliveryLanguage(currentProjectState && currentProjectState.delivery_summary, request);
       const summary = currentProjectState && currentProjectState.delivery_summary
         ? currentProjectState.delivery_summary
         : {};
@@ -2907,22 +3094,33 @@
       requestInput.value = "";
 
       try {
-        const result = await requestAPI("/api/projects/run-output-app", {
+        const result = await requestAPI("/api/projects/run-app-server", {
           project_id: getActiveProjectId()
         });
+        if (result.project) {
+          renderProjectState(result.project);
+        }
+        if (result.app_url) {
+          window.open(result.app_url, "_blank");
+        }
         const lines = result && result.ok
           ? [
-              lang === "ar" ? "\u062a\u0645 \u0628\u062f\u0621 \u062a\u0634\u063a\u064a\u0644 \u0633\u064a\u0631\u0641\u0631 \u0627\u0644\u062a\u0637\u0628\u064a\u0642." : "The app server start command was launched.",
+              result.already_running
+                ? (lang === "ar" ? "\u0627\u0644\u0633\u064a\u0631\u0641\u0631 \u064a\u0639\u0645\u0644 \u0628\u0627\u0644\u0641\u0639\u0644." : "The server is already running.")
+                : (lang === "ar" ? "\u062a\u0645 \u062a\u0634\u063a\u064a\u0644 \u0633\u064a\u0631\u0641\u0631 \u0627\u0644\u062a\u0637\u0628\u064a\u0642." : "The app server is running."),
               result.app_url ? `app_url: ${result.app_url}` : "",
               result.port ? `port: ${result.port}` : "",
               result.absolute_path ? `${lang === "ar" ? "\u0627\u0644\u0645\u0633\u0627\u0631 \u0627\u0644\u0645\u0637\u0644\u0642" : "Absolute path"}: ${result.absolute_path}` : "",
-              ...(Array.isArray(result.logs) ? result.logs : [])
+              result.app_url
+                ? (lang === "ar" ? "\u062a\u0645 \u0641\u062a\u062d \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0641\u064a \u062a\u0628\u0648\u064a\u0628 \u062c\u062f\u064a\u062f. \u0625\u0630\u0627 \u0644\u0645 \u064a\u0641\u062a\u062d\u060c \u0627\u0633\u062a\u062e\u062f\u0645 \u0627\u0644\u0631\u0627\u0628\u0637 \u0623\u0639\u0644\u0627\u0647." : "The app was opened in a new tab. If it did not open, use the link above.")
+                : ""
             ]
           : [
               lang === "ar" ? "\u062a\u0639\u0630\u0631 \u062a\u0634\u063a\u064a\u0644 \u0633\u064a\u0631\u0641\u0631 \u0627\u0644\u062a\u0637\u0628\u064a\u0642." : "The app server could not be started.",
               result && result.reason ? `reason: ${result.reason}` : "",
               result && result.message ? result.message : "",
-              result && result.absolute_path ? `${lang === "ar" ? "\u0627\u0644\u0645\u0633\u0627\u0631 \u0627\u0644\u0645\u0637\u0644\u0642" : "Absolute path"}: ${result.absolute_path}` : ""
+              result && result.absolute_path ? `${lang === "ar" ? "\u0627\u0644\u0645\u0633\u0627\u0631 \u0627\u0644\u0645\u0637\u0644\u0642" : "Absolute path"}: ${result.absolute_path}` : "",
+              result && result.logs ? `logs:\n${String(result.logs).slice(-1200)}` : ""
             ];
 
         pushMessage(
@@ -2941,11 +3139,158 @@
       }
     }
 
-    function askForDeliveryChangeRequest(request) {
-      const lang = detectUserLanguage(request);
+    async function stopOutputAppServerForCurrentProject(request) {
       const summary = currentProjectState && currentProjectState.delivery_summary
         ? currentProjectState.delivery_summary
         : {};
+      const lang = getDeliveryLanguage(summary, request);
+
+      pushMessage(
+        "user",
+        lang === "ar" ? "\u0623\u0648\u0642\u0641 \u0633\u064a\u0631\u0641\u0631 \u0627\u0644\u062a\u0637\u0628\u064a\u0642" : "Stop App Server",
+        `<div class="file-preview">${formatMessageText(request)}</div>`
+      );
+      requestInput.value = "";
+
+      try {
+        const result = await requestAPI("/api/projects/stop-app-server", {
+          project_id: getActiveProjectId()
+        });
+        if (result.project) {
+          renderProjectState(result.project);
+        }
+        const nextSummary = result.delivery_summary || (result.project && result.project.delivery_summary) || summary;
+        const lines = result && result.stopped
+          ? [
+              lang === "ar" ? "\u062a\u0645 \u0625\u064a\u0642\u0627\u0641 \u0633\u064a\u0631\u0641\u0631 \u0627\u0644\u062a\u0637\u0628\u064a\u0642." : "The app server was stopped.",
+              result.app_url ? `app_url: ${result.app_url}` : "",
+              result.port ? `port: ${result.port}` : ""
+            ]
+          : [
+              lang === "ar" ? "\u0627\u0644\u0633\u064a\u0631\u0641\u0631 \u0645\u062a\u0648\u0642\u0641 \u0628\u0627\u0644\u0641\u0639\u0644." : "The app server is already stopped.",
+              result && result.message ? result.message : ""
+            ];
+
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "\u062d\u0627\u0644\u0629 \u0633\u064a\u0631\u0641\u0631 \u0627\u0644\u062a\u0637\u0628\u064a\u0642" : "App Server Status",
+          `<div class="file-preview">${formatMessageText(lines.filter(Boolean).join("\n"))}</div>${buildPostActionChoicesHtml(nextSummary, lang, "DELIVERY_SUMMARY")}`
+        );
+      } catch (err) {
+        pushMessage(
+          "assistant",
+          lang === "ar" ? "\u062a\u0639\u0630\u0631 \u0625\u064a\u0642\u0627\u0641 \u0627\u0644\u0633\u064a\u0631\u0641\u0631" : "Could Not Stop Server",
+          `<div class="file-preview">${formatMessageText(err.message || String(err))}</div>${buildPostActionChoicesHtml(summary, lang, "DELIVERY_SUMMARY")}`
+        );
+      }
+    }
+
+    function showCleanupTestArtifactsPrompt() {
+      const lang = "ar";
+      const warning = [
+        "\u0633\u064a\u062a\u0645 \u062d\u0630\u0641 \u0645\u062e\u0631\u062c\u0627\u062a \u0627\u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0641\u0642\u0637\u060c \u0648\u0644\u064a\u0633 \u0645\u0644\u0641\u0627\u062a \u0627\u0644\u0646\u0638\u0627\u0645.",
+        "",
+        "\u0627\u0644\u0646\u0637\u0627\u0642 \u0627\u0644\u0627\u0641\u062a\u0631\u0627\u0636\u064a:",
+        "- artifacts/projects/default_project/output",
+        "- artifacts/projects/default_project/execute",
+        "- artifacts/projects/default_project/ai_os"
+      ].join("\n");
+      const choices = [
+        { action_id: "CLEANUP_TEST_ARTIFACTS_DRY_RUN", label: "\u0639\u0631\u0636 \u0645\u0627 \u0633\u064a\u062a\u0645 \u062d\u0630\u0641\u0647", value: "\u0639\u0631\u0636 \u0645\u0627 \u0633\u064a\u062a\u0645 \u062d\u0630\u0641\u0647", description: "\u0644\u0627 \u064a\u062d\u0630\u0641 \u0623\u064a \u0634\u064a\u0621." },
+        { action_id: "CLEANUP_TEST_ARTIFACTS_EXECUTE", label: "\u062a\u0646\u0641\u064a\u0630 \u0627\u0644\u062a\u0646\u0638\u064a\u0641", value: "\u062a\u0646\u0641\u064a\u0630 \u0627\u0644\u062a\u0646\u0638\u064a\u0641", description: "\u064a\u062d\u0630\u0641 \u0645\u062e\u0631\u062c\u0627\u062a \u0627\u0644\u0627\u062e\u062a\u0628\u0627\u0631 \u0627\u0644\u0645\u0630\u0643\u0648\u0631\u0629 \u0641\u0642\u0637." },
+        { action_id: "CANCEL_CLEANUP_TEST_ARTIFACTS", label: "\u0625\u0644\u063a\u0627\u0621", value: "\u0625\u0644\u063a\u0627\u0621", description: "\u0627\u0644\u0631\u062c\u0648\u0639 \u062f\u0648\u0646 \u062d\u0630\u0641." }
+      ];
+      const html = `<div class="file-preview">${formatMessageText(warning)}</div>${buildCurrentProjectActionChoiceHtml(choices)}`;
+
+      pushMessage("assistant", "\u062a\u0646\u0638\u064a\u0641 \u0645\u0634\u0627\u0631\u064a\u0639 \u0627\u0644\u0627\u062e\u062a\u0628\u0627\u0631", html);
+      setStatus("\u0628\u0627\u0646\u062a\u0638\u0627\u0631 \u062a\u0623\u0643\u064a\u062f \u062a\u0646\u0638\u064a\u0641 \u0645\u062e\u0631\u062c\u0627\u062a \u0627\u0644\u0627\u062e\u062a\u0628\u0627\u0631.");
+    }
+
+    async function cleanupTestArtifactsForCurrentWorkspace(dryRun) {
+      const result = await requestAPI("/api/projects/cleanup-test-artifacts", {
+        mode: "default_project_only",
+        dry_run: dryRun
+      });
+      const targets = Array.isArray(result.targets) ? result.targets : [];
+      const deleted = Array.isArray(result.deleted) ? result.deleted : [];
+      const lines = dryRun
+        ? [
+            "\u0644\u0645 \u064a\u062a\u0645 \u062d\u0630\u0641 \u0623\u064a \u0634\u064a\u0621.",
+            "",
+            "\u0633\u064a\u062a\u0645 \u062d\u0630\u0641:",
+            ...(targets.length > 0 ? targets.map((target) => `- ${typeof target === "string" ? target : (target.absolute_path || target.relative_path || "")}`) : ["- \u0644\u0627 \u062a\u0648\u062c\u062f \u0645\u062e\u0631\u062c\u0627\u062a \u0627\u062e\u062a\u0628\u0627\u0631 \u0645\u0637\u0627\u0628\u0642\u0629."])
+          ]
+        : [
+            "\u0627\u0646\u062a\u0647\u0649 \u062a\u0646\u0638\u064a\u0641 \u0645\u062e\u0631\u062c\u0627\u062a \u0627\u0644\u0627\u062e\u062a\u0628\u0627\u0631.",
+            "",
+            "\u062a\u0645 \u062d\u0630\u0641:",
+            ...(deleted.length > 0 ? deleted.map((target) => `- ${typeof target === "string" ? target : (target.absolute_path || target.relative_path || "")}`) : ["- \u0644\u0627 \u062a\u0648\u062c\u062f \u0645\u062e\u0631\u062c\u0627\u062a \u0627\u062e\u062a\u0628\u0627\u0631 \u0645\u0637\u0627\u0628\u0642\u0629."]),
+            "",
+            "\u0644\u0645 \u064a\u062a\u0645 \u0644\u0645\u0633 code \u0623\u0648 docs \u0623\u0648 \u0645\u0644\u0641\u0627\u062a governance."
+          ];
+
+      pushMessage(
+        "assistant",
+        dryRun ? "\u0645\u0639\u0627\u064a\u0646\u0629 \u0627\u0644\u062a\u0646\u0638\u064a\u0641" : "\u0646\u062a\u064a\u062c\u0629 \u0627\u0644\u062a\u0646\u0638\u064a\u0641",
+        `<div class="file-preview">${formatMessageText(lines.filter(Boolean).join("\n"))}</div>`
+      );
+      setStatus(dryRun ? "\u062a\u0645 \u0639\u0631\u0636 \u0645\u0627 \u0633\u064a\u062a\u0645 \u062d\u0630\u0641\u0647 \u062f\u0648\u0646 \u062d\u0630\u0641." : "\u062a\u0645 \u062a\u0646\u0638\u064a\u0641 \u0645\u062e\u0631\u062c\u0627\u062a \u0627\u0644\u0627\u062e\u062a\u0628\u0627\u0631.");
+    }
+
+    async function deleteActiveProject() {
+      const projectId = getActiveProjectId();
+      const projectName = currentProjectState && currentProjectState.project_name
+        ? String(currentProjectState.project_name)
+        : projectId;
+      const confirmed = window.confirm(
+        `سيتم حذف المشروع بالكامل وكل ما يرتبط به داخل artifacts/projects/${projectId}.\n\nالمشروع: ${projectName}\n\nهل تريد المتابعة؟`
+      );
+
+      if (!confirmed) {
+        setStatus("تم إلغاء حذف المشروع.");
+        return;
+      }
+
+      try {
+        const result = await requestAPI("/api/projects/delete", {
+          project_id: projectId
+        });
+
+        if (!result || result.ok !== true) {
+          throw new Error(result && result.reason ? result.reason : "Project delete failed.");
+        }
+
+        resetDraft();
+        currentStrategyCandidates = [];
+        currentRequestText = "";
+        pendingConversationCheckpoint = null;
+        pendingAiOsOptions = null;
+        currentProjectState = null;
+
+        await loadProjects(result.active_project_id || "default_project");
+
+        pushMessage(
+          "assistant",
+          "حذف المشروع",
+          `<div class="file-preview">${formatMessageText([
+            result.deleted ? "تم حذف المشروع بالكامل." : "لم يكن مجلد المشروع موجودًا، وتم تحديث القائمة.",
+            `project_id: ${result.project_id}`,
+            `deleted_path: ${result.deleted_path}`,
+            `active_project_id: ${result.active_project_id}`
+          ].join("\n"))}</div>`
+        );
+        setStatus(`تم حذف المشروع: ${projectId}`);
+      } catch (err) {
+        pushMessage("assistant", "تعذر حذف المشروع", `<div class="file-preview">${formatMessageText(err.message || String(err))}</div>`);
+        setStatus(`تعذر حذف المشروع: ${err.message}`);
+      }
+    }
+
+    function askForDeliveryChangeRequest(request) {
+      const summary = currentProjectState && currentProjectState.delivery_summary
+        ? currentProjectState.delivery_summary
+        : {};
+      const lang = getDeliveryLanguage(summary, request);
       const deliveryType = String(summary.delivery_type || "");
 
       pushMessage(
@@ -3443,8 +3788,13 @@
         return;
       }
 
-      if (action === "SHOW_RUN_INSTRUCTIONS") {
+      if (action === "OPEN_APP_PREVIEW" || action === "SHOW_RUN_INSTRUCTIONS") {
         showRunInstructionsForCurrentProject(value || "Run or open the application");
+        return;
+      }
+
+      if (action === "ADVANCED_RUN_OPTIONS") {
+        showAdvancedRunOptionsForCurrentProject(value || "Advanced run options");
         return;
       }
 
@@ -3458,12 +3808,43 @@
         return;
       }
 
+      if (action === "STOP_APP_SERVER") {
+        await stopOutputAppServerForCurrentProject(value || "Stop app server");
+        return;
+      }
+
+      if (action === "CLEANUP_TEST_ARTIFACTS_DRY_RUN") {
+        await cleanupTestArtifactsForCurrentWorkspace(true);
+        return;
+      }
+
+      if (action === "CLEANUP_TEST_ARTIFACTS_EXECUTE") {
+        await cleanupTestArtifactsForCurrentWorkspace(false);
+        return;
+      }
+
+      if (action === "CANCEL_CLEANUP_TEST_ARTIFACTS") {
+        pushMessage("assistant", "\u062a\u0646\u0638\u064a\u0641 \u0645\u0634\u0627\u0631\u064a\u0639 \u0627\u0644\u0627\u062e\u062a\u0628\u0627\u0631", `<div class="file-preview">${formatMessageText("\u062a\u0645 \u0625\u0644\u063a\u0627\u0621 \u0627\u0644\u062a\u0646\u0638\u064a\u0641. \u0644\u0645 \u064a\u062a\u0645 \u062d\u0630\u0641 \u0623\u064a \u0634\u064a\u0621.")}</div>`);
+        setStatus("\u062a\u0645 \u0625\u0644\u063a\u0627\u0621 \u0627\u0644\u062a\u0646\u0638\u064a\u0641.");
+        return;
+      }
+
       if (action === "REVISE_REQUIREMENTS" || action === "REQUEST_DELIVERY_CHANGES" || action === "REVISE_DOCUMENT") {
         askForDeliveryChangeRequest(value || "Request changes");
         return;
       }
 
       if (action === "SHOW_FILE_DETAILS") {
+        await showOutputFileDetailsForCurrentProject(value || "");
+        return;
+      }
+
+      if (action === "SHOW_FILE_SOURCE") {
+        pendingOutputFileSelection = {
+          project_id: getActiveProjectId(),
+          files: Array.isArray(currentDeliveryFlowState.current_output_files) ? currentDeliveryFlowState.current_output_files : [],
+          show_source: value
+        };
         await showOutputFileDetailsForCurrentProject(value || "");
         return;
       }
@@ -4576,6 +4957,14 @@
       } catch (err) {
         setStatus(`Project creation failed: ${err.message}`);
       }
+    });
+
+    cleanupTestBtn.addEventListener("click", () => {
+      showCleanupTestArtifactsPrompt();
+    });
+
+    deleteProjectBtn.addEventListener("click", () => {
+      deleteActiveProject();
     });
 
     chatSendBtn.addEventListener("click", async () => {
