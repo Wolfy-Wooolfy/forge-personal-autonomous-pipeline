@@ -1,0 +1,122 @@
+[
+  {
+    "entry_type": "IDEATION_INTAKE",
+    "message": "اعمل مقترح لسيستم HR واعرضه عليا",
+    "inferred_project_type": "HUMAN_RESOURCES_HR",
+    "needs_clarification": true,
+    "clarification_questions": [
+      "ما هي الميزات الأساسية التي تريدها في نظام HR الخاص بك؟",
+      "هل هناك متطلبات خاصة بالتكامل مع أنظمة أخرى مثل الرواتب أو الحضور؟",
+      "ما هي أدوار المستخدمين التي يجب دعمها في النظام؟",
+      "هل هناك متطلبات أمان أو خصوصية محددة يجب الالتزام بها؟",
+      "هل تفضل نظامًا سحابيًا أم نظامًا محليًا؟",
+      "هل هناك متطلبات تقارير أو تحليلات معينة تريدها؟"
+    ],
+    "requirement_model": {
+      "system_type": "HR Management System",
+      "core_features": [
+        "Employee data management",
+        "Attendance and leave tracking",
+        "Payroll processing",
+        "Recruitment and onboarding",
+        "Performance evaluation",
+        "Training and development",
+        "Compliance and reporting"
+      ],
+      "user_roles": [
+        "HR Manager",
+        "Employee",
+        "Recruiter",
+        "Payroll Specialist"
+      ],
+      "integration_requirements": [],
+      "security_requirements": [],
+      "assumptions": [],
+      "recommended_scenario": []
+    },
+    "requirement_domain": "Human Resources (HR)",
+    "requirement_completeness": false,
+    "requirement_reasoning_summary": "تم تحديد مجال المشروع كنظام إدارة الموارد البشرية بناءً على طلب المستخدم. تم اقتراح نموذج أولي للمتطلبات الأساسية لنظام HR. ومع ذلك، هناك عدة أسئلة مفتوحة تتعلق بالميزات المحددة، التكامل، أدوار المستخدمين، الأمان، نوع النظام، ومتطلبات التقارير لضمان اكتمال المتطلبات.",
+    "created_at": "2026-05-05T10:34:33.214Z"
+  },
+  {
+    "entry_type": "DISCOVERY_COMPLETED",
+    "open_questions_answered": [
+      "ما هي الميزات الأساسية التي تريدها في نظام HR الخاص بك؟",
+      "هل هناك متطلبات خاصة بالتكامل مع أنظمة أخرى مثل الرواتب أو الحضور؟",
+      "ما هي أدوار المستخدمين التي يجب دعمها في النظام؟",
+      "هل هناك متطلبات أمان أو خصوصية محددة يجب الالتزام بها؟",
+      "هل تفضل نظامًا سحابيًا أم نظامًا محليًا؟",
+      "هل هناك متطلبات تقارير أو تحليلات معينة تريدها؟"
+    ],
+    "answers": {
+      "raw_answer": "اعمل مقترح كامل واعرضه",
+      "answered_questions": [
+        "ما هي الميزات الأساسية التي تريدها في نظام HR الخاص بك؟",
+        "هل هناك متطلبات خاصة بالتكامل مع أنظمة أخرى مثل الرواتب أو الحضور؟",
+        "ما هي أدوار المستخدمين التي يجب دعمها في النظام؟",
+        "هل هناك متطلبات أمان أو خصوصية محددة يجب الالتزام بها؟",
+        "هل تفضل نظامًا سحابيًا أم نظامًا محليًا؟",
+        "هل هناك متطلبات تقارير أو تحليلات معينة تريدها؟"
+      ]
+    },
+    "merged_answers": {
+      "raw_answer": "اعمل مقترح كامل واعرضه",
+      "answered_questions": [
+        "ما هي الميزات الأساسية التي تريدها في نظام HR الخاص بك؟",
+        "هل هناك متطلبات خاصة بالتكامل مع أنظمة أخرى مثل الرواتب أو الحضور؟",
+        "ما هي أدوار المستخدمين التي يجب دعمها في النظام؟",
+        "هل هناك متطلبات أمان أو خصوصية محددة يجب الالتزام بها؟",
+        "هل تفضل نظامًا سحابيًا أم نظامًا محليًا؟",
+        "هل هناك متطلبات تقارير أو تحليلات معينة تريدها؟"
+      ]
+    },
+    "requirement_domain": "HR Management System",
+    "requirement_model": {
+      "system_type": "HR Management System",
+      "core_features": [
+        "Employee data management",
+        "Attendance and leave tracking",
+        "Payroll processing",
+        "Recruitment and onboarding",
+        "Performance evaluation",
+        "Training and development",
+        "Compliance and reporting"
+      ],
+      "user_roles": [
+        "HR Manager",
+        "Employee",
+        "Recruiter",
+        "Payroll Specialist"
+      ],
+      "integration_requirements": [
+        "Integration with payroll systems",
+        "Integration with attendance tracking systems"
+      ],
+      "security_requirements": [
+        "Data privacy compliance",
+        "Role-based access control",
+        "Secure authentication"
+      ],
+      "deployment_preference": "Cloud-based system",
+      "reporting_and_analytics": [
+        "Standard HR reports",
+        "Customizable analytics dashboards"
+      ],
+      "assumptions": [
+        "System will support multi-role user access",
+        "Cloud deployment assumed for scalability and accessibility"
+      ],
+      "recommended_scenario": [
+        "Complete HR management system with all core features",
+        "Integrated with payroll and attendance systems",
+        "Secure with role-based access and data privacy compliance",
+        "Cloud-hosted with reporting and analytics capabilities"
+      ]
+    },
+    "completeness": true,
+    "next_open_questions": [],
+    "requirement_reasoning_summary": "User explicitly requested a complete proposal for an HR system without specifying details. Based on typical HR system requirements and the user's delegation to provide a full proposal, reasonable defaults were assumed for integration, security, deployment, and reporting. This resolves all execution-impacting ambiguities, making the requirement model complete.",
+    "created_at": "2026-05-05T10:34:49.082Z"
+  }
+]

@@ -1,0 +1,206 @@
+{
+  "project_id": "hr_system",
+  "project_name": "HR System",
+  "project_type": "HUMAN_RESOURCES_HR",
+  "project_mode": "EXTEND_EXISTING",
+  "project_status": "ACTIVE",
+  "primary_language": "AR",
+  "user_goal": "اعمل مقترح لسيستم HR واعرضه عليا",
+  "business_goal": "",
+  "technical_goal": "",
+  "current_phase": "FORGE_RUNTIME_COMPLETE",
+  "active_runtime_state": "EXECUTION_COMPLETE",
+  "workspace_path": "D:\\S\\Halo\\Tech\\forge-personal-autonomous-pipeline",
+  "source_of_truth": "ZIP_SNAPSHOT",
+  "selected_strategy": "",
+  "accepted_options": [
+    "opt3"
+  ],
+  "rejected_options": [],
+  "open_questions": [],
+  "clarification_answers": {
+    "raw_answer": "اعمل مقترح كامل واعرضه",
+    "answered_questions": [
+      "ما هي الميزات الأساسية التي تريدها في نظام HR الخاص بك؟",
+      "هل هناك متطلبات خاصة بالتكامل مع أنظمة أخرى مثل الرواتب أو الحضور؟",
+      "ما هي أدوار المستخدمين التي يجب دعمها في النظام؟",
+      "هل هناك متطلبات أمان أو خصوصية محددة يجب الالتزام بها؟",
+      "هل تفضل نظامًا سحابيًا أم نظامًا محليًا؟",
+      "هل هناك متطلبات تقارير أو تحليلات معينة تريدها؟"
+    ]
+  },
+  "requirement_domain": "HR Management System",
+  "requirement_completeness": true,
+  "requirement_model": {
+    "system_type": "HR Management System",
+    "core_features": [
+      "Employee data management",
+      "Attendance and leave tracking",
+      "Payroll processing",
+      "Recruitment and onboarding",
+      "Performance evaluation",
+      "Training and development",
+      "Compliance and reporting"
+    ],
+    "user_roles": [
+      "HR Manager",
+      "Employee",
+      "Recruiter",
+      "Payroll Specialist"
+    ],
+    "integration_requirements": [
+      "Integration with payroll systems",
+      "Integration with attendance tracking systems"
+    ],
+    "security_requirements": [
+      "Data privacy compliance",
+      "Role-based access control",
+      "Secure authentication"
+    ],
+    "deployment_preference": "Cloud-based system",
+    "reporting_and_analytics": [
+      "Standard HR reports",
+      "Customizable analytics dashboards"
+    ],
+    "assumptions": [
+      "System will support multi-role user access",
+      "Cloud deployment assumed for scalability and accessibility"
+    ],
+    "recommended_scenario": [
+      "Complete HR management system with all core features",
+      "Integrated with payroll and attendance systems",
+      "Secure with role-based access and data privacy compliance",
+      "Cloud-hosted with reporting and analytics capabilities"
+    ]
+  },
+  "requirement_reasoning_summary": "User explicitly requested a complete proposal for an HR system without specifying details. Based on typical HR system requirements and the user's delegation to provide a full proposal, reasonable defaults were assumed for integration, security, deployment, and reporting. This resolves all execution-impacting ambiguities, making the requirement model complete.",
+  "provider_error": "",
+  "original_user_goal": "اعمل مقترح لسيستم HR واعرضه عليا",
+  "latest_requested_action": "",
+  "active_followup_action": "",
+  "documentation_state": "DOCS_APPROVED",
+  "execution_package_state": "EXECUTED",
+  "execution_state": "EXECUTED",
+  "verification_state": "PASS",
+  "delivery_state": "REQUIREMENTS_PACKAGE",
+  "delivery_summary": {
+    "project_id": "hr_system",
+    "project_name": "HR System",
+    "language": "ar",
+    "execution_id": "ai_os_execution_1777977330895",
+    "package_id": "ai_os_package_1777977330895",
+    "delivery_type": "REQUIREMENTS_PACKAGE",
+    "output_path": "artifacts/projects/hr_system/output",
+    "app_output_path": "artifacts/projects/hr_system/output/app",
+    "absolute_output_path": "D:\\S\\Halo\\Tech\\forge-personal-autonomous-pipeline\\artifacts\\projects\\hr_system\\output",
+    "absolute_app_output_path": "D:\\S\\Halo\\Tech\\forge-personal-autonomous-pipeline\\artifacts\\projects\\hr_system\\output\\app",
+    "static_preview_url": "",
+    "server_app_url": "",
+    "app_url": "",
+    "app_preview_url": "",
+    "app_runtime_type": "UNKNOWN",
+    "requires_server": false,
+    "app_server_running": false,
+    "app_server_port": null,
+    "quick_launch_files": {
+      "run_bat": "",
+      "open_app_bat": ""
+    },
+    "output_exists": true,
+    "current_execution_output_found": true,
+    "expected_current_output_files": [
+      "HR_System_Proposal.txt"
+    ],
+    "output_file_count": 1,
+    "output_files": [
+      "HR_System_Proposal.txt"
+    ],
+    "ignored_existing_output_files": [],
+    "output_types": [
+      "REQUIREMENTS_PACKAGE"
+    ],
+    "runnable_application_created": false,
+    "runnable_application_detected": false,
+    "runnable_indicators": [],
+    "run_instructions": [
+      "A requirements package and execution plan were created, not a runnable application."
+    ],
+    "usage_or_run_instructions": [
+      "A requirements package and execution plan were created, not a runnable application."
+    ],
+    "next_suggested_actions": [
+      "Build the runnable application from these requirements",
+      "Revise the requirements",
+      "Show output files"
+    ]
+  },
+  "current_delivery_state": "DELIVERED",
+  "current_delivery_type": "REQUIREMENTS_PACKAGE",
+  "current_execution_id": "ai_os_execution_1777977330895",
+  "current_package_id": "ai_os_package_1777977330895",
+  "current_output_files": [
+    "HR_System_Proposal.txt"
+  ],
+  "current_followup_mode": "",
+  "conversation_history": {
+    "proposal_count": 0,
+    "draft_count": 0,
+    "turn_count": 0,
+    "latest_turn_id": "",
+    "artifact_path": "artifacts/projects/hr_system/workspace/conversation_history.json"
+  },
+  "decision_history": {
+    "has_decision_packet": false
+  },
+  "artifact_registry": {
+    "project_root": "artifacts/projects/hr_system",
+    "project_state": "artifacts/projects/hr_system/project_state.json",
+    "decision_packet": "",
+    "execution_package": "artifacts/projects/hr_system/execute/execution_package.json"
+  },
+  "review_cycles_count": 1,
+  "pending_decisions": [],
+  "memory_state": "ACTIVE",
+  "version_registry": [
+    {
+      "version_id": "state_0001",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-05T10:34:04.238Z",
+      "state_hash": "33f2574a1556b64465edb8bc4d3318bf3a7ded51aa62e29958c323720f1e1cd9",
+      "summary": {
+        "project_id": "hr_system",
+        "project_name": "HR System",
+        "project_status": "ACTIVE",
+        "current_phase": "DISCOVERY",
+        "active_runtime_state": "DISCUSSION",
+        "documentation_state": "EMPTY",
+        "execution_package_state": "NOT_READY",
+        "execution_state": "NOT_STARTED",
+        "verification_state": "NOT_READY",
+        "delivery_state": "NOT_READY",
+        "pending_decisions": []
+      }
+    },
+    {
+      "version_id": "state_0002",
+      "version_type": "PROJECT_STATE",
+      "created_at": "2026-05-05T10:35:31.844Z",
+      "state_hash": "3a13da0eb3ebcd29052c7bad5cfebf6651770c0e56c94c8725c456b75723f611",
+      "summary": {
+        "project_id": "hr_system",
+        "project_name": "HR System",
+        "project_status": "ACTIVE",
+        "current_phase": "FORGE_RUNTIME_COMPLETE",
+        "active_runtime_state": "EXECUTION_COMPLETE",
+        "documentation_state": "DOCS_APPROVED",
+        "execution_package_state": "EXECUTED",
+        "execution_state": "EXECUTED",
+        "verification_state": "PASS",
+        "delivery_state": "REQUIREMENTS_PACKAGE",
+        "pending_decisions": []
+      }
+    }
+  ],
+  "active_project_flag": true,
+  "last_updated_at": "2026-05-05T10:35:31.843Z"
+}

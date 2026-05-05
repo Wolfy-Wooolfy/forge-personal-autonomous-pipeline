@@ -1,22 +1,22 @@
 {
   "backfill_id": "MODULE_FLOW_BACKFILL_v2",
-  "generated_at": "2026-05-04T10:44:30.292Z",
+  "generated_at": "2026-05-05T10:35:31.152Z",
   "operating_mode": "IMPROVE",
   "repository_state": "FULL_PIPELINE_STATE",
   "source": {
     "decision_gate_path": "artifacts/decisions/module_flow_decision_gate.json",
-    "decision_gate_sha256": "5bfa5e1aa737c1a04d4026734b40aafaab0c9ac7b455c555ac39e3bb8a6083cb",
+    "decision_gate_sha256": "17d1c5f40064ca113822ad2bb49c657d056dcb395a10b81641150ca3205eb318",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "dc92e1525e817fd677f11c8ef0a568afe24863ccd794a3e796efba547b51b053",
-    "workspace_execution_id": "ai_os_runnable_execution_1777891470201",
-    "workspace_execution_package_id": "ai_os_runnable_package_1777891470201",
-    "workspace_execution_package_path": "artifacts/projects/memory_test_runtime_smoke/execute/execution_package.json"
+    "workspace_execution_id": "ai_os_execution_1777977330895",
+    "workspace_execution_package_id": "ai_os_package_1777977330895",
+    "workspace_execution_package_path": "artifacts/projects/hr_system/execute/execution_package.json"
   },
   "summary": {
-    "approved_actions_seen": 3,
-    "deterministic_backfill_actions": 3,
+    "approved_actions_seen": 1,
+    "deterministic_backfill_actions": 1,
     "excluded_non_backfill_actions": 0,
-    "items_emitted": 3
+    "items_emitted": 1
   },
   "items": [
     {
@@ -24,48 +24,14 @@
       "category": "WORKSPACE_CHANGE_REQUEST",
       "severity": "MEDIUM",
       "affected_entities": [
-        "artifacts/projects/memory_test_runtime_smoke/output/app/index.html"
+        "artifacts/projects/hr_system/output/HR_System_Proposal.txt"
       ],
       "action": {
         "action_id": "WORKSPACE_ACTION_1",
         "description": "governed workspace decision packet approved",
         "impact_scope": "CODE_WRITE",
         "requires_decision": false,
-        "target_path": "artifacts/projects/memory_test_runtime_smoke/output/app/index.html",
-        "action_type": "BACKFILL_RECONCILIATION",
-        "deterministic_template_used": true
-      }
-    },
-    {
-      "gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "category": "WORKSPACE_CHANGE_REQUEST",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "artifacts/projects/memory_test_runtime_smoke/output/app/README.md"
-      ],
-      "action": {
-        "action_id": "WORKSPACE_ACTION_2",
-        "description": "governed workspace decision packet approved",
-        "impact_scope": "CODE_WRITE",
-        "requires_decision": false,
-        "target_path": "artifacts/projects/memory_test_runtime_smoke/output/app/README.md",
-        "action_type": "GENERATE_DOCUMENT",
-        "deterministic_template_used": true
-      }
-    },
-    {
-      "gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "category": "WORKSPACE_CHANGE_REQUEST",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "artifacts/projects/memory_test_runtime_smoke/output/app/open_app.bat"
-      ],
-      "action": {
-        "action_id": "WORKSPACE_ACTION_3",
-        "description": "governed workspace decision packet approved",
-        "impact_scope": "CODE_WRITE",
-        "requires_decision": false,
-        "target_path": "artifacts/projects/memory_test_runtime_smoke/output/app/open_app.bat",
+        "target_path": "artifacts/projects/hr_system/output/HR_System_Proposal.txt",
         "action_type": "BACKFILL_RECONCILIATION",
         "deterministic_template_used": true
       }

@@ -1,16 +1,16 @@
 {
   "execution_id": "MODULE_FLOW_EXECUTE_v1",
-  "generated_at": "2026-05-04T10:44:30.316Z",
+  "generated_at": "2026-05-05T10:35:31.199Z",
   "operating_mode": "IMPROVE",
   "repository_state": "FULL_PIPELINE_STATE",
   "source": {
     "backfill_plan_path": "artifacts/backfill/backfill_plan.json",
-    "backfill_sha256": "edd9fd17186ae76eb2bffecb3aa4a445eb454a203b1a0d513eaa457dd78c7f38",
+    "backfill_sha256": "d380e626d297fdd31e3840c73b1ea1a5e18570b4112e48b9f6fa0ebc248f9cfc",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_sha256": "dc92e1525e817fd677f11c8ef0a568afe24863ccd794a3e796efba547b51b053",
-    "workspace_execution_id": "ai_os_runnable_execution_1777891470201",
-    "workspace_execution_package_id": "ai_os_runnable_package_1777891470201",
-    "workspace_execution_package_path": "artifacts/projects/memory_test_runtime_smoke/execute/execution_package.json"
+    "workspace_execution_id": "ai_os_execution_1777977330895",
+    "workspace_execution_package_id": "ai_os_package_1777977330895",
+    "workspace_execution_package_path": "artifacts/projects/hr_system/execute/execution_package.json"
   },
   "approved_code_actions": [
     {
@@ -20,55 +20,17 @@
       "action_type": "BACKFILL_RECONCILIATION",
       "modification_type": "BACKFILL_RECONCILIATION",
       "reason": "Approved action executed deterministically.",
-      "target_path": "artifacts/projects/memory_test_runtime_smoke/output/app/index.html",
-      "target_file": "artifacts/projects/memory_test_runtime_smoke/output/app/index.html",
+      "target_path": "artifacts/projects/hr_system/output/HR_System_Proposal.txt",
+      "target_file": "artifacts/projects/hr_system/output/HR_System_Proposal.txt",
       "source_type": "EXTERNAL_AI_WORKSPACE",
-      "workspace_execution_id": "ai_os_runnable_execution_1777891470201",
-      "workspace_execution_package_id": "ai_os_runnable_package_1777891470201",
-      "workspace_execution_package_path": "artifacts/projects/memory_test_runtime_smoke/execute/execution_package.json",
+      "workspace_execution_id": "ai_os_execution_1777977330895",
+      "workspace_execution_package_id": "ai_os_package_1777977330895",
+      "workspace_execution_package_path": "artifacts/projects/hr_system/execute/execution_package.json",
       "deterministic_template_used": true,
-      "allow_overwrite": true,
+      "allow_overwrite": false,
       "wrote_content": true,
       "old_sha256": null,
-      "new_sha256": "08368e0f09fb6dc13da3c1e0401fc663e5480299104a77027af16d52be3751e4"
-    },
-    {
-      "action_id": "WORKSPACE_ACTION_2",
-      "origin_gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "linked_gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "action_type": "GENERATE_DOCUMENT",
-      "modification_type": "GENERATE_DOCUMENT",
-      "reason": "Approved action executed deterministically.",
-      "target_path": "artifacts/projects/memory_test_runtime_smoke/output/app/README.md",
-      "target_file": "artifacts/projects/memory_test_runtime_smoke/output/app/README.md",
-      "source_type": "EXTERNAL_AI_WORKSPACE",
-      "workspace_execution_id": "ai_os_runnable_execution_1777891470201",
-      "workspace_execution_package_id": "ai_os_runnable_package_1777891470201",
-      "workspace_execution_package_path": "artifacts/projects/memory_test_runtime_smoke/execute/execution_package.json",
-      "deterministic_template_used": true,
-      "allow_overwrite": true,
-      "wrote_content": true,
-      "old_sha256": null,
-      "new_sha256": "c6b9c730212cba67539582f7c0369f03c0b443998cd0d43864a08f47a3ff29eb"
-    },
-    {
-      "action_id": "WORKSPACE_ACTION_3",
-      "origin_gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "linked_gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "action_type": "BACKFILL_RECONCILIATION",
-      "modification_type": "BACKFILL_RECONCILIATION",
-      "reason": "Approved action executed deterministically.",
-      "target_path": "artifacts/projects/memory_test_runtime_smoke/output/app/open_app.bat",
-      "target_file": "artifacts/projects/memory_test_runtime_smoke/output/app/open_app.bat",
-      "source_type": "EXTERNAL_AI_WORKSPACE",
-      "workspace_execution_id": "ai_os_runnable_execution_1777891470201",
-      "workspace_execution_package_id": "ai_os_runnable_package_1777891470201",
-      "workspace_execution_package_path": "artifacts/projects/memory_test_runtime_smoke/execute/execution_package.json",
-      "deterministic_template_used": true,
-      "allow_overwrite": true,
-      "wrote_content": true,
-      "old_sha256": null,
-      "new_sha256": "288c31989d5802baff2f5f9b80e32a85f4cfc3be9895c4c9f25c821c9a0d0351"
+      "new_sha256": "39e8a273adf7a5f34af5866e53f2bfcc890be180336a78842b8d3641741f9882"
     }
   ]
 }

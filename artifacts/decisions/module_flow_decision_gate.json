@@ -1,6 +1,6 @@
 {
   "decision_id": "MODULE_FLOW_DECISION_GATE",
-  "timestamp": "2026-05-04T10:44:30.278Z",
+  "timestamp": "2026-05-05T10:35:31.122Z",
   "task": "TASK-052",
   "policy": "AUTONOMOUS_BY_DEFAULT_FAIL_CLOSED_ON_RISK",
   "operating_mode": "IMPROVE",
@@ -10,17 +10,17 @@
   "override_raw": "",
   "source": {
     "source_type": "EXECUTION_PACKAGE",
-    "execution_package_path": "artifacts/projects/memory_test_runtime_smoke/execute/execution_package.json",
-    "execution_package_id": "ai_os_runnable_package_1777891470201",
-    "execution_package_execution_id": "ai_os_runnable_execution_1777891470201",
-    "execution_package_sha256": "a500a4d2caaa6d40d9a6ac09131b5e49aa6fda3a4481a2f6b9a0fc9d76c22216",
-    "workspace_response_path": "artifacts/llm/responses/ai_os_runnable_execution_1777891470201.response.json",
+    "execution_package_path": "artifacts/projects/hr_system/execute/execution_package.json",
+    "execution_package_id": "ai_os_package_1777977330895",
+    "execution_package_execution_id": "ai_os_execution_1777977330895",
+    "execution_package_sha256": "2d95069aee335391a0fcf89c5c64205292a487d68b334cdf9789161bab95cf17",
+    "workspace_response_path": "artifacts/llm/responses/ai_os_execution_1777977330895.response.json",
     "intake_context_path": "artifacts/intake/intake_context.json",
     "intake_context_sha256": "dc92e1525e817fd677f11c8ef0a568afe24863ccd794a3e796efba547b51b053"
   },
   "summary": {
-    "total_actions": 3,
-    "approved_count": 3,
+    "total_actions": 1,
+    "approved_count": 1,
     "review_required_count": 0,
     "rejected_count": 0
   },
@@ -30,66 +30,22 @@
       "category": "WORKSPACE_CHANGE_REQUEST",
       "severity": "MEDIUM",
       "affected_entities": [
-        "artifacts/projects/memory_test_runtime_smoke/output/app/index.html"
+        "artifacts/projects/hr_system/output/HR_System_Proposal.txt"
       ],
       "action_id": "WORKSPACE_ACTION_1",
-      "description": "Apply governed workspace execution package to artifacts/projects/memory_test_runtime_smoke/output/app/index.html",
+      "description": "Apply governed workspace execution package to artifacts/projects/hr_system/output/HR_System_Proposal.txt",
       "impact_scope": "CODE_WRITE",
       "requires_decision": false,
       "cognitive_priority_hint": null,
       "reason": "governed workspace decision packet approved",
       "workspace_source": "EXTERNAL_AI_WORKSPACE",
-      "workspace_execution_id": "ai_os_runnable_execution_1777891470201",
-      "workspace_execution_package_id": "ai_os_runnable_package_1777891470201",
-      "workspace_execution_package_path": "artifacts/projects/memory_test_runtime_smoke/execute/execution_package.json",
-      "workspace_response_path": "artifacts/llm/responses/ai_os_runnable_execution_1777891470201.response.json",
-      "workspace_allow_overwrite": true,
-      "workspace_expected_sha256": "08368e0f09fb6dc13da3c1e0401fc663e5480299104a77027af16d52be3751e4",
-      "workspace_target_path": "artifacts/projects/memory_test_runtime_smoke/output/app/index.html"
-    },
-    {
-      "gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "category": "WORKSPACE_CHANGE_REQUEST",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "artifacts/projects/memory_test_runtime_smoke/output/app/README.md"
-      ],
-      "action_id": "WORKSPACE_ACTION_2",
-      "description": "Apply governed workspace execution package to artifacts/projects/memory_test_runtime_smoke/output/app/README.md",
-      "impact_scope": "CODE_WRITE",
-      "requires_decision": false,
-      "cognitive_priority_hint": null,
-      "reason": "governed workspace decision packet approved",
-      "workspace_source": "EXTERNAL_AI_WORKSPACE",
-      "workspace_execution_id": "ai_os_runnable_execution_1777891470201",
-      "workspace_execution_package_id": "ai_os_runnable_package_1777891470201",
-      "workspace_execution_package_path": "artifacts/projects/memory_test_runtime_smoke/execute/execution_package.json",
-      "workspace_response_path": "artifacts/llm/responses/ai_os_runnable_execution_1777891470201.response.json",
-      "workspace_allow_overwrite": true,
-      "workspace_expected_sha256": "c6b9c730212cba67539582f7c0369f03c0b443998cd0d43864a08f47a3ff29eb",
-      "workspace_target_path": "artifacts/projects/memory_test_runtime_smoke/output/app/README.md"
-    },
-    {
-      "gap_id": "WORKSPACE_CHANGE_REQUEST",
-      "category": "WORKSPACE_CHANGE_REQUEST",
-      "severity": "MEDIUM",
-      "affected_entities": [
-        "artifacts/projects/memory_test_runtime_smoke/output/app/open_app.bat"
-      ],
-      "action_id": "WORKSPACE_ACTION_3",
-      "description": "Apply governed workspace execution package to artifacts/projects/memory_test_runtime_smoke/output/app/open_app.bat",
-      "impact_scope": "CODE_WRITE",
-      "requires_decision": false,
-      "cognitive_priority_hint": null,
-      "reason": "governed workspace decision packet approved",
-      "workspace_source": "EXTERNAL_AI_WORKSPACE",
-      "workspace_execution_id": "ai_os_runnable_execution_1777891470201",
-      "workspace_execution_package_id": "ai_os_runnable_package_1777891470201",
-      "workspace_execution_package_path": "artifacts/projects/memory_test_runtime_smoke/execute/execution_package.json",
-      "workspace_response_path": "artifacts/llm/responses/ai_os_runnable_execution_1777891470201.response.json",
-      "workspace_allow_overwrite": true,
-      "workspace_expected_sha256": "288c31989d5802baff2f5f9b80e32a85f4cfc3be9895c4c9f25c821c9a0d0351",
-      "workspace_target_path": "artifacts/projects/memory_test_runtime_smoke/output/app/open_app.bat"
+      "workspace_execution_id": "ai_os_execution_1777977330895",
+      "workspace_execution_package_id": "ai_os_package_1777977330895",
+      "workspace_execution_package_path": "artifacts/projects/hr_system/execute/execution_package.json",
+      "workspace_response_path": "artifacts/llm/responses/ai_os_execution_1777977330895.response.json",
+      "workspace_allow_overwrite": false,
+      "workspace_expected_sha256": "39e8a273adf7a5f34af5866e53f2bfcc890be180336a78842b8d3641741f9882",
+      "workspace_target_path": "artifacts/projects/hr_system/output/HR_System_Proposal.txt"
     }
   ],
   "review_required_actions": [],

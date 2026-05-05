@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T10:44:30.335Z",
+  "generated_at": "2026-05-05T10:35:31.232Z",
   "blocked": false,
   "status": "PASS",
   "outcome": "PASS",
@@ -68,17 +68,17 @@
     {
       "name": "execute_plan_matches_backfill_plan",
       "passed": true,
-      "detail": "backfill_actions=3; execute_actions=3"
+      "detail": "backfill_actions=1; execute_actions=1"
     },
     {
       "name": "decision_gate_matches_backfill_plan",
       "passed": true,
-      "detail": "decision_actions=3; backfill_actions=3"
+      "detail": "decision_actions=1; backfill_actions=1"
     },
     {
       "name": "workspace_runtime_execution_id_consistent",
       "passed": true,
-      "detail": "decision=ai_os_runnable_execution_1777891470201; backfill=ai_os_runnable_execution_1777891470201; execute=ai_os_runnable_execution_1777891470201"
+      "detail": "decision=ai_os_execution_1777977330895; backfill=ai_os_execution_1777977330895; execute=ai_os_execution_1777977330895"
     },
     {
       "name": "workspace_runtime_matches_current_execution_package",
@@ -88,7 +88,7 @@
     {
       "name": "workspace_execution_package_identity_consistent",
       "passed": true,
-      "detail": "decision_package_id=ai_os_runnable_package_1777891470201; backfill_package_id=ai_os_runnable_package_1777891470201; execute_package_id=ai_os_runnable_package_1777891470201; decision_package_path=artifacts/projects/memory_test_runtime_smoke/execute/execution_package.json; backfill_package_path=artifacts/projects/memory_test_runtime_smoke/execute/execution_package.json; execute_package_path=artifacts/projects/memory_test_runtime_smoke/execute/execution_package.json"
+      "detail": "decision_package_id=ai_os_package_1777977330895; backfill_package_id=ai_os_package_1777977330895; execute_package_id=ai_os_package_1777977330895; decision_package_path=artifacts/projects/hr_system/execute/execution_package.json; backfill_package_path=artifacts/projects/hr_system/execute/execution_package.json; execute_package_path=artifacts/projects/hr_system/execute/execution_package.json"
     },
     {
       "name": "workspace_execution_package_matches_current_artifact",
@@ -98,7 +98,7 @@
     {
       "name": "workspace_runtime_write_applied",
       "passed": true,
-      "detail": "execute_actions=3; wrote_content_all=true"
+      "detail": "execute_actions=1; wrote_content_all=true"
     },
     {
       "name": "gap_count_zero",

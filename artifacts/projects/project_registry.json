@@ -1,6 +1,6 @@
 {
-  "active_project_id": "default_project",
-  "updated_at": "2026-05-04T14:04:18.056Z",
+  "active_project_id": "hr_system",
+  "updated_at": "2026-05-05T10:35:31.847Z",
   "projects": [
     {
       "project_id": "default_project",
@@ -9,8 +9,18 @@
       "current_phase": "DISCOVERY",
       "active_runtime_state": "DISCUSSION",
       "pending_decisions": [],
+      "active_project_flag": false,
+      "last_updated_at": "2026-05-05T10:35:31.850Z"
+    },
+    {
+      "project_id": "hr_system",
+      "project_name": "HR System",
+      "project_status": "ACTIVE",
+      "current_phase": "FORGE_RUNTIME_COMPLETE",
+      "active_runtime_state": "EXECUTION_COMPLETE",
+      "pending_decisions": [],
       "active_project_flag": true,
-      "last_updated_at": "2026-05-04T14:04:18.053Z"
+      "last_updated_at": "2026-05-05T10:35:31.843Z"
     }
   ]
 }
